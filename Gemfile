@@ -9,6 +9,8 @@ gem 'mysql2', '0.3.11'
 gem "haml"
 gem 'jquery-rails'
 
+gem 'devise'
+
 # controller, model tools
 gem "aspectr"
 gem 'jbuilder'
