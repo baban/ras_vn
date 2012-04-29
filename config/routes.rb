@@ -1,4 +1,12 @@
 RasVn::Application.routes.draw do
+  get "shop/show"
+
+  get "shop/meny"
+
+  get "shop/map"
+
+  get "shop/reserve"
+
   get "top/index"
 
   # The priority is based upon order of creation:

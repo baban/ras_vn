@@ -1,3 +1,90 @@
-// Place all the styles related to the top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@charset "UTF-8";
+
+#top_nav {
+  ul {
+    text-align:right;
+    margin:1em;
+    li {
+      border:none 1px #aaa;
+      border-left-style:solid;
+      display:inline;
+      padding:0.5em;
+    }
+  }
+}
+
+#header {
+  padding:0;
+  margin:0 1em;
+  h1{
+    font-size:1em;
+    width:150px;
+    margin:0;
+    border:solid 1px #aaa;
+    p {
+      font-size:0.8em;
+    }
+    clear:both;
+    float:left;
+  }
+  #top_advertisement {
+    margin-left:160px;
+    border:solid 1px #aaa;
+  }
+}
+
+#header:after {
+  content:"-";
+  display:block;
+}
+
+#context:before {
+  content:"";
+  display:block;
+}
+
+#context {
+  border:none 1px #aaa;  
+  border-top-style:solid;
+  margin:0 1em;
+}
+
+.tile {
+  border:solid 1px #00a;
+  margin:0.3em 0;
+  h2 {
+    font-size:1em;
+  }
+  div {
+    margin:0.2em;
+  }
+}
+
+#location_map {
+  width:300px;
+  h2 {
+    font-size:1em;
+  }
+  h2 + div {
+    margin:2px;
+    border:solid 0.1em #ccc;
+    height:250px;
+  }
+  float:left;
+}
+
+#kangei {
+  width:600px;
+  margin-left:310px;
+}
+
+#kyanpain {
+  width:600px;
+  margin-left:310px;
+  clear:none;
+}
+
+#redomendation_tools {
+  float:left;
+  width:300px;
+}
