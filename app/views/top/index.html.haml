@@ -1,6 +1,11 @@
-#top_bar
-  %ul
-    %li.name こんにちは○さん
+- if user_signed_in?
+  #top_bar
+    %ul
+      %li.name こんにちは****さん
+- else
+  #top_bar
+    %ul
+      %li.name こんにちはゲストさん
 
 #top_nav.nav
   %ul

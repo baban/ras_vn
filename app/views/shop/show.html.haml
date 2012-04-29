@@ -2,4 +2,113 @@
   %h1
     %p グルメ。食事。レストラン情報
     %p ぐるなり東京版
+  %div.breadcrumb_list
+    %p ぐるなび 東京 渋谷・原宿・青山 グルメ 渋谷 グルメ センター街・公園通り グルメ 水響宴 渋谷駅前店
 
+%div#content.section
+  #shop_header
+    %h2= @shop.name
+    %p.phone_number
+      = @shop.phone_number
+      %p ※お問い合わせの際はぐるなびを見たとお伝えになるとスムーズです。
+    %p.access
+      %p
+        ＪＲ渋谷駅 ハチ公口 徒歩1分
+        =link_to "地図を見る", controller:'map', action:'index'
+    
+  #shop_content 
+    #content_top_menu.content_menu
+      %ul#content_top_tab
+        %li=link_to "店舗トップ", action:'show'    
+        %li=link_to "メニュー", action:'menu'
+        %li=link_to "地図・クーポン", action:'map'
+        %li=link_to "予約", action:'reserve'
+    #shop_content_body
+      #shop_image.figure
+        画像
+      #shop_menus
+        %dl
+          %dt
+            %p 2000円台飲み放題コース_渋谷店
+          %dd
+            %p 2時間飲み放題全7品】特撰香り美豚しゃぶしゃぶor美豚せいろ蒸しコースはこちら
+          %dt
+            %p 2000円台飲み放題コース_渋谷店
+          %dd
+            %p 2時間飲み放題全7品】特撰香り美豚しゃぶしゃぶor美豚せいろ蒸しコースはこちら
+          %dt
+            %p 2000円台飲み放題コース_渋谷店
+          %dd
+            %p 2時間飲み放題全7品】特撰香り美豚しゃぶしゃぶor美豚せいろ蒸しコースはこちら
+      #pr
+        %p 渋谷駅1分◆デザート食放付女子会個室宴会:日〜木先着3組様◆
+        %p 女子会 2時間4480円⇒2480円 女子会 3時間⇒2980円
+        %p 渋谷で飲み放題宴会/歓迎会/女子会宴会 
+      #comment
+        = @shop.comment
+      %table#topics
+        %tr
+          %td{rowspan: 3}
+            %p トピックス
+          %td
+            %p ぐるなび会員限定！シークレットクーポンをチェック！
+        %tr
+          %td
+            %p 【誕生日☆女子会】美豚しゃぶしゃぶ飲放コース2480円
+        %tr
+          %td
+            %ul
+              %li 【WEB予約】誰でも簡単に予約！【24時間】オンライン予約受付中
+              %li 食べて体内美人!! 美豚しゃぶしゃぶ2H飲放付⇒2480円◆渋谷店
+              %li 女子会コース♪ スイーツ食べ放題で女子力UP⇒2480円◆渋谷店
+              %li 嬉しい特典 a)誕生日ケーキプレゼントb)お会計15％OFF◆渋谷店
+              %li 女子ウケ♪こだわりの食べる美肌サプリ美食メニュー推薦◆渋谷店
+              %li 今月限定のお得なクーポン情報・詳細はコチラから⇒♪◆渋谷店
+      #recommend_point
+        %h2
+          =@shop.name
+          のオススメ
+      #recommend_meny
+        %h2
+          =@shop.name
+          のオススメメニュー
+      #basic_info
+        %h2
+          =@shop.name
+          基本情報
+        %table#shop_info
+          %tr
+            %th 店名
+            %td= @shop.name
+          %tr
+            %th 住所
+            %td= @shop.address
+          %tr
+            %th アクセス
+            %td
+          %tr
+            %th TEL
+            %td
+              = @shop.phone_number
+              %p ※お問い合わせの際はぐるなびを見たとお伝えになるとスムーズです。 
+          %tr
+            %th FAX
+            %td= @shop.fax_number
+  #shop_footer
+    %h2  
+      = @shop.name
+    %p.phone_number
+      = @shop.phone_number
+      %p ※お問い合わせの際はぐるなびを見たとお伝えになるとスムーズです。
+    %p.access
+      %p
+        ＪＲ渋谷駅 ハチ公口 徒歩1分
+        =link_to "地図を見る", controller:'map', action:'index'
+    #content_bottom_menu.content_menu
+      %ul#content_bottom_tab
+        %li=link_to "店舗トップ", action:'show'    
+        %li=link_to "メニュー", action:'menu'
+        %li=link_to "地図・クーポン", action:'map'
+        %li=link_to "予約", action:'reserve'
+           
+        

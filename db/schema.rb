@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120429125805) do
+ActiveRecord::Schema.define(:version => 20120429144057) do
 
   create_table "memus", :force => true do |t|
     t.string   "name",       :default => "", :null => false
@@ -37,6 +37,11 @@ ActiveRecord::Schema.define(:version => 20120429125805) do
     t.datetime "updated_at",                 :null => false
   end
 
+  create_table "shop_accesses", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "shop_sub_data", :force => true do |t|
     t.binary   "top_photo"
     t.datetime "created_at", :null => false
@@ -51,8 +56,12 @@ ActiveRecord::Schema.define(:version => 20120429125805) do
     t.float    "latitude"
     t.string   "address"
     t.string   "phone_number"
+    t.string   "fax_number"
     t.string   "email"
     t.string   "homepage"
+    t.time     "open_time"
+    t.time     "close_time"
+    t.string   "close_day"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
   end

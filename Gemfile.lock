@@ -200,7 +200,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   faker-japanese
-  flextures (= 1.9.10)
+  flextures
   haml
   jbuilder
   jquery-rails

@@ -19,7 +19,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # test utilities
 gem 'rspec'
 gem 'rspec-rails'
-gem 'flextures', '1.9.10'
+gem 'flextures'
 gem 'faker'
 gem 'faker-japanese'
 gem "spork"

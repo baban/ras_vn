@@ -11,8 +11,12 @@ class CreateShops < ActiveRecord::Migration
       t.float   :latitude,     null: true
       t.string  :address,      null: true
       t.string  :phone_number, null: true
+      t.string  :fax_number,   null: true
       t.string  :email,        null: true
       t.string  :homepage,     null: true
+      t.time    :open_time,    null: true
+      t.time    :close_time,   null: true
+      t.string  :close_day,    null: true
       t.timestamps
     end
   end

@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 RasVn::Application.routes.draw do
   devise_for :users
 
