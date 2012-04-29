@@ -1,28 +1,9 @@
-#header.header
-  %h1
-    %p グルメ。食事。レストラン情報
-    %p ぐるなり東京版
-  %div.breadcrumb_list
-    %p ぐるなび 東京 渋谷・原宿・青山 グルメ 渋谷 グルメ センター街・公園通り グルメ 水響宴 渋谷駅前店
+=render partial:"header"
 
 %div#content.section
-  #shop_header
-    %h2= @shop.name
-    %p.phone_number
-      = @shop.phone_number
-      %p ※お問い合わせの際はぐるなびを見たとお伝えになるとスムーズです。
-    %p.access
-      %p
-        ＪＲ渋谷駅 ハチ公口 徒歩1分
-        =link_to "地図を見る", controller:'map', action:'index'
-    
+  =render partial:"shop_content_header"
   #shop_content 
-    #content_top_menu.content_menu
-      %ul#content_top_tab
-        %li=link_to "店舗トップ", action:'show'    
-        %li=link_to "メニュー", action:'menu'
-        %li=link_to "地図・クーポン", action:'map'
-        %li=link_to "予約", action:'reserve'
+    =render partial:"shop_content_top_menu"
     #shop_content_body
       #shop_image.figure
         画像
@@ -44,8 +25,7 @@
         %p 渋谷駅1分◆デザート食放付女子会個室宴会:日〜木先着3組様◆
         %p 女子会 2時間4480円⇒2480円 女子会 3時間⇒2980円
         %p 渋谷で飲み放題宴会/歓迎会/女子会宴会 
-      #comment
-        = @shop.comment
+      #comment= @shop.comment
       %table#topics
         %tr
           %td{rowspan: 3}
@@ -94,21 +74,6 @@
           %tr
             %th FAX
             %td= @shop.fax_number
-  #shop_footer
-    %h2  
-      = @shop.name
-    %p.phone_number
-      = @shop.phone_number
-      %p ※お問い合わせの際はぐるなびを見たとお伝えになるとスムーズです。
-    %p.access
-      %p
-        ＪＲ渋谷駅 ハチ公口 徒歩1分
-        =link_to "地図を見る", controller:'map', action:'index'
-    #content_bottom_menu.content_menu
-      %ul#content_bottom_tab
-        %li=link_to "店舗トップ", action:'show'    
-        %li=link_to "メニュー", action:'menu'
-        %li=link_to "地図・クーポン", action:'map'
-        %li=link_to "予約", action:'reserve'
-           
+  =render partial:"shop_content_footer"
+  =render partial:'shop_content_bottom_menu'
         
