@@ -3,9 +3,9 @@
 class CreateMemus < ActiveRecord::Migration
   def change
     create_table :memus do |t|
-      t.name :string,   null: false, default: ""
-      t.price :integer, null: false, default: 0
-      t.comment :text,  null: true
+      t.string  :name,    null: false, default: ""
+      t.integer :price,   null: false, default: 0
+      t.text    :comment, null: true
 
       t.timestamps
     end

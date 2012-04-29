@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class ShopController < ApplicationController
   def show
   end

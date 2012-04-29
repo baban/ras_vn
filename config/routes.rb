@@ -1,4 +1,6 @@
 RasVn::Application.routes.draw do
+  devise_for :users
+
   get "shop/show"
 
   get "shop/meny"
