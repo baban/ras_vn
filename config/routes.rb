@@ -1,6 +1,14 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
+  get "search/index"
+
+  get "search/area"
+
+  get "search/food_genre"
+
+  get "search/character"
+
   devise_for :users
 
   get "shop/show"
