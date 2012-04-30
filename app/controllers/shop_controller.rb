@@ -1,6 +1,10 @@
 # encoding: utf-8
 
 class ShopController < ApplicationController
+  def index
+    @shops = Searcher.search
+  end
+
   def show
     @shop = Shop.find(params[:id])
   end

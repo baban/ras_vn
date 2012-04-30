@@ -1,0 +1,31 @@
+- content_for(:style_after){ stylesheet_link_tag("shop/index") }
+
+=render partial:"header"
+
+#content.section
+  #content_header
+    %h2 渋谷
+  #content_body
+    #search_list
+      - @shops.each do |shop|
+        .shop_area
+          %h2= "【#{shop.name}】"
+          %h2= shop.name
+          .comment
+            = shop.comment
+          .topics
+            .topics
+              %span.title TOPICS
+              %span hogehoge
+  #area_nav.nav
+    %h3 エリアから絞り込み
+    %ul
+      %li 北千住・綾瀬・亀有
+    %h3 料理ジャンルから絞り込み    
+    %ul
+      %li 焼き鳥・肉料理・串料理
+      %li 居酒屋
+      %li 和食
+      %li 焼肉・ホルモン
+
+=render partial:'footer'
