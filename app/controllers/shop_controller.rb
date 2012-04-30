@@ -5,12 +5,15 @@ class ShopController < ApplicationController
     @shop = Shop.find(params[:id])
   end
 
-  def meny
+  def menu
+    @shop = Shop.find(params[:id])
   end
 
   def map
+    @shop = Shop.find(params[:id])
   end
 
   def reserve
+    @shop = Shop.find(params[:id])
   end
 end

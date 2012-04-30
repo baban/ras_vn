@@ -1,0 +1,28 @@
+-content_for(:style_after){ stylesheet_link_tag("shop/menu") }
+
+
+=render partial:"header"
+
+%div#content.section
+  =render partial:"shop_content_header"
+  #shop_content 
+    =render partial:"shop_content_top_menu"
+    #shop_content_body
+      #shop_seen_area
+        .seen
+          .photo
+            %p 画像
+          .description
+            %p 【落ち着いた雰囲気】
+            %p 時間を忘れるオシャレな和モダン美空間
+        .seen
+          .photo
+            %p 画像
+          .description
+            %p 【落ち着いた雰囲気】
+            %p 時間を忘れるオシャレな和モダン美空間
+
+  =render partial:"shop_content_footer"
+  =render partial:'shop_content_bottom_menu'
+        
+=render partial:'footer'
