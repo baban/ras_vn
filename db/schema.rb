@@ -11,12 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120430132332) do
+ActiveRecord::Schema.define(:version => 20120430141537) do
 
   create_table "area_masters", :force => true do |t|
     t.integer  "parent_id",  :null => false
     t.string   "name",       :null => false
     t.integer  "area_type",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "food_genres", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -46,6 +52,12 @@ ActiveRecord::Schema.define(:version => 20120430132332) do
   end
 
   create_table "shop_accesses", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "shop_character_masters", :force => true do |t|
+    t.string   "name",       :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
