@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120429144057) do
+ActiveRecord::Schema.define(:version => 20120430132332) do
+
+  create_table "area_masters", :force => true do |t|
+    t.integer  "parent_id",  :null => false
+    t.string   "name",       :null => false
+    t.integer  "area_type",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "memus", :force => true do |t|
     t.string   "name",       :default => "", :null => false

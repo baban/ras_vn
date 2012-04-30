@@ -10,7 +10,7 @@
       - @shops.each do |shop|
         .shop_area
           %h2= "【#{shop.name}】"
-          %h2= shop.name
+          %h2=link_to shop.name, action:'show', id: shop.id
           .comment
             = shop.comment
           .topics
