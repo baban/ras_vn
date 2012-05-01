@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+@mixin break_block{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+@mixin floating_block{
+  ul{
+    li {
+      display:inline;
+    }
+  }
+}
+
 #header {
   padding:0;
   margin:0 1em;
@@ -21,13 +35,11 @@
 }
 
 #header:after {
-  content:"-";
-  display:block;
+  @include break_block;
 }
 
 #context:before {
-  content:"";
-  display:block;
+  @include break_block;
 }
 
 #context {
@@ -48,26 +60,26 @@
 }
 
 #location_map {
-  width:300px;
+  width:350px;
   h2 {
     font-size:1em;
   }
   h2 + div {
     margin:2px;
     border:solid 0.1em #ccc;
-    height:250px;
+    height:300px;
   }
   float:left;
 }
 
 #kangei {
   width:600px;
-  margin-left:310px;
+  margin-left:370px;
 }
 
 #kyanpain {
   width:600px;
-  margin-left:310px;
+  margin-left:370px;
   clear:none;
 }
 
@@ -75,3 +87,37 @@
   float:left;
   width:300px;
 }
+
+#trend_bar{
+  border:solid 1px #aaa;
+  @include break_block;
+  @include floating_block;
+}
+
+
+
+#food_genre_area{
+  font-size:0.8em;
+  @include floating_block;
+}
+
+#shop_character_area{
+  font-size:0.8em;
+  @include floating_block;
+}
+
+
+#footer{
+  border:none 2px #aaa;
+  border-top-style:solid;
+  #info_links_area{
+    ul > li{
+      display:inline;
+      text-align:center;
+    }
+  }
+  .cooporate_logo{
+    text-align:center;
+  }
+}
+

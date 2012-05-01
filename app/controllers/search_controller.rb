@@ -8,6 +8,6 @@ class SearchController < ApplicationController
   def food_genre
   end
 
-  def character
+  def shop_character
   end
 end
