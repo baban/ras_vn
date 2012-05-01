@@ -1,0 +1,35 @@
+#header
+  #header_up
+    %h1 mypage
+  #header_down
+    .breadcrumb_list
+      %ul
+        %li ぐるなび
+        %li 東京 渋谷・原宿・青山
+
+#content
+  #nav
+    #user_info
+      %p こんにちは**さん
+      %p 現在ポイント
+  #content_body
+    %h2 info
+    #attention
+    #bookmark_area.tile
+      %h3 bookmark
+      .bookmark_content
+        %p=link_to "bookmark", controller:'bookmark'
+    #recommend_area.tile
+      %h3 recommend
+      .recommend_content
+    #profile_area.tile
+      %h3 profile
+      .profile_content
+    #publication_area.tile
+      %h3 宴会メール
+      .publication_content
+    #adress_content_are.tile
+      %h3 住所
+      .address_content
+
+=render partial:'common/footer'

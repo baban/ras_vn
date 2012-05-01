@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+@mixin break_block{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+@mixin floating_block{
+  ul{
+    li {
+      display:inline;
+    }
+  }
+}
+
+#header{
+  border:none 2px #aaa;
+  border-bottom-style:solid;
+}
+
+#content {
+  position:relative;
+}
+
+#nav {
+  position:absolute;
+  top:0;
+  width:15em;
+  min-height:25em;
+  border:solid 1px #aaa;
+}
+
+#content_body{
+  margin-left:17em;
+  width:30em;
+}
+
+.tile {
+  border:solid 1px #aaa;
+  border-width:3px 1px 1px 1px;
+  width:100%;
+  h3 {
+    font-size:1em;
+    margin:0.1em 0.3em;
+  }
+  h3 + div {
+    border:none 3px #aaa;
+    border-top-style:solid;
+    min-height:3em;
+  }
+}

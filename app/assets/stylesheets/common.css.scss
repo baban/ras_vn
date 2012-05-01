@@ -3,8 +3,6 @@
 @import url("def/html-default-css1.css");
 @import "def/html-default-css2.css";
 
-
-
 body{
   margin:0;
   padding:0;
@@ -64,6 +62,7 @@ p {
 }
 
 #footer {
+  margin-top:1.5em;
   .cooporate_logo {
     text-align:center;
   }

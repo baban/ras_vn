@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
+  get "mypage/index"
+
   get "bookmark/index"
 
   get "bookmark/create"
