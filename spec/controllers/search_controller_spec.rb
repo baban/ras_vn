@@ -1,31 +1,33 @@
+# encoding: utf-8
+
 require 'spec_helper'
 
 describe SearchController do
 
   describe "GET 'index'" do
     it "returns http success" do
-      get 'index'
+      get :index
       response.should be_success
     end
   end
 
   describe "GET 'area'" do
     it "returns http success" do
-      get 'area'
+      get :area
       response.should be_success
     end
   end
 
   describe "GET 'food_genre'" do
     it "returns http success" do
-      get 'food_genre'
+      get :food_genre
       response.should be_success
     end
   end
 
   describe "GET 'character'" do
     it "returns http success" do
-      get 'character'
+      get :shop_character
       response.should be_success
     end
   end
