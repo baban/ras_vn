@@ -1,3 +1,72 @@
-// Place all the styles related to the search controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@charset "UTF-8";
+
+@mixin break_block{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+@mixin floating_block{
+  ul{
+    li {
+      display:inline;
+    }
+  }
+}
+
+#header{
+  border:none 2px #aaa;
+  border-bottom-style:solid;
+  #header_up{
+    h1 {
+      width:15em;
+      float:left;
+    }
+    ul {
+      text-align:right;
+      li {
+        display:inline;
+      }
+    }
+  }
+  #header_up:after {
+    @include break_block;
+  }
+  #header_bottom{
+    @include floating_block;
+  }
+  .breadcrump_list{
+    float:left;
+  }
+  .mymenu {
+    float:right;
+    text-align:right;
+  }
+}
+
+#header:after{
+  @include break_block;
+}
+
+#content {
+  margin:0 2em;
+}
+
+#are_list_area,
+#food_genre_area,
+#shop_character__area{
+  @include floating_block;
+}
+
+#area_list_area {
+  width:50%;
+  float:left;
+  clear:none;
+}
+
+#country_map {
+  width:400px;
+  min-height:400px;
+  border:solid 1px #aaa;
+  float:right;
+}

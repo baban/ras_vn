@@ -1,0 +1,19 @@
+#header
+  #header_up
+    %h1 ぐるなりレストラン検索
+    %ul
+      %li=link_to "レストラン検索TOP", action:'index'
+      %li=link_to "エリアから探す", action:'area'
+      %li=link_to "料理から探す", action:'food_genre'
+      %li=link_to "こだわりから探す", action:'shop_character'
+  #header_bottom
+    %ul.breadcrump_list
+      %li ぐるなび
+      %li レストラン検索
+      %li エリアから探す
+    %ul.mymenu
+      %li=link_to "myぐるなび", controller:'mypage',   action:'index'
+      %li=link_to "チョットぐ", controller:'bookmark', action:'index'
+
+
+

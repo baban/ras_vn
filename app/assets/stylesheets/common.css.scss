@@ -56,3 +56,15 @@ p {
   border:none 2px #aaa;
   border-top-style:solid;
 }
+
+#footer:before {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+#footer {
+  .cooporate_logo {
+    text-align:center;
+  }
+}

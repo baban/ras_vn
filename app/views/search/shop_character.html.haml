@@ -1,0 +1,10 @@
+=render partial:'header'
+
+#content
+  %h2 こだわりから探す
+  #content_body
+    %ul.character_list
+      - ShopCharacterMaster.all.each do |chara|
+        %li=link_to chara.name, controller:'search', action:'index', sub_area: chara.id
+
+=render partial:'common/footer'
