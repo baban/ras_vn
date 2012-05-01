@@ -17,7 +17,11 @@
 #context
   #location_map.tile
     %h2 全国のグルメ・レストランを探す
-    %div map
+    .map map
+    .area_list
+      %dl
+        - AreaMaster.where( " data_type = 1 " ).each do |area|
+          %dt= area.name
   #kangei.tile
     %h2 歓迎会・送別会・4月の宴会特集
     %div 
@@ -69,7 +73,6 @@
       %li IR情報
       %li 加盟店募集
       %li 採用情報
-
   .cooporate_logo
     %p このホームページのご意見ご質問はこちら
     %p Copyright© Gurunavi, Inc. All rights reserved.

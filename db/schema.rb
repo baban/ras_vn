@@ -16,13 +16,14 @@ ActiveRecord::Schema.define(:version => 20120430141537) do
   create_table "area_masters", :force => true do |t|
     t.integer  "parent_id",  :null => false
     t.string   "name",       :null => false
-    t.integer  "area_type",  :null => false
+    t.integer  "data_type",  :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "food_genres", :force => true do |t|
-    t.string   "name"
+  create_table "food_genre_masters", :force => true do |t|
+    t.string   "name",       :null => false
+    t.integer  "data_type",  :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -58,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20120430141537) do
 
   create_table "shop_character_masters", :force => true do |t|
     t.string   "name",       :null => false
+    t.integer  "data_type",  :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -69,9 +71,11 @@ ActiveRecord::Schema.define(:version => 20120430141537) do
   end
 
   create_table "shops", :force => true do |t|
-    t.string   "name",                        :null => false
-    t.integer  "point",        :default => 0
-    t.text     "comment",                     :null => false
+    t.string   "name",              :null => false
+    t.string   "sub_name",          :null => false
+    t.boolean  "coupon_flg",        :null => false
+    t.boolean  "mobile_coupon_flg", :null => false
+    t.text     "comment",           :null => false
     t.float    "longitude"
     t.float    "latitude"
     t.string   "address"
@@ -82,8 +86,8 @@ ActiveRecord::Schema.define(:version => 20120430141537) do
     t.time     "open_time"
     t.time     "close_time"
     t.string   "close_day"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "users", :force => true do |t|
