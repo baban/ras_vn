@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@mixin break_block{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+@mixin floating_block{
+  ul{
+    li {
+      display:inline;
+    }
+  }
+}
+

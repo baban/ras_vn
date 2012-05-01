@@ -1,0 +1,8 @@
+=render partial:'header'
+
+#content
+  %h2 ジャンルから探す
+  #content_body
+    %ul.food_genre_list
+      - FoodGenreMaster.all.each do |genre|
+        %li=link_to genre.name, controller:'search', action:'index', sub_area: genre.id
