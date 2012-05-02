@@ -1,6 +1,9 @@
 # encoding: utf-8
 
 class ApplicationController < ActionController::Base
-  # before_filter :authenticate_user!
   protect_from_forgery
+
+  def auth
+    @user = current_user
+  end
 end
