@@ -1,9 +1,10 @@
 <% if user_signed_in? %>
   <div id="top_bar">
-    %ul
-      %li.name こんにちはゲストさん
-      %li.login=link_to "login", controller:'user', action:'sign_in'
-      %li.login=link_to "registry", controller:'user', action:'sign_up'
+    <ul>
+      <li class="name"> こんにちはゲストさん</li>
+      <li class="login"><%=link_to "login", controller:'user', action:'sign_in' %></li>
+      <li class="login"><%=link_to "registry", controller:'user', action:'sign_up' %></li>
+    </ul>
   </div>
 <% else %>
   <div id="top_bar">

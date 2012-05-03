@@ -1,0 +1,14 @@
+<%=render partial:'header' %>
+
+<div id="content">
+  <h2>ジャンルから探す</h2>
+  <div id="content_body">
+    <ul class="food_genre_list">
+      <% FoodGenreMaster.all.each do |genre| %>
+        <li><%=link_to genre.name, controller:'search', action:'index', sub_area: genre.id %>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<%=render partial:'common/footer' %>
