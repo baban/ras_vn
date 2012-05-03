@@ -1,9 +1,11 @@
 - if user_signed_in?
   #top_bar
     %ul
-      %li.name こんにちは****さん
+      %li.name こんにちはゲストさん
+      %li.login=link_to "login", controller:'user', action:'sign_in'
+      %li.login=link_to "registry", controller:'user', action:'sign_up'
 - else
   #top_bar
     %ul
-      %li.name こんにちはゲストさん
-      %li.login=link_to "ログイン", controller:'user', action:'sign_in'
+      %li.name こんにちは****さん
+      %li.logout=link_to "logout", controller:'user', action:'sign_out'

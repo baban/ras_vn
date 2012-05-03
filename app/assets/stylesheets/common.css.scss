@@ -22,7 +22,8 @@ p {
     li {
       display:inline;
     }
-    li.login {
+    li.login,
+    li.logout {
       float:right;
     }
   }

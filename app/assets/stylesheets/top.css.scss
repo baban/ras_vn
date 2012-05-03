@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-@mixin break_block{
+
+@mixin break_block {
   content:"";
   display:block;
   clear:both;
@@ -38,14 +39,39 @@
   @include break_block;
 }
 
-#context:before {
+#content:before {
   @include break_block;
 }
 
-#context {
+#content {
+  min-width:40em;
   border:none 1px #aaa;  
   border-top-style:solid;
+  position:relative;
   margin:0 1em;
+  #nav {
+    width:15em;
+    border:solid 1px #aaa;
+    float:left;
+  }
+  .more{
+    text-align:right;
+  }
+  #content_body {
+    margin:0 0.5em;
+    min-width:10em;
+    float:left;
+  }
+
+  #sub_nav {
+    width:15em;
+    min-height:20em;
+    float:right;
+    border:solid 1px #aaa;
+  }
+}
+#content:after {
+  @include break_block;
 }
 
 .tile {
@@ -60,52 +86,19 @@
 }
 
 #location_map {
-  width:350px;
   h2 {
     font-size:1em;
   }
-  h2 + div {
+  h2 + div.map {
     margin:2px;
     border:solid 0.1em #ccc;
     height:300px;
   }
-  float:left;
-}
-
-#kangei {
-  width:600px;
-  margin-left:370px;
-}
-
-#kyanpain {
-  width:600px;
-  margin-left:370px;
-  clear:none;
 }
 
 #redomendation_tools {
-  float:left;
   width:300px;
 }
-
-#trend_bar{
-  border:solid 1px #aaa;
-  @include break_block;
-  @include floating_block;
-}
-
-
-
-#food_genre_area{
-  font-size:0.8em;
-  @include floating_block;
-}
-
-#shop_character_area{
-  font-size:0.8em;
-  @include floating_block;
-}
-
 
 #footer{
   border:none 2px #aaa;

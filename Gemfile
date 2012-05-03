@@ -24,6 +24,7 @@ gem 'faker'
 gem 'faker-japanese'
 gem "spork"
 gem "factory_girl_rails"
+gem "kaminari"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
