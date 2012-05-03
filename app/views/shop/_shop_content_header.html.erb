@@ -1,0 +1,11 @@
+<div id="shop_header">
+  <h2><%= @shop.name %></h2>
+  <p class="phone_number">
+    <%= @shop.phone_number %>
+    <div>※お問い合わせの際はぐるなびを見たとお伝えになるとスムーズです。</div>
+  </p>
+  <p class="access">
+    <div>ＪＲ渋谷駅 ハチ公口 徒歩1分</div>
+    <%=link_to "地図を見る", controller:'map', action:'index' %>
+  </p>
+</div>
