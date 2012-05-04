@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+AreaMaster:
+  fields:
+    default: parent_id, name
+    form: parent_id, name
+  relationships: 
+  application: Application

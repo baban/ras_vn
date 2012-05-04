@@ -10,6 +10,7 @@ gem "haml"
 gem 'jquery-rails'
 
 gem 'devise'
+gem 'typus'
 
 # controller, model tools
 gem "aspectr"

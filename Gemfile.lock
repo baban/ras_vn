@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/fesplugas/typus.git
+  revision: b2236a70ff6e277373b8567cb3e8d8e4588aca2e
+  specs:
+    typus (3.2.0)
+      bcrypt-ruby (~> 3.0.1)
+      jquery-rails (~> 2.0.1)
+      rails (~> 3.2.2)
+
+GIT
   remote: https://github.com/mark-moseley/linecache.git
   revision: 869c6a65155068415925067e480741bd0a71527e
   ref: 869c6a65155068415925067e480741bd0a71527e
@@ -226,4 +235,5 @@ DEPENDENCIES
   ruby-debug19
   sass-rails (~> 3.2.3)
   spork
+  typus!
   uglifier (>= 1.0.3)

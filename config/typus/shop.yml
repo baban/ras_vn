@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Shop:
+  fields:
+    default: name, sub_name, coupon_flg, mobile_coupon_flg, comment, longitude, latitude, address, phone_number, fax_number, email, homepage, open_time, close_time, close_day
+    form: name, sub_name, coupon_flg, mobile_coupon_flg, comment, longitude, latitude, address, phone_number, fax_number, email, homepage, open_time, close_time, close_day
+  relationships: 
+  application: Application
