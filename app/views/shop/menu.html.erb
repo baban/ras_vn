@@ -1,0 +1,37 @@
+<% content_for(:style_after){ stylesheet_link_tag("shop/menu") } %>
+
+<%=render partial:"header" %>
+
+<div class='section' id='content'>
+  <%=render partial:"shop_content_header" %>
+  <div id='shop_content'>
+    <%=render partial:"shop_content_top_menu" %>
+
+    <div id='shop_content_body'>
+      <div id='shop_seen_area'>
+        <div class='seen'>
+          <div class='photo'>
+            <p>画像</p>
+          </div>
+          <div class='description'>
+            <p>【落ち着いた雰囲気】</p>
+            <p>時間を忘れるオシャレな和モダン美空間</p>
+          </div>
+        </div>
+        <div class='seen'>
+          <div class='photo'>
+            <p>画像</p>
+          </div>
+          <div class='description'>
+            <p>【落ち着いた雰囲気】</p>
+            <p>時間を忘れるオシャレな和モダン美空間</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%=render partial:"shop_content_footer" %>
+  <%=render partial"'shop_content_bottom_menu" %>
+</div>
+
+<%=render partial:"footer" %>

@@ -1,0 +1,43 @@
+<% content_for(:style_after){ stylesheet_link_tag("shop/index") } %>
+
+<%=render partial:"header" %>
+
+<div id="content.section">
+  <div id="content_header">
+    <h2>渋谷</h2>
+  </div>
+  <div id="content_body">
+    <div id="search_list">
+      <% @shops.each do |shop| %>
+        <div class="shop_area">
+          <h2><%= "【#{shop.name}】" %></h2>
+          <h2><%=link_to shop.name, action:'show', id: shop.id %></h2>
+          <div class="comment">
+            <%= shop.comment %>
+          </div>
+          <div class="topics">
+            <div class="topics">
+              <span class="title"> TOPICS</span>
+              <span>hogehoge</span>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="area_nav.nav">
+    <h3> エリアから絞り込み</h3>
+    <ul>
+      <li> 北千住・綾瀬・亀有</li>
+    </ul>
+    <h3>料理ジャンルから絞り込み</h3>
+    <ul>
+      <li>焼き鳥・肉料理・串料理</li>
+      <li>居酒屋</li>
+      <li>和食</li>
+      <li>焼肉・ホルモン</li>
+    </ul>
+  </div>
+</div>
+
+<%=render partial:'footer' %>
