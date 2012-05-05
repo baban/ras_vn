@@ -1,8 +1,0 @@
-# Use the README file as a reference to customize settings.
-
-ShopSubData:
-  fields:
-    default: top_photo
-    form: top_photo
-  relationships: 
-  application: Application
