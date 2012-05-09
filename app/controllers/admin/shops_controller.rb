@@ -1,6 +1,2 @@
-# encoding: utf-8
-
-class Admin::ShopsController < Admin::BaseController
-  def index
-  end
+class Admin::ShopsController < Admin::ResourcesController
 end

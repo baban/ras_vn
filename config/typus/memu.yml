@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Memu:
+  fields:
+    default: name, price, comment
+    form: name, price, comment
+  relationships: 
+  application: Application

@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Review:
+  fields:
+    default: user_id, comment, point
+    form: user_id, comment, point
+  relationships: 
+  application: Application

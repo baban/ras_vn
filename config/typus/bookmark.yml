@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Bookmark:
+  fields:
+    default: user_id, shop_id
+    form: user_id, shop_id
+  relationships: 
+  application: Application
