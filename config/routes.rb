@@ -15,4 +15,8 @@ RasVn::Application.routes.draw do
   get "top/index", as:'user_root'
 
   match ':controller(/:action(/:id))(.:format)'
+
+  scope :admin do
+    match ':controller(/:action(/:id))(.:format)'
+  end
 end
