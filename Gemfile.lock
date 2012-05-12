@@ -60,7 +60,6 @@ GEM
       i18n (~> 0.4)
     faker-japanese (0.0.1)
     flextures (1.9.10)
-    haml (3.1.4)
     hike (1.2.1)
     i18n (0.6.0)
     jbuilder (0.4.0)
@@ -181,7 +180,6 @@ DEPENDENCIES
   faker
   faker-japanese
   flextures
-  haml
   jbuilder
   jquery-rails
   kaminari
