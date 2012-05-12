@@ -116,7 +116,9 @@ ActiveRecord::Schema.define(:version => 20120512054405) do
   create_table "user_infos", :force => true do |t|
     t.integer  "user_id"
     t.string   "nickname",      :default => "", :null => false
-    t.boolean  "sex"
+    t.integer  "sex"
+    t.string   "first_name",    :default => ""
+    t.string   "last_name",     :default => ""
     t.integer  "blood_type"
     t.datetime "birthday"
     t.string   "mail_address"

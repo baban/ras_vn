@@ -1,2 +1,2 @@
 id,email,encrypted_password,reset_password_token,reset_password_sent_at,remember_created_at,sign_in_count,current_sign_in_at,last_sign_in_at,current_sign_in_ip,last_sign_in_ip,created_at,updated_at
-1,babanba.n@gmail.com,$2a$10$W228lV9.dxsNmkU6Gfj4.Oz1WK3TqGO1ppckL3xXOMLTtmhLd.Qxq,,"","",1,2012-05-12 05:49:17 UTC,2012-05-12 05:49:17 UTC,127.0.0.1,127.0.0.1,2012-05-12 05:49:17 UTC,2012-05-12 05:49:17 UTC
+1,babanba.n@gmail.com,$2a$10$wEZF.cZOcsQJG/lX.fXBN.EVzzqsGAeuWPJuYP64BPovE/V9Ok1ii,,"","",1,2012-05-12 09:52:17 UTC,2012-05-12 09:52:17 UTC,127.0.0.1,127.0.0.1,2012-05-12 09:52:17 UTC,2012-05-12 09:52:17 UTC

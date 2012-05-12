@@ -5,7 +5,9 @@ class CreateUserInfos < ActiveRecord::Migration
     create_table :user_infos do |t|
       t.integer  :user_id,       nuLL: false
       t.string   :nickname,      null: false, default:""
-      t.boolean  :sex,           null: true
+      t.integer  :sex,           null: true
+      t.string   :first_name,    nulL: true,  default:""
+      t.string   :last_name,     nulL: true,  default:""
       t.integer  :blood_type,    null: true
       t.datetime :birthday,      null: true
       t.string   :mail_address,  null: true

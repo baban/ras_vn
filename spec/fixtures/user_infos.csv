@@ -1,2 +1,2 @@
-"id","user_id","nickname","sex","blood_type","birthday","mail_address","postcode","address","address_point","created_at","updated_at"
-1,1,"baban",1,1,,,,,,2012/5/12 15:27,2012/5/12 15:27
+id,user_id,nickname,sex,first_name,last_name,blood_type,birthday,mail_address,postcode,address,address_point,created_at,updated_at
+1,1,baban,1,"","",1,"",,"","",0,2012-05-12 15:27:00 UTC,2012-05-12 15:27:00 UTC

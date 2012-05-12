@@ -12,5 +12,12 @@ class ProfileController < ApplicationController
   end
 
   def update
+    @info = current_user.info
+    @info.attributes = params[:user_info]
+
+    return render(action:'edit') unless @info.valid?
+
+    @info.save
+    redirect_to action:'show'
   end
 end
