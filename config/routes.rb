@@ -1,6 +1,12 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
+  get "profile/show"
+
+  get "profile/edit"
+
+  get "profile/update"
+
   get "mypage/index"
 
   get "bookmark/index"
