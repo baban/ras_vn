@@ -59,7 +59,7 @@ GEM
     faker (1.0.1)
       i18n (~> 0.4)
     faker-japanese (0.0.1)
-    flextures (1.9.11)
+    flextures (1.9.12)
     hike (1.2.1)
     i18n (0.6.0)
     jbuilder (0.4.0)
@@ -179,7 +179,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   faker-japanese
-  flextures
+  flextures (= 1.9.12)
   jbuilder
   jquery-rails
   kaminari

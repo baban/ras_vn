@@ -22,7 +22,7 @@ gem "tapp" # add tapp(tap print) method
 # test utilities
 gem 'rspec' # unit test utilities
 gem 'rspec-rails'
-gem 'flextures' # add rake command for dump and load fixtures
+gem 'flextures', "1.9.12" # add rake command for dump and load fixtures
 gem 'faker' # generate fake data
 gem 'faker-japanese' # generate japanese names
 gem "spork"

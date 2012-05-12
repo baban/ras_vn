@@ -1,0 +1,14 @@
+admin_users_0:
+  id: 1
+  first_name: matsubara
+  last_name: masanao
+  role: admin
+  email: babanba.n@gmail.com
+  status: true
+  token: 43e32ccb724c-f73e0f3da167
+  salt: 41b5c5fa739c62b9ff499ffb0a03764cd3d5d301
+  crypted_password: ea569dd02f98aef6193e1473889a111dc70d4a1b
+  preferences: 
+    locale: en
+  created_at: 2012-05-12 22:41:58 UTC
+  updated_at: 2012-05-12 22:42:12 UTC

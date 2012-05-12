@@ -5,5 +5,6 @@ module Flextures
 #  Config.fixture_load_directory = "test/fixtures/"
 #  Config.fixture_dump_directory = "test/fixtures/"
   Config.init_all_tables = true
+  Config.ignore_tables= Config.ignore_tables.concat ["admin_users", "users"]
 end
 
