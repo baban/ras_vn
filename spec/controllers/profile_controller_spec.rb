@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'spec_helper'
 
 describe ProfileController do
@@ -19,7 +21,7 @@ describe ProfileController do
   describe "GET 'update'" do
     it "returns http success" do
       get 'update'
-      response.should be_success
+      response.should be_redirect
     end
   end
 

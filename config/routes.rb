@@ -1,11 +1,7 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
-  get "profile/show"
-
-  get "profile/edit"
-
-  get "profile/update"
+  resource :profile
 
   get "mypage/index"
 
