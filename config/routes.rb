@@ -1,27 +1,10 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
-  get "recipe/index"
-
-  get "recipe/show"
-
-  get "recipe/edit"
-
-  get "recipe/create"
-
-  get "recipe/destroy"
-
-  get "recipe/new"
-
   resource :profile
+  resource :bookmark
 
   get "mypage/index"
-
-  get "bookmark/index"
-
-  get "bookmark/create"
-
-  get "bookmark/deatroy"
 
   root to:"top#index"
 
