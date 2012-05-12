@@ -1,2 +1,14 @@
-<h1>Profile#edit</h1>
-<p>Find me in app/views/profile/edit.html.erb</p>
+<h1>Profile</h1>
+
+<%=form_for :user_info, url:{ action:'update' } do |f| %>
+  <table>
+    <tr>
+      <td>nickname</td>
+      <td><%=f.text_field :nickname, value: @info.nickname %></td>
+    </tr>
+    <tr>
+      <td>mail_address</td>
+      <td><%=f.text_field :mail_address, value: @info.mail_address %></td>
+    </tr>
+  </table>
+<% end %>
