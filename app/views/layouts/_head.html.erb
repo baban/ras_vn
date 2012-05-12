@@ -2,9 +2,8 @@
 <html>
 <head>
   <title>RasVn</title>
-  <%#= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag  "common" %>
-  <%= stylesheet_link_tag  params[:controller] %>
+  <%= stylesheet_link_tag "common" %>
+  <%= stylesheet_link_tag params[:controller] %>
   <%= yield :style_after %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>

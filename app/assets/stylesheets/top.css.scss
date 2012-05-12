@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 @mixin break_block {
   content:"";
   display:block;
@@ -98,19 +97,5 @@
 
 #redomendation_tools {
   width:300px;
-}
-
-#footer{
-  border:none 2px #aaa;
-  border-top-style:solid;
-  #info_links_area{
-    ul > li{
-      display:inline;
-      text-align:center;
-    }
-  }
-  .cooporate_logo{
-    text-align:center;
-  }
 }
 

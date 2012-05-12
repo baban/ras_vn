@@ -13,6 +13,30 @@ p {
   padding:0;
 }
 
+.notice {
+  color:green;
+}
+
+.alert {
+  color:red;
+}
+
+ul.tabpanel {
+  border:none 1px #aaa;
+  border-style:none none solid none;
+  padding:0.1em;
+  li {
+    display:inline;
+    padding:0.1em 1em;
+    border:solid 1px #000;
+  }
+}
+ul.tabpanel:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
 #top_bar{
   background-color:#000;
   color:white;
@@ -73,9 +97,21 @@ p {
   clear:both;
 }
 
-#footer {
-  margin-top:1.5em;
+#footer{
+  border:none 2px #aaa;
+  border-top-style:solid;
+  #info_links_area {
+    text-align:center;
+    ul > li {
+      display:inline;
+      text-align:center;
+    }
+  }
   .cooporate_logo {
     text-align:center;
   }
+  p {
+    text-align:center;
+  }
 }
+
