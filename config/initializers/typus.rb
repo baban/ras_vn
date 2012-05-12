@@ -1,8 +1,10 @@
+# encoding: utf-8
+#
 Typus.setup do |config|
 
   # Application name.
-  # config.admin_title = "Typus"
-  # config.admin_sub_title = ""
+  config.admin_title = "RAS_VN:管理画面"
+  config.admin_sub_title = "shops innnovation"
 
   # When mailer_sender is set, password recover is enabled. This email
   # address will be used in Admin::Mailer.
@@ -15,7 +17,7 @@ Typus.setup do |config|
   # This is a required Rails configuration. In production it must be the actual
   # actual host of your application.
   #
-  # config.mailer_sender = "admin@example.com"
+  config.mailer_sender = "babanba.n@gmail.com"
 
   # Define paperclip attachment styles.
   # config.file_preview = :medium
