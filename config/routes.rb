@@ -10,6 +10,8 @@ RasVn::Application.routes.draw do
   resource :profile
   resource :bookmark
 
+  resources :recipes
+
   get "mypage/index"
 
   root to:"top#index"
