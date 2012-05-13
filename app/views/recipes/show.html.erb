@@ -12,9 +12,9 @@
       </div>
       <h3>材料</h3>
       <table>
-          <tr><td>こんにゃく</td><td>1丁</td></tr>
-          <tr><td>鷹の爪</td><td>２本</td></tr>
-          <tr><td>にんにく</td><td>１かけ</td></tr>
+        <% @recipe.foodstuffs.each do |foodstuff| %>
+          <tr><td><%= foodstuff.name %></td><td><%= foodstuff.amount %></td></tr>
+        <% end %>
       </table>
       <br />
       <br />
