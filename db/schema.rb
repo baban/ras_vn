@@ -73,10 +73,12 @@ ActiveRecord::Schema.define(:version => 20120513035424) do
   end
 
   create_table "recipes", :force => true do |t|
-    t.string   "title"
-    t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "user_id",                     :null => false
+    t.string   "title",       :default => "", :null => false
+    t.text     "description",                 :null => false
+    t.text     "one_point",                   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "reviews", :force => true do |t|

@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Recipe:
+  fields:
+    default: user_id, title, description, one_point
+    form: user_id, title, description, one_point
+  relationships: 
+  application: Application
