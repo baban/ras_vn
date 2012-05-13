@@ -1,14 +1,9 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
-  get "recipe_search/recipe_genre"
-
-  get "information/index"
-
-  get "information/show"
-
   resource :profile
   resource :bookmark
+  resource :information
 
   resources :recipes
 

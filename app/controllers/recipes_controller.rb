@@ -9,15 +9,26 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
 
+  def new
+    @recipe = Recipe.new
+  end
+
   def edit
+    @recipe = Recipe.find(params[:id])
+    render action:'new'
   end
 
   def create
+    @recipe = Recipe.new
+    @recipe.attributes= params[:recipe]
+    @recipe.save
+    redirect_to action:'index'
   end
 
   def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.delete
+    redirect_to action:'index'
   end
 
-  def new
-  end
 end

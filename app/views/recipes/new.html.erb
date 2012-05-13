@@ -1,2 +1,8 @@
-<h1>Recipe#new</h1>
-<p>Find me in app/views/recipe/new.html.erb</p>
+
+<%=form_for @recipe do |f| %>
+  <p><%= f.label :title, "Title:" %></p>
+  <p><%= f.text_field :title, value: @recipe.title %></p>
+  <p><%= f.label :description, "Description:" %></p>
+  <p><%= f.text_area :description, value: @recipe.description %></p>
+  <p><%= f.submit "Save" %></p>
+<% end %>
