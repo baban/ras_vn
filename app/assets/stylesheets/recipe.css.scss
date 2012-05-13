@@ -22,6 +22,20 @@
   clear:both;
 }
 
+#content_body{
+  width:75%;
+  float:left;
+  clear:none;
+}
+
+#content_footer{
+  width:20%;
+  float:right;
+  border:solid 1px #aaa;
+  min-height:30em;
+}
+
+/* index */
 div.recipe {
   border:solid 1px #aaa;
   width:15em;
@@ -33,4 +47,31 @@ div.recipe {
     height:5em;
     margin:0.3em;  
   }
+}
+
+/* show */
+#recipe_body{
+  #recipe_photo{
+    width:200px;
+    height:200px;
+    border:solid 1px #aaa;
+    float:left;
+    clear:none;
+    margin-right:0.5em;
+  }
+}
+
+#recipe_steps {
+  dl.step{
+    width:20%;
+    height:10em;
+    border:solid 1px #aaa;
+    float:left;
+    clear:none;
+  }
+}
+#recipe_steps:after {
+  content:"";
+  display:block;
+  clear:both;  
 }
