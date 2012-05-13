@@ -1,16 +1,16 @@
 <% if user_signed_in? %>
   <div id="top_bar">
     <ul>
-      <li class="name"> こんにちはゲストさん</li>
-      <li class="login"><%=link_to "login", controller:'user', action:'sign_in' %></li>
-      <li class="login"><%=link_to "registry", controller:'user', action:'sign_up' %></li>
+      <li class="name"> こんにちは <%= current_user.info.nickname %> さん</li>
+      <li class="logout"><%=link_to "logout", controller:'user', action:'sign_out' %></li>
     </ul>
   </div>
 <% else %>
   <div id="top_bar">
     <ul>
-      <li class="name"> こんにちは****さん</li>
-      <li class="logout"><%=link_to "logout", controller:'user', action:'sign_out' %></li>
+      <li class="name"> こんにちはゲストさん</li>
+      <li class="login"><%=link_to "login", controller:'user', action:'sign_in' %></li>
+      <li class="login"><%=link_to "registry", controller:'user', action:'sign_up' %></li>
     </ul>
   </div>
 <% end %>

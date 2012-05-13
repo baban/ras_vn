@@ -16,38 +16,15 @@
           <tr><td>鷹の爪</td><td>２本</td></tr>
           <tr><td>にんにく</td><td>１かけ</td></tr>
       </table>
-<br />
-<br />
+      <br />
+      <br />
       <dl id="recipe_steps">
-        <dl class="step">
-          <dt>1</dt>
-          <dd>
-            こんにゃくの両面に網目に切れこみを入れ、スプーンや手で<br />
-            一口サイズにちぎる。<br />
-            茹でてアク抜きをする。 
-          </dd>
-        </dl>
-        <dl class="step">
-          <dt>2</dt>
-          <dd>
-            鷹の爪を小口切り、にんにくを薄くスライスする。<br />
-            ●を合わせておく。
-          </dd>
-        </dl>
-        <dl class="step">
-          <dt>3</dt>
-          <dd>
-           油を温め☆を弱火で炒める。<br />
-           香りが立ったらこんにゃくを入れ軽く炒める。
-          </dd>
-        </dl>
-        <dl class="step">
-          <dt>4</dt>
-          <dd>
-            ３に●を流し込み、中火～強火で汁気がなくなるまで煮たら完成。<br />
-            約５～１０分で汁気がなくなります。
-          </dd>
-        </dl>
+        <% @recipe.steps.each_with_index do |step,i| %>
+          <dl class="step">
+            <dt><%= i + 1 %></dt>
+            <dd><%= step.context %></dd>
+          </dl>
+        <% end %>
       </dl>
       <h3>コツ・ポイント</h3>
       <div class="section"><%= @recipe.one_point %></div>

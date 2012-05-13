@@ -6,6 +6,7 @@ class CreateRecipes < ActiveRecord::Migration
       t.integer :user_id,     null: false
       t.string  :title,       null: false, default: ''
       t.text    :description, null: false, default: ''
+      t.binary  :image,       null: true
       t.text    :one_point,   null: false, default: ''
 
       t.timestamps
