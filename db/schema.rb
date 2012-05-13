@@ -84,15 +84,8 @@ ActiveRecord::Schema.define(:version => 20120513045452) do
     t.integer  "user_id",                     :null => false
     t.string   "title",       :default => "", :null => false
     t.text     "description",                 :null => false
+    t.binary   "image"
     t.text     "one_point",                   :null => false
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
-  end
-
-  create_table "reviews", :force => true do |t|
-    t.integer  "user_id",    :default => 0,   :null => false
-    t.text     "comment"
-    t.float    "point",      :default => 0.0, :null => false
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
   end
@@ -115,6 +108,15 @@ ActiveRecord::Schema.define(:version => 20120513045452) do
     t.integer  "data_type",  :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "shop_reviews", :force => true do |t|
+    t.integer  "shop_id",                     :null => false
+    t.integer  "user_id",                     :null => false
+    t.text     "comment"
+    t.float    "point",      :default => 0.0, :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "shop_sub_data", :force => true do |t|
