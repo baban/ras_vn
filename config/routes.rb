@@ -1,6 +1,10 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
+  get "information/index"
+
+  get "information/show"
+
   resource :profile
   resource :bookmark
 
