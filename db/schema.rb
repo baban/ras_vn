@@ -52,10 +52,11 @@ ActiveRecord::Schema.define(:version => 20120513045452) do
   end
 
   create_table "information", :force => true do |t|
-    t.string   "title"
-    t.string   "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "title",      :default => "",    :null => false
+    t.string   "content",    :default => "",    :null => false
+    t.boolean  "public",     :default => false, :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "memus", :force => true do |t|
@@ -81,13 +82,15 @@ ActiveRecord::Schema.define(:version => 20120513045452) do
   end
 
   create_table "recipes", :force => true do |t|
-    t.integer  "user_id",                     :null => false
-    t.string   "title",       :default => "", :null => false
-    t.text     "description",                 :null => false
+    t.integer  "user_id",                        :null => false
+    t.string   "title",       :default => "",    :null => false
+    t.text     "description",                    :null => false
+    t.boolean  "public",      :default => false, :null => false
     t.binary   "image"
-    t.text     "one_point",                   :null => false
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.text     "one_point",                      :null => false
+    t.datetime "deleted_at"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
   end
 
   create_table "search_logs", :force => true do |t|
@@ -111,26 +114,30 @@ ActiveRecord::Schema.define(:version => 20120513045452) do
   end
 
   create_table "shop_reviews", :force => true do |t|
-    t.integer  "shop_id",                     :null => false
-    t.integer  "user_id",                     :null => false
+    t.integer  "shop_id",                       :null => false
+    t.integer  "user_id",                       :null => false
     t.text     "comment"
-    t.float    "point",      :default => 0.0, :null => false
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.boolean  "public",     :default => false, :null => false
+    t.float    "point",      :default => 0.0,   :null => false
+    t.datetime "deleted_at"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "shop_sub_data", :force => true do |t|
     t.binary   "top_photo"
+    t.datetime "deleted_at"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "shops", :force => true do |t|
-    t.string   "name",              :null => false
-    t.string   "sub_name",          :null => false
-    t.boolean  "coupon_flg",        :null => false
-    t.boolean  "mobile_coupon_flg", :null => false
-    t.text     "comment",           :null => false
+    t.string   "name",                               :null => false
+    t.string   "public",            :default => "0", :null => false
+    t.string   "sub_name",                           :null => false
+    t.boolean  "coupon_flg",                         :null => false
+    t.boolean  "mobile_coupon_flg",                  :null => false
+    t.text     "comment",                            :null => false
     t.float    "longitude"
     t.float    "latitude"
     t.string   "address"
@@ -141,8 +148,9 @@ ActiveRecord::Schema.define(:version => 20120513045452) do
     t.time     "open_time"
     t.time     "close_time"
     t.string   "close_day"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "deleted_at"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
 
   create_table "user_infos", :force => true do |t|

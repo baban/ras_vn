@@ -1,9 +1,11 @@
+# encoding: utf-8
+
 class CreateInformation < ActiveRecord::Migration
   def change
     create_table :information do |t|
-      t.string :title
-      t.string :content
-
+      t.string  :title,   null: false, default: ''
+      t.string  :content, null: false, default: ''
+      t.boolean :public,  null: false, default: false
       t.timestamps
     end
   end
