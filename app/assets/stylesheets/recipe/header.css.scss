@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 #recipe_header {
   border:none 2px #aaa;
   border-bottom-style:solid;
@@ -22,15 +24,3 @@
   clear:both;
 }
 
-div.recipe {
-  border:solid 1px #aaa;
-  width:15em;
-  height:15em;
-  float:left;
-  clear:none;
-  div.recipe_photo {
-    border:solid 1px #aaa;
-    height:5em;
-    margin:0.3em;  
-  }
-}

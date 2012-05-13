@@ -20,6 +20,7 @@
 </div>
 
 <div id='content'>
+  <%= render partial:'content_tabpanel' %>
   <div id='nav'>
     <div id='genre_list'>
       <ul>
@@ -60,22 +61,4 @@
   </div>
 </div>
 
-<div id="footer">
-  <div id="info_links_area">
-    <ul>
-      <li>企業情報</li>
-      <li>利用規約</li>
-      <li>利用条件</li>
-      <li>ニュースリリース</li>
-      <li>プライバシーポリシー</li>
-      <li>IR情報</li>
-      <li>加盟店募集</li>
-      <li>採用情報</li>
-    </ul>
-  </div>
-  <div class='cooporate_logo'>
-    <p>このホームページのご意見ご質問はこちら</p>
-    <p>Copyright© Gurunavi, Inc. All rights reserved.</p>
-  </div>
-</div>
-
+<%= render partial:'layouts/footer' %>

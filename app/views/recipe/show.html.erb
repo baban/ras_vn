@@ -1,2 +1,61 @@
-<h1>Recipe#show</h1>
-<p>Find me in app/views/recipe/show.html.erb</p>
+<%= render partial:'header' %>
+
+<div id="content">
+  <div id="content_body" class="section">
+    <h2><%= @recipe.title %></h2>
+    <div class="section">
+      <div id="recipe_photo" class="figure">
+        写真
+      </div>
+      <div id="description">
+        <%= @recipe.description %>
+      </div>
+      <h3>材料</h3>
+      <table>
+          <tr><td>こんにゃく</td><td>1丁</td></tr>
+          <tr><td>鷹の爪</td><td>２本</td></tr>
+          <tr><td>にんにく</td><td>１かけ</td></tr>
+      </table>
+      <dl class="steps">
+        <dl class="step">
+          <dt>1</dt>
+          <dd>
+            こんにゃくの両面に網目に切れこみを入れ、スプーンや手で<br />
+            一口サイズにちぎる。<br />
+            茹でてアク抜きをする。 
+          </dd>
+        </dl>
+        <dl class="step">
+          <dt>2</dt>
+          <dd>
+            鷹の爪を小口切り、にんにくを薄くスライスする。<br />
+            ●を合わせておく。
+          </dd>
+        </dl>
+        <dl class="step">
+          <dt>3</dt>
+          <dd>
+           油を温め☆を弱火で炒める。<br />
+           香りが立ったらこんにゃくを入れ軽く炒める。
+          </dd>
+        </dl>
+        <dl class="step">
+          <dt>4</dt>
+          <dd>
+            ３に●を流し込み、中火～強火で汁気がなくなるまで煮たら完成。<br />
+            約５～１０分で汁気がなくなります。
+          </dd>
+        </dl>
+      </dl>
+      <h3>コツ・ポイント</h3>
+      <div class="section">
+        網目の切れこみや、スプーンや手でちぎると味が染み込みやすくなります。<br />
+        形はいびつですが、それも味があって食べる楽しみになりますよ(＾▽＾)<br />
+        あと、結構辛いので苦手な人は鷹の爪を少しにして下さい。口が燃えます･･･笑 
+      </div>
+    </div>
+  </div>
+  <div id="content_footer">
+    広告
+  </div>
+</div>
