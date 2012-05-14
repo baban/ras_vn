@@ -1,7 +1,7 @@
-class InformationController < ApplicationController
-  def index
-  end
+# encoding: utf-8
 
-  def show
-  end
+class InformationController < ApplicationController
+  include ListedContentsHelper
+  # アクションの処理はここの中で共通化
+  include ControllerModule::ListedContents
 end
