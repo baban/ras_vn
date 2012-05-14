@@ -1,2 +1,29 @@
-<h1>Recipe#edit</h1>
-<p>Find me in app/views/recipe/edit.html.erb</p>
+<%= render partial:'header' %>
+
+<h2>recipe</h2>
+<section>
+  <%=form_for @recipe do |f| %>
+    <h2><%= f.text_field :title, value: @recipe.title %></h2>
+    <div class="section" id="recipe_body">
+      <div id="recipe_photo" class="figure">
+      <%= f.file_field :image, value: ''  %>
+      </div>
+    <div id="description">
+      <%= f.text_area :description, value: @recipe.description %>
+    </div>
+    <p><%= f.select :public, { public: true, closed: false } %></p>
+    <p><%=link_to "投稿に関する注意事項", "" %></p>
+    <p><%= f.submit "Next Step" %></p>
+  <% end %>
+
+  <h3>FoodStuffs</h3>
+  <%=form_for :steps do |f| %>
+  <% end %>
+
+  <h3>Steps</h3>
+  <%=form_for :steps do |f| %>
+  <% end %>a
+</div>
+
+
+<%= render partial:'layouts/footer' %>

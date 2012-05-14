@@ -1,8 +1,27 @@
+<%= render partial:'header' %>
 
-<%=form_for @recipe do |f| %>
-  <p><%= f.label :title, "Title:" %></p>
-  <p><%= f.text_field :title, value: @recipe.title %></p>
-  <p><%= f.label :description, "Description:" %></p>
-  <p><%= f.text_area :description, value: @recipe.description %></p>
-  <p><%= f.submit "Save" %></p>
-<% end %>
+<h2>recipe</h2>
+<section>
+  <%=form_for @recipe do |f| %>
+    <p><%= f.label :title, "Title:" %></p>
+    <p><%= f.text_field :title, value: @recipe.title %></p>
+    <p><%= f.label :description, "Description:" %></p>
+    <p><%= f.text_area :description, value: @recipe.description %></p>
+    <p><%= f.label :image, "Image:" %></p>
+    <p><%= f.file_field :image, value: ''  %></p>
+    <p><%= f.select :public, { public: true, closed: false } %></p>
+    <p><%=link_to "投稿に関する注意事項", "" %></p>
+    <p><%= f.submit "Next Step" %></p>
+  <% end %>
+
+  <h3>FoodStuffs</h3>
+  <%=form_for :steps do |f| %>
+  <% end %>
+
+  <h3>Steps</h3>
+  <%=form_for :steps do |f| %>
+  <% end %>
+</div>
+
+
+<%= render partial:'layouts/footer' %>

@@ -1,7 +1,7 @@
 # encoding: utf-8
 
-module Searcher
+module RecipeSearcher
   def self.search( option={} )
-    Shop.where("")
+    Recipe.where("")
   end
 end

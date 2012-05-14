@@ -2,7 +2,7 @@
 
 class RecipesController < ApplicationController
   def index
-    @recipes = Recipe.all
+    @recipes = RecipeSearcher.search(params)
   end
 
   def show
@@ -21,8 +21,17 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new
     @recipe.attributes= params[:recipe]
+    @recipe.user_id= current_user.id
     @recipe.save
-    redirect_to action:'index'
+    redirect_to( {action:'index'}, flash:{ notice: "update completed" })
+  end
+
+  def update
+    @recipe = Recipe.new
+    @recipe.attributes= params[:recipe]
+    @recipe.user_id= current_user.id
+    @recipe.save
+    redirect_to( {action:'index'}, flash:{ notice: "update completed" } )
   end
 
   def destroy
@@ -30,5 +39,4 @@ class RecipesController < ApplicationController
     @recipe.delete
     redirect_to action:'index'
   end
-
 end

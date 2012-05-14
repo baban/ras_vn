@@ -2,7 +2,7 @@
 
 class ShopController < ApplicationController
   def index
-    @shops = Searcher.search
+    @shops = ShopSearcher.search(params)
   end
 
   def show
