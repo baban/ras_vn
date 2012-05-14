@@ -1,2 +1,10 @@
-<h1>Information#show</h1>
-<p>Find me in app/views/information/show.html.erb</p>
+<% content_for :title do %> | <%=raw @article.title %> <% end %>
+<%= render partial:'common/commonheader' %>
+<section>
+	<h2 class="txt16"><%=raw @article.title %></h2>
+	<section class="cont txt12 top_sdw dec">
+		<%=raw @article.content %>
+		<br />
+	</section>
+</section>
+<%= render partial:'common/commonfooter' %>

@@ -1,2 +1,26 @@
-<h1>Information#index</h1>
-<p>Find me in app/views/information/index.html.erb</p>
+<% content_for :title do %> | コラム一覧 <% end %>
+
+<%=pagenum_style(@list) %>
+
+<%=render partial:'common/commonheader' %>
+
+<section>
+
+<h2><span class="txt16">新着情報</span></h2>
+
+<p class="cont txt12 top_sdw"><%=raw page_entries_info @list %></p>
+
+<ul class="linklist">
+	<% @list.each do |info| %>
+    <li class="col">
+    	<%=link_to raw('<span class="indent">'+info.title+ new_contents_mark(info)+'</span>'), action:'show', id:info.id %>
+    </li>
+	<% end %>
+</ul>
+
+<%=paginate @list, window:1, outer_window:2, left:2, right:2 %>
+
+</section>
+
+<%=render partial:'common/commonfooter' %>
+
