@@ -15,7 +15,6 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
-    render action:'new'
   end
 
   def create

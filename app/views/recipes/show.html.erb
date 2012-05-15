@@ -4,20 +4,20 @@
   <div id="content_body" class="section">
     <h2><%= @recipe.title %></h2>
     <div class="section" id="recipe_body">
-      <div id="recipe_photo" class="figure">
-        写真
+      <div id="recipe_base_info">
+        <div id="recipe_photo" class="figure">
+          写真
+        </div>
+        <div id="description">
+          <%= @recipe.description %>
+        </div>
+        <h3>材料</h3>
+        <table>
+          <% @recipe.foodstuffs.each do |foodstuff| %>
+            <tr><td><%= foodstuff.name %></td><td><%= foodstuff.amount %></td></tr>
+          <% end %>
+        </table>
       </div>
-      <div id="description">
-        <%= @recipe.description %>
-      </div>
-      <h3>材料</h3>
-      <table>
-        <% @recipe.foodstuffs.each do |foodstuff| %>
-          <tr><td><%= foodstuff.name %></td><td><%= foodstuff.amount %></td></tr>
-        <% end %>
-      </table>
-      <br />
-      <br />
       <dl id="recipe_steps">
         <% @recipe.steps.each_with_index do |step,i| %>
           <dl class="step">
@@ -26,7 +26,7 @@
           </dl>
         <% end %>
       </dl>
-      <h3>コツ・ポイント</h3>
+      <h3>Point!!</h3>
       <div class="section"><%= @recipe.one_point %></div>
     </div>
   </div>

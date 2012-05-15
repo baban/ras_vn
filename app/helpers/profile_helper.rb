@@ -2,7 +2,7 @@
 
 module ProfileHelper
   def select_sex( f, value=nil, options={} )
-    f.select( :sex, { "選択する"=>nil, "男性"=>1, "女性"=>2," その他"=>0 }, {selected: 1}, options )
+    f.select( :sex, { "----"=>nil, "male"=>1, "female"=>2, "other"=>0 }, {selected: 1}, options )
   end
 
   def translate_sex( sex )

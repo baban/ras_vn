@@ -61,6 +61,12 @@ div.recipe {
   }
 }
 
+#recipe_base_info:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
 #recipe_steps {
   dl.step{
     width:20%;
@@ -74,4 +80,18 @@ div.recipe {
   content:"";
   display:block;
   clear:both;  
+}
+
+/* edit */
+#recipe_image {
+  width:2em !important;
+}
+
+#description > textarea {
+  height:4em;
+}
+
+#recipe_one_point {
+  width:80%;
+  height:4em;
 }
