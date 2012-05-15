@@ -4,25 +4,37 @@
 <section>
   <%=form_for @recipe do |f| %>
     <h2><%= f.text_field :title, value: @recipe.title %></h2>
-    <div class="section" id="recipe_body">
-      <div id="recipe_photo" class="figure">
-      <%= f.file_field :image, value: ''  %>
+    <div id="recipe_base_info">
+      <div class="section" id="recipe_body">
+        <div id="recipe_photo" class="figure">
+          画像
+        </div>
+      <div id="description">
+        <%= f.text_area :description, value: @recipe.description %>
       </div>
-    <div id="description">
-      <%= f.text_area :description, value: @recipe.description %>
+      <table>
+        <% @recipe.foodstuffs.each do |foodstuff| %>
+          <tr><td><%= foodstuff.name %></td><td><%= foodstuff.amount %></td></tr>
+        <% end %>
+      </table>
     </div>
+
+    <dl id="recipe_steps">
+      <% @recipe.steps.each_with_index do |step,i| %>
+        <dl class="step">
+          <dt><%= i + 1 %></dt>
+          <dd><%= step.context %></dd>
+        </dl>
+      <% end %>
+    </dl>
+
+    <h3>Point!!</h3>
+    <div class="section"><%=f.text_area :one_point, value: @recipe.one_point %></div>
+
     <p><%= f.select :public, { public: true, closed: false } %></p>
-    <p><%=link_to "投稿に関する注意事項", "" %></p>
     <p><%= f.submit "Next Step" %></p>
   <% end %>
 
-  <h3>FoodStuffs</h3>
-  <%=form_for :steps do |f| %>
-  <% end %>
-
-  <h3>Steps</h3>
-  <%=form_for :steps do |f| %>
-  <% end %>a
 </div>
 
 
