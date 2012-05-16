@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class SearchController < ApplicationController
+class ShopSearchController < ApplicationController
   def index
   end
 

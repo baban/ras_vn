@@ -2,6 +2,11 @@
 
 class TopController < ApplicationController
   def index
+    shop
+    render action:'shop'
+  end
+
+  def shop
     @food_genre = FoodGenreMaster.all
   end
 

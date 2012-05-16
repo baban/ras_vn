@@ -9,7 +9,7 @@ RasVn::Application.routes.draw do
 
   get "mypage/index"
 
-  root to:"top#index"
+  root to:"top#shop"
 
   devise_for :user
   get "top/index", as:'user_root'
