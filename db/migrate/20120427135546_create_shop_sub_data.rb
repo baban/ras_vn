@@ -5,7 +5,7 @@ class CreateShopSubData < ActiveRecord::Migration
     create_table :shop_sub_data do |t|
       t.binary :top_photo, null: true
 
-      t.datetime :deleted_at,        null: true
+      t.time   :deleted_at,        null: true
       t.timestamps
     end
   end

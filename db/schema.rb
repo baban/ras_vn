@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120513134902) do
+ActiveRecord::Schema.define(:version => 20120516161211) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20120513134902) do
   create_table "bookmarks", :force => true do |t|
     t.integer  "user_id",    :null => false
     t.integer  "shop_id",    :null => false
+    t.time     "deleted_at"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20120513134902) do
     t.integer  "recipe_id",                  :null => false
     t.string   "name",       :default => "", :null => false
     t.string   "amount",     :default => "", :null => false
+    t.time     "deleted_at"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
   end
@@ -73,6 +75,11 @@ ActiveRecord::Schema.define(:version => 20120513134902) do
     t.text     "comment"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "provinces", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "recipe_genre_masters", :force => true do |t|
@@ -96,7 +103,7 @@ ActiveRecord::Schema.define(:version => 20120513134902) do
     t.boolean  "public",      :default => false, :null => false
     t.binary   "image"
     t.text     "one_point",                      :null => false
-    t.datetime "deleted_at"
+    t.time     "deleted_at"
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
   end
@@ -127,14 +134,14 @@ ActiveRecord::Schema.define(:version => 20120513134902) do
     t.text     "comment"
     t.boolean  "public",     :default => false, :null => false
     t.float    "point",      :default => 0.0,   :null => false
-    t.datetime "deleted_at"
+    t.time     "deleted_at"
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end
 
   create_table "shop_sub_data", :force => true do |t|
     t.binary   "top_photo"
-    t.datetime "deleted_at"
+    t.time     "deleted_at"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -156,7 +163,7 @@ ActiveRecord::Schema.define(:version => 20120513134902) do
     t.time     "open_time"
     t.time     "close_time"
     t.string   "close_day"
-    t.datetime "deleted_at"
+    t.time     "deleted_at"
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
   end

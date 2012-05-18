@@ -150,6 +150,8 @@ GEM
       activesupport (= 3.2.2)
       bundler (~> 1.0)
       railties (= 3.2.2)
+    rails3_acts_as_paranoid (0.2.4)
+      activerecord (~> 3.2)
     railties (3.2.2)
       actionpack (= 3.2.2)
       activesupport (= 3.2.2)
@@ -251,6 +253,7 @@ DEPENDENCIES
   pry-doc
   pry-rails
   rails (= 3.2.2)
+  rails3_acts_as_paranoid
   rspec
   rspec-rails
   ruby-openid (= 2.1.8)

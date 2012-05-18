@@ -20,7 +20,7 @@ class CreateShops < ActiveRecord::Migration
       t.time     :close_time,        null: true
       t.string   :close_day,         null: true
 
-      t.datetime :deleted_at,        null: true
+      t.time     :deleted_at,        null: true
       t.timestamps
     end
   end

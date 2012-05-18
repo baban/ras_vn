@@ -10,7 +10,7 @@ class CreateRecipes < ActiveRecord::Migration
       t.binary   :image,       null: true
       t.text     :one_point,   null: false, default: ''
 
-      t.datetime :deleted_at,  null: true
+      t.time     :deleted_at,  null: true
       t.timestamps
     end
   end

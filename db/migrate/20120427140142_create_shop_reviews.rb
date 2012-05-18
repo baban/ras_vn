@@ -9,7 +9,7 @@ class CreateShopReviews < ActiveRecord::Migration
       t.boolean :public,      null: false, default: false
       t.float   :point,       null: false, default: 0
 
-      t.datetime :deleted_at, null: true
+      t.time    :deleted_at, null: true
       t.timestamps
     end
   end

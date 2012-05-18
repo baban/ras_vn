@@ -2,6 +2,6 @@
 
 module RecipeSearcher
   def self.search( option={} )
-    Recipe.where("")
+    Recipe.all
   end
 end
