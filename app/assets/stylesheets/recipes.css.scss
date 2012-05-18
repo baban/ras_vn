@@ -89,7 +89,6 @@ div.recipe {
   height:5em;
 }
 
-
 /* edit */
 #recipe_image {
   width:2em !important;
@@ -102,4 +101,14 @@ div.recipe {
 #recipe_one_point {
   width:80%;
   height:4em;
+}
+
+dl.step > dd {
+  padding:0;
+  margin:0;
+}
+
+.step_edit_area {
+  width:85%;
+  height:7em;
 }

@@ -20,10 +20,10 @@
     </div>
 
     <dl id="recipe_steps">
-      <% @recipe.steps.each_with_index do |step,i| %>
+      <% @recipe.edit_steps.each_with_index do |step,i| %>
         <dl class="step">
-          <dt><%= i + 1 %></dt>
-          <dd><%= step.context %></dd>
+          <dt>Step <%= i + 1 %></dt>
+          <dd><%= f.text_area "step_#{i}", value: step.context, class:'step_edit_area' %></dd>
         </dl>
       <% end %>
     </dl>
