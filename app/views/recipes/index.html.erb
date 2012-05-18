@@ -1,11 +1,15 @@
-<%= render partial:'header' %>
+<%= render partial:'content_menu' %>
 
-<% @recipes.each do |recipe| %>
-  <div class="recipe">
-    <div class="figure recipe_photo">
-      画像
+<div id="content_body">
+
+  <% @recipes.each do |recipe| %>
+    <div class="recipe">
+      <div class="figure recipe_photo">
+        画像
+      </div>
+      <%= link_to recipe.title, action:'show', id: recipe.id %>
+      <p><%= recipe.description %></p>
     </div>
-    <%= link_to recipe.title, action:'show', id: recipe.id %>
-    <p><%= recipe.description %></p>
-  </div>
-<% end %>
+  <% end %>
+
+</div>

@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
     @recipe.attributes= params[:recipe]
     @recipe.user_id= current_user.id
     @recipe.save
-    redirect_to( {action:'index'}, flash:{ notice: "update completed" })
+    redirect_to( {action:'edit', id: @recipe.id }, flash:{ notice: "update completed" })
   end
 
   def update

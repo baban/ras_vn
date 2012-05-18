@@ -16,4 +16,9 @@ class TopController < ApplicationController
   def restrant
   end
 
+  # <%=link_to "リモートテスト", { controller:"top", action:"remote_test", format:'js' }, 
+  #                              id:'remote-test', remote: true %>
+  def remote_test
+  end
+
 end
