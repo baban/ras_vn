@@ -1,0 +1,37 @@
+<% content_for(:style_after){ stylesheet_link_tag("restaurants/menu") } %>
+
+<%=render partial:"header" %>
+
+<div class="section" id="content">
+  <%=render partial:"content_header" %>
+  <div id="restaurant_content">
+    <%=render partial:"content_top_menu" %>
+
+    <div id="restaurant_content_body">
+      <div id="restaurant_seen_area">
+        <div class="seen">
+          <div class="photo">
+            <p>画像</p>
+          </div>
+          <div class="description">
+            <p>【落ち着いた雰囲気】</p>
+            <p>時間を忘れるオシャレな和モダン美空間</p>
+          </div>
+        </div>
+        <div class="seen">
+          <div class="photo">
+            <p>画像</p>
+          </div>
+          <div class="description">
+            <p>【落ち着いた雰囲気】</p>
+            <p>時間を忘れるオシャレな和モダン美空間</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%=render partial:"content_footer" %>
+  <%=render partial:"content_bottom_menu" %>
+</div>
+
+<%=render partial:"footer" %>

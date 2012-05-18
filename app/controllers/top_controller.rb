@@ -2,18 +2,15 @@
 
 class TopController < ApplicationController
   def index
-    shop
-    render action:'shop'
+    restaurant
+    render action:'restaurant'
   end
 
-  def shop
-    @food_genre = FoodGenreMaster.all
+  def restaurant
+    @food_genre = [] # FoodGenreMaster.all
   end
 
-  def recipi
-  end
-
-  def restrant
+  def recipe
   end
 
   # <%=link_to "リモートテスト", { controller:"top", action:"remote_test", format:'js' }, 

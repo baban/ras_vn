@@ -8,10 +8,11 @@ RasVn::Application.routes.draw do
   resource :information
 
   resources :recipes
+  resources :restaurants
 
   get "mypage/index"
 
-  root to:"top#shop"
+  root to:"top#index"
 
   devise_for :user
   get "top/index", as:'user_root'

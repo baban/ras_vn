@@ -1,0 +1,14 @@
+<%=render partial:'header' %>
+
+<div id="content">
+  <h2>こだわりから探す</h2>
+  <div id="content_body">
+    <ul class="character_list">
+      <% EatStyle.all.each do |style| %>
+        <li><%= link_to style.name, controller:"restaurants", action:"index", eat_style: style.id %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<%=render partial:"common/footer" %>

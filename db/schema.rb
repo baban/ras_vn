@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120516161211) do
+ActiveRecord::Schema.define(:version => 20120518184249) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -29,14 +29,6 @@ ActiveRecord::Schema.define(:version => 20120516161211) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
 
-  create_table "area_masters", :force => true do |t|
-    t.integer  "parent_id",  :null => false
-    t.string   "name",       :null => false
-    t.integer  "data_type",  :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "bookmarks", :force => true do |t|
     t.integer  "user_id",    :null => false
     t.integer  "shop_id",    :null => false
@@ -45,9 +37,15 @@ ActiveRecord::Schema.define(:version => 20120516161211) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "food_genre_masters", :force => true do |t|
-    t.string   "name",       :null => false
-    t.integer  "data_type",  :null => false
+  create_table "distincts", :force => true do |t|
+    t.integer  "prefecture_id", :null => false
+    t.string   "name",          :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "eat_styles", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -69,20 +67,13 @@ ActiveRecord::Schema.define(:version => 20120516161211) do
     t.datetime "updated_at",                    :null => false
   end
 
-  create_table "memus", :force => true do |t|
-    t.string   "name",       :default => "", :null => false
-    t.integer  "price",      :default => 0,  :null => false
-    t.text     "comment"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
-  end
-
-  create_table "provinces", :force => true do |t|
+  create_table "prefectures", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "recipe_genre_masters", :force => true do |t|
+  create_table "purposes", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -108,45 +99,34 @@ ActiveRecord::Schema.define(:version => 20120516161211) do
     t.datetime "updated_at",                     :null => false
   end
 
-  create_table "search_logs", :force => true do |t|
-    t.integer  "user_id",                    :null => false
-    t.string   "words",      :default => "", :null => false
-    t.string   "location",   :default => "", :null => false
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
-  end
-
-  create_table "shop_accesses", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "shop_character_masters", :force => true do |t|
-    t.string   "name",       :null => false
-    t.integer  "data_type",  :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "shop_reviews", :force => true do |t|
-    t.integer  "shop_id",                       :null => false
-    t.integer  "user_id",                       :null => false
+  create_table "restaurant_comments", :force => true do |t|
+    t.integer  "restaurant_id",                    :null => false
+    t.integer  "user_id",                          :null => false
     t.text     "comment"
-    t.boolean  "public",     :default => false, :null => false
-    t.float    "point",      :default => 0.0,   :null => false
+    t.boolean  "public",        :default => false, :null => false
+    t.float    "point",         :default => 0.0,   :null => false
     t.time     "deleted_at"
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+  end
+
+  create_table "restaurant_menus", :force => true do |t|
+    t.integer  "restaurant_id",                 :null => false
+    t.string   "name",          :default => "", :null => false
+    t.integer  "price",         :default => 0,  :null => false
+    t.text     "comment"
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end
 
-  create_table "shop_sub_data", :force => true do |t|
+  create_table "restaurant_profiles", :force => true do |t|
     t.binary   "top_photo"
     t.time     "deleted_at"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "shops", :force => true do |t|
+  create_table "restaurants", :force => true do |t|
     t.string   "name",                               :null => false
     t.string   "public",            :default => "0", :null => false
     t.string   "sub_name",                           :null => false
@@ -166,6 +146,25 @@ ActiveRecord::Schema.define(:version => 20120516161211) do
     t.time     "deleted_at"
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
+  end
+
+  create_table "search_logs", :force => true do |t|
+    t.integer  "user_id",                    :null => false
+    t.string   "words",      :default => "", :null => false
+    t.string   "location",   :default => "", :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "shop_reviews", :force => true do |t|
+    t.integer  "shop_id",                       :null => false
+    t.integer  "user_id",                       :null => false
+    t.text     "comment"
+    t.boolean  "public",     :default => false, :null => false
+    t.float    "point",      :default => 0.0,   :null => false
+    t.time     "deleted_at"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "user_infos", :force => true do |t|

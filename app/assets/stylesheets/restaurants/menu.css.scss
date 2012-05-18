@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+#restaurant_seen_area:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.seen {
+  border:solid 1px #aaa;
+  width:45%;
+  float:left;
+  clear:none;
+}
