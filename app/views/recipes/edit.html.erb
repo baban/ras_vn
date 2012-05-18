@@ -19,6 +19,15 @@
       </table>
     </div>
 
+    <h3>Point!!</h3>
+    <div class="section"><%=f.text_area :one_point, value: @recipe.one_point %></div>
+
+    <p><%= f.select :public, { public: true, closed: false } %></p>
+    <p><%= f.submit "Next Step" %></p>
+  <% end %>
+
+  <%=form_for :recipe_steps, url:{ controller:'recipe_steps', action:'update' } do |f| %>
+    <%=hidden_field_tag :id, @recipe.id %>
     <dl id="recipe_steps">
       <% @recipe.edit_steps.each_with_index do |step,i| %>
         <dl class="step">
@@ -27,12 +36,7 @@
         </dl>
       <% end %>
     </dl>
-
-    <h3>Point!!</h3>
-    <div class="section"><%=f.text_area :one_point, value: @recipe.one_point %></div>
-
-    <p><%= f.select :public, { public: true, closed: false } %></p>
-    <p><%= f.submit "Next Step" %></p>
+    <%=f.submit "recipe submit" %>
   <% end %>
 
 </div>
