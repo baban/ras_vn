@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
+  get "recipe_steps/update"
+
   resource :profile
   resource :bookmark
   resource :information
