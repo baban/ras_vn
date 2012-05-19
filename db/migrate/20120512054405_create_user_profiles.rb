@@ -1,8 +1,8 @@
 # encoding: utf-8
 
-class CreateUserInfos < ActiveRecord::Migration
+class CreateUserProfiles < ActiveRecord::Migration
   def change
-    create_table :user_infos do |t|
+    create_table :user_profiles do |t|
       t.integer  :user_id,       nuLL: false
       t.string   :nickname,      null: false, default:""
       t.integer  :sex,           null: true
