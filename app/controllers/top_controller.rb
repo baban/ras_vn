@@ -7,7 +7,7 @@ class TopController < ApplicationController
   end
 
   def restaurant
-    @food_genre = [] # FoodGenreMaster.all
+    @food_genre = FoodGenre.all
   end
 
   def recipe
