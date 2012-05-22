@@ -32,6 +32,30 @@
     margin-left:160px;
     border:solid 1px #aaa;
   }
+  dl#login_area {
+    min-width:25em;
+    position:relative;
+    float:right;
+    dt {
+      border:solid 1px #aaa;
+    }
+    dd {
+      display:none;
+      position:absolute;
+      background-color:white;
+      border:solid 1px #aaa;
+      z-index:+2;
+      form {
+        background-color:white;
+        border-style:none;
+      }
+    }
+  }
+  dl#login_area:hover {
+    dd{
+      display:block;
+    }
+  }
 }
 
 #header:after {
