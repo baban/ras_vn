@@ -4,9 +4,9 @@ RasVn::Application.routes.draw do
   get "recipe_steps/update"
 
   resource :profile
-  resource :bookmark
-  resource :information
 
+  resources :bookmarks
+  resources :information
   resources :recipes
   resources :restaurants
 

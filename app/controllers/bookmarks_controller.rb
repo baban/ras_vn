@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class BookmarkController < ApplicationController
+class BookmarksController < ApplicationController
   before_filter :authenticate_user!
 
   def index
