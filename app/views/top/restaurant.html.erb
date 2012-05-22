@@ -13,12 +13,12 @@
 <div id="content">
   <%= render partial:"content_tabpanel" %>
   <div id="top_advertisement">
-    広告
+    advertisement
   </div>
 
   <div id="content_nav" class="nav">
     <div class="tile" id="promotion">
-      <p>広告</p>
+      <p>advertisement</p>
     </div>
     <div class="tile" id="information">
       <dl class="newsfeeds">
@@ -48,7 +48,7 @@
       <div class="area_list">
         <dl>
           <% Prefecture.all.each do |area| %>
-            <dt><%= link_to area.name, controller:"restraunt_search", action:"area", prefecture_id: area.id %></dt>
+            <dt><%= link_to area.name, controller:"restaurant_search", action:"area", prefecture_id: area.id %></dt>
           <% end %>
         </dl>
         <div>map</div>
@@ -60,11 +60,11 @@
         <% (1..2).each do |i|  %>
           <div class="recommend">
             <div class="figure">
-              画像
+              photo
             </div>
-            <div>お店の名前</div>
-            <div>場所</div>
-            <div>コメント＆ページビュー</div>
+            <div>restaurant name</div>
+            <div>place</div>
+            <div>comment&amp;view</div>
           </div>
         <% end %>
       </div>
