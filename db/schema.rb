@@ -129,10 +129,11 @@ ActiveRecord::Schema.define(:version => 20120521050034) do
   end
 
   create_table "restaurant_profiles", :force => true do |t|
+    t.integer  "restaurant_id", :null => false
     t.binary   "top_photo"
     t.time     "deleted_at"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "restaurants", :force => true do |t|
