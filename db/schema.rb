@@ -56,15 +56,6 @@ ActiveRecord::Schema.define(:version => 20120521050034) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "foodstuffs", :force => true do |t|
-    t.integer  "recipe_id",                  :null => false
-    t.string   "name",       :default => "", :null => false
-    t.string   "amount",     :default => "", :null => false
-    t.time     "deleted_at"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
-  end
-
   create_table "information", :force => true do |t|
     t.string   "title",      :default => "",    :null => false
     t.string   "content",    :default => "",    :null => false
@@ -83,6 +74,15 @@ ActiveRecord::Schema.define(:version => 20120521050034) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "recipe_foodstuffs", :force => true do |t|
+    t.integer  "recipe_id",                  :null => false
+    t.string   "name",       :default => "", :null => false
+    t.string   "amount",     :default => "", :null => false
+    t.time     "deleted_at"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "recipe_steps", :force => true do |t|
@@ -118,9 +118,12 @@ ActiveRecord::Schema.define(:version => 20120521050034) do
 
   create_table "restaurant_menus", :force => true do |t|
     t.integer  "restaurant_id",                 :null => false
-    t.string   "name",          :default => "", :null => false
-    t.integer  "price",         :default => 0,  :null => false
+    t.integer  "view_style",    :default => 1,  :null => false
+    t.binary   "image"
+    t.string   "title",         :default => "", :null => false
     t.text     "comment"
+    t.text     "price_comment"
+    t.text     "price"
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end

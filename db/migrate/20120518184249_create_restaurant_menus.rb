@@ -4,9 +4,12 @@ class CreateRestaurantMenus < ActiveRecord::Migration
   def change
     create_table :restaurant_menus do |t|
       t.integer :restaurant_id, null: false
-      t.string  :name,          null: false, default: ""
-      t.integer :price,         null: false, default: 0
+      t.integer :view_style,    null: false, default: 1
+      t.binary  :image,         null: true
+      t.string  :title,         null: false, default: ""
       t.text    :comment,       null: true
+      t.text    :price_comment, null: true
+      t.text    :price,         null: true
 
       t.timestamps
     end

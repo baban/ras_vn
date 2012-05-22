@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe Purpose do
+describe RecipeFoodstuffs do
   pending "add some examples to (or delete) #{__FILE__}"
 end
