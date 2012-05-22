@@ -2,7 +2,7 @@
 
 RestaurantMenu:
   fields:
-    default: restaurant_id, name, price, comment
-    form: restaurant_id, name, price, comment
+    default: restaurant_id, view_style, image, title, comment, price_comment, price
+    form: restaurant_id, view_style, image, title, comment, price_comment, price
   relationships: 
   application: Application
