@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+UserProfile:
+  fields:
+    default: user_id, nickname, sex, first_name, last_name, birthday, mail_address, postcode, address, address_point
+    form: user_id, nickname, sex, first_name, last_name, birthday, mail_address, postcode, address, address_point
+  relationships: 
+  application: Application

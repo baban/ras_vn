@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Foodstuff:
+  fields:
+    default: recipe_id, name, amount
+    form: recipe_id, name, amount
+  relationships: 
+  application: Application

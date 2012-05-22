@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+RestaurantMenu:
+  fields:
+    default: restaurant_id, name, price, comment
+    form: restaurant_id, name, price, comment
+  relationships: 
+  application: Application
