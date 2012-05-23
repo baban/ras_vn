@@ -19,6 +19,8 @@
       <div class="figure" id="shop_image">
         <% if @restaurant_profile %>
           <%=image_tag url_for( controller:"restaurant_profile", action:"top_photo", id: @restaurant_profile.id ) %>
+	<% else %>
+          <%=image_tag "no_image.jpg" %>
         <% end %>
       </div>
       <div id="shop_menus">
