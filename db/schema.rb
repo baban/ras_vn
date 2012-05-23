@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120521050034) do
+ActiveRecord::Schema.define(:version => 20120523151342) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -58,19 +58,13 @@ ActiveRecord::Schema.define(:version => 20120521050034) do
 
   create_table "information", :force => true do |t|
     t.string   "title",      :default => "",    :null => false
-    t.string   "content",    :default => "",    :null => false
+    t.text     "content",                       :null => false
     t.boolean  "public",     :default => false, :null => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end
 
   create_table "prefectures", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "purposes", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -145,8 +139,7 @@ ActiveRecord::Schema.define(:version => 20120521050034) do
     t.boolean  "coupon_flg",                         :null => false
     t.boolean  "mobile_coupon_flg",                  :null => false
     t.text     "comment",                            :null => false
-    t.float    "longitude"
-    t.float    "latitude"
+    t.string   "postcode"
     t.string   "address"
     t.string   "phone_number"
     t.string   "fax_number"
@@ -168,15 +161,10 @@ ActiveRecord::Schema.define(:version => 20120521050034) do
     t.datetime "updated_at",                 :null => false
   end
 
-  create_table "shop_reviews", :force => true do |t|
-    t.integer  "shop_id",                       :null => false
-    t.integer  "user_id",                       :null => false
-    t.text     "comment"
-    t.boolean  "public",     :default => false, :null => false
-    t.float    "point",      :default => 0.0,   :null => false
-    t.time     "deleted_at"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+  create_table "tpl_sets", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "user_profiles", :force => true do |t|
