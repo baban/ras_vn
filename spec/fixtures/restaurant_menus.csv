@@ -1,2 +1,4 @@
-id,restaurant_id,view_style,image,title,comment,price_comment,price,created_at,updated_at
-1,1,1,,????????????????????????????? ,,,,2012-05-22 15:54:32 UTC,2012-05-22 15:54:32 UTC
+"id","restaurant_id","view_style","image","title","comment","price_comment","price","created_at","updated_at"
+1,1,2,,"鶏の唐揚げ",,"各","450円","2012-05-22 15:54:32 UTC","2012-05-22 15:54:32 UTC"
+2,1,2,,"軟骨",,"各","450円","2012-05-22 15:54:32 UTC","2012-05-22 15:54:32 UTC"
+3,1,2,,"めんたいきゅうり",,,"300円","2012-05-22 15:54:32 UTC","2012-05-22 15:54:32 UTC"
