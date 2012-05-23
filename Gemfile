@@ -10,6 +10,7 @@ gem 'jquery-rails'
 
 gem 'devise' # add login, logout 
 gem 'typus' # generte administration functions
+gem "formtastic"
 
 # controller, model tools
 gem "aspectr"  # add aspect oriented programming functions

@@ -9,8 +9,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.boolean  :coupon_flg,        null: false
       t.boolean  :mobile_coupon_flg, null: false
       t.text     :comment,           null: false, default: ""
-      t.float    :longitude,         null: true
-      t.float    :latitude,          null: true
+      t.string   :postcode,          null: true
       t.string   :address,           null: true
       t.string   :phone_number,      null: true
       t.string   :fax_number,        null: true
