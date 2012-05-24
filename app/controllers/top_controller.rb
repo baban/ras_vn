@@ -2,8 +2,6 @@
 
 class TopController < ApplicationController
   def index
-    restaurant
-    render action:'restaurant'
   end
 
   def restaurant
