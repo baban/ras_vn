@@ -35,8 +35,10 @@
     <tr>
       <th><%=f.label :open_time, "Timezone" %></th>
       <td>
-        <%=f.inputs :open_time  %>〜
-        <%=f.inputs :close_time %>
+        <%=f.inputs "営業時間" do %>
+          <%=f.input :open_time  %>〜
+          <%=f.input :close_time %>
+        <% end %>
       </td>
     </tr>
     <tr>
@@ -44,11 +46,14 @@
       <td><%=f.text_field :close_day %></td>
     </tr>
     <tr>
-      <th><%=f.label :close_day, "定休日" %></th>
+      <th><%=f.label :close_day, "クーポン" %></th>
       <td>
-        <%=f.input :coupon_flg %>
-        <%=f.input :mobile_coupon_flg %>
+        <%= f.inputs "" do %>
+          <%=f.input :coupon_flg %>
+          <%=f.input :mobile_coupon_flg %>
+        <% end %>
       </td>
     </tr>
   </table>  
+  <%= f.actions %>
 <% end %>
