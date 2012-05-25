@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120524134234) do
+ActiveRecord::Schema.define(:version => 20120525144054) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -70,6 +70,13 @@ ActiveRecord::Schema.define(:version => 20120524134234) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "recipe_advertisements", :force => true do |t|
+    t.string   "name",                       :null => false
+    t.string   "url",        :default => "", :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
   create_table "recipe_food_genres", :force => true do |t|
     t.string   "name",       :null => false
     t.datetime "created_at", :null => false
@@ -84,12 +91,13 @@ ActiveRecord::Schema.define(:version => 20120524134234) do
   end
 
   create_table "recipe_foodstuffs", :force => true do |t|
-    t.integer  "recipe_id",                  :null => false
-    t.string   "name",       :default => "", :null => false
-    t.string   "amount",     :default => "", :null => false
+    t.integer  "recipe_id",                      :null => false
+    t.integer  "recipe_food_id"
+    t.string   "name",           :default => "", :null => false
+    t.string   "amount",         :default => "", :null => false
     t.time     "deleted_at"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
   end
 
   create_table "recipe_steps", :force => true do |t|

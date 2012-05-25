@@ -2,4 +2,5 @@
 
 class RecipeFood < ActiveRecord::Base
   belongs_to :recipe_food_genre
+  #has_many :recipes, through:"RecipeFoodStuff"
 end
