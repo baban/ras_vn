@@ -3,7 +3,11 @@
 <%= render partial:"layouts/header" %>
 
 <div id="content" class="section">
-
+  <div id="content_footer">
+    <div id="footer_advertisement">
+      広告スペース
+    </div>
+  </div>
   <div id="content_body">
     <div id="popular_recipe_area">
       <table id="popular_category">
@@ -37,36 +41,18 @@
     <div id="category_recipe_search">
       <h3>カテゴリからレシピを探す</h3>
       <div class="section">
-        <div class="recipe_category">
-          野菜<br />
-          <ul class="recipe_sub_category">
-            <li><%=link_to "たけのこ", controller:'recipes', action:'index', category_id: 1 %></li>
-            <li>キャベツ</li>
-            <li>じゃがいも</li>
-            <li>たまねぎ</li>
-            <li>なす</li>
-            <li>じゃがいも</li>
-          </ul>
-          <p class="more_link">もっと見る</p>
-        </div>
-        <div class="recipe_category">
-          野菜<br />
-          <ul class="recipe_sub_category">
-            <li>たけのこ</li>
-            <li>キャベツ</li>
-            <li>じゃがいも</li>
-            <li>たまねぎ</li>
-            <li>なす</li>
-            <li>じゃがいも</li>
-          </ul>
-          <p class="more_link">もっと見る</p>
-        </div>
+        <% @food_genres.each do |genre| %>
+          <div class="recipe_category">
+            <%=link_to genre.name, controller:"recipes", action:"index", recipe_food_genre_id: genre.id %>
+            <ul class="recipe_sub_category">
+              <% genre.foods.each do |food| %>
+                <li><%=link_to food.name, controller:"recipes", action:"index", recipe_food_id: food.id %></li>
+              <% end %>
+            </ul>
+            <p class="more_link"><%=link_to "もっと見る", controller:"recipe_food_genre", action:"index", recipe_foog_genre_id: genre.id %></p>
+          </div>
+        <% end %>
       </div>
-    </div>
-  </div>
-  <div id="content_footer">
-    <div id="footer_advertisement">
-      広告スペース
     </div>
   </div>
 </div>
