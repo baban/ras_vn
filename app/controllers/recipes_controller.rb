@@ -13,17 +13,17 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
-  def edit
-    @recipe = Recipe.find(params[:id])
-    @steps  = @recipe.edit_steps
-  end
-
   def create
     @recipe = Recipe.new
     @recipe.attributes= params[:recipe]
     @recipe.user_id= current_user.id
     @recipe.save
     redirect_to( {action:'edit', id: @recipe.id }, flash:{ notice: "update completed" })
+  end
+
+  def edit
+    @recipe = Recipe.find(params[:id])
+    @steps  = @recipe.edit_steps
   end
 
   def update
