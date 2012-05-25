@@ -1,2 +1,13 @@
-<h1>RecipeFoods#index</h1>
-<p>Find me in app/views/recipe_foods/index.html.erb</p>
+
+<dl>
+  <% @food_genres.each do |genre| %>
+    <dt><%=link_to genre.name, controller:"recipes", action:"index", recipe_food_genre_id: genre.id %></dt>
+    <dd>
+      <ul>
+        <% genre.foods.each do |food| %>
+          <li><%=link_to food.name, controller:"recipes", action:"index", recipe_food_id: food.id %></li>
+        <% end %>
+      </ul>
+    </dd>
+  <% end %>
+</dl>
