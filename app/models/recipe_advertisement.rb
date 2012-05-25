@@ -2,7 +2,7 @@
 
 class RecipeAdvertisement < ActiveRecord::Base
   # select view advertisement
-  def self.select
-    self.all.sample(1)
+  def self.choice
+    self.all.sample(1).first
   end
 end

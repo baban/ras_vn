@@ -5,7 +5,8 @@
 <div id="content" class="section">
   <div id="content_footer">
     <div id="footer_advertisement">
-      広告スペース
+      <% @advertise = RecipeAdvertisement.choice %>
+      <%=link_to @advertise.name, @advertise.url, title:"hoge" %>
     </div>
   </div>
   <div id="content_body">
