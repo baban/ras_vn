@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+ul#content_menu {
+  li {
+    width:10em;
+    float:left;
+  }
+}
+ul#content_menu:after {
+  content:"";
+  display:block;
+  clear:both;
+}

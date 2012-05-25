@@ -49,9 +49,10 @@
                 <li><%=link_to food.name, controller:"recipes", action:"index", recipe_food_id: food.id %></li>
               <% end %>
             </ul>
-            <p class="more_link"><%=link_to "もっと見る", controller:"recipe_food_genre", action:"index", recipe_foog_genre_id: genre.id %></p>
+            <p class="more_link"><%=link_to "もっと見る", controller:"recipe_foods", action:"index", recipe_foog_genre_id: genre.id %></p>
           </div>
         <% end %>
+        <p class="more_link"><%=link_to "all genres", controller:"recipe_foods", action:"index" %></p>
       </div>
     </div>
   </div>

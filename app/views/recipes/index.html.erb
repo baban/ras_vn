@@ -1,6 +1,7 @@
 <%= render partial:"header" %>
 
 <div id="content_body">
+  <%= render partial:'content_menu' %>
   <% @recipes.each do |recipe| %>
     <div class="recipe">
       <div class="figure recipe_photo">
@@ -11,3 +12,6 @@
     </div>
   <% end %>
 </div>
+
+<%= render partial:"layouts/footer" %>
+
