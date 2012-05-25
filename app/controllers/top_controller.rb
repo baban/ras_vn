@@ -3,6 +3,7 @@
 class TopController < ApplicationController
   def index
     @food_genres = RecipeFoodGenre.all
+    @ranking = RecipeRanking.topics
   end
 
   def restaurant

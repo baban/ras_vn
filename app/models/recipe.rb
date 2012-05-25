@@ -3,6 +3,8 @@
 class Recipe < ActiveRecord::Base
   acts_as_paranoid
 
+  belongs_to :recipe_ranking
+
   has_many :recipe_foodstuffs
   has_many :recipe_steps
 

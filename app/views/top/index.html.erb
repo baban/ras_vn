@@ -23,20 +23,15 @@
         <tr>
           <th>人気レシピ</th>
         </tr>
-        <tr>
-          <td>
-            <div class="figure">写真</div>
-            敗れ憎い小籠包<br />
-            by しばわんこ
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="figure">写真</div>
-            敗れ憎い小籠包<br />
-            by まさパンダワン
-          </td>
-        </tr>
+        <% @ranking.each do |recipe| %>
+          <tr>
+            <td>
+              <div class="figure">写真</div>
+              <%=link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %><br />
+              by しばわんこ
+            </td>
+          </tr>
+        <% end %>
       </table>
     </div>
     <div id="category_recipe_search">
