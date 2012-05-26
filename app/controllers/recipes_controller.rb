@@ -1,12 +1,19 @@
 # encoding: utf-8
 
 class RecipesController < ApplicationController
+  before_filter :authenticate_user!, except:[:index,:show,:image]
+
   def index
     @recipes = RecipeSearcher.search(params)
   end
 
   def show
     @recipe = Recipe.find(params[:id])
+  end
+
+  def image
+    @recipe = Recipe.find(params[:id])
+    send_data(@recipe.image, disposition:"inline", type:"image/jpg")
   end
 
   def new
@@ -24,10 +31,21 @@ class RecipesController < ApplicationController
   def edit
     @recipe = Recipe.find(params[:id])
     @steps  = @recipe.edit_steps
+    @foodstuffs  = @recipe.edit_foodstuffs
   end
 
   def update
-    @recipe = Recipe.new
+    @recipe = Recipe.find(params[:id])
+
+    foodstuffs = params[:foodstuffs].values
+      .select{ |h| h["name"].blank?.! }
+      .map{ |h| RecipeFoodstuff.new(name: h["name"], amount: h["amount"]) }
+    logger.info foodstuffs.inspect
+    @recipe.recipe_foodstuffs= foodstuffs
+
+    steps = params[:steps].values.select{ |o| o.blank?.! }.map{ |v| RecipeStep.new(context: v) } 
+    @recipe.recipe_steps= steps
+
     @recipe.attributes= params[:recipe]
     @recipe.user_id= current_user.id
     @recipe.save

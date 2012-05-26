@@ -10,7 +10,7 @@
     <% unless user_signed_in? %>
       <dt>Login</dt>
       <dd>
-        <%= form_for(:login, url: user_session_url) do |f| %>
+        <%= form_for(:user, url: user_session_url) do |f| %>
           <div><%= f.label :email %><br />
           <%= f.email_field :email %></div>
           <div><%= f.label :password %><br />
@@ -20,12 +20,11 @@
         <p><%=link_to "register", new_user_registration_url %></p>
       </dd>
     <% else %>
-      <dt>Logout</dt>
-      <dd>
+      <dt>
         <%=form_for :device, url: destroy_user_session_url, method:"DELETE" do |f| %>
           <p><%=f.submit "Logout" %></p>
         <% end %>
-      </dd>
+      </dt>
     <% end %>
   </div>
 </div>

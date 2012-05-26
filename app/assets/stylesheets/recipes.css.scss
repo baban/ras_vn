@@ -31,12 +31,17 @@ div.recipe {
 /* show */
 #recipe_body{
   #recipe_photo{
-    width:200px;
-    height:200px;
+    position:relative;
+    img {
+      margin:0;
+    }
+    min-width:200px;
+    min-height:200px;
     border:solid 1px #aaa;
     float:left;
     clear:none;
-    margin-right:0.5em;
+    padding:0;
+    margin:0 0.5em 0.5em 0.5em;
   }
 }
 

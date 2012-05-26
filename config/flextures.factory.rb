@@ -9,3 +9,7 @@ Flextures::Factory.define :restaurant_profiles do |f|
   f.top_photo = IO.read("#{filename}")
 end
 
+Flextures::Factory.define :recipes do |f|
+  filename = Rails.root.to_path + "/app/assets/images/recipe_img.jpg"
+  f.image = IO.read("#{filename}")
+end
