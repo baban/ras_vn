@@ -1,3 +1,5 @@
+<%= include_action_javascript %>
+
 <%= render partial:"header" %>
 
 <h2>recipe</h2>
@@ -16,11 +18,19 @@
       <div id="description">
         <%= f.text_area :description, value: @recipe.description %>
       </div>
-      <table>
+      <table id="foodstuffs">
+        <tr>
+          <th class="name">食材</th>
+          <th class="amount">分量</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button>追加</button></td>
+        </tr>
         <% @recipe.edit_foodstuffs.each_with_index do |foodstuff,i| %>
-          <tr>
-            <td><%=text_field_tag "foodstuffs[#{i}][name]",   foodstuff.name %></td>
-            <td><%=text_field_tag "foodstuffs[#{i}][amount]", foodstuff.amount %></td>
+          <tr class="foodstuff_row_<%= i %>">
+            <td class="name"><%=text_field_tag "foodstuffs[#{i}][name]", foodstuff.name %></td>
+            <td class="amount"><%=text_field_tag "foodstuffs[#{i}][amount]", foodstuff.amount %></td>
           </tr>
         <% end %>
       </table>
@@ -41,8 +51,10 @@
     <h3>Public Status</h3>
     <p><%= f.select :public, { public: true, closed: false } %></p>
 
-    <p><%= f.submit :edit,   value:"Save" %></p>
-    <p><%= f.submit :commit, value:"Next Step" %></p>
+    <p class="form_actions">
+      <%= f.submit :edit,   value:"Save" %>
+      <%= f.submit :commit, value:"Next Step" %>
+    </p>
   <% end %>
 </div>
 

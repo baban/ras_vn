@@ -74,12 +74,31 @@ div.recipe {
 }
 
 /* edit */
+#edit_recipe_1 {
+  max-width:50em;
+}
+
 #recipe_image {
   width:2em !important;
 }
 
 #description > textarea {
   height:4em;
+}
+
+table#foodstuffs {
+  td {
+    padding:0;
+    input {
+      margin:0.2em;
+    }  
+  }
+  td.name > input {
+    width:14em;
+  }
+  td.amount {
+    input { width:3em; }
+  }
 }
 
 #recipe_one_point {
@@ -95,4 +114,8 @@ dl.step > dd {
 .step_edit_area {
   width:85%;
   height:7em;
+}
+
+.form_actions {
+  text-align:right;
 }
