@@ -46,7 +46,7 @@ CREATE TABLE `admin_users` (
 
 LOCK TABLES `admin_users` WRITE;
 /*!40000 ALTER TABLE `admin_users` DISABLE KEYS */;
-INSERT INTO `admin_users` VALUES (1,'matsubara','masanao','admin','babanba.n@gmail.com',1,'559aed8ed436-cff81575cff9','6bef721d004acfc8346914f58672bba345ba3e0d','247044ce2b1fddb2efac558d012ce02de48dea50','---\n:locale: en\n','2012-05-23 16:11:59','2012-05-23 16:12:12');
+INSERT INTO `admin_users` VALUES (1,'松原','正直','admin','babanba.n@gmail.com',1,'ad55992666fb-d09908d01442','c6e13ccb6a0be3669cccc24d6a5ac2b2e8b2aa5c','a25241ec9bbb9ffc64a719566f344d0597c36890','---\n:locale: en\n','2012-05-26 01:01:16','2012-05-26 01:01:34');
 /*!40000 ALTER TABLE `admin_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-05-24  1:12:45
+-- Dump completed on 2012-05-26 10:01:46

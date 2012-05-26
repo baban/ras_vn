@@ -8,9 +8,9 @@ gem 'mysql2', '0.3.11'
 # view urilities
 gem 'jquery-rails'
 
-gem 'devise' # add login, logout 
-gem 'typus' # generte administration functions
-gem "formtastic"
+gem 'devise', "2.1.0" # add login, logout 
+gem 'typus', "3.1.10" # generte administration functions
+gem "formtastic", "2.1.0"
 
 # controller, model tools
 gem "aspectr"  # add aspect oriented programming functions

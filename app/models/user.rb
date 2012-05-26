@@ -12,4 +12,6 @@ class User < ActiveRecord::Base
   has_one :user_profile
   alias :info :user_profile
 
+  belongs_to :recipe
+
 end

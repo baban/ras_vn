@@ -7,16 +7,25 @@
     <%= f.submit "検索" %>
   <% end %>
   <dl id="login_area">
-    <dt>Login</dt>
-    <dd>
-      <%= form_for(:login, :url => "") do |f| %>
-        <div><%= f.label :email %><br />
-        <%= f.email_field :email %></div>
-        <div><%= f.label :password %><br />
-        <%= f.password_field :password %></div>
-        <div><%= f.submit "Sign in" %></div>
-      <% end %>
-      <p><%=link_to "register", "sign_in"  %></p>
-    </dd>
+    <% unless user_signed_in? %>
+      <dt>Login</dt>
+      <dd>
+        <%= form_for(:login, url: user_session_url) do |f| %>
+          <div><%= f.label :email %><br />
+          <%= f.email_field :email %></div>
+          <div><%= f.label :password %><br />
+          <%= f.password_field :password %></div>
+          <div><%= f.submit "Sign in" %></div>
+        <% end %>
+        <p><%=link_to "register", new_user_registration_url %></p>
+      </dd>
+    <% else %>
+      <dt>Logout</dt>
+      <dd>
+        <%=form_for :device, url: destroy_user_session_url, method:"DELETE" do |f| %>
+          <p><%=f.submit "Logout" %></p>
+        <% end %>
+      </dd>
+    <% end %>
   </div>
 </div>

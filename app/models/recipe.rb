@@ -11,6 +11,10 @@ class Recipe < ActiveRecord::Base
   alias :foodstuffs :recipe_foodstuffs
   alias :steps :recipe_steps
 
+  def user
+    User.find(self.user_id)
+  end
+
   # this action generate steps for edit action
   def edit_steps
     # return value have at least 4 steps
