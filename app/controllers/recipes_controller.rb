@@ -37,19 +37,25 @@ class RecipesController < ApplicationController
   def update
     @recipe = Recipe.find(params[:id])
 
-    foodstuffs = params[:foodstuffs].values
+    @foodstuffs = params[:foodstuffs].values
       .select{ |h| h["name"].blank?.! }
       .map{ |h| RecipeFoodstuff.new(name: h["name"], amount: h["amount"]) }
-    logger.info foodstuffs.inspect
-    @recipe.recipe_foodstuffs= foodstuffs
+    logger.info @foodstuffs.inspect
+    @recipe.recipe_foodstuffs= @foodstuffs
 
-    steps = params[:steps].values.select{ |o| o.blank?.! }.map{ |v| RecipeStep.new(context: v) } 
-    @recipe.recipe_steps= steps
+    @steps = params[:steps].values.select{ |o| o.blank?.! }.map{ |v| RecipeStep.new(context: v) } 
+    @recipe.recipe_steps= @steps
 
     @recipe.attributes= params[:recipe]
     @recipe.user_id= current_user.id
     @recipe.save
-    redirect_to( {action:'index'}, flash:{ notice: "update completed" } )
+
+    if params[:commit] == "Save"
+      flash[:notice] = "Update"
+      render action:"edit"
+    else
+      redirect_to( {action:'index'}, flash:{ notice: "update completed" } )
+    end
   end
 
   def destroy

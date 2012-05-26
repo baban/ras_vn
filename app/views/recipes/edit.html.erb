@@ -1,3 +1,4 @@
+<%= render partial:"header" %>
 
 <h2>recipe</h2>
 <section>
@@ -25,7 +26,6 @@
       </table>
     </div>
 
-
     <dl id="recipe_steps">
       <% @recipe.edit_steps.each_with_index do |step,i| %>
         <dl class="step">
@@ -38,7 +38,13 @@
     <h3>Point!!</h3>
     <div class="section"><%=f.text_area :one_point, value: @recipe.one_point %></div>
 
+    <h3>Public Status</h3>
     <p><%= f.select :public, { public: true, closed: false } %></p>
-    <p><%= f.submit "Next Step" %></p>
+
+    <p><%= f.submit :edit,   value:"Save" %></p>
+    <p><%= f.submit :commit, value:"Next Step" %></p>
   <% end %>
 </div>
+
+<%= render partial:"layouts/footer" %>
+
