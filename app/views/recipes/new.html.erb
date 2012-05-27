@@ -1,6 +1,7 @@
 
-<h2>recipe</h2>
-<section>
+
+<div id="content_body" class="section">
+  <h2>recipe</h2>
   <%=semantic_form_for @recipe do |f| %>
     <p><%= f.label :title, "Title:" %></p>
     <p><%= f.text_field :title, value: @recipe.title %></p>

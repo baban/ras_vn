@@ -5,6 +5,8 @@ class RecipesController < ApplicationController
   before_filter :editable_user_filter, only:[:edit,:update,:destroy]
   before_filter :advertisement_filter, except:[:create,:destroy]
 
+  helper_method :my_recipe?
+
   def index
     @recipes = RecipeSearcher.search(params)
   end
@@ -67,12 +69,16 @@ class RecipesController < ApplicationController
   end
 
   private
+  def my_recipe?
+    @recipe and (@recipe.user_id == current_user.id)
+  end
+
   def editable_user_filter
     # TODO: 管理者はアクセスできるようにしておく
     return redirect_to(action:'index') unless params[:id]
     
     @recipe = Recipe.find(params[:id])
-    return redirect_to( { action:"index" }, flash:{ alert:"you cannot edit this recipe" }) unless @recipe.user_id == current_user.id
+    return redirect_to( { action:"index" }, flash:{ alert:"you cannot edit this recipe" }) unless my_recipe?
   end
 
   def advertisement_filter
