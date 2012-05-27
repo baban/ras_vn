@@ -56,7 +56,7 @@ end
 
 group :test do
   gem 'turn', '0.8.2', require:false # Pretty printed test output
-  gem "spork", "0.9.0" # rspec高速起動
+  #gem "spork", "0.9.0" # rspec高速起動
   gem "simplecov", "0.5.4", require:false # テスト結果整形出力
   gem "simplecov-rcov", "0.2.3", require:false
   gem 'capybara' # 受け入れテスト記述、実行ツール

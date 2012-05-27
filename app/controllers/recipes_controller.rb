@@ -3,6 +3,8 @@
 class RecipesController < ApplicationController
   before_filter :authenticate_user!, except:[:index,:show,:image]
 
+  # TODO: レシピページ向けに広告取り出し
+
   def index
     @recipes = RecipeSearcher.search(params)
   end
