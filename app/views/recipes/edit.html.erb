@@ -3,7 +3,7 @@
 <%= render partial:"header" %>
 
 <h2>recipe</h2>
-<section>
+<div id="content" class="section">
   <%=semantic_form_for @recipe do |f| %>
     <h2><%= f.text_field :title, value: @recipe.title %></h2>
     <div id="recipe_base_info">
@@ -15,47 +15,50 @@
             <%=image_tag "no_image.gif" %>
           <% end %>
         </div>
-      <div id="description">
-        <%= f.text_area :description, value: @recipe.description %>
+        <div id="description">
+          <%= f.text_area :description, value: @recipe.description %>
+        </div>
+        <div id="foodstuffs_area" class="area">
+          <table id="foodstuffs">
+            <tr>
+              <th class="name">食材</th>
+              <th class="amount">分量</th>
+            </tr>
+            <% @recipe.edit_foodstuffs.each_with_index do |foodstuff,i| %>
+              <tr class="foodstuff_row_<%= i %>">
+                <td class="name"><%=text_field_tag "foodstuffs[][name]", foodstuff.name %></td>
+                <td class="amount"><%=text_field_tag "foodstuffs[][amount]", foodstuff.amount %></td>
+              </tr>
+            <% end %>
+          </table>
+          <form><input type="button" value="食材追加" id="add_foodstuffs_row" /></form>
+        </div>
       </div>
-      <table id="foodstuffs">
-        <tr>
-          <th class="name">食材</th>
-          <th class="amount">分量</th>
-        </tr>
-        <tr>
-          <td></td>
-          <td><button>追加</button></td>
-        </tr>
-        <% @recipe.edit_foodstuffs.each_with_index do |foodstuff,i| %>
-          <tr class="foodstuff_row_<%= i %>">
-            <td class="name"><%=text_field_tag "foodstuffs[#{i}][name]", foodstuff.name %></td>
-            <td class="amount"><%=text_field_tag "foodstuffs[#{i}][amount]", foodstuff.amount %></td>
-          </tr>
-        <% end %>
-      </table>
-    </div>
 
-    <dl id="recipe_steps">
-      <% @recipe.edit_steps.each_with_index do |step,i| %>
-        <dl class="step">
-          <dt>Step <%= i + 1 %></dt>
-          <dd><%= text_area_tag "steps[#{i}]", step.context, class:'step_edit_area' %></dd>
+      <div id="recipes_steps_area" class="area">
+        <dl id="recipe_steps">
+          <% @recipe.edit_steps.each_with_index do |step,i| %>
+            <dl class="step">
+              <dt>Step <%= i + 1 %></dt>
+              <dd><%= text_area_tag "steps[]", step.context, class:'step_edit_area' %></dd>
+            </dl>
+          <% end %>
         </dl>
-      <% end %>
-    </dl>
+        <form><input type="button" value="ステップ追加" id="add_steps" /></form>
+      </div>
 
-    <h3>Point!!</h3>
-    <div class="section"><%=f.text_area :one_point, value: @recipe.one_point %></div>
+      <h3>Point!!</h3>
+      <div class="section"><%=f.text_area :one_point, value: @recipe.one_point %></div>
 
-    <h3>Public Status</h3>
-    <p><%= f.select :public, { public: true, closed: false } %></p>
+      <h3>Public Status</h3>
+      <p><%= f.select :public, { public: true, closed: false } %></p>
 
-    <p class="form_actions">
-      <%= f.submit :edit,   value:"Save" %>
-      <%= f.submit :commit, value:"Next Step" %>
-    </p>
-  <% end %>
+      <p class="form_actions">
+        <%= f.submit :edit,   value:"Update" %>
+        <%= f.submit :commit, value:"Save and go Next Step" %>
+      </p>
+    <% end %>
+  </div>
 </div>
 
 <%= render partial:"layouts/footer" %>

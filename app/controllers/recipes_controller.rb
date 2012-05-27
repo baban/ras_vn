@@ -28,22 +28,24 @@ class RecipesController < ApplicationController
     redirect_to( {action:'edit', id: @recipe.id }, flash:{ notice: "update completed" })
   end
 
+  # TODO: 作成者か管理者しか編集できないようにする
   def edit
     @recipe = Recipe.find(params[:id])
     @steps  = @recipe.edit_steps
     @foodstuffs  = @recipe.edit_foodstuffs
   end
 
+  # TODO: 作成者か管理者しか編集できないようにする
   def update
     @recipe = Recipe.find(params[:id])
 
-    @foodstuffs = params[:foodstuffs].values
+    @foodstuffs = params[:foodstuffs]
       .select{ |h| h["name"].blank?.! }
       .map{ |h| RecipeFoodstuff.new(name: h["name"], amount: h["amount"]) }
     logger.info @foodstuffs.inspect
     @recipe.recipe_foodstuffs= @foodstuffs
 
-    @steps = params[:steps].values.select{ |o| o.blank?.! }.map{ |v| RecipeStep.new(context: v) } 
+    @steps = params[:steps].select{ |o| o.blank?.! }.map{ |v| RecipeStep.new(context: v) } 
     @recipe.recipe_steps= @steps
 
     @recipe.attributes= params[:recipe]
@@ -58,6 +60,7 @@ class RecipesController < ApplicationController
     end
   end
 
+  # TODO: 作成者か管理者しか編集できないようにする
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.delete
