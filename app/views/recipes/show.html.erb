@@ -1,38 +1,31 @@
-<%= render partial:'header' %>
-
 <%= render partial:'content_menu' %>
 
-<div id="content">
-  <div id="content_body" class="section">
-    <h2><%= @recipe.title %></h2>
-    <div class="section" id="recipe_body">
-      <div id="recipe_base_info">
-        <div id="recipe_photo" class="figure">
-          <%=image_tag url_for(action:"image", id: @recipe.id) %>
-        </div>
-        <div id="description">
-          <%= @recipe.description %>
-        </div>
-        <h3>材料</h3>
-        <table>
-          <% @recipe.foodstuffs.each do |foodstuff| %>
-            <tr><td><%= foodstuff.name %></td><td><%= foodstuff.amount %></td></tr>
-          <% end %>
-        </table>
+<div id="content_body" class="section">
+  <h2><%= @recipe.title %></h2>
+  <div class="section" id="recipe_body">
+    <div id="recipe_base_info">
+      <div id="recipe_photo" class="figure">
+        <%=image_tag url_for(action:"image", id: @recipe.id) %>
       </div>
-      <dl id="recipe_steps">
-        <% @recipe.steps.each_with_index do |step,i| %>
-          <dl class="step">
-            <dt><%= i + 1 %></dt>
-            <dd><%= step.context %></dd>
-          </dl>
+      <div id="description">
+        <%= @recipe.description %>
+      </div>
+      <h3>材料</h3>
+      <table>
+        <% @recipe.foodstuffs.each do |foodstuff| %>
+          <tr><td><%= foodstuff.name %></td><td><%= foodstuff.amount %></td></tr>
         <% end %>
-      </dl>
-      <h3>Point!!</h3>
-      <div class="section"><%= @recipe.one_point %></div>
+      </table>
     </div>
-  </div>
-  <div id="content_footer">
-    広告
+    <dl id="recipe_steps">
+      <% @recipe.steps.each_with_index do |step,i| %>
+        <dl class="step">
+          <dt><%= i + 1 %></dt>
+          <dd><%= step.context %></dd>
+        </dl>
+      <% end %>
+    </dl>
+    <h3>Point!!</h3>
+    <div class="section"><%= @recipe.one_point %></div>
   </div>
 </div>

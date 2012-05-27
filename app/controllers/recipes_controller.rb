@@ -1,7 +1,9 @@
 # encoding: utf-8
 
 class RecipesController < ApplicationController
-  before_filter :authenticate_user!, except:[:index,:show,:image]
+  before_filter :authenticate_user!,   except:[:index,:show,:image]
+  before_filter :editable_user_filter, only:[:edit,:update,:destroy]
+  before_filter :advertisement_filter, except:[:create,:destroy]
 
   # TODO: レシピページ向けに広告取り出し
 
@@ -30,14 +32,12 @@ class RecipesController < ApplicationController
     redirect_to( {action:'edit', id: @recipe.id }, flash:{ notice: "update completed" })
   end
 
-  # TODO: 作成者か管理者しか編集できないようにする
   def edit
     @recipe = Recipe.find(params[:id])
     @steps  = @recipe.edit_steps
     @foodstuffs  = @recipe.edit_foodstuffs
   end
 
-  # TODO: 作成者か管理者しか編集できないようにする
   def update
     @recipe = Recipe.find(params[:id])
 
@@ -62,10 +62,23 @@ class RecipesController < ApplicationController
     end
   end
 
-  # TODO: 作成者か管理者しか編集できないようにする
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.delete
     redirect_to action:'index'
+  end
+
+  private
+  def editable_user_filter
+    # TODO: 管理者はアクセスできるようにしておく
+    return redirect_to(action:'index') unless params[:id]
+    
+    @recipe = Recipe.find(params[:id])
+    return redirect_to( { action:"index" }, flash:{ alert:"you cannot edit this recipe" }) unless @recipe.user_id == current_user.id
+  end
+
+  def advertisement_filter
+    # お客に合わせた広告を取得できる様に余地を残しておく
+    @advertisement = RecipeAdvertisement.choice(1)
   end
 end
