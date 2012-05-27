@@ -1,8 +1,8 @@
-<div id="header">
+<div id="recipe_header">
   <div class="logo">
-    ロゴ
+    <%= link_to "ロゴ", root_url %>
   </div>
-  <%= form_for :search, url:{ action:"index" }, html:{ class:"header_search" } do |f| %>
+  <%= form_for :search, url:{ action:'index' }, html:{ class:'header_search' } do |f| %>
     <%= text_field_tag :word, "" %>
     <%= f.submit "検索" %>
   <% end %>
