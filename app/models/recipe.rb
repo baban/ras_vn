@@ -7,11 +7,13 @@ class Recipe < ActiveRecord::Base
 
   has_many :recipe_foodstuffs
   has_many :recipe_steps
+  has_many :recipe_comments
 
   accepts_nested_attributes_for :recipe_steps # use formastic plug-in
 
   alias :foodstuffs :recipe_foodstuffs
   alias :steps :recipe_steps
+  alias :comments :recipe_comments
 
   def user
     User.find(self.user_id)

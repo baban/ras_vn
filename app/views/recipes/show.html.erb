@@ -27,5 +27,18 @@
     </dl>
     <h3>Point!!</h3>
     <div class="section"><%= @recipe.one_point %></div>
+    <div id="recipe_comment_area" class="area">
+      <h3>Comments</h3>
+      <%=form_for :recipe_comments, url:{ controller:"recipe_comments", action:"create" } do |f| %>
+        <%=f.text_area :content, size:"50x4", value: "" %>
+      <% end %>
+      <ul id="recipe_comments" class="area">
+        <% @recipe.comments.each do |comment| %>
+          <li class="recipe_comment">
+            <p><%= comment.content %></p>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>

@@ -5,8 +5,6 @@ class RecipesController < ApplicationController
   before_filter :editable_user_filter, only:[:edit,:update,:destroy]
   before_filter :advertisement_filter, except:[:create,:destroy]
 
-  # TODO: レシピページ向けに広告取り出し
-
   def index
     @recipes = RecipeSearcher.search(params)
   end
@@ -79,6 +77,6 @@ class RecipesController < ApplicationController
 
   def advertisement_filter
     # お客に合わせた広告を取得できる様に余地を残しておく
-    @advertisement = RecipeAdvertisement.choice(1)
+    @advertisement = RecipeAdvertisement.choice
   end
 end

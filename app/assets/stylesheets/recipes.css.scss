@@ -28,6 +28,16 @@ div.recipe {
   }
 }
 
+ul#recipe_comments {
+  li {
+    min-height:3em;
+    border:none 1px #aaa;
+    border-top-style:solid;
+    p { margin:0.3em 0; }
+  }
+  li:first-child { border-top-style:none; }
+}
+
 /* show */
 #recipe_body{
   #recipe_photo{
