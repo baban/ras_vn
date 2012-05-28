@@ -19,19 +19,35 @@ describe RecipesController do
     end
   end
 
-  context "ログイン時" do
-  end
-
-  context "非ログイン時" do
-  end
-
-=begin
-  describe "GET 'edit'" do
-    it "returns http success" do
-      get 'edit'
-      response.should be_success
+  describe "GET 'new'" do
+    context "非ログイン時" do
+      it "returns http success" do
+        get :new
+        response.should be_redirect
+      end
+    end
+    context "ログイン時" do
+      it "returns http success" do
+        #get :new
+        #response.should be_success
+      end
     end
   end
+
+
+  describe "GET 'edit'" do
+    context "非ログイン時" do
+      it "returns http success" do
+        get :edit, id: 1
+        response.should be_redirect
+      end
+    end
+    context "ログイン時" do
+    end
+  end
+
+
+=begin
 
   describe "GET 'create'" do
     it "returns http success" do
@@ -47,11 +63,5 @@ describe RecipesController do
     end
   end
 
-  describe "GET 'new'" do
-    it "returns http success" do
-      get 'new'
-      response.should be_success
-    end
-  end
 =end
 end
