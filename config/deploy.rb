@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# encoding: utf-8
 
 # capistranoの実行結果の色付け
 require 'capistrano_colors'
@@ -18,18 +18,18 @@ set :application, "ras_vn"
 set :deploy_via, :export
 
 # sshのユーザー情報
-set :user, "rails_user"
+set :user, "baban"
 set :password, "svc2027"
 set :use_sudo, false
 
 # バージョン管理(git)
 set :scm, :git
-set :repository,  "ssh://gitosis@gitosis.rails.okwave.jp:2022/konmari_smart.git"
-set :scm_username, 'matzbara'
+set :repository,  "https://matzbara@bitbucket.org/truondinhhoang/ras_vn.git"
+#set :scm_username, 'matzbara'
 set :scm_passphrase, "plF2hjf9"
 
 # releaseディレクトリを残す数
-set :keep_releases, 100
+set :keep_releases, 20
 
 # public以下のjavascriptやCSSファイルのタイムスタンプを更新するコマンドを無効化
 set :normalize_asset_timestamps, false
@@ -121,21 +121,8 @@ end
 # resque
 desc "resque"
 namespace :resque do
-  task :start, :roles => :app do
-    run "cd #{current_path} && PIDFILE=#{current_path}/tmp/pids/resque.pid BACKGROUND=yes QUEUE=abilie RAILS_ENV=#{rails_env} bundle exec rake environment resque:work"
-  end
-
-  task :stop, :roles => :app do
-    run "#{try_sudo} kill -s QUIT `cat #{fetch(:current_path)}/tmp/pids/resque.pid`"
-  end
-
   task :restart, :roles => :app do
-    if 'true' ==  capture("if [ -e #{fetch(:current_path)}/tmp/pids/resque.pid ]; then echo 'true'; fi").strip
-      stop
-      start
-    else
-      start
-    end
+    run "#{current_path}/tmp/restart.txt"
   end
 end
 
