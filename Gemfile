@@ -35,7 +35,7 @@ gem 'rspec-rails'
 gem 'flextures', "1.9.12" # add rake command for dump and load fixtures
 gem 'faker' # generate fake data
 gem 'faker-japanese' # generate japanese names
-#gem "spork"
+gem "spork"
 gem "factory_girl_rails" # unit test data generate utilities
 gem "kaminari" # paginate view
 gem "whenever", '0.7.2', require:false # cron設定の追加＆削除自動化
