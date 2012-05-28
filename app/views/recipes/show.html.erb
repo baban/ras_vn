@@ -30,7 +30,9 @@
     <div id="recipe_comment_area" class="area">
       <h3>Comments</h3>
       <%=form_for :recipe_comments, url:{ controller:"recipe_comments", action:"create" } do |f| %>
+        <%=f.hidden_field :recipe_id, value: @recipe.id %>
         <%=f.text_area :content, size:"50x4", value: "" %>
+        <p><%=f.submit "post" %></p>
       <% end %>
       <ul id="recipe_comments" class="area">
         <% @recipe.comments.each do |comment| %>
