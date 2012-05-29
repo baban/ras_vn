@@ -4,7 +4,7 @@ class BookmarksController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @shops = Bookmark.list
+    @recipes = Recipe.all
   end
 
   def create
