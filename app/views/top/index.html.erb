@@ -28,7 +28,7 @@
             <td>
               <div class="figure">写真</div>
               <%=link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %><br />
-              by <%= recipe.user.profile.nickname %>
+              by <%#= recipe.user.profile.nickname %>
             </td>
           </tr>
         <% end %>
