@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120527105138) do
+ActiveRecord::Schema.define(:version => 20120603145003) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -37,155 +37,12 @@ ActiveRecord::Schema.define(:version => 20120527105138) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "distincts", :force => true do |t|
-    t.integer  "prefecture_id", :null => false
-    t.string   "name",          :null => false
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  create_table "eat_styles", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "food_genres", :force => true do |t|
-    t.string   "name",       :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "information", :force => true do |t|
+  create_table "newsfeeds", :force => true do |t|
     t.string   "title",      :default => "",    :null => false
-    t.text     "content",                       :null => false
+    t.text     "content"
     t.boolean  "public",     :default => false, :null => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
-  end
-
-  create_table "prefectures", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "recipe_advertisements", :force => true do |t|
-    t.string   "name",                       :null => false
-    t.string   "url",        :default => "", :null => false
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
-  end
-
-  create_table "recipe_comments", :force => true do |t|
-    t.integer  "recipe_id",  :null => false
-    t.integer  "user_id",    :null => false
-    t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "recipe_food_genres", :force => true do |t|
-    t.string   "name",       :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "recipe_foods", :force => true do |t|
-    t.integer  "recipe_food_genre_id", :null => false
-    t.string   "name",                 :null => false
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
-  end
-
-  create_table "recipe_foodstuffs", :force => true do |t|
-    t.integer  "recipe_id",                      :null => false
-    t.integer  "recipe_food_id"
-    t.string   "name",           :default => "", :null => false
-    t.string   "amount",         :default => "", :null => false
-    t.time     "deleted_at"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
-  end
-
-  create_table "recipe_rankings", :force => true do |t|
-    t.integer  "recipe_id",  :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "recipe_steps", :force => true do |t|
-    t.integer  "recipe_id",                  :null => false
-    t.string   "context",    :default => "", :null => false
-    t.datetime "deleted_at"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
-  end
-
-  create_table "recipes", :force => true do |t|
-    t.integer  "user_id",                        :null => false
-    t.string   "title",       :default => "",    :null => false
-    t.text     "description",                    :null => false
-    t.boolean  "public",      :default => false, :null => false
-    t.binary   "image"
-    t.text     "one_point",                      :null => false
-    t.time     "deleted_at"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
-  end
-
-  create_table "restaurant_comments", :force => true do |t|
-    t.integer  "restaurant_id",                    :null => false
-    t.integer  "user_id",                          :null => false
-    t.text     "comment"
-    t.boolean  "public",        :default => false, :null => false
-    t.float    "point",         :default => 0.0,   :null => false
-    t.time     "deleted_at"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
-  end
-
-  create_table "restaurant_menus", :force => true do |t|
-    t.integer  "restaurant_id",                 :null => false
-    t.integer  "view_style",    :default => 1,  :null => false
-    t.binary   "image"
-    t.string   "title",         :default => "", :null => false
-    t.text     "comment"
-    t.text     "price_comment"
-    t.text     "price"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-  end
-
-  create_table "restaurant_profiles", :force => true do |t|
-    t.integer  "restaurant_id", :null => false
-    t.binary   "top_photo"
-    t.float    "longitude"
-    t.float    "latitude"
-    t.time     "deleted_at"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  create_table "restaurants", :force => true do |t|
-    t.string   "name",                               :null => false
-    t.string   "public",            :default => "0", :null => false
-    t.string   "sub_name",                           :null => false
-    t.boolean  "coupon_flg",                         :null => false
-    t.boolean  "mobile_coupon_flg",                  :null => false
-    t.text     "comment",                            :null => false
-    t.string   "postcode"
-    t.string   "address"
-    t.string   "phone_number"
-    t.string   "fax_number"
-    t.string   "email"
-    t.string   "homepage"
-    t.time     "open_time"
-    t.time     "close_time"
-    t.string   "close_day"
-    t.time     "deleted_at"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
   end
 
   create_table "search_logs", :force => true do |t|
@@ -194,12 +51,6 @@ ActiveRecord::Schema.define(:version => 20120527105138) do
     t.string   "location",   :default => "", :null => false
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
-  end
-
-  create_table "tpl_sets", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "user_profiles", :force => true do |t|
@@ -231,6 +82,10 @@ ActiveRecord::Schema.define(:version => 20120527105138) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.integer  "uid"
+    t.string   "screen_name"
+    t.string   "access_token"
+    t.string   "access_secret"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

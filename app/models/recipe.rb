@@ -11,6 +11,8 @@ class Recipe < ActiveRecord::Base
 
   accepts_nested_attributes_for :recipe_steps # use formastic plug-in
 
+  mount_uploader :recipe_image, RecipeImageUploader 
+
   alias :foodstuffs :recipe_foodstuffs
   alias :steps :recipe_steps
   alias :comments :recipe_comments

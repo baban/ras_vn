@@ -18,6 +18,7 @@ gem 'jbuilder'
 gem 'bcrypt-ruby', '~> 3.0.0'
 #gem "rmagick" # image-magick ruby module
 gem "mini_magick"
+gem "carrierwave"
 
 # ruby extentions
 gem "tapp" # add tapp(tap print) method
