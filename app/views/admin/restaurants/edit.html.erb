@@ -1,0 +1,59 @@
+<%= semantic_form_for @item do |f| %>
+  <%=f.select :public, { "公開"=> 0, "非公開"=>1 }, selected: 1 %>
+  <table id="shop_info">
+    <tr>
+      <th><%=f.label :name, "店名" %></th>
+      <td><%=f.text_field :name, value: @item.name %></td>
+    </tr>
+    <tr>
+      <th><%=f.label :sub_name, "サブネーム" %></th>
+      <td><%=f.text_field :sub_name, value: @item.sub_name %></td>
+    </tr>
+    <tr>
+      <th><%=f.label :address, "住所" %></th>
+      <td>〒<%=f.text_field :postcode, value: "" %> <%=f.text_field :address, value: @item.address %></td>
+    </tr>
+    <tr>
+      <th><%=f.label :phone_number, "TEL" %></th>
+      <td>
+        <%=f.text_field :phone_number, value: @item.phone_number %>
+        <p>※お問い合わせの際はぐるなびを見たとお伝えになるとスムーズです。</p>
+      </td>
+    </tr>
+    <tr>
+      <th><%=f.label :fax_number, "FAX" %></th>
+      <td><%=f.text_field :fax_number, value: @item.fax_number %></td>
+    </tr>
+    <tr>
+      <th><%=f.label :email, "E-mail" %></th>
+      <td><%=f.text_field :email, value: @item.email %></td>
+    </tr>
+    <tr>
+      <th><%=f.label :homepage, "Homepage" %></th>
+      <td><%=f.text_field :homepage, value: @item.homepage %></td>
+    </tr>
+    <tr>
+      <th><%=f.label :open_time, "Timezone" %></th>
+      <td>
+        <%=f.inputs "営業時間" do %>
+          <%=f.input :open_time  %>〜
+          <%=f.input :close_time %>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <th><%=f.label :close_day, "定休日" %></th>
+      <td><%=f.text_field :close_day %></td>
+    </tr>
+    <tr>
+      <th><%=f.label :close_day, "クーポン" %></th>
+      <td>
+        <%= f.inputs "" do %>
+          <%=f.input :coupon_flg %>
+          <%=f.input :mobile_coupon_flg %>
+        <% end %>
+      </td>
+    </tr>
+  </table>  
+  <%= f.actions %>
+<% end %>

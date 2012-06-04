@@ -12,3 +12,47 @@
   float:left;
   clear:none;
 }
+
+ul#menus {
+  dl.title {
+    border-style:solid;
+    border-color:#aaa;
+    border-width:0 0 0 0.5em;
+  }
+  dl.menu {
+    border-style:solid;
+    border-color:#aaa;
+    border-width:0 0 1px 0;
+    dl.descript {
+      width:10em;
+      float:left;
+    }
+    dl.price_area {
+      float:right;
+      width:11em;
+      dd.price_comment {
+        width:5em;
+	float:left;
+	margin:0;
+	padding:0;
+      }
+      dd.price {
+        width:5em;
+	float:right;
+	margin:0;
+	padding:0;
+      }
+    }
+  }
+  dl.menu:after {
+    content:"";
+    display:block;
+    clear:both;
+  }
+  dl.menu.odd {
+    border-style:solid;
+  }
+  dl.menu.even {
+    border-style:dashed;
+  }
+}

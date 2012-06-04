@@ -32,6 +32,30 @@
     margin-left:160px;
     border:solid 1px #aaa;
   }
+  dl#login_area {
+    min-width:25em;
+    position:relative;
+    float:right;
+    dt {
+      border:solid 1px #aaa;
+    }
+    dd {
+      display:none;
+      position:absolute;
+      background-color:white;
+      border:solid 1px #aaa;
+      z-index:+2;
+      form {
+        background-color:white;
+        border-style:none;
+      }
+    }
+  }
+  dl#login_area:hover {
+    dd{
+      display:block;
+    }
+  }
 }
 
 #header:after {
@@ -40,62 +64,5 @@
 
 #content:before {
   @include break_block;
-}
-
-#content {
-  min-width:40em;
-  border:none 1px #aaa;  
-  border-top-style:solid;
-  position:relative;
-  margin:0 1em;
-  #nav {
-    width:15em;
-    border:solid 1px #aaa;
-    float:left;
-  }
-  .more{
-    text-align:right;
-  }
-  #content_body {
-    margin:0 0.5em;
-    min-width:10em;
-    float:left;
-  }
-
-  #sub_nav {
-    width:15em;
-    min-height:20em;
-    float:right;
-    border:solid 1px #aaa;
-  }
-}
-#content:after {
-  @include break_block;
-}
-
-.tile {
-  border:solid 1px #00a;
-  margin:0.3em 0;
-  h2 {
-    font-size:1em;
-  }
-  div {
-    margin:0.2em;
-  }
-}
-
-#location_map {
-  h2 {
-    font-size:1em;
-  }
-  h2 + div.map {
-    margin:2px;
-    border:solid 0.1em #ccc;
-    height:300px;
-  }
-}
-
-#redomendation_tools {
-  width:300px;
 }
 

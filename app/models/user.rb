@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
   has_one :user_profile
-  alias :info :user_profile
+  alias :profile :user_profile
+
+  belongs_to :recipe
 
 end

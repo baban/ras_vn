@@ -1,26 +1,6 @@
-#recipe_header {
-  border:none 2px #aaa;
-  border-bottom-style:solid;
-  margin-bottom:0.5em;
-  .logo{
-    width:100px;
-    height:50px;
-    border:solid 1px #aaa;
-    float:left;
-    clear:none;
-  }
-  .header_search {
-    width:auto;
-    float:left;
-    clear:none;
-    border-style:none;
-  }
-}
-#recipe_header:after {
-  content:"";
-  display:block;
-  clear:both;
-}
+
+@import "recipe/header.css";
+@import "content_menu.css";
 
 #content_body{
   width:75%;
@@ -49,15 +29,30 @@ div.recipe {
   }
 }
 
+ul#recipe_comments {
+  li {
+    min-height:3em;
+    border:none 1px #aaa;
+    border-top-style:solid;
+    p { margin:0.3em 0; }
+  }
+  li:first-child { border-top-style:none; }
+}
+
 /* show */
 #recipe_body{
   #recipe_photo{
-    width:200px;
-    height:200px;
+    position:relative;
+    img {
+      margin:0;
+    }
+    min-width:200px;
+    min-height:200px;
     border:solid 1px #aaa;
     float:left;
     clear:none;
-    margin-right:0.5em;
+    padding:0;
+    margin:0 0.5em 0.5em 0.5em;
   }
 }
 
@@ -90,12 +85,39 @@ div.recipe {
 }
 
 /* edit */
-#recipe_image {
-  width:2em !important;
+#edit_recipe_1 {
+  max-width:50em;
+}
+
+#recipe_photo {
+  display:block;
+  clear:none;
+  float:none;
 }
 
 #description > textarea {
   height:4em;
+}
+
+#foodstuffs_area {
+  width:43em;
+  border:solid 1px #aaa;
+  display:block;
+  clear:none;
+  table#foodstuffs {
+    td {
+      padding:0;
+      input { margin:0.2em; }  
+    }
+    td.name > input { width:17em; }
+    td.amount > input { width:4em; }
+  }
+  #add_foodstuffs_row { float:right; }
+}
+#foodstuffs_area:after {
+  content:"";
+  display:block;
+  clear:both;
 }
 
 #recipe_one_point {
@@ -111,4 +133,8 @@ dl.step > dd {
 .step_edit_area {
   width:85%;
   height:7em;
+}
+
+.form_actions {
+  text-align:right;
 }

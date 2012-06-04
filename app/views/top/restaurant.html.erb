@@ -1,64 +1,76 @@
-<%=render partial:'common/top_nav' %>
+<% content_for :style_after do; stylesheet_link_tag "top/restaurant"; end %>
 
-<div class='nav' id='top_nav'>
+<%= render partial:"layouts/header" %>
+
+<div class="nav" id="top_nav">
   <ul>
-    <li><%=link_to "検索TOP", controller:'restaurant_search', action:'index' %></li>
-    <li><%=link_to "エリアから探す", controller:'restaurant_search', action:'area' %></li>
-    <li><%=link_to "料理から探す", controller:'restaurant_search', action:'food_genre' %></li>
-    <li><%=link_to "オススメから探す", controller:'restaurant_search', action:'eat_style' %></li>
+    <li><%=link_to "エリアから探す", controller:"restaurant_search", action:"area" %></li>
+    <li><%=link_to "料理から探す", controller:"restaurant_search", action:"food_genre" %></li>
+    <li><%=link_to "オススメから探す", controller:"restaurant_search", action:"eat_style" %></li>
   </ul>
 </div>
 
-<div id='header'>
-  <h1>
-    <p>ras_vn</p>
-    <p>宴会・グルメ情報検索サイト</p>
-  </h1>
-  <div id='top_advertisement'>
-    <p>hoge</p>
+<div id="content">
+  <%= render partial:"content_tabpanel" %>
+  <div id="top_advertisement">
+    advertisement
   </div>
-</div>
 
-<div id='content'>
-  <%= render partial:'content_tabpanel' %>
-  <div id='nav'>
-    <div id='genre_list'>
-      <ul>
-        <% @food_genre.each do |genre| %>
-        <li><%=link_to genre.name, controller:'shop_search', action:'food_genre', id: genre.id %></li>
-        <% end %>
-        <li class='more'><a href="/search/food_genre">more...</a></li>
-      </ul>
+  <div id="content_nav" class="nav">
+    <div class="tile" id="promotion">
+      <p>advertisement</p>
     </div>
-  </div>
-  <div id='content_body'>
-    <div class='tile' id='location_map'>
-      <h2>全国のグルメ・レストランを探す</h2>
-      <div class='map'>map</div>
-      <div class='area_list'>
-        <dl>
-          <%# AreaMaster.where( " data_type = 1 " ).each do |area| %>
-          <dt><%#= area.name %></dt>
-          <%# end %>
-        </dl>
-      </div>
+    <div class="tile" id="information">
+      <dl class="newsfeeds">
+        <dt>Topics 04/27</dt>
+        <dd>news1</dd>
+        <dt>Topics 04/26</dt>
+        <dd>news2</dd>
+      </dl>
     </div>
-    <div class='tile' id='redomendation_tools'>
-      <h2>お店予約の便利ツール</h2>
-      <div>hoge</div>
-    </div>
-  </div>
-  <div id='sub_nav'>
-    <div class='tile' id='promotion'>
-      <p>広告</p>
-    </div>
-    <div class='tile' id='facebook'>
+    <div class="tile" id="facebook">
       <h2>Facebook</h2>
-      <div id='facebook_body'>
+      <div id="facebook_body">
         <p>facebook</p>
       </div>
     </div>
+    <div class="tile" id="google_plus_area">
+      <h2>Google+</h2>
+      <div id="facebook_body">
+        <p>Google+</p>
+      </div>
+    </div>
   </div>
+
+  <div id="content_body">
+    <div id="area_search_area">
+      <h3>エリアから探す</h3>
+      <div class="area_list">
+        <dl>
+          <% Prefecture.all.each do |area| %>
+            <dt><%= link_to area.name, controller:"restaurant_search", action:"area", prefecture_id: area.id %></dt>
+          <% end %>
+        </dl>
+        <div>map</div>
+      </div>
+    </div>
+    <div id="recommend_area">
+      <h3>おすすめお店</h3>
+      <div id="recommend_body">
+        <% (1..2).each do |i|  %>
+          <div class="recommend">
+            <div class="figure">
+              photo
+            </div>
+            <div>restaurant name</div>
+            <div>place</div>
+            <div>comment&amp;view</div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <%= render partial:'layouts/footer' %>

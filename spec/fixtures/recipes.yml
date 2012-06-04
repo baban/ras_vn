@@ -1,0 +1,66 @@
+recipes_0:
+  id: 1
+  user_id: 2
+  title: 母の日簡単！カーネーションのプチケーキ
+  description: 材料３つ！簡単すぎて、拍子ぬけするかも。実物はとっても豪華で可愛い。
+  public: true
+  image: null
+  one_point: 網目の切れこみや、スプーンや手でちぎると味が染み込みやすくなります。
+  deleted_at: null
+  created_at: 2012-05-12 23:23:04 UTC
+  updated_at: 2012-05-27 09:57:47 UTC
+recipes_1:
+  id: 2
+  user_id: 1
+  title: 簡単美味しい♪あさりの酒蒸し
+  description: ごく普通のあさりの酒蒸しですが、あさりはこの食べ方が１番美味しい！汁まで絶品なんです♪　※砂だし方法は作り方3,4参照
+  public: true
+  image: null
+  one_point: 形はいびつですが、それも味があって食べる楽しみになりますよ(＾▽＾)
+  deleted_at: null
+  created_at: 2012-05-12 23:23:54 UTC
+  updated_at: 2012-05-13 04:50:43 UTC
+recipes_2:
+  id: 3
+  user_id: 1
+  title: バターでまろやかあさりの酒蒸し
+  description: バターを入れるととってもおいしいです☆ あっという間に出来るので、助かります♪ 
+  public: true
+  image: null
+  one_point: 網目の切れこみや、スプーンや手でちぎると味が染み込みやすくなります。
+  deleted_at: null
+  created_at: 2012-05-12 23:24:39 UTC
+  updated_at: 2012-05-13 04:50:53 UTC
+recipes_3:
+  id: 4
+  user_id: 1
+  title: アサリのバター酒蒸し☆レンジで
+  description: レンジで簡単に作っちゃいましょう。お酒のつまみや、貧血気味の時やお子様にも。カテゴリに掲載されました。
+  public: true
+  image: null
+  one_point: 形はいびつですが、それも味があって食べる楽しみになりますよ(＾▽＾)
+  deleted_at: null
+  created_at: 2012-05-12 23:25:11 UTC
+  updated_at: 2012-05-13 04:51:01 UTC
+recipes_4:
+  id: 5
+  user_id: 1
+  title: 切り干しナポリタン
+  description: 切干大根の独特の風味が苦手な人でも気づかずパクパクたべちゃいます！私もそんな１人 (;ﾟ-ﾟ) 栄養満点な食材を人気メニューに変えて食べやすくアレンジ♪ 
+  public: true
+  image: null
+  one_point: 網目の切れこみや、スプーンや手でちぎると味が染み込みやすくなります。
+  deleted_at: null
+  created_at: 2012-05-12 23:26:02 UTC
+  updated_at: 2012-05-13 04:51:13 UTC
+recipes_5:
+  id: 6
+  user_id: 1
+  title: しらたきとワカメのガーリックポン酢
+  description: ダイエット中でも何か食べた～い(*^^*)お酒の、おつまみにもヘルシーで良いかも体の中をキレイにする食べ合わせだそうです
+  public: true
+  image: null
+  one_point: 形はいびつですが、それも味があって食べる楽しみになりますよ(＾▽＾)
+  deleted_at: null
+  created_at: 2012-05-12 23:26:48 UTC
+  updated_at: 2012-05-13 04:51:19 UTC

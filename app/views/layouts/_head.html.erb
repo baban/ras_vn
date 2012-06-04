@@ -6,5 +6,7 @@
   <%= stylesheet_link_tag params[:controller] %>
   <%= yield :style_after %>
   <%= javascript_include_tag :application %>
+  <%= javascript_include_tag params[:controller] %>
+  <%= yield :javascript_after %>
   <%= csrf_meta_tags %>
 </head>

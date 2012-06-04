@@ -37,6 +37,17 @@ ul.tabpanel:after {
   clear:both;
 }
 
+#header {
+  border:none 1px #aaa;
+  border-bottom-style:solid;
+  background-color:white;
+  h1 {
+    font-size:1.0em;
+    border:solid 1px #aaa;
+    width:300px;
+  }
+}
+
 #top_bar{
   background-color:#000;
   color:white;
@@ -57,6 +68,31 @@ ul.tabpanel:after {
   display:block;
   clear:both;
 }
+
+#header {
+  border:none 2px #aaa;
+  border-bottom-style:solid;
+  margin-bottom:0.5em;
+  .logo{
+    width:100px;
+    height:50px;
+    border:solid 1px #aaa;
+    float:left;
+    clear:none;
+  }
+  .header_search {
+    width:auto;
+    float:left;
+    clear:none;
+    border-style:none;
+  }
+}
+#header:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
 
 .breadcrumb_list {
   border:none 1px #aaa;
@@ -111,3 +147,6 @@ ul.tabpanel:after {
   }
 }
 
+.more_link {
+  text-align:right;
+}

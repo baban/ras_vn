@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+RecipeFood:
+  fields:
+    default: recipe_food_genre_id, name
+    form: recipe_food_genre_id, name
+  relationships: 
+  application: Application

@@ -9,25 +9,48 @@
 
     <div id="restaurant_content_body">
       <div id="restaurant_seen_area">
-        <div class="seen">
-          <div class="photo">
+        <dl class="seen">
+          <dt class="photo">
             <p>画像</p>
-          </div>
-          <div class="description">
+          </dt>
+          <dd class="description">
             <p>【落ち着いた雰囲気】</p>
             <p>時間を忘れるオシャレな和モダン美空間</p>
-          </div>
-        </div>
-        <div class="seen">
-          <div class="photo">
+          </dd>
+        </dl>
+        <dl class="seen">
+          <dt class="photo">
             <p>画像</p>
-          </div>
-          <div class="description">
+          </dt>
+          <dd class="description">
             <p>【落ち着いた雰囲気】</p>
             <p>時間を忘れるオシャレな和モダン美空間</p>
-          </div>
-        </div>
+          </dd>
+        </dl>
       </div>
+    </div>
+    <div id="menu_area">
+      <ul id="menus">
+        <% @restaurant.menus.each_with_index do |menu,idx| %>
+          <% if menu.view_style == 1 %>
+            <dl class="title <%= idx.even? ? 'even' : 'odd' %>">
+              <dt><%= menu.title %></dt>
+              <dd><%= menu.comment %></dd>
+            </dl>
+          <% else %>
+            <dl class="menu  <%= idx.even? ? 'even' : 'odd' %>">
+              <dl class="descript">
+                <dt class="title"><%= menu.title %></dt>
+                <dd class=""><%= menu.comment %></dd>
+              </dl>
+              <dl class="price_area">
+                <dd class="price_comment"><%= menu.price_comment %></dd>
+                <dd class="price"><%= menu.price %></dd>
+              </dl>
+            </dl>
+          <% end %>
+        <% end %>
+      </ul>
     </div>
   </div>
   <%=render partial:"content_footer" %>

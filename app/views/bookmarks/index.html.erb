@@ -1,0 +1,22 @@
+<%= render partial:"layouts/header" %>
+
+<div id="content">
+  <h2>bookmark</h2>
+  <div id="content_body">
+    <ul id="search_list">
+      <% @recipes.each do |recipe| %>
+        <li>
+          <div class="figure">photo</div>
+          <h3><%= recipe.title %></h3>
+          <div class="comment">
+            <%= recipe.description %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class='nav' id='nav'></div>
+</div>
+
+<%= render partial:"layouts/footer" %>
+
