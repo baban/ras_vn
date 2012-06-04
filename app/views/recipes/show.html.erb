@@ -5,7 +5,8 @@
   <div class="section" id="recipe_body">
     <div id="recipe_base_info">
       <div id="recipe_photo" class="figure">
-        <%=image_tag url_for(action:"image", id: @recipe.id) %>
+        <%#=image_tag url_for(action:"image", id: @recipe.id) %>
+        <%=image_tag @recipe.recipe_image.url %>
       </div>
       <div id="description">
         <%= @recipe.description %>

@@ -7,8 +7,8 @@
     <div id="recipe_base_info">
       <div class="section" id="recipe_body">
         <div id="recipe_photo" class="figure">
-          <% if @recipe.image %>
-            <%=image_tag url_for(action:"image", id: @recipe.id) %>
+          <% if @recipe.recipe_image %>
+            <%=image_tag  @recipe.recipe_image.url %>
           <% else %>
             <%=image_tag "no_image.gif" %>
           <% end %>
