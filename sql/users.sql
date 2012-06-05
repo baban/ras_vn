@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.5.15, for osx10.6 (i386)
+-- MySQL dump 10.13  Distrib 5.5.24, for osx10.6 (i386)
 --
 -- Host: localhost    Database: ras_vn_dev
 -- ------------------------------------------------------
@@ -36,10 +36,14 @@ CREATE TABLE `users` (
   `last_sign_in_ip` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
+  `uid` int(11) DEFAULT NULL,
+  `screen_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `access_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `access_secret` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `index_users_on_email` (`email`),
   UNIQUE KEY `index_users_on_reset_password_token` (`reset_password_token`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +52,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'babanba.n@gmail.com','$2a$10$DuVMagXbgW5Rk3Yu0fJXP.021NuesP.vsAs3fgMKMmfmKmOvli0PS',NULL,NULL,NULL,1,'2012-05-26 00:36:40','2012-05-26 00:36:40','127.0.0.1','127.0.0.1','2012-05-26 00:36:40','2012-05-26 00:36:40');
+INSERT INTO `users` VALUES (1,'babanba.n@gmail.com','$2a$10$DuVMagXbgW5Rk3Yu0fJXP.021NuesP.vsAs3fgMKMmfmKmOvli0PS',NULL,NULL,NULL,2,'2012-06-04 15:47:08','2012-05-26 00:36:40','127.0.0.1','127.0.0.1','2012-05-26 00:36:40','2012-06-05 00:24:09',NULL,NULL,NULL,NULL),(2,'1@test.jp','$2a$10$IbUu9y4oTZObacdTQhBwHOe49FfWb3kUAZNSIiCzgPxgwqqM56Uhq',NULL,NULL,NULL,1,'2012-06-05 00:24:47','2012-06-05 00:24:47','127.0.0.1','127.0.0.1','2012-06-05 00:24:47','2012-06-05 00:24:47',NULL,NULL,NULL,NULL),(3,'2@test.jp','$2a$10$HeUwWIYyBhoXc3IGdaWsteBDQyNPu1ACLDJrE1rsbtaLrrsw..t1W',NULL,NULL,NULL,1,'2012-06-05 00:25:09','2012-06-05 00:25:09','127.0.0.1','127.0.0.1','2012-06-05 00:25:09','2012-06-05 00:25:09',NULL,NULL,NULL,NULL),(4,'3@test.jp','$2a$10$4wQ/u6hpjgfauItR8mkgM.2zTIQGEhwV/ftPlnlyv0IES7H2SUq0u',NULL,NULL,NULL,1,'2012-06-05 00:25:30','2012-06-05 00:25:30','127.0.0.1','127.0.0.1','2012-06-05 00:25:30','2012-06-05 00:25:30',NULL,NULL,NULL,NULL),(5,'4@test.jp','$2a$10$eLPfr2j418KWTRtgTIdsbOlH.Fem4E.Tj2ROwORtPUq2yvg3lERUO',NULL,NULL,NULL,1,'2012-06-05 00:25:49','2012-06-05 00:25:49','127.0.0.1','127.0.0.1','2012-06-05 00:25:49','2012-06-05 00:25:49',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -61,4 +65,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-05-26 10:00:43
+-- Dump completed on 2012-06-05  9:26:41
