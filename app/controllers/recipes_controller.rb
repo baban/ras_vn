@@ -2,7 +2,7 @@
 
 class RecipesController < ApplicationController
   before_filter :authenticate_user!,   except:[:index,:show,:image]
-  before_filter :editable_user_filter, only:[:edit,:update,:destroy]
+  #before_filter :editable_user_filter, only:[:edit,:update,:destroy]
   before_filter :advertisement_filter, except:[:create,:destroy]
 
   helper_method :my_recipe?
