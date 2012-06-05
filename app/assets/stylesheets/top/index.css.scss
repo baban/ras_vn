@@ -48,15 +48,17 @@
 
 #category_recipe_search {
   div.recipe_category {
+    position:relative;
+    font-size:15px;
     width:49%;
-    min-height:7em;
+    min-height:7.5em;
     border:solid 1px #aaa;
     float:left;
     clear:none;
   }
   ul.recipe_sub_category > li {
-    display:block;
-    width:30%;
+    display:inline;
+    margin:0.2em;
     clear:none;
     float:left;
   }
@@ -66,7 +68,9 @@
     clear:both;
   }
   p.more_link {
-    text-align:right;
+    position:absolute;
+    bottom:0.1em;
+    right:0.2em;
   }
 }
 
