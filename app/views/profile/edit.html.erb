@@ -3,7 +3,7 @@
 <%= form_for :user_info, url:{ action:'update' } do |f| %>
   <table>
     <tr>
-      <td>ニックネーム</td>
+      <td><%=f.label, :nickname, "ニックネーム" %></td>
       <td colspan="2"><%= f.text_field :nickname, value: @info.nickname %></td>
     </tr>
     <tr>
