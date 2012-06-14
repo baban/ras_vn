@@ -24,8 +24,8 @@ set :use_sudo, false
 
 # バージョン管理(git)
 set :scm, :git
-set :repository,  "https://matzbara@bitbucket.org/truondinhhoang/ras_vn.git"
-#set :scm_username, 'matzbara'
+set :repository, "https://matzbara@bitbucket.org/truondinhhoang/ras_vn.git"
+set :scm_username, 'matzbara'
 set :scm_passphrase, "svc2027"
 
 # releaseディレクトリを残す数
