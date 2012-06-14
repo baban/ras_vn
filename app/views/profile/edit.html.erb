@@ -1,10 +1,14 @@
 <h1>Profile</h1>
 
-<%= form_for :user_info, url:{ action:'update' } do |f| %>
+<%= semantic_form_for :user_info, url:{ action:'update' } do |f| %>
+
+<%# コード量 105文字 -> 39 %>
+<%# 通常のコーディングでもその量を半分〜1/3くらいにするのはどうとでもなる %>
+
   <table>
     <tr>
-      <td><%=f.label, :nickname, "ニックネーム" %></td>
-      <td colspan="2"><%= f.text_field :nickname, value: @info.nickname %></td>
+      <td><%=label_tag "user_info[nickname]", "ニックネーム" %></td>
+      <td colspan="2"><%=text_field_tag "user_info[nickname]", @info.nickname %></td>
     </tr>
     <tr>
       <td>メールアドレス</td>
