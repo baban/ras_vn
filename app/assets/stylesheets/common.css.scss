@@ -150,3 +150,11 @@ ul.tabpanel:after {
 .more_link {
   text-align:right;
 }
+
+.paginate {
+  width:100%;
+  nav.pagination{
+    margin:0.8em auto;
+    text-align:center;
+  }
+}

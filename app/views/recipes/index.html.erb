@@ -1,5 +1,8 @@
 <div id="content_body">
-  <%= render partial:'content_menu' %>
+  <%=render partial:'content_menu' %>
+  <div class="paginate">
+    <%=paginate @recipes %>
+  </div>
   <% @recipes.each do |recipe| %>
     <div class="recipe">
       <div class="figure recipe_photo">
