@@ -39,7 +39,7 @@ before 'deploy:setup', 'rvm:create_gemset' # only create gemset
 
 require "rvm/capistrano"
 
-set :rvm_ruby_string, :local
+#set :rvm_ruby_string, :local
 
 
 #set :repository, "https://matzbara@bitbucket.org/truondinhhoang/ras_vn.git"
