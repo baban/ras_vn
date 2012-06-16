@@ -45,6 +45,7 @@ gem 'capistrano', '2.9.0'
 gem 'capistrano_colors', '0.5.5'
 gem 'capistrano-ext', '1.2.1'
 gem 'acts_as_readonlyable', '0.0.9' # DBのマスタースレーブ分割
+gem "rvm-capistrano"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

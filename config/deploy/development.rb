@@ -5,7 +5,7 @@ set :branch, "master"
 
 set(:deploy_to)         { "/var/www/htdocs/#{application}" }
 
-set :rails_env, "staging"
+set :rails_env, "development"
 
 role :web, "localhost" 
 role :app, "localhost"

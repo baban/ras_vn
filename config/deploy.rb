@@ -24,9 +24,30 @@ set :use_sudo, false
 
 # バージョン管理(git)
 set :scm, :git
-set :repository, "https://matzbara@bitbucket.org/truondinhhoang/ras_vn.git"
-set :scm_username, 'matzbara'
+set :repository, "/home/baban/repo/ras_vn/"
+set :scm_username, 'baban'
 set :scm_passphrase, "svc2027"
+
+
+# Add RVM's lib directory to the load path.
+$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+
+# Load RVM's capistrano plugin.    
+require "rvm/capistrano"
+
+set :rvm_ruby_string, '1.9.2'
+set :rvm_type, :user  # Don't use system-wide RVM
+
+
+#set :repository, "https://matzbara@bitbucket.org/truondinhhoang/ras_vn.git"
+#set :scm_username, 'matzbara'
+#set :scm_passphrase, "svc2027"
+
+set :runner, "baban"
+set :branch, "master"
+set :deploy_via, :checkout
+set :git_shallow_clone, 1
+set :chmod755, "app config db lib public vendor script script/* public/disp*"
 
 # releaseディレクトリを残す数
 set :keep_releases, 20
@@ -52,7 +73,7 @@ namespace :deploy do
   end
 
   task :stop, :rolse => :app  do
-    run "#{try_sudo} kill -s QUIT `cat #{fetch(:current_path)}/tmp/pids/unicorn.pid`"
+    #run "#{try_sudo} kill -s QUIT `cat #{fetch(:current_path)}/tmp/pids/unicorn.pid`"
   end
 
   task :restart, :roles => :app, :except => { :no_release => true } do
@@ -61,23 +82,29 @@ namespace :deploy do
 
   # shared以下にアップロード画像のシンボリックリンクを作成する
   task :link_uploads do
+=begin
     run <<-CMD
       cd #{release_path} &&
       ln -nfs #{shared_path}/uploads #{release_path}/public/uploads  
     CMD
+=end
   end
 
   # shared以下にアップロード画像用のディレクトリを作成
   task :mkdir_uploads do
+=begin
     run <<-CMD
       #{try_sudo} mkdir #{shared_path}/uploads
     CMD
+=end
   end
 
   task :cp_rvmrc do
+=begin
     run <<-CMD
       cp #{release_path}/.rvmrc.#{rails_env} #{release_path}/.rvmrc
     CMD
+=end
   end
 
   namespace :web do
