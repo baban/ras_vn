@@ -29,14 +29,17 @@ set :scm_username, 'baban'
 set :scm_passphrase, "svc2027"
 
 
-# Add RVM's lib directory to the load path.
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 
-# Load RVM's capistrano plugin.    
+set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"")
+set :rvm_install_ruby_params, '--1.9'      # for jruby/rbx default to 1.9 mode
+
+before 'deploy:setup', 'rvm:install_rvm'   # install RVM
+before 'deploy:setup', 'rvm:install_ruby'  # install Ruby and create gemset, or:
+before 'deploy:setup', 'rvm:create_gemset' # only create gemset
+
 require "rvm/capistrano"
 
-set :rvm_ruby_string, '1.9.2'
-set :rvm_type, :user  # Don't use system-wide RVM
+set :rvm_ruby_string, :local
 
 
 #set :repository, "https://matzbara@bitbucket.org/truondinhhoang/ras_vn.git"
