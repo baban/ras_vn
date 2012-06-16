@@ -43,17 +43,12 @@ set :whenever_command, "bundle exec whenever"
 after "deploy:restart", "deploy:cleanup"
 
 def restart_task
-  if 'true' ==  capture("if [ -e #{fetch(:current_path)}/tmp/pids/unicorn.pid ]; then echo 'true'; fi").strip
-    run "#{try_sudo} kill -s USR2 `cat #{fetch(:current_path)}/tmp/pids/unicorn.pid`"
-  else
-    run "cd #{current_path} && BUNDLE_GEMFILE=#{current_path}/Gemfile bundle exec unicorn_rails -c config/unicorn.rb -E #{rails_env} -D"
-  end
 end
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
   task :start, :roles => :app, :except => {:no_release => true} do 
-    run "cd #{current_path} && BUNDLE_GEMFILE=#{current_path}/Gemfile bundle exec unicorn_rails -c config/unicorn.rb -E #{rails_env} -D"
+    #run "cd #{current_path} && BUNDLE_GEMFILE=#{current_path}/Gemfile bundle exec unicorn_rails -c config/unicorn.rb -E #{rails_env} -D"
   end
 
   task :stop, :rolse => :app  do
@@ -61,7 +56,7 @@ namespace :deploy do
   end
 
   task :restart, :roles => :app, :except => { :no_release => true } do
-    restart_task
+    #restart_task
   end
 
   # shared以下にアップロード画像のシンボリックリンクを作成する
