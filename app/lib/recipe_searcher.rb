@@ -13,7 +13,8 @@ module RecipeSearcher
       end      
     }.call
     page = option[:page] || 1
-    recipes.page(page).per(12)
+    #recipes.page(page).per(12)
+    Recipe.page(page).per(12)
   end
 
   def self.search_by_recipe_food_id( recipe_food_id )
