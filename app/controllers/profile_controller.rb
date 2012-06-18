@@ -5,10 +5,12 @@ class ProfileController < ApplicationController
 
   def show
     @profile = current_user.profile
+    @visibility = @profile.visibility
   end
 
   def edit
     @profile = current_user.profile
+    @visibility = @profile.visibility
   end
 
   def update

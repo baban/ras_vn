@@ -13,8 +13,8 @@ class CreateUserProfiles < ActiveRecord::Migration
       t.string   :mail_address,  null: true
       t.string   :postcode,      null: false, default: ''
       t.string   :address,       null: false, default: ''
+      t.text     :comment,       null: false, default: ""
 
-      t.integer  :address_point, null: true
       t.timestamps
     end
   end
