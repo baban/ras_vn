@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120614003308) do
+ActiveRecord::Schema.define(:version => 20120618145939) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -216,6 +216,22 @@ ActiveRecord::Schema.define(:version => 20120614003308) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "user_profile_visibilities", :force => true do |t|
+    t.boolean  "user_id",       :default => true
+    t.boolean  "nickname",      :default => true, :null => false
+    t.boolean  "sex",           :default => true, :null => false
+    t.boolean  "first_name",    :default => true
+    t.boolean  "last_name",     :default => true
+    t.boolean  "blood_type",    :default => true, :null => false
+    t.boolean  "birthday",      :default => true, :null => false
+    t.boolean  "mail_address",  :default => true, :null => false
+    t.boolean  "postcode",      :default => true, :null => false
+    t.boolean  "address",       :default => true, :null => false
+    t.boolean  "address_point", :default => true, :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   create_table "user_profiles", :force => true do |t|

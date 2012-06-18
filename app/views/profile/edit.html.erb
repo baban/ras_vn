@@ -1,6 +1,6 @@
 <h1>Profile</h1>
 
-<%= semantic_form_for @profile, url:{ action:'update' } do |f| %>
+<%= semantic_form_for [@profile], url:{ action:'update' } do |f| %>
   <table>
     <tr>
       <td><%=f.label :nickname, "ニックネーム" %></td>
