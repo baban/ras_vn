@@ -12,14 +12,15 @@
     clear:none;
   }
   form.header_search {
-    width:20em;
+    width:15em;
     float:left;
     clear:none;
     border-style:none;
+    input[type="text"] { width:10em; }
   }
   dl#login_area {
     float:left;
-    width:20em;
+    width:18em;
     position:relative;
     dt {
       border:solid 1px #aaa;
@@ -51,4 +52,10 @@
   content:"";
   display:block;
   clear:both;
+}
+
+#mymenues_bar {
+  float:right;
+  li {
+  }
 }
