@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+#footer:before {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+#footer{
+  border:none 2px #aaa;
+  border-top-style:solid;
+  #info_links_area {
+    text-align:center;
+    ul > li {
+      display:inline;
+      text-align:center;
+    }
+  }
+  .cooporate_logo {
+    text-align:center;
+  }
+  p {
+    text-align:center;
+  }
+}

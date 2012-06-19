@@ -1,51 +1,28 @@
-
-<div id='header'>
-  <div id='header_up'>
-    <h1>mypage</h1>
-  </div>
-  <div id='header_down'>
-    <div class='breadcrumb_list'>
-      <ul>
-        <li>ぐるなび</li>
-        <li>東京 渋谷・原宿・青山</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div id='content'>
-  <div id='nav'>
-    <div id='user_info'>
-      <p>こんにちは**さん</p>
-      <p>現在ポイント</p>
-    </div>
-  </div>
   <div id='content_body'>
-    <h2>info</h2>
-    <div id='attention'></div>
-    <div class='tile' id='bookmark_area'>
-      <h3>bookmark</h3>
-      <div class='bookmark_content'>
-        <p><a href="/bookmark/index">bookmark</a></p>
-      </div>
-    </div>
-    <div class='tile' id='recommend_area'>
-      <h3>recommend</h3>
-      <div class='recommend_content'></div>
-    </div>
-    <div class='tile' id='profile_area'>
-      <h3>profile</h3>
-      <div class='profile_content'></div>
-    </div>
-    <div class='tile' id='publication_area'>
-      <h3>宴会メール</h3>
-      <div class='publication_content'></div>
-    </div>
-    <div class='tile' id='adress_content_are'>
-      <h3>住所</h3>
-      <div class='address_content'></div>
-    </div>
+    <h1>Profile</h1>
+    <table>
+      <tr>
+        <td>ニックネーム</td>
+      <td colspan="2"><%= @profile.nickname %></td>
+      </tr>
+      <tr>
+        <td>メールアドレス</td>
+        <td colspan="2"><%= @profile.mail_address %></td>
+      </tr>
+      <tr>
+        <td>性別</td>
+        <td colspan="2"><%=translate_sex( @profile.sex ) %></td>
+      </tr>
+      <tr>
+        <td>生年月日</td>
+        <td colspan="2"><%= @profile.birthday %></td>
+      </tr>
+      <tr>
+        <td>自己紹介</td>
+        <td colspan="2"><%= @profile.comment %></td>
+      </tr>
+      <tr>
+        <td colspan="3"><%=link_to "編集", controller:"profiles", action:"edit" %></td>
+      </tr>
+    </table>
   </div>
-</div>
-
-<%=render partial:'layouts/footer' %>

@@ -15,11 +15,16 @@ class ProfilesController < ApplicationController
 
   def update
     @profile = current_user.profile
-    @profile.attributes = params[:user_info]
+    @profile.attributes = params[:user_profile]
 
-    return render(action:'edit') unless @profile.valid?
+    @visibility = @profile.visibility
+    @visibility.attributes = params[:user_profile_visibility]
+
+    return render(action:'edit') if @profile.valid?.! or @visibility.valid?.!
 
     @profile.save
-    redirect_to action:'show'
+
+    # redirect_to action:'show'
+    redirect_to controller:"mypage", action:"index"
   end
 end

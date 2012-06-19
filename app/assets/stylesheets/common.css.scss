@@ -3,6 +3,9 @@
 @import url("def/html-default-css1.css");
 @import "def/html-default-css2.css";
 
+@import "parts/recipe_header.css";
+@import "parts/content_menu.css";
+
 body{
   margin:0;
   padding:0;
@@ -35,116 +38,6 @@ ul.tabpanel:after {
   content:"";
   display:block;
   clear:both;
-}
-
-#header {
-  border:none 1px #aaa;
-  border-bottom-style:solid;
-  background-color:white;
-  h1 {
-    font-size:1.0em;
-    border:solid 1px #aaa;
-    width:300px;
-  }
-}
-
-#top_bar{
-  background-color:#000;
-  color:white;
-  ul{
-    margin:0;
-    padding:0;
-    li {
-      display:inline;
-    }
-    li.login,
-    li.logout {
-      float:right;
-    }
-  }
-}
-#top_bar:after{
-  content:"";
-  display:block;
-  clear:both;
-}
-
-#header {
-  border:none 2px #aaa;
-  border-bottom-style:solid;
-  margin-bottom:0.5em;
-  .logo{
-    width:100px;
-    height:50px;
-    border:solid 1px #aaa;
-    float:left;
-    clear:none;
-  }
-  .header_search {
-    width:auto;
-    float:left;
-    clear:none;
-    border-style:none;
-  }
-}
-#header:after {
-  content:"";
-  display:block;
-  clear:both;
-}
-
-
-.breadcrumb_list {
-  border:none 1px #aaa;
-  border-top-style:solid;
-  margin:0 0.5em;
-}
-
-#top_nav {
-  ul {
-    text-align:right;
-    margin:1em;
-    li {
-      border:none 1px #aaa;
-      border-left-style:solid;
-      display:inline;
-      padding:0.5em;
-    }
-  }
-}
-
-#content_top_menu {
-  border:none 2px #aaa;
-  border-bottom-style:solid;
-}
-
-#content_bottom_menu {
-  border:none 2px #aaa;
-  border-top-style:solid;
-}
-
-#footer:before {
-  content:"";
-  display:block;
-  clear:both;
-}
-
-#footer{
-  border:none 2px #aaa;
-  border-top-style:solid;
-  #info_links_area {
-    text-align:center;
-    ul > li {
-      display:inline;
-      text-align:center;
-    }
-  }
-  .cooporate_logo {
-    text-align:center;
-  }
-  p {
-    text-align:center;
-  }
 }
 
 .more_link {
