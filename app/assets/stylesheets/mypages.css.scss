@@ -14,21 +14,13 @@
   }
 }
 
-#header{
-  border:none 2px #aaa;
-  border-bottom-style:solid;
-}
-
-#content {
-  position:relative;
-}
-
 #nav {
-  position:absolute;
   top:0;
   width:15em;
   min-height:25em;
   border:solid 1px #aaa;
+  float:left;
+  clear:none;
 }
 
 #content_body{
