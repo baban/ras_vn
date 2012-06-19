@@ -1,37 +1,11 @@
 @charset "UTF-8";
 
-#recipe_header {
-  border:none 2px #aaa;
-  border-bottom-style:solid;
-  margin-bottom:0.5em;
-  .logo{
-    width:100px;
-    height:50px;
-    border:solid 1px #aaa;
-    float:left;
-    clear:none;
-  }
-  .header_search {
-    width:auto;
-    float:left;
-    clear:none;
-    border-style:none;
-  }
-}
-#recipe_header:after {
-  content:"";
-  display:block;
-  clear:both;
+#content_footer {
+  width:30%;
 }
 
-#content{
-  width:100%;
-  #content_body{
-    width:65%;
-  }
-  #content_footer{
-    width:30%;
-  }
+#content_body {
+  width:70%;
 }
 
 #popular_category {
@@ -74,9 +48,3 @@
   }
 }
 
-#content_footer {
-  border:solid 1px #aaa;
-  min-height:30em;
-  width:30%;
-  float:right;
-}

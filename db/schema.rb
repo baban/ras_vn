@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120603145003) do
+ActiveRecord::Schema.define(:version => 20120618145939) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -116,6 +116,13 @@ ActiveRecord::Schema.define(:version => 20120603145003) do
     t.datetime "updated_at",                     :null => false
   end
 
+  create_table "recipe_like_logs", :force => true do |t|
+    t.integer  "recipe_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "recipe_rankings", :force => true do |t|
     t.integer  "recipe_id",  :null => false
     t.datetime "created_at", :null => false
@@ -137,6 +144,7 @@ ActiveRecord::Schema.define(:version => 20120603145003) do
     t.boolean  "public",       :default => false, :null => false
     t.string   "recipe_image"
     t.text     "one_point",                       :null => false
+    t.integer  "like_count",   :default => 0,     :null => false
     t.time     "deleted_at"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
@@ -210,20 +218,37 @@ ActiveRecord::Schema.define(:version => 20120603145003) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "user_profile_visibilities", :force => true do |t|
+    t.integer  "user_profile_id", :default => 1
+    t.boolean  "nickname",        :default => true, :null => false
+    t.boolean  "sex",             :default => true, :null => false
+    t.boolean  "first_name",      :default => true
+    t.boolean  "last_name",       :default => true
+    t.boolean  "blood_type",      :default => true, :null => false
+    t.boolean  "birthday",        :default => true, :null => false
+    t.boolean  "mail_address",    :default => true, :null => false
+    t.boolean  "postcode",        :default => true, :null => false
+    t.boolean  "address",         :default => true, :null => false
+    t.boolean  "address_point",   :default => true, :null => false
+    t.boolean  "comment",         :default => true, :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+  end
+
   create_table "user_profiles", :force => true do |t|
     t.integer  "user_id"
-    t.string   "nickname",      :default => "", :null => false
+    t.string   "nickname",     :default => "", :null => false
     t.integer  "sex"
-    t.string   "first_name",    :default => ""
-    t.string   "last_name",     :default => ""
+    t.string   "first_name",   :default => ""
+    t.string   "last_name",    :default => ""
     t.integer  "blood_type"
     t.datetime "birthday"
     t.string   "mail_address"
-    t.string   "postcode",      :default => "", :null => false
-    t.string   "address",       :default => "", :null => false
-    t.integer  "address_point"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.string   "postcode",     :default => "", :null => false
+    t.string   "address",      :default => "", :null => false
+    t.text     "comment",                      :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "users", :force => true do |t|

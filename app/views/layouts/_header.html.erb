@@ -2,7 +2,8 @@
   <div class="logo">
     ロゴ
   </div>
-  <%= form_for :recipes, url:{ controller:"recipes", action:"index" }, html:{ class:"header_search" } do |f| %>
+  <%= form_for :recipes, url:{ controller:"recipes", action:"index" }, method:"GET", 
+                         html:{ class:"header_search" } do |f| %>
     <%= text_field_tag :word, "" %>
     <%= f.submit "検索" %>
   <% end %>
@@ -28,7 +29,7 @@
     <% end %>
   </dl>
   <ul id="user_menu">
-      <li><%=link_to "mymenu", controller:"mymenu", action:"index" %></li>
+      <li><%=link_to "mymenu", controller:"mypage", action:"index" %></li>
       <li><%=link_to "bookmarks", controller:"bookmarks", action:"index" %></li>
   </ul>
 </div>

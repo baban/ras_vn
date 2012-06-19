@@ -1,4 +1,4 @@
-<div id="recipe_header">
+<div id="header">
   <div class="logo">
     <%= link_to "ロゴ", root_url %>
   </div>
@@ -27,4 +27,8 @@
       </dt>
     <% end %>
   </dl>
+  <ul id="mymenues_bar">
+    <li><%= link_to "mypage", controller:"mypage", action:"index" %></li>
+    <li><%= link_to "bookmarks", controller:"bookmarks", action:"index" %></li>
+  </ul>
 </div>

@@ -1,57 +1,52 @@
 <% include_action_style_sheet %>
 
-<%= render partial:"layouts/header" %>
-
-<div id="content" class="section">
-  <div id="content_footer">
-    <div id="footer_advertisement">
-      <% @advertise = RecipeAdvertisement.choice %>
-      <%=link_to @advertise.name, @advertise.url, title:"hoge" %>
-    </div>
-  </div>
-  <div id="content_body">
-    <div id="popular_recipe_area">
-      <table id="popular_category">
-        <tr>
-          <th>オススメカテゴリ</th>
-         </tr>
-         <tr>
-          <td>アメリカ発チーズ好き必見ビファロニ</td>
-        </tr>
-      </table>
-      <table id="popular_recipe">
-        <tr>
-          <th>人気レシピ</th>
-        </tr>
-        <% @ranking.each do |recipe| %>
-          <tr>
-            <td>
-              <div class="figure">写真</div>
-              <%=link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %><br />
-              by <%= recipe.user.profile.nickname %>
-            </td>
-          </tr>
-        <% end %>
-      </table>
-    </div>
-    <div id="category_recipe_search">
-      <h3>カテゴリからレシピを探す</h3>
-      <div class="section">
-        <% @food_genres.each do |genre| %>
-          <div class="recipe_category">
-            <%=link_to genre.name, controller:"recipes", action:"index", recipe_food_genre_id: genre.id %>
-            <ul class="recipe_sub_category">
-              <% genre.foods.each do |food| %>
-                <li><%=link_to food.name, controller:"recipes", action:"index", recipe_food_id: food.id %></li>
-              <% end %>
-            </ul>
-            <p class="more_link"><%=link_to "more...", controller:"recipe_foods", action:"index", recipe_foog_genre_id: genre.id %></p>
-          </div>
-        <% end %>
-        <p class="more_link"><%=link_to "all genres", controller:"recipe_foods", action:"index" %></p>
-      </div>
-    </div>
+<div id="content_footer">
+  <div id="footer_advertisement">
+    <% @advertise = RecipeAdvertisement.choice %>
+    <%=link_to @advertise.name, @advertise.url, title:"hoge" %>
   </div>
 </div>
 
-<%= render partial:'layouts/footer' %>
+<div id="content_body">
+  <div id="popular_recipe_area">
+    <table id="popular_category">
+      <tr>
+        <th>オススメカテゴリ</th>
+      </tr>
+      <tr>
+        <td>アメリカ発チーズ好き必見ビファロニ</td>
+      </tr>
+    </table>
+    <table id="popular_recipe">
+      <tr>
+        <th>人気レシピ</th>
+      </tr>
+      <% @ranking.each do |recipe| %>
+      <tr>
+        <td>
+          <div class="figure">写真</div>
+          <%=link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %><br />
+          by <%= recipe.user.profile.nickname %>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+  <div id="category_recipe_search">
+    <h3>カテゴリからレシピを探す</h3>
+    <div class="section">
+      <% @food_genres.each do |genre| %>
+      <div class="recipe_category">
+        <%=link_to genre.name, controller:"recipes", action:"index", recipe_food_genre_id: genre.id %>
+        <ul class="recipe_sub_category">
+          <% genre.foods.each do |food| %>
+            <li><%=link_to food.name, controller:"recipes", action:"index", recipe_food_id: food.id %></li>
+          <% end %>
+        </ul>
+        <p class="more_link"><%=link_to "more...", controller:"recipe_foods", action:"index", recipe_foog_genre_id: genre.id %></p>
+      </div>
+      <% end %>
+      <p class="more_link"><%=link_to "all genres", controller:"recipe_foods", action:"index" %></p>
+    </div>
+  </div>
+</div>

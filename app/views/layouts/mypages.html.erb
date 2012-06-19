@@ -1,7 +1,9 @@
 <%= render partial:'layouts/head' %>
 <body>
 
-<%= render partial:"layouts/recipe_header" %>
+<%=render partial:"layouts/recipe_header" %>
+<%=render partial:"layouts/content_menu" %>
+
 
 <div id="content" class="section">
   <% if notice or alert %>
@@ -10,10 +12,13 @@
       <p class="alert"><%= alert %></p>
     </div>
   <% end %>
-  <%= yield %>
-  <div id="content_footer">
-    <%=link_to @advertisement.name, @advertisement.url %>
+  <div id="nav" class="nav">
+    <dl>
+      <dt><%=link_to "プロフィール", action:"index" %></dt>
+      <dt><%=link_to "レシピ", action:"recipes" %></dt>
+    </dl>
   </div>
+  <%= yield %>
 </div>
 
 <%= render partial:"layouts/footer" %>

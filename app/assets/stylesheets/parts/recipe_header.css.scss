@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#recipe_header {
+#header {
   border:none 2px #aaa;
   border-bottom-style:solid;
   margin-bottom:0.5em;
@@ -11,16 +11,17 @@
     float:left;
     clear:none;
   }
-  .header_search {
-    width:auto;
+  form.header_search {
+    width:15em;
     float:left;
     clear:none;
     border-style:none;
+    input[type="text"] { width:10em; }
   }
   dl#login_area {
-    min-width:25em;
+    float:left;
+    width:18em;
     position:relative;
-    float:right;
     dt {
       border:solid 1px #aaa;
     }
@@ -30,7 +31,6 @@
       background-color:white;
       border:solid 1px #aaa;
       z-index:+2;
-
       opacity:0;
       -webkit-transition: all 1s ease;
       -moz-transition: all 1s ease;
@@ -44,12 +44,18 @@
   dl#login_area:hover {
     dd{
       display:block;
-      opacity:0.5;
+      opacity:0.8;
     }
   }
 }
-#recipe_header:after {
+#header:after {
   content:"";
   display:block;
   clear:both;
+}
+
+#mymenues_bar {
+  float:right;
+  li {
+  }
 }

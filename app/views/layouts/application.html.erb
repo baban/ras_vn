@@ -1,10 +1,20 @@
 <%= render partial:'layouts/head' %>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<%=render partial:"layouts/recipe_header" %>
+<%=render partial:"layouts/content_menu" %>
 
-<%= yield %>
+<div id="content" class="section">
+  <% if notice or alert %>
+    <div>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+  <% end %>
+  <%= yield %>
+</div>
+
+<%= render partial:"layouts/footer" %>
 
 </body>
 </html>

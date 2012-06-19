@@ -1,0 +1,28 @@
+  <div id='content_body'>
+    <h1>Profile</h1>
+    <table>
+      <tr>
+        <td>ニックネーム</td>
+      <td colspan="2"><%= @profile.nickname %></td>
+      </tr>
+      <tr>
+        <td>メールアドレス</td>
+        <td colspan="2"><%= @profile.mail_address %></td>
+      </tr>
+      <tr>
+        <td>性別</td>
+        <td colspan="2"><%=translate_sex( @profile.sex ) %></td>
+      </tr>
+      <tr>
+        <td>生年月日</td>
+        <td colspan="2"><%= @profile.birthday %></td>
+      </tr>
+      <tr>
+        <td>自己紹介</td>
+        <td colspan="2"><%= @profile.comment %></td>
+      </tr>
+      <tr>
+        <td colspan="3"><%=link_to "編集", controller:"profiles", action:"edit" %></td>
+      </tr>
+    </table>
+  </div>

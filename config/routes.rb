@@ -9,14 +9,13 @@ RasVn::Application.routes.draw do
 
   get "recipe_steps/update"
 
+  resource(:mypage){ member { get :index } }
   resource :profile
 
   resources :bookmarks
   resources :information
   resources :recipes
   resources :restaurants
-
-  get "mypage/index"
 
   root to:"top#index"
 

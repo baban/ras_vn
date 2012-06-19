@@ -1,0 +1,41 @@
+<h1>Profile</h1>
+
+<%= semantic_form_for @profile, url:{ action:'update' } do |f| %>
+  <table>
+    <tr>
+      <td><%=f.label :nickname, "ニックネーム" %></td>
+      <td colspan="2"><%=f.text_field :nickname, value: @profile.nickname %></td>
+      <td>
+        <%=visibility_radios( @visibility, :nickname )%>
+      </td>
+    </tr>
+    <tr>
+      <th>お住まい</th>
+      <td colspan="2"><%=f.text_field :address, value: @profile.address %></td>
+      <td><%= visibility_radios( @visibility, :address ) %></td>
+    </tr>
+    <tr>
+      <th>誕生日</th>
+      <td colspan="2"><%= f.text_field :birthday, value:@profile.birthday %></td>
+      <td><%= visibility_radios( @visibility, :birthday ) %></td>
+    </tr>
+    <tr>
+      <td>メールアドレス</td>
+      <td colspan="2"><%= f.text_field :mail_address, value: @profile.mail_address %></td>
+      <td><%= visibility_radios( @visibility, :mail_address ) %></td>
+    </tr>
+    <tr>
+      <td><%=f.label :sex, "性別" %></td>
+      <td colspan="2"><%= select_sex( f, @profile.sex ) %></td>
+      <td><%= visibility_radios( @visibility, :sex ) %></td>
+    </tr>
+    <tr>
+      <td><%=f.label :comment, "自己紹介" %></td>
+      <td colspan="2"><%= f.text_field :comment, value: @profile.comment %></td>
+      <td><%= visibility_radios( @visibility, :comment ) %></td>
+    </tr>
+    <tr>
+      <td colspan="4"><%=f.submit "保存" %></td>
+    </tr>
+  </table>
+<% end %>
