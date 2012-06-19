@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+div.recipe {
+  border:solid 1px #aaa;
+  width:10em;
+  height:15em;
+  float:left;
+  clear:none;
+  div.recipe_photo {
+    border:solid 1px #aaa;
+    height:5em;
+    margin:0.3em;  
+  }
+}

@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import "parts/recipe_list.css";
+
 @mixin break_block{
   content:"";
   display:block;
@@ -25,7 +27,7 @@
 
 #content_body{
   margin-left:17em;
-  width:30em;
+  width:45em;
 }
 
 .tile {
