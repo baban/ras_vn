@@ -35,9 +35,9 @@
 
       <div id="recipes_steps_area" class="area">
         <dl id="recipe_steps">
-          <% @recipe.edit_steps.each_with_index do |step,i| %>
+          <% @recipe.edit_steps.each.with_index(1) do |step,i| %>
             <dl class="step">
-              <dt>Step <%= i + 1 %></dt>
+              <dt>Step <%= i %></dt>
               <dd><%= text_area_tag "steps[]", step.context, class:'step_edit_area' %></dd>
             </dl>
           <% end %>

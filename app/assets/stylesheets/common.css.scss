@@ -5,6 +5,18 @@
 
 @import "parts/recipe_header.css";
 @import "parts/content_menu.css";
+@import "parts/footer.css";
+
+#content_footer {
+  width:200px;
+  border:solid 1px #aaa;
+  min-height:30em;
+  float:right;
+}
+
+#content_body {
+  margin-right:200px;
+}
 
 body{
   margin:0;

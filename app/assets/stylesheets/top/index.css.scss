@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+#content_footer {
+  width:30%;
+}
+
+#content_body {
+  width:70%;
+}
 
 #popular_category {
   width:47%;
@@ -41,9 +48,3 @@
   }
 }
 
-#content_footer {
-  border:solid 1px #aaa;
-  min-height:30em;
-  width:30%;
-  float:right;
-}
