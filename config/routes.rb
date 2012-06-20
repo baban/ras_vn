@@ -1,21 +1,14 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
-  get "recipe_comments/create"
-
-  get "recipe_advertisement/image"
-
-  get "recipe_foods/index"
-
-  get "recipe_steps/update"
-
-  resource(:mypage){ member { get :index } }
+  resource(:mypage){ member { get :index, :recipes } }
   resource :profile
 
   resources :bookmarks
   resources :information
   resources :recipes
   resources :restaurants
+  #resources :users
 
   root to:"top#index"
 

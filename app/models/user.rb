@@ -12,6 +12,22 @@ class User < ActiveRecord::Base
   has_one :user_profile
   alias :profile :user_profile
 
+  accepts_nested_attributes_for :user_profile
+  attr_accessible :user_profile, :user_profile_attributes
+
+  has_many :recipes
+  has_many :bookmarks
+
   belongs_to :recipe
+
+  def initialize(*args)
+    super(*args)
+    self.user_profile = UserProfile.new
+  end
+
+  # ブックマークされたレシピを返す
+  def bookmarked_recipes
+    self.bookmarks.pluck(:recipe_id).do{ |ids| Recipe.where( " id in (?) ", ids ) }
+  end
 
 end

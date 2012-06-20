@@ -9,7 +9,7 @@
   <% @recipes.each do |recipe| %>
     <div class="recipe">
       <div class="figure recipe_photo">
-        画像
+        <%=image_tag recipe.recipe_image.url(:thumb), alt:"image" %>
       </div>
       <%= link_to recipe.title, action:'show', id: recipe.id %>
       <p><%= recipe.description %></p>

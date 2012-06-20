@@ -1,6 +1,7 @@
 
 @import "recipe/header.css";
 @import "content_menu.css";
+@import "parts/recipe_list.css";
 
 #content_body{
   width:75%;
@@ -11,19 +12,6 @@
 }
 
 /* index */
-div.recipe {
-  border:solid 1px #aaa;
-  width:15em;
-  height:15em;
-  float:left;
-  clear:none;
-  div.recipe_photo {
-    border:solid 1px #aaa;
-    height:5em;
-    margin:0.3em;  
-  }
-}
-
 ul#recipe_comments {
   li {
     min-height:3em;
@@ -58,12 +46,13 @@ ul#recipe_comments {
 }
 
 #recipe_steps {
+  margin:0;
+  padding:0;
   dl.step{
-    width:20%;
+    width:80%;
     height:10em;
     border:solid 1px #aaa;
-    float:left;
-    clear:none;
+    margin:0 auto;
   }
 }
 #recipe_steps:after {
@@ -96,7 +85,6 @@ ul#recipe_comments {
 
 #foodstuffs_area {
   width:43em;
-  border:solid 1px #aaa;
   display:block;
   clear:none;
   table#foodstuffs {

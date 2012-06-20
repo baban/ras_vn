@@ -1,22 +1,21 @@
-<%= render partial:"layouts/header" %>
 
 <div id="content">
   <h2>bookmark</h2>
   <div id="content_body">
-    <ul id="search_list">
+    <div class="paginate">
+      <%=paginate @recipes %>
+    </div>
+    <div id="recipes">
       <% @recipes.each do |recipe| %>
-        <li>
-          <div class="figure">photo</div>
-          <h3><%= recipe.title %></h3>
-          <div class="comment">
-            <%= recipe.description %>
+        <div class="recipe">
+          <div class="figure recipe_photo">
+            <%=image_tag recipe.recipe_image.url(:thumb), alt:"image" %>
           </div>
-        </li>
+          <%= link_to recipe.title, action:'show', id: recipe.id %>
+          <p><%= recipe.description %></p>
+        </div>
       <% end %>
-    </ul>
+    </div>
   </div>
   <div class='nav' id='nav'></div>
 </div>
-
-<%= render partial:"layouts/footer" %>
-

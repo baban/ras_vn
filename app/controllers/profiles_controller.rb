@@ -22,7 +22,8 @@ class ProfilesController < ApplicationController
 
     return render(action:'edit') if @profile.valid?.! or @visibility.valid?.!
 
-    @profile.save
+    @profile.save!
+    @visibility.save!
 
     # redirect_to action:'show'
     redirect_to controller:"mypage", action:"index"

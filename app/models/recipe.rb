@@ -3,11 +3,13 @@
 class Recipe < ActiveRecord::Base
   acts_as_paranoid
 
-  belongs_to :recipe_ranking
-
+  has_many :bookmarks
   has_many :recipe_foodstuffs
   has_many :recipe_steps
   has_many :recipe_comments
+
+  belongs_to :recipe_ranking
+  belongs_to :users
 
   accepts_nested_attributes_for :recipe_steps # use formastic plug-in
 
@@ -16,6 +18,8 @@ class Recipe < ActiveRecord::Base
   alias :foodstuffs :recipe_foodstuffs
   alias :steps :recipe_steps
   alias :comments :recipe_comments
+
+  paginates_per 12
 
   def user
     User.find(self.user_id)
