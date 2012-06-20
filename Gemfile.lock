@@ -87,7 +87,7 @@ GEM
       i18n (~> 0.4)
     faker-japanese (0.0.1)
     ffi (1.0.11)
-    flextures (1.9.12)
+    flextures (1.9.13)
     formtastic (2.1.0)
       actionpack (~> 3.0)
     highline (1.6.12)
@@ -277,7 +277,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   faker-japanese
-  flextures (= 1.9.12)
+  flextures (= 1.9.13)
   formtastic (= 2.1.0)
   i18n_generators (= 1.2.1)
   ipaddress (= 0.8.0)
