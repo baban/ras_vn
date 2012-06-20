@@ -14,8 +14,12 @@ class User < ActiveRecord::Base
 
   has_many :recipes
   has_many :bookmarks
-  has_many :bookmarked_recipes, class_name:'Recipe', through:"Bookmark"
 
   belongs_to :recipe
+
+  # ブックマークされたレシピを返す
+  def bookmarked_recipes
+    self.bookmarks.pluck(:recipe_id).do{ |ids| Recipe.where( " id in (?) ", ids ) }
+  end
 
 end

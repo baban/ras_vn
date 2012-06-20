@@ -4,7 +4,7 @@ class BookmarksController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @recipes = current_user.bookmarks.page(params[:page] || 1)
+    @recipes = current_user.bookmarked_recipes.page(params[:page] || 1).per(12)
   end
 
   def create

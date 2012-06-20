@@ -2,6 +2,9 @@
 <div id="content">
   <h2>bookmark</h2>
   <div id="content_body">
+    <div class="paginate">
+      <%=paginate @recipes %>
+    </div>
     <div id="recipes">
       <% @recipes.each do |recipe| %>
         <div class="recipe">

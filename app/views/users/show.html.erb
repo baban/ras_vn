@@ -1,2 +1,28 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>ユーザー情報</h1>
+
+  <table>
+    <% if @visibility.mail_address %>
+      <tr>
+        <td>ニックネーム</td>
+        <td colspan="2"><%= @profile.nickname %></td>
+      </tr>
+    <% end %>
+    <% if @visibility.mail_address %>
+      <tr>
+        <td>メールアドレス</td>
+        <td colspan="2"><%= @profile.mail_address %></td>
+      </tr>
+    <% end %>
+    <% if @visibility.sex %>
+      <tr>
+        <td>性別</td>
+        <td colspan="2"><%=translate_sex( @profile.sex ) %></td>
+      </tr>
+    <% end %>
+    <% if @visibility.birthday %>
+      <tr>
+        <td>生年月日</td>
+        <td colspan="2"><%= @profile.birthday %></td>
+      </tr>
+    <% end %>
+  </table>

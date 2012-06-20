@@ -1,10 +1,6 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
-  get "users/index"
-
-  get "users/show"
-
   resource(:mypage){ member { get :index, :recipes } }
   resource :profile
 
@@ -12,6 +8,7 @@ RasVn::Application.routes.draw do
   resources :information
   resources :recipes
   resources :restaurants
+  resources :users
 
   root to:"top#index"
 
