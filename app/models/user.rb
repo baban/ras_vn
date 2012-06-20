@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   alias :profile :user_profile
 
   has_many :recipes
+  has_many :bookmarks
 
   belongs_to :recipe
 

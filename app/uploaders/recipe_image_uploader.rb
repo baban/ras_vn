@@ -35,10 +35,9 @@ class RecipeImageUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-
-  process resize_to_fill: [200, 200]
+  # process resize_to_fill: [200, 200]
   version :thumb do
-    process resize_to_fill: [100,100]
+    process resize_to_fill: [140,50]
   end
   # Create different versions of your uploaded files:
   # version :thumb do
