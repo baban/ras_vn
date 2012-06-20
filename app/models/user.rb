@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
 
   has_many :recipes
   has_many :bookmarks
+  has_many :bookmarked_recipes, class_name:'Recipe', through:"Bookmark"
 
   belongs_to :recipe
 
