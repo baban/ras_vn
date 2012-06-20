@@ -1,6 +1,8 @@
 # encoding: utf-8
 
-class UsersController < ApplicationController
+#class UsersController < Devise::RegistrationsController
+#class UsersController < ApplicationController
+class UsersController < DeviseController
   def index
   end
 

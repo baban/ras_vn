@@ -1,6 +1,6 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div><%= f.label :email %><br />
@@ -12,7 +12,23 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+  <%= f.semantic_fields_for :user_profile do |profile| %>
+    <div>
+      <%= profile.label :nickname %><br />
+      <%= profile.text_field :nickname %>
+    </div>
+    <div>
+      <%= profile.label :birthday %><br />
+      <%= profile.text_field :birthday %>
+    </div>
+    <div>
+      <%= profile.label :sex %><br />
+      <%= profile.text_field :sex %>
+    </div>
+  <% end %>
+
+
+  <div><%= f.submit "登録" %></div>
 <% end %>
 
 <%= render "links" %>

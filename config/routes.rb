@@ -8,7 +8,7 @@ RasVn::Application.routes.draw do
   resources :information
   resources :recipes
   resources :restaurants
-  resources :users
+  #resources :users
 
   root to:"top#index"
 
