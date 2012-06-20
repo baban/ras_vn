@@ -3,7 +3,9 @@
 <div id="content_footer">
   <div id="footer_advertisement">
     <% @advertise = RecipeAdvertisement.choice %>
-    <%=link_to @advertise.name, @advertise.url, title:"hoge" %>
+    <% if @advertise %>
+      <%=link_to @advertise.name, @advertise.url, title:"hoge" %>
+    <% end %>
   </div>
 </div>
 
