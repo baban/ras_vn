@@ -11,3 +11,4 @@ class UserProfile < ActiveRecord::Base
     self.user_profile_visibility= UserProfileVisibility.new
   end
 end
+
