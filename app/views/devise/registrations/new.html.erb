@@ -15,7 +15,7 @@
     <ul>
       <%= profile.input :nickname %>
       <%= profile.input :birthday %>
-      <%= profile.input :sex, :as=>:radio, collection:[:male,:female] %>
+      <%= profile.input :sex, :as=>:radio, collection:{male: 1,female: 2} %>
     </ul>
   <% end %>
 

@@ -64,14 +64,6 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
     t.datetime "updated_at",                    :null => false
   end
 
-  create_table "newsfeeds", :force => true do |t|
-    t.string   "title",      :default => "",    :null => false
-    t.text     "content"
-    t.boolean  "public",     :default => false, :null => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-  end
-
   create_table "prefectures", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -264,10 +256,6 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
-    t.integer  "uid"
-    t.string   "screen_name"
-    t.string   "access_token"
-    t.string   "access_secret"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -3,6 +3,11 @@
 <%= semantic_form_for @profile, url:{ action:'update' } do |f| %>
   <table>
     <tr>
+      <td>ユーザーID</td>
+      <td colspan="2"><%= @profile.id %></td>
+      <td></td>
+    </tr>
+    <tr>
       <td><%=f.label :nickname, "ニックネーム" %></td>
       <td colspan="2"><%=f.text_field :nickname, value: @profile.nickname %></td>
       <td>

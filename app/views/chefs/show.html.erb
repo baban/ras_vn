@@ -1,6 +1,10 @@
 <h1>ユーザー情報</h1>
 
   <table>
+    <tr>
+      <td>ユーザーID</td>
+      <td colspan="2"><%= @profile.id %></td>
+    </tr>
     <% if @visibility.mail_address %>
       <tr>
         <td>ニックネーム</td>
