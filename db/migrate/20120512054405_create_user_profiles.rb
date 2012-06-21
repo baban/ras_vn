@@ -9,7 +9,7 @@ class CreateUserProfiles < ActiveRecord::Migration
       t.string   :first_name,    nulL: true,  default:""
       t.string   :last_name,     nulL: true,  default:""
       t.integer  :blood_type,    null: true
-      t.datetime :birthday,      null: true
+      t.date     :birthday,      null: true
       t.string   :mail_address,  null: true
       t.string   :postcode,      null: false, default: ''
       t.string   :address,       null: false, default: ''

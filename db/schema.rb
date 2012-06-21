@@ -242,7 +242,7 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
     t.string   "first_name",   :default => ""
     t.string   "last_name",    :default => ""
     t.integer  "blood_type"
-    t.datetime "birthday"
+    t.date     "birthday"
     t.string   "mail_address"
     t.string   "postcode",     :default => "", :null => false
     t.string   "address",      :default => "", :null => false
