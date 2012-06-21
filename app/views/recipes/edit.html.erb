@@ -2,7 +2,7 @@
 
 <h2>recipe</h2>
 <div id="content_body" class="section">
-  <%=semantic_form_for @recipe do |f| %>
+  <%=semantic_form_for @recipe, html:{multipart: true} do |f| %>
     <h2><%= f.text_field :title, value: @recipe.title %></h2>
     <div id="recipe_base_info">
       <div class="section" id="recipe_body">
@@ -38,7 +38,10 @@
           <% @recipe.edit_steps.each.with_index(1) do |step,i| %>
             <dl class="step">
               <dt>Step <%= i %></dt>
-              <dd><%= text_area_tag "steps[]", step.context, class:'step_edit_area' %></dd>
+              <dt><%= file_field_tag "recipe_steps[][image]" %></dt>
+              <dd>
+                <%= text_area_tag "recipe_steps[][content]", step.content, class:'step_edit_area' %>
+              </dd>
             </dl>
           <% end %>
         </dl>

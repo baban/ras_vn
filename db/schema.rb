@@ -80,7 +80,8 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
   create_table "recipe_comments", :force => true do |t|
     t.integer  "recipe_id",  :null => false
     t.integer  "user_id",    :null => false
-    t.text     "content"
+    t.text     "content",    :null => false
+    t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -123,7 +124,8 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
 
   create_table "recipe_steps", :force => true do |t|
     t.integer  "recipe_id",                  :null => false
-    t.string   "context",    :default => "", :null => false
+    t.string   "image"
+    t.string   "content",    :default => "", :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
@@ -256,6 +258,10 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.integer  "uid"
+    t.string   "screen_name"
+    t.string   "access_token"
+    t.string   "access_secret"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
