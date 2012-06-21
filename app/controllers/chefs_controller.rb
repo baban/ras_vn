@@ -5,5 +5,6 @@ class ChefsController < ApplicationController
     @user = User.find(params[:id])
     @profile = @user.profile
     @visibility = @profile.visibility
+    @recipes = @user.recipes
   end
 end
