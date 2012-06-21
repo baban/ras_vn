@@ -1,2 +1,23 @@
 @charset "UTF-8";
 
+form {
+  label {
+    display:block;
+  }
+  li.date > fieldset {
+    ol {
+      label{ display:inline; }
+      list-style-type:none;
+      li{
+        display:inline;
+      }
+    }
+  }
+  li.radio > fieldset {
+    ol {
+      label{ display:inline; }
+      list-style-type:none;
+      li{ display:inline; }
+    }
+  }
+}
