@@ -9,6 +9,7 @@ RasVn::Application.routes.draw do
   resources :bookmarks
   resources :information
   resources :recipes
+  resources :recipe_comments
   resources :restaurants
   resources :chefs
 

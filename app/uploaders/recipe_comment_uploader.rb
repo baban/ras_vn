@@ -2,7 +2,7 @@
 
 class RecipeCommentUploader < BaseUploader
   version :thumb do
-    process scale:[150, 150]
+    process :resize_to_limit => [200, 200]  
   end
 end
 
