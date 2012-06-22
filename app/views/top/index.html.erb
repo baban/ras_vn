@@ -26,9 +26,9 @@
       <% @ranking.each do |recipe| %>
       <tr>
         <td>
-          <div class="figure">写真</div>
+          <div class="figure"><%=image_tag recipe.image.url(:thumb) %></div>
           <%=link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %><br />
-          by <%= recipe.user.profile.nickname %>
+          by <%=link_to recipe.user.profile.nickname, chef_url(recipe.user) %>
         </td>
       </tr>
       <% end %>

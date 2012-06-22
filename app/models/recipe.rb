@@ -19,11 +19,14 @@ class Recipe < ActiveRecord::Base
   alias :steps :recipe_steps
   alias :comments :recipe_comments
 
+  alias :image :recipe_image
+
   paginates_per 12
 
   def user
     User.find(self.user_id)
   end
+  alias :chef :user
 
   # this method generate steps for edit action
   def edit_steps
