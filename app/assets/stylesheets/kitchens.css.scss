@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+ul.recipes {
+  li.recipe {
+    border:solid 1px #aaa;
+    dl.recipe{
+      margin:0;
+      padding:0;
+    }  
+  }
+}
+
+h3.foodstuffs_title{
+  font-size:1em;
+  font-weight:normal;
+  width:3em;
+  display:inline;
+}
+
+ul.foodstuffs {
+  display:inline;
+  li { display:inline; }
+}
+
+ul.recipe_status {
+  li { display:inline; }
+}

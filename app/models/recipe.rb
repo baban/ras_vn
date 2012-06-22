@@ -2,6 +2,7 @@
 
 class Recipe < ActiveRecord::Base
   acts_as_paranoid
+  paginates_per 12
 
   has_many :bookmarks
   has_many :recipe_foodstuffs
@@ -18,10 +19,10 @@ class Recipe < ActiveRecord::Base
   alias :foodstuffs :recipe_foodstuffs
   alias :steps :recipe_steps
   alias :comments :recipe_comments
-
   alias :image :recipe_image
 
-  paginates_per 12
+  scope :visibles, ->{ where(" public = true ") }
+  scope :topics, -> { visibles.page(1).per(2) }
 
   def user
     User.find(self.user_id)

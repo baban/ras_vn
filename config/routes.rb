@@ -11,7 +11,7 @@ RasVn::Application.routes.draw do
   resources :recipes
   resources :recipe_comments
   resources :restaurants
-  resources :chefs
+  resources(:kitchens) { member { get :recipes } }
 
   root to:"top#index"
 
