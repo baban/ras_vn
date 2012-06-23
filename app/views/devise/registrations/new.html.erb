@@ -1,34 +1,25 @@
 <h2>Sign up</h2>
 
 <%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <h2>Nhahang24レシピのID情報</h2>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+  <ul>
+    <%=f.input :email %>
+    <%=f.input :password %>
+    <%=f.input :password_confirmation %>
+  </ul>
 
   <%= f.semantic_fields_for :user_profile do |profile| %>
-    <div>
-      <%= profile.label :nickname %><br />
-      <%= profile.text_field :nickname %>
-    </div>
-    <div>
-      <%= profile.label :birthday %><br />
-      <%= profile.text_field :birthday %>
-    </div>
-    <div>
-      <%= profile.label :sex %><br />
-      <%= profile.text_field :sex %>
-    </div>
+    <h3>個人情報</h3>
+    <ul>
+      <%= profile.input :nickname %>
+      <%= profile.input :birthday %>
+      <%= profile.input :sex, :as=>:radio, collection:{male: 1,female: 2} %>
+    </ul>
   <% end %>
 
-
-  <div><%= f.submit "登録" %></div>
+  <div><%= f.submit %></div>
 <% end %>
 
 <%= render "links" %>

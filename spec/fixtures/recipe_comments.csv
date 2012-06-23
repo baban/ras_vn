@@ -1,3 +1,4 @@
-id,recipe_id,user_id,comment,created_at,updated_at
-1,1,2,good job!,2012-05-27 10:57:09 UTC,2012-05-27 10:57:09 UTC
-2,1,3,good job!!,2012-05-27 10:57:15 UTC,2012-05-27 10:57:15 UTC
+id,recipe_id,user_id,content,image,created_at,updated_at
+1,1,1,ほくほくになりました,15a5c71bd04dc8b99eaec3ece3ecc936.jpg,2012-06-23 04:04:54 UTC,2012-06-23 04:04:54 UTC
+2,1,1,ほくほくになりました,15a5c71bd04dc8b99eaec3ece3ecc936.jpg,2012-06-23 04:04:54 UTC,2012-06-23 04:04:54 UTC
+3,1,1,ほくほくになりました,15a5c71bd04dc8b99eaec3ece3ecc936.jpg,2012-06-23 04:04:54 UTC,2012-06-23 04:04:54 UTC

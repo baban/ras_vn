@@ -2,6 +2,7 @@
 
 class Recipe < ActiveRecord::Base
   acts_as_paranoid
+  paginates_per 12
 
   has_many :bookmarks
   has_many :recipe_foodstuffs
@@ -18,12 +19,15 @@ class Recipe < ActiveRecord::Base
   alias :foodstuffs :recipe_foodstuffs
   alias :steps :recipe_steps
   alias :comments :recipe_comments
+  alias :image :recipe_image
 
-  paginates_per 12
+  scope :visibles, ->{ where(" public = true ") }
+  scope :topics, -> { visibles.page(1).per(2) }
 
   def user
     User.find(self.user_id)
   end
+  alias :chef :user
 
   # this method generate steps for edit action
   def edit_steps
@@ -38,6 +42,15 @@ class Recipe < ActiveRecord::Base
     foodstuffs = recipe_foodstuffs.to_a
     (4 - foodstuffs.size).times{ foodstuffs<< RecipeFoodstuff.new } if foodstuffs.size < 4
     foodstuffs
+  end
+
+  # this method is executed when [like] button cliked
+  def self.like( id, user )
+    recipe = self.find(id)
+    recipe.like_count += 1
+    recipe.save
+
+    RecipeLikeLog.create( recipe_id: id, user_id: user.id )
   end
 
 end

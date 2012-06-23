@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120618145939) do
+ActiveRecord::Schema.define(:version => 20120623095731) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -64,14 +64,6 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
     t.datetime "updated_at",                    :null => false
   end
 
-  create_table "newsfeeds", :force => true do |t|
-    t.string   "title",      :default => "",    :null => false
-    t.text     "content"
-    t.boolean  "public",     :default => false, :null => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-  end
-
   create_table "prefectures", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -88,7 +80,8 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
   create_table "recipe_comments", :force => true do |t|
     t.integer  "recipe_id",  :null => false
     t.integer  "user_id",    :null => false
-    t.text     "content"
+    t.text     "content",    :null => false
+    t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -116,6 +109,13 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
     t.datetime "updated_at",                     :null => false
   end
 
+  create_table "recipe_good_logs", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "recipe_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "recipe_like_logs", :force => true do |t|
     t.integer  "recipe_id"
     t.integer  "user_id"
@@ -131,7 +131,8 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
 
   create_table "recipe_steps", :force => true do |t|
     t.integer  "recipe_id",                  :null => false
-    t.string   "context",    :default => "", :null => false
+    t.string   "image"
+    t.string   "content",    :default => "", :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
@@ -237,12 +238,13 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
 
   create_table "user_profiles", :force => true do |t|
     t.integer  "user_id"
+    t.string   "image"
     t.string   "nickname",     :default => "", :null => false
     t.integer  "sex"
     t.string   "first_name",   :default => ""
     t.string   "last_name",    :default => ""
     t.integer  "blood_type"
-    t.datetime "birthday"
+    t.date     "birthday"
     t.string   "mail_address"
     t.string   "postcode",     :default => "", :null => false
     t.string   "address",      :default => "", :null => false

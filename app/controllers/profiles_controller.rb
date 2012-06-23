@@ -29,3 +29,4 @@ class ProfilesController < ApplicationController
     redirect_to controller:"mypage", action:"index"
   end
 end
+

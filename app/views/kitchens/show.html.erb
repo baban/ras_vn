@@ -1,0 +1,76 @@
+<h2><%= @profile.nickname %>のキッチン</h2>
+
+<%= render partial:"content_header" %> 
+
+<table id="profile_image">
+  <tr>
+    <td>
+      <div>
+        <%= profile_image_tag(@profile) %>
+      </div>
+    </td>
+  </tr>
+  <tr><td><%= @profile.nickname %></td></tr>
+</table>
+
+<table>
+  <tr>
+    <td>ユーザーID</td>
+    <td><%= @profile.id %></td>
+  </tr>
+  <% if @visibility.mail_address %>
+    <tr>
+      <td>ニックネーム</td>
+      <td><%= @profile.nickname %></td>
+    </tr>
+  <% end %>
+  <% if @visibility.mail_address %>
+    <tr>
+      <td>メールアドレス</td>
+      <td><%= @profile.mail_address %></td>
+    </tr>
+  <% end %>
+  <% if @visibility.sex %>
+    <tr>
+      <td>性別</td>
+      <td><%=translate_sex( @profile.sex ) %></td>
+    </tr>
+  <% end %>
+  <% if @visibility.birthday %>
+    <tr>
+      <td>生年月日</td>
+      <td><%= @profile.birthday %></td>
+    </tr>
+  <% end %>
+  <% if @visibility.comment %>
+    <tr>
+      <td>コメント</td>
+      <td><%= @profile.comment %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>最新レシピ</h2>
+<ul class="recipes">
+  <% @recipes.each do |recipe| %>
+    <li class="recipe">
+      <dl class="recipe">
+        <dt><%=link_to recipe.title, recipes_url(recipe) %></dt>
+        <dd>
+          <p><%= truncate(recipe.description) %></p>
+          <h3 class="foodstuffs_title">材料</h3>
+          <ul class="foodstuffs">
+            <% recipe.foodstuffs.each do |food| %>
+              <li><%= food.name %></li>
+            <% end %>
+          </ul>
+          <ul class="recipe_status">
+            <li>作成:<%= recipe.created_at.strftime("%Y/%m/%d") %></li>
+            <li>公開:<%= recipe.updated_at.strftime("%Y/%m/%d") %></li>
+            <li>レシピID:<%= recipe.id %></li>
+          </ul>
+        </dd>
+      </dl>
+    </li>
+  <% end %>
+</ul>

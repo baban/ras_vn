@@ -1,0 +1,18 @@
+<h2><%= @profile.nickname %>のキッチン</h2>
+
+<%= render partial:"content_header" %> 
+
+<h2>つくれぽ</h2>
+<%= paginate @recipe_comments %>
+<ul class="recipe_comments">
+  <% @recipe_comments.each do |comment| %>
+    <li class="recipe_comment">
+      <dl class="recipe_comment">
+        <dt><%=image_tag comment.image, alt:"" %></dt>
+        <dd>
+          <p><%= truncate(comment.content) %></p>
+        </dd>
+      </dl>
+    </li>
+  <% end %>
+</ul>

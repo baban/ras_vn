@@ -4,8 +4,11 @@
     <div id="recipe_base_info">
       <div id="recipe_photo" class="figure">
         <%#=image_tag url_for(action:"image", id: @recipe.id) %>
-        <%=image_tag @recipe.recipe_image.url %>
+        <%=image_tag @recipe.recipe_image.url(:large_thumb) %>
       </div>
+      <%=form_for @recipe, url:{ action:"like", id: params[:id] }, method:"GET" do |f| %>
+        <%=f.submit "like!" %>
+      <% end %>
       <div id="description">
         <%= @recipe.description %>
       </div>
@@ -19,8 +22,8 @@
     <dl id="recipe_steps">
       <% @recipe.steps.each.with_index(1) do |step,i| %>
         <dl class="step">
-          <dt><%= i %></dt>
-          <dd><%= step.context %></dd>
+          <dt>Step<%= i %></dt>
+          <dd><%= step.content %></dd>
         </dl>
       <% end %>
     </dl>
@@ -28,18 +31,22 @@
     <div class="section"><%= @recipe.one_point %></div>
     <div id="recipe_comment_area" class="area">
       <h3>Comments</h3>
-      <%=form_for :recipe_comments, url:{ controller:"recipe_comments", action:"create" } do |f| %>
+      <%=form_for @recipe_comment do |f| %>
         <%=f.hidden_field :recipe_id, value: @recipe.id %>
+        <%=f.file_field :image, value: "" %>
         <%=f.text_area :content, size:"50x4", value: "" %>
         <p><%=f.submit "post" %></p>
       <% end %>
-      <ul id="recipe_comments" class="area">
+      <dl id="recipe_comments" class="area">
         <% @recipe.comments.each do |comment| %>
-          <li class="recipe_comment">
-            <p><%= comment.content %></p>
-          </li>
+          <dd>
+            <dl class="recipe_comment">
+              <dt><%=image_tag comment.image.url(:thumb), alst:"" %></dt>
+              <dd><%= comment.content %></dd>
+            </dl>
+          </dd>
         <% end %>
-      </ul>
+      </dl>
     </div>
   </div>
 </div>

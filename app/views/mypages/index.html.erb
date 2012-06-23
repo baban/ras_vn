@@ -2,6 +2,11 @@
     <h1>Profile</h1>
     <table>
       <tr>
+        <td>ユーザーID</td>
+        <td colspan="2"><%= @profile.id %></td>
+        <td></td>
+      </tr>
+      <tr>
         <td>ニックネーム</td>
         <td colspan="2"><%= @profile.nickname %></td>
         <td><%= @visibility.nickname ? "公開" : "非公開" %></td>

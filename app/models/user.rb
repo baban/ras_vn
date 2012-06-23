@@ -17,12 +17,21 @@ class User < ActiveRecord::Base
 
   has_many :recipes
   has_many :bookmarks
+  has_many :recipe_comments
 
   belongs_to :recipe
 
   def initialize(*args)
     super(*args)
-    self.user_profile = UserProfile.new
+    self.user_profile = create_profile(args.last)
+  end
+
+  def create_profile(h)
+    h = {} unless h.is_a?(Hash)
+    profile = UserProfile.new(h[:user_profile_attributes])
+    profile.mail_address=h[:email]
+    
+    profile
   end
 
   # ブックマークされたレシピを返す

@@ -61,6 +61,31 @@ ul#recipe_comments {
   clear:both;  
 }
 
+dl#recipe_comments > dd {
+  border:solid 1px #aaa;
+  width:10em;
+  heigth:15em;
+  margin:0 0.4em;
+  padding:0;
+  float:left;
+  clear:none;
+  dl.recipe_comment {
+    dt{
+      margin:0;
+      padding:0;  
+    }
+    margin:0;
+    padding:0;
+  }
+}
+
+dl#recipe_comments:after {
+  content:"";
+  display:block;
+  width:100%;
+  clear:both;
+}
+
 /* new */
 
 #recipe_description {
