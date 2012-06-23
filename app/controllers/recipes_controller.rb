@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class RecipesController < ApplicationController
-  before_filter :authenticate_user!,   except:[:index,:show,:image]
+  before_filter :authenticate_user!,   except:[:index,:show]
   #before_filter :editable_user_filter, only:[:edit,:update,:destroy]
   before_filter :advertisement_filter, except:[:create,:destroy]
 
@@ -12,11 +12,6 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
     @recipe_comment = RecipeComment.new
-  end
-
-  def image
-    @recipe = Recipe.find(params[:id])
-    send_data(@recipe.image, disposition:"inline", type:"image/jpg")
   end
 
   def new
@@ -65,6 +60,12 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.delete
     redirect_to action:'index'
+  end
+
+  def like
+    Recipe.like( params[:id], current_user )
+
+    redirect_to action: "show", id: params[:id]
   end
 
   private

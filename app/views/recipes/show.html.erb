@@ -4,8 +4,11 @@
     <div id="recipe_base_info">
       <div id="recipe_photo" class="figure">
         <%#=image_tag url_for(action:"image", id: @recipe.id) %>
-        <%=image_tag @recipe.recipe_image.url %>
+        <%=image_tag @recipe.recipe_image.url(:large_thumb) %>
       </div>
+      <%=form_for @recipe, url:{ action:"like", id: params[:id] }, method:"GET" do |f| %>
+        <%=f.submit "like!" %>
+      <% end %>
       <div id="description">
         <%= @recipe.description %>
       </div>
@@ -19,7 +22,7 @@
     <dl id="recipe_steps">
       <% @recipe.steps.each.with_index(1) do |step,i| %>
         <dl class="step">
-          <dt><%= i %></dt>
+          <dt>Step<%= i %></dt>
           <dd><%= step.content %></dd>
         </dl>
       <% end %>

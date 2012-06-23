@@ -146,7 +146,6 @@ ActiveRecord::Schema.define(:version => 20120623095731) do
     t.string   "recipe_image"
     t.text     "one_point",                       :null => false
     t.integer  "like_count",   :default => 0,     :null => false
-    t.integer  "good_point",   :default => 0,     :null => false
     t.time     "deleted_at"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false

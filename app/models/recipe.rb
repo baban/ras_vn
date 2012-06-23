@@ -44,4 +44,13 @@ class Recipe < ActiveRecord::Base
     foodstuffs
   end
 
+  # this method is executed when [like] button cliked
+  def self.like( id, user )
+    recipe = self.find(id)
+    recipe.like_count += 1
+    recipe.save
+
+    RecipeLikeLog.create( recipe_id: id, user_id: user.id )
+  end
+
 end
