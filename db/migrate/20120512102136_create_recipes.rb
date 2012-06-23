@@ -10,6 +10,7 @@ class CreateRecipes < ActiveRecord::Migration
       t.string   :recipe_image, null: true
       t.text     :one_point,    null: false, default: ''
       t.integer  :like_count,   null: false, default: 0
+      t.integer  :good_point,   null: false, default: 0
 
       t.time     :deleted_at,   null: true
       t.timestamps

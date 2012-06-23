@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120618145939) do
+ActiveRecord::Schema.define(:version => 20120623095731) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -109,6 +109,13 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
     t.datetime "updated_at",                     :null => false
   end
 
+  create_table "recipe_good_logs", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "recipe_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "recipe_like_logs", :force => true do |t|
     t.integer  "recipe_id"
     t.integer  "user_id"
@@ -139,6 +146,7 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
     t.string   "recipe_image"
     t.text     "one_point",                       :null => false
     t.integer  "like_count",   :default => 0,     :null => false
+    t.integer  "good_point",   :default => 0,     :null => false
     t.time     "deleted_at"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
