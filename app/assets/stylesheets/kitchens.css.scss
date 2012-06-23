@@ -36,3 +36,15 @@ ul.foodstuffs {
 ul.recipe_status {
   li { display:inline; }
 }
+
+/* recipe_comments */
+
+ul.recipe_comments {
+  li.recipe_comment {
+    border:solid 1px #aaa;
+    width:10em;
+    height:12em;
+    float:left;
+    clear:none;
+  }
+}

@@ -16,9 +16,9 @@ class KitchensController < ApplicationController
     @recipes = @user.recipes.visibles.page(params[:page] || 1)
   end
 
-  def reports
+  def recipe_comments
     @user = User.find(params[:id])
     @profile = @user.profile
-    @recipes = @user.recipe_comments.page(params[:page] || 1)
+    @recipe_comments = @user.recipe_comments.page(params[:page] || 1)
   end
 end
