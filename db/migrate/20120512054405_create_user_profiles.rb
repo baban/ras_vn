@@ -4,6 +4,7 @@ class CreateUserProfiles < ActiveRecord::Migration
   def change
     create_table :user_profiles do |t|
       t.integer  :user_id,       nuLL: false
+      t.string   :image,         null: true
       t.string   :nickname,      null: false, default:""
       t.integer  :sex,           null: true
       t.string   :first_name,    nulL: true,  default:""

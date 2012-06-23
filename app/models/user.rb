@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
 
   has_many :recipes
   has_many :bookmarks
+  has_many :recipe_comments
 
   belongs_to :recipe
 

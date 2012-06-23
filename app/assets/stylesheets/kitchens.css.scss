@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+ul#recipe_menus {
+  border:solid 1px #aaa;
+  padding:0.5em 0 0 0;
+  li {
+    border:solid 1px #aaa;
+    border-style:solid solid none solid;
+    margin:0.5em 0.1em 0 0.1em;
+    display:inline;
+  }
+}
+
 ul.recipes {
   li.recipe {
     border:solid 1px #aaa;

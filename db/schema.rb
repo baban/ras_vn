@@ -231,6 +231,7 @@ ActiveRecord::Schema.define(:version => 20120618145939) do
 
   create_table "user_profiles", :force => true do |t|
     t.integer  "user_id"
+    t.string   "image"
     t.string   "nickname",     :default => "", :null => false
     t.integer  "sex"
     t.string   "first_name",   :default => ""

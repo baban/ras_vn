@@ -1,4 +1,17 @@
-<h1><%= @profile.nickname %>のキッチン</h1>
+<h2><%= @profile.nickname %>のキッチン</h2>
+
+<%= render partial:"content_header" %> 
+
+<table id="profile_image">
+  <tr>
+    <td>
+      <div>
+        <%= profile_image_tag(@profile) %>
+      </div>
+    </td>
+  </tr>
+  <tr><td><%= @profile.nickname %></td></tr>
+</table>
 
 <table>
   <tr>
