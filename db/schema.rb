@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120623095731) do
+ActiveRecord::Schema.define(:version => 20120624045235) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -213,6 +213,13 @@ ActiveRecord::Schema.define(:version => 20120623095731) do
     t.string   "location",   :default => "", :null => false
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "toppage_contents", :force => true do |t|
+    t.integer  "recommend_recipe_id",       :null => false
+    t.integer  "recommend_recipe_genre_id", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "tpl_sets", :force => true do |t|
