@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+UserProfileVisibility:
+  fields:
+    default: user_profile_id, nickname, sex, first_name, last_name, birthday, mail_address, postcode, address, address_point, comment
+    form: user_profile_id, nickname, sex, first_name, last_name, birthday, mail_address, postcode, address, address_point, comment
+  relationships: 
+  application: Application

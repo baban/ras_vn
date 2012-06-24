@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(:version => 20120623095731) do
   create_table "recipe_advertisements", :force => true do |t|
     t.string   "name",                       :null => false
     t.string   "url",        :default => "", :null => false
+    t.string   "image"
+    t.string   "alt"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
   end

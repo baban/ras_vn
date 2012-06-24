@@ -1,8 +1,8 @@
 # Use the README file as a reference to customize settings.
 
-RecipeAdvertisement:
+RecipeComment:
   fields:
-    default: name, url, image, alt
-    form: name, url, image, alt
+    default: recipe_id, user_id, content, image
+    form: recipe_id, user_id, content, image
   relationships: 
   application: Application

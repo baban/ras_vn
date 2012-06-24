@@ -1,0 +1,23 @@
+<%= render "form_javascripts" %>
+
+<%= semantic_form_for @item, :url => options, :html => { :class => "resource", :multipart => true } do |f| %>
+  <table id="shop_info">
+    <tr>
+      <th><%=f.label :name %></th>
+      <td><%=f.text_field :name, value: @item.name %></td>
+    </tr>
+    <tr>
+      <th><%=f.label :url %></th>
+      <td><%=f.text_field :url, value: @item.url %></td>
+    </tr>
+    <tr>
+      <th><%=f.label :image %></th>
+      <td><%=f.file_field :image, value: @item.image %></td>
+    </tr>
+    <tr>
+      <th><%=f.label :alt %></th>
+      <td><%=f.text_field :alt, value: @item.alt %></td>
+    </tr>
+  </table>  
+  <%= f.actions %>
+<% end %>

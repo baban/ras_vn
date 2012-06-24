@@ -9,6 +9,7 @@ RasVn::Application.routes.draw do
   resources(:bookmarks)
   resources(:information)
   resources(:recipes){ member { get :like } }
+  resources(:recipe_advertisements)
   resources(:recipe_comments)
   resources(:restaurants)
   resources(:kitchens) { member { get :recipes } }
