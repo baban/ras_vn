@@ -35,7 +35,13 @@
       <% @recipe.steps.each.with_index(1) do |step,i| %>
         <dl class="step">
           <dt>Step<%= i %></dt>
-          <dd><%= step.content %></dd>
+          <dd>
+            <% if step.image %><%=image_tag step.image.url(:thumb), alt:"" %><% end %>
+            <% if step.movie_url %>
+              <iframe width="448" height="252" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
+            <% end %>
+            <%= step.content %>
+          </dd>
         </dl>
       <% end %>
     </dl>

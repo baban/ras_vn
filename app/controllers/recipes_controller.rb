@@ -43,7 +43,9 @@ class RecipesController < ApplicationController
     logger.info @foodstuffs.inspect
     @recipe.recipe_foodstuffs= @foodstuffs
 
-    @steps = params[:steps].select{ |o| o.blank?.! }.map{ |v| RecipeStep.new(context: v) } 
+    @steps = params[:recipe_steps]
+      .select{ |o| o[:content].blank?.! }
+      .map { |v| RecipeStep.new(v) }
     @recipe.recipe_steps= @steps
 
     @recipe.attributes= params[:recipe]

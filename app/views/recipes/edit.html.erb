@@ -40,8 +40,8 @@
               <dt>Step <%= i %></dt>
               <dt><%= file_field_tag "recipe_steps[][image]" %></dt>
               <dt>
-		<%= text_field_tag "recipe_steps[][url]", step.movie_url %>
-	      </dt>
+                <%= text_field_tag "recipe_steps[][movie_url]", step.movie_url %>
+              </dt>
               <dd>
                 <%= text_area_tag "recipe_steps[][content]", step.content, class:'step_edit_area' %>
               </dd>
