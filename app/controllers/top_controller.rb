@@ -9,7 +9,7 @@ class TopController < ApplicationController
     @food_genres = RecipeFoodGenre.all
     @ranking = RecipeRanking.topics
     @recipe_ranking = RecipeRanking.topics
-    @foodstuff_ranking = RecipeRanking.topics
+    @foodstuff_ranking = RecipeFoodstuffRanking.topics
   end
 
   def restaurant

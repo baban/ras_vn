@@ -27,8 +27,8 @@
       </ol>
       <h4>人気の食材</h4>
       <ol>
-        <% @foodstuff_ranking.each do |recipe| %>
-          <li><%=link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></li>
+        <% @foodstuff_ranking.each do |foodstuff| %>
+          <li><%=link_to foodstuff.name, controller:"recipes", action:"index", id: foodstuff.id, recipe_food_id: foodstuff.id %></li>
         <% end %>
       </ol>
     </div>
