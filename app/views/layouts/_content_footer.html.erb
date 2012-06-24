@@ -1,0 +1,38 @@
+<div id="content_footer">
+
+ <div id="footer_advertisement">
+  <% @advertise = RecipeAdvertisement.choice %>
+  <% if @advertise %>
+    <%=link_to image_tag(@advertise.image.url, alt: (@advertise.alt || @advertise.name) ).html_safe, @advertise.url, title: @advertise.name %>
+  <% end %>
+</div>
+
+<div id="footer_recomment_recipe">
+  <h3>本日のおすすめ料理</h3>
+  <% if @recomment_recipe %>
+    <p><%=image_tag @recomment_recipe.image.url(:thumb), alt:"" %></p>
+    <p><%=link_to @recomment_recipe.title, recipes_url(@recomment_recipe) %></p>
+    <p>by <%=link_to @recomment_recipe.chef.profile.nickname, recipes_url(@recomment_recipe) %></p>
+    <p><%= @recomment_recipe.description %></p>
+  <% end %>
+</div>
+
+<div id="footer_rankings">
+  <h3>ランキング</h3>
+  <div>
+    <h4>人気レシピ</h4>
+    <ol>
+      <% @recipe_ranking.each do |recipe| %>
+        <li><%=link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></li>
+      <% end %>
+    </ol>
+    <h4>人気の食材</h4>
+    <ol>
+      <% @foodstuff_ranking.each do |foodstuff| %>
+        <li><%=link_to foodstuff.name, controller:"recipes", action:"index", id: foodstuff.id, recipe_food_id: foodstuff.id %></li>
+      <% end %>
+    </ol>
+  </div>
+</div>
+
+</div>

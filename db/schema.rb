@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
   create_table "recipe_steps", :force => true do |t|
     t.integer  "recipe_id",                  :null => false
     t.string   "image"
+    t.string   "movie_url"
     t.string   "content",    :default => "", :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                 :null => false
@@ -155,6 +156,7 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
     t.text     "one_point",                       :null => false
     t.integer  "like_count",   :default => 0,     :null => false
     t.integer  "eatstyle_id",  :default => 0,     :null => false
+    t.integer  "amount"
     t.time     "deleted_at"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
@@ -265,6 +267,7 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
     t.string   "postcode",     :default => "", :null => false
     t.string   "address",      :default => "", :null => false
     t.text     "comment",                      :null => false
+    t.integer  "recipe_count", :default => 0,  :null => false
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
   end

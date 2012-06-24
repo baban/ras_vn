@@ -3,12 +3,20 @@
 @import "content_menu.css";
 @import "parts/recipe_list.css";
 
-#content_body{
-  width:75%;
+#content_footer {
+  width:28%;
+  floart:right;
+  display:block;
+  clear:none;
 }
 
-#content_footer{
-  width:20%;
+#content_body {
+  margin:0;
+  width:70%;
+  border:solid 1px #aaa;
+  display:block;
+  float:left;
+  clear:none;
 }
 
 /* index */
@@ -72,9 +80,15 @@ ul#recipe_comments {
   padding:0;
   dl.step{
     width:80%;
-    height:10em;
+    height:13em;
     border:solid 1px #aaa;
     margin:0 auto;
+    dd{
+      img {
+        width:180px;
+	float:right;
+      }
+    }
   }
 }
 #recipe_steps:after {

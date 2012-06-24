@@ -1,6 +1,13 @@
+
+<%= render partial:"layouts/content_footer" %>
+
 <div id="content_body" class="section">
+
   <div id="recipe_header">
-    <p class="chef"><%=link_to @recipe.user.profile.nickname, kitchen_url(@user) %>のレシピ</p>
+    <p class="chef">
+      <%=link_to @recipe.user.profile.nickname, kitchen_url(@user) %>のレシピ
+      (<%= @recipe.user.profile.recipe_count %>件)
+    </p>
     <%=form_for :bookmarks, url:{ controller:"bookmarks", action:"create", id: @recipe.id }, html:{ class:"bookmark_form" } do |f| %>
       <%=f.submit "bookmark" %>
     <% end %>
@@ -9,7 +16,6 @@
   <div class="section" id="recipe_body">
     <div id="recipe_base_info">
       <div id="recipe_photo" class="figure">
-        <%#=image_tag url_for(action:"image", id: @recipe.id) %>
         <%=image_tag @recipe.recipe_image.url(:large_thumb) %>
       </div>
       <%=form_for @recipe, url:{ action:"like", id: params[:id] }, method:"GET" do |f| %>
@@ -18,7 +24,7 @@
       <div id="description">
         <%= @recipe.description %>
       </div>
-      <h3>材料</h3>
+      <h3>材料 <%= @recipe.amount && "(#{@recipe.amount}人前)"  %></h3>
       <table>
         <% @recipe.foodstuffs.each do |foodstuff| %>
           <tr><td><%= foodstuff.name %></td><td><%= foodstuff.amount %></td></tr>

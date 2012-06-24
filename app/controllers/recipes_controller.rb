@@ -10,6 +10,8 @@ class RecipesController < ApplicationController
   end
 
   def show
+    load_content_footer_data
+
     @recipe = Recipe.find(params[:id])
     @recipe_comment = RecipeComment.new
   end
@@ -81,4 +83,5 @@ class RecipesController < ApplicationController
     # お客に合わせた広告を取得できる様に余地を残しておく
     @advertisement = RecipeAdvertisement.choice
   end
+
 end
