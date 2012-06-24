@@ -80,7 +80,7 @@ namespace :deploy do
   end
 
   task :restart, :roles => :app, :except => { :no_release => true } do
-    #restart_task
+    restart_task
   end
 
   # shared以下にアップロード画像のシンボリックリンクを作成する
