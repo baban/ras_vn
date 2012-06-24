@@ -6,6 +6,8 @@ class UserProfile < ActiveRecord::Base
   belongs_to :user
   accepts_nested_attributes_for :user
 
+  mount_uploader :image, UserProfileImageUploader
+
   def initialize(*args)
     super(*args)
     self.user_profile_visibility= UserProfileVisibility.new

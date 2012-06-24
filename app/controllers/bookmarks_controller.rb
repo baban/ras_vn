@@ -8,6 +8,8 @@ class BookmarksController < ApplicationController
   end
 
   def create
+    Bookmark.create( user_id: current_user.id, recipe_id: params[:id] )
+    redirect_to controller:"recipes", action:"show", id: params[:id]
   end
 
   def deatroy

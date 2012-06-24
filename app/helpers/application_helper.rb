@@ -3,9 +3,9 @@
 module ApplicationHelper
   def profile_image_tag(profile)
     if profile and profile.image
-      image_tag(profile.image, alt: profile.nickname, size:"200x200")
+      image_tag(profile.image.url(:thumb), alt: profile.nickname, size:"180x180")
     else
-      image_tag("/assets/noimage.gif", alt: "no_image", size:"200x200")
+      image_tag("/assets/noimage.gif", alt: "no_image", size:"180x180")
     end
   end
 

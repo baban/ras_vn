@@ -1,4 +1,10 @@
 <div id="content_body" class="section">
+  <div id="recipe_header">
+    <p class="chef"><%=link_to @recipe.user.profile.nickname, kitchen_url(@user) %>のレシピ</p>
+    <%=form_for :bookmarks, url:{ controller:"bookmarks", action:"create", id: @recipe.id }, html:{ class:"bookmark_form" } do |f| %>
+      <%=f.submit "bookmark" %>
+    <% end %>
+  </div>
   <h2><%= @recipe.title %></h2>
   <div class="section" id="recipe_body">
     <div id="recipe_base_info">
