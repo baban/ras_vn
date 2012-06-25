@@ -12,6 +12,7 @@ class CreateRecipes < ActiveRecord::Migration
       t.integer  :like_count,   null: false, default: 0
       t.integer  :eatstyle_id,  null: false, default: 0
       t.integer  :amount,       null: true
+      t.integer  :view_count,   null: false, default: 0
 
       t.time     :deleted_at,   null: true
       t.timestamps

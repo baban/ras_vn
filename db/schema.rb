@@ -117,13 +117,6 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
     t.datetime "updated_at",                     :null => false
   end
 
-  create_table "recipe_good_logs", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "recipe_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "recipe_like_logs", :force => true do |t|
     t.integer  "recipe_id"
     t.integer  "user_id"
@@ -157,6 +150,7 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
     t.integer  "like_count",   :default => 0,     :null => false
     t.integer  "eatstyle_id",  :default => 0,     :null => false
     t.integer  "amount"
+    t.integer  "view_count",   :default => 0,     :null => false
     t.time     "deleted_at"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false

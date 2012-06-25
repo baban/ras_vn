@@ -37,6 +37,11 @@ class Recipe < ActiveRecord::Base
     steps
   end
 
+  def view_count_increment!
+    self.view_count+=1
+    self.save
+  end
+
   # this method generate foodstuffs for edit action
   def edit_foodstuffs
     foodstuffs = recipe_foodstuffs.to_a

@@ -14,6 +14,8 @@ class RecipesController < ApplicationController
 
     @recipe = Recipe.find(params[:id])
     @recipe_comment = RecipeComment.new
+
+    @recipe.view_count_increment!
   end
 
   def new
