@@ -12,6 +12,7 @@ gem 'devise', "2.1.0" # add login, logout
 gem 'typus', "3.1.10" # generte administration functions
 gem "formtastic", "2.1.0"
 gem 'omniauth', "1.1.0"
+gem "mongo_mapper"
 
 # controller, model tools
 gem "aspectr"  # add aspect oriented programming functions
