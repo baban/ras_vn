@@ -141,19 +141,20 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
   end
 
   create_table "recipes", :force => true do |t|
-    t.integer  "user_id",                         :null => false
-    t.string   "title",        :default => "",    :null => false
-    t.text     "description",                     :null => false
-    t.boolean  "public",       :default => false, :null => false
+    t.integer  "user_id",                                 :null => false
+    t.string   "title",                :default => "",    :null => false
+    t.text     "description",                             :null => false
+    t.boolean  "public",               :default => false, :null => false
     t.string   "recipe_image"
-    t.text     "one_point",                       :null => false
-    t.integer  "like_count",   :default => 0,     :null => false
-    t.integer  "eatstyle_id",  :default => 0,     :null => false
+    t.text     "one_point",                               :null => false
+    t.integer  "like_count",           :default => 0,     :null => false
+    t.integer  "eatstyle_id",          :default => 0,     :null => false
     t.integer  "amount"
-    t.integer  "view_count",   :default => 0,     :null => false
+    t.integer  "view_count",           :default => 0,     :null => false
+    t.integer  "recipe_food_genre_id", :default => 0,     :null => false
     t.time     "deleted_at"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
   end
 
   create_table "restaurant_comments", :force => true do |t|

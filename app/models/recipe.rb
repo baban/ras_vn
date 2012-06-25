@@ -49,6 +49,10 @@ class Recipe < ActiveRecord::Base
     foodstuffs
   end
 
+  def food_genre
+    RecipeFoodGenre.find_by_id(self.recipe_food_genre_id)
+  end
+
   # this method is executed when [like] button cliked
   def self.like( id, user )
     recipe = self.find(id)

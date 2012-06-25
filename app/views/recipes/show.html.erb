@@ -24,6 +24,7 @@
       <div id="description">
         <%= @recipe.description %>
       </div>
+      <div id="food_genre"><%= @recipe.food_genre.name %></div>
       <h3>材料 <%= @recipe.amount && "(#{@recipe.amount}人前)"  %></h3>
       <table>
         <% @recipe.foodstuffs.each do |foodstuff| %>
