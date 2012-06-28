@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class CreateOmniusers < ActiveRecord::Migration
   def change
     create_table :omniusers do |t|

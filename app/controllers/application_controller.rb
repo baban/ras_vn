@@ -3,7 +3,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  helper_method :my_recipe?
+  helper_method :my_recipe?, :current_omniuser
 
   def auth
     @user = current_user
@@ -18,5 +18,11 @@ class ApplicationController < ActionController::Base
     @ranking = RecipeRanking.topics
     @recipe_ranking = RecipeRanking.topics
     @foodstuff_ranking = RecipeFoodstuffRanking.topics
+  end
+
+  # Omniauthでのログイン状況確認
+  private
+  def current_omniuser
+    @current_omniuser ||= Omniuser.find(session[:user_id]) if session[:user_id]
   end
 end
