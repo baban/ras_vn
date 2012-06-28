@@ -64,6 +64,14 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
     t.datetime "updated_at",                    :null => false
   end
 
+  create_table "omniusers", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "prefectures", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -280,6 +288,10 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.integer  "uid"
+    t.string   "screen_name"
+    t.string   "access_token"
+    t.string   "access_secret"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

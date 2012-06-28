@@ -1,7 +1,8 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
-  get "chefs/show"
+  match "/auth/:provider/callback" => "sessions#callback"
+  match "/logout" => "sessions#destroy", :as => :logout
 
   resource(:mypage){ member { get :index, :recipes, :recipe_comments } }
   resource :profile
