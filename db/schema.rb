@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120624053904) do
+ActiveRecord::Schema.define(:version => 20120629225741) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -292,6 +292,7 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
     t.string   "screen_name"
     t.string   "access_token"
     t.string   "access_secret"
+    t.integer  "omniuser_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
