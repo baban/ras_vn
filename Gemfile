@@ -14,6 +14,8 @@ gem "formtastic", "2.1.0"
 gem 'omniauth', "1.1.0"
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+#gem 'omniauth-google-api'
+gem "omniauth-google-oauth2"
 #gem "mongo_mapper"
 
 # controller, model tools
