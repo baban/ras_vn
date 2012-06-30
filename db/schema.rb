@@ -287,6 +287,10 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.integer  "omniuser_id"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
   end
