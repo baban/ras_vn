@@ -1,5 +1,7 @@
 <h2>Sign up</h2>
 
+<% @tmp = Omniuser.find_by_uid(session[:tmp_uid]) %>
+
 <%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <h2>Nhahang24レシピのID情報</h2>
   <%= devise_error_messages! %>
@@ -10,11 +12,12 @@
     <%=f.input :password_confirmation %>
     <li><%=f.hidden_field :omniuser_id, value: (current_omniuser && current_omniuser.id) %></li>
   </ul>
+  <%= f.hidden_field :omniuser_id, :value => (@tmp && @tmp.id) %>
 
   <%= f.semantic_fields_for :user_profile do |profile| %>
     <h3>個人情報</h3>
     <ul>
-      <%= profile.input :nickname %>
+      <%= profile.text_field :nickname, value:(@tmp && @tmp.name) %>
       <%= profile.input :birthday %>
       <%= profile.input :sex, :as=>:radio, collection:{male: 1,female: 2} %>
     </ul>
