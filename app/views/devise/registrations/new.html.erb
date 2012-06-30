@@ -33,8 +33,10 @@
         </fieldset>
       </li>
       <%= profile.input :sex, :as=>:radio, collection:{ "male" => 1, "female" => 2} %>
-      <%= profile.input :prefecture_id, :as=>:select, :collection=>%W[aaa bbb] %>
+      <%= profile.input :prefecture_id, :as=>:select, :collection=>Distinct.all.map{|o| [o.name,o.id] } %>
     </ul>
+    <p>お住まいの地域を選択してください。</p>
+    <p>お住まいの地域をご登録頂くと、毎日お得なクーポン情報をお届けいたします。</p>
   <% end %>
 
   <div><%= f.submit %></div>
