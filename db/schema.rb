@@ -260,19 +260,17 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
   create_table "user_profiles", :force => true do |t|
     t.integer  "user_id"
     t.string   "image"
-    t.string   "nickname",     :default => "", :null => false
+    t.string   "nickname",      :default => "", :null => false
     t.integer  "sex"
-    t.string   "first_name",   :default => ""
-    t.string   "last_name",    :default => ""
-    t.integer  "blood_type"
+    t.string   "first_name",    :default => ""
+    t.string   "last_name",     :default => ""
     t.date     "birthday"
     t.string   "mail_address"
-    t.string   "postcode",     :default => "", :null => false
-    t.string   "address",      :default => "", :null => false
-    t.text     "comment",                      :null => false
-    t.integer  "recipe_count", :default => 0,  :null => false
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.integer  "prefecture_id", :default => 0,  :null => false
+    t.integer  "area_id",       :default => 0,  :null => false
+    t.text     "comment",                       :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -286,13 +284,13 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "omniuser_id"
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.integer  "uid"
+    t.string   "screen_name"
+    t.string   "access_token"
+    t.string   "access_secret"
+    t.integer  "omniuser_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

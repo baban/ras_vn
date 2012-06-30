@@ -20,4 +20,9 @@ form {
       li{ display:inline; }
     }
   }
+  fieldset#birthday_select_boxes {
+    select:before {
+      content:"/";
+    }
+  }
 }

@@ -7,7 +7,7 @@
 <% @tmp = Omniuser.find_by_uid(session[:tmp_uid]) %>
 
 <%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <h2>Nhahang24レシピのID情報</h2>
+  <h2>プロフィール登録</h2>
   <%= devise_error_messages! %>
 
   <ul>
@@ -19,11 +19,21 @@
   <%= f.hidden_field :omniuser_id, :value => (@tmp && @tmp.id) %>
 
   <%= f.semantic_fields_for :user_profile do |profile| %>
-    <h3>個人情報</h3>
     <ul>
-      <%= profile.text_field :nickname, value:(@tmp && @tmp.name) %>
-      <%= profile.input :birthday %>
-      <%= profile.input :sex, :as=>:radio, collection:{male: 1,female: 2} %>
+      <li>
+        <fieldset class="fragments">
+          <legend class="label"><label for="user_user_profile_attributes_nickname">Nickname</label></legend>
+          <%= profile.text_field :nickname, value:(@tmp && @tmp.name) %>
+        </fieldset>
+      </li>
+      <li>
+        <fieldset class="fragments" id="birthday_select_boxes">
+          <legend class="label"><label for="user_user_profile_attributes_birthday">Birthday</label></legend>
+          <%= profile.date_select :birthday, use_month_numbers: true %>
+        </fieldset>
+      </li>
+      <%= profile.input :sex, :as=>:radio, collection:{ "male" => 1, "female" => 2} %>
+      <%= profile.input :prefecture_id, :as=>:select, :collection=>%W[aaa bbb] %>
     </ul>
   <% end %>
 
