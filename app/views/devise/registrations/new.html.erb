@@ -1,9 +1,5 @@
 <h2>Sign up</h2>
 
-<%= link_to "Twitterでlogin","/auth/twitter" %>
-<%= link_to "facebookでlogin", "/auth/facebook" %>
-<%= link_to "Google+でlogin", "/auth/google_oauth2" %>
-
 <% @tmp = Omniuser.find_by_uid(session[:tmp_uid]) %>
 
 <%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
