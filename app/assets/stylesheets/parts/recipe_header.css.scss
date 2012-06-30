@@ -19,26 +19,17 @@
     input[type="text"] { width:10em; }
   }
   dl#login_area {
-    float:left;
+    float:right;
     width:18em;
     position:relative;
+    width:21em;
+    border:solid 1px #aaa;
     dt {
-      border:solid 1px #aaa;
-    }
-    dd {
-      display:none;
-      position:absolute;
-      background-color:white;
-      border:solid 1px #aaa;
-      z-index:+2;
-      opacity:0;
-      -webkit-transition: all 1s ease;
-      -moz-transition: all 1s ease;
-      -o-transition: all 1s ease;
-      form {
-        background-color:white;
-        border-style:none;
-      }
+      width:8em;
+      margin:0;
+      display:block;
+      float:left;
+      clear:none;
     }
   }
   dl#login_area:hover {

@@ -7,37 +7,32 @@
     <%= f.submit "検索" %>
   <% end %>
 
-  <% if current_omniuser %>
-    <%= current_omniuser.name %>さん <%= link_to "ログアウト" ,logout_path %>
-  <% else %>
-    <%= link_to "Twitterでlogin","/auth/twitter" %>
-    <%= link_to "facebookでlogin", "/auth/facebook" %>
-    <%= link_to "Google+でlogin", "/auth/google_oauth2" %>
-  <% end %>
-
-  <dl id="login_area">
-    <% unless user_signed_in? %>
-      <dt>Login</dt>
-      <dd>
-        <%= form_for(:user, url: user_session_url) do |f| %>
-          <div><%= f.label :email %><br />
-          <%= f.email_field :email %></div>
-          <div><%= f.label :password %><br />
-          <%= f.password_field :password %></div>
+  <% unless user_signed_in? %>
+    <dl id="login_area">
+      <dt>
+        <%= form_for :user, url: new_user_registration_url, method:"GET" do |f| %>
+          <p><%=f.submit "register" %></p>
+        <% end %>
+      </dt>
+      <dt>
+        <%= form_for :user, url: new_user_session_url, method:"GET" do |f| %>
           <div><%= f.submit "Sign in" %></div>
         <% end %>
-        <p><%=link_to "register", new_user_registration_url %></p>
-      </dd>
-    <% else %>
+      </dt>
+    </dl>
+  <% else %>
+    <dl id="login_area">
       <dt>
         <%=form_for :device, url: destroy_user_session_url, method:"DELETE" do |f| %>
           <p><%=f.submit "Logout" %></p>
         <% end %>
       </dt>
-    <% end %>
-  </dl>
-  <ul id="mymenues_bar">
-    <li><%= link_to "mypage", controller:"mypage", action:"index" %></li>
-    <li><%= link_to "bookmarks", controller:"bookmarks", action:"index" %></li>
-  </ul>
+      <dt>
+        <ul id="mymenues_bar">
+          <li><%= link_to "mypage", controller:"mypage", action:"index" %></li>
+          <li><%= link_to "bookmarks", controller:"bookmarks", action:"index" %></li>
+        </ul>
+      </dt>
+    </dl>
+  <% end %>
 </div>
