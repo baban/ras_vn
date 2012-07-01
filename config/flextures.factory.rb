@@ -13,3 +13,4 @@ Flextures::Factory.define :recipes do |f|
   #f.image = IO.read("#{filename}")
   f
 end
+

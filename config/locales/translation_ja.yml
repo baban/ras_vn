@@ -1,6 +1,8 @@
 ja:
   activerecord:
     errors:
+      messages:
+        record_invalid: "保存エラー"
       models:
         user:
           attributes:

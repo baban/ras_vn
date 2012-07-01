@@ -6,7 +6,7 @@ class TopController < ApplicationController
     @recomment_food_genre_recipe = Recipe.find_by_id(toppage.recommend_recipe_genre_id)
     @recomment_recipe = Recipe.find_by_id(toppage.recommend_recipe_id)
 
-    @food_genres = RecipeFoodGenre.all
+    @food_genres = RecipeFoodGenre.includes(:recipe_foods)
 
     @ranking = RecipeRanking.topics
     @recipe_ranking = RecipeRanking.topics

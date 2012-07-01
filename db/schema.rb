@@ -269,6 +269,7 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
     t.integer  "prefecture_id", :default => 0,  :null => false
     t.integer  "area_id",       :default => 0,  :null => false
     t.text     "comment",                       :null => false
+    t.integer  "recipe_count",  :default => 0,  :null => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end
