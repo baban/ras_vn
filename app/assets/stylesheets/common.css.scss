@@ -63,3 +63,11 @@ ul.tabpanel:after {
     text-align:center;
   }
 }
+
+#error_explanation,
+ul.errors {
+  color:red;
+}
+p.inline-errors {
+  color:red;
+}

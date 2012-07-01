@@ -6,6 +6,9 @@ class UserProfile < ActiveRecord::Base
   belongs_to :user
   accepts_nested_attributes_for :user
 
+  validates :nickname, presence: true
+  validates :prefecture_id, inclusion: { in:(1..1000) }
+
   mount_uploader :image, UserProfileImageUploader
 
   def initialize(*args)

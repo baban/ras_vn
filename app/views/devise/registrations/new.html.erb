@@ -1,15 +1,10 @@
 <h2>Sign up</h2>
 
-<%= link_to "Twitterでlogin","/auth/twitter" %>
-<%= link_to "facebookでlogin", "/auth/facebook" %>
-<%= link_to "Google+でlogin", "/auth/google_oauth2" %>
-
 <% @tmp = Omniuser.find_by_uid(session[:tmp_uid]) %>
 
 <%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <h2>Nhahang24レシピのID情報</h2>
+  <h2>プロフィール登録</h2>
   <%= devise_error_messages! %>
-
   <ul>
     <%=f.input :email %>
     <%=f.input :password %>
@@ -19,12 +14,14 @@
   <%= f.hidden_field :omniuser_id, :value => (@tmp && @tmp.id) %>
 
   <%= f.semantic_fields_for :user_profile do |profile| %>
-    <h3>個人情報</h3>
+    <%= profile.semantic_errors %>
     <ul>
-      <%= profile.text_field :nickname, value:(@tmp && @tmp.name) %>
+      <%= profile.input :nickname %>
       <%= profile.input :birthday %>
-      <%= profile.input :sex, :as=>:radio, collection:{male: 1,female: 2} %>
+      <%= profile.input :sex, :as=>:radio, collection:{ "male" => 1, "female" => 2} %>
+      <%= profile.input :prefecture_id, :as=>:select, :collection=>Distinct.all.map{|o| [o.name,o.id] } %>
     </ul>
+    <p>お住まいの地域をご登録頂くと、毎日お得なクーポン情報をお届けいたします。</p>
   <% end %>
 
   <div><%= f.submit %></div>

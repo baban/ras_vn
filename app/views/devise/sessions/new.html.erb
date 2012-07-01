@@ -1,9 +1,5 @@
 <h2>Sign in</h2>
 
-<%= link_to "Twitterでlogin","/auth/twitter" %>
-<%= link_to "facebookでlogin", "/auth/facebook" %>
-<%= link_to "Google+でlogin", "/auth/google_oauth2" %>
-
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
@@ -17,5 +13,13 @@
 
   <div><%= f.submit "Sign in" %></div>
 <% end %>
+
+<p>Facebook、Twitter、Google+のアカウントを使って、簡単なステップでメンバー登録ができます。</p>
+
+<ul id="login_links">
+  <li><%= link_to "Sign in with Facebook", "/auth/facebook" %></li>
+  <li><%= link_to "Sign in with Twitter",  "/auth/twitter" %></li>
+  <li><%= link_to "Sign in with Google",   "/auth/google_oauth2" %></li>
+</ul>
 
 <%= render "links" %>
