@@ -64,7 +64,8 @@ ul.tabpanel:after {
   }
 }
 
-#error_explanation{
+#error_explanation,
+ul.errors {
   color:red;
 }
 p.inline-errors {
