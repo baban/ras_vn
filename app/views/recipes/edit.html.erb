@@ -18,6 +18,7 @@
         </div>
         <div>
           <%= f.select :recipe_food_genre_id, RecipeFoodGenre.all.map{ |o| [o.name,o.id] } %>
+          <%= f.select :recipe_food_genre_id, RecipeFood.all.map{ |o| [o.name,o.id] } %>
         </div>
         <div id="foodstuffs_area" class="area">
           <table id="foodstuffs">
