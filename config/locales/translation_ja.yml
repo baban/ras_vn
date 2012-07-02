@@ -8,6 +8,7 @@ ja:
           attributes:
             email:
               blank: メールアドレスは入力必須です
+              taken: はすでに登録されています
             password:
               blank: パスワードは入力必須です
             password_confirmation:

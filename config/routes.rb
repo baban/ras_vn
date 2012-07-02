@@ -4,7 +4,7 @@ RasVn::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#callback"
   match "/logout" => "sessions#destroy", :as => :logout
 
-  resource(:mypage){ member { get :index, :recipes, :recipe_comments } }
+  resource(:mypage){ member { get :recipes, :recipe_comments } }
   resource :profile
 
   resources(:bookmarks)
