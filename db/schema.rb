@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
 
   create_table "recipe_food_genres", :force => true do |t|
     t.string   "name",       :null => false
+    t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
