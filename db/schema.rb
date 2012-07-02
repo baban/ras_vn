@@ -166,60 +166,6 @@ ActiveRecord::Schema.define(:version => 20120624053904) do
     t.datetime "updated_at",                              :null => false
   end
 
-  create_table "restaurant_comments", :force => true do |t|
-    t.integer  "restaurant_id",                    :null => false
-    t.integer  "user_id",                          :null => false
-    t.text     "comment"
-    t.boolean  "public",        :default => false, :null => false
-    t.float    "point",         :default => 0.0,   :null => false
-    t.time     "deleted_at"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
-  end
-
-  create_table "restaurant_menus", :force => true do |t|
-    t.integer  "restaurant_id",                 :null => false
-    t.integer  "view_style",    :default => 1,  :null => false
-    t.binary   "image"
-    t.string   "title",         :default => "", :null => false
-    t.text     "comment"
-    t.text     "price_comment"
-    t.text     "price"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-  end
-
-  create_table "restaurant_profiles", :force => true do |t|
-    t.integer  "restaurant_id", :null => false
-    t.binary   "top_photo"
-    t.float    "longitude"
-    t.float    "latitude"
-    t.time     "deleted_at"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  create_table "restaurants", :force => true do |t|
-    t.string   "name",                               :null => false
-    t.string   "public",            :default => "0", :null => false
-    t.string   "sub_name",                           :null => false
-    t.boolean  "coupon_flg",                         :null => false
-    t.boolean  "mobile_coupon_flg",                  :null => false
-    t.text     "comment",                            :null => false
-    t.string   "postcode"
-    t.string   "address"
-    t.string   "phone_number"
-    t.string   "fax_number"
-    t.string   "email"
-    t.string   "homepage"
-    t.time     "open_time"
-    t.time     "close_time"
-    t.string   "close_day"
-    t.time     "deleted_at"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
-  end
-
   create_table "search_logs", :force => true do |t|
     t.integer  "user_id",                    :null => false
     t.string   "words",      :default => "", :null => false
