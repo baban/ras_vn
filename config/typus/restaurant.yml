@@ -1,8 +1,0 @@
-# Use the README file as a reference to customize settings.
-
-Restaurant:
-  fields:
-    default: name, public, sub_name, coupon_flg, mobile_coupon_flg, comment, longitude, latitude, address, phone_number, fax_number, email, homepage, open_time, close_time, close_day
-    form: name, public, sub_name, coupon_flg, mobile_coupon_flg, comment, longitude, latitude, address, phone_number, fax_number, email, homepage, open_time, close_time, close_day
-  relationships: 
-  application: Application

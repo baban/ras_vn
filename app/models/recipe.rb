@@ -10,7 +10,7 @@ class Recipe < ActiveRecord::Base
   has_many :recipe_comments
 
   belongs_to :recipe_ranking
-  belongs_to :users
+  belongs_to :user
 
   accepts_nested_attributes_for :recipe_steps # use formastic plug-in
 
