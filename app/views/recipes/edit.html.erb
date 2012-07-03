@@ -17,7 +17,7 @@
           <%= f.text_area :description, value: @recipe.description %>
         </div>
         <div>
-          <%= f.select :recipe_food_genre_id, RecipeFoodGenre.all.map{ |o| [o.name,o.id] } %>
+          <%= select_tag :recipe, options_for_select(RecipeFoodGenre.all.map{ |o| [o.name,o.id] }, 1), id:"recipe_genre_selecter" %>
           <%= f.select :recipe_food_genre_id, RecipeFood.all.map{ |o| [o.name,o.id] } %>
         </div>
         <div id="foodstuffs_area" class="area">
@@ -43,9 +43,7 @@
             <dl class="step">
               <dt>Step <%= i %></dt>
               <dt><%= file_field_tag "recipe_steps[][image]" %></dt>
-              <dt>
-                <%= text_field_tag "recipe_steps[][movie_url]", step.movie_url %>
-              </dt>
+              <dt><%= text_field_tag "recipe_steps[][movie_url]", step.movie_url %></dt>
               <dd>
                 <%= text_area_tag "recipe_steps[][content]", step.content, class:'step_edit_area' %>
               </dd>

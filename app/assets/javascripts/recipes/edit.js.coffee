@@ -19,3 +19,7 @@ $(window).load ->
       '<dd><textarea class="step_edit_area" name="steps[]"></textarea></dd>'+
     '</dl>';
     $("#recipe_steps").append(s)
+    
+  $("#recipe_genre_selecter").change ->
+    console.log("recipe_food_genre: change")
+    
