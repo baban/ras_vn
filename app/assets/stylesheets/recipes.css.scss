@@ -144,6 +144,10 @@ dl#recipe_comments:after {
   height:4em;
 }
 
+select#recipe_recipe_food_genre_id {
+  display:none;
+}
+
 #foodstuffs_area {
   width:43em;
   display:block;
@@ -158,6 +162,7 @@ dl#recipe_comments:after {
   }
   #add_foodstuffs_row { float:right; }
 }
+
 #foodstuffs_area:after {
   content:"";
   display:block;

@@ -17,8 +17,8 @@
           <%= f.text_area :description, value: @recipe.description %>
         </div>
         <div>
-          <%= select_tag :recipe, options_for_select(RecipeFoodGenre.all.map{ |o| [o.name,o.id] }, 1), id:"recipe_genre_selecter" %>
-          <%= f.select :recipe_food_genre_id, RecipeFood.all.map{ |o| [o.name,o.id] } %>
+        <%= select_tag(:recipe_genre_selecter, options_for_select(RecipeFoodGenre.all.map{ |o| [ o.name,o.id ] }) ) %>
+        <%= f.grouped_collection_select(:recipe_food_genre_id, RecipeFoodGenre.all, :recipe_foods, :name, :id, :name, include_blank: true ) %>
         </div>
         <div id="foodstuffs_area" class="area">
           <table id="foodstuffs">
@@ -42,8 +42,8 @@
           <% @recipe.edit_steps.each.with_index(1) do |step,i| %>
             <dl class="step">
               <dt>Step <%= i %></dt>
-              <dt><%= file_field_tag "recipe_steps[][image]" %></dt>
-              <dt><%= text_field_tag "recipe_steps[][movie_url]", step.movie_url %></dt>
+              <dt><%=submit_tag "Img" %><%= file_field_tag "recipe_steps[][image]" %></dt>
+              <dt><%=submit_tag "Mov" %><%= text_field_tag "recipe_steps[][movie_url]", step.movie_url %></dt>
               <dd>
                 <%= text_area_tag "recipe_steps[][content]", step.content, class:'step_edit_area' %>
               </dd>
