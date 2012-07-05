@@ -26,3 +26,9 @@ $(window).load ->
       labelname = $(this).text()
       $("#recipe_recipe_food_genre_id optgroup").css( "display", "none" )
       $("#recipe_recipe_food_genre_id optgroup[label='"+labelname+"']").css( "display", "block" )
+  
+  $(".image_selecter").click ->
+    console.log("aaaa")
+
+  $(".movie_selecter").click ->
+    console.log("aaaa")

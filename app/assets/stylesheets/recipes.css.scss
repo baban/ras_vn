@@ -54,6 +54,7 @@ ul#recipe_comments {
 }
 
 #recipe_body{
+  position:relative;
   #recipe_photo{
     position:relative;
     img {
@@ -91,6 +92,7 @@ ul#recipe_comments {
     }
   }
 }
+
 #recipe_steps:after {
   content:"";
   display:block;
@@ -172,6 +174,27 @@ select#recipe_recipe_food_genre_id {
 #recipe_one_point {
   width:80%;
   height:4em;
+}
+
+dl.step > dt.selecter {
+  position:relative;
+  margin:0 0.2em;
+  padding:0;
+  width:2.7em;
+  float:left;
+  .button {
+    padding:0.1em 0.2em;
+    text-align:center;
+    background-color:#ddd;
+    border:outset 2px #ddd;
+    margin:0;
+  }
+  .button:active {
+    border-style:inset;
+  }
+  input {
+    display:none;
+  }
 }
 
 dl.step > dd {

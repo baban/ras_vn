@@ -1,6 +1,18 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
+  get "diary/index"
+
+  get "diary/show"
+
+  get "diary/create"
+
+  get "diary/edit"
+
+  get "diary/update"
+
+  get "diary/destroy"
+
   match "/auth/:provider/callback" => "sessions#callback"
   match "/logout" => "sessions#destroy", :as => :logout
 
