@@ -2,6 +2,9 @@
 
 class DiaryController < ApplicationController
   def index
+    id = params[:user_id]
+    @user = User.find_by_id(id)
+    @articles = @user.diary
   end
 
   def show

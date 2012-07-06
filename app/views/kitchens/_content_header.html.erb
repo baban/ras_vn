@@ -2,5 +2,5 @@
   <li><%=link_to "表示", action:"show", id: params[:id] %></li>
   <li><%=link_to "レシピ", action:"recipes", id: params[:id] %></li>
   <li><%=link_to "つくれぽ", action:"recipe_comments", id: params[:id] %></li>
-  <li><%=link_to "日記", action:"recipe_blogs", id: params[:id] %></li>
+  <li><%=link_to "日記", action:"diary", user_id: params[:id] %></li>
 </ul>

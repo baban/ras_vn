@@ -38,7 +38,7 @@
     <h3>カテゴリからレシピを探す</h3>
     <div class="section">
       <% @food_genres.each do |genre| %>
-      <div class="recipe_category">
+      <div class="qrecipe_category">
         <h4><%=link_to genre.name, controller:"recipes", action:"index", recipe_food_genre_id: genre.id %></h4>
         <%=image_tag genre.image.url(:thumb), alt:"" %>
         <ul class="recipe_sub_category">
