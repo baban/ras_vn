@@ -1,6 +1,1 @@
-"id","user_id","title","content","public","deleted_at","created_at","updated_at"
-1,1,"aaa","bbb",TRUE,,,
-2,1,"bbb","bbb",TRUE,,,
-3,1,"ccc","bbb",TRUE,,,
-4,1,"ddd","bbb",TRUE,,,
-5,2,"eee","bbb",TRUE,,,
+id,user_id,title,content,category_id,public,deleted_at,created_at,updated_at

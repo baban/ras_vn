@@ -38,13 +38,14 @@ ActiveRecord::Schema.define(:version => 20120705121300) do
   end
 
   create_table "diaries", :force => true do |t|
-    t.integer  "user_id",                      :null => false
-    t.string   "title",      :default => "",   :null => false
-    t.text     "content",                      :null => false
-    t.boolean  "public",     :default => true, :null => false
+    t.integer  "user_id",                       :null => false
+    t.string   "title",       :default => "",   :null => false
+    t.text     "content",                       :null => false
+    t.integer  "category_id", :default => 0,    :null => false
+    t.boolean  "public",      :default => true, :null => false
     t.datetime "deleted_at"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "distincts", :force => true do |t|

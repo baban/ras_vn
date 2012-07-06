@@ -3,8 +3,9 @@
 class DiaryController < ApplicationController
   def index
     id = params[:user_id]
+    @page = params[:page] || 1
     @user = User.find_by_id(id)
-    @diary = @user.diary
+    @diary = @user.diary.page(@page)
   end
 
   def show
@@ -12,17 +13,20 @@ class DiaryController < ApplicationController
   end
 
   def new
+    @diary = Diary.new
   end
 
   def create
     diary = Diary.new
     diary.attributes= params[:diary]
+    diary.user_id= current_user.id
     diary.save
 
-    redirect_to :index, notice:"記事を作成しました"
+    redirect_to( { action:"index", user_id: current_user.id }, notice:"記事を作成しました" )
   end
 
   def edit
+    @diary = Diary.find(params[:id])
   end
 
   def update
@@ -30,12 +34,12 @@ class DiaryController < ApplicationController
     diary.attributes= params[:diary]
     diary.save
 
-    redirect_to :index, notice:"記事を更新しました"
+    redirect_to( { action:"index", user_id: current_user.id }, notice:"記事を更新しました" )
   end
 
   def destroy
     Diary.find(params[:id]).destroy
     
-    redirect_to :index, notice:"削除が完了しました"
+    redirect_to( { action: "index" }, notice:"削除が完了しました" )
   end
 end
