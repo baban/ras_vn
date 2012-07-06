@@ -1,6 +1,6 @@
 # endoing: utf-8
 
-class MypagesController < ApplicationController
+class MypageController < ApplicationController
   before_filter :authenticate_user!
 
   def index

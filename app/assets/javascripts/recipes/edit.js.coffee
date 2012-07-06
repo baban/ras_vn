@@ -28,7 +28,7 @@ $(window).load ->
       $("#recipe_recipe_food_genre_id optgroup[label='"+labelname+"']").css( "display", "block" )
   
   $(".image_selecter").click ->
-    console.log("aaaa")
+    $(this).next().css("display","inline")
 
   $(".movie_selecter").click ->
-    console.log("aaaa")
+    $(this).next().css("display","inline")

@@ -41,13 +41,11 @@
         <dl id="recipe_steps">
           <% @recipe.edit_steps.each.with_index(1) do |step,i| %>
             <dl class="step" id="recipe_step_<%= i %>">
-              <dt class="selecter">
-                <div class="button image_selecter">画像</div>
-                <%= file_field_tag "recipe_steps[][image]" %>
+              <dt class="selecter image_field">
+                <%= file_field_tag "recipe_steps[][image]", class:"image_selecter" %>
               </dt>
-              <dt class="selecter">
-                <div class="button movie_selecter">映像</div>
-                <%= text_field_tag "recipe_steps[][movie_url]", step.movie_url %>
+              <dt class="selecter movie_field">
+                <%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter" %>
               </dt>
               <dt>Step <%= i %></dt>
               <dd>

@@ -177,10 +177,8 @@ select#recipe_recipe_food_genre_id {
 }
 
 dl.step > dt.selecter {
-  position:relative;
   margin:0 0.2em;
   padding:0;
-  width:2.7em;
   float:left;
   .button {
     padding:0.1em 0.2em;
@@ -193,7 +191,6 @@ dl.step > dt.selecter {
     border-style:inset;
   }
   input {
-    display:none;
   }
 }
 
@@ -210,3 +207,4 @@ dl.step > dd {
 .form_actions {
   text-align:right;
 }
+
