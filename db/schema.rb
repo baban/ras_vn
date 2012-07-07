@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120705121300) do
+ActiveRecord::Schema.define(:version => 20120707022739) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -107,6 +107,23 @@ ActiveRecord::Schema.define(:version => 20120705121300) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "recipe_drafts", :force => true do |t|
+    t.integer  "user_id",                                 :null => false
+    t.string   "title",                :default => "",    :null => false
+    t.text     "description",                             :null => false
+    t.boolean  "public",               :default => false, :null => false
+    t.string   "recipe_image"
+    t.text     "one_point",                               :null => false
+    t.integer  "like_count",           :default => 0,     :null => false
+    t.integer  "eatstyle_id",          :default => 0,     :null => false
+    t.integer  "amount"
+    t.integer  "view_count",           :default => 0,     :null => false
+    t.integer  "recipe_food_genre_id", :default => 0,     :null => false
+    t.time     "deleted_at"
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
+  end
+
   create_table "recipe_food_genres", :force => true do |t|
     t.string   "name",       :null => false
     t.string   "image"
@@ -119,6 +136,16 @@ ActiveRecord::Schema.define(:version => 20120705121300) do
     t.string   "name",                 :null => false
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+  end
+
+  create_table "recipe_foodstuff_drafts", :force => true do |t|
+    t.integer  "recipe_id",                      :null => false
+    t.integer  "recipe_food_id"
+    t.string   "name",           :default => "", :null => false
+    t.string   "amount",         :default => "", :null => false
+    t.time     "deleted_at"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
   end
 
   create_table "recipe_foodstuff_rankings", :force => true do |t|
@@ -148,6 +175,16 @@ ActiveRecord::Schema.define(:version => 20120705121300) do
     t.integer  "recipe_id",  :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "recipe_step_drafts", :force => true do |t|
+    t.integer  "recipe_id",                  :null => false
+    t.string   "image"
+    t.string   "movie_url"
+    t.string   "content",    :default => "", :null => false
+    t.datetime "deleted_at"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "recipe_steps", :force => true do |t|
