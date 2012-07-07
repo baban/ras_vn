@@ -8,10 +8,10 @@ class BookmarksController < ApplicationController
   end
 
   def create
-    Bookmark.create( user_id: current_user.id, recipe_id: params[:id] )
-    redirect_to controller:"recipes", action:"show", id: params[:id]
+    Bookmark.create( recipe_id: params[:id], user_id: params[:user_id] )
   end
 
-  def deatroy
+  def destroy
+    Bookmark.find_by_recipe_id_and_user_id( recipe_id: params[:id], user_id: params[:user_id] ).delete
   end
 end

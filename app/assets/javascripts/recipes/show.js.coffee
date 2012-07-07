@@ -1,6 +1,12 @@
 $(window).load ->
-  $("#bookmarke_button")
+  $("#bookmark_button")
     .live( "ajax:complete", (xhr) ->
+      v = $("#bookmark_button").text()
+      if v=="bookmark"
+        txt = "bookmarked"
+      else
+        txt = "bookmark"
+      $("#bookmark_button").text(txt)
       console.log("complete")
     )
     .live( "ajax:beforeSend", (xhr) ->

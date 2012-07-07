@@ -9,7 +9,11 @@
       <%=link_to @recipe.user.profile.nickname, kitchen_url(@user) %>のレシピ
       (<%= @recipe.user.profile.recipe_count %>件)
     </p>
-    <%=link_to "bookmark", { controller:"bookmarks", action:"create", id: @recipe.id }, remote: true, id:"bookmarke_button" %>
+    <% if bookmarked? %>
+      <%=link_to "bookmarked", { controller:"bookmarks", action:"destroy", id: @recipe.id, user_id: current_user.id }, remote: true, id:"bookmark_button" %>
+    <% else %>
+      <%=link_to "bookmark",   { controller:"bookmarks", action:"create",  id: @recipe.id, user_id: current_user.id }, remote: true, id:"bookmark_button" %>
+    <% end %>
   </div>
   <h2><%= @recipe.title %></h2>
   <div class="section" id="recipe_body">

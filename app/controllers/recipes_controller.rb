@@ -5,6 +5,8 @@ class RecipesController < ApplicationController
   #before_filter :editable_user_filter, only:[:edit,:update,:destroy]
   before_filter :advertisement_filter, except:[:create,:destroy]
 
+  helper_method :bookmarked?
+
   def index
     @recipes = RecipeSearcher.search(params)
   end
@@ -89,4 +91,7 @@ class RecipesController < ApplicationController
     @advertisement = RecipeAdvertisement.choice
   end
 
+  def bookmarked?
+    !!Bookmark.find_by_user_id_and_recipe_id(current_user.id, params[:id])
+  end
 end
