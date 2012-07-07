@@ -27,11 +27,11 @@ class RecipesController < ApplicationController
     @recipe.attributes= params[:recipe]
     @recipe.user_id= current_user.id
     @recipe.save
-    redirect_to( {action:'edit', id: @recipe.id }, flash:{ notice: "update completed" })
+    redirect_to( {action:'edit', id: @recipe.id }, notice: "create completed" )
   end
 
   def edit
-    @recipe = Recipe.find(params[:id])
+    @recipe = RecipeDraft.find(params[:id])
     @steps  = @recipe.edit_steps
     @foodstuffs  = @recipe.edit_foodstuffs
   end
@@ -69,9 +69,12 @@ class RecipesController < ApplicationController
   end
 
   def like
-    Recipe.like( params[:id], current_user )
+    # Recipe.like( id: params[:id], user_id: params[:user_id]  )
 
-    redirect_to action: "show", id: params[:id]
+    # redirect_to action: "show", id: params[:id]
+    respond_to do |format|
+      format.json { render json: nil }
+    end
   end
 
   private

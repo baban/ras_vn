@@ -26,6 +26,11 @@ class Recipe < ActiveRecord::Base
   scope :visibles, ->{ where(" public = true ") }
   scope :topics, -> { visibles.page(1).per(2) }
 
+  def self.after_create
+    p :after_save
+    p self.inspect
+  end
+
   def user
     User.find(self.user_id)
   end
@@ -56,12 +61,13 @@ class Recipe < ActiveRecord::Base
   end
 
   # this method is executed when [like] button cliked
-  def self.like( id, user )
+  def self.like( params )
+    id, user_id = params[:id], params[:user_id]
     recipe = self.find(id)
     recipe.like_count += 1
     recipe.save
 
-    RecipeLikeLog.create( recipe_id: id, user_id: user.id )
+    RecipeLikeLog.create( recipe_id: id, user_id: user_id )
   end
 
 end
