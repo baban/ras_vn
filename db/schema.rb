@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
 
   create_table "recipe_drafts", :force => true do |t|
     t.integer  "user_id",                                 :null => false
+    t.integer  "recipe_id",                               :null => false
     t.string   "title",                :default => "",    :null => false
     t.text     "description",                             :null => false
     t.boolean  "public",               :default => false, :null => false
@@ -139,13 +140,13 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
   end
 
   create_table "recipe_foodstuff_drafts", :force => true do |t|
-    t.integer  "recipe_id",                      :null => false
+    t.integer  "recipe_draft_id",                 :null => false
     t.integer  "recipe_food_id"
-    t.string   "name",           :default => "", :null => false
-    t.string   "amount",         :default => "", :null => false
+    t.string   "name",            :default => "", :null => false
+    t.string   "amount",          :default => "", :null => false
     t.time     "deleted_at"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   create_table "recipe_foodstuff_rankings", :force => true do |t|
@@ -178,13 +179,13 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
   end
 
   create_table "recipe_step_drafts", :force => true do |t|
-    t.integer  "recipe_id",                  :null => false
+    t.integer  "recipe_draft_id",                 :null => false
     t.string   "image"
     t.string   "movie_url"
-    t.string   "content",    :default => "", :null => false
+    t.string   "content",         :default => "", :null => false
     t.datetime "deleted_at"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   create_table "recipe_steps", :force => true do |t|

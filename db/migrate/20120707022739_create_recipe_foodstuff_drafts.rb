@@ -3,7 +3,7 @@
 class CreateRecipeFoodstuffDrafts < ActiveRecord::Migration
   def change
     create_table :recipe_foodstuff_drafts do |t|
-      t.integer :recipe_id,       null: false
+      t.integer :recipe_draft_id,       null: false
       t.integer :recipe_food_id,  null: true
       t.string  :name,            null: false, default: ''
       t.string  :amount,          null: false, default: ''

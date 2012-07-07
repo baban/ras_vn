@@ -4,6 +4,7 @@ class Recipe < ActiveRecord::Base
   acts_as_paranoid
   paginates_per 12
 
+  has_one  :recipe_draft
   has_many :bookmarks
   has_many :recipe_foodstuffs
   has_many :recipe_steps
@@ -16,6 +17,7 @@ class Recipe < ActiveRecord::Base
 
   mount_uploader :recipe_image, RecipeImageUploader 
 
+  alias :draft :recipe_draft
   alias :foodstuffs :recipe_foodstuffs
   alias :steps :recipe_steps
   alias :comments :recipe_comments

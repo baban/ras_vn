@@ -4,6 +4,7 @@ class CreateRecipeDrafts < ActiveRecord::Migration
   def change
     create_table :recipe_drafts do |t|
       t.integer  :user_id,      null: false
+      t.integer  :recipe_id,    null: false
       t.string   :title,        null: false, default: ''
       t.text     :description,  null: false, default: ''
       t.boolean  :public,       null: false, default: false
