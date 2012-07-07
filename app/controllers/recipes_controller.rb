@@ -70,10 +70,8 @@ class RecipesController < ApplicationController
 
   def like
     # Recipe.like( id: params[:id], user_id: params[:user_id]  )
-
-    # redirect_to action: "show", id: params[:id]
     respond_to do |format|
-      format.json { render json: nil }
+      format.json { render json: { id: params[:id] } }
     end
   end
 

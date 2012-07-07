@@ -9,9 +9,7 @@
       <%=link_to @recipe.user.profile.nickname, kitchen_url(@user) %>のレシピ
       (<%= @recipe.user.profile.recipe_count %>件)
     </p>
-    <%=form_for :bookmarks, url:{ controller:"bookmarks", action:"create", id: @recipe.id }, html:{ class:"bookmark_form" } do |f| %>
-      <%=f.submit "bookmark" %>
-    <% end %>
+    <%=link_to "bookmark", { controller:"bookmarks", action:"create", id: @recipe.id }, remote: true, id:"bookmarke_button" %>
   </div>
   <h2><%= @recipe.title %></h2>
   <div class="section" id="recipe_body">
@@ -19,7 +17,7 @@
       <div id="recipe_photo" class="figure">
         <%=image_tag @recipe.recipe_image.url(:large_thumb) %>
       </div>
-      <%=link_to "like!", { action:"like", id:params[:id], user_id:params[:user_id] }, id:"like_button", remote: true %>
+      <%=link_to "like!", { action:"like", id: params[:id], user_id: params[:user_id] }, remote: true, id: "like_button" %>
       <div id="description">
         <%= @recipe.description %>
       </div>
