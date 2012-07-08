@@ -2,7 +2,7 @@
 
 <h2>recipe</h2>
 <div id="content_body" class="section">
-  <%=semantic_form_for @recipe, html:{multipart: true} do |f| %>
+  <%=semantic_form_for @recipe, url: recipe_url(@recipe.id), html:{multipart: true} do |f| %>
     <h2><%= f.text_field :title, value: @recipe.title %></h2>
     <div id="recipe_base_info">
       <div class="section" id="recipe_body">
@@ -17,7 +17,8 @@
           <%= f.text_area :description, value: @recipe.description %>
         </div>
         <div>
-          <%= f.select :recipe_food_genre_id, RecipeFoodGenre.all.map{ |o| [o.name,o.id] } %>
+        <%= select_tag(:recipe_genre_selecter, options_for_select(RecipeFoodGenre.all.map{ |o| [ o.name,o.id ] }) ) %>
+        <%= f.grouped_collection_select(:recipe_food_genre_id, RecipeFoodGenre.all, :recipe_foods, :name, :id, :name, include_blank: true ) %>
         </div>
         <div id="foodstuffs_area" class="area">
           <table id="foodstuffs">
@@ -39,14 +40,22 @@
       <div id="recipes_steps_area" class="area">
         <dl id="recipe_steps">
           <% @recipe.edit_steps.each.with_index(1) do |step,i| %>
-            <dl class="step">
-              <dt>Step <%= i %></dt>
-              <dt><%= file_field_tag "recipe_steps[][image]" %></dt>
-              <dt>
-                <%= text_field_tag "recipe_steps[][movie_url]", step.movie_url %>
+            <dl class="step" id="recipe_step_<%= i %>">
+              <dt class="selecter image_field">
+                <%= file_field_tag "recipe_steps[][image]", class:"image_selecter" %>
               </dt>
+              <dt class="selecter movie_field">
+                <%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter" %>
+              </dt>
+              <dt>Step <%= i %></dt>
               <dd>
                 <%= text_area_tag "recipe_steps[][content]", step.content, class:'step_edit_area' %>
+                <% if step.image %>
+                  <%=image_tag step.image.url(:thumb), alt:"" %>
+                <% end %>
+                <% if step.movie_url %>
+                  <iframe width="560" height="315" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
+                <% end %>
               </dd>
             </dl>
           <% end %>
@@ -67,3 +76,4 @@
     <% end %>
   </div>
 </div>
+

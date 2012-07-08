@@ -1,3 +1,4 @@
+<%= include_action_javascript %>
 
 <%= render partial:"layouts/content_footer" %>
 
@@ -8,8 +9,21 @@
       <%=link_to @recipe.user.profile.nickname, kitchen_url(@user) %>のレシピ
       (<%= @recipe.user.profile.recipe_count %>件)
     </p>
-    <%=form_for :bookmarks, url:{ controller:"bookmarks", action:"create", id: @recipe.id }, html:{ class:"bookmark_form" } do |f| %>
-      <%=f.submit "bookmark" %>
+    <% if bookmarked? %>
+      <%=form_for( @bookmark, url:{ controller:"bookmarks", action:"destroy", id: @bookmark.id }, html:{ id:"bookmark_button" } ) do |f| %>
+        <%= f.hidden_field :recipe_id, value: @recipe.id %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.submit %>
+      <% end %>
+    <% else %>
+      <%=form_for( @bookmark, html:{ id:"bookmark_button" } ) do |f| %>
+        <%= f.hidden_field :recipe_id, value: @recipe.id %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.submit %>
+      <% end %>
+    <% end %>
+    <% if my_recipe? %>
+      <%=link_to "edit", action:"edit", id: @recipe.id %>
     <% end %>
   </div>
   <h2><%= @recipe.title %></h2>
@@ -18,9 +32,7 @@
       <div id="recipe_photo" class="figure">
         <%=image_tag @recipe.recipe_image.url(:large_thumb) %>
       </div>
-      <%=form_for @recipe, url:{ action:"like", id: params[:id] }, method:"GET" do |f| %>
-        <%=f.submit "like!" %>
-      <% end %>
+      <%=link_to "like!", { action:"like", id: params[:id], user_id: params[:user_id] }, remote: true, id: "like_button" %>
       <div id="description">
         <%= @recipe.description %>
       </div>
@@ -37,9 +49,11 @@
         <dl class="step">
           <dt>Step<%= i %></dt>
           <dd>
-            <% if step.image %><%=image_tag step.image.url(:thumb), alt:"" %><% end %>
+            <% if step.image %>
+              <%=image_tag step.image.url(:thumb), alt:"" %>
+            <% end %>
             <% if step.movie_url %>
-              <iframe width="448" height="252" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
             <% end %>
             <%= step.content %>
           </dd>

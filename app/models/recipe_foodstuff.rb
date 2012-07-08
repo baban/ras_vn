@@ -3,5 +3,5 @@
 class RecipeFoodstuff < ActiveRecord::Base
   acts_as_paranoid
 
-  belongs_to :recipes
+  belongs_to :recipe
 end

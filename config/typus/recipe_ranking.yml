@@ -1,8 +1,0 @@
-# Use the README file as a reference to customize settings.
-
-RecipeRanking:
-  fields:
-    default: recipe_id
-    form: recipe_id
-  relationships: 
-  application: Application

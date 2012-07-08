@@ -6,7 +6,7 @@ class KitchensController < ApplicationController
     @profile = @user.profile
     @visibility = @profile.visibility
     @recipes = @user.recipes.topics
-    @recipes = @user.recipe_comments.topics
+    @recipe_comments = @user.recipe_comments.topics
   end
 
   def recipes

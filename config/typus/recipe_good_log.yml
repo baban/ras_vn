@@ -1,8 +1,0 @@
-# Use the README file as a reference to customize settings.
-
-RecipeGoodLog:
-  fields:
-    default: user_id, recipe_id
-    form: user_id, recipe_id
-  relationships: 
-  application: Application

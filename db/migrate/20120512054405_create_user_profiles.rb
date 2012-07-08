@@ -14,6 +14,7 @@ class CreateUserProfiles < ActiveRecord::Migration
       t.integer  :prefecture_id, null: false, default: 0
       t.integer  :area_id,       null: false, default: 0
       t.text     :comment,       null: false, default: ""
+      t.integer  :recipe_count,  null: false, default: 0
 
       t.timestamps
     end

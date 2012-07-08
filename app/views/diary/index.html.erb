@@ -1,0 +1,10 @@
+<h2>日記</h2>
+
+<div id="conent_body" class="section">
+  <% @diary.each do |d| %>
+    <div class="article">
+      <h3><%=link_to d.title, action:"show", id: d.id %></h3>
+      <div><%= d.content %></div>
+    </div>
+  <% end %>
+</div>

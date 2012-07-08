@@ -1,0 +1,13 @@
+<h1>編集</h1>
+
+<%= form_for @diary, url:{ action:"create" } do |f| %>
+  <p>
+    <%=f.label :title %>
+    <%=f.text_field :title %>
+  </p>
+  <p><%=f.label :content %></p>
+  <p><%=f.text_area :content %></p>
+  <p><%=f.select :public, { "public"=>true, "close"=>false } %></p>
+  <p><%=f.submit %></p>
+<% end %>
+

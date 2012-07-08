@@ -4,15 +4,16 @@ RasVn::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#callback"
   match "/logout" => "sessions#destroy", :as => :logout
 
-  resource(:mypage){ member { get :index, :recipes, :recipe_comments } }
   resource :profile
 
   resources(:bookmarks)
+  resources(:diary)
   resources(:information)
-  resources(:recipes){ member { get :like } }
+  resources(:recipes){ collection { get :like } }
   resources(:recipe_advertisements)
   resources(:recipe_comments)
   resources(:restaurants)
+  resources(:mypage){ member { get :recipes, :recipe_comments } }
   resources(:kitchens) { member { get :recipes } }
 
   root to:"top#index"

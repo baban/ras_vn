@@ -5,6 +5,8 @@ class RecipesController < ApplicationController
   #before_filter :editable_user_filter, only:[:edit,:update,:destroy]
   before_filter :advertisement_filter, except:[:create,:destroy]
 
+  helper_method :bookmarked?, :my_recipe?
+
   def index
     @recipes = RecipeSearcher.search(params)
   end
@@ -14,6 +16,8 @@ class RecipesController < ApplicationController
 
     @recipe = Recipe.find(params[:id])
     @recipe_comment = RecipeComment.new
+
+    @bookmark = Bookmark.find_by_recipe_id_and_user_id( params[:id], current_user.id ) || Bookmark.new
 
     @recipe.view_count_increment!
   end
@@ -25,34 +29,42 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new
     @recipe.attributes= params[:recipe]
-    @recipe.user_id= current_user.id
     @recipe.save
-    redirect_to( {action:'edit', id: @recipe.id }, flash:{ notice: "update completed" })
+    
+    @draft = RecipeDraft.new
+    @draft.attributes= params[:recipe]
+    @draft.recipe_id= @recipe.id
+    @draft.save
+
+    redirect_to( { action:'edit', id: @recipe.id }, notice: "create completed" )
   end
 
   def edit
-    @recipe = Recipe.find(params[:id])
+    @recipe = RecipeDraft.find(params[:id])
     @steps  = @recipe.edit_steps
     @foodstuffs  = @recipe.edit_foodstuffs
   end
 
   def update
-    @recipe = Recipe.find(params[:id])
+    @recipe = RecipeDraft.find(params[:id])
 
     @foodstuffs = params[:foodstuffs]
       .select{ |h| h["name"].blank?.! }
-      .map{ |h| RecipeFoodstuff.new(name: h["name"], amount: h["amount"]) }
+      .map{ |h| RecipeFoodstuffDraft.new(name: h["name"], amount: h["amount"]) }
     logger.info @foodstuffs.inspect
-    @recipe.recipe_foodstuffs= @foodstuffs
+    @recipe.foodstuffs= @foodstuffs
 
     @steps = params[:recipe_steps]
       .select{ |o| o[:content].blank?.! }
-      .map { |v| RecipeStep.new(v) }
-    @recipe.recipe_steps= @steps
+      .map { |v| RecipeStepDraft.new(v) }
+    @recipe.steps= @steps
 
     @recipe.attributes= params[:recipe]
     @recipe.user_id= current_user.id
     @recipe.save
+
+    # copy_draft
+    @recipe.copy_public
 
     if params[:commit] == "Save"
       flash[:notice] = "Update"
@@ -69,9 +81,10 @@ class RecipesController < ApplicationController
   end
 
   def like
-    Recipe.like( params[:id], current_user )
-
-    redirect_to action: "show", id: params[:id]
+    # Recipe.like( id: params[:id], user_id: params[:user_id]  )
+    respond_to do |format|
+      format.json { render json: { id: params[:id] } }
+    end
   end
 
   private
@@ -88,4 +101,12 @@ class RecipesController < ApplicationController
     @advertisement = RecipeAdvertisement.choice
   end
 
+  def bookmarked?
+    !!Bookmark.find_by_user_id_and_recipe_id(current_user.id, params[:id])
+  end
+
+  def my_recipe?
+    recipe = Recipe.find_by_id(params[:id])
+    recipe && current_user && (recipe.user_id == current_user.id)
+  end
 end

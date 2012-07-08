@@ -29,6 +29,16 @@
     border:solid 1px #aaa;
     float:left;
     clear:none;
+    img {
+      margin:0;
+      width:70px;
+      height:70px;
+      border:dashed 1px #aaa;
+      float:left;
+    }
+  }
+  ul.recipe_sub_category {
+    margin:0 0 0 71px;
   }
   ul.recipe_sub_category > li {
     display:inline;
