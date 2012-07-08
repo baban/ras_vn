@@ -18,14 +18,12 @@ module RecipeSearcher
   end
 
   def self.search_by_recipe_food_id( recipe_food_id )
-    recipe_ids = RecipeFoodstuff.where( " recipe_food_id = ? ", recipe_food_id ).pluck(:recipe_id)
-    Recipe.where( " id in (?) ", recipe_ids )
+    Recipe.where( " recipe_food_id = ? ", recipe_food_id )
   end
 
   def self.search_by_recipe_food_genre_id( recipe_food_genre_id )
-    food_ids = RecipeFoodGenre.where( " id = ? ", recipe_food_genre_id ).pluck(:id)
-    recipe_ids = RecipeFoodstuff.where( " recipe_food_id = ? ", food_ids ).pluck(:recipe_id)
-    Recipe.where( " id in (?) ", recipe_ids )
+    food_ids = RecipeFood.where( " id = ? ", recipe_food_genre_id ).pluck(:id)
+    Recipe.where( " recipe_food_id in (?) ", food_ids )
   end
 
   def self.search_by_word( word )
