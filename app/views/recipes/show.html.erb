@@ -10,9 +10,20 @@
       (<%= @recipe.user.profile.recipe_count %>件)
     </p>
     <% if bookmarked? %>
-      <%=link_to "bookmarked", { controller:"bookmarks", action:"destroy", id: @recipe.id, user_id: current_user.id }, remote: true, id:"bookmark_button" %>
+      <%=form_for( @bookmark, url:{ controller:"bookmarks", action:"destroy", id: @bookmark.id }, html:{ id:"bookmark_button" } ) do |f| %>
+        <%= f.hidden_field :recipe_id, value: @recipe.id %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.submit %>
+      <% end %>
     <% else %>
-      <%=link_to "bookmark",   { controller:"bookmarks", action:"create",  id: @recipe.id, user_id: current_user.id }, remote: true, id:"bookmark_button" %>
+      <%=form_for( @bookmark, html:{ id:"bookmark_button" } ) do |f| %>
+        <%= f.hidden_field :recipe_id, value: @recipe.id %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.submit %>
+      <% end %>
+    <% end %>
+    <% if my_recipe? %>
+      <%=link_to "edit", action:"edit", id: @recipe.id %>
     <% end %>
   </div>
   <h2><%= @recipe.title %></h2>

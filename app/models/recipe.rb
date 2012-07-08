@@ -26,23 +26,10 @@ class Recipe < ActiveRecord::Base
   scope :visibles, ->{ where(" public = true ") }
   scope :topics, -> { visibles.page(1).per(2) }
 
-  def self.after_create
-    p :after_save
-    p self.inspect
-  end
-
   def user
     User.find(self.user_id)
   end
   alias :chef :user
-
-  # this method generate steps for edit action
-  def edit_steps
-    # return value have at least 4 steps
-    steps = recipe_steps.to_a
-    (4 - steps.size).times{ steps<< RecipeStep.new } if steps.size < 4
-    steps
-  end
 
   def view_count_increment!
     self.view_count+=1
@@ -69,5 +56,5 @@ class Recipe < ActiveRecord::Base
 
     RecipeLikeLog.create( recipe_id: id, user_id: user_id )
   end
-
 end
+

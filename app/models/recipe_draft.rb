@@ -12,13 +12,10 @@ class RecipeDraft < ActiveRecord::Base
   mount_uploader :recipe_image, RecipeImageUploader
 
   alias :foodstuffs :recipe_foodstuff_drafts
+  alias :foodstuffs= :recipe_foodstuff_drafts=
   alias :steps :recipe_step_drafts
+  alias :steps= :recipe_step_drafts=
   alias :image :recipe_image
-
-  def initialize(*_)
-    super
-    @recipe = self.recipe || Recipe.new(*_)
-  end
 
   def user
     User.find(self.user_id)

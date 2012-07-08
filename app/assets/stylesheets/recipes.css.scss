@@ -70,6 +70,10 @@ ul#recipe_comments {
   }
 }
 
+form#bookmark_button {
+  float:right;
+}
+
 #recipe_base_info:after {
   content:"";
   display:block;
