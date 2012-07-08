@@ -19,7 +19,9 @@ class Recipe < ActiveRecord::Base
 
   alias :draft :recipe_draft
   alias :foodstuffs :recipe_foodstuffs
+  alias :foodstuffs= :recipe_foodstuffs=
   alias :steps :recipe_steps
+  alias :steps= :recipe_steps=
   alias :comments :recipe_comments
   alias :image :recipe_image
 
@@ -34,13 +36,6 @@ class Recipe < ActiveRecord::Base
   def view_count_increment!
     self.view_count+=1
     self.save
-  end
-
-  # this method generate foodstuffs for edit action
-  def edit_foodstuffs
-    foodstuffs = recipe_foodstuffs.to_a
-    (4 - foodstuffs.size).times{ foodstuffs<< RecipeFoodstuff.new } if foodstuffs.size < 4
-    foodstuffs
   end
 
   def food_genre

@@ -63,6 +63,9 @@ class RecipesController < ApplicationController
     @recipe.user_id= current_user.id
     @recipe.save
 
+    # copy_draft
+    @recipe.copy_public
+
     if params[:commit] == "Save"
       flash[:notice] = "Update"
       render action:"edit"
