@@ -1,3 +1,4 @@
+<%= include_action_javascript %>
 
 <div id="content_body" class="section">
   <h2>recipe</h2>
@@ -6,6 +7,9 @@
     <p><%= f.text_field :title, value: @recipe.title %></p>
     <p><%= f.label :description, "Description:" %></p>
     <p><%= f.text_area :description, value: @recipe.description %></p>
+    <div id="recipe_genre_select_area" class="area">
+      <%= recipe_genre_select_area(f) %>
+    </div>
     <p><%= f.label :image, "Image:" %></p>
     <p><%= f.file_field :recipe_image, value: ''  %></p>
     <p><%= f.select :public, { public: true, closed: false } %></p>

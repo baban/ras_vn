@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class User < ActiveRecord::Base
-  # DBを切り分け
+  # users table and user_profiles table are saved data to another database
   establish_connection "ras_vn_users" if [:staging,:production].include?(Rails.env.to_sym)
 
   # Include default devise modules. Others available are:

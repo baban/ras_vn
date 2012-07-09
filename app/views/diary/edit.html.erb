@@ -1,13 +1,14 @@
 <h1>編集</h1>
 
-<%= form_for @diary, url:{ action:"create" } do |f| %>
+<%= form_for @diary, url:{ action:"update", id: @diary.id } do |f| %>
   <p>
     <%=f.label :title %>
     <%=f.text_field :title %>
   </p>
-  <p><%=f.label :content %></p>
-  <p><%=f.text_area :content %></p>
-  <p><%=f.select :public, { "public"=>true, "close"=>false } %></p>
-  <p><%=f.submit %></p>
+  <p><%= f.label :content %></p>
+  <p><%= f.text_area :content %></p>
+  <p><%= f.label :publiced_at %></p>
+  <p><%= f.date_select :publiced_at, use_month_numbers: true %></p>
+  <p><%= f.submit %></p>
 <% end %>
 
