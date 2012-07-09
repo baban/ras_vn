@@ -5,6 +5,13 @@
     <%=f.label :title %>
     <%=f.text_field :title %>
   </p>
+  <p>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </p>
+  <% if @diary.image %>
+    <%= image_tag @diary.image_url.to_s, alt:"" %>
+  <% end %>
   <p><%= f.label :content %></p>
   <p><%= f.text_area :content %></p>
   <p><%= f.label :publiced_at %></p>

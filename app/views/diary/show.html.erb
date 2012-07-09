@@ -3,6 +3,9 @@
 <div id="conent_body" class="section">
   <div class="article">
     <h3><%= @diary.title %></h3>
+    <% if @diary.image %>
+      <%= image_tag @diary.image_url.to_s, alt:"" %>
+    <% end %>
     <div><%= @diary.content %></div>
   </div>
 </div>
