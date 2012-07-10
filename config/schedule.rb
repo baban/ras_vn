@@ -21,4 +21,8 @@ every 1.days do
   runner "RecipeRanking.aggrigation"
 end
 
+every 1.days do
+  runner "RecipeFoodRanking.aggrigation"
+end
+
 # Learn more: http://github.com/javan/whenever

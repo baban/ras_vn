@@ -10,7 +10,7 @@ class TopController < ApplicationController
 
     @ranking = RecipeRanking.topics
     @recipe_ranking = RecipeRanking.topics
-    @foodstuff_ranking = RecipeFoodstuffRanking.topics
+    @foodstuff_ranking = RecipeFoodGenreRanking.topics
   end
 
   def restaurant
