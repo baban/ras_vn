@@ -298,7 +298,7 @@ DEPENDENCIES
   capistrano-ext (= 1.2.1)
   capistrano_colors (= 0.5.5)
   capybara
-  carrierwave
+  carrierwave (= 0.6.2)
   coffee-rails (~> 3.2.1)
   devise (= 2.1.0)
   factory_girl_rails
@@ -312,7 +312,7 @@ DEPENDENCIES
   jpmobile (= 3.0.1)
   jquery-rails
   kaminari
-  mini_magick
+  mini_magick (= 3.4)
   mysql2 (= 0.3.11)
   omniauth (= 1.1.0)
   omniauth-facebook (= 1.4.0)
@@ -324,7 +324,7 @@ DEPENDENCIES
   pry-rails
   rails (= 3.2.2)
   rails3_acts_as_paranoid (= 0.2.4)
-  rmagick
+  rmagick (= 2.13.1)
   rspec
   rspec-rails
   ruby-openid (= 2.1.8)

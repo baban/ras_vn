@@ -21,9 +21,9 @@ gem "omniauth-google-oauth2", "0.1.10"
 gem "aspectr"  # add aspect oriented programming functions
 gem 'jbuilder'
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem "rmagick" # image-magick ruby module
-gem "mini_magick"
-gem "carrierwave"
+gem "rmagick", "2.13.1" # image-magick ruby module
+gem "mini_magick", "3.4"
+gem "carrierwave", "0.6.2"
 
 # ruby extentions
 gem "tapp" # add tapp(tap print) method
