@@ -27,11 +27,6 @@
       </td>
     </tr>
     <tr>
-      <th>お住まい</th>
-      <td colspan="2"><%=f.text_field :address, value: @profile.address %></td>
-      <td><%= visibility_radios( @visibility, :address ) %></td>
-    </tr>
-    <tr>
       <th>誕生日</th>
       <td colspan="2"><%= f.text_field :birthday, value:@profile.birthday %></td>
       <td><%= visibility_radios( @visibility, :birthday ) %></td>

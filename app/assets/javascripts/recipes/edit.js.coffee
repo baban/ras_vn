@@ -10,7 +10,6 @@ $(window).load ->
   $("#add_foodstuffs_row").click ->
     $("#foodstuffs").append(food_stuff_row(4))
 
-
   $("#add_steps").click ->
     console.log("hoge");
     s = 
@@ -24,8 +23,8 @@ $(window).load ->
     $("select#recipe_genre_selecter option:selected").each -> 
       $("#recipe_recipe_food_genre_id").css( "display", "inline" )
       labelname = $(this).text()
-      $("#recipe_recipe_food_genre_id optgroup").css( "display", "none" )
-      $("#recipe_recipe_food_genre_id optgroup[label='"+labelname+"']").css( "display", "block" )
+      $("#recipe_recipe_food_id optgroup").css( "display", "none" )
+      $("#recipe_recipe_food_id optgroup[label='"+labelname+"']").css( "display", "block" )
   
   $(".image_selecter").click ->
     $(this).next().css("display","inline")

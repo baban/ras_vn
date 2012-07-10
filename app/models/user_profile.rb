@@ -1,6 +1,9 @@
 # encoding: utf-8
 
 class UserProfile < ActiveRecord::Base
+  # users table and user_profiles table are saved data to another database
+  establish_connection "ras_vn_users" if [:staging,:production].include?(Rails.env.to_sym)
+
   has_one :user_profile_visibility
   alias :visibility :user_profile_visibility
   belongs_to :user

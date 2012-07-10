@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class DiaryController < ApplicationController
+  helper_method :my_diary?
+
   def index
     id = params[:user_id]
     @page = params[:page] || 1
@@ -22,7 +24,7 @@ class DiaryController < ApplicationController
     diary.user_id= current_user.id
     diary.save
 
-    redirect_to( { action:"index", user_id: current_user.id }, notice:"記事を作成しました" )
+    redirect_to action:"edit", id: diary.id
   end
 
   def edit
@@ -34,12 +36,17 @@ class DiaryController < ApplicationController
     diary.attributes= params[:diary]
     diary.save
 
-    redirect_to( { action:"index", user_id: current_user.id }, notice:"記事を更新しました" )
+    redirect_to( { action:"show", id: diary.id }, notice:"記事を更新しました" )
   end
 
   def destroy
     Diary.find(params[:id]).destroy
     
     redirect_to( { action: "index" }, notice:"削除が完了しました" )
+  end
+
+  private 
+  def my_diary?
+    !!Diary.find_by_user_id( params[:user_id] )
   end
 end

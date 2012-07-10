@@ -38,14 +38,15 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
   end
 
   create_table "diaries", :force => true do |t|
-    t.integer  "user_id",                       :null => false
-    t.string   "title",       :default => "",   :null => false
-    t.text     "content",                       :null => false
-    t.integer  "category_id", :default => 0,    :null => false
-    t.boolean  "public",      :default => true, :null => false
+    t.integer  "user_id",                                        :null => false
+    t.string   "title",       :default => "",                    :null => false
+    t.text     "content",                                        :null => false
+    t.integer  "category_id", :default => 0,                     :null => false
+    t.string   "image"
+    t.datetime "publiced_at", :default => '2012-07-10 00:00:00', :null => false
     t.datetime "deleted_at"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
   end
 
   create_table "distincts", :force => true do |t|
@@ -125,6 +126,14 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "updated_at",                        :null => false
   end
 
+  create_table "recipe_food_genre_rankings", :force => true do |t|
+    t.integer  "recipe_food_genre_id"
+    t.integer  "point",                :default => 0,            :null => false
+    t.date     "ranked_dt",            :default => '2012-07-11', :null => false
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
+  end
+
   create_table "recipe_food_genres", :force => true do |t|
     t.string   "name",       :null => false
     t.string   "image"
@@ -147,12 +156,6 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.time     "deleted_at"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
-  end
-
-  create_table "recipe_foodstuff_rankings", :force => true do |t|
-    t.integer  "recipe_foodstuff_id"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
   end
 
   create_table "recipe_foodstuffs", :force => true do |t|

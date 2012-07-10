@@ -7,7 +7,8 @@ class CreateDiaries < ActiveRecord::Migration
       t.string   :title,       null: false, default: ""
       t.text     :content,     null: false, default: ""
       t.integer  :category_id, null: false, default: 0
-      t.boolean  :public,      null: false, default: true
+      t.string   :image,       null: true
+      t.datetime :publiced_at, null: false, default: Date.today
       t.datetime :deleted_at,  null: true
 
       t.timestamps
