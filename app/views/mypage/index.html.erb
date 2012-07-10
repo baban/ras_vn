@@ -1,9 +1,9 @@
   <div id="content_body">
     <div id="content_header">
-      <ul>
+      <ul id="content_menu_list">
+        <li><%= link_to "mypage", controller:"mypage", action:"index" %></li>
         <li></li>
-        <li></li>
-        <li></li>
+        <li><%= link_to "bookmark", controller:"bookmark", action:"index" %></li>
         <li><%= link_to "kitchen", controller:"kitchens", action:"index" %></li>
       </ul>
     </div>
