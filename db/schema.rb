@@ -128,9 +128,10 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
 
   create_table "recipe_food_genre_rankings", :force => true do |t|
     t.integer  "recipe_food_genre_id"
-    t.integer  "point",                :default => 0, :null => false
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.integer  "point",                :default => 0,            :null => false
+    t.date     "ranked_dt",            :default => '2012-07-11', :null => false
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
   end
 
   create_table "recipe_food_genres", :force => true do |t|
