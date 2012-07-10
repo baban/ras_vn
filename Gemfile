@@ -3,26 +3,25 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.2'
 
-gem 'mysql2', '0.3.11'
+gem "mysql2", "0.3.11"
 
 # view urilities
-gem 'jquery-rails'
+gem "jquery-rails"
 
-gem 'devise', "2.1.0" # add login, logout 
-gem 'typus', "3.1.10" # generte administration functions
+gem "devise", "2.1.0" # add login, logout 
+gem "typus", "3.1.10" # generte administration functions
 gem "formtastic", "2.1.0"
-gem 'omniauth', "1.1.0"
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
-#gem 'omniauth-google-api'
-gem "omniauth-google-oauth2"
+gem "omniauth", "1.1.0"
+gem "omniauth-twitter", "0.0.9"
+gem "omniauth-facebook", "1.4.0"
+gem "omniauth-google-oauth2", "0.1.10"
 #gem "mongo_mapper"
 
 # controller, model tools
 gem "aspectr"  # add aspect oriented programming functions
 gem 'jbuilder'
 gem 'bcrypt-ruby', '~> 3.0.0'
-#gem "rmagick" # image-magick ruby module
+gem "rmagick" # image-magick ruby module
 gem "mini_magick"
 gem "carrierwave"
 

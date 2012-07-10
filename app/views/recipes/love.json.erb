@@ -1,0 +1,72 @@
+<%= include_action_javascript %>
+
+<%= render partial:"layouts/content_footer" %>
+
+<div id="content_body" class="section">
+
+  <div id="recipe_header">
+    <p class="chef">
+      <%=link_to @recipe.user.profile.nickname, kitchen_url(@user) %>のレシピ
+      (<%= @recipe.user.profile.recipe_count %>件)
+    </p>
+    <%=form_for :bookmarks, url:{ controller:"bookmarks", action:"create", id: @recipe.id }, html:{ class:"bookmark_form" } do |f| %>
+      <%=f.submit "bookmark" %>
+    <% end %>
+  </div>
+  <h2><%= @recipe.title %></h2>
+  <div class="section" id="recipe_body">
+    <div id="recipe_base_info">
+      <div id="recipe_photo" class="figure">
+        <%=image_tag @recipe.recipe_image.url(:large_thumb) %>
+      </div>
+      <%=link_to "like!", { action:"like", id:params[:id], user_id:params[:user_id] }, id:"like_button", remote: true %>
+      <div id="description">
+        <%= @recipe.description %>
+      </div>
+      <div id="food_genre"><%= @recipe.food_genre.name %></div>
+      <h3>材料 <%= @recipe.amount && "(#{@recipe.amount}人前)"  %></h3>
+      <table>
+        <% @recipe.foodstuffs.each do |foodstuff| %>
+          <tr><td><%= foodstuff.name %></td><td><%= foodstuff.amount %></td></tr>
+        <% end %>
+      </table>
+    </div>
+    <dl id="recipe_steps">
+      <% @recipe.steps.each.with_index(1) do |step,i| %>
+        <dl class="step">
+          <dt>Step<%= i %></dt>
+          <dd>
+            <% if step.image %>
+              <%=image_tag step.image.url(:thumb), alt:"" %>
+            <% end %>
+            <% if step.movie_url %>
+              <iframe width="560" height="315" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
+            <% end %>
+            <%= step.content %>
+          </dd>
+        </dl>
+      <% end %>
+    </dl>
+    <h3>Point!!</h3>
+    <div class="section"><%= @recipe.one_point %></div>
+    <div id="recipe_comment_area" class="area">
+      <h3>Comments</h3>
+      <%=form_for @recipe_comment do |f| %>
+        <%=f.hidden_field :recipe_id, value: @recipe.id %>
+        <%=f.file_field :image, value: "" %>
+        <%=f.text_area :content, size:"50x4", value: "" %>
+        <p><%=f.submit "post" %></p>
+      <% end %>
+      <dl id="recipe_comments" class="area">
+        <% @recipe.comments.each do |comment| %>
+          <dd>
+            <dl class="recipe_comment">
+              <dt><%=image_tag comment.image.url(:thumb), alst:"" %></dt>
+              <dd><%= comment.content %></dd>
+            </dl>
+          </dd>
+        <% end %>
+      </dl>
+    </div>
+  </div>
+</div>
