@@ -32,8 +32,10 @@
       <div id="recipe_photo" class="figure">
         <%=image_tag @recipe.recipe_image.url(:large_thumb) %>
       </div>
-      <% if not loved? %>
-        <%=link_to "love!", { action:"love", id: params[:id], user_id: params[:user_id] }, remote: true, id: "love_button" %>
+      <% if login? and (not loved?) %>
+        <div id="love_area">
+          <%=link_to "love!", { action:"love", id: params[:id], user_id: current_user.id }, remote: true, id: "love_button" %>
+        </div>
       <% else %>
         loved
       <% end %>

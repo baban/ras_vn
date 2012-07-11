@@ -81,7 +81,7 @@ class RecipesController < ApplicationController
   end
 
   def love
-    # Recipe.like( id: params[:id], user_id: params[:user_id]  )
+    #Recipe.love( id: params[:id], user_id: params[:user_id]  )
     respond_to do |format|
       format.json { render json: { id: params[:id] } }
     end
