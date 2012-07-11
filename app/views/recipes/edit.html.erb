@@ -8,7 +8,7 @@
       <div class="section" id="recipe_body">
         <div id="recipe_photo" class="figure">
           <% if @recipe.recipe_image %>
-            <%=image_tag  @recipe.recipe_image.url %>
+            <%=image_tag  @recipe.recipe_image.url(:large_thumb) %>
           <% else %>
             <%=image_tag "no_image.gif" %>
           <% end %>

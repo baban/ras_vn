@@ -116,11 +116,11 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.boolean  "public",         :default => false, :null => false
     t.string   "recipe_image"
     t.text     "one_point",                         :null => false
-    t.integer  "like_count",     :default => 0,     :null => false
+    t.integer  "love_count",     :default => 0,     :null => false
     t.integer  "eatstyle_id",    :default => 0,     :null => false
     t.integer  "amount"
     t.integer  "view_count",     :default => 0,     :null => false
-    t.integer  "recipe_food_id", :default => 0,     :null => false
+    t.integer  "recipe_food_id"
     t.time     "deleted_at"
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
@@ -212,7 +212,7 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.integer  "eatstyle_id",    :default => 0,     :null => false
     t.integer  "amount"
     t.integer  "view_count",     :default => 0,     :null => false
-    t.integer  "recipe_food_id", :default => 0,     :null => false
+    t.integer  "recipe_food_id"
     t.time     "deleted_at"
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
