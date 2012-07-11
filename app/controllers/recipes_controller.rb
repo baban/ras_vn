@@ -80,7 +80,7 @@ class RecipesController < ApplicationController
     redirect_to action:'index'
   end
 
-  def like
+  def love
     # Recipe.like( id: params[:id], user_id: params[:user_id]  )
     respond_to do |format|
       format.json { render json: { id: params[:id] } }
@@ -99,6 +99,10 @@ class RecipesController < ApplicationController
   def advertisement_filter
     # お客に合わせた広告を取得できる様に余地を残しておく
     @advertisement = RecipeAdvertisement.choice
+  end
+
+  def loved?
+    !!RecipeLoveLog.find_by_user_id_and_recipe_id( currenr_user.id, params[:id] )
   end
 
   def bookmarked?
