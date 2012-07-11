@@ -25,9 +25,25 @@ $(window).load ->
       labelname = $(this).text()
       $("#recipe_recipe_food_id optgroup").css( "display", "none" )
       $("#recipe_recipe_food_id optgroup[label='"+labelname+"']").css( "display", "block" )
+
+  $("#search_youtube")
+    .live( "ajax:complete", (xhr) ->
+      console.log("complete")
+    )
+    .live( "ajax:beforeSend", (xhr) ->
+      console.log("beforeSend")
+    )
+    .live( "ajax:success", (event, data, status, xhr) ->
+      console.log("success")
+    )
+    .live( "ajax:error", (data, status, xhr) ->
+      console.log("error")
+    )
+
   
   $(".image_selecter").click ->
     $(this).next().css("display","inline")
 
   $(".movie_selecter").click ->
     $(this).next().css("display","inline")
+  

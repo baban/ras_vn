@@ -73,6 +73,12 @@
         <%= f.submit :commit, value:"Save and go Next Step" %>
       </p>
     <% end %>
+
+    <%= form_for :youtube, url:"http://gdata.youtube.com/feeds/api/videos", html:{ id:"search_youtube" }, remote: true, method:"GET" do |f| %>
+      <%= text_field_tag :vq, "" %>
+      <%= text_field_tag :"max-results", 10 %>
+      <%= f.submit "Set", id:"search_youtube_button" %>
+    <% end %>
   </div>
 </div>
 
