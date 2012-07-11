@@ -29,11 +29,13 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new
     @recipe.attributes= params[:recipe]
+    @recipe.user_id = current_user.id
     @recipe.save
     
     @draft = RecipeDraft.new
     @draft.attributes= params[:recipe]
     @draft.recipe_id= @recipe.id
+    @draft.user_id = current_user.id
     @draft.save
 
     redirect_to( { action:'edit', id: @recipe.id }, notice: "create completed" )
