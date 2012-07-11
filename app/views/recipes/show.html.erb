@@ -32,11 +32,15 @@
       <div id="recipe_photo" class="figure">
         <%=image_tag @recipe.recipe_image.url(:large_thumb) %>
       </div>
-      <%=link_to "love!", { action:"love", id: params[:id], user_id: params[:user_id] }, remote: true, id: "love_button" %>
+      <% if not loved? %>
+        <%=link_to "love!", { action:"love", id: params[:id], user_id: params[:user_id] }, remote: true, id: "love_button" %>
+      <% else %>
+        loved
+      <% end %>
       <div id="description">
         <%= @recipe.description %>
       </div>
-      <div id="food_genre"><%= @recipe.food_genre.name %></div>
+      <div id="food_genre"><%= @recipe.food.name %></div>
       <h3>材料 <%= @recipe.amount && "(#{@recipe.amount}人前)"  %></h3>
       <table>
         <% @recipe.foodstuffs.each do |foodstuff| %>

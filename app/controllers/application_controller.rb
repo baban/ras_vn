@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   def load_content_footer_data
     @ranking = RecipeRanking.topics
     @recipe_ranking = RecipeRanking.topics
-    @foodstuff_ranking = RecipeFoodstuffRanking.topics
+    @foodstuff_ranking = RecipeFoodGenreRanking.topics
   end
 
   # Omniauthでのログイン状況確認

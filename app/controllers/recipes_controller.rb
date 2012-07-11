@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
   #before_filter :editable_user_filter, only:[:edit,:update,:destroy]
   before_filter :advertisement_filter, except:[:create,:destroy]
 
-  helper_method :bookmarked?, :my_recipe?
+  helper_method :loved?, :bookmarked?, :my_recipe?
 
   def index
     @recipes = RecipeSearcher.search(params)
@@ -102,7 +102,7 @@ class RecipesController < ApplicationController
   end
 
   def loved?
-    !!RecipeLoveLog.find_by_user_id_and_recipe_id( currenr_user.id, params[:id] )
+    !!RecipeLoveLog.find_by_user_id_and_recipe_id( current_user.id, params[:id] )
   end
 
   def bookmarked?

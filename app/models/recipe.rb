@@ -38,8 +38,8 @@ class Recipe < ActiveRecord::Base
     self.save
   end
 
-  def food_genre
-    RecipeFoodGenre.find_by_id(self.recipe_food_genre_id)
+  def food
+    RecipeFood.find_by_id(self.recipe_food_id)
   end
 
   # this method is executed when [like] button cliked
