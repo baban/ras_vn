@@ -26,23 +26,21 @@ $(window).load ->
       $("#recipe_recipe_food_id optgroup").css( "display", "none" )
       $("#recipe_recipe_food_id optgroup[label='"+labelname+"']").css( "display", "block" )
   
-  $("#search_youtube")
-    .live( "ajax:complete", (xhr) ->
-      console.log("complete")
+  $("#search_youtube_button").live( "click", ->
+    console.log("clock")
+    vq = $("#search_youtube_text").attr("value")
+    console.log "vq: " + vq
+    $.getJSON( "http://gdata.youtube.com/feeds/api/videos/", { vq: vq, "max-results": 5, alt: "json" }, (json)->
+      #console.log json.feed.entry[0]["media$group"]["media$thumbnail"][1].url
+      result_list = $.map( json.feed.entry, (item)->
+        console.log item["media$group"]["media$thumbnail"][1].url
+        title = item.title["$t"]
+        movie_url = item["media$group"]["media$content"][0].url
+        thumb_url = item["media$group"]["media$thumbnail"][1].url
+        "<li><a href='#{movie_url}'>#{title}</a><br /><img src='#{thumb_url}' /></li>"
+      )
+      $("#search_result_list").empty()
+      $("#search_result_list").append( result_list.join("") )
     )
-    .live( "ajax:beforeSend", (xhr) ->
-      console.log("beforeSend")
-    )
-    .live( "ajax:success", (event, data, status, xhr) ->
-      console.log("success")
-    )
-    .live( "ajax:error", (data, status, xhr) ->
-      console.log("error")
-    )
-  
-  $(".image_selecter").click ->
-    $(this).next().css("display","inline")
-
-  $(".movie_selecter").click ->
-    $(this).next().css("display","inline")
+  )
   

@@ -2,6 +2,7 @@
 
 class TopController < ApplicationController
   def index
+    # http://gdata.youtube.com/feeds/base/videos/json/
     top_content = ToppageContent.first
     @recomment_food_genre_recipe = Recipe.find_by_id(top_content.recommend_recipe_genre_id)
     @recomment_recipe = Recipe.find_by_id(top_content.recommend_recipe_id)

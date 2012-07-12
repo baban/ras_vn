@@ -74,11 +74,12 @@
       </p>
     <% end %>
 
-    <%= form_for :youtube, url:"http://gdata.youtube.com/feeds/api/videos", html:{ id:"search_youtube" }, remote: true, method:"GET" do |f| %>
-      <%= text_field_tag :vq, "" %>
-      <%= text_field_tag :"max-results", 10 %>
-      <%= f.submit "Set", id:"search_youtube_button" %>
-    <% end %>
+    <div id="search_youtube">
+      <%= text_field_tag :vq, "", id:"search_youtube_text" %>
+      <%= button_tag "Set", type:"button", id:"search_youtube_button" %>
+      <ul id="search_result_list">
+      </ul>
+    </div>
   </div>
 </div>
 
