@@ -1,0 +1,364 @@
+<% unless is_unlink %>
+<div class="contents sub_menu_bg clearfix radi5">
+<% else %>
+<div class="contents sub_menu_bg clearfix radi5" id="preview">
+<% end %>
+  <div class="sub_menu_detail flo_l radi5">
+    <h2>
+      <% unless @content.desire_id == 0 %>
+        <a href="<%= desire_path(uri_escape(@content.desire.search_name)) %>"><img src="/images/renewal/detail/kitai_icon<%= @content.desire_id %>.jpg" width="170" height="170" /></a>
+      <% else %>
+        <img src="/images/renewal/detail/kitai_icon<%= @content.desire_id %>.jpg" width="170" height="170" />
+      <% end %>
+    </h2>
+    <% if @content.category_id.present? && @content.category_id != 0 %>
+      <p class="sub_mn_cate txt12"><a href="<%= category_path(uri_escape(@content.category.name)) %>"><img src="/images/renewal/detail/cate_icon.gif" width="10" height="10" align="absmiddle" /><%= @content.category.name %></a></p>
+    <% end %>
+    <div id="sidebar">
+      <div class="sub_mn_area">
+        <img src="/images/renewal/detail/left_sc01.gif" width="170" height="12" /><br />
+        <ul class="txt12">
+          <li><a href="#scroll_note" class="radi5 scroll"><span>はじめに</span></a></li>
+          <% @content.instructions.each_with_index do |instruction,i| %>
+            <% if @content.instruction_type == 0 %>
+              <li><a href="#scroll_step_<%= i + 1 %>" class="radi5 scroll"><span>STEP<%= i + 1 %></span><%= sanitize instruction.title, :tags => [] %></a></li>
+            <% else %>
+              <li><a href="#scroll_step_<%= i + 1 %>" class="radi5 scroll"><%= sanitize instruction.title, :tags => [] %></a></li>
+            <% end %>
+          <% end %>
+          <% if @content.tips.present? %>
+            <li><a href="#scroll_tips" class="radi5 scroll"><span>ポイント</span></a></li>
+          <% end %>
+        </ul>
+        <p class="sub_mn_area_pg txt10">
+          <a href="#pt01" class="scroll">PAGETOP<img src="/images/renewal/detail/alw_icon02.png" width="14" height="13" align="absmiddle" /></a>
+        </p>
+        <img src="/images/renewal/detail/left_sc03.gif" width="170" height="12" />
+      </div>
+      <% unless is_unlink %>
+        <ul class="dtl_sub_rec cl clearfix"> 
+          <li style="width: 115px;"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-text="<%= @content.title + " #OKGuide" %>" data-related="okguide_red" data-lang="ja" data-url="<%= guide_url(@content) %>">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
+          <li>
+            <fb:like layout="button_count" show_faces="false"  font="verdana" action="like" href="<%= guide_url(@content) %>"></fb:like>
+            <div id="fb-root"></div>
+            <script>
+              window.fbAsyncInit = function() {
+                FB.init({appId: '198398403518331', status: true, cookie: true, xfbml: true});
+              };
+              (function() {
+                var e = document.createElement('script');
+                e.type = 'text/javascript';
+                e.src = document.location.protocol +
+                  '//connect.facebook.net/ja_JP/all.js';
+                e.async = true;
+                document.getElementById('fb-root').appendChild(e);
+              }());
+            </script>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+  <div class="dtl_main_area flo_l" >
+    <div class="dtl_hed_box">
+      <% unless is_unlink %>
+        <div class="pgn_dtl txt12 clearfix bar_all">
+          <% if @content.next_content.present? %>
+            <p class="txt_lft flo_l pgn_dtl_back"><%= link_to @content.next_content.title.truncate(18), guide_path(@content.next_content) %></p>
+          <% end %>
+          <% if @content.previous_content.present? %>
+            <p class="txt_rgt flo_r pgn_dtl_next"><%= link_to @content.previous_content.title.truncate(18), guide_path(@content.previous_content) %></p>
+          <% end %>
+        </div>
+      <% end %>
+      <% unless is_unlink %>
+        <% if editable?(@content) %>
+          <ul class="dtl_tab_hed txt11">
+            <li class="menu1 flo_l on1"><a href="<%= guide_path(@content) %>"><span>本文</span></a></li>
+            <li class="menu2 flo_l"><a href="<%= edit_guide_path(@content) %>"><span>編集</span></a></li>
+            <li class="menu3 flo_l"><a href="<%= guide_histories_path(@content) %>"><span>履歴</span></a></li>
+          </ul>
+        <% else %>
+          <ul class="dtl_tab_hed2 txt11">
+            <li class="menu1 flo_l on1"><a href="<%= guide_path(@content) %>"><span>本文</span></a></li>
+            <li class="menu2 flo_l"><a href="<%= guide_histories_path(@content) %>"><span>履歴</span></a></li>
+          </ul>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="dtl_plf cl">
+      <% if @content.official? %>
+        <div class="dtl_official flo_l"><img src="/images/renewal/detail/official_icon.png" width="63" height="57" /></div> 
+      <% end %>
+      <span class="dtl_cap txt12">作成日：<%= l @content.created_at, :format => :summary %></span>
+      <h1 class="txt24 fo_b lsp"><%= @content.title %></h1>
+      <ul class="dtl_nm cl txt12 clearfix">
+        <li>著者:<%= image_tag(@content.create_user.user_status.small_img.url, :width => 32, :height => 15, :align => "absmiddle") if @content.create_user.user_status_id.present? %><%= link_to @content.create_user.disp_name, user_path(@content.create_user.account) %></li>
+        <li>編集者:<%= image_tag(@content.user.user_status.small_img.url, :width => 32, :height => 15, :align => "absmiddle") if @content.user.user_status_id.present? %><%= link_to @content.user.disp_name, user_path(@content.user.account) %></li>
+      </ul>
+      <% unless is_unlink %>
+        <div class="sclbtn cl">
+          <%= render :partial => "layouts/open_graph_protocol", :locals => {:url => guide_path(@content), :title => @content.title} %>
+          <div class="printbtn sclbtn_wds"><a target="_blank" title="印刷する" href="<%= print_guide_path(@content) %>"><img width="27" height="22" alt="印刷する" src="/images/renewal/detail/printbtn2.gif"></a></div>
+        </div>
+      <% end %>
+    </div>
+    <div class="dtl_wrt cl txt12 "><%= link_to "自分ならこうする！など、違う視点でガイドを書いてみませんか？", new_guide_path %></div>
+
+    <div class="dtl_cont cl" id="scroll_note">
+      <h3 class="dtl_ttl fo_b txt14 blue_ttl">はじめに</h3>
+      <% if @content.note_attachment.present? %>
+        <%= render :partial => "guides/attachment", :locals => {:attachment => @content.note_attachment} %>
+      <% end %>
+      <p class="txt14"><%= guide_format @content.note %></p>
+    </div>
+    <% @content.instructions.each_with_index do |instruction,i| %>
+      <div class="dtl_cont cl" id="scroll_step_<%= i + 1 %>">
+        <h3 class="dtl_ttl fo_b txt14">
+          <% if @content.instruction_type == 0 %>
+            <span class="blue_ttl">STEP<em><%= i + 1 %></em></span>
+          <% end %>
+          <%= guide_format instruction.title %>
+        </h3>
+        <% if instruction.attachment.present? %>
+          <%= render :partial => "guides/attachment", :locals => {:attachment => instruction.attachment} %>
+        <% end %>
+        <p class="txt14"><%= guide_format instruction.description, :youtube => :guide, :koebu => true %></p>
+        <% if @content.tips.blank? && @content.instructions.size == i + 1 %>
+          <% unless is_unlink %>
+            <div class="cl ad_btm"> 
+              <p class="txt11">【PR】</p>
+              <%= adsense_tag :detail_text %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+    <% if @content.tips.present? %>
+      <div class="dtl_cont cl" id="scroll_tips">
+        <h3 class="dtl_ttl fo_b txt14 blue_ttl">ポイント</h3>
+        <% if @content.tips_attachment.present? %>
+          <%= render :partial => "guides/attachment", :locals => {:attachment => @content.tips_attachment} %>
+        <% end %>
+        <p class="txt14"><%= guide_format @content.tips, :youtube => :guide, :koebu => true %></p>
+        <% unless is_unlink %>
+          <div class="cl ad_btm"> 
+            <p class="txt11">【PR】</p>
+            <%= adsense_tag :detail_text %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <% unless is_unlink %>
+      <div class="dtl_plf">
+        <ul class="cl clearfix"> 
+            <%= render :partial => "layouts/open_graph_protocol", :locals => {:url => guide_path(@content), :title => @content.title} %>
+            <li class="printbtn"><a target="_blank" title="印刷する" href="<%= print_guide_path(@content) %>"><img width="27" height="22" alt="印刷する" src="/images/renewal/detail/printbtn2.gif"></a></li> 
+          </ul>
+      </div>
+    <% end %>
+    <% unless is_unlink %>
+      <div class="pgn_dtl txt12 clearfix">
+        <% if @content.next_content.present? %>
+          <p class="txt_lft flo_l pgn_dtl_back"><%= link_to @content.next_content.title.truncate(18), guide_path(@content.next_content) %></p>
+        <% end %>
+        <% if @content.previous_content.present? %>
+          <p class="txt_rgt flo_r pgn_dtl_next"><%= link_to @content.previous_content.title.truncate(18), guide_path(@content.previous_content) %></p>
+        <% end %>
+      </div>
+    <% end %>
+    <% unless is_unlink %>
+      <div class="dtl_cont cl">
+        <h3 class="dtl_ttl fo_b txt14 blue_ttl">関連ガイド</h3>
+        <ul class="dtl_txt_area txt14">
+          <% @related_contents.each do |content| %>
+            <li><a href="<%= guide_path(content) %>"><img src="/images/renewal/detail/guide_ht.gif" width="18" height="18" align="absmiddle" /><%= content.title %></a></li>
+          <% end %>
+          <% @bottom_cafe_contents.each do |cafe_content| %>
+            <li><a href="<%= cafe_guide_path(cafe_content) %>"><img src="/images/renewal/detail/cafe_icon.gif" width="18" height="18" align="absmiddle" /><%= cafe_content.title %></a></li>
+          <% end %>
+          <% @questions.each do |question| %>
+            <li><a href="<%= question.url %>"><img src="/images/renewal/detail/ok_ht.gif" width="18" height="18" align="absmiddle" /><%= question.title %></a></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <% unless is_unlink %>
+      <div class="dtl_cont cl">
+        <h3 class="dtl_ttl fo_b txt14 blue_ttl">コメント</h3>
+        <% unless co_brand? %>
+          <div class="dtl_cmt clearfix">
+            <%= form_for :comment ,:url => guide_comments_path(@content) do |f| %>
+              <%= f.text_area :note, :value => flash[:comment], :class => "dtl_comment_input3 mrg_10", :cols => 40, :rows => 20, :disabled => comment_disabled(login_user) %>
+              <% if flash[:comment_error] %>
+                <span class="template_error_messages"><%= flash[:comment_error] %></span>
+              <% end %>
+              <ul class="ViewCommentAction flo_l txt12">
+                <li class="flo_l"><%= f.radio_button :reaction, Comment.reaction_type(:try), :checked => "checked", :id => "comment1", :disabled => comment_disabled(login_user) %><label for="comment1">やってみた</label></li>
+                <li class="flo_l"><%= f.radio_button :reaction, Comment.reaction_type(:thanks) , :id => "comment2", :disabled => comment_disabled(login_user) %><label for="comment2">ありがとう</label></li>
+              </ul>
+              <% if login? %>
+                <%= f.submit "", :title => "コメントする", :class => "cmt_btn flo_r" %>
+              <% elsif %>
+                <div class="cmt_no_login flo_r txt12"><%= link_to "ログインしてコメントを投稿する", login_path(:back => true, :secure => true) %></div> 
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
+        <% if @content.comments.present? %>
+          <ul class="dtl_comment_list cl txt12">
+            <% @content.comments.each do |comment| %>
+              <li class="clearfix">
+                <div class="dtl_cmt_img"><%= user_image_tag  comment.user, :middle %></div>
+                <div class="dtl_cmt_txt_erea flo_r">
+                  <p><span class="flo_l"><%= link_to comment.user.disp_name, user_path(comment.user.account) %>さんのコメント<em class="radi5"><%= gsc("comment.reactions")[comment.reaction] %></em></span><span class="flo_r"><%= l comment.created_at %></span></p>
+                  <div class="dtl_cmt_txt_erea_rep cl">
+                    <div class="dtl_cmt_txt_erea_btm">
+                      <p class="bar_all"><%= guide_format comment.note %></p>
+                      <% if comment_deletable?(comment) %>
+                        <p><%= link_to 'x削除する', guide_comment_path(@content.id, comment.id), :method => :delete, :confirm => "本当に削除しますか？" %></p>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+    <% end %>
+    <% unless is_unlink %>
+      <div class="spam">
+        <a href="<%= new_guide_report_spam_path(:guide_id => @content.id) %>"><img src="/images/renewal/detail/spam.jpg" width="135" height="20" /></a>
+        <% if admin? %>
+          <%= link_to "このガイドを削除する", admin_guide_url(@content, :protocol => "https"), :method => :delete, :confirm => "本当に削除しますか？" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div class="bace_sub flo_r">
+    <div class="bace_ad">
+      <% unless is_unlink %>
+        <%= adsense_tag :detail_right_top %>
+      <% else %>
+        <img src="/images/renewal/detail/dtl_bnr02.gif" width="300" height="250" />
+      <% end %>
+    </div>
+    <div class="bace_ad">
+      <a href="http://www.abilie.com/" target="_blank"><img src="/images/OKguide0228.gif"></a>
+    </div>
+    <div class="dtl_sub_cnt clearfix">
+      <h2 class="txt14 fo_b" >このガイドについて</h2>
+      <div class="dtl_cnt_box clearfix">
+        <div class="count txt12 cl clearfix">
+          <% unless is_unlink || (login? && login_user.already_good?(@content.id)) %>
+            <%= link_to image_tag("/images/renewal/common/good_btn.gif", {:width => "72", :height => "22"}), guide_good_points_path(@content.id) ,:class => "good", :id => "good_#{@content.id}", :remote => true, :method => :post, "data-type" => "html","data-update" => "good_point_#{@content.id}" %>
+          <% else %>
+            <img src="/images/renewal/common/good_btn_off.gif" width="72" height="22" />
+          <% end %>
+          <p class="count_arw"><span class="radi5"><em class="fo_b" id="good_point_<%= @content.id %>"><%= @content.good_points_count %></em></span></p>
+          <p class="count_indent">人</p>
+        </div>
+        <p class="cl">
+          <% @content.useful_users.each do |user| %>
+            <%= link_to user_image_tag(user, :small), user_path(user.account) %>
+          <% end %>
+        </p>
+      </div>
+      <div class="dtl_cnt_box clearfix cl">
+        <div class="count txt12 cl clearfix">
+          <% unless is_unlink || co_brand? %>
+            <% if login? %>
+              <% if login_user.faved?(@content.id) %>
+                <%= link_to image_tag("/images/renewal/common/fav_btn_re.gif", :width => 98, :height => 22), guide_favorite_path(@content.id, login_user.faved(@content.id)), :method => :delete, "data-type" => "json" %>
+              <% else %>
+                <%= link_to image_tag("/images/renewal/common/fav_btn.gif", :width => 98, :height => 22), guide_favorites_path(@content.id), :method => :post, "data-type" => "json" %>
+              <% end %>
+            <% else %>
+              <%= link_to image_tag("/images/renewal/common/fav_btn.gif", :width => 98, :height => 22), login_path(:back => true) %>
+            <% end %>
+            <p class="count_arw"><span class="radi5"><em class="fo_b"><%= @content.favoriteships_count %></em></span></p>
+            <p class="count_indent">人</p>
+          <% end %>
+        </div>
+        <p class="cl">
+          <% @content.favorite_users.each do |user| %>
+            <%= link_to user_image_tag(user, :small), user_path(user.account) %>
+          <% end %>
+        </p>
+      </div>
+      <div class="dtl_cnt_box clearfix cl">
+        <p class="txt12">コメントした人<span class="fo_b"><%= @content.comments_count %></span>人</p>
+        <% @content.uniq_comments.each do |comment| %>
+          <%= link_to user_image_tag(comment.user, :small), user_path(comment.user.account) %>
+        <% end %>
+      </div>
+      <div class="dtl_cnt_box clearfix cl">
+        <p class="txt12">読んでいる人<span class="fo_b"><%= @content.view_points_count %></span>人</p>
+      </div>
+      <% if @content.needs.present? || @content.needs_attachment.present? %>
+        <div class="dtl_cnt_box2 clearfix cl txt12">
+          <span class="fo_b">必要なもの</span><p><%= guide_format @content.needs %></p><%= content_image_tag(@content.needs_attachment, :middle) unless @content.needs_attachment.blank? %>
+        </div>
+      <% end %>
+      <ul id="tags" class="txt12 clearfix"> 
+        <% @content.tags.each do |tag| %>
+          <li class="flo_l"><%= link_to tag.name, tag_path(uri_escape(tag.name)),:class => "post-tag" %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% unless is_unlink %>
+      <%= render :partial => "request_messages/right_column" %>
+      <div class="sbe_news2 radi5">
+        <%= render :partial => "cafe/guides/side_contents", :locals => {:cafe_contents => @side_cafe_contents} %>
+      </div>
+      <div class="dtl_collection">
+        <h2 class="fo_b txt14">ガイドコレクション</h2>
+        <ul class=" clearfix">
+          <% banner_features(6).each do |feature| %>  
+            <li>
+              <%= link_to feature_path(feature.url_name) do %>
+                <%= image_tag(feature.thumbnail.url, {:width => 145, :height => 90 }) %>
+                <p class="txt12 fo_b"><%= feature.title %></p>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+        <p class="dtl_cln_btn txt11 txt_rgt"><a href="<%= features_path %>"><span>ガイドコレクションをもっと見る</span></a></p>
+      </div>
+      <% if @content.desire_id.present? && @content.desire_id != 0 %>
+        <div class="sub_rnk">
+          <h2 class="txt14 fo_b ttl_bg_r_gold radi5">「<%= @content.desire.search_name %>」ガイドランキング</h2>
+          <ul>
+            <% @desire_ranking_contents.each_with_index do |content, i| %>
+              <% if i == 0 %>
+                <li class="side_sub_rnk_0<%= i + 1 %> clearfix">
+                  <h3><a href="<%= guide_path(content.id) %>"><%= content_image_tag(content.note_attachment, :little_small) %></a></h3>
+                  <div class="sub_txta">
+                    <p class="side_rnk_nm txt11">著者名&nbsp;<a href="<%= user_path content.create_user.account %>"><span><%= content.create_user.disp_name %></span></a></p>
+                    <p class="side_rnk_ttl txt14"><%= link_to content.title, guide_path(content.id) %></p>
+                    <p class="txt12"><%= content.note.truncate(30) %></p>
+                  </div>
+                </li>
+              <% else %>
+                <li class="side_sub_rnk_0<%= i + 1 %> clearfix">
+                  <div class="sub_txta">
+                    <p class="txt11">著者名&nbsp;<a href="<%= user_path(content.create_user.account) %>"><span><%= content.create_user.disp_name %> </span></a></p>
+                    <p class="side_rnk_ttl txt12"><%= link_to content.title, guide_path(content.id) %></p>
+                  </div>
+                  <%= link_to content_image_tag(content.note_attachment, :small), guide_path(content.id) %>
+                </li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>  
+      <% end %>
+      <div class="dtl_acnt">
+        <a href="http://twitter.com/#!/okguide_red" target="_blank"><img src="/images/renewal/detail/twitter.png" width="51" height="51" /></a>
+        <a href="http://www.facebook.com/home.php?#!/okguide.jp" class="acnt2" target="_blank"><img src="/images/renewal/detail/facebook.png" width="52" height="51" /></a>
+        <a href="http://page.mixi.jp/public/recent_page_feed.pl?page_id=2929" class="acnt3" target="_blank"><img src="/images/renewal/detail/mixi.png" width="51" height="51" /></a>
+      </div>
+      <img src="/images/renewal/detail/qrcode.jpg" width="300" height="319" />
+    <% end %>
+  </div>
+</div>
