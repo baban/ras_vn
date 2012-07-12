@@ -50,6 +50,7 @@ class Recipe < ActiveRecord::Base
     recipe.save
 
     RecipeLoveLog.create( recipe_id: id, user_id: user_id )
+    recipe
   end
 end
 

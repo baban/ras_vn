@@ -21,5 +21,6 @@ $(window).load ->
 
   $("#love_button")
     .live( "ajax:complete", (xhr) ->
+      console.log "console"
       $("#love_area").html("love")
     )

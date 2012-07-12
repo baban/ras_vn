@@ -83,9 +83,10 @@ class RecipesController < ApplicationController
   end
 
   def love
-    #Recipe.love( id: params[:id], user_id: params[:user_id]  )
+    # @recipe = Recipe.love( id: params[:id], user_id: params[:user_id]  )
     respond_to do |format|
-      format.json { render json: { id: params[:id] } }
+      # format.json { render json: { id: params[:id], count: recipe.love_count } }
+      format.json { render json: { id: params[:id], count: 1 } }
     end
   end
 

@@ -25,7 +25,7 @@ $(window).load ->
       labelname = $(this).text()
       $("#recipe_recipe_food_id optgroup").css( "display", "none" )
       $("#recipe_recipe_food_id optgroup[label='"+labelname+"']").css( "display", "block" )
-
+  
   $("#search_youtube")
     .live( "ajax:complete", (xhr) ->
       console.log("complete")
@@ -39,7 +39,6 @@ $(window).load ->
     .live( "ajax:error", (data, status, xhr) ->
       console.log("error")
     )
-
   
   $(".image_selecter").click ->
     $(this).next().css("display","inline")
