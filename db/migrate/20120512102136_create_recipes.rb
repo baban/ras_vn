@@ -9,11 +9,11 @@ class CreateRecipes < ActiveRecord::Migration
       t.boolean  :public,         null: false, default: false
       t.string   :recipe_image,   null: true
       t.text     :one_point,      null: false, default: ''
-      t.integer  :like_count,     null: false, default: 0
+      t.integer  :love_count,     null: false, default: 0
       t.integer  :eatstyle_id,    null: false, default: 0
       t.integer  :amount,         null: true
       t.integer  :view_count,     null: false, default: 0
-      t.integer  :recipe_food_id, null: false, default: 0
+      t.integer  :recipe_food_id, null: true
 
       t.time     :deleted_at,     null: true
       t.timestamps

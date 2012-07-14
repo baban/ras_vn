@@ -1,0 +1,51 @@
+<p><%= @youtube.total_result_count %>件見つかりました</p>
+<% unless @youtube.total_result_count == 0 %>
+<ul class="pageArrow clearfix">
+  <% unless @youtube.previous_page.blank? %>
+  <li class="prevActive"><%= link_to "", search_youtube_path({"attachment[q]" => params[:attachment][:q], "attachments_name" => params[:attachments_name],:page => @youtube.previous_page }), :remote => true, "data-type" => "html", "data-update" => "youtube_result" %></li>
+  <% else %>
+  <li class="prevNegative"><a href="#"></a></li>
+  <% end %>
+  <% unless @youtube.next_page.blank? %>
+  <li class="nextActive"><%= link_to "", search_youtube_path({"attachment[q]" => params[:attachment][:q],"attachments_name" => params[:attachments_name], :page => @youtube.next_page }), :remote => true, "data-type" => "html", "data-update" => "youtube_result" %></li>
+  <% else %>
+  <li class="nextNegative"><a href="#"></a></li>
+  <% end %>
+</ul>
+<% end %>
+<% @youtube.videos.each do |y| %>
+<div class="video_search_result clearfix">
+  <div class="video_thumbnail">
+    <%= youtube y.player_url, :search %>
+  </div>
+  <div class="video_info">
+    <table>
+      <tr>
+        <th>タイトル</th>
+        <td><%= y.title %></td>
+      </tr>
+      <tr>
+        <th>説明</th>
+        <td><%= truncate_guide :youtube, y.description %></td>
+      </tr>
+    </table>
+    <div class="add_youtube_button">
+      <a href="<%= y.player_url %>" class="add_youtube">add</a>
+    </div>
+  </div>
+</div>
+<% end %>
+<% unless @youtube.total_result_count == 0 %>
+<ul class="pageArrow clearfix">
+  <% unless @youtube.previous_page.blank? %>
+  <li class="prevActive"><%= link_to "", search_youtube_path({"attachment[q]" => params[:attachment][:q], "attachments_name" => params[:attachments_name],:page => @youtube.previous_page }), :remote => true, "data-type" => "html", "data-update" => "youtube_result" %></li>
+  <% else %>
+  <li class="prevNegative"><a href="#"></a></li>
+  <% end %>
+  <% unless @youtube.next_page.blank? %>
+  <li class="nextActive"><%= link_to "", search_youtube_path({"attachment[q]" => params[:attachment][:q],"attachments_name" => params[:attachments_name], :page => @youtube.next_page }), :remote => true, "data-type" => "html", "data-update" => "youtube_result" %></li>
+  <% else %>
+  <li class="nextNegative"><a href="#"></a></li>
+  <% end %>
+</ul>
+<% end %>

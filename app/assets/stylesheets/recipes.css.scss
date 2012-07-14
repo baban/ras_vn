@@ -196,6 +196,10 @@ dl.step > dt.selecter {
   }
   input {
   }
+  .movie_button_field {
+    display:inline;
+    border-style:none;
+  }
 }
 
 dl.step > dd {
@@ -210,5 +214,44 @@ dl.step > dd {
 
 .form_actions {
   text-align:right;
+}
+
+#search_youtube_area {
+  display:none;
+  position:fixed;
+  top:50%;
+  left:50%;
+  margin:-5em -20em;
+  background-color:white;
+  width:40em;
+  min-height:10em;
+  max-height:20em;
+  overflow:scroll;
+  border:solid 4px #000;
+  ul#search_result_list {
+    li {
+      display:block;
+      float:left;
+      clear:none;
+      button {
+        width:170px;
+      }
+      button:hover {
+        background-color:#eee;
+      }
+    }
+  }
+  ul#search_result_list:after {
+    content:"";
+    display:block;
+    width:100%;
+    clear:both;
+  }
+}
+#search_youtube_area:after {
+  content:"";
+  display:block;
+  width:100%;
+  clear:both;
 }
 

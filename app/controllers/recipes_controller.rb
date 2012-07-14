@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
   #before_filter :editable_user_filter, only:[:edit,:update,:destroy]
   before_filter :advertisement_filter, except:[:create,:destroy]
 
-  helper_method :bookmarked?, :my_recipe?
+  helper_method :loved?, :bookmarked?, :my_recipe?
 
   def index
     @recipes = RecipeSearcher.search(params)
@@ -29,11 +29,13 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new
     @recipe.attributes= params[:recipe]
+    @recipe.user_id = current_user.id
     @recipe.save
     
     @draft = RecipeDraft.new
     @draft.attributes= params[:recipe]
     @draft.recipe_id= @recipe.id
+    @draft.user_id = current_user.id
     @draft.save
 
     redirect_to( { action:'edit', id: @recipe.id }, notice: "create completed" )
@@ -80,10 +82,11 @@ class RecipesController < ApplicationController
     redirect_to action:'index'
   end
 
-  def like
-    # Recipe.like( id: params[:id], user_id: params[:user_id]  )
+  def love
+    # @recipe = Recipe.love( id: params[:id], user_id: params[:user_id]  )
     respond_to do |format|
-      format.json { render json: { id: params[:id] } }
+      # format.json { render json: { id: params[:id], count: recipe.love_count } }
+      format.json { render json: { id: params[:id], count: 1 } }
     end
   end
 
@@ -99,6 +102,10 @@ class RecipesController < ApplicationController
   def advertisement_filter
     # お客に合わせた広告を取得できる様に余地を残しておく
     @advertisement = RecipeAdvertisement.choice
+  end
+
+  def loved?
+    !!RecipeLoveLog.find_by_user_id_and_recipe_id( current_user.id, params[:id] )
   end
 
   def bookmarked?

@@ -38,18 +38,19 @@ class Recipe < ActiveRecord::Base
     self.save
   end
 
-  def food_genre
-    RecipeFoodGenre.find_by_id(self.recipe_food_genre_id)
+  def food
+    RecipeFood.find_by_id(self.recipe_food_id)
   end
 
   # this method is executed when [like] button cliked
-  def self.like( params )
+  def self.love( params )
     id, user_id = params[:id], params[:user_id]
     recipe = self.find(id)
-    recipe.like_count += 1
+    recipe.love_count += 1
     recipe.save
 
-    RecipeLikeLog.create( recipe_id: id, user_id: user_id )
+    RecipeLoveLog.create( recipe_id: id, user_id: user_id )
+    recipe
   end
 end
 

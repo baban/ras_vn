@@ -1,4 +1,4 @@
-"id","recipe_id","user_id","title","description","public","recipe_image","one_point","like_count","eatstyle_id","amount","view_count","recipe_food_id","deleted_at","created_at","updated_at"
+"id","recipe_id","user_id","title","description","public","recipe_image","one_point","love_count","eatstyle_id","amount","view_count","recipe_food_id","deleted_at","created_at","updated_at"
 1,1,2,"キャベツを追加！ジャーマンポテトキャベツ","ジャーマンポテトにキャベツを足したら？ キャベツのシャキシャキとじゃが芋のホクホクがオイシ～♪ボリュームと美味しさUP↑","true","recipe.jpg","じゃが芋は男爵、北あかりなどのホクホク系の品種がオススメ。レンジで火を通しておくことにより、調理が素早く出来ます。出来れば塩は岩塩、胡椒はブラックペッパーを使うと一層美味しさが増します。",0,0,0,0,1,,"2011-01-24 00:00:00 UTC","2012-06-05 00:00:00 UTC"
 2,2,3,"ジャガイモで青椒肉絲 ","ジャガイモの食感がなかなかですよ！ ","true","recipe.jpg","ジャガイモは食感が残るくらいの炒め具合がおすすめ！私は紹興酒の香りが好きなので☆☆☆もちろん日本酒でＯＫです！ ",0,0,0,0,1,,"2010-05-27 00:00:00 UTC","2010-05-27 00:00:00 UTC"
 3,3,4,"しっかり味の　フライドポテト","塩ゆでしたじゃがいもを揚げるので、しっかり味がついてます。　 　片栗粉で揚げるのでサクサクの食感なんです。","true","recipe.jpg","あげたじゃがいもに塩を振るのではなく、先に塩味をつけてしまいます。片栗粉はしっかりつけるのが、サクサクな食感のコツです。 ",0,0,0,0,1,,"2011-12-29 00:00:00 UTC","2012-05-20 00:00:00 UTC"
