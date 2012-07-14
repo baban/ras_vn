@@ -52,21 +52,16 @@ $(window).load ->
       $("#search_result_list").map ->
         $("button",this).click ->
           number = $("#search_youtube_step_number").attr("value")
-          console.log a_tag = $(".button_link",this)
-          console.log href = a_tag.attr("href")
+          a_tag = $(".button_link",this)
+          href = a_tag.attr("href")
           $("#recipe_step_#{number} .movie_selecter").attr("value", href)
+          console.log href
+          $("#search_youtube_area").css("display","none")
         this
     )
   )
 
-  $("#search_result_list button").click ->
-    console.log "li"
-
-  $("#youtube_url_send_button").click ->
-    console.log "hoge"
-    form_send_data( "http://hoge,youtube.com/", 2 )
-
   $(".movie_button").click ->
     step_number = $(this).next().attr("value")
     $("#search_youtube_step_number").attr( "value", step_number )
-    $("#search_youtube_area").display("display","block")
+    $("#search_youtube_area").css("display","block")

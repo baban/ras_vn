@@ -217,9 +217,16 @@ dl.step > dd {
 }
 
 #search_youtube_area {
-  display:block;
+  display:none;
+  position:fixed;
+  top:50%;
+  left:50%;
+  margin:-5em -20em;
+  background-color:white;
   width:40em;
-  min-height:15em;
+  min-height:10em;
+  max-height:20em;
+  overflow:scroll;
   border:solid 4px #000;
   ul#search_result_list {
     li {
@@ -227,7 +234,7 @@ dl.step > dd {
       float:left;
       clear:none;
       button {
-        width:200px;
+        width:170px;
       }
       button:hover {
         background-color:#eee;
@@ -240,5 +247,11 @@ dl.step > dd {
     width:100%;
     clear:both;
   }
+}
+#search_youtube_area:after {
+  content:"";
+  display:block;
+  width:100%;
+  clear:both;
 }
 
