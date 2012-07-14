@@ -196,6 +196,10 @@ dl.step > dt.selecter {
   }
   input {
   }
+  .movie_button_field {
+    display:inline;
+    border-style:none;
+  }
 }
 
 dl.step > dd {
@@ -210,5 +214,31 @@ dl.step > dd {
 
 .form_actions {
   text-align:right;
+}
+
+#search_youtube_area {
+  display:block;
+  width:40em;
+  min-height:15em;
+  border:solid 4px #000;
+  ul#search_result_list {
+    li {
+      display:block;
+      float:left;
+      clear:none;
+      button {
+        width:200px;
+      }
+      button:hover {
+        background-color:#eee;
+      }
+    }
+  }
+  ul#search_result_list:after {
+    content:"";
+    display:block;
+    width:100%;
+    clear:both;
+  }
 }
 

@@ -1,3 +1,7 @@
+send_youtube_url_button = ( i, url )->
+  console.log "url"
+  console.log url
+
 $(window).load ->
   food_stuff_row = (i)->
     s = 
@@ -29,18 +33,40 @@ $(window).load ->
   $("#search_youtube_button").live( "click", ->
     console.log("clock")
     vq = $("#search_youtube_text").attr("value")
+    step_number = $("#search_youtube_step_number").attr("value")
     console.log "vq: " + vq
     $.getJSON( "http://gdata.youtube.com/feeds/api/videos/", { vq: vq, "max-results": 5, alt: "json" }, (json)->
-      #console.log json.feed.entry[0]["media$group"]["media$thumbnail"][1].url
       result_list = $.map( json.feed.entry, (item)->
-        console.log item["media$group"]["media$thumbnail"][1].url
         title = item.title["$t"]
         movie_url = item["media$group"]["media$content"][0].url
+        console.log movie_url
         thumb_url = item["media$group"]["media$thumbnail"][1].url
-        "<li><a href='#{movie_url}'>#{title}</a><br /><img src='#{thumb_url}' /></li>"
+        "<li>"+
+          "<button type='button'>"+
+            "<a href='#{movie_url}' class='button_link'>#{title}</a><br /><img src='#{thumb_url}' />"+
+          "</button>"+
+        "</li>"
       )
       $("#search_result_list").empty()
       $("#search_result_list").append( result_list.join("") )
+      $("#search_result_list").map ->
+        $("button",this).click ->
+          number = $("#search_youtube_step_number").attr("value")
+          console.log a_tag = $(".button_link",this)
+          console.log href = a_tag.attr("href")
+          $("#recipe_step_#{number} .movie_selecter").attr("value", href)
+        this
     )
   )
-  
+
+  $("#search_result_list button").click ->
+    console.log "li"
+
+  $("#youtube_url_send_button").click ->
+    console.log "hoge"
+    form_send_data( "http://hoge,youtube.com/", 2 )
+
+  $(".movie_button").click ->
+    step_number = $(this).next().attr("value")
+    $("#search_youtube_step_number").attr( "value", step_number )
+    $("#search_youtube_area").display("display","block")
