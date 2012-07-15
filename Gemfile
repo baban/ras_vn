@@ -38,7 +38,7 @@ gem "yard", '0.7.4' # document generator like javadoc
 # test utilities
 gem 'rspec' # unit test utilities
 gem 'rspec-rails'
-gem 'flextures', "1.9.13" # add rake command for dump and load fixtures
+gem 'flextures', "1.9.15" # add rake command for dump and load fixtures
 gem 'faker' # generate fake data
 gem 'faker-japanese' # generate japanese names
 gem "spork"

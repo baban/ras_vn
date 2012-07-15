@@ -3,4 +3,6 @@
 class RecipeFood < ActiveRecord::Base
   belongs_to :recipe_food_genre
   has_many :recipes
+
+  scope :show_top, ->{ where(" show_top = true ") }
 end
