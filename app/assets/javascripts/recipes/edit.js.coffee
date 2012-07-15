@@ -65,3 +65,6 @@ $(window).load ->
     step_number = $(this).next().attr("value")
     $("#search_youtube_step_number").attr( "value", step_number )
     $("#search_youtube_area").css("display","block")
+
+  $("#search_youtube_area_close_button").click ->
+    $("#search_youtube_area").css("display","none")
