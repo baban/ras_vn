@@ -3,9 +3,9 @@
 class RecipeFoodsController < ApplicationController
   def index
     if params[:recipe_food_genre_id]
-      @food_genres = RecipeFoodGgenre.where( " id = ? ", params[:recipe_food_genre_id] )
+      @food_genres = RecipeFoodGenre.where( " id = ? ", params[:recipe_food_genre_id] ).includes(:recipe_foods)
     else
-      @food_genres = RecipeFoodGenre.all
+      @food_genres = RecipeFoodGenre.includes(:recipe_foods)
     end
   end
 end
