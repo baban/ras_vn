@@ -24,10 +24,9 @@ Flextures::DumpFilter.define :admin_users, {
   preferences:->(v){ Base64.encode64(v.to_yaml) }
 }
 
-
 Flextures::Factory.define :users do |f|
   tmp_pass = f.encrypted_password
-  f.password = tmp_pass
+  f.password = "hogehoge"
   f.encrypted_password = tmp_pass
   f
 end
