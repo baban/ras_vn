@@ -7,15 +7,15 @@
   <% end %>
 </div>
 
-<div id="footer_recomment_recipe">
+<% if @recommend_recipe %>
+  <div id="footer_recomment_recipe">
   <h3>本日のおすすめ料理</h3>
-  <% if @recomment_recipe %>
-    <p><%=image_tag @recomment_recipe.image.url(:thumb), alt:"" %></p>
-    <p><%=link_to @recomment_recipe.title, recipes_url(@recomment_recipe) %></p>
-    <p>by <%=link_to @recomment_recipe.chef.profile.nickname, recipes_url(@recomment_recipe) %></p>
-    <p><%= @recomment_recipe.description %></p>
-  <% end %>
-</div>
+    <p><%=image_tag @recommend_recipe.image.url(:thumb), alt:"" %></p>
+    <p><%=link_to @recommend_recipe.title, controller:"recipes", action:"show", id: @recommend_recipe.id %></p>
+    <p>by <%=link_to @recommend_recipe.chef.profile.nickname, controller:"recipes", action:"show", id: @recommend_recipe.id %></p>
+    <p><%= @recommend_recipe.description %></p>
+  </div>
+<% end %>
 
 <div id="footer_rankings">
   <h3>ランキング</h3>

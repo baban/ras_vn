@@ -29,4 +29,9 @@ class ApplicationController < ActionController::Base
   def login?
     !!current_user
   end
+
+  def sidebar_ranking_filter
+    @recipe_ranking = RecipeRanking.topics
+    @foodstuff_ranking = RecipeFoodGenreRanking.topics
+  end
 end
