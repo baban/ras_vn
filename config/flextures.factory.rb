@@ -15,10 +15,8 @@ Flextures::Factory.define :recipes do |f|
 end
 
 Flextures::Factory.define :admin_users do |f|
-  p :preferences
-  p f.preferences
-  f.preferences = Base64.decode64(f.preferences)
-  p f.preferences
+  f.preferences = YAML.load( Base64.decode64(f.preferences) )
+  f.password = f.crypted_password
   f
 end
 

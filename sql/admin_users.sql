@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.5.15, for osx10.6 (i386)
+-- MySQL dump 10.13  Distrib 5.5.24, for osx10.6 (i386)
 --
 -- Host: localhost    Database: ras_vn_dev
 -- ------------------------------------------------------
@@ -46,7 +46,7 @@ CREATE TABLE `admin_users` (
 
 LOCK TABLES `admin_users` WRITE;
 /*!40000 ALTER TABLE `admin_users` DISABLE KEYS */;
-INSERT INTO `admin_users` VALUES (1,'松原','正直','admin','babanba.n@gmail.com',1,'ad55992666fb-d09908d01442','c6e13ccb6a0be3669cccc24d6a5ac2b2e8b2aa5c','a25241ec9bbb9ffc64a719566f344d0597c36890','---\n:locale: en\n','2012-05-26 01:01:16','2012-05-26 01:01:34');
+INSERT INTO `admin_users` VALUES (1,'matsubara','masanao','admin','babanba.n@gmail.com',1,'9c08ae98821e-e6d94a73a0d9','85bbae5018984a389a0e95a60ff7db80187b6531','8a0efb4d01d1356207b3dc2cbfa856c1eae3f36d','---\n:locale: ja\n','2012-07-16 04:59:30','2012-07-16 04:59:46');
 /*!40000 ALTER TABLE `admin_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-05-26 10:01:46
+-- Dump completed on 2012-07-16 14:00:09
