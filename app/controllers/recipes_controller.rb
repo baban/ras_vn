@@ -4,6 +4,7 @@ class RecipesController < ApplicationController
   before_filter :authenticate_user!,   except:[:index,:show]
   #before_filter :editable_user_filter, only:[:edit,:update,:destroy]
   before_filter :advertisement_filter, except:[:create,:destroy]
+  before_filter :sidebar_ranking_filter
 
   helper_method :loved?, :bookmarked?, :my_recipe?
 
@@ -12,12 +13,11 @@ class RecipesController < ApplicationController
   end
 
   def show
-    load_content_footer_data
-
     @recipe = Recipe.find(params[:id])
     @recipe_comment = RecipeComment.new
 
-    @bookmark = Bookmark.find_by_recipe_id_and_user_id( params[:id], current_user.id ) || Bookmark.new
+    # @bookmark = (current_user && Bookmark.find_by_recipe_id_and_user_id( params[:id], current_user.id )) || Bookmark.new
+    @bookmark = Bookmark.new
 
     @recipe.view_count_increment!
   end

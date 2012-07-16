@@ -14,12 +14,6 @@ class ApplicationController < ActionController::Base
     @recipe and (@recipe.user_id == current_user.id)
   end
 
-  def load_content_footer_data
-    @ranking = RecipeRanking.topics
-    @recipe_ranking = RecipeRanking.topics
-    @foodstuff_ranking = RecipeFoodGenreRanking.topics
-  end
-
   # Omniauthでのログイン状況確認
   private
   def current_omniuser
