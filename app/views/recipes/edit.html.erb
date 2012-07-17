@@ -48,12 +48,12 @@
                 <%= file_field_tag "recipe_steps[][image]", class:"image_selecter" %>
               </dt>
               <dt class="selecter movie_field">
-                <%= label :recipe_steps, "動画" %>
-                <%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter" %>
                 <form class="movie_button_field">
                   <input type="button" value="Movie" class="movie_button" />
                   <%= hidden_field_tag "recipe_step_id_#{i}", i, class:"recipe_step_id" %>
                 </form>
+                <%= label :recipe_steps, "動画" %>
+                <%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter" %>
               </dt>
               <dd>
                 <%= text_area_tag "recipe_steps[][content]", step.content, class:'step_edit_area' %>
