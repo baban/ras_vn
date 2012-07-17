@@ -46,7 +46,7 @@
             <li><%=link_to food.name, controller:"recipes", action:"index", recipe_food_id: food.id %></li>
           <% end %>
         </ul>
-        <p class="more_link"><%=link_to "more...", controller:"recipe_foods", action:"index", recipe_foog_genre_id: genre.id %></p>
+        <p class="more_link"><%=link_to "more...", controller:"recipe_foods", action:"index", recipe_food_genre_id: genre.id %></p>
       </div>
       <% end %>
     </div>

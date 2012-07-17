@@ -3,23 +3,24 @@
 <%= render partial:"layouts/content_footer" %>
 
 <div id="content_body" class="section">
-
   <div id="recipe_header">
     <p class="chef">
       <%=link_to @recipe.user.profile.nickname, kitchen_url(@user) %>のレシピ
       (<%= @recipe.user.profile.recipe_count %>件)
     </p>
-    <% if bookmarked? %>
-      <%=form_for( @bookmark, url:{ controller:"bookmarks", action:"destroy", id: @bookmark.id }, html:{ id:"bookmark_button" } ) do |f| %>
-        <%= f.hidden_field :recipe_id, value: @recipe.id %>
-        <%= f.hidden_field :user_id, value: current_user.id %>
-        <%= f.submit %>
-      <% end %>
-    <% else %>
-      <%=form_for( @bookmark, html:{ id:"bookmark_button" } ) do |f| %>
-        <%= f.hidden_field :recipe_id, value: @recipe.id %>
-        <%= f.hidden_field :user_id, value: current_user.id %>
-        <%= f.submit %>
+    <% if user_signed_in? %>
+      <% if bookmarked? %>
+        <%=form_for( @bookmark, url:{ controller:"bookmarks", action:"destroy", id: @bookmark.id }, html:{ id:"bookmark_button" } ) do |f| %>
+          <%= f.hidden_field :recipe_id, value: @recipe.id %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <%= f.submit %>
+        <% end %>
+      <% else %>
+        <%=form_for( @bookmark, html:{ id:"bookmark_button" } ) do |f| %>
+          <%= f.hidden_field :recipe_id, value: @recipe.id %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <%= f.submit %>
+        <% end %>
       <% end %>
     <% end %>
     <% if my_recipe? %>

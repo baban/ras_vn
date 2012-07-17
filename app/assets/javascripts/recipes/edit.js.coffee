@@ -25,13 +25,12 @@ $(window).load ->
     
   $("#recipe_genre_selecter").change ->
     $("select#recipe_genre_selecter option:selected").each -> 
-      $("#recipe_recipe_food_genre_id").css( "display", "inline" )
+      $("#recipe_draft_recipe_food_id").css( "display", "inline" )
       labelname = $(this).text()
-      $("#recipe_recipe_food_id optgroup").css( "display", "none" )
-      $("#recipe_recipe_food_id optgroup[label='"+labelname+"']").css( "display", "block" )
+      $("#recipe_draft_recipe_food_id optgroup").css( "display", "none" )
+      $("#recipe_draft_recipe_food_id optgroup[label='"+labelname+"']").css( "display", "block" )
   
   $("#search_youtube_button").live( "click", ->
-    console.log("clock")
     vq = $("#search_youtube_text").attr("value")
     step_number = $("#search_youtube_step_number").attr("value")
     console.log "vq: " + vq
@@ -50,13 +49,13 @@ $(window).load ->
       $("#search_result_list").empty()
       $("#search_result_list").append( result_list.join("") )
       $("#search_result_list").map ->
-        $("button",this).click ->
+        $("button", this).click ->
           number = $("#search_youtube_step_number").attr("value")
           a_tag = $(".button_link",this)
           href = a_tag.attr("href")
           $("#recipe_step_#{number} .movie_selecter").attr("value", href)
           console.log href
-          $("#search_youtube_area").css("display","none")
+          $("#search_youtube_area").animate( { opacity: 0.0 }, 300 )
         this
     )
   )
@@ -64,4 +63,8 @@ $(window).load ->
   $(".movie_button").click ->
     step_number = $(this).next().attr("value")
     $("#search_youtube_step_number").attr( "value", step_number )
-    $("#search_youtube_area").css("display","block")
+    $("#search_youtube_area").css( { display:"block", opacity: 0.0 } )
+    $("#search_youtube_area").animate( { opacity: 1.0 }, 400 )
+
+  $("#search_youtube_area_close_button").click ->
+    $("#search_youtube_area").animate( { opacity: 0.0 }, 300 )

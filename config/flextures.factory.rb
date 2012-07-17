@@ -14,3 +14,19 @@ Flextures::Factory.define :recipes do |f|
   f
 end
 
+Flextures::Factory.define :admin_users do |f|
+  f.preferences = YAML.load( Base64.decode64(f.preferences) )
+  f.password = f.crypted_password
+  f
+end
+
+Flextures::DumpFilter.define :admin_users, {
+  preferences:->(v){ Base64.encode64(v.to_yaml) }
+}
+
+Flextures::Factory.define :users do |f|
+  tmp_pass = f.encrypted_password
+  f.password = "hogehoge"
+  f.encrypted_password = tmp_pass
+  f
+end

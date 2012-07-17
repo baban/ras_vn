@@ -17,10 +17,13 @@
           <%= f.text_area :description, value: @recipe.description %>
         </div>
         <div id="resipe_genre_select_area" class="area">
+          <h3>ジャンル</h3>
           <%= recipe_genre_select_area(f) %>
+          <%= link_to "ジャンルの追加", { controller:"recipe_foods", action:"new" }, target:"_blank" %>
         </div>
         <div id="foodstuffs_area" class="area">
           <table id="foodstuffs">
+            <tr><th colspan="2">食材(<%= f.text_field :amount, size: 3 %>人前)</th></tr>
             <tr>
               <th class="name">食材</th>
               <th class="amount">分量</th>
@@ -40,17 +43,19 @@
         <dl id="recipe_steps">
           <% @recipe.edit_steps.each.with_index(1) do |step,i| %>
             <dl class="step" id="recipe_step_<%= i %>">
+              <dt>Step <%= i %></dt>
               <dt class="selecter image_field">
+                <%= label :recipe_steps, "画像" %>
                 <%= file_field_tag "recipe_steps[][image]", class:"image_selecter" %>
               </dt>
               <dt class="selecter movie_field">
-                <%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter" %>
                 <form class="movie_button_field">
                   <input type="button" value="Movie" class="movie_button" />
                   <%= hidden_field_tag "recipe_step_id_#{i}", i, class:"recipe_step_id" %>
                 </form>
+                <%= label :recipe_steps, "動画" %>
+                <%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter" %>
               </dt>
-              <dt>Step <%= i %></dt>
               <dd>
                 <%= text_area_tag "recipe_steps[][content]", step.content, class:'step_edit_area' %>
                 <% if step.image %>
@@ -84,7 +89,7 @@
       <%= button_tag "Set", type:"button", id:"search_youtube_button" %>
       <ul id="search_result_list">
       </ul>
-      <%= button_tag "Send", type:"button", id:"youtube_url_send_button" %>
+      <%= button_tag "close", type:"button", id:"search_youtube_area_close_button" %>
     </div>
   </div>
 </div>

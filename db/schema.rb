@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.text     "content",                                        :null => false
     t.integer  "category_id", :default => 0,                     :null => false
     t.string   "image"
-    t.datetime "publiced_at", :default => '2012-07-11 00:00:00', :null => false
+    t.datetime "publiced_at", :default => '2012-07-16 00:00:00', :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
@@ -129,7 +129,7 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
   create_table "recipe_food_genre_rankings", :force => true do |t|
     t.integer  "recipe_food_genre_id"
     t.integer  "point",                :default => 0,            :null => false
-    t.date     "ranked_dt",            :default => '2012-07-11', :null => false
+    t.date     "ranked_at",            :default => '2012-07-16', :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
@@ -142,10 +142,11 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
   end
 
   create_table "recipe_foods", :force => true do |t|
-    t.integer  "recipe_food_genre_id", :null => false
-    t.string   "name",                 :null => false
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.integer  "recipe_food_genre_id",                    :null => false
+    t.string   "name",                                    :null => false
+    t.boolean  "show_top",             :default => false, :null => false
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
   end
 
   create_table "recipe_foodstuff_drafts", :force => true do |t|

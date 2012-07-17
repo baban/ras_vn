@@ -6,8 +6,8 @@ class RecipeFoodGenreRanking < ActiveRecord::Base
     # if today's ranking is going to be creating,
     # get yestaday's ranking
     ids = self
-      .where( " ranked_dt = ? or ranked_dt = ? ", Date.today, Date.yesterday )
-      .page(1).per(3).order(:ranked_dt).order("point desc")
+      .where( " ranked_at = ? or ranked_at = ? ", Date.today, Date.yesterday )
+      .page(1).per(3).order(:ranked_at).order("point desc")
       .pluck(:recipe_food_genre_id)
 
     RecipeFoodGenre.where( " id in (?) ", ids )
@@ -25,7 +25,7 @@ class RecipeFoodGenreRanking < ActiveRecord::Base
       .order("id desc")
 
     ranking.map do |rank|
-      RecipeFoodGenreRanking.create( recipe_food_genre_id: rank.recipe_food_genre_id, point: rank.id)
+      RecipeFoodGenreRanking.create( recipe_food_genre_id: rank.recipe_food_genre_id, point: rank.id, ranked_at: Date.today )
     end
   end
 end

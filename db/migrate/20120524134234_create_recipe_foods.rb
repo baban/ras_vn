@@ -5,7 +5,7 @@ class CreateRecipeFoods < ActiveRecord::Migration
     create_table :recipe_foods do |t|
       t.integer :recipe_food_genre_id, null: false
       t.string  :name,                 null: false
-
+      t.boolean :show_top,             null: false, default: false
       t.timestamps
     end
   end
