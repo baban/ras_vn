@@ -2,6 +2,10 @@
 
 class RecipeFoodGenreUploader < BaseUploader
   version :thumb do
-    process resize_to_fill: [70,70]
+    process resize_to_fill: [60,60]
+  end
+
+  def filename
+    "food.png"
   end
 end
