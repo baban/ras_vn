@@ -8,4 +8,17 @@ class RecipeFoodsController < ApplicationController
       @food_genres = RecipeFoodGenre.includes(:recipe_foods)
     end
   end
+
+  def new
+    @food_genres = RecipeFoodGenre.unscoped
+    @recipe_food = RecipeFood.new
+  end
+
+  def create
+    @recipe_food = RecipeFood.new
+    @recipe_food.attributes = params[:recipe_food]
+    @recipe_food.save
+    
+    redirect_to action:"new"
+  end
 end

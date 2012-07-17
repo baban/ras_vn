@@ -12,7 +12,7 @@ RasVn::Application.routes.draw do
   resources(:recipes){ collection { get :like } }
   resources(:recipe_advertisements)
   resources(:recipe_comments)
-  resources(:restaurants)
+  resources(:recipe_foods)
   resources(:mypage){ member { get :recipes, :recipe_comments } }
   resources(:kitchens) { member { get :recipes } }
 

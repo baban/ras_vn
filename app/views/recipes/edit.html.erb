@@ -19,6 +19,7 @@
         <div id="resipe_genre_select_area" class="area">
           <h3>ジャンル</h3>
           <%= recipe_genre_select_area(f) %>
+          <%= link_to "ジャンルの追加", { controller:"recipe_foods", action:"new" }, target:"_blank" %>
         </div>
         <div id="foodstuffs_area" class="area">
           <table id="foodstuffs">
