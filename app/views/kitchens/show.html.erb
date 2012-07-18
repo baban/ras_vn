@@ -55,7 +55,8 @@
   <% @recipes.each do |recipe| %>
     <li class="recipe">
       <dl class="recipe">
-        <dt><%=link_to recipe.title, recipes_url(recipe) %></dt>
+        <dt class="image"><%= image_tag recipe.image.url(:thumb), alt:"image" %></dt>
+        <dt><%= link_to recipe.title, recipes_url(recipe) %></dt>
         <dd>
           <p><%= truncate(recipe.description) %></p>
           <h3 class="foodstuffs_title">材料</h3>
