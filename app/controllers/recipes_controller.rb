@@ -16,8 +16,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe_comment = RecipeComment.new
 
-    # @bookmark = (current_user && Bookmark.find_by_recipe_id_and_user_id( params[:id], current_user.id )) || Bookmark.new
-    @bookmark = Bookmark.new
+    @bookmark = (current_user && Bookmark.find_by_recipe_id_and_user_id( params[:id], current_user.id )) || Bookmark.new
 
     @recipe.view_count_increment!
   end
@@ -109,7 +108,7 @@ class RecipesController < ApplicationController
   end
 
   def bookmarked?
-    !!Bookmark.find_by_user_id_and_recipe_id(current_user.id, params[:id])
+    !!current_user && !!Bookmark.find_by_user_id_and_recipe_id(current_user.id, params[:id])
   end
 
   def my_recipe?

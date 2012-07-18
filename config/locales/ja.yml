@@ -7,3 +7,14 @@ ja:
       - :year
       - :month
       - :day
+  order:
+    recipes: 件
+  page:
+    recipes:
+      creator: のレシピ
+      bookmark: ブックマーク
+      unbookmark: ブックマーク解除
+    bookmarks:
+      create: レシピをブックマークしました
+      update: ブックマークを解除しました
+

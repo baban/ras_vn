@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class RecipeFoodsController < ApplicationController
+  before_filter :authenticate_user!,   except:[:new,:create]
+
   def index
     if params[:recipe_food_genre_id]
       @food_genres = RecipeFoodGenre.where( " id = ? ", params[:recipe_food_genre_id] ).includes(:recipe_foods)
