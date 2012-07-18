@@ -72,16 +72,18 @@
     <div id="recipe_comment_area" class="area">
       <h3>Comments</h3>
       <%=form_for @recipe_comment do |f| %>
-        <%=f.hidden_field :recipe_id, value: @recipe.id %>
-        <%=f.file_field :image, value: "" %>
-        <%=f.text_area :content, size:"50x4", value: "" %>
+        <p><%=f.hidden_field :recipe_id, value: @recipe.id %></p>
+        <p><%=f.label :image %></p>
+        <p><%=f.file_field :image, value: "" %></p>
+        <p><%=f.label :content %></p>
+        <p><%=f.text_area :content, size:"50x4", value: "" %></p>
         <p><%=f.submit "post" %></p>
       <% end %>
       <dl id="recipe_comments" class="area">
         <% @recipe.comments.each do |comment| %>
           <dd>
             <dl class="recipe_comment">
-              <dt><%=image_tag comment.image.url(:thumb), alst:"" %></dt>
+              <dt><%=image_tag comment.image.url(:thumb), alt:"" %></dt>
               <dd><%= comment.content %></dd>
             </dl>
           </dd>

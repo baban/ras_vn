@@ -17,7 +17,18 @@ ul.recipes {
     dl.recipe{
       margin:0;
       padding:0;
-    }  
+      dt.image {
+        width:100px;
+        height:100px;
+        float:left;
+        border:dotted 1px #aaa;
+      }
+    }
+    dl.recipe:after {
+      content:"";
+      display:block;
+      clear:both;
+    }
   }
 }
 

@@ -91,18 +91,18 @@ ja:
         name: name  #g
 
       recipe:
-        amount: 人数
-        bookmarks: ブックマーク
+        amount: amount  #g
+        bookmarks: bookmarks  #g
         deleted_at: deleted_at  #g
         description: description  #g
         one_point: one_point  #g
         public: public  #g
-        recipe_comments: つくれぽ
+        recipe_comments: recipe_comments  #g
         recipe_foodstuffs: recipe_foodstuffs  #g
-        recipe_image: 画像
+        recipe_image: recipe_image  #g
         recipe_ranking: :activerecord.models.recipe_ranking  #g
         recipe_steps: recipe_steps  #g
-        title: タイトル
+        title: title  #g
         users: :activerecord.models.users  #g
 
       recipe_advertisement:
@@ -112,8 +112,8 @@ ja:
         url: url  #g
 
       recipe_comment:
-        content: 本文
-        image: 画像
+        content: content  #g
+        image: image  #g
         recipe: :activerecord.models.recipe  #g
 
       recipe_food:
@@ -209,7 +209,7 @@ ja:
         birthday: 生年月日
         comment: コメント
         first_name: 名
-        image: 写真
+        image: image  #g
         last_name: 姓
         mail_address: メールアドレス
         nickname: ニックネーム
@@ -221,13 +221,13 @@ ja:
       user_profile_visibility:
         address: 住所
         address_point: address_point  #g
-        birthday: 生年月日
+        birthday: birthday  #g
         blood_type: blood_type  #g
         comment: comment  #g
         first_name: first_name  #g
         last_name: last_name  #g
         mail_address: mail_address  #g
-        nickname: ニックネーム
+        nickname: nickname  #g
         postcode: postcode  #g
-        sex: 性別
+        sex: sex  #g
         user_profile: :activerecord.models.user_profile  #g
