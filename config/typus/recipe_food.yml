@@ -2,7 +2,7 @@
 
 RecipeFood:
   fields:
-    default: recipe_food_genre_id, name
-    form: recipe_food_genre_id, name
-  relationships: 
+    default: recipe_food_genre_id, name, show_top
+    form: recipe_food_genre_id, name, show_top
+  relationships: recipes
   application: Application
