@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.2'
 
 gem "mysql2", "0.3.11"
+gem 'memcache-client'
 
 # view urilities
 gem "jquery-rails"
@@ -28,8 +29,8 @@ gem "carrierwave", "0.6.2"
 gem "tapp" # add tapp(tap print) method
 gem 'i18n_generators', "1.2.1" # gemerate multiple language message file
 gem "ruby-openid", "2.1.8" # openid
-gem "rails3_acts_as_paranoid", "0.2.4" # 論理削除を簡単に行えるようにする
-gem "ipaddress", '0.8.0' # ipアドレスチェック
+gem "rails3_acts_as_paranoid", "0.2.4" # logical
+gem "ipaddress", '0.8.0' # ip addres check
 gem 'jpmobile', '3.0.1', require:'action_pack' # emable smart_phone_filter 
 gem "yard", '0.7.4' # document generator like javadoc
 #gem "guard" # ユニットテストの結果をデスクトップに通知
