@@ -67,7 +67,7 @@ group :test do
   gem "spork", "0.9.1" # rspec
   gem "simplecov", "0.5.4", require:false # test covarage files generate
   gem "simplecov-rcov", "0.2.3", require:false
-  gem 'capybara' # 
+  gem "capybara" # test driver
 end
 
 group :development, :test do
