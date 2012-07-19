@@ -1,4 +1,8 @@
 $(window).load ->
+  document.body.oncontextmenu= (e)->
+    alert "forbiddon right click!!"
+    false
+
   $("#bookmark_button")
     .live( "ajax:complete", (xhr) ->
       v = $("#bookmark_button").text()
@@ -20,7 +24,14 @@ $(window).load ->
     )
 
   $("#love_button")
-    .live( "ajax:complete", (xhr) ->
-      console.log "console"
-      $("#love_area").html("love")
+    .live( "ajax:beforeSend", (xhr) ->
+      console.log("beforeSend")
+    )
+    .live( "ajax:success", (event, data, status, xhr) ->
+      console.log("success")
+      console.log(data)
+      $("#love_area").html("love("+data["count"]+")")
+    )
+    .live( "ajax:error", (data, status, xhr) ->
+      console.log("error")
     )

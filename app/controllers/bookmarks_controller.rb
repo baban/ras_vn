@@ -12,12 +12,18 @@ class BookmarksController < ApplicationController
     mark.attributes=params[:bookmark]
     mark.save
 
-    redirect_to( { controller:"recipes", action:'show', id: params[:bookmark][:recipe_id] }, notice: "create completed" )
+    redirect_to( { controller:"recipes", action:'show', id: params[:bookmark][:recipe_id] }, notice: t("page.bookmarks.create") )
   end
 
   def update
-    mark = Bookmark.find(params[:id]).delete
+    mark = params[:bookmark]
+    Bookmark.find_by_user_id_and_recipe_id(mark[:user_id], mark[:recipe_id]).delete
 
-    redirect_to( { controller:"recipes", action:'show', id: params[:bookmark][:recipe_id] }, notice: "create completed" )
+    redirect_to( { controller:"recipes", action:'show', id: mark[:recipe_id] }, notice: t("page.bookmarks.update") )
+  end
+
+  def destroy
+    mark = Bookmark.find(params[:id]).delete
+    redirect_to( { controller:"recipes", action:'show', id: params[:bookmark][:recipe_id] }, notice: "destroy completed" )
   end
 end

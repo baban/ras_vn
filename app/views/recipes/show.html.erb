@@ -5,22 +5,15 @@
 <div id="content_body" class="section">
   <div id="recipe_header">
     <p class="chef">
-      <%=link_to @recipe.user.profile.nickname, kitchen_url(@user) %>のレシピ
-      (<%= @recipe.user.profile.recipe_count %>件)
+      <%=link_to @recipe.user.profile.nickname, kitchen_url(@user) %>
+      <%= t("page.recipes.creator") %>
+      (<%= @recipe.user.profile.recipe_count %><%= t("order.recipes") %>)
     </p>
     <% if user_signed_in? %>
-      <% if bookmarked? %>
-        <%=form_for( @bookmark, url:{ controller:"bookmarks", action:"destroy", id: @bookmark.id }, html:{ id:"bookmark_button" } ) do |f| %>
-          <%= f.hidden_field :recipe_id, value: @recipe.id %>
-          <%= f.hidden_field :user_id, value: current_user.id %>
-          <%= f.submit %>
-        <% end %>
-      <% else %>
-        <%=form_for( @bookmark, html:{ id:"bookmark_button" } ) do |f| %>
-          <%= f.hidden_field :recipe_id, value: @recipe.id %>
-          <%= f.hidden_field :user_id, value: current_user.id %>
-          <%= f.submit %>
-        <% end %>
+      <%=form_for( @bookmark, html:{ id:"bookmark_button" } ) do |f| %>
+        <%= f.hidden_field :recipe_id, value: @recipe.id %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.submit (bookmarked? ? t("page.recipes.unbookmark") : t("page.recipes.bookmark")) %>
       <% end %>
     <% end %>
     <% if my_recipe? %>
@@ -44,7 +37,10 @@
         <%= @recipe.description %>
       </div>
       <div id="food_genre"><%= @recipe.food.name %></div>
-      <h3>材料 <%= @recipe.amount && "(#{@recipe.amount}人前)"  %></h3>
+      <h3>
+        <%= t("activerecord.attributes.recipe.recipe_foodstuffs") %>&nbsp;
+        <%= @recipe.amount && "(#{@recipe.amount}人前)"  %>
+      </h3>
       <table>
         <% @recipe.foodstuffs.each do |foodstuff| %>
           <tr><td><%= foodstuff.name %></td><td><%= foodstuff.amount %></td></tr>
@@ -67,10 +63,10 @@
         </dl>
       <% end %>
     </dl>
-    <h3>Point!!</h3>
+    <h3><%= t("activerecord.attributes.recipe.one_point") %></h3>
     <div class="section"><%= @recipe.one_point %></div>
     <div id="recipe_comment_area" class="area">
-      <h3>Comments</h3>
+      <h3><%= t("activerecord.attributes.recipe.recipe_comments") %></h3>
       <%=form_for @recipe_comment do |f| %>
         <p><%=f.hidden_field :recipe_id, value: @recipe.id %></p>
         <p><%=f.label :image %></p>

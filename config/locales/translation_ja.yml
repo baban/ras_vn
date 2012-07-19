@@ -95,13 +95,13 @@ ja:
         bookmarks: ブックマーク
         deleted_at: deleted_at  #g
         description: description  #g
-        one_point: one_point  #g
+        one_point: Point!!
         public: public  #g
         recipe_comments: つくれぽ
-        recipe_foodstuffs: recipe_foodstuffs  #g
+        recipe_foodstuffs: 材料
         recipe_image: 画像
         recipe_ranking: :activerecord.models.recipe_ranking  #g
-        recipe_steps: recipe_steps  #g
+        recipe_steps: Step
         title: タイトル
         users: :activerecord.models.users  #g
 
