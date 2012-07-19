@@ -130,6 +130,7 @@ GEM
       nokogiri (~> 1.4)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (~> 0.0, >= 0.0.9)
+    memcache-client (1.8.5)
     method_source (0.7.1)
     mime-types (1.18)
     mini_magick (3.4)
@@ -313,6 +314,7 @@ DEPENDENCIES
   jpmobile (= 3.0.1)
   jquery-rails
   kaminari
+  memcache-client (= 1.8.5)
   mini_magick (= 3.4)
   mysql2 (= 0.3.11)
   omniauth (= 1.1.0)

@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.2'
 
 gem "mysql2", "0.3.11"
+gem "memcache-client", "1.8.5"
 gem "dalli", "2.1.0"
 
 # view urilities
