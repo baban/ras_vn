@@ -1,4 +1,8 @@
 $(window).load ->
+  document.body.oncontextmenu= (e)->
+    alert "forbiddon right click!!"
+    false
+
   $("#bookmark_button")
     .live( "ajax:complete", (xhr) ->
       v = $("#bookmark_button").text()
