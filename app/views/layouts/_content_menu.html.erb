@@ -1,6 +1,6 @@
 <ul id="content_menu">
-  <li><%= link_to "レシピをさがす", controller:"recipes", action:"index" %></li>
-  <li><%= link_to "レシピをのせる", controller:"recipes", action:"new" %></li>
+  <li><%= link_to "レシピをさがす", recipes_url %></li>
+  <li><%= link_to "レシピをのせる", new_recipe_url %></li>
   <% if params[:action] == "edit" and my_recipe? %>
     <li><%= link_to "このレシピを編集する", action:"edit", id: @recipe.id %></li>
   <% end %>
