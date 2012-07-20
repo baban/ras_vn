@@ -38,6 +38,10 @@ ja:
         post_report: 投稿
       new:
         create_recipe: レシピの新規作成
+        public: 公開
+        closed: 非公開
+        caution: 投稿に関する注意事項
+        next_step_button: 登録
     bookmarks:
       create: レシピをブックマークしました
       update: ブックマークを解除しました

@@ -9,7 +9,7 @@ RasVn::Application.routes.draw do
   resources(:bookmarks)
   resources(:diary)
   resources(:information)
-  resources(:recipes){ collection { get :like } }
+  resources(:recipes){ collection { get :like, :caution } }
   resources(:recipe_advertisements)
   resources(:recipe_comments)
   resources(:recipe_foods)
