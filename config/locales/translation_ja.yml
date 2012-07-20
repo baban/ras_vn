@@ -25,7 +25,7 @@ ja:
               inclusion: お住まいの地域を選択してください。
 
     models:
-      admin_user: admin_user  #g
+      admin_user: 管理者
       bookmark: ブックマーク
       distinct: distinct  #g
       eat_style: eat_style  #g
@@ -93,14 +93,14 @@ ja:
       recipe:
         amount: 人数
         bookmarks: ブックマーク
-        deleted_at: deleted_at  #g
-        description: description  #g
+        deleted_at: 削除日
+        description: 紹介文
         one_point: Point!!
-        public: public  #g
+        public: 公開ステータス
         recipe_comments: つくれぽ
         recipe_foodstuffs: 材料
+        recipe_food_id: 料理ジャンル
         recipe_image: 画像
-        recipe_ranking: :activerecord.models.recipe_ranking  #g
         recipe_steps: Step
         title: タイトル
         users: :activerecord.models.users  #g

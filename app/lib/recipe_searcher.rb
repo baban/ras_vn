@@ -8,6 +8,7 @@ module RecipeSearcher
       elsif option[:recipe_food_genre_id]
         self.search_by_recipe_food_genre_id(option[:recipe_food_genre_id])
       elsif option[:word]
+        SearchLog.add( user_id: option[:user_id], words: option[:word] )
         self.search_by_word(option[:word])
       else
         Recipe

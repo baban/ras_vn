@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class TopController < ApplicationController
+  include TrackerFilter
+
   before_filter :sidebar_ranking_filter
   def index
     logger.info session.inspect

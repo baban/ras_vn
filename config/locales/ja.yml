@@ -36,6 +36,8 @@ ja:
         bookmark: ブックマーク
         unbookmark: ブックマーク解除
         post_report: 投稿
+      new:
+        create_recipe: レシピの新規作成
     bookmarks:
       create: レシピをブックマークしました
       update: ブックマークを解除しました

@@ -2,7 +2,7 @@
 
 <h2>recipe</h2>
 <div id="content_body" class="section">
-  <%=semantic_form_for @recipe, url: recipe_url(@recipe.id), html:{multipart: true} do |f| %>
+  <%=semantic_form_for @recipe, url: recipe_url(@recipe.id), html:{ multipart: true } do |f| %>
     <h2><%= f.text_field :title, value: @recipe.title %></h2>
     <div id="recipe_base_info">
       <div class="section" id="recipe_body">
@@ -19,7 +19,7 @@
         <div id="resipe_genre_select_area" class="area">
           <h3>ジャンル</h3>
           <%= recipe_genre_select_area(f) %>
-          <%= link_to "ジャンルの追加", new_recipe_foods_url, target:"_blank" %>
+          <%= link_to "ジャンルの追加", new_recipe_food_url, target:"_blank" %>
         </div>
         <div id="foodstuffs_area" class="area">
           <table id="foodstuffs">

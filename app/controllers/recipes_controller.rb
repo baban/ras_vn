@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
   helper_method :loved?, :bookmarked?, :my_recipe?
 
   def index
-    @recipes = RecipeSearcher.search(params)
+    @recipes = RecipeSearcher.search( params.merge( user_id: (current_user && current_user.id).to_i ) )
   end
 
   def show

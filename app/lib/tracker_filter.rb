@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-module Filters::Tracker
+module TrackerFilter
   # commerce_code があるかチェックして、あるときはログをとっておく
   def add_tracker_code
     #tracker = params[:tracker]

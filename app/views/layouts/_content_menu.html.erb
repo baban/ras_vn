@@ -1,7 +1,7 @@
 <ul id="content_menu">
   <li><%= link_to t(:search_recipe, scope:"views.content_menu"), recipes_url %></li>
   <li><%= link_to t(:new_recipe, scope:"views.content_menu"), new_recipe_url %></li>
-  <% if params[:action] == "edit" and my_recipe? %>
+  <% if params[:controller] == "recipes" and params[:action] == "show" and my_recipe? %>
     <li><%= link_to t(:edit_recipe, scope:"views.content_menu"), action:"edit", id: @recipe.id %></li>
   <% end %>
 </ul>

@@ -16,9 +16,6 @@
         <%= f.submit (bookmarked? ? t(:unbookmark, scope:"views.recipes.show") : t(:bookmark, scope:"views.recipes.show")) %>
       <% end %>
     <% end %>
-    <% if my_recipe? %>
-      <%= link_to "edit", action:"edit", id: @recipe.id %>
-    <% end %>
   </div>
   <h2><%= @recipe.title %></h2>
   <div class="section" id="recipe_body">
