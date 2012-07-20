@@ -6,7 +6,7 @@ class TopController < ApplicationController
     logger.info session.inspect
     top_content = ToppageContent.first
     @recomment_food_genre_recipe = Recipe.find_by_id(top_content.recommend_recipe_genre_id)
-    @recomment_food = RecipeFood.find_by_id(@recomment_food_genre_recipe.recipe_food_id)
+    @recomment_food = RecipeFood.find_by_id(@recomment_food_genre_recipe.try(:recipe_food_id).to_i)
 
     @recommend_recipe = Recipe.find_by_id(top_content.recommend_recipe_id)
 

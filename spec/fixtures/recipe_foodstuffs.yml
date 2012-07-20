@@ -1,0 +1,738 @@
+recipe_foodstuffs_0:
+  id: 1
+  recipe_id: 1
+  recipe_food_id: 0
+  name: じゃが芋 
+  amount: 1～2個
+  deleted_at: null
+  created_at: 2012-05-13 14:13:41 UTC
+  updated_at: 2012-05-13 14:13:41 UTC
+recipe_foodstuffs_1:
+  id: 2
+  recipe_id: 1
+  recipe_food_id: 0
+  name: キャベツ
+  amount: 1/4個
+  deleted_at: null
+  created_at: 2012-05-13 14:14:00 UTC
+  updated_at: 2012-05-13 14:14:00 UTC
+recipe_foodstuffs_2:
+  id: 3
+  recipe_id: 1
+  recipe_food_id: 0
+  name: ベーコン
+  amount: 1袋
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_3:
+  id: 4
+  recipe_id: 1
+  recipe_food_id: 0
+  name: バター 
+  amount: 小さじ1/2
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_4:
+  id: 5
+  recipe_id: 1
+  recipe_food_id: 0
+  name: 油
+  amount: 適宜
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_5:
+  id: 6
+  recipe_id: 1
+  recipe_food_id: 0
+  name: 塩コショウ
+  amount: 適宜
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_6:
+  id: 7
+  recipe_id: 2
+  recipe_food_id: 0
+  name: 豚もも薄切り
+  amount: 200ｇ
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_7:
+  id: 8
+  recipe_id: 2
+  recipe_food_id: 0
+  name: ピーマン
+  amount: 3個～5個
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_8:
+  id: 9
+  recipe_id: 2
+  recipe_food_id: 0
+  name: ジャガイモ
+  amount: 中1個 
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_9:
+  id: 10
+  recipe_id: 2
+  recipe_food_id: 0
+  name: ★しょうゆ 
+  amount: 大1
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_10:
+  id: 11
+  recipe_id: 2
+  recipe_food_id: 0
+  name: ★酒
+  amount: 大1
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_11:
+  id: 12
+  recipe_id: 2
+  recipe_food_id: 0
+  name: ★サラダ油 
+  amount: 小1
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_12:
+  id: 13
+  recipe_id: 2
+  recipe_food_id: 0
+  name: ★片栗粉
+  amount: 小2
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_13:
+  id: 14
+  recipe_id: 2
+  recipe_food_id: 0
+  name: ◎しょうゆ 
+  amount: 大1
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_14:
+  id: 15
+  recipe_id: 2
+  recipe_food_id: 0
+  name: ◎酒（紹興酒）
+  amount: 大1
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_15:
+  id: 16
+  recipe_id: 2
+  recipe_food_id: 0
+  name: ◎さとう 
+  amount: 小1
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_16:
+  id: 17
+  recipe_id: 2
+  recipe_food_id: 0
+  name: ◎オイスターソース 
+  amount: 大1
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_17:
+  id: 18
+  recipe_id: 2
+  recipe_food_id: 0
+  name: ◎鶏ガラスープの素 
+  amount: 小1
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_18:
+  id: 19
+  recipe_id: 2
+  recipe_food_id: 0
+  name: ごま油
+  amount: 大1
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_19:
+  id: 20
+  recipe_id: 3
+  recipe_food_id: 0
+  name: じゃがいも
+  amount: ４個
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_20:
+  id: 21
+  recipe_id: 3
+  recipe_food_id: 0
+  name: 片栗粉
+  amount: 大匙２
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_21:
+  id: 22
+  recipe_id: 3
+  recipe_food_id: 0
+  name: 青のり
+  amount: 好きなだけ
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_22:
+  id: 23
+  recipe_id: 3
+  recipe_food_id: 0
+  name: 塩
+  amount: 適宜
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_23:
+  id: 24
+  recipe_id: 4
+  recipe_food_id: 0
+  name: じゃがいも 
+  amount: ２つ
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_24:
+  id: 25
+  recipe_id: 4
+  recipe_food_id: 0
+  name: 唐辛子 
+  amount: ５本
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_25:
+  id: 26
+  recipe_id: 4
+  recipe_food_id: 0
+  name: 花椒（中国の山椒）
+  amount: ５０粒位
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_26:
+  id: 27
+  recipe_id: 4
+  recipe_food_id: 0
+  name: ニンニク
+  amount: １かけ
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_27:
+  id: 28
+  recipe_id: 4
+  recipe_food_id: 0
+  name: ラー油（または老干媽）
+  amount: 数滴
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_28:
+  id: 29
+  recipe_id: 4
+  recipe_food_id: 0
+  name: 黒胡椒 
+  amount: 少々
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_29:
+  id: 30
+  recipe_id: 4
+  recipe_food_id: 0
+  name: 塩 
+  amount: 適量
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_30:
+  id: 31
+  recipe_id: 5
+  recipe_food_id: 0
+  name: じゃがいも
+  amount: 中３個
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_31:
+  id: 32
+  recipe_id: 5
+  recipe_food_id: 0
+  name: コンビーフ缶詰
+  amount: １缶
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_32:
+  id: 33
+  recipe_id: 5
+  recipe_food_id: 0
+  name: 卵
+  amount: ２個
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_33:
+  id: 34
+  recipe_id: 5
+  recipe_food_id: 0
+  name: 塩こしょう
+  amount: 少々
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_34:
+  id: 35
+  recipe_id: 5
+  recipe_food_id: 0
+  name: 醤油
+  amount: 小さじ１
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_35:
+  id: 36
+  recipe_id: 5
+  recipe_food_id: 0
+  name: サラダ油
+  amount: 小さじ１ 
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_36:
+  id: 37
+  recipe_id: 6
+  recipe_food_id: 0
+  name: じゃがいも（皮付き）
+  amount: ５００ｇ
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_37:
+  id: 38
+  recipe_id: 6
+  recipe_food_id: 0
+  name: あいびき肉
+  amount: １５０ｇ
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_38:
+  id: 39
+  recipe_id: 6
+  recipe_food_id: 0
+  name: たまねぎ
+  amount: 中１/２個
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_39:
+  id: 40
+  recipe_id: 6
+  recipe_food_id: 0
+  name: 牛乳
+  amount: ５０～７０ｃｃ
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_40:
+  id: 41
+  recipe_id: 6
+  recipe_food_id: 0
+  name: とろけるチーズ
+  amount: ２０～３０ｇ
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_41:
+  id: 42
+  recipe_id: 6
+  recipe_food_id: 0
+  name: 塩
+  amount: 小さじ１/４
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_42:
+  id: 43
+  recipe_id: 6
+  recipe_food_id: 0
+  name: 醤油
+  amount: 小さじ１/２
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_43:
+  id: 44
+  recipe_id: 6
+  recipe_food_id: 0
+  name: こしょう
+  amount: 少々
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_44:
+  id: 45
+  recipe_id: 6
+  recipe_food_id: 0
+  name: ナツメグ
+  amount: 少々
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_45:
+  id: 46
+  recipe_id: 6
+  recipe_food_id: 0
+  name: 塩・こしょう（マッシュポテト用）
+  amount: 適宜
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_46:
+  id: 47
+  recipe_id: 6
+  recipe_food_id: 0
+  name: とき卵（ツヤ出し・なくても良い）
+  amount: 適宜
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_47:
+  id: 48
+  recipe_id: 7
+  recipe_food_id: 0
+  name: じゃがいも
+  amount: 小さめ４個
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_48:
+  id: 49
+  recipe_id: 7
+  recipe_food_id: 0
+  name: ベーコン（あればブロックタイプ
+  amount: 100g
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_49:
+  id: 50
+  recipe_id: 7
+  recipe_food_id: 0
+  name: 薄力粉
+  amount: 大さじ３
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_50:
+  id: 51
+  recipe_id: 7
+  recipe_food_id: 0
+  name: サラダ油 
+  amount: 大さじ１
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_51:
+  id: 52
+  recipe_id: 7
+  recipe_food_id: 0
+  name: 粗塩
+  amount: 適宜
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_52:
+  id: 53
+  recipe_id: 8
+  recipe_food_id: 0
+  name: ジャガイモ
+  amount: 200ｇ
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_53:
+  id: 54
+  recipe_id: 8
+  recipe_food_id: 0
+  name: お好み焼きソース
+  amount: 適量
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_54:
+  id: 55
+  recipe_id: 8
+  recipe_food_id: 0
+  name: かつおぶし
+  amount: 適量
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_55:
+  id: 56
+  recipe_id: 8
+  recipe_food_id: 0
+  name: 青のり
+  amount: 適量
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_56:
+  id: 57
+  recipe_id: 8
+  recipe_food_id: 0
+  name: 卵
+  amount: 2個
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_57:
+  id: 58
+  recipe_id: 8
+  recipe_food_id: 0
+  name: だしの素
+  amount: 小さじ1
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_58:
+  id: 59
+  recipe_id: 8
+  recipe_food_id: 0
+  name: 紅ショウガ（みじん切り） 
+  amount: 小さじ2
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_59:
+  id: 60
+  recipe_id: 8
+  recipe_food_id: 0
+  name: キャベツ（みじん切りにしておきます）
+  amount: 2００ｇ
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_60:
+  id: 61
+  recipe_id: 8
+  recipe_food_id: 0
+  name: ちくわ（たてに半分に切ってから薄切りにしておきます）
+  amount: 2本
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_61:
+  id: 62
+  recipe_id: 8
+  recipe_food_id: 0
+  name: 小エビ
+  amount: 10～15匹
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_62:
+  id: 63
+  recipe_id: 9
+  recipe_food_id: 0
+  name: じゃがいも
+  amount: ５～６個（600ｇくらい）
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_63:
+  id: 64
+  recipe_id: 9
+  recipe_food_id: 0
+  name: 卵
+  amount: 4個
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_64:
+  id: 65
+  recipe_id: 9
+  recipe_food_id: 0
+  name: ベーコン
+  amount: 薄切り5～6枚
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_65:
+  id: 66
+  recipe_id: 9
+  recipe_food_id: 0
+  name: とろけるチーズ
+  amount: 100グラム位（好みで）
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_66:
+  id: 67
+  recipe_id: 9
+  recipe_food_id: 0
+  name: EXバージンオリーブオイル
+  amount: 適宜 
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_67:
+  id: 68
+  recipe_id: 9
+  recipe_food_id: 0
+  name: 塩
+  amount: 適宜 
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_68:
+  id: 69
+  recipe_id: 9
+  recipe_food_id: 0
+  name: あらびき黒こしょう
+  amount: 適宜 
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_69:
+  id: 70
+  recipe_id: 10
+  recipe_food_id: 0
+  name: じゃが芋(男爵）
+  amount: 3個
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_70:
+  id: 71
+  recipe_id: 10
+  recipe_food_id: 0
+  name: にんにく
+  amount: 1個
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_71:
+  id: 72
+  recipe_id: 10
+  recipe_food_id: 0
+  name: アンチョビ
+  amount: １５ｇ
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_72:
+  id: 73
+  recipe_id: 10
+  recipe_food_id: 0
+  name: オリーブオイル
+  amount: 大さじ１
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_73:
+  id: 74
+  recipe_id: 10
+  recipe_food_id: 0
+  name: パセリ
+  amount: 適量
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_74:
+  id: 75
+  recipe_id: 10
+  recipe_food_id: 0
+  name: 塩
+  amount: 適量
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_75:
+  id: 76
+  recipe_id: 11
+  recipe_food_id: 0
+  name: アスパラ
+  amount: ３本
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_76:
+  id: 77
+  recipe_id: 11
+  recipe_food_id: 0
+  name: じゃがいも
+  amount: 中２個(約250ｇ)
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_77:
+  id: 78
+  recipe_id: 11
+  recipe_food_id: 0
+  name: プロセスチーズ
+  amount: ２個(約30ｇ)
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_78:
+  id: 79
+  recipe_id: 11
+  recipe_food_id: 0
+  name: ハム
+  amount: ２枚
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_79:
+  id: 80
+  recipe_id: 11
+  recipe_food_id: 0
+  name: マヨネーズ
+  amount: 大さじ１～２
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_80:
+  id: 81
+  recipe_id: 11
+  recipe_food_id: 0
+  name: 酢
+  amount: 大さじ１/２
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC
+recipe_foodstuffs_81:
+  id: 82
+  recipe_id: 11
+  recipe_food_id: 0
+  name: コショー
+  amount: 少々
+  deleted_at: null
+  created_at: 2012-05-13 14:14:22 UTC
+  updated_at: 2012-05-13 14:14:22 UTC

@@ -1,0 +1,912 @@
+user_profile_visibilities_0:
+  id: 1
+  user_profile_id: 1
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_1:
+  id: 2
+  user_profile_id: 2
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_2:
+  id: 3
+  user_profile_id: 3
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_3:
+  id: 4
+  user_profile_id: 4
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_4:
+  id: 5
+  user_profile_id: 5
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_5:
+  id: 6
+  user_profile_id: 6
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_6:
+  id: 7
+  user_profile_id: 7
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_7:
+  id: 8
+  user_profile_id: 8
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_8:
+  id: 9
+  user_profile_id: 9
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_9:
+  id: 10
+  user_profile_id: 10
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_10:
+  id: 11
+  user_profile_id: 11
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_11:
+  id: 12
+  user_profile_id: 12
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_12:
+  id: 13
+  user_profile_id: 13
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_13:
+  id: 14
+  user_profile_id: 14
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_14:
+  id: 15
+  user_profile_id: 15
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_15:
+  id: 16
+  user_profile_id: 16
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_16:
+  id: 17
+  user_profile_id: 17
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_17:
+  id: 18
+  user_profile_id: 18
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_18:
+  id: 19
+  user_profile_id: 19
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-18 15:16:43 UTC
+  updated_at: 2012-06-18 15:16:43 UTC
+user_profile_visibilities_19:
+  id: 20
+  user_profile_id: 1
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_20:
+  id: 21
+  user_profile_id: 2
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_21:
+  id: 22
+  user_profile_id: 3
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_22:
+  id: 23
+  user_profile_id: 4
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_23:
+  id: 24
+  user_profile_id: 5
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_24:
+  id: 25
+  user_profile_id: 6
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_25:
+  id: 26
+  user_profile_id: 7
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_26:
+  id: 27
+  user_profile_id: 8
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_27:
+  id: 28
+  user_profile_id: 9
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_28:
+  id: 29
+  user_profile_id: 10
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_29:
+  id: 30
+  user_profile_id: 11
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_30:
+  id: 31
+  user_profile_id: 12
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_31:
+  id: 32
+  user_profile_id: 13
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_32:
+  id: 33
+  user_profile_id: 14
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_33:
+  id: 34
+  user_profile_id: 15
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_34:
+  id: 35
+  user_profile_id: 16
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_35:
+  id: 36
+  user_profile_id: 17
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_36:
+  id: 37
+  user_profile_id: 18
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_37:
+  id: 38
+  user_profile_id: 19
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-06-25 15:55:05 UTC
+  updated_at: 2012-06-25 15:55:05 UTC
+user_profile_visibilities_38:
+  id: 154
+  user_profile_id: 1
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_39:
+  id: 155
+  user_profile_id: 2
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_40:
+  id: 156
+  user_profile_id: 3
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_41:
+  id: 157
+  user_profile_id: 4
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_42:
+  id: 158
+  user_profile_id: 5
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_43:
+  id: 159
+  user_profile_id: 6
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_44:
+  id: 160
+  user_profile_id: 7
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_45:
+  id: 161
+  user_profile_id: 8
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_46:
+  id: 162
+  user_profile_id: 9
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_47:
+  id: 163
+  user_profile_id: 10
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_48:
+  id: 164
+  user_profile_id: 11
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_49:
+  id: 165
+  user_profile_id: 12
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_50:
+  id: 166
+  user_profile_id: 13
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_51:
+  id: 167
+  user_profile_id: 14
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_52:
+  id: 168
+  user_profile_id: 15
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_53:
+  id: 169
+  user_profile_id: 16
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_54:
+  id: 170
+  user_profile_id: 17
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_55:
+  id: 171
+  user_profile_id: 18
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
+user_profile_visibilities_56:
+  id: 172
+  user_profile_id: 19
+  nickname: true
+  sex: true
+  first_name: true
+  last_name: true
+  blood_type: true
+  birthday: true
+  mail_address: true
+  postcode: true
+  address: true
+  address_point: true
+  comment: true
+  created_at: 2012-07-20 13:33:31 UTC
+  updated_at: 2012-07-20 13:33:31 UTC
