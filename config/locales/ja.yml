@@ -10,6 +10,11 @@ ja:
   order:
     recipes: 件
   parts:
+    content_footer:
+      recomment_recipe_title: 本日のおすすめ料理
+      rankings_title: ランキング
+      pop_ranking_title: 人気レシピ
+      food_ranking_title: 人気の食材
     content_menu:
       search_recipe: レシピをさがす
       new_recipe: レシピをのせる
