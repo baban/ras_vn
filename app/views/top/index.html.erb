@@ -1,5 +1,3 @@
-<% include_action_style_sheet %>
-
 <%= render partial:"layouts/content_footer" %>
 
 <div id="content_body">
@@ -7,7 +5,10 @@
     <table id="popular_category">
       <tr>
         <th>
-          オススメカテゴリ<%=  %>
+          <%= t("page.top.index.recommended_category") %>
+          <% if @recomment_food %>
+            (<%= link_to @recomment_food.name, recipes_url( recipe_food_id: @recomment_food.id  ) %>)
+          <% end %>
         </th>
       </tr>
       <tr>
@@ -21,7 +22,7 @@
     </table>
     <table id="popular_recipe">
       <tr>
-        <th>人気レシピ</th>
+        <th><%= t("page.top.index.rank_in_recipe") %></th>
       </tr>
       <% @ranking.each do |recipe| %>
         <tr>
@@ -35,7 +36,7 @@
     </table>
   </div>
   <div id="category_recipe_search">
-    <h3>カテゴリからレシピを探す</h3>
+    <h3><%= t("page.top.index.category_list_title") %></h3>
     <div class="section">
       <% @food_genres.each do |genre| %>
       <div class="recipe_category">

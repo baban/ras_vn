@@ -9,6 +9,9 @@ ja:
       - :day
   order:
     recipes: 件
+  layouts:
+    header:
+      title: ras vn
   page:
     recipes:
       creator: のレシピ
@@ -17,4 +20,8 @@ ja:
     bookmarks:
       create: レシピをブックマークしました
       update: ブックマークを解除しました
-
+    top:
+      index:
+        recommended_category: オススメカテゴリ
+        rank_in_recipe: 人気レシピ
+        category_list_title: カテゴリからレシピを探す
