@@ -23,10 +23,15 @@
         </div>
         <div id="foodstuffs_area" class="area">
           <table id="foodstuffs">
-            <tr><th colspan="2">食材(<%= f.text_field :amount, size: 3 %>人前)</th></tr>
             <tr>
-              <th class="name">食材</th>
-              <th class="amount">分量</th>
+              <th colspan="2">
+                <%= t(:recipe_foodstuffs, scope:"activerecord.attributes.recipe") %>
+                (<%= f.text_field :amount, size: 3 %>人前)
+              </th>
+            </tr>
+            <tr>
+              <th class="name"><%= t(:name, scope:"activerecord.attributes.recipe_foodstuff") %></th>
+              <th class="amount"><%= t(:amount, scope:"activerecord.attributes.recipe_foodstuff") %></th>
             </tr>
             <% @recipe.edit_foodstuffs.each_with_index do |foodstuff,i| %>
               <tr class="foodstuff_row_<%= i %>">

@@ -125,9 +125,9 @@ ja:
         recipe_foods: recipe_foods  #g
 
       recipe_foodstuff:
-        amount: amount  #g
+        amount: 分量
         deleted_at: deleted_at  #g
-        name: name  #g
+        name: 名前
         recipes: :activerecord.models.recipes  #g
 
       recipe_step:
