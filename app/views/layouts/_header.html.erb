@@ -1,22 +1,22 @@
 <div id="header">
   <div class="logo">
-    <%= link_to t(:title,scope:"parts.header"), root_url %>
+    <%= link_to t(:title, scope:"views.header"), root_url %>
   </div>
-  <%= form_for( :recipes, url:{ controller:"recipes", action:"index" }, html:{ class:"header_search" }, method:"GET" ) do |f| %>
+  <%= form_for( :recipes, url: recipes_url, html:{ class:"header_search" }, method:"GET" ) do |f| %>
     <%= text_field_tag :word, "" %>
-    <%= f.submit t(:search_button,scope:"parts.header") %>
+    <%= f.submit t(:search_button, scope:"views.header") %>
   <% end %>
 
   <% unless user_signed_in? %>
     <dl id="login_area">
       <dt>
         <%= form_for :user, url: new_user_registration_url, method:"GET" do |f| %>
-          <p><%=f.submit t("parts.header.sign_up") %></p>
+          <p><%=f.submit t("views.header.sign_up") %></p>
         <% end %>
       </dt>
       <dt>
         <%= form_for :user, url: new_user_session_url, method:"GET" do |f| %>
-          <div><%= f.submit t(:sign_in, scope:"parts.header") %></div>
+          <div><%= f.submit t(:sign_in, scope:"views.header") %></div>
         <% end %>
       </dt>
     </dl>
@@ -24,12 +24,12 @@
     <dl id="login_area">
       <dt>
         <%=form_for :device, url: destroy_user_session_url, method:"DELETE" do |f| %>
-          <p><%=f.submit t(:sign_out, scope:"parts.header") %></p>
+          <p><%=f.submit t(:sign_out, scope:"views.header") %></p>
         <% end %>
       </dt>
       <dt>
         <ul id="mymenues_bar">
-          <li><%= link_to t(:mypage, scope:"parts.header"), controller:"mypage", action:"index" %></li>
+          <li><%= link_to t(:mypage, scope:"views.header"), controller:"mypage", action:"index" %></li>
         </ul>
       </dt>
     </dl>

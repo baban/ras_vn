@@ -8,9 +8,9 @@
       <div class="section" id="recipe_body">
         <div id="recipe_photo" class="figure">
           <% if @recipe.recipe_image %>
-            <%=image_tag  @recipe.recipe_image.url(:large_thumb) %>
+            <%= image_tag  @recipe.recipe_image.url(:large_thumb) %>
           <% else %>
-            <%=image_tag "no_image.gif" %>
+            <%= image_tag "no_image.gif" %>
           <% end %>
         </div>
         <div id="description">
@@ -19,7 +19,7 @@
         <div id="resipe_genre_select_area" class="area">
           <h3>ジャンル</h3>
           <%= recipe_genre_select_area(f) %>
-          <%= link_to "ジャンルの追加", { controller:"recipe_foods", action:"new" }, target:"_blank" %>
+          <%= link_to "ジャンルの追加", new_recipe_foods_url, target:"_blank" %>
         </div>
         <div id="foodstuffs_area" class="area">
           <table id="foodstuffs">

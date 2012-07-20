@@ -5,7 +5,7 @@
     <table id="popular_category">
       <tr>
         <th>
-          <%= t(:recommended_category, scope:"page.top.index") %>
+          <%= t(:recommended_category, scope:"views.top.index") %>
           <% if @recomment_food %>
             (<%= link_to @recomment_food.name, recipes_url( recipe_food_id: @recomment_food.id  ) %>)
           <% end %>
@@ -22,35 +22,35 @@
     </table>
     <table id="popular_recipe">
       <tr>
-        <th><%= t(:rank_in_recipe, scope:"page.top.index") %></th>
+        <th><%= t(:rank_in_recipe, scope:"views.top.index") %></th>
       </tr>
       <% @ranking.each do |recipe| %>
         <tr>
           <td>
             <div class="figure"><%=image_tag recipe.image.url(:thumb) %></div>
-            <%=link_to recipe.title, recipe_url(recipe) %><br />
-            by <%=link_to recipe.user.profile.nickname, kitchen_url(recipe.user) %>
+            <%= link_to recipe.title, recipe_url(recipe) %><br />
+            by <%= link_to recipe.user.profile.nickname, kitchen_url(recipe.user) %>
           </td>
         </tr>
       <% end %>
     </table>
   </div>
   <div id="category_recipe_search">
-    <h3><%= t(:category_list_title,scope:"page.top.index") %></h3>
+    <h3><%= t(:category_list_title,scope:"views.top.index") %></h3>
     <div class="section">
       <% @food_genres.each do |genre| %>
         <div class="recipe_category">
           <h4><%= link_to genre.name, recipes_url(recipe_food_genre_id: genre.id) %></h4>
-          <%=image_tag genre.image.url(:thumb), alt:"" %>
+          <%= image_tag genre.image.url(:thumb), alt:"" %>
           <ul class="recipe_sub_category">
             <% genre.foods.each do |food| %>
               <li><%= link_to food.name, recipes_url(recipe_food_id: food.id) %></li>
             <% end %>
           </ul>
-          <p class="more_link"><%= link_to "more...", controller:"recipe_foods", action:"index", recipe_food_genre_id: genre.id %></p>
+          <p class="more_link"><%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_genre_id: genre.id ) %></p>
         </div>
       <% end %>
     </div>
-    <p class="more_link"><%= link_to "all genres", controller:"recipe_foods", action:"index" %></p>
+    <p class="more_link"><%= link_to t(:all_categories, scope:"views.top.index"), recipe_foods_url %></p>
   </div>
 </div>

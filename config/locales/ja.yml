@@ -9,7 +9,7 @@ ja:
       - :day
   order:
     recipes: 件
-  parts:
+  views:
     content_footer:
       recomment_recipe_title: 本日のおすすめ料理
       rankings_title: ランキング
@@ -30,6 +30,28 @@ ja:
       sign_in: ログイン
       sign_out: ログアウト
       mypage: マイページ
+    recipes:
+      show:
+        creator: のレシピ
+        bookmark: ブックマーク
+        unbookmark: ブックマーク解除
+        post_report: 投稿
+    bookmarks:
+      create: レシピをブックマークしました
+      update: ブックマークを解除しました
+    pagination:
+      first: "&laquo; 最初"
+      last: " 最後 &raquo;"
+      previous: "&lsaquo; 前"
+      next: "次 &rsaquo;"
+      truncate: "..."
+    top:
+      index:
+        recommended_category: オススメカテゴリ
+        rank_in_recipe: 人気レシピ
+        category_list_title: カテゴリからレシピを探す
+        category_more: "more..."
+        all_categories: "すべてのジャンル"
   page:
     recipes:
       creator: のレシピ
@@ -38,8 +60,4 @@ ja:
     bookmarks:
       create: レシピをブックマークしました
       update: ブックマークを解除しました
-    top:
-      index:
-        recommended_category: オススメカテゴリ
-        rank_in_recipe: 人気レシピ
-        category_list_title: カテゴリからレシピを探す
+
