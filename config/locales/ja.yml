@@ -42,6 +42,11 @@ ja:
         closed: 非公開
         caution: 投稿に関する注意事項
         next_step_button: 登録
+      edit:
+        edit_recipe: レシピの編集
+        genre: ジャンル
+        select_genre: ジャンル
+        add_genre: ジャンルの追加
     bookmarks:
       create: レシピをブックマークしました
       update: ブックマークを解除しました

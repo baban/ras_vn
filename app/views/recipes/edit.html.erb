@@ -1,6 +1,6 @@
 <%= include_action_javascript %>
 
-<h2>recipe</h2>
+<h2><%= t(:edit_recipe, scope:"views.recipes.edit") %></h2>
 <div id="content_body" class="section">
   <%=semantic_form_for @recipe, url: recipe_url(@recipe.id), html:{ multipart: true } do |f| %>
     <h2><%= f.text_field :title, value: @recipe.title %></h2>
@@ -17,9 +17,9 @@
           <%= f.text_area :description, value: @recipe.description %>
         </div>
         <div id="resipe_genre_select_area" class="area">
-          <h3>ジャンル</h3>
+          <h3><%= t(:genre, scope:"views.recipes.edit") %></h3>
           <%= recipe_genre_select_area(f) %>
-          <%= link_to "ジャンルの追加", new_recipe_food_url, target:"_blank" %>
+          <%= link_to t(:add_genre, scope:"views.recipes.edit"), new_recipe_food_url, target:"_blank" %>
         </div>
         <div id="foodstuffs_area" class="area">
           <table id="foodstuffs">
