@@ -12,4 +12,6 @@ describe TopController do
       end
     end
   end
+  context "ログイン時" do
+  end
 end
