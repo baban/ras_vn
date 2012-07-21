@@ -1,50 +1,48 @@
   <div id="content_body">
     <div id="content_header">
       <ul id="content_menu_list">
-        <li><%= link_to "mypage", controller:"mypage", action:"index" %></li>
-        <li></li>
-        <li><%= link_to "bookmark", controller:"bookmark", action:"index" %></li>
-        <li><%= link_to "kitchen", controller:"kitchens", action:"index" %></li>
+        <li><%= link_to t(:mypage_link, scope:"views.mypage"),   controller:"mypage", action:"index" %></li>
+        <li><%= link_to t(:bookmark_link, scope:"views.mypage"), controller:"bookmarks", action:"index" %></li>
+        <li><%= link_to t(:kitchen_link, scope:"views.mypage"),  controller:"kitchens", action:"show", id: current_user.id %></li>
       </ul>
     </div>
-    <h2>Profile</h2>
+    <h2><%= t(:user_profile, scope:"activerecord.models") %></h2>
     <table>
       <tr><td><%= profile_image_tag @profile %></td></tr>
     </table>
-    <h3>プロフィール内容</h3>
     <table>
       <tr>
-        <td>ユーザーID</td>
+        <td><%= t(:id, scope:"activerecord.attributes.user_profile") %></td>
         <td colspan="2"><%= @profile.id %></td>
         <td></td>
       </tr>
       <tr>
-        <td>ニックネーム</td>
+        <td><%= t(:nickname, scope:"activerecord.attributes.user_profile") %></td>
         <td colspan="2"><%= @profile.nickname %></td>
-        <td><%= @visibility.nickname ? "公開" : "非公開" %></td>
+        <td><%= @visibility.nickname ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
       </tr>
       <tr>
-        <td>メールアドレス</td>
+        <td><%= t(:mail_address, scope:"activerecord.attributes.user_profile") %></td>
         <td colspan="2"><%= @profile.mail_address %></td>
-        <td><%= @visibility.mail_address ? "公開" : "非公開" %></td>
+        <td><%= @visibility.mail_address ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
       </tr>
       <tr>
-        <td>性別</td>
+        <td><%= t(:sex, scope:"activerecord.attributes.user_profile") %></td>
         <td colspan="2"><%=translate_sex( @profile.sex ) %></td>
-        <td><%= @visibility.sex ? "公開" : "非公開" %></td>
+        <td><%= @visibility.sex ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
       </tr>
       <tr>
-        <td>生年月日</td>
+        <td><%= t(:birthday, scope:"activerecord.attributes.user_profile") %></td>
         <td colspan="2"><%= @profile.birthday %></td>
-        <td><%= @visibility.birthday ? "公開" : "非公開" %></td>
+        <td><%= @visibility.birthday ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
       </tr>
       <tr>
-        <td>自己紹介</td>
+        <td><%= t(:comment, scope:"activerecord.attributes.user_profile") %></td>
         <td colspan="2"><%= @profile.comment %></td>
-        <td><%= @visibility.comment ? "公開" : "非公開" %></td>
+        <td><%= @visibility.comment ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
       </tr>
       <tr>
-        <td colspan="4"><%=link_to "編集", controller:"profiles", action:"edit" %></td>
+        <td colspan="4"><%=link_to t(:edit, scope:"views.mypage"), controller:"profiles", action:"edit" %></td>
       </tr>
     </table>
   </div>

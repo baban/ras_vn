@@ -12,7 +12,13 @@
         <%= image_tag recipe.recipe_image.url(:thumb), alt:"image" %>
       </div>
       <%= link_to recipe.title, recipe_url(recipe) %>
-      <p><%= recipe.description %></p>
+      <p class="description"><%= recipe.description %></p>
+      <p class="chef">by <%= recipe.chef.profile.nickname %></p>
+      <ul class="recipe_status">
+        <li><%= t(:id, scope:"activerecord.attributes.recipe") %>:<%= recipe.id %></li>
+        <li><%= t(:created_at, scope:"activerecord.attributes.recipe") %>:<%= recipe.created_at.strftime("%Y-%m-%d") %></li>
+        <li><%= t(:updated_at, scope:"activerecord.attributes.recipe") %>:<%= recipe.updated_at.strftime("%Y-%m-%d") %></li>
+      </ul>
     </div>
   <% end %>
 </div>

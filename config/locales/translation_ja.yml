@@ -23,7 +23,6 @@ ja:
               blank: ニックネームは入力必須です
             prefecture_id:
               inclusion: お住まいの地域を選択してください。
-
     models:
       admin_user: 管理者
       bookmark: ブックマーク
@@ -33,20 +32,15 @@ ja:
       omniuser: omniuser  #g
       prefecture: prefecture  #g
       recipe: レシピ
-      recipe_advertisement: recipe_advertisement  #g
-      recipe_comment: recipe_comment  #g
-      recipe_food: recipe_food  #g
-      recipe_food_genre: recipe_food_genre  #g
-      recipe_foodstuff: recipe_foodstuff  #g
+      recipe_advertisement: 広告
+      recipe_comment: つくれぽ
+      recipe_food: ジャンル（小カテゴリ)
+      recipe_food_genre: ジャンル（大カテゴリ)
+      recipe_foodstuff: 食材
       recipe_foodstuff_ranking: recipe_foodstuff_ranking  #g
-      recipe_like_log: recipe_like_log  #g
       recipe_ranking: recipe_ranking  #g
-      recipe_step: recipe_step  #g
-      restaurant: restaurant  #g
-      restaurant_comment: restaurant_comment  #g
-      restaurant_menu: restaurant_menu  #g
-      restaurant_profile: restaurant_profile  #g
-      search_log: search_log  #g
+      recipe_step: レシピステップ
+      search_log: 検索ログ
       toppage_content: toppage_content  #g
       tpl_sets: tpl_sets  #g
       user: ユーザー
@@ -91,6 +85,7 @@ ja:
         name: name  #g
 
       recipe:
+        id: レシピID
         amount: 人数
         bookmarks: ブックマーク
         deleted_at: 削除日
@@ -104,6 +99,8 @@ ja:
         recipe_steps: Step
         title: タイトル
         users: :activerecord.models.users  #g
+        created_at: 作成日 
+        updated_at: 更新日
 
       recipe_advertisement:
         alt: alt  #g
@@ -137,46 +134,6 @@ ja:
         movie_url: Movie
         recipes: :activerecord.models.recipes  #g
 
-      restaurant:
-        address: address  #g
-        close_day: close_day  #g
-        close_time: close_time  #g
-        comment: comment  #g
-        coupon_flg: coupon_flg  #g
-        deleted_at: deleted_at  #g
-        email: email  #g
-        fax_number: fax_number  #g
-        homepage: homepage  #g
-        mobile_coupon_flg: mobile_coupon_flg  #g
-        name: name  #g
-        open_time: open_time  #g
-        phone_number: phone_number  #g
-        postcode: postcode  #g
-        public: public  #g
-        restaurant_menus: restaurant_menus  #g
-        restaurant_profile: :activerecord.models.restaurant_profile  #g
-        sub_name: sub_name  #g
-
-      restaurant_comment:
-        comment: comment  #g
-        deleted_at: deleted_at  #g
-        point: point  #g
-        public: public  #g
-
-      restaurant_menu:
-        comment: comment  #g
-        image: image  #g
-        price: price  #g
-        price_comment: price_comment  #g
-        title: title  #g
-        view_style: view_style  #g
-
-      restaurant_profile:
-        deleted_at: deleted_at  #g
-        latitude: latitude  #g
-        longitude: longitude  #g
-        top_photo: top_photo  #g
-
       search_log:
         location: location  #g
         words: words  #g
@@ -196,16 +153,17 @@ ja:
         last_sign_in_at: last_sign_in_at  #g
         last_sign_in_ip: last_sign_in_ip  #g
         recipe: :activerecord.models.recipe  #g
-        recipe_comments: recipe_comments  #g
+        recipe_comments: コメント
         recipes: レシピ
         remember_created_at: remember_created_at  #g
         reset_password_sent_at: reset_password_sent_at  #g
         reset_password_token: reset_password_token  #g
-        screen_name: screen_name  #g
+        screen_name: ニックネーム
         uid: UID
         user_profile: プロフィール
 
       user_profile:
+        id: ユーザーID
         birthday: 生年月日
         comment: コメント
         first_name: 名
