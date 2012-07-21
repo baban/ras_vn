@@ -1,0 +1,86 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ja:
+  date:
+    order: 
+      - :year
+      - :month
+      - :day
+  order:
+    recipes: ’·ï
+  views:
+    content_footer:
+      recomment_recipe_title: ’ËÜ’Æü’¤Î’¤ª’¤¹’¤¹’¤á’ÎÁ’Íý
+      rankings_title: ’¥é’¥ó’¥­’¥ó’¥°
+      pop_ranking_title: ’¿Í’µ¤’¥ì’¥·’¥Ô
+      food_ranking_title: ’¿Í’µ¤’¤Î’¿©’ºà
+    content_menu:
+      search_recipe: ’¥ì’¥·’¥Ô’¤ò’¤µ’¤¬’¤¹
+      new_recipe: ’¥ì’¥·’¥Ô’¤ò’¤Î’¤»’¤ë
+      edit_recipe: ’¤³’¤Î’¥ì’¥·’¥Ô’¤ò’ÊÔ’½¸’¤¹’¤ë
+    footer:
+      cooporate_profile: ’²ñ’¼Ò’³µ’Í×
+      cooporate_terms: ’Íø’ÍÑ’µ¬’Ìó
+      cooporate_q_and_a: "Q&A ’¤ª’Ìä’¤¤’¹ç’¤ï’¤»"
+    header:
+      title: ras vn
+      search_button: ’¥ì’¥·’¥Ô’¸¡’º÷
+      sign_up: ’Ìµ’ÎÁ’ÅÐ’Ï¿
+      sign_in: ’¥í’¥°’¥¤’¥ó
+      sign_out: ’¥í’¥°’¥¢’¥¦’¥È
+      mypage: ’¥Þ’¥¤’¥Ú’¡¼’¥¸
+    recipes:
+      show:
+        creator: ’¤Î’¥ì’¥·’¥Ô
+        bookmark: ’¥Ö’¥Ã’¥¯’¥Þ’¡¼’¥¯
+        unbookmark: ’¥Ö’¥Ã’¥¯’¥Þ’¡¼’¥¯’²ò’½ü
+        post_report: ’Åê’¹Æ
+      new:
+        create_recipe: ’¥ì’¥·’¥Ô’¤Î’¿·’µ¬’ºî’À®
+        public: ’¸ø’³«
+        closed: ’Èó’¸ø’³«
+        caution: ’Åê’¹Æ’¤Ë’´Ø’¤¹’¤ë’Ãí’°Õ’»ö’¹à
+        next_step_button: ’ÅÐ’Ï¿
+      edit:
+        edit_recipe: ’¥ì’¥·’¥Ô’¤Î’ÊÔ’½¸
+        genre: ’¥¸’¥ã’¥ó’¥ë
+        select_genre: ’¥¸’¥ã’¥ó’¥ë
+        add_genre: ’¥¸’¥ã’¥ó’¥ë’¤Î’ÄÉ’²Ã
+        add_foodstuff: ’¿©’ºà’ÄÉ’²Ã
+        add_step: ’¥¹’¥Æ’¥Ã’¥×’ÄÉ’²Ã
+        edit: ’°ì’»þ’ÊÝ’Â¸
+        commit: ’´°’Î»
+        tmp_save: ’°ì’»þ’ÊÝ’Â¸’¤·’¤Þ’¤·’¤¿
+        save_complete: ’ÊÝ’Â¸’¤ò’´°’Î»’¤·’¤Þ’¤·’¤¿
+    bookmarks:
+      create: ’¥ì’¥·’¥Ô’¤ò’¥Ö’¥Ã’¥¯’¥Þ’¡¼’¥¯’¤·’¤Þ’¤·’¤¿
+      update: ’¥Ö’¥Ã’¥¯’¥Þ’¡¼’¥¯’¤ò’²ò’½ü’¤·’¤Þ’¤·’¤¿
+    pagination:
+      first: "&laquo; ’ºÇ’½é"
+      last: " ’ºÇ’¸å &raquo;"
+      previous: "&lsaquo; ’Á°"
+      next: "’¼¡ &rsaquo;"
+      truncate: "..."
+    profile:
+      mypage_link: ’¥Þ’¥¤’¥Ú’¡¼’¥¸
+      bookmark_link: ’¥Ö’¥Ã’¥¯’¥Þ’¡¼’¥¯
+      kitchen_link: ’¥­’¥Ã’¥Á’¥ó
+      diary_link: ’Æü’µ­
+
+    top:
+      index:
+        recommended_category: ’¥ª’¥¹’¥¹’¥á’¥«’¥Æ’¥´’¥ê
+        rank_in_recipe: ’¿Í’µ¤’¥ì’¥·’¥Ô
+        category_list_title: ’¥«’¥Æ’¥´’¥ê’¤«’¤é’¥ì’¥·’¥Ô’¤ò’Ãµ’¤¹
+        category_more: "more..."
+        all_categories: "’¤¹’¤Ù’¤Æ’¤Î’¥¸’¥ã’¥ó’¥ë"
+  page:
+    recipes:
+      creator: ’¤Î’¥ì’¥·’¥Ô
+      bookmark: ’¥Ö’¥Ã’¥¯’¥Þ’¡¼’¥¯
+      unbookmark: ’¥Ö’¥Ã’¥¯’¥Þ’¡¼’¥¯’²ò’½ü
+    bookmarks:
+      create: ’¥ì’¥·’¥Ô’¤ò’¥Ö’¥Ã’¥¯’¥Þ’¡¼’¥¯’¤·’¤Þ’¤·’¤¿
+      update: ’¥Ö’¥Ã’¥¯’¥Þ’¡¼’¥¯’¤ò’²ò’½ü’¤·’¤Þ’¤·’¤¿
+

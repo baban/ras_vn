@@ -4,8 +4,10 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.2'
 
 gem "mysql2", "0.3.11"
-gem "memcache-client", "1.8.5"
-gem "dalli", "2.1.0"
+gem "memcache-client", "1.8.5" # user memcashed
+gem "dalli", "2.1.0"           # memcached hig-perfirmance settinged gem
+gem "redis"
+#gem "mongo_mapper"
 
 # view urilities
 gem "jquery-rails"
@@ -17,7 +19,6 @@ gem "omniauth", "1.1.0"
 gem "omniauth-twitter", "0.0.9"
 gem "omniauth-facebook", "1.4.0"
 gem "omniauth-google-oauth2", "0.1.10"
-#gem "mongo_mapper"
 
 # controller, model tools
 gem "aspectr"  # add aspect oriented programming functions

@@ -62,6 +62,11 @@ ja:
       previous: "&lsaquo; 前"
       next: "次 &rsaquo;"
       truncate: "..."
+    profile:
+      mypage_link: マイページ
+      bookmark_link: ブックマーク
+      kitchen_link: キッチン
+      diary_link: 日記
     top:
       index:
         recommended_category: オススメカテゴリ
