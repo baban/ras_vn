@@ -7,12 +7,18 @@ ja:
       - :year
       - :month
       - :day
+  time:
+    formats:
+      default: "%Y-%m-%d"
   order:
     recipes: 件
   status:
     public: 公開
     closed: 非公開
   views:
+    bookmarks:
+      create: レシピをブックマークしました
+      update: ブックマークを解除しました
     content_footer:
       recomment_recipe_title: 本日のおすすめ料理
       rankings_title: ランキング
@@ -26,6 +32,11 @@ ja:
       cooporate_profile: 会社概要
       cooporate_terms: 利用規約
       cooporate_q_and_a: "Q&A お問い合わせ"
+    kitchens:
+      show_link: 表示
+      recipe_link: レシピ
+      recipe_comment_link: つくれぽ
+      diary_link: 日記
     header:
       title: ras vn
       search_button: レシピ検索
@@ -56,9 +67,6 @@ ja:
         commit: 完了
         tmp_save: 一時保存しました
         save_complete: 保存を完了しました
-    bookmarks:
-      create: レシピをブックマークしました
-      update: ブックマークを解除しました
     pagination:
       first: "&laquo; 最初"
       last: " 最後 &raquo;"

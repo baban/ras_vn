@@ -1,6 +1,6 @@
 <ul id="recipe_menus">
-  <li><%=link_to "表示", action:"show", id: params[:id] %></li>
-  <li><%=link_to "レシピ", action:"recipes", id: params[:id] %></li>
-  <li><%=link_to "つくれぽ", action:"recipe_comments", id: params[:id] %></li>
-  <li><%=link_to "日記", controller:"diary", action:"index", user_id: params[:id] %></li>
+  <li><%=link_to t(:show_link, scope:"views.kitchens"), action:"show", id: params[:id] %></li>
+  <li><%=link_to t(:recipe_link, scope:"views.kitchens"), action:"recipes", id: params[:id] %></li>
+  <li><%=link_to t(:recipe_comment_link, scope:"views.kitchens"), action:"recipe_comments", id: params[:id] %></li>
+  <li><%=link_to t(:diary_link, scope:"views.kitchens"), controller:"diary", action:"index", user_id: params[:id] %></li>
 </ul>

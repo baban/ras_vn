@@ -23,7 +23,6 @@ ja:
               blank: ニックネームは入力必須です
             prefecture_id:
               inclusion: お住まいの地域を選択してください。
-
     models:
       admin_user: 管理者
       bookmark: ブックマーク
@@ -33,15 +32,15 @@ ja:
       omniuser: omniuser  #g
       prefecture: prefecture  #g
       recipe: レシピ
-      recipe_advertisement: recipe_advertisement  #g
+      recipe_advertisement: 広告
       recipe_comment: つくれぽ
-      recipe_food: recipe_food  #g
-      recipe_food_genre: recipe_food_genre  #g
-      recipe_foodstuff: recipe_foodstuff  #g
+      recipe_food: ジャンル（小カテゴリ)
+      recipe_food_genre: ジャンル（大カテゴリ)
+      recipe_foodstuff: 食材
       recipe_foodstuff_ranking: recipe_foodstuff_ranking  #g
       recipe_ranking: recipe_ranking  #g
-      recipe_step: recipe_step  #g
-      search_log: search_log  #g
+      recipe_step: レシピステップ
+      search_log: 検索ログ
       toppage_content: toppage_content  #g
       tpl_sets: tpl_sets  #g
       user: ユーザー
@@ -86,6 +85,7 @@ ja:
         name: name  #g
 
       recipe:
+        id: レシピID
         amount: 人数
         bookmarks: ブックマーク
         deleted_at: 削除日
@@ -99,6 +99,8 @@ ja:
         recipe_steps: Step
         title: タイトル
         users: :activerecord.models.users  #g
+        created_at: 作成日 
+        updated_at: 更新日
 
       recipe_advertisement:
         alt: alt  #g
