@@ -28,9 +28,6 @@ class Recipe < ActiveRecord::Base
   scope :visibles, ->{ where(" public = true ") }
   scope :topics, -> { visibles.page(1).per(2) }
 
-  def user
-    User.find(self.user_id)
-  end
   alias :chef :user
 
   def view_count_increment!

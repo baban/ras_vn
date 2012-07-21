@@ -9,7 +9,11 @@
   <% @recipes.each do |recipe| %>
     <div class="recipe">
       <div class="figure recipe_photo">
-        <%= image_tag recipe.recipe_image.url(:thumb), alt:"image" %>
+        <% if recipe.recipe_image.blank? %>
+          <%= image_tag recipe.recipe_image.url(:thumb), alt:"image" %>
+        <% else %>
+          <%= "no_image" %>
+        <% end %>
       </div>
       <%= link_to recipe.title, recipe_url(recipe) %>
       <p class="description"><%= recipe.description %></p>
