@@ -70,7 +70,7 @@
         <p><%= f.file_field :image, value: "" %></p>
         <p><%= f.label :content %></p>
         <p><%= f.text_area :content, size:"50x4", value: "" %></p>
-        <p><%= f.submit t(:post_report,scope:"views.recipes.show") %></p>
+        <p><%= f.submit t(:post_report, scope:"views.recipes.show") %></p>
       <% end %>
       <dl id="recipe_comments" class="area">
         <% @recipe.comments.each do |comment| %>

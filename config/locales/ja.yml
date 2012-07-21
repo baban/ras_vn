@@ -47,6 +47,12 @@ ja:
         genre: ジャンル
         select_genre: ジャンル
         add_genre: ジャンルの追加
+        add_foodstuff: 食材追加
+        add_step: ステップ追加
+        edit: 一時保存
+        commit: 完了
+        tmp_save: 一時保存しました
+        save_complete: 保存を完了しました
     bookmarks:
       create: レシピをブックマークしました
       update: ブックマークを解除しました

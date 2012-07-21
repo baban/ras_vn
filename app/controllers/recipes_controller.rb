@@ -67,11 +67,11 @@ class RecipesController < ApplicationController
     # copy_draft
     @recipe.copy_public
 
-    if params[:commit] == "Save"
-      flash[:notice] = "Update"
-      render action:"edit"
+    if params[:edit]
+      flash[:notice] = t(:tmp_save, scope:"views.recipes.edit")
+      render action: "edit"
     else
-      redirect_to( {action:'index'}, flash:{ notice: "update completed" } )
+      redirect_to( { action:"show", id: params[:id] }, notice: t(:save_complete, scope:"views.recipes.edit") )
     end
   end
 

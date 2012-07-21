@@ -131,10 +131,10 @@ ja:
         recipes: :activerecord.models.recipes  #g
 
       recipe_step:
-        content: content  #g
+        content: 本文
         deleted_at: deleted_at  #g
-        image: image  #g
-        movie_url: movie_url  #g
+        image: 画像
+        movie_url: Movie
         recipes: :activerecord.models.recipes  #g
 
       restaurant:
