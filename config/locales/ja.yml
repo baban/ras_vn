@@ -9,6 +9,9 @@ ja:
       - :day
   order:
     recipes: 件
+  status:
+    public: 公開
+    closed: 非公開
   views:
     content_footer:
       recomment_recipe_title: 本日のおすすめ料理
@@ -63,17 +66,23 @@ ja:
       next: "次 &rsaquo;"
       truncate: "..."
     profile:
+      image_description: (アップロードすると自動で変更されます)
+      update: 更新
+    mypage:
       mypage_link: マイページ
       bookmark_link: ブックマーク
       kitchen_link: キッチン
       diary_link: 日記
+      public: 公開
+      closed: 非公開
+      edit: 編集
     top:
       index:
         recommended_category: オススメカテゴリ
         rank_in_recipe: 人気レシピ
         category_list_title: カテゴリからレシピを探す
         category_more: "more..."
-        all_categories: "すべてのジャンル"
+        all_categories: すべてのジャンル
   page:
     recipes:
       creator: のレシピ

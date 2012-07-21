@@ -2,15 +2,15 @@
 
   <table>
     <tr>
-      <td>ユーザーID</td>
+      <td><%= t(:id, scope:"activerecord.attributes.user_profile") %></td>
       <td colspan="2"><%= @profile.id %></td>
     </tr>
     <tr>
-      <td>ニックネーム</td>
+      <td><%= t(:nickname, scope:"activerecord.attributes.user_profile") %></td>
       <td colspan="2"><%= @profile.nickname %></td>
     </tr>
     <tr>
-      <td>メールアドレス</td>
+      <td><%= t(:mail_address, scope:"activerecord.attributes.user_profile") %></td>
       <td colspan="2"><%= @profile.mail_address %></td>
     </tr>
     <tr>
