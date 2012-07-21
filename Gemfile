@@ -41,16 +41,15 @@ gem "yard", '0.7.4' # document generator like javadoc
 gem 'rspec' # unit test utilities
 gem 'rspec-rails'
 gem 'flextures', "1.9.15" # add rake command for dump and load fixtures
-gem 'faker' # generate fake data
-gem 'faker-japanese' # generate japanese names
-gem "spork"
+gem 'faker' # generate fake data for test
+gem 'faker-japanese' # generate fake japanese names for test
 gem "factory_girl_rails" # unit test data generate utilities
 gem "kaminari" # paginate view
 gem "whenever", '0.7.2', require:false # cron設定の追加＆削除自動化
-gem 'capistrano', '2.9.0'
-gem 'capistrano_colors', '0.5.5'
-gem 'capistrano-ext', '1.2.1'
-gem 'acts_as_readonlyable', '0.0.9' # DBのマスタースレーブ分割
+gem "capistrano", "2.9.0"
+gem "capistrano_colors", "0.5.5"
+gem "capistrano-ext", "1.2.1"
+gem "acts_as_readonlyable", '0.0.9' # sharding slave databases
 gem "rvm-capistrano"
 
 group :assets do
@@ -65,23 +64,20 @@ end
 
 group :test do
   gem 'turn', '0.8.2', require:false # Pretty printed test output
-  #gem "spork", "0.9.0" # rspec高速起動
-  gem "simplecov", "0.5.4", require:false # テスト結果整形出力
+  gem "spork", "0.9.1" # rspec
+  gem "simplecov", "0.5.4", require:false # test covarage files generate
   gem "simplecov-rcov", "0.2.3", require:false
-  gem 'capybara' # 受け入れテスト記述、実行ツール
+  gem "capybara" # test driver
 end
 
 group :development, :test do
-  gem "pry"
+  gem "pry" # add commands [rails colsole]
   gem "pry-doc"
   gem "pry-rails"
   gem 'plymouth', require: false
-  #gem 'pry-exception_explorer'
-  #gem 'pry-nav'
-  #gem 'pry-remote'
-  #gem 'pry-stack_explorer'
-  #gem 'ruby-debug19'
-  #gem 'ruby-debug-base19x', '>= 0.11.30.pre10'
-  #gem 'linecache19', git: 'https://github.com/mark-moseley/linecache.git', ref: '869c6a65155068415925067e480741bd0a71527e'
+  gem 'pry-exception_explorer'
+  gem 'pry-nav'
+  gem 'pry-remote'
+  gem 'pry-stack_explorer'
 end
 

@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe RecipesController do
-  fixtures :users, :user_profiles, :recipes
+  fixtures :users, :user_profiles, :user_profile_visibilities, :recipes
 
   describe "GET 'index'" do
     it "returns http success" do

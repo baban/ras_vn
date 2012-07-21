@@ -4,14 +4,14 @@
 
 <div id="content_body">
   <div class="paginate">
-    <%=paginate @recipes %>
+    <%= paginate @recipes %>
   </div>
   <% @recipes.each do |recipe| %>
     <div class="recipe">
       <div class="figure recipe_photo">
-        <%=image_tag recipe.recipe_image.url(:thumb), alt:"image" %>
+        <%= image_tag recipe.recipe_image.url(:thumb), alt:"image" %>
       </div>
-      <%= link_to recipe.title, action:'show', id: recipe.id %>
+      <%= link_to recipe.title, recipe_url(recipe) %>
       <p><%= recipe.description %></p>
     </div>
   <% end %>

@@ -1,2 +1,63 @@
 @charset "UTF-8";
 
+#content{
+  min-width:64em;
+}
+
+#content_footer {
+  width:30%;
+}
+
+#content_body {
+  width:70%;
+  min-width:45em;
+}
+
+#popular_category {
+  width:47%;
+  clear:none;
+  float:left;
+  margin-right:1em;
+}
+
+#popular_recipe {
+  width:47%;
+  clear:none;
+}
+
+#category_recipe_search {
+  div.recipe_category {
+    position:relative;
+    font-size:15px;
+    width:49%;
+    min-height:7.5em;
+    border:solid 1px #aaa;
+    float:left;
+    clear:none;
+    img {
+      margin:0;
+      width:70px;
+      height:70px;
+      border:dashed 1px #aaa;
+      float:left;
+    }
+  }
+  ul.recipe_sub_category {
+    margin:0 0 0 71px;
+  }
+  ul.recipe_sub_category > li {
+    display:inline;
+    margin:0.2em;
+    clear:none;
+    float:left;
+  }
+  ul.recipe_sub_category:after {
+    content:"";
+    display:block;
+    clear:both;
+  }
+  p.more_link {
+    text-align:right;
+  }
+}
+

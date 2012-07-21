@@ -7,9 +7,10 @@ feature "login process" do
   describe "GET 'index'" do
     context "ログイン時" do
       scenario "returns http success" do
-        visit '/user/sign_in'
+        session = Capybara::Session.new(:rack_test)
+        session.visit '/user/sign_in'
         # リダイレクトでTOPに戻る
-        
+        expect(current_url).to eq "/"
       end
     end
 

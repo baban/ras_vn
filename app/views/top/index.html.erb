@@ -1,5 +1,3 @@
-<% include_action_style_sheet %>
-
 <%= render partial:"layouts/content_footer" %>
 
 <div id="content_body">
@@ -7,13 +5,16 @@
     <table id="popular_category">
       <tr>
         <th>
-          オススメカテゴリ<%=  %>
+          <%= t(:recommended_category, scope:"views.top.index") %>
+          <% if @recomment_food %>
+            (<%= link_to @recomment_food.name, recipes_url( recipe_food_id: @recomment_food.id  ) %>)
+          <% end %>
         </th>
       </tr>
       <tr>
         <td>
           <p><%=image_tag @recomment_food_genre_recipe.image.url(:thumb) %></p>
-          <%=link_to @recomment_food_genre_recipe.title, controller:"recipes", action: "index", recipe_food_id: @recomment_food_genre_recipe.id %>
+          <%=link_to @recomment_food_genre_recipe.title, recipes_url(recipe_food_id: @recomment_food_genre_recipe.id ) %>
           <p><%= @recomment_food_genre_recipe.description %></p>
           <p>by <%=link_to @recomment_food_genre_recipe.user.profile.nickname, kitchen_url(@recomment_food_genre_recipe.user) %></p>
         </td>
@@ -21,35 +22,35 @@
     </table>
     <table id="popular_recipe">
       <tr>
-        <th>人気レシピ</th>
+        <th><%= t(:rank_in_recipe, scope:"views.top.index") %></th>
       </tr>
       <% @ranking.each do |recipe| %>
         <tr>
           <td>
             <div class="figure"><%=image_tag recipe.image.url(:thumb) %></div>
-            <%=link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %><br />
-            by <%=link_to recipe.user.profile.nickname, kitchen_url(recipe.user) %>
+            <%= link_to recipe.title, recipe_url(recipe) %><br />
+            by <%= link_to recipe.user.profile.nickname, kitchen_url(recipe.user) %>
           </td>
         </tr>
       <% end %>
     </table>
   </div>
   <div id="category_recipe_search">
-    <h3>カテゴリからレシピを探す</h3>
+    <h3><%= t(:category_list_title,scope:"views.top.index") %></h3>
     <div class="section">
       <% @food_genres.each do |genre| %>
-      <div class="recipe_category">
-        <h4><%=link_to genre.name, controller:"recipes", action:"index", recipe_food_genre_id: genre.id %></h4>
-        <%=image_tag genre.image.url(:thumb), alt:"" %>
-        <ul class="recipe_sub_category">
-          <% genre.foods.each do |food| %>
-            <li><%=link_to food.name, controller:"recipes", action:"index", recipe_food_id: food.id %></li>
-          <% end %>
-        </ul>
-        <p class="more_link"><%=link_to "more...", controller:"recipe_foods", action:"index", recipe_food_genre_id: genre.id %></p>
-      </div>
+        <div class="recipe_category">
+          <h4><%= link_to genre.name, recipes_url(recipe_food_genre_id: genre.id) %></h4>
+          <%= image_tag genre.image.url(:thumb), alt:"" %>
+          <ul class="recipe_sub_category">
+            <% genre.foods.each do |food| %>
+              <li><%= link_to food.name, recipes_url(recipe_food_id: food.id) %></li>
+            <% end %>
+          </ul>
+          <p class="more_link"><%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_genre_id: genre.id ) %></p>
+        </div>
       <% end %>
     </div>
-    <p class="more_link"><%=link_to "all genres", controller:"recipe_foods", action:"index" %></p>
+    <p class="more_link"><%= link_to t(:all_categories, scope:"views.top.index"), recipe_foods_url %></p>
   </div>
 </div>

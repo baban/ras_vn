@@ -3,33 +3,33 @@
  <div id="footer_advertisement">
   <% @advertise = RecipeAdvertisement.choice %>
   <% if @advertise %>
-    <%=link_to image_tag(@advertise.image.url, alt: (@advertise.alt || @advertise.name) ).html_safe, @advertise.url, title: @advertise.name %>
+    <%= link_to image_tag(@advertise.image.url, alt: (@advertise.alt or @advertise.name) ).html_safe, @advertise.url, title: @advertise.name %>
   <% end %>
 </div>
 
 <% if @recommend_recipe %>
   <div id="footer_recomment_recipe">
-  <h3>本日のおすすめ料理</h3>
-    <p><%=image_tag @recommend_recipe.image.url(:thumb), alt:"" %></p>
-    <p><%=link_to @recommend_recipe.title, controller:"recipes", action:"show", id: @recommend_recipe.id %></p>
-    <p>by <%=link_to @recommend_recipe.chef.profile.nickname, controller:"recipes", action:"show", id: @recommend_recipe.id %></p>
+  <h3><%= t(:recomment_recipe_title, scope:"views.content_footer") %></h3>
+    <p><%= image_tag @recommend_recipe.image.url(:thumb), alt:"" %></p>
+    <p><%= link_to @recommend_recipe.title, recipe_url(@recommend_recipe) %></p>
+    <p>by <%= link_to @recommend_recipe.chef.profile.nickname, recipe_url(@recommend_recipe.id) %></p>
     <p><%= @recommend_recipe.description %></p>
   </div>
 <% end %>
 
 <div id="footer_rankings">
-  <h3>ランキング</h3>
+  <h3><%= t(:rankings_title, scope:"views.content_footer") %></h3>
   <div>
-    <h4>人気レシピ</h4>
+    <h4><%= t(:pop_ranking_title, scope:"views.content_footer") %></h4>
     <ol>
       <% @recipe_ranking.each do |recipe| %>
-        <li><%=link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></li>
+        <li><%= link_to recipe.title, recipe_url( recipe ) %></li>
       <% end %>
     </ol>
-    <h4>人気の食材</h4>
+    <h4><%= t(:food_ranking_title, scope:"views.content_footer") %></h4>
     <ol>
       <% @foodstuff_ranking.each do |foodstuff| %>
-        <li><%=link_to foodstuff.name, controller:"recipes", action:"index", id: foodstuff.id, recipe_food_id: foodstuff.id %></li>
+        <li><%= link_to foodstuff.name, recipes_url( id: foodstuff.id, recipe_food_id: foodstuff.id ) %></li>
       <% end %>
     </ol>
   </div>
