@@ -16,7 +16,7 @@
         <% end %>
       </div>
       <%= link_to recipe.title, recipe_url(recipe) %>
-      <p class="description"><%= recipe.description %></p>
+      <p class="description"><%= truncate(recipe.description) %></p>
       <p class="chef">by <%= recipe.chef.profile.nickname %></p>
       <ul class="recipe_status">
         <li><%= t(:id, scope:"activerecord.attributes.recipe") %>:<%= recipe.id %></li>

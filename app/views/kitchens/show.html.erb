@@ -15,36 +15,36 @@
 
 <table>
   <tr>
-    <td>ユーザーID</td>
+    <td><%= t(:id, scope:"activerecord.attributes.user_profile") %></td>
     <td><%= @profile.id %></td>
   </tr>
   <% if @visibility.mail_address %>
     <tr>
-      <td>ニックネーム</td>
+      <td><%= t(:nickname, scope:"activerecord.attributes.user_profile") %></td>
       <td><%= @profile.nickname %></td>
     </tr>
   <% end %>
   <% if @visibility.mail_address %>
     <tr>
-      <td>メールアドレス</td>
+      <td><%= t(:mail_address, scope:"activerecord.attributes.user_profile") %></td>
       <td><%= @profile.mail_address %></td>
     </tr>
   <% end %>
   <% if @visibility.sex %>
     <tr>
-      <td>性別</td>
+      <td><%= t(:sex, scope:"activerecord.attributes.user_profile") %></td>
       <td><%=translate_sex( @profile.sex ) %></td>
     </tr>
   <% end %>
   <% if @visibility.birthday %>
     <tr>
-      <td>生年月日</td>
+      <td><%= t(:birthday, scope:"activerecord.attributes.user_profile") %></td>
       <td><%= @profile.birthday %></td>
     </tr>
   <% end %>
   <% if @visibility.comment %>
     <tr>
-      <td>コメント</td>
+      <td><%= t(:comment, scope:"activerecord.attributes.user_profile") %></td>
       <td><%= @profile.comment %></td>
     </tr>
   <% end %>
@@ -66,9 +66,9 @@
             <% end %>
           </ul>
           <ul class="recipe_status">
-            <li>作成:<%= recipe.created_at.strftime("%Y/%m/%d") %></li>
-            <li>公開:<%= recipe.updated_at.strftime("%Y/%m/%d") %></li>
-            <li>レシピID:<%= recipe.id %></li>
+            <li><%= t(:created_at, scope:"activerecord.attributes.recipe") %>:<%= recipe.created_at.strftime("%Y-%m-%d") %></li>
+            <li><%= t(:updated_at, scope:"activerecord.attributes.recipe") %>:<%= recipe.updated_at.strftime("%Y-%m-%d") %></li>
+            <li><%= t(:id, scope:"activerecord.attributes.recipe") %>:<%= recipe.id %></li>
           </ul>
         </dd>
       </dl>
