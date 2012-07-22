@@ -2,21 +2,23 @@
 
 class RecipesController < ApplicationController
   before_filter :authenticate_user!,   except:[:index,:show]
-  #before_filter :editable_user_filter, only:[:edit,:update,:destroy]
+  before_filter :editable_user_filter, only:[:edit,:update,:destroy]
   before_filter :advertisement_filter, except:[:create,:destroy]
   before_filter :sidebar_ranking_filter
 
   helper_method :loved?, :bookmarked?, :my_recipe?
 
   def index
-    @recipes = RecipeSearcher.search( params.merge( user_id: (current_user && current_user.id).to_i ) )
+    @recipes = RecipeSearcher
+      .search( params.merge( user_id: current_user.try(:id).to_i ) )
+      .includes( :user => :user_profile )
   end
 
   def show
     @recipe = Recipe.find(params[:id])
     @recipe_comment = RecipeComment.new
 
-    @bookmark = (current_user && Bookmark.find_by_recipe_id_and_user_id( params[:id], current_user.id )) || Bookmark.new
+    @bookmark = Bookmark.find_by_recipe_id_and_user_id( params[:id], current_user.try(:id) ) || Bookmark.new
 
     @recipe.view_count_increment!
   end
@@ -64,7 +66,7 @@ class RecipesController < ApplicationController
     @recipe.user_id= current_user.id
     @recipe.save
 
-    # copy_draft
+    # draft data is copying
     @recipe.copy_public
 
     if params[:edit]
@@ -81,6 +83,8 @@ class RecipesController < ApplicationController
     redirect_to action:'index'
   end
 
+  # if love button is cliced!
+  # this action is called and, return json value set
   def love
     @recipe = Recipe.love( id: params[:id], user_id: params[:user_id]  )
     respond_to do |format|
@@ -90,15 +94,14 @@ class RecipesController < ApplicationController
 
   private
   def editable_user_filter
-    # TODO: 管理者はアクセスできるようにしておく
     return redirect_to(action:'index') unless params[:id]
     
     @recipe = Recipe.find(params[:id])
-    return redirect_to( { action:"index" }, flash:{ alert:"you cannot edit this recipe" }) unless my_recipe?
+    return redirect_to( recipes_url, alert:"you cannot edit this recipe" ) if !my_recipe? or admin_user?
   end
 
+  # get advartisement banner image and description
   def advertisement_filter
-    # お客に合わせた広告を取得できる様に余地を残しておく
     @advertisement = RecipeAdvertisement.choice
   end
 
@@ -113,5 +116,9 @@ class RecipesController < ApplicationController
   def my_recipe?
     recipe = Recipe.find_by_id(params[:id])
     recipe && current_user && (recipe.user_id == current_user.id)
+  end
+
+  def admin_user?
+    current_user.try(:admin?)
   end
 end

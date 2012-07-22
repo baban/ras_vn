@@ -6,6 +6,8 @@
 
 .DS_Store
 
+.jhw-cache/*
+
 # Ignore bundler config
 /.bundle
 

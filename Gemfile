@@ -39,12 +39,7 @@ gem "yard", '0.7.4' # document generator like javadoc
 #gem "guard-rspec"
 
 # test utilities
-gem 'rspec' # unit test utilities
-gem 'rspec-rails'
 gem 'flextures', "1.9.15" # add rake command for dump and load fixtures
-gem 'faker' # generate fake data for test
-gem 'faker-japanese' # generate fake japanese names for test
-gem "factory_girl_rails" # unit test data generate utilities
 gem "kaminari" # paginate view
 gem "whenever", '0.7.2', require:false # cron設定の追加＆削除自動化
 gem "capistrano", "2.9.0"
@@ -61,6 +56,15 @@ group :assets do
   gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :test, :development do
+  gem "jasmine-rails"
+  gem 'rspec' # unit test utilities
+  gem 'rspec-rails'
+  gem 'faker' # generate fake data for test
+  gem 'faker-japanese' # generate fake japanese names for test
+  gem "factory_girl_rails" # unit test data generate utilities
 end
 
 group :test do

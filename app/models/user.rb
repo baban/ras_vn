@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
 
   def initialize(*args)
     super(*args)
-    # self.user_profile = create_profile(args.last)
+    self.user_profile = create_profile(args.last)
   end
 
   def create_profile(h)
@@ -38,9 +38,13 @@ class User < ActiveRecord::Base
     profile
   end
 
-  # ブックマークされたレシピを返す
+  # user's bookmarked recipes
   def bookmarked_recipes
     self.bookmarks.pluck(:recipe_id).do{ |ids| Recipe.where( " id in (?) ", ids ) }
+  end
+
+  def admin?
+    admin
   end
 end
 

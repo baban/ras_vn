@@ -25,5 +25,6 @@ RasVn::Application.routes.draw do
 
   scope :admin do
     match ':controller(/:action(/:id))(.:format)'
+    match ':controller(/:action)'
   end
 end
