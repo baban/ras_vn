@@ -40,7 +40,10 @@ class User < ActiveRecord::Base
 
   # user's bookmarked recipes
   def bookmarked_recipes
-    self.bookmarks.pluck(:recipe_id).do{ |ids| Recipe.where( " id in (?) ", ids ) }
+    bookmarks
+      .pluck(:recipe_id)
+      .do{ |ids| Recipe.where( " id in (?) ", ids ) }
+      .includes(:user => :user_profile)
   end
 
   def admin?

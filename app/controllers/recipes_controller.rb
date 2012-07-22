@@ -9,9 +9,7 @@ class RecipesController < ApplicationController
   helper_method :loved?, :bookmarked?, :my_recipe?
 
   def index
-    @recipes = RecipeSearcher
-      .search( params.merge( user_id: current_user.try(:id).to_i ) )
-      .includes( :user => :user_profile )
+    @recipes = RecipeSearcher.search( params.merge( user_id: current_user.try(:id).to_i ) )
   end
 
   def show
