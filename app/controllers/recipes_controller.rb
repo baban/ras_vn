@@ -117,6 +117,6 @@ class RecipesController < ApplicationController
   end
 
   def admin_user?
-    current_user.try(:admin?)
+    false #current_user.try(:admin?)
   end
 end
