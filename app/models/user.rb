@@ -40,11 +40,24 @@ class User < ActiveRecord::Base
 
   # user's bookmarked recipes
   def bookmarked_recipes
-    self.bookmarks.pluck(:recipe_id).do{ |ids| Recipe.where( " id in (?) ", ids ) }
+    bookmarks
+      .pluck(:recipe_id)
+      .do{ |ids| Recipe.where( " id in (?) ", ids ) }
+      .includes(:user => :user_profile)
   end
 
   def admin?
     admin
+  end
+
+  # find_by_id high performance method
+  def self.find_by_id(id)
+    user = Rails.cache.read("activerecord.users.#{id}")
+    return user if user
+
+    user = method_missing(:find_by_id, id)
+    Rails.cache.write("activerecord.users.#{id}", user)
+    user
   end
 end
 

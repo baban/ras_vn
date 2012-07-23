@@ -43,4 +43,6 @@ RasVn::Application.configure do
   config.assets.debug = true
 
   config.i18n.default_locale = :ja
+
+  config.cache_store = :dalli_store
 end

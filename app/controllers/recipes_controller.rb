@@ -9,9 +9,7 @@ class RecipesController < ApplicationController
   helper_method :loved?, :bookmarked?, :my_recipe?
 
   def index
-    @recipes = RecipeSearcher
-      .search( params.merge( user_id: current_user.try(:id).to_i ) )
-      .includes( :user => :user_profile )
+    @recipes = RecipeSearcher.search( params.merge( user_id: current_user.try(:id).to_i ) )
   end
 
   def show
@@ -64,6 +62,9 @@ class RecipesController < ApplicationController
 
     @recipe.attributes= params[:recipe]
     @recipe.user_id= current_user.id
+    if params[:new_food_genre]
+      @recipe.recipe_food_id = RecipeFood.create( recipe_food_genre_id: params[:recipe_genre_selecter], name: params[:new_food_genre] ).id
+    end
     @recipe.save
 
     # draft data is copying
@@ -119,6 +120,6 @@ class RecipesController < ApplicationController
   end
 
   def admin_user?
-    current_user.try(:admin?)
+    false #current_user.try(:admin?)
   end
 end

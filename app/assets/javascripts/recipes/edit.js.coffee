@@ -55,7 +55,8 @@ $(window).load ->
           href = a_tag.attr("href")
           $("#recipe_step_#{number} .movie_selecter").attr("value", href)
           console.log href
-          $("#search_youtube_area").animate( { opacity: 0.0 }, 300 )
+          $("#search_youtube_area").animate( { opacity: 0.0 }, 
+            { duration: 300, complete: -> $(this).css("display", "none") } )
         this
     )
   )
@@ -64,7 +65,16 @@ $(window).load ->
     step_number = $(this).next().attr("value")
     $("#search_youtube_step_number").attr( "value", step_number )
     $("#search_youtube_area").css( { display:"block", opacity: 0.0 } )
-    $("#search_youtube_area").animate( { opacity: 1.0 }, 400 )
+    $("#search_youtube_area").animate( { opacity: 1.0 }, { duration: 400 } )
 
   $("#search_youtube_area_close_button").click ->
-    $("#search_youtube_area").animate( { opacity: 0.0 }, 300 )
+    $("#search_youtube_area").animate( { opacity: 0.0 },
+      { duration: 300, complete: -> $(this).css("display", "none") } )
+
+  $("#search_youtube_text").keydown (evt)->
+    charCode = evt.charCode || evt.which || evt.keyCode
+    console.log "charCode : " + charCode
+    if (Number(charCode) == 13 || Number(charCode) == 3)
+      false
+    else
+      true
