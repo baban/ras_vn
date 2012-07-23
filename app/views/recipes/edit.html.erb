@@ -67,7 +67,7 @@
                   <%=image_tag step.image.url(:thumb), alt:"" %>
                 <% end %>
                 <% if step.movie_url %>
-                  <iframe width="560" height="315" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
                 <% end %>
               </dd>
             </dl>
@@ -91,7 +91,7 @@
     <div id="search_youtube_area">
       <%= hidden_field_tag :step_number, "1", id:"search_youtube_step_number" %>
       <%= text_field_tag :vq, "", id:"search_youtube_text" %>
-      <%= button_tag "Set", type:"button", id:"search_youtube_button" %>
+      <%= button_tag "検索", type:"button", id:"search_youtube_button" %>
       <ul id="search_result_list">
       </ul>
       <%= button_tag "close", type:"button", id:"search_youtube_area_close_button" %>
