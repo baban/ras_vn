@@ -62,6 +62,9 @@ class RecipesController < ApplicationController
 
     @recipe.attributes= params[:recipe]
     @recipe.user_id= current_user.id
+    if params[:new_food_genre]
+      @recipe.recipe_food_id = RecipeFood.create( recipe_food_genre_id: params[:recipe_genre_selecter], name: params[:new_food_genre] ).id
+    end
     @recipe.save
 
     # draft data is copying
