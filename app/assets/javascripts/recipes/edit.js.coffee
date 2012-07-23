@@ -55,7 +55,8 @@ $(window).load ->
           href = a_tag.attr("href")
           $("#recipe_step_#{number} .movie_selecter").attr("value", href)
           console.log href
-          $("#search_youtube_area").animate( { opacity: 0.0 }, 300 )
+          $("#search_youtube_area").animate( { opacity: 0.0 }, 
+            { duration: 300, complete: -> $(this).css("display", "none") } )
         this
     )
   )
