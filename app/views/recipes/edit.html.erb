@@ -1,4 +1,4 @@
-<%= include_action_javascript %>
+<%= javascript_include_tag "recipes/edit" %>
 
 <h2><%= t(:edit_recipe, scope:"views.recipes.edit") %></h2>
 <div id="content_body" class="section">
@@ -55,7 +55,7 @@
               </dt>
               <dt class="selecter movie_field">
                 <form class="movie_button_field">
-                  <%= image_tag t(:movie_url, scope:"activerecord.attributes.recipe_step"), type:"button", class:"movie_button"  %>
+                  <%= submit_tag t(:movie_url, scope:"activerecord.attributes.recipe_step"), type:"button", class:"movie_button"  %>
                   <%= hidden_field_tag "recipe_step_id_#{i}", i, class:"recipe_step_id" %>
                 </form>
                 <%= label :recipe_steps, t(:movie_url, scope:"activerecord.attributes.recipe_step") %>
