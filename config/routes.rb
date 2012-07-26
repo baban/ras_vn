@@ -22,9 +22,8 @@ RasVn::Application.routes.draw do
   get "top/index", as:'user_root'
 
   match ':controller(/:action(/:id))(.:format)'
-
-  scope :admin do
-    #match ':controller(/:action(/:id))(.:format)'
-    #match ':controller(/:action)'
+  namespace :admin do
+    get "statistics/index"
+    get "statistics/users"
   end
 end
