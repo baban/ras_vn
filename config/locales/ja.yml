@@ -24,6 +24,11 @@ ja:
       rankings_title: ランキング
       pop_ranking_title: 人気レシピ
       food_ranking_title: 人気の食材
+    diary:
+      new: 日記を書く
+      edit: 日記の編集
+      create_button: 日記を書く
+      update_button: 更新
     content_menu:
       search_recipe: レシピをさがす
       new_recipe: レシピをのせる

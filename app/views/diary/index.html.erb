@@ -3,7 +3,7 @@
 <div id="conent_body" class="section">
   <% if my_diary? %>
     <div id="diary_create_link">
-      <%= link_to "write diary", action:"new" %>
+      <%= link_to t(:new, scope:"views.diary"), action:"new" %>
     </div>
   <% end %>
   <div id="articles" class="section">
