@@ -98,7 +98,7 @@ class RecipesController < ApplicationController
     return redirect_to(action:'index') unless params[:id]
     
     @recipe = Recipe.find(params[:id])
-    return redirect_to( recipes_url, alert:"you cannot edit this recipe" ) if !my_recipe? or admin_user?
+    return redirect_to( recipes_url, alert: t("views.recipes.create.other_user_recipe_alert") ) unless my_recipe?
   end
 
   # get advartisement banner image and description

@@ -53,6 +53,8 @@ ja:
       sign_out: ログアウト
       mypage: マイページ
     recipes:
+      create:
+        other_user_recipe_alert: 他人のレシピは編集できません
       show:
         creator: のレシピ
         bookmark: ブックマーク
