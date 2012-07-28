@@ -23,6 +23,12 @@ ja:
               blank: ニックネームは入力必須です
             prefecture_id:
               inclusion: お住まいの地域を選択してください。
+        recipe:
+          attributes:
+            title:
+              blank: タイトルは入力必須です
+            image:
+              blank: 画像は登録必須です
     models:
       admin_user: 管理者
       bookmark: ブックマーク

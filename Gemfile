@@ -6,7 +6,7 @@ gem 'rails', '3.2.2'
 gem "mysql2", "0.3.11"
 gem "memcache-client", "1.8.5" # user memcashed
 gem "dalli", "2.1.0"           # memcached hig-perfirmance settinged gem
-gem "redis"
+gem "redis", "3.0.1"
 #gem "mongo_mapper"
 
 # view urilities
