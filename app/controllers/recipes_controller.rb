@@ -30,6 +30,8 @@ class RecipesController < ApplicationController
     @recipe.attributes= params[:recipe]
     @recipe.user_id = current_user.id
     @recipe.save
+
+    return render(action:"new") unless @recipe.valid?
     
     @draft = RecipeDraft.new
     @draft.attributes= params[:recipe]
