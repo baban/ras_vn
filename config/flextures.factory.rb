@@ -30,3 +30,11 @@ Flextures::Factory.define :users do |f|
   f.encrypted_password = tmp_pass
   f
 end
+
+Flextures::Factory.define :diaries do |f|
+  f.title   = f.title.force_encoding("UTF-8").encode("UTF-8")
+  f.content = f.content.force_encoding("UTF-8").encode("UTF-8")
+  f
+end
+
+

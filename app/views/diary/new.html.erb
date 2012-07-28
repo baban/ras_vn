@@ -1,4 +1,4 @@
-<h1>作成</h1>
+<h1><%= t(:new, scope:"views.diary") %></h1>
 
 <%= semantic_form_for @diary, url:{ action:"create" } do |f| %>
   <p>
@@ -7,6 +7,6 @@
   </p>
   <p><%= f.label :publiced_at %></p>
   <p><%= f.date_select :publiced_at, use_month_numbers: true %></p>
-  <p><%= f.submit %></p>
+  <p><%= f.submit t(:create_button, scope:"views.diary") %></p>
 <% end %>
 

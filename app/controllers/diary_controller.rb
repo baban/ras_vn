@@ -36,13 +36,13 @@ class DiaryController < ApplicationController
     diary.attributes= params[:diary]
     diary.save
 
-    redirect_to( { action:"show", id: diary.id }, notice:"記事を更新しました" )
+    redirect_to( { action:"show", id: diary.id }, notice: t(:update_notice, scope:"views.diary") )
   end
 
   def destroy
     Diary.find(params[:id]).destroy
     
-    redirect_to( { action: "index" }, notice:"削除が完了しました" )
+    redirect_to( { action: "index" }, notice: t(:diary_notice, scope:"views.diary") )
   end
 
   private 
