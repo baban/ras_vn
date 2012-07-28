@@ -1,7 +1,7 @@
 <h2>日記</h2>
 
 <div id="conent_body" class="section">
-  <% if my_diary? %>
+  <% if user_signed_in? %>
     <div id="diary_create_link">
       <%= link_to t(:new, scope:"views.diary"), action:"new" %>
     </div>

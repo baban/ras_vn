@@ -29,6 +29,9 @@ ja:
       edit: 日記の編集
       create_button: 日記を書く
       update_button: 更新
+      create_notice: 更新
+      update_notice: 記事を更新しました
+      destroy_notice: 記事を削除しました
     content_menu:
       search_recipe: レシピをさがす
       new_recipe: レシピをのせる

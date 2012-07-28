@@ -1,6 +1,12 @@
 <h2><%= t("activerecord.models.diary") %></h2>
 
 <div id="conent_body" class="section">
+  <% if user_signed_in? %>
+    <div id="diary_create_link">
+      <%= link_to t(:new, scope:"views.diary"), action:"new" %>
+    </div>
+  <% end %>
+
   <div class="article">
     <h3><%= @diary.title %></h3>
     <% if @diary.image %>
