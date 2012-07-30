@@ -1,7 +1,11 @@
 # encoding: utf-8
 
 Flextures::Factory.define :users do |f|
-  f.encrypted_password=Base64.decode64(f.encrypted_password)
+  tmp = Base64.decode64(f.encrypted_password)
+  f.password = "hogehoge"
+  f.encrypted_password = tmp
+  f.user_profile= nil
+  f
 end
 
 Flextures::DumpFilter.define :users, {
@@ -26,15 +30,9 @@ Flextures::Factory.define :admin_users do |f|
 end
 
 Flextures::DumpFilter.define :admin_users, {
-  preferences:->(v){ Base64.encode64(v.to_yaml) }
+  preferences:->(v){ Base64.encode64(v.to_yaml) },
+  crypted_password:->(v){ Base64.encode64(v) }
 }
-
-Flextures::Factory.define :users do |f|
-  tmp_pass = f.encrypted_password
-  f.password = "hogehoge"
-  f.encrypted_password = tmp_pass
-  f
-end
 
 Flextures::Factory.define :diaries do |f|
   f.title   = f.title.force_encoding("UTF-8").encode("UTF-8")
