@@ -1,7 +1,12 @@
 # encoding: utf-8
 
 Flextures::Factory.define :users do |f|
+  f.encrypted_password=Base64.decode64(f.encrypted_password)
 end
+
+Flextures::DumpFilter.define :users, {
+  encrypted_password:->(v){ Base64.encode64(v) }
+}
 
 Flextures::Factory.define :restaurant_profiles do |f|
   #filename = Rails.root.to_path + "/app/assets/images/tp_m.jpg"
