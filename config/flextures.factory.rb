@@ -24,14 +24,27 @@ Flextures::Factory.define :recipes do |f|
 end
 
 Flextures::Factory.define :admin_users do |f|
+  tmp1 = Base64.decode64( f.crypted_password )
+  tmp2 = Base64.decode64( f.token )
+  tmp3 = Base64.decode64( f.salt )
+
+  f.password = "hogehoge"
+
+  f.token = tmp2
+  f.salt = tmp3
+  f.crypted_password = tmp1
   f.preferences = YAML.load( Base64.decode64(f.preferences) )
-  f.password = f.crypted_password
+  p f
+  p f.valid?
+  p f.errors
   f
 end
 
 Flextures::DumpFilter.define :admin_users, {
   preferences:->(v){ Base64.encode64(v.to_yaml) },
-  crypted_password:->(v){ Base64.encode64(v) }
+  crypted_password:->(v){ Base64.encode64(v) },
+  token:->(v){ Base64.encode64(v) },
+  salt:->(v){ Base64.encode64(v) }
 }
 
 Flextures::Factory.define :diaries do |f|

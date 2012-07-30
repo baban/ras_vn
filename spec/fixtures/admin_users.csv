@@ -1,3 +1,6 @@
 id,first_name,last_name,role,email,status,token,salt,crypted_password,preferences,created_at,updated_at
-1,matsubara,masanao,admin,babanba.n@gmail.com,true,9c08ae98821e-e6d94a73a0d9,85bbae5018984a389a0e95a60ff7db80187b6531,8a0efb4d01d1356207b3dc2cbfa856c1eae3f36d,"LS0tCjpsb2NhbGU6IGphCg==
+1,matsubara,masanao,admin,babanba.n@gmail.com,true,"OWMwOGFlOTg4MjFlLWU2ZDk0YTczYTBkOQ==
+","ODViYmFlNTAxODk4NGEzODlhMGU5NWE2MGZmN2RiODAxODdiNjUzMQ==
+","OGEwZWZiNGQwMWQxMzU2MjA3YjNkYzJjYmZhODU2YzFlYWUzZjM2ZA==
+","LS0tCjpsb2NhbGU6IGphCg==
 ",2012-07-16 04:59:30 UTC,2012-07-16 04:59:46 UTC
