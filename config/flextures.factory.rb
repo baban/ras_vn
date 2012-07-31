@@ -27,11 +27,11 @@ Flextures::Factory.define :admin_users do |f|
   tmp1 = Base64.decode64( f.crypted_password )
   tmp2 = Base64.decode64( f.token )
   tmp3 = Base64.decode64( f.salt )
-
+  p tmp3
   f.password = "hogehoge"
 
-  f.token = tmp2
   f.salt = tmp3
+  f.token = tmp2
   f.crypted_password = tmp1
   f.preferences = YAML.load( Base64.decode64(f.preferences) )
   p f

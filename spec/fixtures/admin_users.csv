@@ -1,6 +1,0 @@
-id,first_name,last_name,role,email,status,token,salt,crypted_password,preferences,created_at,updated_at
-1,matsubara,masanao,admin,babanba.n@gmail.com,true,"OWMwOGFlOTg4MjFlLWU2ZDk0YTczYTBkOQ==
-","ODViYmFlNTAxODk4NGEzODlhMGU5NWE2MGZmN2RiODAxODdiNjUzMQ==
-","OGEwZWZiNGQwMWQxMzU2MjA3YjNkYzJjYmZhODU2YzFlYWUzZjM2ZA==
-","LS0tCjpsb2NhbGU6IGphCg==
-",2012-07-16 04:59:30 UTC,2012-07-16 04:59:46 UTC
