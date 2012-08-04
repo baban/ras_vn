@@ -1,3 +1,0 @@
-"id","first_name","last_name","role","email","status","token","salt","crypted_password","preferences","created_at","updated_at"
-1,"松原","正直","admin","babanba.n@gmail.com","true","9bc00be101e4-a16e1e6912de","c6e13ccb6a0be3669cccc24d6a5ac2b2e8b2aa5c","svc2027","LS0tCjpsb2NhbGU6IGVuCg==
-","2012-05-26 01:01:16 UTC","2012-07-16 04:47:13 UTC"

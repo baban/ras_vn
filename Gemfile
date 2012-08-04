@@ -8,6 +8,7 @@ gem "memcache-client", "1.8.5" # user memcashed
 gem "dalli", "2.1.0"           # memcached hig-perfirmance settinged gem
 gem "redis", "3.0.1"
 #gem "mongo_mapper"
+gem "fluentd"
 
 # view urilities
 gem "jquery-rails"
