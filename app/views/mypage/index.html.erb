@@ -4,6 +4,7 @@
         <li><%= link_to t(:mypage_link, scope:"views.mypage"),   controller:"mypage", action:"index" %></li>
         <li><%= link_to t(:bookmark_link, scope:"views.mypage"), controller:"bookmarks", action:"index" %></li>
         <li><%= link_to t(:kitchen_link, scope:"views.mypage"),  controller:"kitchens", action:"show", id: current_user.id %></li>
+        <li><%= link_to t(:diary_link, scope:"views.mypage"),  controller:"diary", action:"index", user_id: current_user.id %></li>
       </ul>
     </div>
     <h2><%= t(:user_profile, scope:"activerecord.models") %></h2>

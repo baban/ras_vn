@@ -13,10 +13,10 @@
       </tr>
       <tr>
         <td>
-          <p><%=image_tag @recomment_food_genre_recipe.image.url(:thumb) %></p>
-          <%=link_to @recomment_food_genre_recipe.title, recipes_url(recipe_food_id: @recomment_food_genre_recipe.id ) %>
+          <p><%= image_tag @recomment_food_genre_recipe.image.url(:thumb) %></p>
+          <%= link_to @recomment_food_genre_recipe.title, recipe_url( @recomment_food_genre_recipe ) %>
           <p><%= @recomment_food_genre_recipe.description %></p>
-          <p>by <%=link_to @recomment_food_genre_recipe.user.profile.nickname, kitchen_url(@recomment_food_genre_recipe.user) %></p>
+          <p>by <%= link_to @recomment_food_genre_recipe.user.profile.nickname, kitchen_url(@recomment_food_genre_recipe.user) %></p>
         </td>
       </tr>
     </table>
@@ -27,7 +27,7 @@
       <% @ranking.each do |recipe| %>
         <tr>
           <td>
-            <div class="figure"><%=image_tag recipe.image.url(:thumb) %></div>
+            <div class="figure"><%= image_tag recipe.image.url(:thumb) %></div>
             <%= link_to recipe.title, recipe_url(recipe) %><br />
             by <%= link_to recipe.user.profile.nickname, kitchen_url(recipe.user) %>
           </td>

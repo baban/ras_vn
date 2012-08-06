@@ -1,4 +1,4 @@
-<h1>編集</h1>
+<h1><%= t(:edit, scope:"views.diary") %></h1>
 
 <%= form_for @diary, url:{ action:"update", id: @diary.id } do |f| %>
   <p>
@@ -16,6 +16,6 @@
   <p><%= f.text_area :content %></p>
   <p><%= f.label :publiced_at %></p>
   <p><%= f.date_select :publiced_at, use_month_numbers: true %></p>
-  <p><%= f.submit %></p>
+  <p><%= f.submit t(:update_button, scope:"views.diary") %></p>
 <% end %>
 

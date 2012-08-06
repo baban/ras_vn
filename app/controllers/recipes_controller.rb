@@ -30,6 +30,8 @@ class RecipesController < ApplicationController
     @recipe.attributes= params[:recipe]
     @recipe.user_id = current_user.id
     @recipe.save
+
+    return render(action:"new") unless @recipe.valid?
     
     @draft = RecipeDraft.new
     @draft.attributes= params[:recipe]
@@ -62,6 +64,9 @@ class RecipesController < ApplicationController
 
     @recipe.attributes= params[:recipe]
     @recipe.user_id= current_user.id
+    if params[:new_food_genre]
+      @recipe.recipe_food_id = RecipeFood.create( recipe_food_genre_id: params[:recipe_genre_selecter], name: params[:new_food_genre] ).id
+    end
     @recipe.save
 
     # draft data is copying
@@ -95,7 +100,7 @@ class RecipesController < ApplicationController
     return redirect_to(action:'index') unless params[:id]
     
     @recipe = Recipe.find(params[:id])
-    return redirect_to( recipes_url, alert:"you cannot edit this recipe" ) if !my_recipe? or admin_user?
+    return redirect_to( recipes_url, alert: t("views.recipes.create.other_user_recipe_alert") ) unless my_recipe?
   end
 
   # get advartisement banner image and description
@@ -117,6 +122,6 @@ class RecipesController < ApplicationController
   end
 
   def admin_user?
-    current_user.try(:admin?)
+    false #current_user.try(:admin?)
   end
 end

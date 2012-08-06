@@ -4,6 +4,9 @@ class Recipe < ActiveRecord::Base
   acts_as_paranoid
   paginates_per 12
 
+  validates :title, presence: true
+  validates :image, presence: true
+
   has_one  :recipe_draft
   has_many :bookmarks
   has_many :recipe_foodstuffs
