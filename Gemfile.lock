@@ -92,7 +92,7 @@ GEM
     faraday (0.8.1)
       multipart-post (~> 1.1)
     ffi (1.0.11)
-    flextures (1.9.15)
+    flextures (2.0.0)
     fluentd (0.10.25)
       cool.io (~> 1.1.0)
       http_parser.rb (~> 0.5.1)
@@ -341,7 +341,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   faker-japanese
-  flextures (= 1.9.15)
+  flextures (= 2.0.0)
   fluentd
   formtastic (= 2.1.0)
   i18n_generators (= 1.2.1)

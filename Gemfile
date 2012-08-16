@@ -40,7 +40,7 @@ gem "yard", '0.7.4' # document generator like javadoc
 #gem "guard-rspec"
 
 # test utilities
-gem 'flextures', "1.9.15" # add rake command for dump and load fixtures
+gem 'flextures', "2.0.0" # add rake command for dump and load fixtures
 gem "kaminari" # paginate view
 gem "whenever", '0.7.2', require:false # cron設定の追加＆削除自動化
 gem "capistrano", "2.9.0"
