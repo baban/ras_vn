@@ -60,6 +60,7 @@ ja:
         bookmark: ブックマーク
         unbookmark: ブックマーク解除
         post_report: 投稿
+        forbiddon_right_click: 右クリックは禁止されています!!
       new:
         create_recipe: レシピの新規作成
         public: 公開

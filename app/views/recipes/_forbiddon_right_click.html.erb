@@ -1,6 +1,6 @@
 <script>
 document.body.oncontextmenu=function(e){
-  alert("forbiddon right click!!");
-  return false
+  alert("<%= t(:forbiddon_right_click, scope:"views.recipes.show") %>");
+  return false;
 }
 </script>
