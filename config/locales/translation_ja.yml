@@ -190,9 +190,9 @@ ja:
         address_point: address_point  #g
         birthday: 生年月日
         blood_type: blood_type  #g
-        comment: comment  #g
-        first_name: first_name  #g
-        last_name: last_name  #g
+        comment: コメント
+        first_name: 姓
+        last_name: 名
         mail_address: mail_address  #g
         nickname: ニックネーム
         postcode: postcode  #g
