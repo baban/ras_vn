@@ -10,6 +10,7 @@ gem "redis", "3.0.1"
 #gem "mongo_mapper"
 gem "fluentd"
 gem "bartt-ssl_requirement", "1.4.2", require: "ssl_requirement"
+gem "rails_config"
 
 # view urilities
 gem "jquery-rails"
