@@ -9,6 +9,7 @@ gem "dalli", "2.1.0"           # memcached hig-perfirmance settinged gem
 gem "redis", "3.0.1"
 #gem "mongo_mapper"
 gem "fluentd"
+gem "bartt-ssl_requirement", "1.4.2", require: "ssl_requirement"
 
 # view urilities
 gem "jquery-rails"
@@ -36,7 +37,7 @@ gem "rails3_acts_as_paranoid", "0.2.4" # logical
 gem "ipaddress", '0.8.0' # ip addres check
 gem 'jpmobile', '3.0.1', require:'action_pack' # emable smart_phone_filter 
 gem "yard", '0.7.4' # document generator like javadoc
-#gem "guard" # ユニットテストの結果をデスクトップに通知
+#gem "guard" # notification rspec excute result (Mac only)
 #gem "guard-rspec"
 
 # test utilities
@@ -77,6 +78,7 @@ group :test do
 end
 
 group :development, :test do
+  gem 'sextant'
   gem "pry" # add commands [rails colsole]
   gem "pry-doc"
   gem "pry-rails"
