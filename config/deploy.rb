@@ -149,6 +149,7 @@ desc "resque"
 namespace :resque do
   task :restart, :roles => :app do
     run "#{current_path}/tmp/restart.txt"
+    run "chmod 777 #{current_path}/tmp/restart.txt"
   end
 end
 
