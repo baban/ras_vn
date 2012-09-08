@@ -10,6 +10,12 @@ test:
   username: root
   thost: localhost
 
+staging:
+  adapter: mysql2
+  database: ras_vn_staging
+  username: root
+  thost: localhost
+
 production:
   adapter: mysql2
   database: ras_vn
