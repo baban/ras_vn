@@ -7,7 +7,7 @@ class DiaryController < ApplicationController
     id = params[:user_id]
     @page = params[:page] || 1
     @user = User.find_by_id(id)
-    @diary = @user.diary.page(@page)
+    @diary = @user.diaries.page(@page)
   end
 
   def show
