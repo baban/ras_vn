@@ -1,40 +1,11 @@
 ja:
   activerecord:
-    errors:
-      messages:
-        record_invalid: "保存エラー"
-      models:
-        user:
-          attributes:
-            email:
-              blank: メールアドレスは入力必須です
-              taken: はすでに登録されています
-            password:
-              blank: パスワードは入力必須です
-            password_confirmation:
-              blank: パスワードは入力必須です
-            email:
-              blank: メールアドレスは入力必須です
-            prefecture_id:
-              inclusion: お住まいの地域を選択してください。
-        user_profile:
-          attributes:
-            nickname:
-              blank: ニックネームは入力必須です
-            prefecture_id:
-              inclusion: お住まいの地域を選択してください。
-        recipe:
-          attributes:
-            title:
-              blank: タイトルは入力必須です
-            image:
-              blank: 画像は登録必須です
     models:
       admin_user: 管理者
       bookmark: ブックマーク
       distinct: 市町村
       diary: 日記
-      food_genre: food_genre  #g
+      food_genre: 料理ジャンル
       omniuser: omniuser  #g
       prefecture: 県
       recipe: レシピ
@@ -159,6 +130,7 @@ ja:
         email: メールアドレス
         encrypted_password: パスワード
         password: パスワード
+        password_confirmation: パスワード(確認)
         last_sign_in_at: last_sign_in_at  #g
         last_sign_in_ip: last_sign_in_ip  #g
         recipe: :activerecord.models.recipe  #g
@@ -177,13 +149,14 @@ ja:
         comment: コメント
         first_name: 名
         image: 写真
-        last_name: 姓
+        family_name: 姓
         mail_address: メールアドレス
         nickname: ニックネーム
         sex: 性別
         user: :activerecord.models.user  #g
         user_profile_visibility: 表示
         prefecture_id: 住所
+        distinct_id: 住所
 
       user_profile_visibility:
         address: 住所

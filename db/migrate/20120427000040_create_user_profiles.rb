@@ -8,11 +8,11 @@ class CreateUserProfiles < ActiveRecord::Migration
       t.string   :nickname,      null: false, default:""
       t.integer  :sex,           null: true
       t.string   :first_name,    nulL: true,  default:""
-      t.string   :last_name,     nulL: true,  default:""
+      t.string   :family_name,   nulL: true,  default:""
       t.date     :birthday,      null: true
-      t.string   :mail_address,  null: true
-      t.integer  :prefecture_id, null: false, default: 0
-      t.integer  :area_id,       null: false, default: 0
+      t.string   :email,         null: true
+      t.integer  :prefecture_id, null: false, default: 1
+      t.integer  :distinct_id,   null: false, default: 1
       t.text     :comment,       null: false, default: ""
       t.integer  :recipe_count,  null: false, default: 0
 

@@ -1,15 +1,12 @@
 # encoding: utf-8
 
 class Distinct < ActiveRecord::Base
+  establish_connection "ras_vn_users" if [:staging,:production].include?(Rails.env.to_sym)
+
   belongs_to :prefecture
 
-  class << self
-    @@table = { size: nil } # テーブルのスタティックな情報を初期化時に保存しておく
-    alias :old_count :count
-    def count
-      @@table[:size] || @@table[:size] = old_count
-    end
-  end
+  has_many :distinct_food_genres
+  alias :food_genres :distinct_food_genres
 
-
+  scope :visibles, ->{ where( " public = ? ", true ) }
 end

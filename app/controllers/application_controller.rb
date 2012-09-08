@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class ApplicationController < ActionController::Base
+  include FormHelper
+
   protect_from_forgery
 
   helper_method :my_recipe?, :current_omniuser, :login?

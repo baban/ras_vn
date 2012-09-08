@@ -1,6 +1,14 @@
 # encoding: utf-8
 
 class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :confirmable,
+  # :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me
   # users table and user_profiles table are saved data to another database
   establish_connection "ras_vn_users" if [:staging,:production].include?(Rails.env.to_sym)
 
@@ -18,13 +26,6 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :user_profile
   attr_accessible :user_profile, :user_profile_attributes
 
-  has_many :recipes
-  has_many :bookmarks
-  has_many :recipe_comments
-  has_many :diary
-
-  belongs_to :recipe
-
   def initialize(*args)
     super(*args)
     self.user_profile = create_profile(args.last)
@@ -33,31 +34,13 @@ class User < ActiveRecord::Base
   def create_profile(h)
     h = {} unless h.is_a?(Hash)
     profile = UserProfile.new(h[:user_profile_attributes])
-    profile.mail_address=h[:email]
+    profile.email=h[:email]
     
     profile
   end
 
-  # user's bookmarked recipes
-  def bookmarked_recipes
-    bookmarks
-      .pluck(:recipe_id)
-      .do{ |ids| Recipe.where( " id in (?) ", ids ) }
-      .includes(:user => :user_profile)
-  end
-
   def admin?
     admin
-  end
-
-  # find_by_id high performance method
-  def self.find_by_id(id)
-    user = Rails.cache.read("activerecord.users.#{id}")
-    return user if user
-
-    user = method_missing(:find_by_id, id)
-    Rails.cache.write("activerecord.users.#{id}", user)
-    user
   end
 end
 
