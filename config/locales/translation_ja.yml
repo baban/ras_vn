@@ -1,34 +1,5 @@
 ja:
   activerecord:
-    errors:
-      messages:
-        record_invalid: "保存エラー"
-      models:
-        user:
-          attributes:
-            email:
-              blank: メールアドレスは入力必須です
-              taken: はすでに登録されています
-            password:
-              blank: パスワードは入力必須です
-            password_confirmation:
-              blank: パスワードは入力必須です
-            email:
-              blank: メールアドレスは入力必須です
-            prefecture_id:
-              inclusion: お住まいの地域を選択してください。
-        user_profile:
-          attributes:
-            nickname:
-              blank: ニックネームは入力必須です
-            prefecture_id:
-              inclusion: お住まいの地域を選択してください。
-        recipe:
-          attributes:
-            title:
-              blank: タイトルは入力必須です
-            image:
-              blank: 画像は登録必須です
     models:
       admin_user: 管理者
       bookmark: ブックマーク

@@ -23,10 +23,17 @@ ja:
               blank: ニックネームは入力必須です
             prefecture_id:
               inclusion: お住まいの地域を選択してください。
+        recipe:
+          attributes:
+            title:
+              blank: タイトルは入力必須です
+            image:
+              blank: 画像は登録必須です
     models:
       admin_user: 管理者
       bookmark: ブックマーク
       distinct: 市町村
+      diary: 日記
       food_genre: food_genre  #g
       omniuser: omniuser  #g
       prefecture: 県
@@ -66,6 +73,12 @@ ja:
       distinct:
         name: name  #g
         prefecture: :activerecord.models.prefecture  #g
+
+      diary:
+        title: タイトル
+        publiced_at: 公開日時
+        image: 画像
+        content: 本文
 
       food_genre:
         name: 名前
@@ -171,15 +184,16 @@ ja:
         user: :activerecord.models.user  #g
         user_profile_visibility: 表示
         prefecture_id: 住所
+        distinct_id: 住所
 
       user_profile_visibility:
         address: 住所
         address_point: address_point  #g
         birthday: 生年月日
         blood_type: blood_type  #g
-        comment: comment  #g
-        first_name: first_name  #g
-        last_name: last_name  #g
+        comment: コメント
+        first_name: 姓
+        last_name: 名
         mail_address: mail_address  #g
         nickname: ニックネーム
         postcode: postcode  #g
