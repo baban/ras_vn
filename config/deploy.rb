@@ -67,7 +67,7 @@ set :whenever_command, "bundle exec whenever"
 after "deploy:restart", "deploy:cleanup"
 
 def restart_task
-  run "touch #{current_path}/restart.txt"
+  run "touch #{current_path}/tmp/restart.txt"
 end
 
 # If you are using Passenger mod_rails uncomment this:
