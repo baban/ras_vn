@@ -67,6 +67,7 @@ set :whenever_command, "bundle exec whenever"
 after "deploy:restart", "deploy:cleanup"
 
 def restart_task
+  run "touch #{current_path}/restart.txt"
 end
 
 # If you are using Passenger mod_rails uncomment this:
@@ -121,7 +122,7 @@ namespace :deploy do
       *ops = (ARGV.size > 2) ? ARGV[2..ARGV.size] : []
       conf_path = "#{current_path}/config/initializers/maintenance.rb"
       run %Q[ruby #{current_path}/sh/maintenance.rb #{conf_path} #{ops.map{ |s| %Q("#{URI.escape(s)}") }*(' ')}]
-      # rails再起動 
+      # rails再起動
       restart_task
     end
 
