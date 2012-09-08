@@ -1,6 +1,8 @@
 <script>
+document.body.onselectstart=function(e){
+  return false;
+}
 document.body.oncontextmenu=function(e){
-  alert("<%= t(:forbiddon_right_click, scope:"views.recipes.show") %>");
   return false;
 }
 </script>
