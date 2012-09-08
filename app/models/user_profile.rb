@@ -9,8 +9,9 @@ class UserProfile < ActiveRecord::Base
   belongs_to :user
   accepts_nested_attributes_for :user
 
-  validates :nickname, presence: true
-  validates :prefecture_id, inclusion: { in:(0..1000) }
+  validates :nickname,      presence: true
+  validates :prefecture_id, presence: true
+  validates :distinct_id,   presence: true
 
   mount_uploader :image, UserProfileImageUploader
 

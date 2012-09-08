@@ -184,6 +184,7 @@ ja:
         user: :activerecord.models.user  #g
         user_profile_visibility: 表示
         prefecture_id: 住所
+        distinct_id: 住所
 
       user_profile_visibility:
         address: 住所
