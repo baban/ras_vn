@@ -26,6 +26,10 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :user_profile
   attr_accessible :user_profile, :user_profile_attributes
 
+  has_many :recipes
+  has_many :recipe_comments
+  has_many :diaries
+
   def initialize(*args)
     super(*args)
     self.user_profile = create_profile(args.last)
