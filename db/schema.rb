@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120707022739) do
+ActiveRecord::Schema.define(:version => 20120908081140) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -37,6 +37,9 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "bookmarks", ["recipe_id"], :name => "index_bookmarks_on_recipe_id"
+  add_index "bookmarks", ["user_id"], :name => "index_bookmarks_on_user_id"
+
   create_table "diaries", :force => true do |t|
     t.integer  "user_id",                                        :null => false
     t.string   "title",       :default => "",                    :null => false
@@ -48,6 +51,8 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
+
+  add_index "diaries", ["user_id"], :name => "index_diaries_on_user_id"
 
   create_table "distincts", :force => true do |t|
     t.integer  "prefecture_id",                   :null => false
@@ -112,6 +117,9 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "recipe_comments", ["recipe_id"], :name => "index_recipe_comments_on_recipe_id"
+  add_index "recipe_comments", ["user_id"], :name => "index_recipe_comments_on_user_id"
+
   create_table "recipe_drafts", :force => true do |t|
     t.integer  "user_id",                           :null => false
     t.integer  "recipe_id",                         :null => false
@@ -130,13 +138,17 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "updated_at",                        :null => false
   end
 
+  add_index "recipe_drafts", ["user_id"], :name => "index_recipe_drafts_on_user_id"
+
   create_table "recipe_food_genre_rankings", :force => true do |t|
-    t.integer  "recipe_food_genre_id"
+    t.integer  "recipe_food_genre_id",                           :null => false
     t.integer  "point",                :default => 0,            :null => false
     t.date     "ranked_at",            :default => '2012-09-08', :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
+
+  add_index "recipe_food_genre_rankings", ["recipe_food_genre_id"], :name => "index_recipe_food_genre_rankings_on_recipe_food_genre_id"
 
   create_table "recipe_food_genres", :force => true do |t|
     t.string   "name",       :null => false
@@ -163,6 +175,8 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "updated_at",                      :null => false
   end
 
+  add_index "recipe_foodstuff_drafts", ["recipe_draft_id"], :name => "index_recipe_foodstuff_drafts_on_recipe_draft_id"
+
   create_table "recipe_foodstuffs", :force => true do |t|
     t.integer  "recipe_id",                      :null => false
     t.integer  "recipe_food_id"
@@ -173,6 +187,8 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "updated_at",                     :null => false
   end
 
+  add_index "recipe_foodstuffs", ["recipe_id"], :name => "index_recipe_foodstuffs_on_recipe_id"
+
   create_table "recipe_love_logs", :force => true do |t|
     t.integer  "recipe_id"
     t.integer  "user_id"
@@ -180,11 +196,16 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "recipe_love_logs", ["recipe_id"], :name => "index_recipe_love_logs_on_recipe_id"
+  add_index "recipe_love_logs", ["user_id"], :name => "index_recipe_love_logs_on_user_id"
+
   create_table "recipe_rankings", :force => true do |t|
     t.integer  "recipe_id",  :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "recipe_rankings", ["recipe_id"], :name => "index_recipe_rankings_on_recipe_id"
 
   create_table "recipe_step_drafts", :force => true do |t|
     t.integer  "recipe_draft_id",                 :null => false
@@ -196,6 +217,8 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "updated_at",                      :null => false
   end
 
+  add_index "recipe_step_drafts", ["recipe_draft_id"], :name => "index_recipe_step_drafts_on_recipe_draft_id"
+
   create_table "recipe_steps", :force => true do |t|
     t.integer  "recipe_id",                  :null => false
     t.string   "image"
@@ -205,6 +228,8 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
   end
+
+  add_index "recipe_steps", ["recipe_id"], :name => "index_recipe_steps_on_recipe_id"
 
   create_table "recipes", :force => true do |t|
     t.integer  "user_id",                           :null => false
@@ -223,6 +248,8 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "updated_at",                        :null => false
   end
 
+  add_index "recipes", ["user_id"], :name => "index_recipes_on_user_id"
+
   create_table "search_logs", :force => true do |t|
     t.integer  "user_id",                    :null => false
     t.string   "words",      :default => "", :null => false
@@ -237,6 +264,8 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
   end
+
+  add_index "toppage_contents", ["recommend_recipe_id"], :name => "index_toppage_contents_on_recommend_recipe_id"
 
   create_table "tpl_sets", :force => true do |t|
     t.string   "name"

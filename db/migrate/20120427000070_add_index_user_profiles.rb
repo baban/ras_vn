@@ -6,6 +6,6 @@ class AddIndexUserProfiles < ActiveRecord::Migration
   end
 
   def down
-    add_index :user_profiles, :user_id
+    remove_index :user_profiles, :user_id
   end
 end
