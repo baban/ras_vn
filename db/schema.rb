@@ -43,18 +43,21 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.text     "content",                                        :null => false
     t.integer  "category_id", :default => 0,                     :null => false
     t.string   "image"
-    t.datetime "publiced_at", :default => '2012-07-11 00:00:00', :null => false
+    t.datetime "publiced_at", :default => '2012-09-08 00:00:00', :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
 
   create_table "distincts", :force => true do |t|
-    t.integer  "prefecture_id", :null => false
-    t.string   "name",          :null => false
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.integer  "prefecture_id",                   :null => false
+    t.string   "name",                            :null => false
+    t.boolean  "public",        :default => true, :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
+
+  add_index "distincts", ["prefecture_id"], :name => "index_distincts_on_prefecture_id"
 
   create_table "eat_styles", :force => true do |t|
     t.string   "name"
@@ -85,9 +88,10 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
   end
 
   create_table "prefectures", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "name",                         :null => false
+    t.boolean  "public",     :default => true, :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "recipe_advertisements", :force => true do |t|
@@ -129,7 +133,7 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
   create_table "recipe_food_genre_rankings", :force => true do |t|
     t.integer  "recipe_food_genre_id"
     t.integer  "point",                :default => 0,            :null => false
-    t.date     "ranked_at",            :default => '2012-07-15', :null => false
+    t.date     "ranked_at",            :default => '2012-09-08', :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
@@ -257,10 +261,10 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.boolean  "nickname",        :default => true, :null => false
     t.boolean  "sex",             :default => true, :null => false
     t.boolean  "first_name",      :default => true
-    t.boolean  "last_name",       :default => true
+    t.boolean  "family_name",     :default => true
     t.boolean  "blood_type",      :default => true, :null => false
     t.boolean  "birthday",        :default => true, :null => false
-    t.boolean  "mail_address",    :default => true, :null => false
+    t.boolean  "email",           :default => true, :null => false
     t.boolean  "postcode",        :default => true, :null => false
     t.boolean  "address",         :default => true, :null => false
     t.boolean  "address_point",   :default => true, :null => false
@@ -269,22 +273,26 @@ ActiveRecord::Schema.define(:version => 20120707022739) do
     t.datetime "updated_at",                        :null => false
   end
 
+  add_index "user_profile_visibilities", ["user_profile_id"], :name => "index_user_profile_visibilities_on_user_profile_id"
+
   create_table "user_profiles", :force => true do |t|
     t.integer  "user_id"
     t.string   "image"
     t.string   "nickname",      :default => "", :null => false
     t.integer  "sex"
     t.string   "first_name",    :default => ""
-    t.string   "last_name",     :default => ""
+    t.string   "family_name",   :default => ""
     t.date     "birthday"
-    t.string   "mail_address"
-    t.integer  "prefecture_id", :default => 0,  :null => false
-    t.integer  "area_id",       :default => 0,  :null => false
+    t.string   "email"
+    t.integer  "prefecture_id", :default => 1,  :null => false
+    t.integer  "distinct_id",   :default => 1,  :null => false
     t.text     "comment",                       :null => false
     t.integer  "recipe_count",  :default => 0,  :null => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
   end
+
+  add_index "user_profiles", ["user_id"], :name => "index_user_profiles_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
