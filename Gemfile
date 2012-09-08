@@ -44,11 +44,12 @@ gem "yard", '0.7.4' # document generator like javadoc
 # test utilities
 gem 'flextures', "2.0.1" # add rake command for dump and load fixtures
 gem "kaminari" # paginate view
-gem "whenever", '0.7.2', require:false # cron設定の追加＆削除自動化
+gem "whenever", '0.7.2', require:false # cron settiing automation 
+gem "acts_as_readonlyable", '0.0.9' # sharding slave databases
+
 gem "capistrano", "2.9.0"
 gem "capistrano_colors", "0.5.5"
 gem "capistrano-ext", "1.2.1"
-gem "acts_as_readonlyable", '0.0.9' # sharding slave databases
 gem "rvm-capistrano"
 
 group :assets do
@@ -68,6 +69,7 @@ group :test, :development do
   gem 'faker' # generate fake data for test
   gem 'faker-japanese' # generate fake japanese names for test
   gem "factory_girl_rails" # unit test data generate utilities
+  gem "shoulda"
 end
 
 group :test do
