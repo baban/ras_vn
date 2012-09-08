@@ -10,28 +10,28 @@
       <td colspan="2"><%= @profile.nickname %></td>
     </tr>
     <tr>
-      <td><%= t(:mail_address, scope:"activerecord.attributes.user_profile") %></td>
-      <td colspan="2"><%= @profile.mail_address %></td>
+      <td><%= t(:email, scope:"activerecord.attributes.user_profile") %></td>
+      <td colspan="2"><%= @profile.email %></td>
     </tr>
     <tr>
       <td></td>
-      <td>性</td>
-      <td>名</td>
+      <td><%= t(:first_name,  scope:"activerecord.attributes.user_profile") %></td>
+      <td><%= t(:family_name, scope:"activerecord.attributes.user_profile") %></td>
     </tr>
     <tr>
       <td></td>
-      <td><%= @profile.first_name %></td>
-      <td><%= @profile.last_name  %></td>
+      <td><%= @profile.first_name  %></td>
+      <td><%= @profile.faimly_name %></td>
     </tr>
     <tr>
-      <td>性別</td>
+      <td><%= t(:sex, scope:"activerecord.attributes.user_profile") %></td>
       <td colspan="2"><%=translate_sex( @profile.sex ) %></td>
     </tr>
     <tr>
-      <td>生年月日</td>
+      <td><%= t(:birthday, scope:"activerecord.attributes.user_profile") %></td>
       <td colspan="2"><%= @profile.birthday %></td>
     </tr>
     <tr>
-      <td colspan="3"><%=link_to "編集", action:'edit', id: @profile.id %></td>
+      <td colspan="3"><%=link_to "編集", edit_profile_url( @profile ) %></td>
     </tr>
   </table>

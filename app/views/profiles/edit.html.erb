@@ -15,11 +15,6 @@
 
   <table>
     <tr>
-      <th><%= f.label :id %></th>
-      <td colspan="2"><%= @profile.id %></td>
-      <td></td>
-    </tr>
-    <tr>
       <th><%= f.label :nickname %></th>
       <td colspan="2"><%=f.text_field :nickname, value: @profile.nickname %></td>
       <td>
@@ -32,9 +27,9 @@
       <td><%= visibility_radios( @visibility, :birthday ) %></td>
     </tr>
     <tr>
-      <th><%= f.label :mail_address %></th>
-      <td colspan="2"><%= f.text_field :mail_address, value: @profile.mail_address %></td>
-      <td><%= visibility_radios( @visibility, :mail_address ) %></td>
+      <th><%= f.label :email %></th>
+      <td colspan="2"><%= f.text_field :email, value: @profile.email %></td>
+      <td><%= visibility_radios( @visibility, :email ) %></td>
     </tr>
     <tr>
       <th><%= f.label :sex %></th>
@@ -47,7 +42,7 @@
       <td><%= visibility_radios( @visibility, :comment ) %></td>
     </tr>
     <tr>
-      <td colspan="4"><%= f.submit t(:update,scope:"views.profile") %></td>
+      <td colspan="4"><%= f.submit %></td>
     </tr>
   </table>
 <% end %>

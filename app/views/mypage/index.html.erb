@@ -1,10 +1,9 @@
   <div id="content_body">
     <div id="content_header">
       <ul id="content_menu_list">
-        <li><%= link_to t(:mypage_link, scope:"views.mypage"),   controller:"mypage", action:"index" %></li>
-        <li><%= link_to t(:bookmark_link, scope:"views.mypage"), controller:"bookmarks", action:"index" %></li>
-        <li><%= link_to t(:kitchen_link, scope:"views.mypage"),  controller:"kitchens", action:"show", id: current_user.id %></li>
-        <li><%= link_to t(:diary_link, scope:"views.mypage"),  controller:"diary", action:"index", user_id: current_user.id %></li>
+        <li><%= link_to "マイページ",   controller:"mypage", action:"index" %></li>
+        <li><%= link_to "ブックマーク", controller:"bookmarks", action:"index" %></li>
+        <li><%= link_to "予約確認",     controller:"restaurant_reserves", action:"index" %></li>
       </ul>
     </div>
     <h2><%= t(:user_profile, scope:"activerecord.models") %></h2>
@@ -13,19 +12,14 @@
     </table>
     <table>
       <tr>
-        <td><%= t(:id, scope:"activerecord.attributes.user_profile") %></td>
-        <td colspan="2"><%= @profile.id %></td>
-        <td></td>
-      </tr>
-      <tr>
         <td><%= t(:nickname, scope:"activerecord.attributes.user_profile") %></td>
         <td colspan="2"><%= @profile.nickname %></td>
         <td><%= @visibility.nickname ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
       </tr>
       <tr>
-        <td><%= t(:mail_address, scope:"activerecord.attributes.user_profile") %></td>
-        <td colspan="2"><%= @profile.mail_address %></td>
-        <td><%= @visibility.mail_address ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
+        <td><%= t(:email, scope:"activerecord.attributes.user_profile") %></td>
+        <td colspan="2"><%= @profile.email %></td>
+        <td><%= @visibility.email ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
       </tr>
       <tr>
         <td><%= t(:sex, scope:"activerecord.attributes.user_profile") %></td>

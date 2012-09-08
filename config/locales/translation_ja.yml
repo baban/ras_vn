@@ -5,7 +5,7 @@ ja:
       bookmark: ブックマーク
       distinct: 市町村
       diary: 日記
-      food_genre: food_genre  #g
+      food_genre: 料理ジャンル
       omniuser: omniuser  #g
       prefecture: 県
       recipe: レシピ
@@ -130,6 +130,7 @@ ja:
         email: メールアドレス
         encrypted_password: パスワード
         password: パスワード
+        password_confirmation: パスワード(確認)
         last_sign_in_at: last_sign_in_at  #g
         last_sign_in_ip: last_sign_in_ip  #g
         recipe: :activerecord.models.recipe  #g
@@ -148,7 +149,7 @@ ja:
         comment: コメント
         first_name: 名
         image: 写真
-        last_name: 姓
+        family_name: 姓
         mail_address: メールアドレス
         nickname: ニックネーム
         sex: 性別

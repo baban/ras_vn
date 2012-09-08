@@ -1,4 +1,14 @@
-<%= render partial:"layouts/head" %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RasVn</title>
+  <%= stylesheet_link_tag "common" %>
+  <%= stylesheet_link_tag params[:controller] %>
+  <%= yield :style_after %>
+  <%= javascript_include_tag :application %>
+  <%= yield :javascript_after %>
+  <%= csrf_meta_tags %>
+</head>
 <body>
 
 <%=render partial:"layouts/header" %>
