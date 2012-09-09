@@ -11,6 +11,7 @@ class CreateUserProfileVisibilities < ActiveRecord::Migration
       t.boolean :blood_type,      null: false, default: true
       t.boolean :birthday,        null: false, default: true
       t.boolean :email,           null: false, default: true
+      t.boolean :phone_number,    null: false, default: true
       t.boolean :postcode,        null: false, default: true
       t.boolean :address,         null: false, default: true
       t.boolean :address_point,   null: false, default: true

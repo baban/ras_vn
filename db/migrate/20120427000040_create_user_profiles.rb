@@ -11,6 +11,7 @@ class CreateUserProfiles < ActiveRecord::Migration
       t.string   :family_name,   nulL: true,  default:""
       t.date     :birthday,      null: true
       t.string   :email,         null: true
+      t.string   :phone_number,  null: true
       t.integer  :prefecture_id, null: false, default: 1
       t.integer  :distinct_id,   null: false, default: 1
       t.text     :comment,       null: false, default: ""
