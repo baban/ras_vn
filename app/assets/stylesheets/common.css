@@ -1,0 +1,78 @@
+@charset "utf-8";
+/*FONT*/
+
+html>/**/body { font-size: 13px;  line-height: 1.6;} /* except Win IE */
+/* for IE6 */
+* html body {font-size:81%;}
+/* for IE7 */
+*:first-child+html body {font-size: 81%;}
+.txt10{ font-size: 77%; }	/* 10px */
+.txt11 { font-size: 85%;}	/* 11px */
+.txt12 { font-size: 93%; }	/* 12px */
+.txt14 { font-size: 108%;}	/* 14px */
+.txt16 { font-size: 124%;}	/* 16px */
+.txt20 { font-size: 154%;}	/* 20px */
+.txt25 { font-size: 193%; line-height:30px;  }	/* 25px */
+.txt26 { font-size: 200%; }	/* 26px */
+.txt30 { font-size: 240%; }	/* 26px */
+.txt40 { font-size: 280%; }	/* 26px */
+h1.indent{ margin:0 0 10px 0}
+.flo_l{ float:left;}
+.flo_r{ float:right;}
+.flo_n{ float:none!important;}
+.fo_b{ font-weight:bold;}
+.dot{ border-bottom:1px dotted #CCC;}
+.red{ color:#F00!important}
+.grn{ color:#009933!important}
+
+ul.none, li.none, dd.none, td.none{border:none!important; background:none!important; list-style:none!important;	}
+li.none01{border:none!important;}
+
+html{ background:#faf3e3;}
+body {font-family: Osaka, "メイリオ","Meiryo","Helvetica Neue","Arial","ＭＳ Ｐゴシック", "MS PGothic", sans-serif; color:#666;}
+
+/*header*/
+header{ height:91px; background:url(/assets/hd_bg.png) repeat-x top; margin-bottom:5px;}
+header h1{ margin-left:100px;height:40px; line-height:40px; float:left; margin-right:20px;}
+header .inner{ width:970px; margin:0 auto; padding:0 10px; position:relative}
+header .mk{text-indent:-9999px; height:89px;width:89px; background:url(/assets/rogo_icon.png) no-repeat; position:absolute; top:0; left:10px;}
+header nav{ width:770px; float:left; height:40px; line-height:40px;}
+header nav a:link, header nav a:visited{ color:#FFF}
+header nav a:hover{ color:#CCC;}
+header nav ul{background:url(/assets/hd_line.gif) no-repeat 100% 50%;}
+header nav li{ float:left; background:url(/assets/hd_line.gif) no-repeat 0 50%; padding:0 15px;}
+
+.search{ width:280px; padding:10px 0 0 100px;}
+.search .box{ border:2px solid #CCC;padding-right:35px; background:#FFF;padding-left: 5px; position: relative; margin-right:10px;}
+.search input{ width:100%; font-size:14px; border:none;height:30px; padding:0;}
+.hidden_elem{display: none !important;}
+.search button{ background:url(/assets/gs.png) no-repeat 50% 50% #CCC;border: 0;cursor: pointer;display: block;height:26px;position: absolute;right:0;top: 0;width:30px;
+-webkit-background-size:18px 20px;
+-moz-background-size:18px 20px;background-size:18px 20px ; margin:2px}
+ul.s_att{ margin-top:10px}
+.s_att li{ line-height:34px; }
+.arr{background:url(/assets/arr01.png) no-repeat right; padding-right:15px;}
+
+.bace_bg{ width:970px; margin:0 auto; padding:0 10px }
+.contents_bg{ padding:10px;
+-webkit-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.6);
+-moz-box-shadow:    0px 0px 8px rgba(50, 50, 50, 0.6);
+box-shadow:         0px 0px 8px rgba(50, 50, 50, 0.6); border:2px solid #FFF; background:url(/assets/contents_bg.gif) repeat-x #FFF; margin-bottom:10px;}
+
+aside{ margin-bottom:10px;}
+
+
+/*footer*/
+footer{ clear:both; margin-top:20px; padding-bottom:40px; }
+footer .inner{ width:970px; margin:0 auto; padding:0 10px }
+footer .inner li{ margin-left:10px;}
+.dlt{ text-indent:-9999px; display:none}
+
+
+
+/*角丸3*/
+.radi3{-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.radi5{-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+.radi10{-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
+
+.err{ background:url(/assets/common/ell.gif) no-repeat 0 2px; padding-left:20px; color:#F00!important; margin:5px 0 0 0;} 

@@ -1,30 +1,30 @@
 development:
   adapter: mysql2
-  database: ras_vn_dev 
+  database: cook24_dev 
   username: root
   host: localhost
 
 test:
   adapter: mysql2
-  database: ras_vn_test
+  database: cook24_test
   username: root
   thost: localhost
 
 staging:
   adapter: mysql2
-  database: ras_vn_staging
+  database: cook24_staging
   username: root
   thost: localhost
 
 production:
   adapter: mysql2
-  database: ras_vn
+  database: cook24
   username: root
   thost: localhost
 
-ras_vn_users:
+cook24_users:
   adapter: mysql2
-  database: ras_vn_users 
+  database: cook24_users 
   username: root
   host: localhost
 
