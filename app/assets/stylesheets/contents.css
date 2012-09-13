@@ -1,0 +1,50 @@
+@charset "utf-8";
+.main_clm{ float:left; width:635px; }
+.side_contents{ float:right; width:300px;}
+.rec_cat{ padding:10px; background:#FFF; width:350px; border:1px solid #e8dec5; position:relative; float:left; height:285px; margin-right:10px; margin-bottom:10px} 
+
+.rec_cat h1, .rec_cat2 h1{ margin:0 0 10px 0; background:#ccaf8b; color:#FFF; padding:2px 5px;}
+.rec_cat section img, .rec_cat2 section img{ float:left; margin-right:10px;}
+.rec_cat section h1, .rec_cat2 section h1{ margin:0; background:none; padding:0;}
+.rec_cat section .txt{ overflow:auto;}
+.rec_cat section .txt p a, .rec_cat2 section .txt p a{ margin-left:5px;}
+.rec_cat section .arr, .rec_cat2 section .arr{ position:absolute; bottom:10px; right:10px;}
+
+.rec_cat2{padding:10px; background:#FFF; width:230px; border:1px solid #e8dec5; position:relative; float:left; height:285px; margin-bottom:10px}
+.rec_cat2 section{ clear:both; margin-bottom:10px;}
+
+
+.contents_bg a:link, .contents_bg a:visited{ color:#fe6b1d;}
+.contents_bg a:hover{ color:#ff9258}
+.side_c01{ background:#faf3e3; padding:10px 10px 0; border:1px solid #e7dcc2}
+.side_c01 h1{ font-weight:bold; color:#333}
+.side_c01 section{ margin:10px 0; border-bottom:1px dashed #CCC; padding-bottom:10px;}
+.side_c01 section:last-child{ border: none;}
+.side_c01 section img{ float:left; margin-right:10px; width:50px; height:50px;}
+section .txtarea{ overflow: auto;}
+.side_c01 section .txtarea .att{ color:#999; margin-top:5px;}
+
+.cate01{ padding:10px 0px 0px 10px; background:#faf3e3; border:1px solid #e7dcc2; clear:both;}
+.cate01 h1{font-weight:bold; color:#333; margin-bottom:5px}
+.cate01 section{ width:290px; float:left; background:#FFF; padding:5px; margin-right:10px; position:relative; height:95px; margin-bottom:10px;}
+.cate01 section img{ float:left; margin-right:10px; width:92px; height:92px;}
+.cate01 section h1{ font-weight:bold; color:#333; margin-bottom:5px;}
+.cate01 section .catelists li{ margin-right:5px}
+.more{ position:absolute; right:5px; bottom:5px;}
+
+/*att*/
+.att_bg{ width:600px; padding:10px; margin:0 auto;-webkit-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.6);
+-moz-box-shadow:    0px 0px 8px rgba(50, 50, 50, 0.6);
+box-shadow:         0px 0px 8px rgba(50, 50, 50, 0.6);
+background:#FFF}
+
+.att_bg h1{ border-bottom:1px solid #CCC; }
+.login_ind h2{ font-weight:bold}
+.login_ind{ background:#f1f1f1; width:270px; padding:10px; margin:10px 0; min-height:170px;}
+.login_ind label{ display:block}
+.login_ind input{ padding:2px; width:260px;}
+.login_ind .rbtn{ margin:10px auto; text-align:center}
+.login_ind .rbtn a{ padding:5px 20px;}
+.att_bg .ant_s{ margin:10px 0;}
+.att_bg .ant_s li a { padding:5px 10px ; margin-right:20px; background:#EEE; display: block; border:1px solid #DDD}
+.att_bg .ant_s li img{ margin-right:5px;}

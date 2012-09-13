@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>RasVn</title>
+  <title>Cook24</title>
   <%= stylesheet_link_tag "common" %>
+  <%= stylesheet_link_tag "contents" %>
+  <%= stylesheet_link_tag "reset" %>
+  <%= stylesheet_link_tag "btn" %>
   <%= stylesheet_link_tag params[:controller] %>
+  <%= javascript_include_tag 'html5' %>
   <%= yield :style_after %>
   <%= javascript_include_tag :application %>
   <%= yield :javascript_after %>
   <%= csrf_meta_tags %>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 </head>
 <body>
 
 <%=render partial:"layouts/header" %>
-<%=render partial:"layouts/content_menu" %>
-
-<div id="content" class="section">
-  <% if notice or alert %>
-    <div>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
-  <% end %>
-  <%= yield %>
-</div>
-
+<%= yield %>
 <%= render partial:"layouts/footer" %>
 
 </body>

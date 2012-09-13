@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*ベーシックボタン*/
+.rbtn{ font-weight:bold;}
+.rbtn a{background: #fe6b1d;
+background: -moz-linear-gradient(top, #fe6b1d 0%, #cd0900 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fe6b1d), color-stop(100%,#cd0900));
+background: -webkit-linear-gradient(top, #fe6b1d 0%,#cd0900 100%);
+background: -o-linear-gradient(top, #fe6b1d 0%,#cd0900 100%);
+background: -ms-linear-gradient(top, #fe6b1d 0%,#cd0900 100%);
+border:1px solid #cd0900; padding:10px 20px; text-align:center;
+-webkit-box-shadow: 0px 0px 3px rgba(50, 50, 50, 0.2);
+-moz-box-shadow:    0px 0px 3px rgba(50, 50, 50, 0.2);
+box-shadow:         0px 0px 3px rgba(50, 50, 50, 0.2);}
+.rbtn a:link, .rbtn a:visited{ color:#FFF}
+.rbtn a:hover{  color:#CCC}
+header .inner .rbtn{ float:right; margin:20px 0 0}
+
+
+
+
+
+a:link.blu, a:visited.blu{ background:#222b44; color:#FFF}
+a:hover.blu{background:#222b44;}
+
+
+
+
+
+.btn{}
+
