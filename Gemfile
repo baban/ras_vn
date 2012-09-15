@@ -11,6 +11,7 @@ gem "redis", "3.0.1"
 gem "fluentd"
 gem "bartt-ssl_requirement", "1.4.2", require: "ssl_requirement"
 gem "rails_config"
+gem "fluent-plugin-mongo"
 
 # view urilities
 gem "jquery-rails"
