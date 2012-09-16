@@ -382,9 +382,10 @@ DEPENDENCIES
   kaminari
   memcache-client (= 1.8.5)
   mini_magick (= 3.4)
-  mongo
-  mongo_ext
-  mongoid
+  mongo (= 1.7.0)
+  mongo_ext (= 0.19.3)
+  mongoid (= 3.0.6)
+  moped (= 1.2.1)
   mysql2 (= 0.3.11)
   omniauth (= 1.1.0)
   omniauth-facebook (= 1.4.0)

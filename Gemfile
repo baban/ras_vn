@@ -7,9 +7,10 @@ gem "mysql2", "0.3.11"
 gem "memcache-client", "1.8.5" # user memcashed
 gem "dalli", "2.1.0"           # memcached hig-perfirmance settinged gem
 gem "redis", "3.0.1"
-gem "mongoid"
-gem "mongo_ext"
-gem "mongo"
+gem "mongoid", "3.0.6"
+gem "mongo_ext", "0.19.3"
+gem "mongo", "1.7.0"
+gem "moped", "1.2.1"
 gem "fluentd"
 gem "bartt-ssl_requirement", "1.4.2", require: "ssl_requirement"
 gem "rails_config"
