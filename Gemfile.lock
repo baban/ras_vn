@@ -382,6 +382,7 @@ DEPENDENCIES
   kaminari
   memcache-client (= 1.8.5)
   mini_magick (= 3.4)
+  mongo
   mongo_ext
   mongoid
   mysql2 (= 0.3.11)

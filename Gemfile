@@ -9,6 +9,7 @@ gem "dalli", "2.1.0"           # memcached hig-perfirmance settinged gem
 gem "redis", "3.0.1"
 gem "mongoid"
 gem "mongo_ext"
+gem "mongo"
 gem "fluentd"
 gem "bartt-ssl_requirement", "1.4.2", require: "ssl_requirement"
 gem "rails_config"
