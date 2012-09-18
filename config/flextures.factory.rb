@@ -20,6 +20,7 @@ end
 Flextures::Factory.define :recipes do |f|
   #filename = Rails.root.to_path + "/app/assets/images/recipe_img.jpg"
   #f.image = IO.read("#{filename}")
+  #p f
   f
 end
 

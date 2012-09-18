@@ -151,10 +151,11 @@ ActiveRecord::Schema.define(:version => 20120908081140) do
   add_index "recipe_food_genre_rankings", ["recipe_food_genre_id"], :name => "index_recipe_food_genre_rankings_on_recipe_food_genre_id"
 
   create_table "recipe_food_genres", :force => true do |t|
-    t.string   "name",       :null => false
+    t.string   "name",                      :null => false
     t.string   "image"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "amount",     :default => 0, :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "recipe_foods", :force => true do |t|

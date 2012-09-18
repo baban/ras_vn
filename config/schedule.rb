@@ -19,11 +19,18 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 
-every 1.days do
+# update recipe_food_genre amount column
+every 1.hour do
+  runner "RecipeFoodGenre.aggrigation"
+end
+
+# create today's popular recipe ranking
+every 1.day, at:"00:05" do
   runner "RecipeRanking.aggrigation"
 end
 
-every 1.days do
+# create today's popular recipe food ranking
+every 1.day, at:"00:10" do
   runner "RecipeFoodRanking.aggrigation"
 end
 
