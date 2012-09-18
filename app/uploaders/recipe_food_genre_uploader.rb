@@ -6,10 +6,10 @@ class RecipeFoodGenreUploader < BaseUploader
   end
 
   def extension_white_list
-    %w(png)
+    %w(jpg)
   end
 
   def filename
-    "food.png"
+    "food.jpg"
   end
 end
