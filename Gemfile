@@ -37,7 +37,7 @@ gem "mini_magick", "3.4"
 gem "carrierwave", "0.6.2"
 
 # ruby extentions
-gem "tapp" # add tapp(tap print) method
+#gem "tapp" # add tapp(tap print) method
 gem 'i18n_generators', "1.2.1" # gemerate multiple language message file
 gem "ruby-openid", "2.1.8" # openid
 gem "rails3_acts_as_paranoid", "0.2.4" # logical
@@ -69,13 +69,13 @@ group :assets do
 end
 
 group :test, :development do
-  gem "jasmine-rails"
+  #gem "jasmine-rails"
   gem 'rspec' # unit test utilities
   gem 'rspec-rails'
   gem 'faker' # generate fake data for test
   gem 'faker-japanese' # generate fake japanese names for test
   gem "factory_girl_rails" # unit test data generate utilities
-  gem "shoulda"
+  #gem "shoulda"
 end
 
 group :test do
@@ -92,9 +92,9 @@ group :development, :test do
   gem "pry-doc"
   gem "pry-rails"
   gem 'plymouth', require: false
-  gem 'pry-exception_explorer'
-  gem 'pry-nav'
-  gem 'pry-remote'
-  gem 'pry-stack_explorer'
+  #gem 'pry-exception_explorer'
+  #gem 'pry-nav'
+  #gem 'pry-remote'
+  #gem 'pry-stack_explorer'
 end
 
