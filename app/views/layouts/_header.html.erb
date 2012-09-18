@@ -1,37 +1,44 @@
 <!-- ヘッダ start -->
 <header>
 <div class="inner clearfix txt12">
-<h1><%= link_to (image_tag "/assets/ck24logo.png", alt:"cook24", width:"77", height:"16"), root_url %></h1>
-
-<p class="mk">mark</p>
-
-<nav>
-<ul class="clearfix flo_l">
-<li class=""><a href="#">Tìm Kiếm Nhà Hàng</a></li>
-</ul>
-<ul class="clearfix flo_r">
-<li><a href="#">Đăng Nhập</a></li>
-</ul>
-</nav>
-
-<div class="search flo_l">
-	<%= form_for( :recipes, url: recipes_url, html:{ class:"cl" }, method:"GET" ) do |f| %>
-	<div class="box radi5">
-    <%= text_field_tag :word, "",class:"radi5", type:"search" %>
-    <%= f.button t(:blank, scope:"views.header"), class:"radi3", title:"Tìm Kiếm"%>
-    <span class="hidden_elem">Tìm Kiếm</span>
-    </div>
-	<% end %>
-</div>
-<ul class="flo_l s_att clearfix">
-<li class="arr"><a href="#">Tìm Công Thức</a></li>
-</ul>
-
-<div class="rbtn"><a href="#" class="radi10">Đăng Công Thức</a></div>
+	<h1><%= link_to (image_tag "/assets/ck24logo.png", alt:"cook24", width:"77", height:"16"), root_url %></h1>
+	<p class="mk">mark</p>
+	<nav>
+		<ul class="clearfix flo_l">
+			<li class=""><%= link_to t(:search_restaurants, scope:"views.top.index"), root_url %></li>
+		</ul>
+		
+		<% unless user_signed_in? %>
+			<ul class="clearfix flo_r">
+				<li><%= link_to t(:sign_in, scope:"views.header"), new_user_session_url %></li>
+				<li><%= link_to t(:sign_up, scope:"views.header"), new_user_registration_url %></li>
+			</ul>
+		<% else %>
+			<%=form_for :device, url: destroy_user_session_url, method:"DELETE" do |f| %>
+				<ul class="clearfix flo_r">
+		          <li><%=f.submit t(:sign_out, scope:"views.header") %></li>
+		          <li><%= link_to t(:mypage, scope:"views.header"), controller:"mypage", action:"index" %></li>
+		        </ul>
+	        <% end %>
+		<% end %>
+	</nav>
+	
+	<div class="search flo_l">
+		<%= form_for( :recipes, url: recipes_url, html:{ class:"cl" }, method:"GET" ) do |f| %>
+		<div class="box radi5">
+	    <%= text_field_tag :word, "",class:"radi5", type:"search" %>
+	    <%= f.button t(:blank, scope:"views.header"), class:"radi3", title:"Tìm Kiếm"%>
+	    <span class="hidden_elem">Tìm Kiếm</span>
+	    </div>
+		<% end %>
+	</div>
+	<ul class="flo_l s_att clearfix">
+		<li class="arr"><%= link_to t(:search_recipe, scope:"views.content_menu"), root_url %></li>
+	</ul>
+	
+	<div class="rbtn"><%= link_to t(:new_recipe, scope:"views.content_menu"), root_url, class:"radi10" %></div>
 </div>
 </header>
-
-
 
 <!--
 <div id="header">
@@ -72,7 +79,6 @@
     </dl>
   <% end %>
 </div>
-
 
 <%=render partial:"layouts/content_menu" %>
 <div id="content" class="section">
