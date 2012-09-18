@@ -1,45 +1,67 @@
 <div class="bace_bg">
 <div class="contents_bg clearfix">
+
 <!--main_clm-->
 <div class="main_clm">
 <article class="rec_cat clearfix">
-<h1 class="txt12">おすすめカテゴリ</h1>
-<section><%= image_tag "sp01.jpg", width:"170", height:"250", alt:"Ẩm Thực Việt"%>
-<div class="txt">
-<h1 class="txt16"><a href="#">豚しゃぶ用のお肉で肉巻きおにぎり</a></h1>
-<h2>♡2011.4.22 つくれぽ100人ありがとう～♪ 最近人気の肉巻きおにぎりは作った方が買うより断然お安いです♪<p>by<a href="#">sssssssma</a></p></h2>
-<p class="arr txt11"><a href="#">おすすめカテゴリを見る</a></p>
-</div>
-</section>
+	<h1 class="txt12"><%= t(:recomment_recipe_title, scope:"views.content_footer") %></h1>
+	<section><%= image_tag @recommend_recipe.image.url(:thumb), width:"170", height:"250", alt:"Ẩm Thực Việt" %>
+		<div class="txt">
+			<h1 class="txt16"><%= link_to @recommend_recipe.title, recipe_url(@recommend_recipe) %></h1>
+			<h2><%= @recommend_recipe.description %>
+			<p>by<%= link_to @recommend_recipe.chef.profile.nickname, recipe_url(@recommend_recipe.id) %></p>
+			</h2>
+			<p class="arr txt11"><a href="#">おすすめカテゴリを見る</a></p>
+		</div>
+	</section>
 </article>
+
 
 <article class="rec_cat2 clearfix">
-<h1 class="txt12">話題のレシピ </h1>
-<section class="clearfix"><%= image_tag "sp02.jpg", width:"75", height:"105", alt:"Ẩm Thực Việt"%>
-<div class="txt">
-<h1 class="txt16"><a href="#">豚しゃぶ用のお肉で肉巻きおにぎり</a></h1>
-<p>by<a href="#">sssssssma</a></p>
-<p class="arr txt11"><a href="#">おすすめカテゴリを見る</a></p>
-</div>
-</section>
-<section class="clearfix"><%= image_tag "sp02.jpg", width:"75", height:"105", alt:"Ẩm Thực Việt"%>
-<div class="txt">
-<h1 class="txt16"><a href="#">豚しゃぶ用のお肉で肉巻きおにぎり</a></h1>
-<p>by<a href="#">sssssssma</a></p>
-<p class="arr txt11"><a href="#">おすすめカテゴリを見る</a></p>
-</div>
-</section>
+	<h1 class="txt12"><%= t(:pop_ranking_title, scope:"views.content_footer") %></h1>
+	<% @ranking.each do |recipe| %>
+		<section class="clearfix">
+			<%= image_tag recipe.image.url(:thumb), width:"75", height:"105", alt:"Ẩm Thực Việt" %>
+			<div class="txt">
+				<h1 class="txt16"><%= link_to recipe.title, recipe_url(recipe) %></h1>
+				<p>by<%= link_to recipe.user.profile.nickname, kitchen_url(recipe.user) %></p>
+				<p class="arr txt11"><a href="#">おすすめカテゴリを見る</a></p>
+			</div>
+		</section>
+	<% end %>
 </article>
 
-
-
 <article class="cate01 clearfix">
-<h1>カテゴリからレシピを探す</h1>
-<section><%= image_tag "cg01.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%><div class="txtarea"><h1>野菜（1020件）</h1>
-<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">たけのこ</a></li><li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
-</div>
-<p class="more arr txt11"><a href="#">もっと見る</a></p>
+	<h1><%= t(:category_list_title,scope:"views.top.index") %></h1>
+	<% @food_genres.each do |genre| %>
+		<section>
+			<%= image_tag genre.image.url(:thumb), width:"92", height:"92", alt:"Ẩm Thực Việt" %>
+			<div class="txtarea">
+				<h1><%= link_to genre.name, recipes_url(recipe_food_genre_id: genre.id) %></h1>
+				<ul class="catelists">
+					<% genre.foods.each do |food| %>
+						<li><%= link_to food.name, recipes_url(recipe_food_id: food.id) %></li>
+					<% end %>
+				</ul>
+			</div>
+			<p class="more arr txt11"><%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_genre_id: genre.id ) %></p>
+		</section>
+	<% end %>
+	<%= link_to t(:all_categories, scope:"views.top.index"), recipe_foods_url %>
+	
+	
+<section>
+	<%= image_tag "cg01.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%>
+	<div class="txtarea">
+		<h1>野菜（1020件）</h1>
+		<ul class="catelists">
+			<li class="arr txt11 flo_l"><a href="#">たけのこ</a></li>
+			<li class="arr txt11 flo_l"><a href="#">キャベツ</a></li>
+		</ul>
+	</div>
+	<p class="more arr txt11"><a href="#">もっと見る</a></p>
 </section>
+
 <section><%= image_tag "cg02.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%><div class="txtarea"><h1>お肉（504件）</h1>
 <ul class="catelists"><li class="arr txt11 flo_l"><a href="#">たけのこ</a></li><li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
 </div>
@@ -164,7 +186,6 @@
 
 
 
-
 <!--
 <%= render partial:"layouts/content_footer" %>
 
@@ -203,6 +224,7 @@
       <% end %>
     </table>
   </div>
+  
   <div id="category_recipe_search">
     <h3><%= t(:category_list_title,scope:"views.top.index") %></h3>
     <div class="section">

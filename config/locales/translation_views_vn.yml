@@ -1,0 +1,104 @@
+vn:
+  views:
+    bookmarks:
+      create: Bookmarked
+      update: Xóa bookmarked
+    content_footer:
+      recomment_recipe_title: Hôm nay ăn gì?
+      rankings_title: Ranking
+      pop_ranking_title: Món ăn được xem nhiều nhất
+      food_ranking_title: Thực phẩm được dùng nhiều nhất
+    diary:
+      new: Chia sẽ nhật ký
+      edit: Sửa
+      create_button: Viết nhật ký
+      update_button: Update
+      create_notice: Update
+      update_notice: Updated
+      destroy_notice: Đã xóa
+    content_menu:
+      search_recipe: Tìm recipe
+      new_recipe: Đăng recipe
+      edit_recipe: Sửa recipe
+    footer:
+      cooporate_profile: Giới thiệu
+      cooporate_terms: Thỏa thuận sử dụng
+      cooporate_q_and_a: Liên hệ hỏi đáp
+    kitchens:
+      show_link: Show
+      recipe_link: Recipe
+      recipe_comment_link: Đăng report
+      diary_link: Nhật ký
+    header:
+      title: Cook24
+      search_button: Tìm recipe
+      blank: ""
+      sign_up: Đăng ký
+      sign_in: Đăng nhập
+      sign_out: Thoát
+      mypage: My Page
+    recipes:
+      create:
+        other_user_recipe_alert: Bạn không sửa được bài này
+      show:
+        creator: Recipe
+        bookmark: Bookmark
+        unbookmark: Delete bookmark
+        post_report: Đăng
+        forbiddon_right_click: No click
+      new:
+        create_recipe: Đăng recipe
+        public: Công khai
+        closed: Không công khai
+        caution: Điều khoản đăng bài
+        next_step_button: Regist
+      edit:
+        edit_recipe: Sửa recipe
+        genre: Category
+        select_genre: Chọn category
+        add_genre: Thêm category
+        add_foodstuff: Nhập tên thực phẩm
+        add_step: Thêm step
+        edit: Save tạm thời
+        commit: Đăng xong recipe
+        tmp_save: Save tạm thời
+        save_complete: Saved
+    pagination:
+      first: "&laquo; Đầu"
+      last: " Cuối &raquo;"
+      previous: "&lsaquo; Sau"
+      next: "Trước &rsaquo;"
+      truncate: "..."
+    profile:
+      image_description: (Đăng hình ảnh)
+      update: Update
+    mypage:
+      mypage_link: My page
+      bookmark_link: Bookmark
+      kitchen_link: Kitchen
+      diary_link: Nhật ký
+      public: Công khai
+      closed: Không công khai
+      edit: Sửa
+    top:
+      index:
+        recommended_category: Thực phẩm được yêu chuộng
+        rank_in_recipe: Món ăn được xem nhiều nhất
+        category_list_title: Tìm theo loại thực phẩm
+        category_more: "Xem tiếp..."
+        all_categories: Tấc cả
+        search_restaurants: Tìm Kiếm Nhà Hàng
+    users:
+      sign_up:
+        title: Đăng nhập
+        sub_title: Profile
+        address_description: Chọn địa điểm nơi bạn đang sống
+        post_button: Đăng ký
+  page:
+    recipes:
+      creator: Recipe
+      bookmark: Bookmark
+      unbookmark: Delete bookmark
+    bookmarks:
+      create: Bookmarked
+      update: Deleted bookmark
