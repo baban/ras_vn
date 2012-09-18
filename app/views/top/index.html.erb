@@ -37,7 +37,7 @@
 		<section>
 			<%= image_tag genre.image.url(:thumb), width:"92", height:"92", alt:"Ẩm Thực Việt" %>
 			<div class="txtarea">
-				<h1><%= link_to genre.name, recipes_url(recipe_food_genre_id: genre.id) %></h1>
+				<h1><%= link_to "#{genre.name}(#{genre.amount}件)", recipes_url(recipe_food_genre_id: genre.id) %></h1>
 				<ul class="catelists">
 					<% genre.foods.page(1).per(3).each do |food| %>
 						<li><%= link_to food.name, recipes_url(recipe_food_id: food.id) %></li>
