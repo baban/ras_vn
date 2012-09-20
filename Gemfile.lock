@@ -96,7 +96,7 @@ GEM
     faraday (0.8.4)
       multipart-post (~> 1.1)
     ffi (1.1.5)
-    flextures (2.0.1)
+    flextures (2.0.2)
     fluent-plugin-mongo (0.6.7)
       fluentd (>= 0.10.7)
       mongo (>= 1.6.0)
@@ -343,7 +343,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   faker-japanese
-  flextures (= 2.0.1)
+  flextures (= 2.0.2)
   fluent-plugin-mongo
   fluentd
   formtastic (= 2.1.0)
