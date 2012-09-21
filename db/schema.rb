@@ -29,6 +29,20 @@ ActiveRecord::Schema.define(:version => 20120908081140) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
 
+  create_table "affiriate_logs", :force => true do |t|
+    t.string   "session_id",     :null => false
+    t.string   "affiriate_code", :null => false
+    t.integer  "affiriate_type", :null => false
+    t.integer  "user_id"
+    t.datetime "completed_at"
+    t.datetime "retired_at"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "affiriate_logs", ["session_id"], :name => "index_affiriate_logs_on_session_id"
+  add_index "affiriate_logs", ["user_id"], :name => "index_affiriate_logs_on_user_id"
+
   create_table "bookmarks", :force => true do |t|
     t.integer  "user_id",    :null => false
     t.integer  "recipe_id",  :null => false
@@ -46,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20120908081140) do
     t.text     "content",                                        :null => false
     t.integer  "category_id", :default => 0,                     :null => false
     t.string   "image"
-    t.datetime "publiced_at", :default => '2012-09-13 00:00:00', :null => false
+    t.datetime "publiced_at", :default => '2012-09-21 00:00:00', :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
@@ -143,7 +157,7 @@ ActiveRecord::Schema.define(:version => 20120908081140) do
   create_table "recipe_food_genre_rankings", :force => true do |t|
     t.integer  "recipe_food_genre_id",                           :null => false
     t.integer  "point",                :default => 0,            :null => false
-    t.date     "ranked_at",            :default => '2012-09-13', :null => false
+    t.date     "ranked_at",            :default => '2012-09-21', :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
