@@ -11,6 +11,8 @@ require "bundler/capistrano"
 
 require "uri"
 
+require "rvm/capistrano"
+
 # アプリケーション名
 set :application, "ras_vn"
 
@@ -27,24 +29,11 @@ set :scm, :git
 set :repository, "/home/baban/repo/ras_vn/"
 set :scm_username, 'baban'
 set :scm_passphrase, "svc2027"
-
-
-
 set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"")
-#set :rvm_install_ruby_params, '--1.9'      # for jruby/rbx default to 1.9 mode
 
 before 'deploy:setup', 'rvm:install_rvm'   # install RVM
 before 'deploy:setup', 'rvm:install_ruby'  # install Ruby and create gemset, or:
 before 'deploy:setup', 'rvm:create_gemset' # only create gemset
-
-require "rvm/capistrano"
-
-#set :rvm_ruby_string, :local
-
-
-#set :repository, "https://matzbara@bitbucket.org/truondinhhoang/ras_vn.git"
-#set :scm_username, 'matzbara'
-#set :scm_passphrase, "svc2027"
 
 set :runner, "baban"
 set :branch, "master"
