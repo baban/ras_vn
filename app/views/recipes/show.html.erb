@@ -1,3 +1,123 @@
+<div class="bace_bg">
+	<div class="contents_bg clearfix">
+		<!--main_clm-->
+		<div class="main_clm">
+			<article class="contents_recipes">
+				<h1 class="ttl_recipe"><a href="#">一人暮らしでも簡単♪即席親子丼！</a></h1>
+				<%= image_tag "recipe/qu7ecvq1.png", width:"280", height:"466", alt:"Ẩm Thực Việt" %>
+				<div class="explanation">
+					<p>
+						一人暮らしでも、すぐに作れて、おいしい親子丼が作れちゃう♪まさに一人暮らしの男のためのILLな料理だよ。この方法を利用すれば他の丼モノもある程度作れちゃってすばらしい限りだ。
+					</p>
+					<div class="clearfix">
+						<p class="user_name">
+							<span class="flo_l">
+								<%= image_tag "common/user_ico.png", width:"22", height:"22", alt:"Ẩm Thực Việt" %>
+							</span>
+							<span class="flo_l"><a href="#">sssssssma</a></span>
+						</p>
+					</div>
+					<div id="ingredients">
+						<div class="servings">
+							<h3>
+							<div class="material clearfix">
+								<span class="material_txt"> 材料 </span>
+								<span class="servings_for yield"> （ 1人前 ） </span>
+							</div><div class="clear"></div></h3>
+						</div>
+						<div class="ingredients_list">
+							<div class="ingredient_row clearfix">
+								<div class="ingredient_name">
+									たまねぎ(輪切り)
+								</div>
+								<div class="ingredient_quantity">
+									半分
+								</div>
+							</div>
+							<div class="ingredient_row clearfix">
+								<div class="ingredient_name">
+									もやし
+								</div>
+								<div class="ingredient_quantity">
+									袋3分の1
+								</div>
+							</div>
+							<div class="ingredient_row clearfix">
+								<div class="ingredient_name">
+									鶏肉
+								</div>
+								<div class="ingredient_quantity">
+									適量
+								</div>
+							</div>
+							<div class="ingredient_row clearfix">
+								<div class="ingredient_name">
+									卵
+								</div>
+								<div class="ingredient_quantity">
+									2コ
+								</div>
+							</div>
+							<div class="ingredient_row clearfix">
+								<div class="ingredient_name">
+									みりん
+								</div>
+								<div class="ingredient_quantity">
+									適量
+								</div>
+							</div>
+							<div class="ingredient_row clearfix">
+								<div class="ingredient_name">
+									そばつゆ(昆布つゆがいい)
+								</div>
+								<div class="ingredient_quantity">
+									適量
+								</div>
+							</div>
+							<div class="ingredient_row clearfix">
+								<div class="ingredient_name">
+									水
+								</div>
+								<div class="ingredient_quantity">
+									適量
+								</div>
+							</div>
+							<div class="ingredient_row clearfix">
+								<div class="ingredient_name">
+									その他入れたいもの(ネギとかいいよ)
+								</div>
+								<div class="ingredient_quantity">
+									適量
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</article>
+
+			<div class="cate01 clearfix">
+				<section class="rec_cat5 clearfix">
+					<%= image_tag "recipe/qu7ecvq1.png", width:"280", height:"466", alt:"Ẩm Thực Việt" %>
+					<div class="txt">
+						<h1 class="txt16"><a href="#">豚しゃぶ用のお肉で肉巻きおにぎり</a></h1>
+						<p>
+							by<a href="#">sssssssma</a>
+						</p>
+						<h2>♡2011.4.22 つくれぽ100人ありがとう～♪ 最近人気の肉巻きおにぎりは作った方が買うより断然お安いです♪
+						<div class="info_area">
+							公開：<span>11/07/30&nbsp;&nbsp;</span>更新：<span>12/03/31&nbsp;&nbsp;</span> レシピID：<span>1509988</span>
+						</div></h2>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!--main_clmEnd-->
+		<%=render partial:"layouts/right_side_content" %>
+	</div>
+	<!--contents-->
+</div>
+
 <%= include_action_javascript %>
 <%= include_action_style_sheet %>
 
@@ -6,85 +126,107 @@
 <%= render partial:"layouts/content_footer" %>
 
 <div id="content_body" class="section">
-  <div id="recipe_header">
-    <p class="chef">
-      <%= link_to @recipe.user.profile.nickname, kitchen_url(@user) %>
-      <%= t("page.recipes.creator") %>
-      (<%= @recipe.user.profile.recipe_count %><%= t("order.recipes") %>)
-    </p>
-    <% if user_signed_in? %>
-      <%=form_for( @bookmark, html:{ id:"bookmark_button" } ) do |f| %>
-        <%= f.hidden_field :recipe_id, value: @recipe.id %>
-        <%= f.hidden_field :user_id, value: current_user.id %>
-        <%= f.submit (bookmarked? ? t(:unbookmark, scope:"views.recipes.show") : t(:bookmark, scope:"views.recipes.show")) %>
-      <% end %>
-    <% end %>
-  </div>
-  <h2><%= @recipe.title %></h2>
-  <div class="section" id="recipe_body">
-    <div id="recipe_base_info">
-      <div id="recipe_photo" class="figure">
-        <%= image_tag @recipe.recipe_image.url(:large_thumb) %>
-      </div>
-      <% if login? and (not loved?) %>
-        <div id="love_area">
-          <%= link_to "love!(#{@recipe.love_count})", { action:"love", id: params[:id], user_id: current_user.id }, remote: true, id: "love_button" %>
-        </div>
-      <% else %>
-        love(<%= @recipe.love_count %>)
-      <% end %>
-      <div id="description">
-        <%= @recipe.description %>
-      </div>
-      <div id="food_genre"><%= @recipe.food.name %></div>
-      <h3>
-        <%= t(:recipe_foodstuffs, scope:"activerecord.attributes.recipe") %>&nbsp;
-        <%= @recipe.amount && "(#{@recipe.amount}人前)"  %>
-      </h3>
-      <table>
-        <% @recipe.foodstuffs.each do |foodstuff| %>
-          <tr><td><%= foodstuff.name %></td><td><%= foodstuff.amount %></td></tr>
-        <% end %>
-      </table>
-    </div>
-    <dl id="recipe_steps">
-      <% @recipe.steps.each.with_index(1) do |step,i| %>
-        <dl class="step">
-          <dt>Step<%= i %></dt>
-          <dd>
-            <% if step.image %>
-              <%= image_tag step.image.url(:thumb), alt:"" %>
-            <% end %>
-            <% if step.movie_url %>
-              <iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
-            <% end %>
-            <%= step.content %>
-          </dd>
-        </dl>
-      <% end %>
-    </dl>
-    <h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
-    <div class="section"><%= @recipe.one_point %></div>
-    <div id="recipe_comment_area" class="area">
-      <h3><%= t(:recipe_comments, scope:"activerecord.attributes.recipe") %></h3>
-      <%= form_for @recipe_comment do |f| %>
-        <p><%= f.hidden_field :recipe_id, value: @recipe.id %></p>
-        <p><%= f.label :image %></p>
-        <p><%= f.file_field :image, value: "" %></p>
-        <p><%= f.label :content %></p>
-        <p><%= f.text_area :content, size:"50x4", value: "" %></p>
-        <p><%= f.submit t(:post_report, scope:"views.recipes.show") %></p>
-      <% end %>
-      <dl id="recipe_comments" class="area">
-        <% @recipe.comments.each do |comment| %>
-          <dd>
-            <dl class="recipe_comment">
-              <dt><%= image_tag comment.image.url(:thumb), alt:"" %></dt>
-              <dd><%= comment.content %></dd>
-            </dl>
-          </dd>
-        <% end %>
-      </dl>
-    </div>
-  </div>
+	<div id="recipe_header">
+		<p class="chef">
+			<%= link_to @recipe.user.profile.nickname, kitchen_url(@user) %>
+			<%= t("page.recipes.creator") %>
+			(<%= @recipe.user.profile.recipe_count %><%= t("order.recipes") %>)
+		</p>
+		<% if user_signed_in? %>
+		<%=form_for( @bookmark, html:{ id:"bookmark_button" } ) do |f| %>
+		<%= f.hidden_field :recipe_id, value: @recipe.id %>
+		<%= f.hidden_field :user_id, value: current_user.id %>
+		<%= f.submit (bookmarked? ? t(:unbookmark, scope:"views.recipes.show") : t(:bookmark, scope:"views.recipes.show")) %>
+		<% end %>
+		<% end %>
+	</div>
+	<h2><%= @recipe.title %></h2>
+	<div class="section" id="recipe_body">
+		<div id="recipe_base_info">
+			<div id="recipe_photo" class="figure">
+				<%= image_tag @recipe.recipe_image.url(:large_thumb) %>
+			</div>
+			<% if login? and (not loved?) %>
+			<div id="love_area">
+				<%= link_to "love!(#{@recipe.love_count})", { action:"love", id: params[:id], user_id: current_user.id }, remote: true, id: "love_button" %>
+			</div>
+			<% else %>
+			love(<%= @recipe.love_count %>)
+			<% end %>
+			<div id="description">
+				<%= @recipe.description %>
+			</div>
+			<div id="food_genre">
+				<%= @recipe.food.name %>
+			</div>
+			<h3> <%= t(:recipe_foodstuffs, scope:"activerecord.attributes.recipe") %>&nbsp;
+			<%= @recipe.amount && "(#{@recipe.amount}人前)"  %> </h3>
+			<table>
+				<% @recipe.foodstuffs.each do |foodstuff| %>
+				<tr>
+					<td><%= foodstuff.name %></td><td><%= foodstuff.amount %></td>
+				</tr>
+				<% end %>
+			</table>
+		</div>
+		<dl id="recipe_steps">
+			<% @recipe.steps.each.with_index(1) do |step,i| %>
+			<dl class="step">
+				<dt>
+					Step<%= i %>
+				</dt>
+				<dd>
+					<% if step.image %>
+					<%= image_tag step.image.url(:thumb), alt:"" %>
+					<% end %>
+					<% if step.movie_url %>
+					<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
+					<% end %>
+					<%= step.content %>
+				</dd>
+			</dl>
+			<% end %>
+		</dl>
+		<h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
+		<div class="section">
+			<%= @recipe.one_point %>
+		</div>
+		<div id="recipe_comment_area" class="area">
+			<h3><%= t(:recipe_comments, scope:"activerecord.attributes.recipe") %></h3>
+			<%= form_for @recipe_comment do |f| %>
+			<p>
+				<%= f.hidden_field :recipe_id, value: @recipe.id %>
+			</p>
+			<p>
+				<%= f.label :image %>
+			</p>
+			<p>
+				<%= f.file_field :image, value: "" %>
+			</p>
+			<p>
+				<%= f.label :content %>
+			</p>
+			<p>
+				<%= f.text_area :content, size:"50x4", value: "" %>
+			</p>
+			<p>
+				<%= f.submit t(:post_report, scope:"views.recipes.show") %>
+			</p>
+			<% end %>
+			<dl id="recipe_comments" class="area">
+				<% @recipe.comments.each do |comment| %>
+				<dd>
+					<dl class="recipe_comment">
+						<dt>
+							<%= image_tag comment.image.url(:thumb), alt:"" %>
+						</dt>
+						<dd>
+							<%= comment.content %>
+						</dd>
+					</dl>
+				</dd>
+				<% end %>
+			</dl>
+		</div>
+	</div>
 </div>
