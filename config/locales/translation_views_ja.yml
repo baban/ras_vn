@@ -87,6 +87,7 @@ ja:
         category_list_title: カテゴリからレシピを探す
         category_more: "more..."
         all_categories: すべてのジャンル
+        count_name: 件
         search_restaurants: レストラン検索
     users:
       sign_up:

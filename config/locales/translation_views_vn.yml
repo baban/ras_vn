@@ -85,8 +85,9 @@ vn:
         recommended_category: Thực phẩm được yêu chuộng
         rank_in_recipe: Món ăn được xem nhiều nhất
         category_list_title: Tìm theo loại thực phẩm
-        category_more: "Xem tiếp..."
-        all_categories: Tấc cả
+        category_more: Xem tiếp...
+        all_categories: Xem tấc cả
+        count_name: Bài
         search_restaurants: Tìm Kiếm Nhà Hàng
     users:
       sign_up:

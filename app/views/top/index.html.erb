@@ -3,138 +3,57 @@
 
 <!--main_clm-->
 <div class="main_clm">
-<article class="rec_cat clearfix">
-	<h1 class="txt12"><%= t(:recomment_recipe_title, scope:"views.content_footer") %></h1>
-	<section><%= image_tag @recommend_recipe.image.url(:thumb), width:"170", height:"250", alt:"Ẩm Thực Việt" %>
-		<div class="txt">
-			<h1 class="txt16"><%= link_to @recommend_recipe.title, recipe_url(@recommend_recipe) %></h1>
-			<h2><%= @recommend_recipe.description %>
-			<p>by<%= link_to @recommend_recipe.chef.profile.nickname, recipe_url(@recommend_recipe.id) %></p>
-			</h2>
-			<p class="arr txt11"><a href="#">おすすめカテゴリを見る</a></p>
-		</div>
-	</section>
-</article>
-
-
-<article class="rec_cat2 clearfix">
-	<h1 class="txt12"><%= t(:pop_ranking_title, scope:"views.content_footer") %></h1>
-	<% @ranking.each do |recipe| %>
-		<section class="clearfix">
-			<%= image_tag recipe.image.url(:thumb), width:"75", height:"105", alt:"Ẩm Thực Việt" %>
+	<article class="rec_cat clearfix">
+		<h1 class="txt12"><%= t(:recomment_recipe_title, scope:"views.content_footer") %></h1>
+		<section><%= image_tag @recommend_recipe.image.url(:thumb), width:"170", height:"250", alt:"Ẩm Thực Việt" %>
 			<div class="txt">
-				<h1 class="txt16"><%= link_to recipe.title, recipe_url(recipe) %></h1>
-				<p>by<%= link_to recipe.user.profile.nickname, kitchen_url(recipe.user) %></p>
-				<p class="arr txt11"><a href="#">おすすめカテゴリを見る</a></p>
+				<h1 class="txt16"><%= link_to @recommend_recipe.title, recipe_url(@recommend_recipe) %></h1>
+				<h2><%= @recommend_recipe.description %>
+				<p>by<%= link_to @recommend_recipe.chef.profile.nickname, recipe_url(@recommend_recipe.id) %></p>
+				</h2>
+				<p class="arr txt11">
+					<%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_genre_id: @recommend_recipe.id ) %>
+				</p>
 			</div>
 		</section>
-	<% end %>
-</article>
-
-<article class="cate01 clearfix">
-	<h1><%= t(:category_list_title,scope:"views.top.index") %></h1>
-	<% @food_genres.each do |genre| %>
-		<section>
-			<%= image_tag genre.image.url(:thumb), width:"92", height:"92", alt:"Ẩm Thực Việt" %>
-			<div class="txtarea">
-				<h1><%= link_to "#{genre.name}(#{genre.amount}件)", recipes_url(recipe_food_genre_id: genre.id) %></h1>
-				<ul class="catelists">
-					<% genre.foods.page(1).per(3).each do |food| %>
-						<li><%= link_to food.name, recipes_url(recipe_food_id: food.id) %></li>
-					<% end %>
-				</ul>
-			</div>
-			<p class="more arr txt11"><%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_genre_id: genre.id ) %></p>
-		</section>
-	<% end %>
-	<%= link_to t(:all_categories, scope:"views.top.index"), recipe_foods_url %>
-	
-	
-<section>
-	<%= image_tag "/uploaders/recipe_food_genres/1/cg01.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%>
-	<div class="txtarea">
-		<h1>野菜（1020件）</h1>
-		<ul class="catelists">
-			<li class="arr txt11 flo_l"><a href="#">たけのこ</a></li>
-			<li class="arr txt11 flo_l"><a href="#">キャベツ</a></li>
-		</ul>
-	</div>
-	<p class="more arr txt11"><a href="#">もっと見る</a></p>
-</section>
-
-<section>
-	<%= image_tag "cg02.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%>
-	<div class="txtarea">
-		<h1>お肉（504件）</h1>
-		<ul class="catelists">
-			<li class="arr txt11 flo_l"><a href="#">たけのこ</a></li>
-			<li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
-</div>
-<p class="more arr txt11"><a href="#">もっと見る</a></p>
-</section>
-<section><%= image_tag "cg03.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%><div class="txtarea">
-  <h1>魚介504件）</h1>
-<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">たけのこ</a></li><li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
-</div>
-<p class="more arr txt11"><a href="#">もっと見る</a></p>
-</section>
-<section><%= image_tag "cg04.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%><div class="txtarea">
-  <h1>ごはん（504件）</h1>
-<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">たけのこ</a></li><li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
-</div>
-<p class="more arr txt11"><a href="#">もっと見る</a></p>
-</section>
-<section><%= image_tag "cg05.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%><div class="txtarea">
-  <h1>パスタ・グラタン（504件）</h1>
-<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">たけのこ</a></li><li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
-</div>
-<p class="more arr txt11"><a href="#">もっと見る</a></p>
-</section>
-<section><%= image_tag "cg06.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%><div class="txtarea">
-  <h1>麺（504件）</h1>
-<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">たけのこ</a></li><li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
-</div>
-<p class="more arr txt11"><a href="#">もっと見る</a></p>
-</section>
-<section><%= image_tag "cg07.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%><div class="txtarea">
-  <h1>サラダ（504件）</h1>
-<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">たけのこ</a></li><li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
-</div>
-<p class="more arr txt11"><a href="#">もっと見る</a></p>
-</section>
-<section><%= image_tag "cg08.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%><div class="txtarea">
-  <h1>お弁当（504件）</h1>
-<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">たけのこ</a></li><li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
-</div>
-<p class="more arr txt11"><a href="#">もっと見る</a></p>
-</section>
-<section><%= image_tag "cg09.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%><div class="txtarea">
-  <h1>お菓子（504件）</h1>
-<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">たけのこ</a></li><li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
-</div>
-<p class="more arr txt11"><a href="#">もっと見る</a></p>
-</section>
-<section><%= image_tag "cg10.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%><div class="txtarea">
-  <h1>パン（504件）</h1>
-<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">たけのこ</a></li><li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
-</div>
-<p class="more arr txt11"><a href="#">もっと見る</a></p>
-</section>
-<section><%= image_tag "cg11.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%><div class="txtarea"><h1>離乳食（504件）</h1>
-<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">たけのこ</a></li><li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
-</div>
-<p class="more arr txt11"><a href="#">もっと見る</a></p>
-</section>
-<section><%= image_tag "cg12.jpg", width:"92", height:"92", alt:"Ẩm Thực Việt"%><div class="txtarea"><h1>妊娠中の食事（504件）</h1>
-<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">たけのこ</a></li><li class="arr txt11 flo_l"><a href="#">キャベツ</a></li></ul>
-</div>
-<p class="more arr txt11"><a href="#">もっと見る</a></p>
-</section>
-</article>
+	</article>
 
 
+	<article class="rec_cat2 clearfix">
+		<h1 class="txt12"><%= t(:pop_ranking_title, scope:"views.content_footer") %></h1>
+		<% @ranking.each do |recipe| %>
+			<section class="clearfix">
+				<%= image_tag recipe.image.url(:thumb), width:"75", height:"105", alt:"Ẩm Thực Việt" %>
+				<div class="txt">
+					<h1 class="txt16"><%= link_to recipe.title, recipe_url(recipe) %></h1>
+					<p>by<%= link_to recipe.user.profile.nickname, kitchen_url(recipe.user) %></p>
+					<p class="arr txt11">
+						<%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_genre_id: recipe.id ) %>
+					</p>
+				</div>
+			</section>
+		<% end %>
+	</article>
 
-
+	<article class="cate01 clearfix">
+		<h1><%= t(:category_list_title,scope:"views.top.index") %></h1>
+		<% @food_genres.each do |genre| %>
+			<section>
+				<%= image_tag genre.image, width:"92", height:"92", alt:"Ẩm Thực Việt" %>
+				<div class="txtarea">
+					<h1><%="#{genre.name}(#{genre.amount})"%></h1>
+					<ul class="catelists">
+						<% genre.foods.page(1).per(3).each do |food| %>
+							<li><%= link_to food.name, recipes_url(recipe_food_id: food.id) %></li>
+						<% end %>
+					</ul>
+				</div>
+				<p class="more arr txt11"><%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_genre_id: genre.id ) %></p>
+			</section>
+		<% end %>
+		<%= link_to t(:all_categories, scope:"views.top.index"), recipe_foods_url %>
+		
+	</article>
 </div>
 <!--main_clmEnd-->
 <div class="side_contents">
@@ -143,7 +62,7 @@
 </aside>
 
 <article class="side_c01">
-<h1 class="txt12">トピック&amp;ニュース</h1>
+<h1 class="txt12">Topic&amp;News</h1>
 <section>
 	<%= image_tag "sp03.jpg", width:"48", height:"48", alt:"Ẩm Thực Việt"%>
 <div class="txtarea txt12">
