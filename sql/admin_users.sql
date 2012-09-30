@@ -47,6 +47,7 @@ CREATE TABLE `admin_users` (
 LOCK TABLES `admin_users` WRITE;
 /*!40000 ALTER TABLE `admin_users` DISABLE KEYS */;
 INSERT INTO `admin_users` VALUES (1,'matsubara','masanao','admin','babanba.n@gmail.com',1,'9c08ae98821e-e6d94a73a0d9','85bbae5018984a389a0e95a60ff7db80187b6531','8a0efb4d01d1356207b3dc2cbfa856c1eae3f36d','---\n:locale: ja\n','2012-07-16 04:59:30','2012-07-16 04:59:46');
+INSERT INTO `admin_users` VALUES (2,'TruongDinh','Hoang','admin','truongdinhhoang80@gmail.com',1,'c0b49c1d4888-6bee967ed86d','10742f9e9c1f2ad26b5f06901db5804ce212efb4','659df618949057b79346460564c7af9a6dc2cd12','---\n:locale: ja\n','2012-09-30 05:52:26','2012-09-30 05:52:50');
 /*!40000 ALTER TABLE `admin_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
