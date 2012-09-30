@@ -44,7 +44,7 @@
 					<h1><%="#{genre.name}(#{genre.amount})"%></h1>
 					<ul class="catelists">
 						<% genre.foods.page(1).per(3).each do |food| %>
-							<li><%= link_to food.name, recipes_url(recipe_food_id: food.id) %></li>
+							<li class="arr txt11 flo_l"><%= link_to food.name, recipes_url(recipe_food_id: food.id) %></li>
 						<% end %>
 					</ul>
 				</div>
@@ -56,51 +56,7 @@
 	</article>
 </div>
 <!--main_clmEnd-->
-<div class="side_contents">
-<aside>
-	<%= image_tag "bnr.jpg", width:"300", height:"250", alt:"Ẩm Thực Việt"%>
-</aside>
-
-<article class="side_c01">
-<h1 class="txt12">Topic&amp;News</h1>
-<section>
-	<%= image_tag "sp03.jpg", width:"48", height:"48", alt:"Ẩm Thực Việt"%>
-<div class="txtarea txt12">
-  <h3><a href="#">スイスシャレーで10万VNDすべての
-    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
-  <p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
-</section>
-<section>
-	<%= image_tag "sp03.jpg", width:"48", height:"48", alt:"Ẩm Thực Việt"%>
-<div class="txtarea txt12">
-  <h3><a href="#">スイスシャレーで10万VNDすべての
-    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
-  <p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
-</section>
-<section>
-	<%= image_tag "sp03.jpg", width:"48", height:"48", alt:"Ẩm Thực Việt"%>
-<div class="txtarea txt12">
-  <h3><a href="#">スイスシャレーで10万VNDすべての
-    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
-  <p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
-</section>
-<section>
-	<%= image_tag "sp03.jpg", width:"48", height:"48", alt:"Ẩm Thực Việt"%>
-<div class="txtarea txt12">
-  <h3><a href="#">スイスシャレーで10万VNDすべての
-    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
-  <p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
-</section>
-<section>
-	<%= image_tag "sp03.jpg", width:"48", height:"48", alt:"Ẩm Thực Việt"%>
-<div class="txtarea txt12">
-  <h3><a href="#">スイスシャレーで10万VNDすべての
-    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
-  <p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
-</section>
-</article>
-
-</div>
+<%=render partial:"layouts/right_side_content" %>
 
 </div>
 <!--contents-->

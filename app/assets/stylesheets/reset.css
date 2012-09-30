@@ -1,4 +1,6 @@
 @charset "utf-8";
+/*__________________________________________________ Common Set */
+
 
 *{margin:0;	padding:0;}
 *{zoom:1;}
@@ -44,4 +46,4 @@ a:hover, a:active, a:focus { color:#9095A1}
 header, footer, nav, article, section, aside{ display:block;}
 a:hover img { filter: alpha(opacity=80);  -moz-opacity:0.8;  opacity:0.8;}
 textarea{resize: vertical;}
-.global_header img, .global_footer img {_background:#FFF;*background:#FFF;background /*\**/: #FFF9;}
+.global_header img, .global_footer img {_background:#FFF;*background:#FFF;background /*\**/: #FFF\9;}

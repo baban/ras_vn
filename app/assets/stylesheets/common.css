@@ -30,34 +30,37 @@ li.none01{border:none!important;}
 
 html{ background:#faf3e3;}
 body {font-family: Osaka, "メイリオ","Meiryo","Helvetica Neue","Arial","ＭＳ Ｐゴシック", "MS PGothic", sans-serif; color:#666;}
+input{ font-family:Osaka, "メイリオ","Meiryo","Helvetica Neue","Arial","ＭＳ Ｐゴシック", "MS PGothic", sans-serif; font-size:10px;}
 
 /*header*/
-header{ height:91px; background:url(/assets/hd_bg.png) repeat-x top; margin-bottom:5px;}
+header{ height:91px; background:url(/assets/common/hd_bg.png) repeat-x top; margin-bottom:5px;}
 header h1{ margin-left:100px;height:40px; line-height:40px; float:left; margin-right:20px;}
 header .inner{ width:970px; margin:0 auto; padding:0 10px; position:relative}
-header .mk{text-indent:-9999px; height:89px;width:89px; background:url(/assets/rogo_icon.png) no-repeat; position:absolute; top:0; left:10px;}
+header .mk{text-indent:-9999px; height:89px;width:89px; background:url(/assets/common/rogo_icon.png) no-repeat; position:absolute; top:0; left:10px;}
 header nav{ width:770px; float:left; height:40px; line-height:40px;}
 header nav a:link, header nav a:visited{ color:#FFF}
 header nav a:hover{ color:#CCC;}
-header nav ul{background:url(/assets/hd_line.gif) no-repeat 100% 50%;}
-header nav li{ float:left; background:url(/assets/hd_line.gif) no-repeat 0 50%; padding:0 15px;}
+header nav ul{background:url(/assets/common/hd_line.gif) no-repeat 100% 50%;}
+header nav li{ float:left; background:url(/assets/common/hd_line.gif) no-repeat 0 50%; padding:0 15px;}
+header nav li{ float:left; background:url(/assets/common/hd_line.gif) no-repeat 0 50%; padding:0 15px;}
+header nav ul.login li img{ border: 1px solid #4E2100; float: left; margin-right: 5px; width: 22px; margin-top:8px;}
 
 .search{ width:280px; padding:10px 0 0 100px;}
 .search .box{ border:2px solid #CCC;padding-right:35px; background:#FFF;padding-left: 5px; position: relative; margin-right:10px;}
 .search input{ width:100%; font-size:14px; border:none;height:30px; padding:0;}
 .hidden_elem{display: none !important;}
-.search button{ background:url(/assets/gs.png) no-repeat 50% 50% #CCC;border: 0;cursor: pointer;display: block;height:26px;position: absolute;right:0;top: 0;width:30px;
+.search button{ background:url(/assets/common/gs.png) no-repeat 50% 50% #CCC;border: 0;cursor: pointer;display: block;height:26px;position: absolute;right:0;top: 0;width:30px;
 -webkit-background-size:18px 20px;
 -moz-background-size:18px 20px;background-size:18px 20px ; margin:2px}
 ul.s_att{ margin-top:10px}
 .s_att li{ line-height:34px; }
-.arr{background:url(/assets/arr01.png) no-repeat right; padding-right:15px;}
+.arr{background:url(/assets/common/arr01.png) no-repeat right; padding-right:15px;}
 
 .bace_bg{ width:970px; margin:0 auto; padding:0 10px }
-.contents_bg{ padding:10px;
+.contents_bg{ padding:0px 10px 10px 10px;
 -webkit-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.6);
 -moz-box-shadow:    0px 0px 8px rgba(50, 50, 50, 0.6);
-box-shadow:         0px 0px 8px rgba(50, 50, 50, 0.6); border:2px solid #FFF; background:url(/assets/contents_bg.gif) repeat-x #FFF; margin-bottom:10px;}
+box-shadow:         0px 0px 8px rgba(50, 50, 50, 0.6); border:2px solid #FFF; background:url(/assets/common/contents_bg.gif) repeat-x #FFF; margin-bottom:10px;}
 
 aside{ margin-bottom:10px;}
 
@@ -76,3 +79,10 @@ footer .inner li{ margin-left:10px;}
 .radi10{-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
 
 .err{ background:url(/assets/common/ell.gif) no-repeat 0 2px; padding-left:20px; color:#F00!important; margin:5px 0 0 0;} 
+
+/*pagination*/
+.paginate {font-size:17px; text-align:center; display:block; margin-top:10px; width:450px;}
+.current_page {font-size:20px; color: #666666;
+    font-weight: bold;
+    padding: 0 5px;}
+.next_page {font-size:14px;}

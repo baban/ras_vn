@@ -32,6 +32,7 @@ vn:
     header:
       title: Cook24
       search_button: Tìm recipe
+      placeholder: Nhập tên món ăn, thực phẩm
       blank: ""
       sign_up: Đăng ký
       sign_in: Đăng nhập

@@ -32,6 +32,7 @@ ja:
     header:
       title: Cook24
       search_button: レシピ検索
+      placeholder:: 料理名・食材を入力
       blank: ""
       sign_up: 無料登録
       sign_in: ログイン
