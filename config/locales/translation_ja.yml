@@ -6,6 +6,7 @@ ja:
       distinct: 市町村
       diary: 日記
       food_genre: 料理ジャンル
+      newsfeed: Topic&News
       omniuser: omniuser  #g
       prefecture: 県
       recipe: レシピ
@@ -53,6 +54,11 @@ ja:
 
       food_genre:
         name: 名前
+
+      newsfeed:
+        title: タイトル
+        content: 内容
+        image: 画像
 
       omniuser:
         name: name  #g

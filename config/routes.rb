@@ -21,9 +21,6 @@ RasVn::Application.routes.draw do
   devise_for :user
   get "top/index", as:'user_root'
 
-  match ':controller(/:action(/:id))(.:format)'
-  namespace :admin do
-    get "statistics/index"
-    get "statistics/users"
-  end
+  #match '/statistics(/:action(/:id))'
 end
+
