@@ -5,7 +5,7 @@
 <div class="main_clm">
 	<article class="rec_cat clearfix">
 		<h1 class="txt12"><%= t(:recomment_recipe_title, scope:"views.content_footer") %></h1>
-		<section><%= image_tag @recommend_recipe.image.url(:thumb), width:"170", height:"250", alt:"Ẩm Thực Việt" %>
+		<section><%= image_tag @recommend_recipe.image.url(:top_large_thumb), width:"170", height:"250", alt:"Ẩm Thực Việt" %>
 			<div class="txt">
 				<h1 class="txt16"><%= link_to @recommend_recipe.title, recipe_url(@recommend_recipe) %></h1>
 				<h2><%= @recommend_recipe.description %>
@@ -18,12 +18,11 @@
 		</section>
 	</article>
 
-
 	<article class="rec_cat2 clearfix">
 		<h1 class="txt12"><%= t(:pop_ranking_title, scope:"views.content_footer") %></h1>
 		<% @ranking.each do |recipe| %>
 			<section class="clearfix">
-				<%= image_tag recipe.image.url(:thumb), width:"75", height:"105", alt:"Ẩm Thực Việt" %>
+				<%= image_tag recipe.image.url(:top_thumb), width:"75", height:"105", alt:"Ẩm Thực Việt" %>
 				<div class="txt">
 					<h1 class="txt16"><%= link_to recipe.title, recipe_url(recipe) %></h1>
 					<p>by<%= link_to recipe.user.profile.nickname, kitchen_url(recipe.user) %></p>
