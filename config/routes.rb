@@ -13,6 +13,7 @@ RasVn::Application.routes.draw do
   resources(:recipe_advertisements)
   resources(:recipe_comments)
   resources(:recipe_foods)
+  resources(:newsfeeds,only:[:index,:show])
   resources(:mypage){ member { get :recipes, :recipe_comments } }
   resources(:kitchens) { member { get :recipes } }
 

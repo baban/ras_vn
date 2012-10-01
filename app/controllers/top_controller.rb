@@ -15,5 +15,7 @@ class TopController < ApplicationController
     @food_genres = RecipeFoodGenre.includes(:recipe_foods).where( recipe_foods:{ show_top: true } )
 
     @ranking = RecipeRanking.topics
+
+    @newsfeeds = Newsfeed.topics
   end
 end

@@ -99,11 +99,14 @@ ActiveRecord::Schema.define(:version => 20121001153856) do
   end
 
   create_table "newsfeeds", :force => true do |t|
-    t.string   "title"
-    t.text     "content"
+    t.string   "title",      :default => "",   :null => false
+    t.text     "content",                      :null => false
     t.string   "image"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.boolean  "public",     :default => true, :null => false
+    t.datetime "start_dt"
+    t.datetime "end_dt"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "omniusers", :force => true do |t|

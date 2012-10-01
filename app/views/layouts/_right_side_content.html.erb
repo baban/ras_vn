@@ -5,40 +5,13 @@
 
 	<article class="side_c01">
 		<h1 class="txt12">Topic&amp;News</h1>
+		<% newsfeeds.each do |feed| %>
 		<section>
-			<%= image_tag "sp03.jpg", width:"48", height:"48", alt:"Ẩm Thực Việt"%>
+			<%= image_tag feed.image.url(:thumb), width:"48", height:"48", alt:"Ẩm Thực Việt"%>
 			<div class="txtarea txt12">
-			<h3><a href="#">スイスシャレーで10万VNDすべての
-		    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
+			<h3><%= link_to feed.title, controller:"newsfeeds", action:"show", id: feed.id %></h3>
 			<p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
 		</section>
-		<section>
-			<%= image_tag "sp03.jpg", width:"48", height:"48", alt:"Ẩm Thực Việt"%>
-			<div class="txtarea txt12">
-			<h3><a href="#">スイスシャレーで10万VNDすべての
-		    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
-			<p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
-		</section>
-		<section>
-			<%= image_tag "sp03.jpg", width:"48", height:"48", alt:"Ẩm Thực Việt"%>
-			<div class="txtarea txt12">
-			<h3><a href="#">スイスシャレーで10万VNDすべての
-		    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
-			<p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
-		</section>
-		<section>
-			<%= image_tag "sp03.jpg", width:"48", height:"48", alt:"Ẩm Thực Việt"%>
-			<div class="txtarea txt12">
-			<h3><a href="#">スイスシャレーで10万VNDすべての
-		    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
-			<p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
-		</section>
-		<section>
-			<%= image_tag "sp03.jpg", width:"48", height:"48", alt:"Ẩm Thực Việt"%>
-			<div class="txtarea txt12">
-			<h3><a href="#">スイスシャレーで10万VNDすべての
-		    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
-			<p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
-		</section>
+		<% end %>
 	</article>
 </div>
