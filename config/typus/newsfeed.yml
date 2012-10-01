@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Newsfeed:
+  fields:
+    default: title, content, image
+    form: title, content, image
+  relationships: 
+  application: Application
