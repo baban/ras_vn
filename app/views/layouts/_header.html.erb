@@ -16,10 +16,13 @@
 		<% else %>
 			<%=form_for :device, url: destroy_user_session_url, method:"DELETE" do |f| %>
 				<ul class="clearfix flo_r">
-		          <li><%=f.submit t(:sign_out, scope:"views.header") %></li>
-		          <li><%= link_to t(:mypage, scope:"views.header"), controller:"mypage", action:"index" %></li>
-		        </ul>
-	        <% end %>
+					<li><%=f.submit t(:sign_out, scope:"views.header") %></li>
+					<li>
+						<%= image_tag current_user.profile.image.url(:icon), alt:"", id:"profile_image_icon" %>
+						<%= link_to t(:mypage, scope:"views.header"), controller:"mypage", action:"index" %>
+					</li>
+				</ul>
+			<% end %>
 		<% end %>
 	</nav>
 	

@@ -1,38 +1,8 @@
-<div id="content_footer">
-
- <div id="footer_advertisement">
-  <% @advertise = RecipeAdvertisement.choice %>
-  <% if @advertise %>
-    <%= link_to image_tag(@advertise.image.url, alt: (@advertise.alt or @advertise.name) ).html_safe, @advertise.url, title: @advertise.name %>
+<ul id="content_menu">
+  <li><%= link_to t(:search_recipe, scope:"views.content_menu"), recipes_url %></li>
+  <li><%= link_to t(:new_recipe, scope:"views.content_menu"), new_recipe_url %></li>
+  <% if params[:controller] == "recipes" and params[:action] == "show" and my_recipe? %>
+    <li><%= link_to t(:edit_recipe, scope:"views.content_menu"), action:"edit", id: @recipe.id %></li>
   <% end %>
-</div>
+</ul>
 
-<% if @recommend_recipe %>
-  <div id="footer_recomment_recipe">
-  <h3><%= t(:recomment_recipe_title, scope:"views.content_footer") %></h3>
-    <p><%= image_tag @recommend_recipe.image.url(:thumb), alt:"" %></p>
-    <p><%= link_to @recommend_recipe.title, recipe_url(@recommend_recipe) %></p>
-    <p>by <%= link_to @recommend_recipe.chef.profile.nickname, recipe_url(@recommend_recipe.id) %></p>
-    <p><%= @recommend_recipe.description %></p>
-  </div>
-<% end %>
-
-<div id="footer_rankings">
-  <h3><%= t(:rankings_title, scope:"views.content_footer") %></h3>
-  <div>
-    <h4><%= t(:pop_ranking_title, scope:"views.content_footer") %></h4>
-    <ol>
-      <% @recipe_ranking.each do |recipe| %>
-        <li><%= link_to recipe.title, recipe_url( recipe ) %></li>
-      <% end %>
-    </ol>
-    <h4><%= t(:food_ranking_title, scope:"views.content_footer") %></h4>
-    <ol>
-      <% @foodstuff_ranking.each do |foodstuff| %>
-        <li><%= link_to foodstuff.name, recipes_url( id: foodstuff.id, recipe_food_id: foodstuff.id ) %></li>
-      <% end %>
-    </ol>
-  </div>
-</div>
-
-</div>
