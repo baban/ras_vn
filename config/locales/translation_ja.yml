@@ -20,7 +20,7 @@ ja:
       recipe_step: レシピステップ
       search_log: 検索ログ
       toppage_content: toppage_content  #g
-      tpl_sets: tpl_sets  #g
+      tpl_set: デザインテンプレート
       user: ユーザー
       user_profile: プロフィール
       user_profile_visibility: プロフィール表示
@@ -124,8 +124,9 @@ ja:
         location: location  #g
         words: words  #g
 
-      tpl_sets:
-        name: name  #g
+      tpl_set:
+        name: 名前
+        content: 内容
 
       user:
         access_secret: access_secret  #g

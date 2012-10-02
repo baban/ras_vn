@@ -7,8 +7,8 @@ class CreateNewsfeeds < ActiveRecord::Migration
       t.text     :content,  null: false, default: ""
       t.string   :image,    null: true
       t.boolean  :public,   null: false, default: true
-      t.datetime :start_dt, null: true
-      t.datetime :end_dt,   null: true
+      t.datetime :start_at, null: true
+      t.datetime :end_at,   null: true
 
       t.timestamps
     end

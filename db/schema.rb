@@ -103,8 +103,8 @@ ActiveRecord::Schema.define(:version => 20121001153856) do
     t.text     "content",                      :null => false
     t.string   "image"
     t.boolean  "public",     :default => true, :null => false
-    t.datetime "start_dt"
-    t.datetime "end_dt"
+    t.datetime "start_at"
+    t.datetime "end_at"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
   end
@@ -294,7 +294,8 @@ ActiveRecord::Schema.define(:version => 20121001153856) do
   add_index "toppage_contents", ["recommend_recipe_id"], :name => "index_toppage_contents_on_recommend_recipe_id"
 
   create_table "tpl_sets", :force => true do |t|
-    t.string   "name"
+    t.string   "name",       :null => false
+    t.text     "content",    :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
