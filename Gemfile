@@ -13,10 +13,8 @@ gem "mongo", "1.7.0"
 gem "moped", "1.2.1"
 gem "bson", "1.7.0"
 gem "bson_ext", "1.7.0"
-gem "fluentd"
 gem "bartt-ssl_requirement", "1.4.2", require: "ssl_requirement"
 gem "rails_config"
-gem "fluent-plugin-mongo"
 
 # view urilities
 gem "jquery-rails"
