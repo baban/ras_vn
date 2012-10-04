@@ -13,6 +13,9 @@ require "uri"
 
 require "rvm/capistrano"
 
+# wheneverを使う
+require "whenever/capistrano"
+
 # アプリケーション名
 set :application, "ras_vn"
 
@@ -49,8 +52,6 @@ set :normalize_asset_timestamps, false
 
 load "deploy/assets"
 
-# wheneverを使う
-require "whenever/capistrano"
 set :whenever_command, "bundle exec whenever"
 
 after "deploy:restart", "deploy:cleanup"
