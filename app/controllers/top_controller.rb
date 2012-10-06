@@ -3,7 +3,7 @@
 class TopController < ApplicationController
   include TrackerFilter
 
-  before_filter :sidebar_ranking_filter
+  before_filter :sidebar_filter
   def index
     logger.info session.inspect
     top_content = ToppageContent.first

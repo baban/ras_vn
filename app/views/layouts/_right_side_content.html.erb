@@ -5,7 +5,7 @@
 
 	<article class="side_c01">
 		<h1 class="txt12">Topic&amp;News</h1>
-		<% newsfeeds.each do |feed| %>
+		<% @newsfeeds.each do |feed| %>
 		<section>
 			<%= image_tag feed.image.url(:thumb), width:"48", height:"48", alt:"Ẩm Thực Việt"%>
 			<div class="txtarea txt12">
