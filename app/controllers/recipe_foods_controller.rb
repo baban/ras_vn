@@ -2,6 +2,7 @@
 
 class RecipeFoodsController < ApplicationController
   before_filter :authenticate_user!,   except:[:new,:create]
+  before_filter :sidebar_filter
 
   def index
     if params[:recipe_food_genre_id]

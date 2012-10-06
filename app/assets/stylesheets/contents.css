@@ -11,7 +11,7 @@
 .rec_cat2 { padding:10px; background:#FFF; width:230px; border:1px solid #e8dec5; position:relative; float:left; height:285px; margin-top:10px; margin-bottom:10px; }
 .rec_cat2 section { clear:both; margin-bottom:10px; }
 .rec_cat3 { padding:10px; background:#FFF; border:1px solid #e8dec5; height:auto !important; margin-top:0px; margin-bottom:10px; width:443px; margin-right:0px; }
-.contents_bg a:link, .contents_bg a:visited { color:#fe6b1d; }
+.contents_bg p, a:link, .contents_bg a:visited { color:#fe6b1d; }
 .contents_bg a:hover { color:#ff9258 }
 .side_c01 { background:#faf3e3; padding:10px 10px 0; border:1px solid #e7dcc2 }
 .side_c01 h1 { font-weight:bold; color:#333 }
