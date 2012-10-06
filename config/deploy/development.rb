@@ -3,7 +3,7 @@
 # ブランチは開発環境ではdevelop, 本番（ステージング）ではmaster
 set :branch, "master"
 
-set(:deploy_to)         { "/var/www/htdocs/#{application}" }
+set(:deploy_to) { "/var/www/htdocs/#{application}" }
 
 set :rails_env, "development"
 

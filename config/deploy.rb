@@ -26,6 +26,12 @@ set :deploy_via, :export
 set :user, "baban"
 set :password, "svc2027"
 set :use_sudo, false
+set :auth_methods, %W(password keyboard-interactive)
+
+set :ssh_options, {
+  :password => "svc2027",
+  :auth_methods => %W(password keyboard-interactive),
+}
 
 # バージョン管理(git)
 set :scm, :git
