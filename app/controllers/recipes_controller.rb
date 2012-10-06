@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
   before_filter :authenticate_user!,   except:[:index,:show]
   before_filter :editable_user_filter, only:[:edit,:update,:destroy]
   before_filter :advertisement_filter, except:[:create,:destroy]
-  before_filter :sidebar_ranking_filter
+  before_filter :sidebar_filter
 
   helper_method :loved?, :bookmarked?, :my_recipe?
 

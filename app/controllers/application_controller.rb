@@ -17,7 +17,6 @@ class ApplicationController < ActionController::Base
   end
 
   # Omniauthでのログイン状況確認
-  private
   def current_omniuser
     @current_omniuser ||= Omniuser.find_by_id(session[:user_id]) if session[:user_id]
   end
@@ -26,8 +25,7 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  def sidebar_ranking_filter
-    @recipe_ranking = RecipeRanking.topics
-    @foodstuff_ranking = RecipeFoodGenreRanking.topics
+  def sidebar_filter
+    @newsfeeds = Newsfeed.topics
   end
 end
