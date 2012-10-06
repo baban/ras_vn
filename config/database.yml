@@ -8,19 +8,19 @@ test:
   adapter: mysql2
   database: cook24_test
   username: root
-  thost: localhost
+  host: localhost
 
 staging:
   adapter: mysql2
   database: cook24_staging
   username: root
-  thost: localhost
+  host: localhost
 
 production:
   adapter: mysql2
   database: cook24
   username: root
-  thost: localhost
+  host: localhost
 
 cook24_users:
   adapter: mysql2

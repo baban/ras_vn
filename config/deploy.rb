@@ -13,6 +13,9 @@ require "uri"
 
 require "rvm/capistrano"
 
+# wheneverを使う
+require "whenever/capistrano"
+
 # アプリケーション名
 set :application, "ras_vn"
 
@@ -23,6 +26,12 @@ set :deploy_via, :export
 set :user, "baban"
 set :password, "svc2027"
 set :use_sudo, false
+set :auth_methods, %W(password keyboard-interactive)
+
+set :ssh_options, {
+  :password => "svc2027",
+  :auth_methods => %W(password keyboard-interactive),
+}
 
 # バージョン管理(git)
 set :scm, :git
@@ -49,8 +58,6 @@ set :normalize_asset_timestamps, false
 
 load "deploy/assets"
 
-# wheneverを使う
-require "whenever/capistrano"
 set :whenever_command, "bundle exec whenever"
 
 after "deploy:restart", "deploy:cleanup"
