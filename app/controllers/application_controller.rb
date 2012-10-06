@@ -3,6 +3,8 @@
 class ApplicationController < ActionController::Base
   include FormHelper
 
+  before_filter :sidebar_filter
+
   protect_from_forgery
 
   helper_method :my_recipe?, :current_omniuser, :login?
