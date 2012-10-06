@@ -3,93 +3,33 @@
 		<!--main_clm-->
 		<div class="main_clm">
 			<article class="contents_recipes">
-				<h1 class="ttl_recipe"><a href="#">一人暮らしでも簡単♪即席親子丼！</a></h1>
-				<%= image_tag "recipe/qu7ecvq1.png", width:"280", height:"466", alt:"Ẩm Thực Việt" %>
+				<h1 class="ttl_recipe"><p><%= @recipe.title %></p></h1>
+				<%= image_tag @recipe.recipe_image, width:"280", height:"466", alt:"Ẩm Thực Việt" %>
 				<div class="explanation">
-					<p>
-						一人暮らしでも、すぐに作れて、おいしい親子丼が作れちゃう♪まさに一人暮らしの男のためのILLな料理だよ。この方法を利用すれば他の丼モノもある程度作れちゃってすばらしい限りだ。
-					</p>
+					<p><%= @recipe.description %></p>
 					<div class="clearfix">
 						<p class="user_name">
 							<span class="flo_l">
 								<%= image_tag "common/user_ico.png", width:"22", height:"22", alt:"Ẩm Thực Việt" %>
 							</span>
-							<span class="flo_l"><a href="#">sssssssma</a></span>
+							<span class="flo_l"><%= link_to @recipe.user.profile.nickname, kitchen_url(@user) %></span>
 						</p>
 					</div>
 					<div id="ingredients">
 						<div class="servings">
 							<h3>
 							<div class="material clearfix">
-								<span class="material_txt"> 材料 </span>
-								<span class="servings_for yield"> （ 1人前 ） </span>
+								<span class="material_txt"> Nguyên liệu </span>
+								<span class="servings_for yield"><%= @recipe.amount && "(#{@recipe.amount} người ăn)"  %></span>
 							</div><div class="clear"></div></h3>
 						</div>
 						<div class="ingredients_list">
-							<div class="ingredient_row clearfix">
-								<div class="ingredient_name">
-									たまねぎ(輪切り)
+							<% @recipe.foodstuffs.each do |foodstuff| %>
+								<div class="ingredient_row clearfix">
+									<div class="ingredient_name"><%= foodstuff.name %></div>
+									<div class="ingredient_quantity"><%= foodstuff.amount %></div>
 								</div>
-								<div class="ingredient_quantity">
-									半分
-								</div>
-							</div>
-							<div class="ingredient_row clearfix">
-								<div class="ingredient_name">
-									もやし
-								</div>
-								<div class="ingredient_quantity">
-									袋3分の1
-								</div>
-							</div>
-							<div class="ingredient_row clearfix">
-								<div class="ingredient_name">
-									鶏肉
-								</div>
-								<div class="ingredient_quantity">
-									適量
-								</div>
-							</div>
-							<div class="ingredient_row clearfix">
-								<div class="ingredient_name">
-									卵
-								</div>
-								<div class="ingredient_quantity">
-									2コ
-								</div>
-							</div>
-							<div class="ingredient_row clearfix">
-								<div class="ingredient_name">
-									みりん
-								</div>
-								<div class="ingredient_quantity">
-									適量
-								</div>
-							</div>
-							<div class="ingredient_row clearfix">
-								<div class="ingredient_name">
-									そばつゆ(昆布つゆがいい)
-								</div>
-								<div class="ingredient_quantity">
-									適量
-								</div>
-							</div>
-							<div class="ingredient_row clearfix">
-								<div class="ingredient_name">
-									水
-								</div>
-								<div class="ingredient_quantity">
-									適量
-								</div>
-							</div>
-							<div class="ingredient_row clearfix">
-								<div class="ingredient_name">
-									その他入れたいもの(ネギとかいいよ)
-								</div>
-								<div class="ingredient_quantity">
-									適量
-								</div>
-							</div>
+							<% end %>
 						</div>
 					</div>
 				</div>
