@@ -29,10 +29,10 @@
 	<div class="search flo_l">
 		<%= form_for( :recipes, url: recipes_url, html:{ class:"cl" }, method:"GET" ) do |f| %>
 		<div class="box radi5">
-	    <%= text_field_tag :word, "",class:"radi5", type:"search", placeholder: t(:placeholder, scope:"views.header")%>
-	    <%= f.button t(:blank, scope:"views.header"), class:"radi3", title:"Tìm Kiếm"%>
-	    <span class="hidden_elem">Tìm Kiếm</span>
-	    </div>
+			<%= text_field_tag :word, "",class:"radi5", type:"search", placeholder: t(:placeholder, scope:"views.header")%>
+			<%= f.button t(:blank, scope:"views.header"), class:"radi3", title:"Tìm Kiếm"%>
+			<span class="hidden_elem">Tìm Kiếm</span>
+		</div>
 		<% end %>
 	</div>
 	<ul class="flo_l s_att clearfix">
@@ -42,55 +42,3 @@
 	<div class="rbtn"><%= link_to t(:new_recipe, scope:"views.content_menu"), root_url, class:"radi10" %></div>
 </div>
 </header>
-
-<!--
-<div id="header">
-  <div class="logo">
-    <%= link_to t(:title, scope:"views.header"), root_url %>
-  </div>
-  <%= form_for( :recipes, url: recipes_url, html:{ class:"header_search" }, method:"GET" ) do |f| %>
-    <%= text_field_tag :word, "" %>
-    <%= f.submit t(:search_button, scope:"views.header") %>
-  <% end %>
-
-  
-  <% unless user_signed_in? %>
-    <dl id="login_area">
-      <dt>
-        <%= form_for :user, url: new_user_registration_url, method:"GET" do |f| %>
-          <p><%=f.submit t("views.header.sign_up") %></p>
-        <% end %>
-      </dt>
-      <dt>
-        <%= form_for :user, url: new_user_session_url, method:"GET" do |f| %>
-          <div><%= f.submit t(:sign_in, scope:"views.header") %></div>
-        <% end %>
-      </dt>
-    </dl>
-  <% else %>
-    <dl id="login_area">
-      <dt>
-        <%=form_for :device, url: destroy_user_session_url, method:"DELETE" do |f| %>
-          <p><%=f.submit t(:sign_out, scope:"views.header") %></p>
-        <% end %>
-      </dt>
-      <dt>
-        <ul id="mymenues_bar">
-          <li><%= link_to t(:mypage, scope:"views.header"), controller:"mypage", action:"index" %></li>
-        </ul>
-      </dt>
-    </dl>
-  <% end %>
-</div>
-
-<%=render partial:"layouts/content_menu" %>
-<div id="content" class="section">
-  <% if notice or alert %>
-    <div>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
-  <% end %>
-</div>
-
--->
