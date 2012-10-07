@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml/" xml:lang="ja">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript;charset=UTF-8" />
+	
+	<meta name="author" content="babanba-n" />
+	<meta name="Copyright" content="babanba-n" />
+	<meta name="description" content="Web関連技術。映像技術関連を中心にやっています。" />
+	
+	<link rel="home" href="/index.html" type="text/html" />
+	<link rel="help" href="/texts/readme.html" type="text/html" />
+	<link rev="made" href="mailto:babanba.n@gmail.com" />
+	<link rel="shortcut icon" href="/img/favicon.ico" type="image/png" />
+	
+	<link rel="alternate" title="Atom" href="http://baban.0ch.biz/atom.xml" type="application/atom+xml" />
+	<link rel="alternate" title="RSS 2.0" href="http://baban.0ch.biz/index.xml" type="application/rss+xml" />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://baban.0ch.biz/rsd.xml" />
+	
+	<link rel="schema.FOAF" href="http://purl.org/dc/elements/1.1/" />
+	<link rel="meta FOAF.MAKER" href="foaf.xml"  title="FOAF" type="Application/rdf+xml" />
+	
+	<link rel="stylesheet" href="/css/index.css" type="text/css" />
+	
+	<script type='text/javascript' src='/src/index.js'> </script>
+	<script>
+(function(){
+	document.createElement( 'header' );  
+	document.createElement( 'section' );  
+	document.createElement( 'nav' );  
+	document.createElement( 'aside' );  
+	document.createElement( 'footer' );  
+	document.createElement( 'article' );  
+})();
+　　　　</script>
+	
+	<title>Skyscraper</title>
+</head>
+<body id='main-page'>
+
+<h1>喫茶店プログラミングのためのRails環境構築</h1>
+
+<p>railsでweb開発をはじめるにあたって、一番大変なのがrailsのインストールと実行環境の整備です</p>
+<p>あ、ちなみにwindowsユーザーの場合、最終的には様々なrails付属ライブラリのインストール時や、実行時の細かいバグを避けるために最終的にはVMWare等で仮想マシン上にlinuxをインストールしたほうが便利と悟りますので、こんかいはLinux(ディストリビューションはCentOS)での方法を解説します</p>
+
+<p>環境は色々ありますが今回は</p>
+<p>CentOS release 5.8 (Final)</p>
+<p>selinuxとFirewallのオフで行なっています</p>
+<p>OSのアップデート</p>
+
+yum -y update
+
+
+
+現在の環境のチェック
+
+cat /etc/redhat-release
+#CentOS release 5.8 (Final)
+/usr/sbin/httpd -v
+# /usr/sbin/httpd -v
+mysql --version
+# mysql  Ver 14.12 Distrib 5.0.95, for redhat-linux-gnu (i686) using readline 5.1
+php -v
+# Zend Engine v2.1.0, Copyright (c) 1998-2006 Zend Technologies
+
+
+ユーザーの作成
+
+rootでログイン
+
+adduser rails_user
+passwd rails_user
+
+
+visudoで設定ファイルを開いて、92行目のコメントアウトを外す
+
+visudo
+
+
+## Same thing without a password
+%wheel  ALL=(ALL)       NOPASSWD: ALL
+
+
+vi /etc/group
+
+
+11行目のグループ設定に自分のユーザー名前を追加
+
+wheel:x:10:root,rails_user
+
+
+いらないサービスを停止
+
+chkconfig atd off
+chkconfig bluetooth off
+chkconfig cpuspeed off
+chkconfig cups off
+chkconfig smartd off
+yum -y remove cpuspeed smartd bluetooth
+
+
+ここから外部のrpm のとり込み設定
+
+yum環境を構築
+
+pwd # /rootにいるか確認
+mkdir rpm
+cd rpm/
+
+
+Dagリポジトリ追加
+
+wget http://dag.wieers.com/rpm/packages/RPM-GPG-KEY.dag.txt
+rpm --import RPM-GPG-KEY.dag.txt
+vi /etc/yum.repos.d/dag.repo
+
+
+設定ファイルに以下の記述をコピー
+
+[dag]
+name=Dag RPM Repository for Red Hat Enterprise Linux
+baseurl=http://apt.sw.be/redhat/el5/en/$basearch/dag/
+gpgcheck=1
+enabled=0
+
+
+コンパイル環境準備
+
+yum groupinstall -y "Development Tools"
+yum -y install httpd php php-mbstring php-mysql php-pear
+yum -y install gcc zlib-devel rpm-build  openssl-devel readline-devel
+wget http://pkgs.repoforge.org/checkinstall/checkinstall-1.6.0-3.el5.rf.i386.rpm
+rpm -Uvh checkinstall-1.6.0-3.el5.rf.i386.rpm
+# wget  http://asic-linux.com.mx/~izto/checkinstall/files/rpm/checkinstall-1.6.1-1.i386.rpm
+
+
+git導入
+
+yum --enablerepo=dag,rpmforge install -y git subversion
+
+
+apache,mysql,memcached導入
+
+yum install -y mysql mysql-server mysql-devel
+yum install -y curl-devel httpd-devel
+yum install -y memcached
+yum install --enablerepo=dag libyaml libyaml-devel
+yum  -y install redis
+chkconfig --level 235 mysqld on
+chkconfig --level 235 httpd on
+chkconfig --level 235 memcached on
+chkconfig --level 235 redis on
+service mysqld start
+service httpd start
+service memcached start
+service redis start
+
+
+zshのインストール
+
+通常zshは必須では無いのですが、今回はこだわりでいれることにします
+
+ちなみにあとでrvmを入れるとき、これを前提にしているのでパスできない必須の作業です
+
+yum install -y curses-devel ncurses curses cdk-devel ncurses ncurses-devel
+yum install -y zsh
+
+
+wget http://sourceforge.net/projects/zsh/files/zsh-dev/4.3.17/zsh-4.3.17.tar.gz/download
+tar xvzf zsh-4.3.17.tar.gz
+cd zsh-4.3.17
+./configure --enable-multibyte --enable-locale
+make
+checkinstall --exclude=/selinux
+
+
+checkinstallのビルドが始まりますが
+
+正直入力すべき箇所は３箇所であとは全部Enterを教えていれば大丈夫です
+
+The package documentation directory ./doc-pak does not exist. 
+Should I create a default set of package docs?  [y]: y
+
+Please choose the packaging method you want to use.
+Slackware [S], RPM [R] or Debian [D]? R
+
+Please write a description for the package.
+End your description with an empty line or EOF.
+>> zsh-4.3.17
+
+
+ログがだ～っと流れてｒｐｍのパッケージができるので暫く待つ
+
+rpmパッケージの作成が完了したらインストールを行う
+
+rpm -ivh /usr/src/redhat/RPMS/i386/zsh-4.3.17-1.i386.rpm 
+chsh -s /usr/local/bin/zsh rails_user
+
+
+rvmのインストール
+
+rvmのインストールはrootではなく新規作成したrails向けのユーザーに行う
+
+su rails_user
+cd ~/
+
+
+rvm、ruby、railsのインストール
+
+bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+
+
+.zshrcで
+
+vi .zshrc
+# 以下の行を追記
+#  -s "$HOME/.rvm/scripts/rvm"  && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+source .zshrc
+
+
+rvm --version
+# rvm 1.13.6 (stable) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+rvm install 1.9.2
+rvm use 1.9.2 --default
+ruby -v
+# ruby 1.9.2p320 (2012-04-20 revision 35421) [i686-linux]
+gem --version
+gem install rails --version 3.2.2
+
+
+Railsの作業ディレクトリを作成
+
+sudo mkdir /var/www/htdocs
+sudo chmod 777 /var/www/htdocs
+cd /var/www/htdocs 
+
+
+Railsのプロジェクトを作成
+
+sudo yum install -y sqlite sqlite-devel
+rails new test_app
+cd test_app
+vi Gemfile
+
+
+# 18行目をコメントアウトを外す
+gem 'therubyracer'
+
+
+データベースの接続設定に次のように設定
+
+bundle install
+rails server
+
+
+これで無事に動けば設定完了
+
+ImageMagick導入
+
+画像のアップロード＆拡大、縮小を行う必要があるのでImageMagickを導入します
+
+yum install -y ImageMagick ImageMagick-devel
+
+
+案件の稼働
+
+必要な設定が終わったのでこの案件固有の設定を行います
+
+git clone https://matzbara@bitbucket.org/truondinhhoang/ras_vn.git
+cd ras_vn
+sudo yum install -y libxml2-devel libxslt-devel
+
+
+bundle install
+rake db:create
+rake db:migrate
+rake db:flextures:load
+rails server
+
+
+passengerの導入
+
+本番環境を意識して設定ファイルを合わせます
+
+gem install passenger --version 3.0.12
+passenger-install-apache2-module
+sudo ln -s /var/www/htdocs/ras_vn/resource/rails.conf /etc/httpd/conf.d/rails.conf
+sudo /sbin/service httpd restart
+
+
+これでmogrelに依存しなくてもapacheでrailsを管理してくれます
+
+ポートの指定なしでも80版ポートで表示確認できます
+
+
+VirtualBoxGuestEdditionの導入
+
+仮想マシンで作業しやすくするために
+
+VirtualBoxGuestEdditionを導入します
+
+# rootで作業
+cd /media/VBOXADDITIONS_4.1.2_73507/
+sh ./VBoxLinuxAdditions.run
+reboot
+
+
+インストールが終わったら一旦リブートをかけます
+
+移行は仮想マシンとローカルのシームレスな統合が行われて
+
+マウスカーソルやクリップボードを共有できます
+
+samba
+
+unixのファイルを操作しやすくするためにsambaを使えるようにしておきます
+
+chkconfig --level 235 smb on
+service smb start
+
+
+その他
+
+ yum -y install sysstat
+
+
+不要なファイルを削除
+
+yum remove -y openoffice*
+yum remove -y gimp*
+
+
+mecabの導入
+
+形態素解析をできるようにmecabをインストールしておきます
+
+wget http://mecab.googlecode.com/files/mecab-0.98.tar.gz
+cd ./mecab-0.98
+make
+make check
+./configure --enable-utf8-only
+make install
+
+wget http://mecab.googlecode.com/files/mecab-ipadic-2.7.0-20070801.tar.gz
+tar xvzf mecab-ipadic-2.7.0-20070801.tar.gz
+cd mecab-ipadic-2.7.0-20070801
+./configure --with-mecab-config=/usr/local/bin/mecab-config
+make
+make install
+
+
+mongoDBの導入
+
+mododbの存在するリポジトリを追加
+
+vi /etc/yum.repos.d/tengen.repo
+
+
+
+[10gen]
+name=10gen Repository
+baseurl=http://downloads.mongodb.org/distros/centos/5.4/os/$basearch/
+gpgcheck=0
+enabled=1
+
+
+mongoDBを導入
+
+yum install -y mongo-stable  mongo-stable-server mongo-stable-debuginfo
+
+
+サーバーを起動
+
+chkconfig --level 235 mongod on
+service mongod start
+
+</body>
+</html>
