@@ -1,3 +1,18 @@
+<% content_for :style_after do %>
+<style>
+.mini_paginate > nav.pagination span.page {
+  display:none;
+}
+.mini_paginate > nav.pagination > span.page.current {
+  display:inline;
+}
+.mini_paginate > nav.pagination > span.page.current:after {
+  content:" / <%= @recipes.total_pages %> page ";
+}
+</style>
+<% end %>
+
+
 <div class="bace_bg">
 	<div class="contents_bg clearfix">
 		<!--main_clm-->
@@ -12,7 +27,7 @@
 							<%= @food_genre.name %>
 						</li>
 						<ul class="sub_categories">
-							<% @food_genre.foods.each do |food| %>
+						<% @food_genre.foods.each do |food| %>
 								<li class="txt_cate">
 									<%= link_to food.name, recipe_foods_url(recipe_food_id: food.id) %>
 									<%= image_tag "arr01.png", width:"14", height:"14", alt:"Ẩm Thực Việt"%>
@@ -23,32 +38,34 @@
 				</div>
 			</aside>
 			<div class="contents_cate">
-				<h1 class="ttl_cate flo_l">野菜のおかず</h1>
+				<h1 class="ttl_cate flo_l"><%= @food_genre.name %></h1>
 				<p class="txt_sum txt_sum02">
 					計：<span class="count"><%= @food_genre.amount %></span>件
 				</p>
+				<% if @recomment_food_genre_recipe %>
 				<article class="rec_cat rec_cat3 clearfix">
-					<%= image_tag "/assets/common/sp01.jpg", width:"120", height:"170", alt:"Ẩm Thực Việt"%>
+					<%= image_tag @recomment_food_genre_recipe.image.url(:thumb), width:"120", height:"170", alt:"" %>
 					<div class="txt">
-						<h1 class="txt16"><a href="#">豚しゃぶ用のお肉で肉巻きおにぎり</a></h1>
-						<h2>♡2011.4.22 つくれぽ100人ありがとう～♪ 最近人気の肉巻きおにぎりは作った方が買うより断然お安いです♪
-						<p>
-							by<a href="#">sssssssma</a>
-						</p></h2>
+						<h1 class="txt16"><%= link_to @recomment_food_genre_recipe.title, recipe_url(@recomment_food_genre_recipe) %></h1>
+						<h2>
+							<%= @recomment_food_genre_recipe.description %>
+							<p>by&nbsp;<%= @recomment_food_genre_recipe.user.profile.nickname %></p>
+						</h2>
 					</div>
 				</article>
+				<% end %>
 				<article class="cate01 clearfix">
 					<div class="clearfix">
 						<div class="order_switch">
-							<span> 新着順 </span><span class="order_price"> | 
-								<%= image_tag "/assets/common/ico_crown.png", class:"ico_crown", alt:"Ẩm Thực Việt"%>
-							</span><span><a class="#" href="#">人気順</a> </span>
+							<% if @order_mode=="new" %><%= image_tag "/assets/common/ico_crown.png", class:"ico_crown", alt:"" %><% end %>
+							<%= link_to raw("<span> 新着順 </span>"), params.merge( order_mode: "new" ) %>
+							<span class="order_price"> | </span>
+							<% if @order_mode=="ranking" %><%= image_tag "/assets/common/ico_crown.png", class:"ico_crown", alt:""%><% end %>
+							<%= link_to raw("<span> 人気順 </span>"), params.merge( order_mode: "ranking" ) %>
 						</div>
 						<div class="mini_paginate">
-							<span class="page_num"> 1 / 450ページ </span><a rel="next" href="#">次»</a>
 							<%= paginate @recipes %>
 						</div>
-						<div id="category_recipes"></div>
 					</div>
 					<% @recipes.each do |recipe| %>
 						<section class="rec_cat4 clearfix">
