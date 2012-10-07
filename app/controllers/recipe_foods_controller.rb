@@ -2,14 +2,15 @@
 
 class RecipeFoodsController < ApplicationController
   before_filter :authenticate_user!,   except:[:new,:create]
-  before_filter :sidebar_filter
 
   def index
     if params[:recipe_food_genre_id]
-      @food_genres = RecipeFoodGenre.where( " id = ? ", params[:recipe_food_genre_id] ).includes(:recipe_foods)
+      @food_genre = RecipeFoodGenre.where( " id = ? ", params[:recipe_food_genre_id] ).includes(:recipe_foods).first
     else
-      @food_genres = RecipeFoodGenre.includes(:recipe_foods)
+      @food_genre = RecipeFoodGenre.includes(:recipe_foods).first
     end
+    food_genre_id = @food_genre.recipe_foods.pluck(:id)
+    @recipes = Recipe.where( " recipe_food_id in (?) ", food_genre_id  ).order(" view_count DESC ").page( params[:page] || 1 ).per(5)
   end
 
   def new
