@@ -1,125 +1,504 @@
+
+<!-- ヘッダ start -->
+
+
 <div class="bace_bg">
-	<div class="contents_bg clearfix">
-		<!--main_clm-->
-		<div class="main_clm">
-			<aside>
-				<div class="side_contents_l">
-					<ul class="footstamps">
-						<li>
-							<a href="/category/list" class="back_to_category_list">«カテゴリ一覧</a>
-						</li>
-						<li class="indent_level_1">
-							野菜
-						</li>
-						<ul class="sub_categories">
-							<li class="txt_cate">
-								<a href="#">旬野菜</a><%= image_tag "arr01.png", width:"14", height:"14", alt:"Ẩm Thực Việt"%>
-							</li>
-							<li class="txt_cate">
-								<a href="#">にんじん</a><%= image_tag "arr01.png", width:"14", height:"14", alt:"Ẩm Thực Việt"%>
-							</li>
-							<li class="txt_cate">
-								<a href="#">たまねぎ</a><%= image_tag "arr01.png", width:"14", height:"14", alt:"Ẩm Thực Việt"%>
-							</li>
-							<li class="txt_cate">
-								<a href="#">じゃがいも</a><%= image_tag "arr01.png", width:"14", height:"14", alt:"Ẩm Thực Việt"%>
-							</li>
-							<li class="txt_cate">
-								<a href="#">キャベツ</a><%= image_tag "arr01.png", width:"14", height:"14", alt:"Ẩm Thực Việt"%>
-							</li>
-							<li class="txt_cate">
-								<a href="#">きのこ</a><%= image_tag "arr01.png", width:"14", height:"14", alt:"Ẩm Thực Việt"%>
-							</li>
-							<li class="txt_cate">
-								<a href="#">豆類</a><%= image_tag "arr01.png", width:"14", height:"14", alt:"Ẩm Thực Việt"%>
-							</li>
-						</ul>
-					</ul>
-				</div>
-			</aside>
-			<div class="contents_cate">
-				<h1 class="ttl_cate flo_l">野菜のおかず</h1>
-				<p class="txt_sum txt_sum02">
-					計：<span class="count">6,000</span>件
-				</p>
-				<article class="rec_cat rec_cat3 clearfix">
-					<%= image_tag "/assets/common/sp01.jpg", width:"120", height:"170", alt:"Ẩm Thực Việt"%>
-					<div class="txt">
-						<h1 class="txt16"><a href="#">豚しゃぶ用のお肉で肉巻きおにぎり</a></h1>
-						<h2>♡2011.4.22 つくれぽ100人ありがとう～♪ 最近人気の肉巻きおにぎりは作った方が買うより断然お安いです♪
-						<p>
-							by<a href="#">sssssssma</a>
-						</p></h2>
-					</div>
-				</article>
-				<article class="cate01 clearfix">
-					<div class="clearfix">
-						<div class="order_switch">
-							<span> 新着順 </span><span class="order_price"> | 
-								<%= image_tag "/assets/common/ico_crown.png", class:"ico_crown", alt:"Ẩm Thực Việt"%>
-							</span><span><a class="#" href="#">人気順</a> </span>
-						</div>
-						<div class="mini_paginate">
-							<span class="page_num"> 1 / 450ページ </span><a rel="next" href="#">次»</a>
-						</div>
-						<div id="category_recipes"></div>
-					</div>
-					<!--rec_recipe-->
-					<section class="rec_cat4 clearfix">
-						<%= image_tag "/assets/common/sp01.jpg", width:"100", height:"141", alt:"Ẩm Thực Việt"%>
-						<div class="txt">
-							<h1 class="txt16"><a href="#">豚しゃぶ用のお肉で肉巻きおにぎり</a></h1>
-							<p>
-								by<a href="#">sssssssma</a>
-							</p>
-							<h2>♡2011.4.22 つくれぽ100人ありがとう～♪ 最近人気の肉巻きおにぎりは作った方が買うより断然お安いです♪
-							<div class="info_area">
-								公開：<span>11/07/30&nbsp;&nbsp;</span>更新：<span>12/03/31&nbsp;&nbsp;</span> レシピID：<span>1509988</span>
-							</div></h2>
-						</div>
-					</section>
-					<!--rec_recipeEnd-->
-					<!--rec_recipe-->
-					<section class="rec_cat4 clearfix">
-						<%= image_tag "/assets/common/sp01.jpg", width:"100", height:"141", alt:"Ẩm Thực Việt"%>
-						<div class="txt">
-							<h1 class="txt16"><a href="#">豚しゃぶ用のお肉で肉巻きおにぎり</a></h1>
-							<p>
-								by<a href="#">sssssssma</a>
-							</p>
-							<h2>♡2011.4.22 つくれぽ100人ありがとう～♪ 最近人気の肉巻きおにぎりは作った方が買うより断然お安いです♪
-							<div class="info_area">
-								公開：<span>11/07/30&nbsp;&nbsp;</span>更新：<span>12/03/31&nbsp;&nbsp;</span> レシピID：<span>1509988</span>
-							</div></h2>
-						</div>
-					</section>
-					<!--rec_recipeEnd-->
-				</article>
-				<!--pagination-->
-				<div class="paginate">
-					<span class="current_page">1</span><a href="#">2</a><a href="#">3</a><a rel="" href="#">4</a><a rel="" href="#">5</a><a href="#">&nbsp;<span rel="next" class="next_page">次へ</span>»</a>
-				</div>
-				<!--pagination-->
-			</div>
-		</div>
-		<!--main_clmEnd-->
-		<%=render partial:"layouts/right_side_content" %>
-	</div>
-	<!--contents-->
+<div class="contents_bg clearfix">
+<!--main_clm-->
+<div class="main_clm">
+<!--ttl_page-->
+<section class="colom_ttl_area">
+<h1 class="ttl_cate flo_l">レシピカテゴリ</h1>
+<div class="search search_cate flo_r">
+<form class="cl"><div class="box radi5"><input class=" radi5" type="search" placeholder="カテゴリ名を検索"/><button type="submit" onClick="" title="検索" class="radi3">
+<span class="hidden_elem">検索</span></button></div></form>
 </div>
-<dl>
-	<% @food_genres.each do |genre| %>
-	<dt>
-		<%= link_to genre.name, controller:"recipes", action:"index", recipe_food_genre_id: genre.id %>
-	</dt>
-	<dd>
-		<ul>
-			<% genre.foods.each do |food| %>
-			<li>
-				<%= link_to food.name, controller:"recipes", action:"index", recipe_food_id: food.id %>
-			</li>
-			<% end %>
-		</ul>
-	</dd>
-	<% end %>
-</dl>
+</section>
+<!--ttl_pageEnd-->
+<!--cate-->
+  <article class="cate01 cate02 clearfix">
+  <div class="clearfix">
+  <h1 class="ttl_cate_name flo_l">おかず</h1><p class="txt_sum">計：<span class="count">6,000</span>件</p>
+  </div>
+<section class="cate_m"><img src="img/common/img_v.png" width="60" height="60">
+<div class="txtarea"><h1>野菜（1020件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">ズッキーニ</a></li>
+<li class="arr txt11 flo_l"><a href="#">アボガド</a></li>
+<li class="arr txt11 flo_l"><a href="#">バジル</a></li>
+<li class="arr txt11 flo_l"><a href="#">ワンダーベリー</a></li>
+<li class="arr txt11 flo_l"><a href="#">エンダイブ</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_meet.jpg" width="60" height="60" alt="お肉">
+<div class="txtarea"><h1>お肉（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">鶏もも肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">牛肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">豚肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">ひき肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">熊肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">魚肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">鹿肉</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_f.png" width="60" height="60">
+<div class="txtarea">
+  <h1>魚介504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">ニジマス</a></li>
+<li class="arr txt11 flo_l"><a href="#">ヤマメ</a></li>
+<li class="arr txt11 flo_l"><a href="#">イワナ</a></li>
+<li class="arr txt11 flo_l"><a href="#">シャケ</a></li>
+<li class="arr txt11 flo_l"><a href="#">ブラックバス</a></li>
+<li class="arr txt11 flo_l"><a href="#">ブルーギル</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_r.png" width="60" height="60">
+<div class="txtarea">
+  <h1>ごはん（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">カレー</a></li>
+<li class="arr txt11 flo_l"><a href="#">ピラフ</a></li>
+<li class="arr txt11 flo_l"><a href="#">リゾット</a></li>
+<li class="arr txt11 flo_l"><a href="#">パエリア</a></li>
+<li class="arr txt11 flo_l"><a href="#">寿司</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_p.png" width="60" height="60">
+<div class="txtarea">
+  <h1>パスタ・グラタン（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">和風パスタ</a></li>
+<li class="arr txt11 flo_l"><a href="#">冷製パスタ</a></li>
+<li class="arr txt11 flo_l"><a href="#">ニョッキ</a></li>
+<li class="arr txt11 flo_l"><a href="#">グラタン</a></li>
+<li class="arr txt11 flo_l"><a href="#">ラザニア</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_men.png" width="60" height="60">
+<div class="txtarea">
+  <h1>麺（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">うどん</a></li>
+<li class="arr txt11 flo_l"><a href="#">そうめん</a></li>
+<li class="arr txt11 flo_l"><a href="#">ひやむぎ</a></li>
+<li class="arr txt11 flo_l"><a href="#">ラーメン</a></li>
+<li class="arr txt11 flo_l"><a href="#">そば</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_y.png" width="60" height="60">
+<div class="txtarea">
+  <h1>サラダ（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">和風のサラダ</a></li>
+<li class="arr txt11 flo_l"><a href="#">洋風のサラダ</a></li>
+<li class="arr txt11 flo_l"><a href="#">中華風のサラダ</a></li>
+<li class="arr txt11 flo_l"><a href="#">山の幸のサラダ</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_b.png" width="60" height="60">
+<div class="txtarea">
+  <h1>お弁当（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">サラリーマンの弁当</a></li>
+<li class="arr txt11 flo_l"><a href="#">土方弁当</a></li>
+<li class="arr txt11 flo_l"><a href="#">女子弁当</a></li>
+<li class="arr txt11 flo_l"><a href="#">男子弁当</a></li>
+<li class="arr txt11 flo_l"><a href="#">子供の弁当</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_flu.png" width="60" height="60">
+<div class="txtarea">
+  <h1>お菓子（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">饅頭</a></li>
+<li class="arr txt11 flo_l"><a href="#">大福</a></li>
+<li class="arr txt11 flo_l"><a href="#">串もち</a></li>
+<li class="arr txt11 flo_l"><a href="#">団子</a></li>
+<li class="arr txt11 flo_l"><a href="#">ゆべし</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_pan.png" width="60" height="60">
+<div class="txtarea">
+  <h1>パン（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">メロンパン</a></li>
+<li class="arr txt11 flo_l"><a href="#">アンパン</a></li>
+<li class="arr txt11 flo_l"><a href="#">食パン</a></li>
+<li class="arr txt11 flo_l"><a href="#">カレーパン</a></li>
+<li class="arr txt11 flo_l"><a href="#">ジャムパン</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_child.png" width="60" height="60">
+<div class="txtarea"><h1>離乳食（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">離乳食前期</a></li>
+<li class="arr txt11 flo_l"><a href="#">離乳食中期</a></li>
+<li class="arr txt11 flo_l"><a href="#">離乳食後期</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_nin.png" width="60" height="60">
+<div class="txtarea"><h1>妊娠中の食事（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">鉄分の多い料理</a></li>
+<li class="arr txt11 flo_l"><a href="#">葉酸の多い料理</a></li>
+<li class="arr txt11 flo_l"><a href="#">ビタミンCの多い料理</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+</article>
+<!--cateEnd-->
+<!--cate-->
+<article class="cate01 cate02 clearfix">
+  <div class="clearfix">
+  <h1 class="ttl_cate_name flo_l">おかず</h1><p class="txt_sum">計：<span class="count">6,000</span>件</p>
+  </div>
+<section class="cate_m"><img src="img/common/img_v.png" width="60" height="60">
+<div class="txtarea"><h1>野菜（1020件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">ズッキーニ</a></li>
+<li class="arr txt11 flo_l"><a href="#">アボガド</a></li>
+<li class="arr txt11 flo_l"><a href="#">バジル</a></li>
+<li class="arr txt11 flo_l"><a href="#">ワンダーベリー</a></li>
+<li class="arr txt11 flo_l"><a href="#">エンダイブ</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_meet.jpg" width="60" height="60" alt="お肉">
+<div class="txtarea"><h1>お肉（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">鶏もも肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">牛肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">豚肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">ひき肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">熊肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">魚肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">鹿肉</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_f.png" width="60" height="60">
+<div class="txtarea">
+  <h1>魚介504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">ニジマス</a></li>
+<li class="arr txt11 flo_l"><a href="#">ヤマメ</a></li>
+<li class="arr txt11 flo_l"><a href="#">イワナ</a></li>
+<li class="arr txt11 flo_l"><a href="#">シャケ</a></li>
+<li class="arr txt11 flo_l"><a href="#">ブラックバス</a></li>
+<li class="arr txt11 flo_l"><a href="#">ブルーギル</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_r.png" width="60" height="60">
+<div class="txtarea">
+  <h1>ごはん（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">カレー</a></li>
+<li class="arr txt11 flo_l"><a href="#">ピラフ</a></li>
+<li class="arr txt11 flo_l"><a href="#">リゾット</a></li>
+<li class="arr txt11 flo_l"><a href="#">パエリア</a></li>
+<li class="arr txt11 flo_l"><a href="#">寿司</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_p.png" width="60" height="60">
+<div class="txtarea">
+  <h1>パスタ・グラタン（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">和風パスタ</a></li>
+<li class="arr txt11 flo_l"><a href="#">冷製パスタ</a></li>
+<li class="arr txt11 flo_l"><a href="#">ニョッキ</a></li>
+<li class="arr txt11 flo_l"><a href="#">グラタン</a></li>
+<li class="arr txt11 flo_l"><a href="#">ラザニア</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_men.png" width="60" height="60">
+<div class="txtarea">
+  <h1>麺（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">うどん</a></li>
+<li class="arr txt11 flo_l"><a href="#">そうめん</a></li>
+<li class="arr txt11 flo_l"><a href="#">ひやむぎ</a></li>
+<li class="arr txt11 flo_l"><a href="#">ラーメン</a></li>
+<li class="arr txt11 flo_l"><a href="#">そば</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_y.png" width="60" height="60">
+<div class="txtarea">
+  <h1>サラダ（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">和風のサラダ</a></li>
+<li class="arr txt11 flo_l"><a href="#">洋風のサラダ</a></li>
+<li class="arr txt11 flo_l"><a href="#">中華風のサラダ</a></li>
+<li class="arr txt11 flo_l"><a href="#">山の幸のサラダ</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_b.png" width="60" height="60">
+<div class="txtarea">
+  <h1>お弁当（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">サラリーマンの弁当</a></li>
+<li class="arr txt11 flo_l"><a href="#">土方弁当</a></li>
+<li class="arr txt11 flo_l"><a href="#">女子弁当</a></li>
+<li class="arr txt11 flo_l"><a href="#">男子弁当</a></li>
+<li class="arr txt11 flo_l"><a href="#">子供の弁当</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_flu.png" width="60" height="60">
+<div class="txtarea">
+  <h1>お菓子（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">饅頭</a></li>
+<li class="arr txt11 flo_l"><a href="#">大福</a></li>
+<li class="arr txt11 flo_l"><a href="#">串もち</a></li>
+<li class="arr txt11 flo_l"><a href="#">団子</a></li>
+<li class="arr txt11 flo_l"><a href="#">ゆべし</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_pan.png" width="60" height="60">
+<div class="txtarea">
+  <h1>パン（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">メロンパン</a></li>
+<li class="arr txt11 flo_l"><a href="#">アンパン</a></li>
+<li class="arr txt11 flo_l"><a href="#">食パン</a></li>
+<li class="arr txt11 flo_l"><a href="#">カレーパン</a></li>
+<li class="arr txt11 flo_l"><a href="#">ジャムパン</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_child.png" width="60" height="60">
+<div class="txtarea"><h1>離乳食（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">離乳食前期</a></li>
+<li class="arr txt11 flo_l"><a href="#">離乳食中期</a></li>
+<li class="arr txt11 flo_l"><a href="#">離乳食後期</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_nin.png" width="60" height="60">
+<div class="txtarea"><h1>妊娠中の食事（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">鉄分の多い料理</a></li>
+<li class="arr txt11 flo_l"><a href="#">葉酸の多い料理</a></li>
+<li class="arr txt11 flo_l"><a href="#">ビタミンCの多い料理</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+</article>
+<!--cateEnd-->
+<!--cate-->
+  <article class="cate01 cate02 clearfix">
+  <div class="clearfix">
+  <h1 class="ttl_cate_name flo_l">おかず</h1><p class="txt_sum">計：<span class="count">6,000</span>件</p>
+  </div>
+<section class="cate_m"><img src="img/common/img_v.png" width="60" height="60">
+<div class="txtarea"><h1>野菜（1020件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">ズッキーニ</a></li>
+<li class="arr txt11 flo_l"><a href="#">アボガド</a></li>
+<li class="arr txt11 flo_l"><a href="#">バジル</a></li>
+<li class="arr txt11 flo_l"><a href="#">ワンダーベリー</a></li>
+<li class="arr txt11 flo_l"><a href="#">エンダイブ</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_meet.jpg" width="60" height="60" alt="お肉">
+<div class="txtarea"><h1>お肉（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">鶏もも肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">牛肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">豚肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">ひき肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">熊肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">魚肉</a></li>
+<li class="arr txt11 flo_l"><a href="#">鹿肉</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_f.png" width="60" height="60">
+<div class="txtarea">
+  <h1>魚介504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">ニジマス</a></li>
+<li class="arr txt11 flo_l"><a href="#">ヤマメ</a></li>
+<li class="arr txt11 flo_l"><a href="#">イワナ</a></li>
+<li class="arr txt11 flo_l"><a href="#">シャケ</a></li>
+<li class="arr txt11 flo_l"><a href="#">ブラックバス</a></li>
+<li class="arr txt11 flo_l"><a href="#">ブルーギル</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_r.png" width="60" height="60">
+<div class="txtarea">
+  <h1>ごはん（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">カレー</a></li>
+<li class="arr txt11 flo_l"><a href="#">ピラフ</a></li>
+<li class="arr txt11 flo_l"><a href="#">リゾット</a></li>
+<li class="arr txt11 flo_l"><a href="#">パエリア</a></li>
+<li class="arr txt11 flo_l"><a href="#">寿司</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_p.png" width="60" height="60">
+<div class="txtarea">
+  <h1>パスタ・グラタン（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">和風パスタ</a></li>
+<li class="arr txt11 flo_l"><a href="#">冷製パスタ</a></li>
+<li class="arr txt11 flo_l"><a href="#">ニョッキ</a></li>
+<li class="arr txt11 flo_l"><a href="#">グラタン</a></li>
+<li class="arr txt11 flo_l"><a href="#">ラザニア</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_men.png" width="60" height="60">
+<div class="txtarea">
+  <h1>麺（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">うどん</a></li>
+<li class="arr txt11 flo_l"><a href="#">そうめん</a></li>
+<li class="arr txt11 flo_l"><a href="#">ひやむぎ</a></li>
+<li class="arr txt11 flo_l"><a href="#">ラーメン</a></li>
+<li class="arr txt11 flo_l"><a href="#">そば</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_y.png" width="60" height="60">
+<div class="txtarea">
+  <h1>サラダ（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">和風のサラダ</a></li>
+<li class="arr txt11 flo_l"><a href="#">洋風のサラダ</a></li>
+<li class="arr txt11 flo_l"><a href="#">中華風のサラダ</a></li>
+<li class="arr txt11 flo_l"><a href="#">山の幸のサラダ</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_b.png" width="60" height="60">
+<div class="txtarea">
+  <h1>お弁当（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">サラリーマンの弁当</a></li>
+<li class="arr txt11 flo_l"><a href="#">土方弁当</a></li>
+<li class="arr txt11 flo_l"><a href="#">女子弁当</a></li>
+<li class="arr txt11 flo_l"><a href="#">男子弁当</a></li>
+<li class="arr txt11 flo_l"><a href="#">子供の弁当</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_flu.png" width="60" height="60">
+<div class="txtarea">
+  <h1>お菓子（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">饅頭</a></li>
+<li class="arr txt11 flo_l"><a href="#">大福</a></li>
+<li class="arr txt11 flo_l"><a href="#">串もち</a></li>
+<li class="arr txt11 flo_l"><a href="#">団子</a></li>
+<li class="arr txt11 flo_l"><a href="#">ゆべし</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_pan.png" width="60" height="60">
+<div class="txtarea">
+  <h1>パン（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">メロンパン</a></li>
+<li class="arr txt11 flo_l"><a href="#">アンパン</a></li>
+<li class="arr txt11 flo_l"><a href="#">食パン</a></li>
+<li class="arr txt11 flo_l"><a href="#">カレーパン</a></li>
+<li class="arr txt11 flo_l"><a href="#">ジャムパン</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_child.png" width="60" height="60">
+<div class="txtarea"><h1>離乳食（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">離乳食前期</a></li>
+<li class="arr txt11 flo_l"><a href="#">離乳食中期</a></li>
+<li class="arr txt11 flo_l"><a href="#">離乳食後期</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+<section class="cate_m"><img src="img/common/img_nin.png" width="60" height="60">
+<div class="txtarea"><h1>妊娠中の食事（504件）</h1>
+<ul class="catelists"><li class="arr txt11 flo_l"><a href="#">鉄分の多い料理</a></li>
+<li class="arr txt11 flo_l"><a href="#">葉酸の多い料理</a></li>
+<li class="arr txt11 flo_l"><a href="#">ビタミンCの多い料理</a></li>
+</ul>
+</div>
+<p class="more arr txt11"><a href="#">もっと見る</a></p>
+</section>
+</article>
+<!--cateEnd-->
+
+
+</div>
+<!--main_clmEnd-->
+<div class="side_contents">
+<div  id="nav">
+<aside>
+<img src="img/common/bnr.jpg" alt="" width="300" height="250" />
+</aside>
+
+<article class="side_c01">
+<h1 class="txt12">トピック&amp;ニュース</h1>
+<section>
+<img src="img/common/sp03.jpg" alt="" width="48" height="48" /><div class="txtarea txt12">
+  <h3><a href="#">スイスシャレーで10万VNDすべての
+    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
+  <p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
+</section>
+<section>
+<img src="img/common/sp03.jpg" alt="" width="48" height="48" /><div class="txtarea txt12">
+  <h3><a href="#">スイスシャレーで10万VNDすべての
+    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
+  <p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
+</section>
+<section>
+<img src="img/common/sp03.jpg" alt="" width="48" height="48" /><div class="txtarea txt12">
+  <h3><a href="#">スイスシャレーで10万VNDすべての
+    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
+  <p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
+</section>
+<section>
+<img src="img/common/sp03.jpg" alt="" width="48" height="48" /><div class="txtarea txt12">
+  <h3><a href="#">スイスシャレーで10万VNDすべての
+    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
+  <p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
+</section>
+<section>
+<img src="img/common/sp03.jpg" alt="" width="48" height="48" /><div class="txtarea txt12">
+  <h3><a href="#">スイスシャレーで10万VNDすべての
+    平日に "ALL YOUはビールTIGERを飲むことができます。"</a></h3>
+  <p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
+</section>
+</article>
+</div>
+</div>
+
+</div>
+<!--contents-->
+</div>
+<!--wrapperEnd-->
+
+
