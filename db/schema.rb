@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121001153856) do
+ActiveRecord::Schema.define(:version => 20121007142802) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -282,6 +282,14 @@ ActiveRecord::Schema.define(:version => 20121001153856) do
     t.string   "location",   :default => "", :null => false
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "streams", :force => true do |t|
+    t.integer  "user_id",     :null => false
+    t.integer  "stream_type", :null => false
+    t.text     "title",       :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "toppage_contents", :force => true do |t|
