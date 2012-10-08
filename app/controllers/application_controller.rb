@@ -29,5 +29,6 @@ class ApplicationController < ActionController::Base
 
   def sidebar_filter
     @newsfeeds = Newsfeed.topics
+    @streams = Stream.topics
   end
 end

@@ -23,9 +23,12 @@ class Stream < ActiveRecord::Base
     stream = Stream.new
     stream.user_id = user_id
     stream.stream_type = stream_type
-    stream.save
     stream.title = @@trannslaters[stream_type].call( user_id, *options )
-    stream.option_data = {}
+    stream.save
     stream
+  end
+
+  def self.topics
+    order("id DESC").page(1).per(5)
   end
 end

@@ -9,9 +9,23 @@
 		<section>
 			<%= image_tag feed.image.url(:thumb), width:"48", height:"48", alt:"" %>
 			<div class="txtarea txt12">
-			<h3><%= link_to feed.title, controller:"newsfeeds", action:"show", id: feed.id %></h3>
-			<p class="att txt11">Từ: 16/05/2012 - 31/05/2012</p></div>
+				<h3><%= link_to feed.title, controller:"newsfeeds", action:"show", id: feed.id %></h3>
+				<% if feed.start_at %>
+					<p class="att txt11">Từ: <%= feed.start_at %> - <%= feed.end_at %></p>
+				<% end %>
+			</div>
 		</section>
+		<% end %>
+	</article>
+	<article class="side_c01">
+		<h1 class="txt12">Stream</h1>
+		<% @streams.each do |stream| %>
+			<section>
+				<div class="txtarea txt12">
+					<h3><%= stream.title %></h3>
+					<p class="att txt11">Từ: <%= stream.created_at %></p>
+				</div>
+			</section>
 		<% end %>
 	</article>
 </div>
