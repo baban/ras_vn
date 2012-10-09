@@ -35,6 +35,7 @@ gem "carrierwave", "0.6.2"
 
 # ruby extentions
 #gem "tapp" # add tapp(tap print) method
+gem "letters"
 gem 'i18n_generators', "1.2.1" # gemerate multiple language message file
 gem "ruby-openid", "2.1.8" # openid
 gem "rails3_acts_as_paranoid", "0.2.4" # logical
