@@ -11,8 +11,6 @@ require "bundler/capistrano"
 
 require "uri"
 
-require "rvm/capistrano"
-
 # wheneverを使う
 require "whenever/capistrano"
 
@@ -29,27 +27,27 @@ set :use_sudo, false
 
 # バージョン管理(git)
 set :scm, :git
-set :repository, "/home/baban/repo/ras_vn/"
+set :repository, "~/ras_vn/"
 set :scm_username, 'baban'
 set :scm_passphrase, "svc2027"
-set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"")
-
-
-set :ssh_options, {
-  :keys => %w(/home/baban/.ssh/id_rsa),
-  #:password => "svc2027",
-  #:config => true,
-}
-
-before 'deploy:setup', 'rvm:install_rvm'   # install RVM
-before 'deploy:setup', 'rvm:install_ruby'  # install Ruby and create gemset, or:
-before 'deploy:setup', 'rvm:create_gemset' # only create gemset
 
 set :runner, "baban"
 set :branch, "master"
 set :deploy_via, :checkout
 set :git_shallow_clone, 1
 set :chmod755, "app config db lib public vendor script script/* public/disp*"
+
+set :bundle_gemfile,  "Gemfile"
+set :bundle_dir,      ""
+set :bundle_flags,    ""
+set :bundle_without,  [:development, :test]
+set :bundle_cmd,      "bundle"
+set :bundle_roles,    [:app]
+
+set :default_environment, {
+  'RBENV_ROOT' => '$HOME/.rbenv/bin/rbenv',
+  'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+}
 
 # releaseディレクトリを残す数
 set :keep_releases, 20
@@ -70,11 +68,9 @@ end
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
   task :start, :roles => :app, :except => {:no_release => true} do 
-    #run "cd #{current_path} && BUNDLE_GEMFILE=#{current_path}/Gemfile bundle exec unicorn_rails -c config/unicorn.rb -E #{rails_env} -D"
   end
 
   task :stop, :rolse => :app  do
-    #run "#{try_sudo} kill -s QUIT `cat #{fetch(:current_path)}/tmp/pids/unicorn.pid`"
   end
 
   task :restart, :roles => :app, :except => { :no_release => true } do
@@ -83,29 +79,13 @@ namespace :deploy do
 
   # shared以下にアップロード画像のシンボリックリンクを作成する
   task :link_uploads do
-=begin
-    run <<-CMD
-      cd #{release_path} &&
-      ln -nfs #{shared_path}/uploads #{release_path}/public/uploads  
-    CMD
-=end
   end
 
   # shared以下にアップロード画像用のディレクトリを作成
   task :mkdir_uploads do
-=begin
-    run <<-CMD
-      #{try_sudo} mkdir #{shared_path}/uploads
-    CMD
-=end
   end
 
   task :cp_rvmrc do
-=begin
-    run <<-CMD
-      cp #{release_path}/.rvmrc.#{rails_env} #{release_path}/.rvmrc
-    CMD
-=end
   end
 
   namespace :web do
@@ -150,4 +130,3 @@ namespace :resque do
   end
 end
 
-#sudo bundle exec rails server -e production -p 80
