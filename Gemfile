@@ -28,7 +28,6 @@ gem "omniauth-facebook", "1.4.0"
 gem "omniauth-google-oauth2", "0.1.10"
 
 # controller, model tools
-gem "aspectr"  # add aspect oriented programming functions
 gem 'jbuilder'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem "mini_magick", "3.4"
@@ -54,7 +53,7 @@ gem "acts_as_readonlyable", '0.0.9' # sharding slave databases
 gem "capistrano", "2.9.0"
 gem "capistrano_colors", "0.5.5"
 gem "capistrano-ext", "1.2.1"
-gem "rvm-capistrano"
+#gem "rvm-capistrano"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

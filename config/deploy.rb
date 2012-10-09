@@ -11,8 +11,6 @@ require "bundler/capistrano"
 
 require "uri"
 
-require "rvm/capistrano"
-
 # wheneverを使う
 require "whenever/capistrano"
 
@@ -29,21 +27,9 @@ set :use_sudo, false
 
 # バージョン管理(git)
 set :scm, :git
-set :repository, "/home/baban/repo/ras_vn/"
+set :repository, "~/ras_vn/"
 set :scm_username, 'baban'
 set :scm_passphrase, "svc2027"
-set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"")
-
-
-set :ssh_options, {
-  :keys => %w(/home/baban/.ssh/id_rsa),
-  #:password => "svc2027",
-  #:config => true,
-}
-
-before 'deploy:setup', 'rvm:install_rvm'   # install RVM
-before 'deploy:setup', 'rvm:install_ruby'  # install Ruby and create gemset, or:
-before 'deploy:setup', 'rvm:create_gemset' # only create gemset
 
 set :runner, "baban"
 set :branch, "master"
