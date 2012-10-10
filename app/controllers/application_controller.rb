@@ -4,10 +4,13 @@ class ApplicationController < ActionController::Base
   include FormHelper
 
   before_filter :sidebar_filter
+  before_filter :analyze_log_filter
 
   protect_from_forgery
 
   helper_method :my_recipe?, :current_omniuser, :login?
+
+  @@analyze_logger = Logger.new("log/analyze.log")
 
   def auth
     @user = current_user
@@ -30,5 +33,10 @@ class ApplicationController < ActionController::Base
   def sidebar_filter
     @newsfeeds = Newsfeed.topics
     @streams = Stream.topics
+  end
+
+  def analyze_log_filter
+    log = "#{request.ip} - - [#{Time.now.strftime('%d/%M/%Y %H:%m:%S')}] #{request.method} #{request.path} HTTP/1.1 200 44"
+    @@analyze_logger.info log
   end
 end

@@ -4,13 +4,14 @@ user_profiles_0:
   image: 368710_100002130858178_1160751390_n.jpg
   nickname: baban
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-06-24 09:05:59 UTC
@@ -20,13 +21,14 @@ user_profiles_1:
   image: null
   nickname: ma2003co
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -36,13 +38,14 @@ user_profiles_2:
   image: null
   nickname: じゅんばあ
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -52,13 +55,14 @@ user_profiles_3:
   image: null
   nickname: 春茶丸
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -68,13 +72,14 @@ user_profiles_4:
   image: null
   nickname: kajinのだんな
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -84,13 +89,14 @@ user_profiles_5:
   image: null
   nickname: ☆まきりん☆
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -100,13 +106,14 @@ user_profiles_6:
   image: null
   nickname: うまかっぺ 
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -116,13 +123,14 @@ user_profiles_7:
   image: null
   nickname: makoron
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -132,13 +140,14 @@ user_profiles_8:
   image: null
   nickname: FarmersK
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -148,13 +157,14 @@ user_profiles_9:
   image: null
   nickname: てんちょー
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -164,13 +174,14 @@ user_profiles_10:
   image: null
   nickname: komomoもも
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -180,13 +191,14 @@ user_profiles_11:
   image: null
   nickname: tinkpi
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -196,13 +208,14 @@ user_profiles_12:
   image: null
   nickname: JessieMom
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -212,13 +225,14 @@ user_profiles_13:
   image: null
   nickname: ☆RUN☆
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -228,13 +242,14 @@ user_profiles_14:
   image: null
   nickname: usakohime
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -244,13 +259,14 @@ user_profiles_15:
   image: null
   nickname: スマイルメグ
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -260,13 +276,14 @@ user_profiles_16:
   image: null
   nickname: みーみーさんさん
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -276,13 +293,14 @@ user_profiles_17:
   image: null
   nickname: Keit3
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
@@ -292,13 +310,14 @@ user_profiles_18:
   image: null
   nickname: ゆみらい♪
   sex: 1
-  first_name: 
-  last_name: 
+  first_name: ""
+  family_name: ""
   birthday: null
-  mail_address: null
+  email: null
+  phone_number: null
   prefecture_id: 0
-  area_id: 0
-  comment: "" 
+  distinct_id: 0
+  comment: ""
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC

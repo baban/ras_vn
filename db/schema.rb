@@ -51,13 +51,16 @@ ActiveRecord::Schema.define(:version => 20121007142802) do
     t.datetime "updated_at",                :null => false
   end
 
+  add_index "bookmarks", ["recipe_id"], :name => "index_bookmarks_on_recipe_id"
+  add_index "bookmarks", ["user_id"], :name => "index_bookmarks_on_user_id"
+
   create_table "diaries", :force => true do |t|
     t.integer  "user_id",                                        :null => false
     t.string   "title",       :default => "",                    :null => false
     t.text     "content",                                        :null => false
     t.integer  "category_id", :default => 0,                     :null => false
     t.string   "image"
-    t.datetime "publiced_at", :default => '2012-09-21 00:00:00', :null => false
+    t.datetime "publiced_at", :default => '2012-10-10 00:00:00', :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
@@ -165,7 +168,7 @@ ActiveRecord::Schema.define(:version => 20121007142802) do
   create_table "recipe_food_genre_rankings", :force => true do |t|
     t.integer  "recipe_food_genre_id",                           :null => false
     t.integer  "point",                :default => 0,            :null => false
-    t.date     "ranked_at",            :default => '2012-09-21', :null => false
+    t.date     "ranked_at",            :default => '2012-10-10', :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
@@ -271,6 +274,8 @@ ActiveRecord::Schema.define(:version => 20121007142802) do
     t.datetime "updated_at",                                        :null => false
   end
 
+  add_index "recipes", ["user_id"], :name => "index_recipes_on_user_id"
+
   create_table "search_logs", :force => true do |t|
     t.integer  "user_id",                    :null => false
     t.string   "words",      :default => "", :null => false
@@ -314,6 +319,7 @@ ActiveRecord::Schema.define(:version => 20121007142802) do
   end
 
   add_index "tracker_logs", ["session_id"], :name => "index_tracker_logs_on_session_id", :unique => true
+  add_index "tracker_logs", ["user_id"], :name => "index_tracker_logs_on_user_id"
 
   create_table "user_profile_visibilities", :force => true do |t|
     t.integer  "user_profile_id", :default => 1
