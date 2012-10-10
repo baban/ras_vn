@@ -6,6 +6,6 @@ class Bookmark < ActiveRecord::Base
 
   # get all bookmarked shops
   def self.list
-    Recipe.where('')
+    Recipe.visibles
   end
 end
