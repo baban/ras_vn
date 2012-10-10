@@ -1,7 +1,6 @@
 # encoding: utf-8
 
 class Recipe < ActiveRecord::Base
-  acts_as_paranoid
   paginates_per 12
 
   validates :title, presence: true
@@ -28,7 +27,7 @@ class Recipe < ActiveRecord::Base
   alias :comments :recipe_comments
   alias :image :recipe_image
 
-  scope :visibles, ->{ where(" public = true ") }
+  scope :visibles, ->{ where( del_flg: 0 ).where( "public = true" ) }
   scope :topics, -> { visibles.page(1).per(2) }
 
   alias :chef :user
