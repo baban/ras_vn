@@ -4,8 +4,8 @@ development:
     # Defines the default session. (required)
     default:
       # Defines the name of the default database that Mongoid can connect to.
-      # (required).
-      database: fluent
+      # (required)
+      database: cook24_dev
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
@@ -61,7 +61,23 @@ development:
 test:
   sessions:
     default:
-      database: ras_vn_test
+      database: cook24_test
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :strong
+staging:
+  sessions:
+    default:
+      database: cook24_staging
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :strong
+staging:
+  sessions:
+    default:
+      database: cook24_production
       hosts:
         - localhost:27017
       options:
