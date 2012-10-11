@@ -23,6 +23,6 @@ RasVn::Application.routes.draw do
   devise_for :user
   get "top/index", as:'user_root'
 
-  #match '/statistics(/:action(/:id))'
+  match '/statistics(/:action(/:id))', controller:"statistics"
 end
 

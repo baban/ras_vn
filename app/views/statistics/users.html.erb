@@ -1,0 +1,49 @@
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "prototype" %>
+  <%= javascript_include_tag "html5jp/graph/circle" %>
+  <%= javascript_include_tag "html5jp/graph/line" %>
+  <%= javascript_include_tag "html5jp/graph/rader" %>
+  <%= javascript_include_tag "html5jp/graph/vbar" %>
+<% end %>
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag :statistics %>
+<% end %>
+
+<h2>会員数:<%= @user_total %>人</h2>
+
+<div class="widget">
+  <h3>男女比</h3>
+  <%= pie_chart(@sex_rate_graph) %>
+  <table class="data">
+    <% @sex_rate_graph.each do |k,v| %>
+      <tr>
+        <th><%= k %></th>
+        <td><%= v %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<div class="widget">
+  <h3>地域別登録人数</h3>
+  <%= vertical_bar_chart(*@prefecture_table) %>
+</div>
+
+<div class="widget">
+  <h3>年代別登録人数</h3>
+  <%= vertical_bar_chart(*@dicade_table) %>
+  <table class="data">
+    <tr>
+      <% @dicade_table.last[:x].each do |v| %>
+        <th><%= v %></th>
+      <% end %>
+    </tr>
+    <tr>
+      <% @dicade_table.first.each do |v| %>
+        <td><%= v %></td>
+      <% end %>
+    </tr>
+  </table>
+</div>
+
+
