@@ -36,8 +36,9 @@ class ApplicationController < ActionController::Base
   end
 
   def analyze_log_filter
-    log = %W|#{request.ip} - - [#{Time.now.strftime('%d/%M/%Y %H:%m:%S')}] "#{request.method} #{request.path}" HTTP/1.1 200 44 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:15.0) Gecko/20100101 Firefox/15.0.1"|
+    logger.info request.methods.sort.inspect
+    log = %|#{request.ip} - - [#{Time.now.strftime('%d/%M/%Y %H:%m:%S')}] "#{request.method} #{request.fullpath}" HTTP/1.1 200 44 "#{request.original_url}" "#{request.user_agent}"|
     # 192.168.0.3 - - [11/Oct/2012:01:45:09 +0900] "GET /uploads/newsfeed/image/4/thumb_sp03.jpg HTTP/1.1" 404 728 "http://192.168.0.10/recipes/220" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:15.0) Gecko/20100101 Firefox/15.0.1"
     @@analyze_logger.info log
-  end
+    end
 end

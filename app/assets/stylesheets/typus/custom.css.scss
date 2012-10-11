@@ -1,0 +1,21 @@
+
+ul.tabpanel {
+  border:none 1px #aaa;
+  border-bottom-style:solid;
+  list-style-type:none;
+  li {
+    display:inline;
+    pading:0.2em;
+    border:solid 1px #aaa;
+  }
+}
+
+#static_graph {
+  border:solid 1px #aaa;
+  background-color:#f5f5f5;
+}
+
+table.data {
+  border:solid 1px #333;
+  width:auto;
+}
