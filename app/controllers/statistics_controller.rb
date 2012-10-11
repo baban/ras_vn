@@ -48,7 +48,7 @@ class StatisticsController < Admin::BaseController
              ]
     }
 
-    #h = FluentLog.aggrigation
+    h = FluentLog.aggrigation
 
     respond_to do |format|
       format.json { render json: h }
