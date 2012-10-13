@@ -3,6 +3,8 @@
 class FluentLog
   include Mongoid::Document  
 
+  index path: 1
+
   field :code,    type: Integer
   field :host,    type: String
   field :path,    type: String
@@ -25,8 +27,12 @@ class FluentLog
   end
 
   def self.page_count_aggrigation
-    map = %Q[ function () { emit(this.path, {}); } ]
-    reduce = %Q[ function (key, values) { return { amount: values.length }; } ]
+    # var map = "function () { emit(this.path, {}); }"
+    # var reduce = "function (key, values) { return { amount: 1 }; }"
+    # db.fluent_logs.mapReduce(map, reduce, {out: {inline:1}})
+
+    map = "function () { emit(this.path, { path: this.path }); }"
+    reduce = "function (key, values) { return { amount: values.length }; }"
     values = self.map_reduce(map, reduce).out(inline: true)
     values.select{ |row| row["_id"] }.inject({}){ |h,row| h[row["_id"]]=row["value"]["amount"].to_i; h }
   end
@@ -52,10 +58,7 @@ class FluentLog
     REDUCE_FUNC
 
     values = self.map_reduce(map, reduce).out(inline: true)
-    values.each do |host|
-      host["value"]["moves"].each do |move|
-        MoveLog.create(move)
-      end
-    end
+    values = values.first["value"]["moves"]
+    values.map { |log| MoveLog.create(log) }
   end
 end
