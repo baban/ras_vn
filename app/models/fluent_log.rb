@@ -20,7 +20,7 @@ class FluentLog
     move_log = MoveLog.translate_aggrigated_log( move_log, page_map )
 
     ret = {
-      nodes: page_map.map{ |k,v| { label: k, amount: v } }.sort{ |a,b| b[:amount] <=> b[:amount] },
+      nodes: page_map.map{ |k,v| { label: k, amount: v } }.sort{ |a,b| b[:amount] <=> a[:amount] },
       links: move_log
     }
     ret

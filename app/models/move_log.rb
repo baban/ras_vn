@@ -22,21 +22,13 @@ class MoveLog
   end
 
   def self.aggrigate_log
-    map = <<-MAP_FUNC
-      function () {
-        emit( this.from+" -> "+this.to, {} );
-      }
-    MAP_FUNC
-    reduce = <<-REDUCE_FUNC
-      function (key, values) {
-        return { amount: values.length };
-      }
-    REDUCE_FUNC
+    m = "function () { emit( this.from+' -> '+this.to, {} ); }"
+    r = "function (key, values) { return { amount: values.length }; }"
 
-    values = self.map_reduce(map, reduce).out(inline: true)
+    values = self.map_reduce(m, r).out(inline: true)
     values.map do |h| 
       from, to = h["_id"].to_s.split(" -> ")
-      [ from, to, h["value"]["amount"].to_i ]
+      [ from, to, h["value"]["amount"].to_i+1 ]
     end.select{ |o| (o.last > 0) and (o[0]!=o[1]) and (o.first!="null") }
   end
 end
