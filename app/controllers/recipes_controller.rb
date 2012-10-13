@@ -38,6 +38,8 @@ class RecipesController < ApplicationController
     @draft.user_id = current_user.id
     @draft.save
 
+    Stream.push( Stream::ADD_RECIPE, current_user.id )
+
     redirect_to( { action:'edit', id: @recipe.id }, notice: "create completed" )
   end
 

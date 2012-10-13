@@ -3,6 +3,8 @@
 class Recipe < ActiveRecord::Base
   paginates_per 12
 
+  ADD_RECIPE = 2
+
   validates :title, presence: true
   validates :image, presence: true
 
