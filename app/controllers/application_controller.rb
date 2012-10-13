@@ -36,7 +36,6 @@ class ApplicationController < ActionController::Base
   end
 
   def analyze_log_filter
-    logger.info request.methods.sort.inspect
     log = %|#{request.ip} - - [#{Time.now.strftime('%d/%b/%Y:%H:%m:%S %z')}] "#{request.method} #{request.fullpath} HTTP/1.1" #{200} - "#{request.original_url}" "#{request.user_agent}"|
     @@analyze_logger.info log
     end
