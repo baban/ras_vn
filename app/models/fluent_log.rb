@@ -4,6 +4,7 @@ class FluentLog
   include Mongoid::Document  
 
   index path: 1
+  index host: 1
 
   field :code,    type: Integer
   field :host,    type: String

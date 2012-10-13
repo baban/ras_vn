@@ -3,6 +3,8 @@
 class MoveLog
   include Mongoid::Document  
 
+  index from: 1
+
   field :from, type: String
   field :to,   type: String
 
