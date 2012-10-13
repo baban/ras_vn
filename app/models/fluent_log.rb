@@ -14,7 +14,7 @@ class FluentLog
   field :time,    type: DateTime
 
   def self.aggrigation
-    # self.page_flow_aggrigation
+    self.page_flow_aggrigation
     page_map = self.page_count_aggrigation
     move_log = MoveLog.aggrigate_log
     move_log = MoveLog.translate_aggrigated_log( move_log, page_map )
@@ -27,23 +27,16 @@ class FluentLog
   end
 
   def self.page_count_aggrigation
-    # var map = "function () { emit(this.path, {}); }"
-    # var reduce = "function (key, values) { return { amount: 1 }; }"
-    # db.fluent_logs.mapReduce(map, reduce, {out: {inline:1}})
-
-    map = "function () { emit(this.path, { path: this.path }); }"
-    reduce = "function (key, values) { return { amount: values.length }; }"
-    values = self.map_reduce(map, reduce).out(inline: true)
-    values.select{ |row| row["_id"] }.inject({}){ |h,row| h[row["_id"]]=row["value"]["amount"].to_i; h }
+    m = "function () { emit(this.path, {}); }"
+    r = "function (key, values) { return { amount: values.length }; }"
+    values = FluentLog.map_reduce(m, r).out(inline: true)
+    values = self.map_reduce(m, r).out(inline: true)
+    values.select{ |row| row["_id"] }.inject({}){ |h,row| h[row["_id"]] = row["value"]["amount"].to_i; ((h[row["_id"]]==0) && h[row["_id"]]=1); h }
   end
 
   def self.page_flow_aggrigation
     MoveLog.delete_all
-    map = <<-MAP_FUNC
-      function () {
-        emit( this.host, { path: this.path, time: this.time } );
-      }
-    MAP_FUNC
+    map = "function () { emit( this.host, { path: this.path, time: this.time } ); }"
     reduce = <<-REDUCE_FUNC
       function (key, values) {
         values.sort(function(a,b){ return (a.time==b.time) ? 0 : ((a.time>b.time)? 1 : -1); });
