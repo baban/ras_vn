@@ -81,15 +81,43 @@ footer .inner li{ margin-left:10px;}
 .err{ background:url(/assets/common/ell.gif) no-repeat 0 2px; padding-left:20px; color:#F00!important; margin:5px 0 0 0;} 
 
 /*pagination*/
-.paginate {font-size:17px; text-align:center; display:block; margin-top:10px; width:450px;}
-.current_page {font-size:20px; color: #666666;
-    font-weight: bold;
-    padding: 0 5px;}
-.next_page {font-size:14px;}
+.paginate {
+  font-size:17px;
+  text-align:center;
+  display:block;
+  margin-top:10px;
+  width:450px;
+}
+
+.current_page {
+  font-size:20px; color: #666666;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.next_page {
+  font-size:14px;
+}
 
 img#profile_image_icon {
   width:32px;
   height:32px;
 }
 
+#stream_list_box {
+  border-width:1px;
+  border-style:inset;
+  border-color:#ddd;
+}
 
+#stream_list {
+  margin:0.5em;
+  height:150px;
+}
+
+#stream_list li {
+  border-width:1px;
+  border-style:none none dashed none;
+  border-color:#888;
+  height:70px;
+}

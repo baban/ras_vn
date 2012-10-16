@@ -22,13 +22,9 @@
 		<div id="stream_list_box">
 			<ul id="stream_list">
 				<% @streams.each do |stream| %>
-					<li>
-						<section>
-							<div class="txtarea txt12">
-								<h3><%= stream.title %></h3>
-								<p class="att txt11">Từ: <%= stream.created_at %></p>
-							</div>
-						</section>
+					<li class="txtarea txt12">
+						<h3><%= stream.title %></h3>
+						<p class="att txt11">Từ: <%= stream.created_at %></p>
 					</li>
 				<% end %>
 			</ul>

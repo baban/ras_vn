@@ -25,20 +25,22 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new
-    @recipe.attributes= params[:recipe]
-    @recipe.user_id = current_user.id
-    @recipe.save
+    ActiveRecord::Base.transaction do
+      @recipe = Recipe.new
+      @recipe.attributes= params[:recipe]
+      @recipe.user_id = current_user.id
 
-    return render(action:"new") unless @recipe.valid?
-    
-    @draft = RecipeDraft.new
-    @draft.attributes= params[:recipe]
-    @draft.recipe_id= @recipe.id
-    @draft.user_id = current_user.id
-    @draft.save
+      return render(action:"new") unless @recipe.valid?
+      @recipe.save
 
-    Stream.push( Stream::ADD_RECIPE, current_user.id )
+      @draft = RecipeDraft.new
+      @draft.attributes= params[:recipe]
+      @draft.recipe_id= @recipe.id
+      @draft.user_id = current_user.id
+      @draft.save
+
+      Stream.push( Stream::ADD_RECIPE, current_user.id, @recipe )
+    end
 
     redirect_to( { action:'edit', id: @recipe.id }, notice: "create completed" )
   end

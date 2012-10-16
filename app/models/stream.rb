@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class Stream < ActiveRecord::Base
+  ADD_RECIPE = 2
+
   @@trannslaters = {
     # cannot translate data
     0=>->( user_id, *options ){ "" },
