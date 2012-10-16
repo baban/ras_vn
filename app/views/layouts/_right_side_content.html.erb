@@ -17,15 +17,21 @@
 		</section>
 		<% end %>
 	</article>
-	<article class="side_c01">
+	<article class="side_c01" id="stream_area">
 		<h1 class="txt12">Stream</h1>
-		<% @streams.each do |stream| %>
-			<section>
-				<div class="txtarea txt12">
-					<h3><%= stream.title %></h3>
-					<p class="att txt11">Từ: <%= stream.created_at %></p>
-				</div>
-			</section>
-		<% end %>
+		<div id="stream_list_box">
+			<ul id="stream_list">
+				<% @streams.each do |stream| %>
+					<li>
+						<section>
+							<div class="txtarea txt12">
+								<h3><%= stream.title %></h3>
+								<p class="att txt11">Từ: <%= stream.created_at %></p>
+							</div>
+						</section>
+					</li>
+				<% end %>
+			</ul>
+		</div>
 	</article>
 </div>
