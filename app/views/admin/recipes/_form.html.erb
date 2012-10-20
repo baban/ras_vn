@@ -1,0 +1,40 @@
+<%= render "form_javascripts" %>
+
+<%= form_for @item, :url => options, :html => { :class => "resource", :multipart => true } do |form| %>
+
+  <%= render "helpers/admin/resources/errors" %>
+
+  <fieldset class="inputs">
+    <ol>
+      <li>
+        <%= form.label :user_id %>
+        <%= form.text_field :user_id, value: @item.user_id, size: 100 %>
+      </li>
+      <li>
+        <%= form.label :title %>
+        <%= form.text_field :title, value: @item.title, size: 100 %>
+      </li>
+      <li>
+        <%= form.label :text_area %>
+        <%= form.text_area :text_area, value: @item.title, size:"100x5" %>
+      </li>
+      <li>
+        <%= form.label :one_point %>
+        <%= form.text_area :one_point, value: @item.one_point, size:"100x5" %>
+      </li>
+    </ol>
+  </fieldset>
+
+  <fieldset class="buttons">
+    <ol>
+      <% build_save_options.each do |key, value, special| %>
+        <%
+          message = Typus::I18n.t(value)
+          options = { :name => key, :onclick => "Typus.setConfirmUnload(false);", :disable_with => message  }
+        %>
+        <li><%= submit_tag message, options %></li>
+      <% end %>
+    </ol>
+  </fieldset>
+
+<% end %>
