@@ -2,7 +2,7 @@
 
 RecipeStep:
   fields:
-    default: recipe_id, context
-    form: recipe_id, context
+    default: recipe_id, content
+    form: recipe_id, content
   relationships: 
   application: Application

@@ -54,15 +54,31 @@ header nav ul.login li img{ border: 1px solid #4E2100; float: left; margin-right
 -moz-background-size:18px 20px;background-size:18px 20px ; margin:2px}
 ul.s_att{ margin-top:10px}
 .s_att li{ line-height:34px; }
-.arr{background:url(/assets/common/arr01.png) no-repeat right; padding-right:15px;}
 
-.bace_bg{ width:970px; margin:0 auto; padding:0 10px }
-.contents_bg{ padding:0px 10px 10px 10px;
--webkit-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.6);
--moz-box-shadow:    0px 0px 8px rgba(50, 50, 50, 0.6);
-box-shadow:         0px 0px 8px rgba(50, 50, 50, 0.6); border:2px solid #FFF; background:url(/assets/common/contents_bg.gif) repeat-x #FFF; margin-bottom:10px;}
+.arr {
+  background:url("/assets/common/arr01.png") no-repeat right;
+  padding-right:15px;
+}
 
-aside{ margin-bottom:10px;}
+.bace_bg {
+  width:970px;
+  margin:0 auto;
+  padding:0 10px
+}
+
+.contents_bg{
+  padding:0px 10px 10px 10px;
+  -webkit-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.6);
+  -moz-box-shadow:    0px 0px 8px rgba(50, 50, 50, 0.6);
+  box-shadow:         0px 0px 8px rgba(50, 50, 50, 0.6);
+  border:2px solid #FFF;
+  background:url(/assets/common/contents_bg.gif) repeat-x #FFF;
+  margin-bottom:10px;
+}
+
+aside{
+  margin-bottom:10px;
+}
 
 
 /*footer*/
@@ -76,9 +92,17 @@ footer .inner li{ margin-left:10px;}
 /*角丸3*/
 .radi3{-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
 .radi5{-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
-.radi10{-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
+.radi10{
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;border-radius: 10px;
+}
 
-.err{ background:url(/assets/common/ell.gif) no-repeat 0 2px; padding-left:20px; color:#F00!important; margin:5px 0 0 0;} 
+.err {
+  background:url("/assets/common/ell.gif") no-repeat 0 2px;
+  padding-left:20px;
+  color:#F00 !important;
+  margin:5px 0 0 0;
+}
 
 /*pagination*/
 .paginate {
@@ -90,7 +114,7 @@ footer .inner li{ margin-left:10px;}
 }
 
 .current_page {
-  font-size:20px; color: #666666;
+    font-size:20px; color: #666666;
   font-weight: bold;
   padding: 0 5px;
 }

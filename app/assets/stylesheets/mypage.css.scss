@@ -19,22 +19,19 @@
 #content_body{
 }
 
-.tile {
-  border:solid 1px #aaa;
-  border-width:3px 1px 1px 1px;
-  width:100%;
-  h3 {
-    font-size:1em;
-    margin:0.1em 0.3em;
-  }
-  h3 + div {
-    border:none 3px #aaa;
-    border-top-style:solid;
-    min-height:3em;
-  }
+h2 {
+  color:orange;
 }
 
 ul#content_menu_list > li {
   display:inline;
   border:solid 1px #aaa;
 }
+
+table#profiles {
+  td {
+    border:solid 1px #aaa;
+    padding:5px 8px;
+  }
+}
+
