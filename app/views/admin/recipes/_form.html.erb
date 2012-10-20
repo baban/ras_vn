@@ -15,12 +15,28 @@
         <%= form.text_field :title, value: @item.title, size: 100 %>
       </li>
       <li>
-        <%= form.label :text_area %>
-        <%= form.text_area :text_area, value: @item.title, size:"100x5" %>
+        <%= form.label :recipe_image %>
+        <%= form.file_field :recipe_image, value: @item.recipe_image %>
+      </li>
+      <li>
+        <%= form.label :description %>
+        <%= form.text_area :description, value: @item.title, size:"100x5" %>
       </li>
       <li>
         <%= form.label :one_point %>
         <%= form.text_area :one_point, value: @item.one_point, size:"100x5" %>
+      </li>
+      <li>
+        <%= form.label :public %>
+        <%= form.text_field :public, value: @item.public %>
+      </li>
+      <li>
+        <%= form.label :eatstyle_id %>
+        <%= form.text_field :eatstyle_id, value: @item.eatstyle_id %>
+      </li>
+      <li>
+        <%= form.label :recipe_food_id %>
+        <%= form.text_field :recipe_food_id, value: @item.recipe_food_id %>
       </li>
     </ol>
   </fieldset>
