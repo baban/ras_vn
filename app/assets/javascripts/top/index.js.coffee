@@ -1,4 +1,6 @@
 $(window).load ->
+  last_request_time = new Date()
+
   append_stream_element = ( el )->
     el='<li class="txtarea txt12">'+el+'</li>'
 
@@ -11,12 +13,16 @@ $(window).load ->
     $('#stream_list > li:first').hide();
     $('#stream_list > li:first').slideDown();
 
-  request_newinfo = ->
-    param = { t: new Date() }
-    jQuery.getJSON( "/information/newinfo", param, append_stream_element )
-    
-  add_element = (data)->
-    s="aaaaaaaaaaaaaaaaaaaa"
-    append_stream_element s
+  add_element = (req) ->
+    console.log req
+    s = req.text
+    if s.length > 0
+      append_stream_element s
 
-  setInterval add_element, 3000
+  request_newinfo = ->
+    param = { t: last_request_time }
+    last_request_time = new Date()
+    jQuery.getJSON( "/streams/", param, add_element )
+
+
+  setInterval request_newinfo, 10*1000

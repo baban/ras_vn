@@ -15,7 +15,7 @@ RasVn::Application.routes.draw do
   resources(:recipes) { collection { get :like, :caution } }
   resources(:recipe_advertisements, :recipe_comments, :recipe_foods)
   resources(:recipe_food_genres, only:[:index])
-  resources(:stream)
+  resources(:streams)
   resources(:newsfeeds,only:[:index,:show])
   resources(:mypage){ member { get :recipes, :recipe_comments } }
   resources(:kitchens) { member { get :recipes } }
