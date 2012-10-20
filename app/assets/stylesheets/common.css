@@ -136,7 +136,8 @@ img#profile_image_icon {
 
 #stream_list {
   margin:0.5em;
-  height:150px;
+  height:300px;
+  overflow:hidden;
 }
 
 #stream_list li {
