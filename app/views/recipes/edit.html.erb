@@ -1,102 +1,108 @@
-<%= javascript_include_tag "recipes/edit" %>
+<%= include_action_javascript %>
+<%= include_action_style_sheet %>
 
-<h2><%= t(:edit_recipe, scope:"views.recipes.edit") %></h2>
-<div id="content_body" class="section">
-  <%=semantic_form_for @recipe, url: recipe_url(@recipe.id), html:{ multipart: true } do |f| %>
-    <h2><%= f.text_field :title, value: @recipe.title %></h2>
-    <div id="recipe_base_info">
-      <div class="section" id="recipe_body">
-        <div id="recipe_photo" class="figure">
-          <% if @recipe.recipe_image %>
-            <%= image_tag  @recipe.recipe_image.url(:large_thumb) %>
-          <% else %>
-            <%= image_tag "no_image.gif" %>
-          <% end %>
-        </div>
-        <div id="description">
-          <%= f.text_area :description, value: @recipe.description %>
-        </div>
-        <div id="resipe_genre_select_area" class="area">
-          <h3><%= t(:genre, scope:"views.recipes.edit") %></h3>
-          <%= recipe_genre_select_area(f) %>
-          <p><%= label_tag :new_food_genre, "ジャンル追加" %>:<%= text_field_tag :new_food_genre, "", size: 10 %></p>
-          <p id="genre_description">希望のジャンルがない場合は、上のテキストボックスでジャンルを追加してください</p>
-        </div>
-        <div id="foodstuffs_area" class="area">
-          <table id="foodstuffs">
-            <tr>
-              <th colspan="2">
-                <%= t(:recipe_foodstuffs, scope:"activerecord.attributes.recipe") %>
-                (<%= f.text_field :amount, size: 3 %>人前)
-              </th>
-            </tr>
-            <tr>
-              <th class="name"><%= t(:name, scope:"activerecord.attributes.recipe_foodstuff") %></th>
-              <th class="amount"><%= t(:amount, scope:"activerecord.attributes.recipe_foodstuff") %></th>
-            </tr>
-            <% @recipe.edit_foodstuffs.each_with_index do |foodstuff,i| %>
-              <tr class="foodstuff_row_<%= i %>">
-                <td class="name"><%=text_field_tag "foodstuffs[][name]", foodstuff.name %></td>
-                <td class="amount"><%=text_field_tag "foodstuffs[][amount]", foodstuff.amount %></td>
-              </tr>
-            <% end %>
-          </table>
-          <form><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %></form>
-        </div>
-      </div>
+<div class="bace_bg">
+	<%=semantic_form_for @recipe, url: recipe_url(@recipe.id), html:{ multipart: true } do |f| %>
+	<div class="contents_bg clearfix">
+		<!--main_clm-->
+		<div class="main_clm">
+			<article class="contents_recipes">
+				<h1 class="ttl_recipe"><%= f.text_field :title, value: @recipe.title %></h1>
+				<%= image_tag @recipe.recipe_image, width:"280", height:"466", alt:"Ẩm Thực Việt" %>
+				<div class="explanation">
+					<p><%= f.text_area :description, value: @recipe.description, size:"40x3" %></p>
+					<div class="clearfix">
+						<p class="user_name">
+							<span class="flo_l">
+								<%= image_tag "common/user_ico.png", width:"22", height:"22", alt:"image" %>
+							</span>
+							<span class="flo_l"><%= link_to @recipe.user.profile.nickname, kitchen_url(@user) %></span>
+						</p>
+					</div>
+					<div>
+						<h3><%= t(:genre, scope:"views.recipes.edit") %></h3>
+						<%= recipe_genre_select_area(f) %>
+						<p><%= label_tag :new_food_genre, "ジャンル追加" %>:<%= text_field_tag :new_food_genre, "", size: 10 %></p>
+					</div>
+					<p id="genre_description">希望のジャンルがない場合は、上のテキストボックスでジャンルを追加してください</p>
+					<div id="ingredients">
+						<span class="material_txt"> Nguyên liệu </span>
+						(<%= f.text_field :amount, size: 3 %> người ăn)
+						<div class="servings">
+							<h3>
+							<div class="material clearfix">
+							</div><div class="clear"></div></h3>
+						</div>
+						<div class="ingredients_list">
+							<% @recipe.foodstuffs.each do |foodstuff| %>
+								<div class="ingredient_row clearfix">
+									<div class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name %></div>
+									<div class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount %></div>
+								</div>
+							<% end %>
+							<form><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %></form>
+						</div>
+					</div>
+				</div>
+				<div id="recipes_steps_area" class="area">
+				  <dl id="recipe_steps">
+				    <% @recipe.edit_steps.each.with_index(1) do |step,i| %>
+				    <dl class="step" id="recipe_step_<%= i %>">
+				      <dt>Step <%= i %></dt>
+				      <dt class="selecter image_field">
+					<%= label :image, "Image" %>
+					<%= file_field_tag "recipe_steps[][image]", class:"image_selecter" %>
+				      </dt>
+				      <dt class="selecter movie_field">
+					<form class="movie_button_field">
+					  <%= submit_tag "Movie url", type:"button", class:"movie_button"  %>
+					  <%= hidden_field_tag "recipe_step_id_#{i}", i, class:"recipe_step_id" %>
+					</form>
+					<%= label :recipe_steps, "Movie url" %>
+					<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter" %>
+				      </dt>
+				      <dd>
+					<%= text_area_tag "recipe_steps[][content]", step.content, class:'step_edit_area' %>
+					<% if step.image %>
+					<%=image_tag step.image.url(:thumb), alt:"" %>
+					<% end %>
+					<% if step.movie_url %>
+					<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
+					<% end %>
+				      </dd>
+				    </dl>
+				    <% end %>
+				  </dl>
+				  <form><%= submit_tag t(:add_step, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></form>
+				</div>
+				
+				<h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
+				<div class="section"><%=f.text_area :one_point, value: @recipe.one_point %></div>
+				
+				<h3><%= t(:public, scope:"activerecord.attributes.recipe") %></h3>
+				<p><%= f.select :public, { t( :public, scope:"views.recipes.new" ) => true, t( :closed, scope:"views.recipes.new" ) => false } %></p>
 
-      <div id="recipes_steps_area" class="area">
-        <dl id="recipe_steps">
-          <% @recipe.edit_steps.each.with_index(1) do |step,i| %>
-            <dl class="step" id="recipe_step_<%= i %>">
-              <dt>Step <%= i %></dt>
-              <dt class="selecter image_field">
-                <%= label :image, t(:image, scope:"activerecord.attributes.recipe_step") %>
-                <%= file_field_tag "recipe_steps[][image]", class:"image_selecter" %>
-              </dt>
-              <dt class="selecter movie_field">
-                <form class="movie_button_field">
-                  <%= submit_tag t(:movie_url, scope:"activerecord.attributes.recipe_step"), type:"button", class:"movie_button"  %>
-                  <%= hidden_field_tag "recipe_step_id_#{i}", i, class:"recipe_step_id" %>
-                </form>
-                <%= label :recipe_steps, t(:movie_url, scope:"activerecord.attributes.recipe_step") %>
-                <%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter" %>
-              </dt>
-              <dd>
-                <%= text_area_tag "recipe_steps[][content]", step.content, class:'step_edit_area' %>
-                <% if step.image %>
-                  <%=image_tag step.image.url(:thumb), alt:"" %>
-                <% end %>
-                <% if step.movie_url %>
-                  <iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
-                <% end %>
-              </dd>
-            </dl>
-          <% end %>
-        </dl>
-        <form><%= submit_tag t(:add_step, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></form>
-      </div>
+				<p class="form_actions">
+					<%= f.submit name:"edit", value: t( :edit,   scope:"views.recipes.edit" ) %>
+					<%= f.submit name:"save", value: t( :commit, scope:"views.recipes.edit" ) %>
+				</p>
 
-      <h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
-      <div class="section"><%=f.text_area :one_point, value: @recipe.one_point %></div>
-
-      <h3><%= t(:public, scope:"activerecord.attributes.recipe") %></h3>
-      <p><%= f.select :public, { t( :public, scope:"views.recipes.new" ) => true, t( :closed, scope:"views.recipes.new" ) => false } %></p>
-
-      <p class="form_actions">
-        <%= f.submit name:"edit", value: t( :edit,   scope:"views.recipes.edit" ) %>
-        <%= f.submit name:"save", value: t( :commit, scope:"views.recipes.edit" ) %>
-      </p>
-    <% end %>
-
-    <div id="search_youtube_area">
-      <%= hidden_field_tag :step_number, "1", id:"search_youtube_step_number" %>
-      <%= text_field_tag :vq, "", id:"search_youtube_text" %>
-      <%= button_tag "検索", type:"button", id:"search_youtube_button" %>
-      <ul id="search_result_list">
-      </ul>
-      <%= button_tag "close", type:"button", id:"search_youtube_area_close_button" %>
-    </div>
-  </div>
+				<div id="search_youtube_area">
+					<%= hidden_field_tag :step_number, "1", id:"search_youtube_step_number" %>
+					<%= text_field_tag :vq, "", id:"search_youtube_text" %>
+					<%= button_tag "検索", type:"button", id:"search_youtube_button" %>
+					<ul id="search_result_list">
+					</ul>
+					<%= button_tag "close", type:"button", id:"search_youtube_area_close_button" %>
+				</div>
+			</article>
+		</div>
+		<!--main_clmEnd-->
+		<%=render partial:"layouts/right_side_content" %>
+	</div>
+	<!--contents-->
+	<% end %>
 </div>
+
+<%= render partial:"layouts/content_footer" %>
 

@@ -1,0 +1,26 @@
+/* forbiddon select */
+
+input#recipe_draft_title {
+  font-size:1.0em;
+  width:23em;
+}
+
+.ingredient_row {
+  .ingredient_name > input { 
+    width:14em;
+  }
+  .ingredient_quantity > input{ 
+    width:8em;
+  }
+  input {
+    margin:0;
+    font-size:13px;
+  }
+}
+
+#recipes_steps_area:before {
+  content:"";
+  display:block;
+  width:100%;
+  clear:both;
+}
