@@ -2,7 +2,7 @@
 
 UserProfile:
   fields:
-    default: user_id, nickname, sex, first_name, last_name, birthday, mail_address, postcode, address, address_point
-    form: user_id, nickname, sex, first_name, last_name, birthday, mail_address, postcode, address, address_point
+    default: user_id, nickname, sex, first_name, family_name, birthday, email, prefecture_id, prefecture_id, recipe_count
+    form: user_id, nickname, sex, first_name, family_name, birthday, email, prefecture_id, prefecture_id, comment
   relationships: 
   application: Application

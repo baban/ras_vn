@@ -24,5 +24,4 @@ $(window).load ->
     last_request_time = new Date()
     jQuery.getJSON( "/streams/", param, add_element )
 
-
-  setInterval request_newinfo, 10*1000
+  setInterval request_newinfo, 30*1000
