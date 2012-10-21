@@ -19,8 +19,24 @@ input#recipe_draft_title {
 }
 
 #recipes_steps_area:before {
-  content:"";
+  content:"aaaa";
   display:block;
   width:100%;
   clear:both;
+}
+
+#recipes_steps_area {
+  .movie_field {
+    form.movie_button_field {
+      border-style:none;
+      margin:0;
+      padding:0;
+    }  
+    input.movie_selecter {
+      margin-top:3px;
+    }
+    input.movie_button {
+      margin:0;
+    }
+  }
 }

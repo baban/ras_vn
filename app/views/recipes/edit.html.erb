@@ -1,5 +1,9 @@
-<%= include_action_javascript %>
-<%= include_action_style_sheet %>
+<% content_for :javascript_after do %>
+	<%= javascript_include_tag "recipes/edit" %>
+<% end %>
+<% content_for :style_after do %>
+	<%= stylesheet_link_tag "recipes/edit" %>
+<% end %>
 
 <div class="bace_bg">
 	<%=semantic_form_for @recipe, url: recipe_url(@recipe.id), html:{ multipart: true } do |f| %>
@@ -8,7 +12,7 @@
 		<div class="main_clm">
 			<article class="contents_recipes">
 				<h1 class="ttl_recipe"><%= f.text_field :title, value: @recipe.title %></h1>
-				<%= image_tag @recipe.recipe_image, width:"280", height:"466", alt:"Ẩm Thực Việt" %>
+				<%= image_tag @recipe.recipe_image, width:"280", height:"466", alt:"image" %>
 				<div class="explanation">
 					<p><%= f.text_area :description, value: @recipe.description, size:"40x3" %></p>
 					<div class="clearfix">
@@ -36,8 +40,8 @@
 						<div class="ingredients_list">
 							<% @recipe.foodstuffs.each do |foodstuff| %>
 								<div class="ingredient_row clearfix">
-									<div class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name %></div>
-									<div class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount %></div>
+									<div class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder:"食材" %></div>
+									<div class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder:"分量" %></div>
 								</div>
 							<% end %>
 							<form><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %></form>
@@ -45,35 +49,35 @@
 					</div>
 				</div>
 				<div id="recipes_steps_area" class="area">
-				  <dl id="recipe_steps">
-				    <% @recipe.edit_steps.each.with_index(1) do |step,i| %>
-				    <dl class="step" id="recipe_step_<%= i %>">
-				      <dt>Step <%= i %></dt>
-				      <dt class="selecter image_field">
-					<%= label :image, "Image" %>
-					<%= file_field_tag "recipe_steps[][image]", class:"image_selecter" %>
-				      </dt>
-				      <dt class="selecter movie_field">
-					<form class="movie_button_field">
-					  <%= submit_tag "Movie url", type:"button", class:"movie_button"  %>
-					  <%= hidden_field_tag "recipe_step_id_#{i}", i, class:"recipe_step_id" %>
-					</form>
-					<%= label :recipe_steps, "Movie url" %>
-					<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter" %>
-				      </dt>
-				      <dd>
-					<%= text_area_tag "recipe_steps[][content]", step.content, class:'step_edit_area' %>
-					<% if step.image %>
-					<%=image_tag step.image.url(:thumb), alt:"" %>
+					<dl id="recipe_steps">
+					<% @recipe.edit_steps.each.with_index(1) do |step,i| %>
+					<dl class="step" id="recipe_step_<%= i %>">
+						<dt>Step <%= i %></dt>
+						<dt class="selecter image_field">
+							<%= label :image, "Image" %>
+							<%= file_field_tag "recipe_steps[][image]", class:"image_selecter" %>
+						</dt>
+						<dt class="selecter movie_field">
+							<form class="movie_button_field">
+								<%= submit_tag "Movie url", type:"button", class:"movie_button"  %>
+								<%= hidden_field_tag "recipe_step_id_#{i}", i, class:"recipe_step_id" %>
+							</form>
+							<%= label :recipe_steps, "Movie url" %>
+							<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter" %>
+						</dt>
+						<dd>
+							<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area" %>
+							<% if step.image %>
+								<%=image_tag step.image.url(:thumb), alt:"" %>
+							<% end %>
+							<% if step.movie_url %>
+								<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
+							<% end %>
+						</dd>
+					</dl>
 					<% end %>
-					<% if step.movie_url %>
-					<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
-					<% end %>
-				      </dd>
-				    </dl>
-				    <% end %>
-				  </dl>
-				  <form><%= submit_tag t(:add_step, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></form>
+					</dl>
+					<form><%= submit_tag t(:add_step, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></form>
 				</div>
 				
 				<h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
@@ -91,8 +95,7 @@
 					<%= hidden_field_tag :step_number, "1", id:"search_youtube_step_number" %>
 					<%= text_field_tag :vq, "", id:"search_youtube_text" %>
 					<%= button_tag "検索", type:"button", id:"search_youtube_button" %>
-					<ul id="search_result_list">
-					</ul>
+					<ul id="search_result_list"></ul>
 					<%= button_tag "close", type:"button", id:"search_youtube_area_close_button" %>
 				</div>
 			</article>
