@@ -4,7 +4,9 @@
 		<div class="main_clm">
 			<article class="contents_recipes">
 				<h1 class="ttl_recipe"><p><%= @recipe.title %></p></h1>
-				<%= image_tag @recipe.recipe_image, width:"280", height:"466", alt:"Ẩm Thực Việt" %>
+				<div id="recipe_image_area">
+					<%= image_tag @recipe.recipe_image, width:"280", height:"466", alt:"image", id:"recipe_image" %>
+				</div>
 				<div class="explanation">
 					<p><%= @recipe.description %></p>
 					<div class="clearfix">

@@ -12,7 +12,10 @@
 		<div class="main_clm">
 			<article class="contents_recipes">
 				<h1 class="ttl_recipe"><%= f.text_field :title, value: @recipe.title %></h1>
-				<%= image_tag @recipe.recipe_image, width:"280", height:"466", alt:"image" %>
+				<%=f.file_field :recipe_image %>
+				<div id="recipe_image_area">
+					<%= image_tag @recipe.recipe_image, width:"280", height:"466", alt:"image", id:"recipe_image" %>
+				</div>
 				<div class="explanation">
 					<p><%= f.text_area :description, value: @recipe.description, size:"40x3" %></p>
 					<div class="clearfix">
@@ -37,15 +40,15 @@
 							<div class="material clearfix">
 							</div><div class="clear"></div></h3>
 						</div>
-						<div class="ingredients_list">
+						<div class="ingredients_list" id="foodstuffs">
 							<% @recipe.foodstuffs.each do |foodstuff| %>
 								<div class="ingredient_row clearfix">
 									<div class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder:"食材" %></div>
 									<div class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder:"分量" %></div>
 								</div>
 							<% end %>
-							<form><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %></form>
 						</div>
+						<form><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %></form>
 					</div>
 				</div>
 				<div id="recipes_steps_area" class="area">

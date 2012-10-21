@@ -54,9 +54,7 @@ class RecipesController < ApplicationController
   def update
     @recipe = RecipeDraft.find(params[:id])
 
-    @foodstuffs = params[:foodstuffs]
-      .select{ |h| h["name"].blank?.! }
-      .map{ |h| RecipeFoodstuffDraft.new(name: h["name"], amount: h["amount"]) }
+    @foodstuffs = params[:foodstuffs].blank? ? [] : params[:foodstuffs].select{ |h| h["name"].blank?.! }.map{ |h| RecipeFoodstuffDraft.new(name: h["name"], amount: h["amount"]) }
     logger.info @foodstuffs.inspect
     @recipe.foodstuffs= @foodstuffs
 
@@ -70,6 +68,8 @@ class RecipesController < ApplicationController
     if params[:new_food_genre]
       @recipe.recipe_food_id = RecipeFood.create( recipe_food_genre_id: params[:recipe_genre_selecter], name: params[:new_food_genre] ).id
     end
+    logger.info @recipe.valid?
+    logger.info @recipe.errors.inspect
     @recipe.save
 
     # draft data is copying

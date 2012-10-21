@@ -1,10 +1,10 @@
 <%= include_action_javascript %>
 
 <div id="content_body" class="section">
-  <h2><%= t( :create_recipe, scope:"views.recipes.new" ) %></h2>
+  <h2>レシピ作成</h2>
   <%= semantic_form_for @recipe, html:{ multipart: true } do |f| %>
     <% unless @recipe.valid? %>
-      <div class="alert">
+      <div id="error_explanation">
         <% @recipe.errors.each do |key,errormes| %>
           <p><%= errormes %></p>
         <% end %>

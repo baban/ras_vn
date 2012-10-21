@@ -1,5 +1,6 @@
 /* forbiddon select */
 
+
 input#recipe_draft_title {
   font-size:1.0em;
   width:23em;
@@ -19,10 +20,19 @@ input#recipe_draft_title {
 }
 
 #recipes_steps_area:before {
-  content:"aaaa";
+  content:"";
   display:block;
   width:100%;
   clear:both;
+  form.movie_button_field {
+    border-style:none;
+    background-color:gray;
+    padding:4px;
+  }
+  
+  input.movie_button {
+    border-style:none;
+  }
 }
 
 #recipes_steps_area {
@@ -34,9 +44,6 @@ input#recipe_draft_title {
     }  
     input.movie_selecter {
       margin-top:3px;
-    }
-    input.movie_button {
-      margin:0;
-    }
+    }  
   }
 }
