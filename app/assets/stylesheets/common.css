@@ -110,11 +110,12 @@ footer .inner li{ margin-left:10px;}
   text-align:center;
   display:block;
   margin-top:10px;
-  width:450px;
+  width:100%;
 }
 
 .current_page {
-    font-size:20px; color: #666666;
+  font-size:20px;
+  color: #666666;
   font-weight: bold;
   padding: 0 5px;
 }

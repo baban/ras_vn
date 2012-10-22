@@ -1,16 +1,10 @@
 <% content_for :stylesheet_after do %>
-	<%= stylesheet_link_tag :contents %>
+  <%= stylesheet_link_tag :contents %>
 <% end %>
 
 <div class="bace_bg">
   <div id="content_body" class="contents_bg clearfix">
-    <div id="content_header">
-      <ul id="content_menu_list">
-        <li><%= link_to "マイページ",   controller:"mypage", action:"index" %></li>
-        <li><%= link_to "ブックマーク", controller:"bookmarks", action:"index" %></li>
-        <li><%= link_to "予約確認",     controller:"restaurant_reserves", action:"index" %></li>
-      </ul>
-    </div>
+    <%= render partial:"mypage/content_header" %>
     <h2 class="txt20"><%= t(:user_profile, scope:"activerecord.models") %></h2>
     <table>
       <tr><td><%= profile_image_tag @profile %></td></tr>

@@ -16,8 +16,8 @@ RasVn::Application.routes.draw do
   resources(:recipe_advertisements, :recipe_comments, :recipe_foods)
   resources(:recipe_food_genres, only:[:index])
   resources(:streams)
-  resources(:newsfeeds,only:[:index,:show])
-  resources(:mypage){ member { get :recipes, :recipe_comments } }
+  resources(:newsfeeds, only:[:index,:show])
+  resources(:mypage, only:[:index]){ collection { get :recipes, :recipe_comments } }
   resources(:kitchens) { member { get :recipes } }
 
   match '/statistics(/:action(/:id))', controller:"statistics"

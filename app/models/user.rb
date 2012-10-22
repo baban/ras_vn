@@ -46,5 +46,10 @@ class User < ActiveRecord::Base
   def admin?
     admin
   end
+
+  def bookmarked_recipes
+    recipe_ids = Bookmark.where( user_id: self.id ).select(:recipe_id)
+    Recipe.where( " id IN (#{recipe_ids.to_sql}) " )
+  end
 end
 
