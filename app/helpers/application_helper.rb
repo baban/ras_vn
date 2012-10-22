@@ -2,10 +2,10 @@
 
 module ApplicationHelper
   def profile_image_tag(profile)
-    if profile and profile.image
+    if profile and profile.image.url(:thumb).present?
       image_tag(profile.image.url(:thumb), alt: profile.nickname, size:"180x180")
     else
-      image_tag("/assets/noimage.gif", alt: "no_image", size:"180x180")
+      image_tag("/assets/noimage.png", alt: "no_image", size:"180x180")
     end
   end
 
