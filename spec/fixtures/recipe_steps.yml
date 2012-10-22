@@ -1,18 +1,21 @@
 recipe_steps_0:
   id: 1
   recipe_id: 1
-  image: null
+  image: Tôm sốt phô mai_1.jpg
   movie_url: null
-  content: じゃが芋を一口サイズにカットし、ビニール袋に入れ、レンジで5分ほど加熱する。ベーコン、キャベツも切っておく。
+  content: "-Tôm rửa sạch ngắt đầu tôm rút ruột ( Hoặc để nguyên con tùy ý ) .
+-Phô mai cho ra bát, dùng nước ấm nghiền mịn, rồi cho gia vị và các loại hành ngò, parsley, oregano ..vào đánh cho tan.
+-Cho dầu ăn lên chảo, lửa to, cho tỏi bằm vào đảo đũa cho thật thơm, cháy cạnh thì cho tôm vào, đảo đều tay cho chín, rắc tí bột nêm cho tôm vừa ăn."
   deleted_at: null
   created_at: 2012-06-10 13:56:36 UTC
   updated_at: 2012-06-10 13:56:36 UTC
 recipe_steps_1:
   id: 2
   recipe_id: 1
-  image: null
+  image: Tôm sốt phô mai_2.jpg
   movie_url: null
-  content: フライパンに油をしき、1のじゃが芋を焼き目を少し付けるような感じで焼く。
+  content: "-Sau đó đổ bát sốt phô mai chuẩn bị sẵn vào, lửa nhỏ để tôm được ngấm đều tầm 3 phút là được.
+-Tôm chín dọn ra dĩa là xong."
   deleted_at: null
   created_at: 2012-06-10 13:56:36 UTC
   updated_at: 2012-06-10 13:56:36 UTC

@@ -1,0 +1,17 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ja:
+  date:
+    order: 
+      - :year
+      - :month
+      - :day
+  time:
+    formats:
+      default: "%Y-%m-%d"
+  order:
+    recipes: 件
+  status:
+    public: 公開
+    closed: 非公開

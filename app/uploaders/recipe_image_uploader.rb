@@ -13,6 +13,10 @@ class RecipeImageUploader < BaseUploader
   version :top_large_thumb do
     process resize_to_fill: [170,250], watermarking: []
   end
+  
+  version :detail_large_thumb do
+    process resize_to_fill: [280,466], watermarking: []
+  end
 
   def watermarking
     manipulate! do |img|
