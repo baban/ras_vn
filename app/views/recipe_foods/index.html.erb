@@ -44,7 +44,7 @@
 				</p>
 				<% if @recomment_food_genre_recipe %>
 				<article class="rec_cat rec_cat3 clearfix">
-					<%= image_tag @recomment_food_genre_recipe.image.url(:thumb), width:"120", height:"170", alt:"" %>
+					<%= image_tag @recomment_food_genre_recipe.image.url(:top_thumb), width:"120", height:"170", alt:"" %>
 					<div class="txt">
 						<h1 class="txt16"><%= link_to @recomment_food_genre_recipe.title, recipe_url(@recomment_food_genre_recipe) %></h1>
 						<h2>
