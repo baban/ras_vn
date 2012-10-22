@@ -14,7 +14,7 @@
 				<h1 class="ttl_recipe"><%= f.text_field :title, value: @recipe.title %></h1>
 				<%=f.file_field :recipe_image %>
 				<div id="recipe_image_area">
-					<%= image_tag @recipe.recipe_image, width:"280", height:"466", alt:"image", id:"recipe_image" %>
+					<%= image_tag @recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"image", id:"recipe_image" %>
 				</div>
 				<div class="explanation">
 					<p><%= f.text_area :description, value: @recipe.description, size:"40x3" %></p>

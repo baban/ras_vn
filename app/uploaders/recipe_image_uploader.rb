@@ -13,16 +13,26 @@ class RecipeImageUploader < BaseUploader
   version :top_large_thumb do
     process resize_to_fill: [170,250], watermarking: []
   end
-  
   version :detail_large_thumb do
-    process resize_to_fill: [280,466], watermarking: []
+    process resize_to_fill: [280,466], big_watermarking: []
+  end
+
+  def big_watermarking
+    manipulate! do |img|
+      Rails.logger.info :manipulate
+      img.combine_options do |c|
+        c.gravity "Center"
+        c.draw 'image Over 0,0 0,0 "public/large_watermark.png"'
+      end
+      img
+    end
   end
 
   def watermarking
     manipulate! do |img|
       Rails.logger.info :manipulate
       img.combine_options do |c|
-        c.gravity "SouthEast"
+        c.gravity "Center"
         c.draw 'image Over 0,0 0,0 "public/watermark.png"'
       end
       img

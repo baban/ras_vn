@@ -1,4 +1,9 @@
-<%= include_action_javascript %>
+<% content_for :javascript_after do %>
+	<%= javascript_include_tag "recipes/new" %>
+<% end %>
+<% content_for :style_after do %>
+	<%= stylesheet_link_tag "recipes/new" %>
+<% end %>
 
 <div id="content_body" class="section">
   <h2>レシピ作成</h2>
