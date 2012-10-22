@@ -18,7 +18,7 @@
 				<ul class="clearfix flo_r">
 					<li><%=f.submit t(:sign_out, scope:"views.header") %></li>
 					<li>
-						<%= image_tag current_user.profile.image.url(:icon), alt:"", id:"profile_image_icon" %>
+						<%= image_tag (current_user.profile.image.url(:icon).presence || "no_image_prof_icon.png"), alt:"", id:"profile_image_icon" %>
 						<%= link_to current_user.profile.nickname, controller:"mypage", action:"index" %>
 					</li>
 				</ul>
