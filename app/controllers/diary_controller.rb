@@ -6,7 +6,7 @@ class DiaryController < ApplicationController
   def index
     id = params[:user_id]
     @page = params[:page] || 1
-    @user = User.find_by_id(id)
+    @user = User.find_by_id(id) || current_user
     @diary = @user.diaries.page(@page)
   end
 

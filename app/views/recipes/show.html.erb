@@ -3,7 +3,10 @@
 		<!--main_clm-->
 		<div class="main_clm">
 			<article class="contents_recipes">
-				<h1 class="ttl_recipe"><p><%= @recipe.title %></p></h1>
+				<h1 class="ttl_recipe">
+					<%= @recipe.title %>
+					<% if my_recipe? %><%= link_to "編集する", action:"edit" %><% end %>
+				</h1>
 				<div id="recipe_image_area">
 					<%= image_tag @recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"image", id:"recipe_image" %>
 				</div>

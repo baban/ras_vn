@@ -28,7 +28,7 @@
 					</div>
 					<div>
 						<h3><%= t(:genre, scope:"views.recipes.edit") %></h3>
-						<%= recipe_genre_select_area(f) %>
+						<%= recipe_genre_select_area(f, value: @recipe.recipe_food_id ) %>
 						<p><%= label_tag :new_food_genre, "ジャンル追加" %>:<%= text_field_tag :new_food_genre, "", size: 10 %></p>
 					</div>
 					<p id="genre_description">希望のジャンルがない場合は、上のテキストボックスでジャンルを追加してください</p>
