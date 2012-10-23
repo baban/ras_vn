@@ -6,7 +6,8 @@
 <div class="main_clm">
 	<article class="rec_cat clearfix">
 		<h1 class="txt12"><%= t(:recomment_recipe_title, scope:"views.content_footer") %></h1>
-		<section><%= image_tag @recommend_recipe.image.url(:top_large_thumb), width:"170", height:"250", alt:"" %>
+		<section>
+			<%= image_tag @recommend_recipe.image.url(:top_large_thumb) || "no_image_cook.png", width:"170", height:"250", alt:"" %>
 			<div class="txt">
 				<h1 class="txt16"><%= link_to @recommend_recipe.title, recipe_url(@recommend_recipe) %></h1>
 				<h2><%= @recommend_recipe.description %>
