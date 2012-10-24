@@ -22,10 +22,15 @@ $(window).load ->
       '<dd><textarea class="step_edit_area" name="steps[]"></textarea></dd>'+
     '</dl>';
     $("#recipe_steps").append(s)
-    
-  $("#recipe_genre_selecter").change ->
-    $("select#recipe_genre_selecter option:selected").each -> 
+
+  recipe_food_id_select = ->
+    if $("#recipe_draft_recipe_food_id").val()
       $("#recipe_draft_recipe_food_id").css( "display", "inline" )
+  recipe_food_id_select()
+  
+  $("#recipe_genre_selecter").change ->
+    $("#recipe_draft_recipe_food_id").css( "display", "inline" )
+    $("select#recipe_genre_selecter option:selected").each -> 
       labelname = $(this).text()
       $("#recipe_draft_recipe_food_id optgroup").css( "display", "none" )
       $("#recipe_draft_recipe_food_id optgroup[label='"+labelname+"']").css( "display", "block" )
