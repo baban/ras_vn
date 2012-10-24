@@ -11,7 +11,7 @@ vn:
     formats:
       default: "%Y-%m-%d"
   order:
-    recipes: 件
+    recipes: Recipe
   status:
-    public: 公開
-    closed: 非公開
+    public: Công khai
+    closed: Không công khai
