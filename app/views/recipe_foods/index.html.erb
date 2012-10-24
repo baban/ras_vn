@@ -44,7 +44,7 @@
 				</p>
 				<% if @recomment_food_genre_recipe %>
 				<article class="rec_cat rec_cat3 clearfix">
-					<%= image_tag @recomment_food_genre_recipe.image.url(:top_thumb), width:"120", height:"170", alt:"" %>
+					<%= image_tag @recomment_food_genre_recipe.image.url(:top_large_thumb), width:"120", height:"170", alt:"" %>
 					<div class="txt">
 						<h1 class="txt16"><%= link_to @recomment_food_genre_recipe.title, recipe_url(@recomment_food_genre_recipe) %></h1>
 						<h2>
@@ -69,7 +69,7 @@
 					</div>
 					<% @recipes.each do |recipe| %>
 						<section class="rec_cat4 clearfix">
-							<%= image_tag recipe.image.url(:thumb), width:"100", height:"141", alt:"" %>
+							<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
 							<div class="txt">
 								<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
 								<p>by <%= link_to recipe.user.profile.nickname %></p>
