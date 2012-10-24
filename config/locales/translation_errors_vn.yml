@@ -1,12 +1,40 @@
 vn:
   activerecord:
+    errors:
+      messages:
+        record_invalid: "保存エラー"
+      models:
+        user:
+          attributes:
+            email:
+              blank: メールアドレスは入力必須です
+              taken: はすでに登録されています
+            password:
+              blank: パスワードは入力必須です
+            password_confirmation:
+              blank: パスワードは入力必須です
+            email:
+              blank: メールアドレスは入力必須です
+            prefecture_id:
+              inclusion: お住まいの地域を選択してください。
+        user_profile:
+          attributes:
+            nickname:
+              blank: ニックネームは入力必須です
+            prefecture_id:
+              inclusion: お住まいの地域を選択してください。
+        recipe:
+          attributes:
+            title:
+              blank: タイトルは入力必須です
+            image:
+              blank: 画像は登録必須です
     models:
       admin_user: 管理者
       bookmark: ブックマーク
       distinct: 市町村
       diary: 日記
-      food_genre: 料理ジャンル
-      newsfeed: Topic&News
+      food_genre: food_genre  #g
       omniuser: omniuser  #g
       prefecture: 県
       recipe: レシピ
@@ -20,7 +48,7 @@ vn:
       recipe_step: レシピステップ
       search_log: 検索ログ
       toppage_content: toppage_content  #g
-      tpl_set: デザインテンプレート
+      tpl_sets: tpl_sets  #g
       user: ユーザー
       user_profile: プロフィール
       user_profile_visibility: プロフィール表示
@@ -54,11 +82,6 @@ vn:
 
       food_genre:
         name: 名前
-
-      newsfeed:
-        title: タイトル
-        content: 内容
-        image: 画像
 
       omniuser:
         name: name  #g
@@ -124,9 +147,8 @@ vn:
         location: location  #g
         words: words  #g
 
-      tpl_set:
-        name: 名前
-        content: 内容
+      tpl_sets:
+        name: name  #g
 
       user:
         access_secret: access_secret  #g
@@ -137,7 +159,6 @@ vn:
         email: メールアドレス
         encrypted_password: パスワード
         password: パスワード
-        password_confirmation: パスワード(確認)
         last_sign_in_at: last_sign_in_at  #g
         last_sign_in_ip: last_sign_in_ip  #g
         recipe: :activerecord.models.recipe  #g
@@ -156,7 +177,7 @@ vn:
         comment: コメント
         first_name: 名
         image: 写真
-        family_name: 姓
+        last_name: 姓
         mail_address: メールアドレス
         nickname: ニックネーム
         sex: 性別
