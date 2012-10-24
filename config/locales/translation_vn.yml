@@ -1,16 +1,16 @@
-ja:
+vn:
   activerecord:
     models:
-      admin_user: 管理者
-      bookmark: ブックマーク
-      distinct: 市町村
-      diary: 日記
-      food_genre: 料理ジャンル
+      admin_user: Admin
+      bookmark: Bookmark
+      distinct: Tên thành phố, quận, huyện
+      diary: Nhật kí
+      food_genre: Loại ẩm thực
       newsfeed: Topic&News
       omniuser: omniuser  #g
-      prefecture: 県
-      recipe: レシピ
-      recipe_advertisement: 広告
+      prefecture: Tên thành phố
+      recipe: Recipe
+      recipe_advertisement: Quảng cáo
       recipe_comment: つくれぽ
       recipe_food: ジャンル（小カテゴリ)
       recipe_food_genre: ジャンル（大カテゴリ)

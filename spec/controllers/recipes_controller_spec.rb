@@ -47,8 +47,10 @@ describe RecipesController do
 
   describe "GET 'edit'" do
     context "非ログイン時" do
-      it "returns http success" do
+      before do
         get :edit, id: 1
+      end
+      it "returns http success" do
         response.should be_redirect
       end
     end
