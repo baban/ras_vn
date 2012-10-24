@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20121007142802) do
     t.text     "content",                                        :null => false
     t.integer  "category_id", :default => 0,                     :null => false
     t.string   "image"
-    t.datetime "publiced_at", :default => '2012-10-16 00:00:00', :null => false
+    t.datetime "publiced_at", :default => '2012-10-25 00:00:00', :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
@@ -168,7 +168,7 @@ ActiveRecord::Schema.define(:version => 20121007142802) do
   create_table "recipe_food_genre_rankings", :force => true do |t|
     t.integer  "recipe_food_genre_id",                           :null => false
     t.integer  "point",                :default => 0,            :null => false
-    t.date     "ranked_at",            :default => '2012-10-16', :null => false
+    t.date     "ranked_at",            :default => '2012-10-25', :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
