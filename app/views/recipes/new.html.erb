@@ -32,6 +32,6 @@
     <p><%= f.select :public, { t( :public, scope:"views.recipes.new" ) => true, t( :closed, scope:"views.recipes.new" ) => false } %></p>
     </p>
     <p><%= link_to t( :caution, scope:"views.recipes.new" ), action:"caution" %></p>
-    <p><%= f.submit t( :next_step_button, scope:"views.recipes.new" ) %></p>
+    <p><%= f.submit t( :next_step_button, scope:"views.recipes.new" ), id:"regist_button" %></p>
   <% end %>
 </div>
