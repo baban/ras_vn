@@ -6,7 +6,11 @@ $(window).load ->
     .live( "ajax:success", (event, data, status, xhr) ->
       console.log("success")
       console.log(data)
-      $("#love_area").html("unfollow")
+      if data["value"]
+        txt = "unfollow"
+      else
+        txt = "follow"
+      $("#follow_button").text( txt )
     )
     .live( "ajax:error", (data, status, xhr) ->
       console.log("error")

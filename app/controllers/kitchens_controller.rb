@@ -25,6 +25,19 @@ class KitchensController < ApplicationController
   end
 
   def follow
+    return if !params[:id] or !params[:user_id]
+
+    follow = Follower.find_by_user_id_and_follower_id( params[:user_id], params[:id] )
+    ret = !follow
+    unless follow
+      Follower.create( user_id: params[:user_id], follower_id: params[:id] )
+    else
+      follow.delete
+    end
+
+    respond_to do |format|
+      format.json { render json: { id: params[:id], value: ret } }
+    end
   end
 
   private
@@ -34,6 +47,6 @@ class KitchensController < ApplicationController
   end
 
   def followed?
-    !!Follower.find_by_user_id_and_follower_id( params[:id], current_user.id )
+    !!Follower.find_by_user_id_and_follower_id( current_user.id, params[:id] )
   end
 end
