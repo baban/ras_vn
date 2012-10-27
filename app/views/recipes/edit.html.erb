@@ -58,7 +58,7 @@
 						<dt>Step <%= i %></dt>
 						<dt class="selecter image_field">
 							<%= label :image, "Image" %>
-							<%= file_field_tag "recipe_steps[][image]", class:"image_selecter" %>
+							<%= file_field_tag "recipe_steps[][image]", class:"image_selecter", id:"recipe_steps_#{i}_image_selecter" %>
 						</dt>
 						<dt class="selecter movie_field">
 							<form class="movie_button_field">
@@ -66,10 +66,10 @@
 								<%= hidden_field_tag "recipe_step_id_#{i}", i, class:"recipe_step_id" %>
 							</form>
 							<%= label :recipe_steps, "Movie url" %>
-							<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter" %>
+							<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter", id:"recipe_steps_#{i}_movie_url" %>
 						</dt>
 						<dd>
-							<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area" %>
+							<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area", id:"recipe_steps_#{i}_content" %>
 							<% if step.image %>
 								<%=image_tag step.image.url(:thumb), alt:"" %>
 							<% end %>
@@ -90,8 +90,8 @@
 				<p><%= f.select :public, { t( :public, scope:"views.recipes.new" ) => true, t( :closed, scope:"views.recipes.new" ) => false } %></p>
 
 				<p class="form_actions">
-					<%= f.submit name:"edit", value: t( :edit,   scope:"views.recipes.edit" ) %>
-					<%= f.submit name:"save", value: t( :commit, scope:"views.recipes.edit" ) %>
+					<%= f.submit name:"edit", value: t( :edit,   scope:"views.recipes.edit" ), id:"edit_button" %>
+					<%= f.submit name:"save", value: t( :commit, scope:"views.recipes.edit" ), id:"save_button" %>
 				</p>
 
 				<div id="search_youtube_area">

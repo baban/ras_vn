@@ -52,34 +52,28 @@ class RecipesController < ApplicationController
   end
 
   def update
-    @recipe = RecipeDraft.find(params[:id])
+    @recipe = Recipe.find(params[:id]).draft
 
-    @foodstuffs = params[:foodstuffs].blank? ? [] : params[:foodstuffs].select{ |h| h["name"].blank?.! }.map{ |h| RecipeFoodstuffDraft.new(name: h["name"], amount: h["amount"]) }
-    logger.info @foodstuffs.inspect
+    @foodstuffs = params[:foodstuffs].presence || []
+    @foodstuffs = @foodstuffs.select{ |h| h["name"].present? }.map{ |h| RecipeFoodstuffDraft.new(name: h["name"], amount: h["amount"]) }
     @recipe.foodstuffs= @foodstuffs
 
-    @steps = params[:recipe_steps]
-      .select{ |o| o[:content].blank?.! }
-      .map { |v| RecipeStepDraft.new(v) }
+    @steps = params[:recipe_steps].select{ |o| o[:content].present? }.map { |v| RecipeStepDraft.new(v) }
     @recipe.steps= @steps
 
     @recipe.attributes= params[:recipe]
     @recipe.user_id= current_user.id
-    if params[:new_food_genre]
-      @recipe.recipe_food_id = RecipeFood.create( recipe_food_genre_id: params[:recipe_genre_selecter], name: params[:new_food_genre] ).id
-    end
-    logger.info @recipe.valid?
-    logger.info @recipe.errors.inspect
+    
+    @recipe.recipe_food_id = RecipeFood.create( recipe_food_genre_id: params[:recipe_genre_selecter], name: params[:new_food_genre] ).id if params[:new_food_genre]
     @recipe.save
 
-    # draft data is copying
+    # recipe_drafts data is copying
     @recipe.copy_public
 
     if params[:edit]
-      flash[:notice] = t(:tmp_save, scope:"views.recipes.edit")
-      render action: "edit"
+      render( { action: "edit" }, notice: t(:tmp_save, scope:"views.recipes.edit") )
     else
-      redirect_to( { action:"show", id: params[:id] }, notice: t(:save_complete, scope:"views.recipes.edit") )
+      redirect_to( { action:"show", id: @recipe }, notice: t(:save_complete, scope:"views.recipes.edit") )
     end
   end
 
@@ -100,8 +94,7 @@ class RecipesController < ApplicationController
 
   private
   def editable_user_filter
-    return redirect_to(action:'index') unless params[:id]
-    @recipe = Recipe.find(params[:id])
+    return redirect_to( action:'index' ) unless params[:id]
     return redirect_to( recipes_url, alert: t("views.recipes.create.other_user_recipe_alert") ) unless my_recipe?
   end
 
@@ -121,9 +114,5 @@ class RecipesController < ApplicationController
   def my_recipe?
     recipe = Recipe.find_by_id(params[:id])
     recipe && current_user && (recipe.user_id == current_user.id)
-  end
-
-  def admin_user?
-    false #current_user.try(:admin?)
   end
 end

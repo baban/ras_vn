@@ -12,7 +12,7 @@ RasVn::Application.routes.draw do
 
   resource(:profile)
   resources(:bookmarks, :diary, :information)
-  resources(:recipes) { collection { get :like, :caution } }
+  resources(:recipes) { collection { get :love, :caution } }
   resources(:recipe_advertisements, :recipe_comments, :recipe_foods)
   resources(:recipe_food_genres, only:[:index])
   resources(:streams)

@@ -7,4 +7,9 @@ class RecipeComment < ActiveRecord::Base
   scope :topics, ->{ visibles.page(1).per(3) }
 
   mount_uploader :image, RecipeCommentUploader
+
+  def prof
+    UserProfile.find_by_user_id(self.user_id)
+  end
+  alias :chef :prof
 end

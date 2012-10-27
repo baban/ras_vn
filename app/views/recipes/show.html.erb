@@ -1,8 +1,20 @@
+<%= include_action_style_sheet %>
+<%= include_action_javascript %>
+
+<%#= render partial:"forbiddon_right_click" %>
+
 <div class="bace_bg">
 	<div class="contents_bg clearfix">
 		<!--main_clm-->
 		<div class="main_clm">
 			<article class="contents_recipes">
+				<% if user_signed_in? %>
+					<%=form_for( @bookmark, html:{ id:"bookmark_button" } ) do |f| %>
+						<%= f.hidden_field :recipe_id, value: @recipe.id %>
+						<%= f.hidden_field :user_id, value: current_user.id %>
+						<%= f.submit (bookmarked? ? t(:unbookmark, scope:"views.recipes.show") : t(:bookmark, scope:"views.recipes.show")) %>
+					<% end %>
+				<% end %>
 				<h1 class="ttl_recipe">
 					<%= @recipe.title %>
 					<% if my_recipe? %><%= link_to "編集する", action:"edit" %><% end %>
@@ -11,6 +23,13 @@
 					<%= image_tag @recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"image", id:"recipe_image" %>
 				</div>
 				<div class="explanation">
+					<% if login? and (not loved?) %>
+						<div id="love_area">
+							<%= link_to "love!(#{@recipe.love_count})", { action:"love", id: params[:id], user_id: current_user.id }, remote: true, id: "love_button" %>
+						</div>
+					<% else %>
+						love(<%= @recipe.love_count %>)
+					<% end %>
 					<p><%= @recipe.description %></p>
 					<div class="clearfix">
 						<p class="user_name">
@@ -41,32 +60,34 @@
 
 			</article>
 
-			<div class="cate01 clearfix">
-				<section class="rec_cat5 clearfix">
-					<%= image_tag "recipe/qu7ecvq1.png", width:"280", height:"466", alt:"Ẩm Thực Việt" %>
-					<div class="txt">
-						<h1 class="txt16"><a href="#">豚しゃぶ用のお肉で肉巻きおにぎり</a></h1>
-						<p>
-							by<a href="#">sssssssma</a>
-						</p>
-						<h2>♡2011.4.22 つくれぽ100人ありがとう～♪ 最近人気の肉巻きおにぎりは作った方が買うより断然お安いです♪
-						<div class="info_area">
-							公開：<span>11/07/30&nbsp;&nbsp;</span>更新：<span>12/03/31&nbsp;&nbsp;</span> レシピID：<span>1509988</span>
-						</div></h2>
-					</div>
-				</section>
-			</div>
+			<% @recipe.comments.each do |comment| %>
+				<div class="cate01 clearfix">
+					<section class="rec_cat5 clearfix">
+						<%= image_tag comment.image.url(:thumb), size:"280x466", alt:"" %>
+						<div class="txt">
+							<h1 class="txt16"><a href="#">豚しゃぶ用のお肉で肉巻きおにぎり</a></h1>
+							<p>
+								by&nbsp;<a href="#"><%= comment.chef.nickname %></a>
+							</p>
+							<h2>
+								<%= comment.content %>
+								<div class="info_area">
+									公開：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+									更新：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+									レシピID：<span>1509988</span>
+								</div>
+							</h2>
+						</div>
+					</section>
+				</div>
+			<% end %>
+
 		</div>
 		<!--main_clmEnd-->
 		<%=render partial:"layouts/right_side_content" %>
 	</div>
 	<!--contents-->
 </div>
-
-<%= include_action_javascript %>
-<%= include_action_style_sheet %>
-
-<%= render partial:"forbiddon_right_click" %>
 
 <%= render partial:"layouts/content_footer" %>
 
@@ -77,13 +98,6 @@
 			<%= t("page.recipes.creator") %>
 			(<%= @recipe.user.profile.recipe_count %><%= t("order.recipes") %>)
 		</p>
-		<% if user_signed_in? %>
-		<%=form_for( @bookmark, html:{ id:"bookmark_button" } ) do |f| %>
-		<%= f.hidden_field :recipe_id, value: @recipe.id %>
-		<%= f.hidden_field :user_id, value: current_user.id %>
-		<%= f.submit (bookmarked? ? t(:unbookmark, scope:"views.recipes.show") : t(:bookmark, scope:"views.recipes.show")) %>
-		<% end %>
-		<% end %>
 	</div>
 	<h2><%= @recipe.title %></h2>
 	<div class="section" id="recipe_body">
@@ -91,13 +105,6 @@
 			<div id="recipe_photo" class="figure">
 				<%= image_tag @recipe.recipe_image.url(:large_thumb) %>
 			</div>
-			<% if login? and (not loved?) %>
-			<div id="love_area">
-				<%= link_to "love!(#{@recipe.love_count})", { action:"love", id: params[:id], user_id: current_user.id }, remote: true, id: "love_button" %>
-			</div>
-			<% else %>
-			love(<%= @recipe.love_count %>)
-			<% end %>
 			<div id="description">
 				<%= @recipe.description %>
 			</div>
@@ -158,20 +165,7 @@
 				<%= f.submit t(:post_report, scope:"views.recipes.show") %>
 			</p>
 			<% end %>
-			<dl id="recipe_comments" class="area">
-				<% @recipe.comments.each do |comment| %>
-				<dd>
-					<dl class="recipe_comment">
-						<dt>
-							<%= image_tag comment.image.url(:thumb), alt:"" %>
-						</dt>
-						<dd>
-							<%= comment.content %>
-						</dd>
-					</dl>
-				</dd>
-				<% end %>
-			</dl>
 		</div>
 	</div>
 </div>
+
