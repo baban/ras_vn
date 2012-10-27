@@ -45,7 +45,13 @@ h2 {
   color:orange;
 }
 
+table#profile_image {
+  margin-bottom:2em;
+}
+
+
 table#profiles {
+  border:solid 1px #aaa;
   td {
     border:solid 1px #aaa;
     padding:5px 8px;

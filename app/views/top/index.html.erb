@@ -11,8 +11,9 @@
 				<%= image_tag @recommend_recipe.image.url(:top_large_thumb) || "no_image_cook.png", width:"170", height:"250", alt:"" %>
 				<div class="txt">
 					<h1 class="txt16"><%= link_to @recommend_recipe.title, recipe_url(@recommend_recipe) %></h1>
-					<h2><%= @recommend_recipe.description %>
-					<p>by<%= link_to @recommend_recipe.chef.profile.nickname, recipe_url(@recommend_recipe.id) %></p>
+					<h2>
+						<%= @recommend_recipe.description %>
+						<p>by<%= link_to @recommend_recipe.chef.profile.nickname, kitchen_url(@recommend_recipe.id) %></p>
 					</h2>
 					<p class="arr txt11">
 						<%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_genre_id: @recommend_recipe.id ) %>

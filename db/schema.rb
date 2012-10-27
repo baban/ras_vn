@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121007142802) do
+ActiveRecord::Schema.define(:version => 20121027091301) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -60,11 +60,7 @@ ActiveRecord::Schema.define(:version => 20121007142802) do
     t.text     "content",                                        :null => false
     t.integer  "category_id", :default => 0,                     :null => false
     t.string   "image"
-<<<<<<< HEAD
-    t.datetime "publiced_at", :default => '2012-10-25 00:00:00', :null => false
-=======
-    t.datetime "publiced_at", :default => '2012-10-17 00:00:00', :null => false
->>>>>>> 8001bf1c12078d5c8c7842d58ab3e5bd48d4be07
+    t.datetime "publiced_at", :default => '2012-10-16 00:00:00', :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
@@ -86,6 +82,13 @@ ActiveRecord::Schema.define(:version => 20121007142802) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "followers", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "follower_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "food_genres", :force => true do |t|
@@ -172,11 +175,7 @@ ActiveRecord::Schema.define(:version => 20121007142802) do
   create_table "recipe_food_genre_rankings", :force => true do |t|
     t.integer  "recipe_food_genre_id",                           :null => false
     t.integer  "point",                :default => 0,            :null => false
-<<<<<<< HEAD
-    t.date     "ranked_at",            :default => '2012-10-25', :null => false
-=======
-    t.date     "ranked_at",            :default => '2012-10-17', :null => false
->>>>>>> 8001bf1c12078d5c8c7842d58ab3e5bd48d4be07
+    t.date     "ranked_at",            :default => '2012-10-16', :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end

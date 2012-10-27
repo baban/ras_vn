@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class KitchensController < ApplicationController
+  helper_method :myself?, :followed?
+
   def show
     @user = User.find(params[:id])
     @profile = @user.profile
@@ -20,5 +22,18 @@ class KitchensController < ApplicationController
     @user = User.find(params[:id])
     @profile = @user.profile
     @recipe_comments = @user.recipe_comments.page(params[:page] || 1)
+  end
+
+  def follow
+  end
+
+  private
+  def myself?
+    return true if current_user.id == params[:id]
+    false
+  end
+
+  def followed?
+    !!Follower.find_by_user_id_and_follower_id( params[:id], current_user.id )
   end
 end
