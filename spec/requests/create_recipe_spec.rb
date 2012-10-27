@@ -32,6 +32,7 @@ feature "作成" do
 
         click_on "regist_button"
         page.should have_content('Nguyên liệu')
+        `git clean -df -- public/uploads`
       end
     end
   end
