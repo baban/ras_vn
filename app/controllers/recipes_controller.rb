@@ -46,7 +46,7 @@ class RecipesController < ApplicationController
   end
 
   def edit
-    @recipe = RecipeDraft.find(params[:id])
+    @recipe = Recipe.find(params[:id]).draft
     @steps  = @recipe.edit_steps
     @foodstuffs  = @recipe.edit_foodstuffs
   end
@@ -101,7 +101,6 @@ class RecipesController < ApplicationController
   private
   def editable_user_filter
     return redirect_to(action:'index') unless params[:id]
-    
     @recipe = Recipe.find(params[:id])
     return redirect_to( recipes_url, alert: t("views.recipes.create.other_user_recipe_alert") ) unless my_recipe?
   end

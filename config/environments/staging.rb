@@ -73,5 +73,6 @@ RasVn::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.i18n.default_locale = :ja
+  #config.i18n.default_locale = :ja
+  config.i18n.default_locale = :vn
 end
