@@ -8,9 +8,9 @@
   clear:both;
 }
 
-ul#content_menu_list {
-  border:none 1px #aaa;
-  border-bottom-style:solid;
+#mypage_content {
+  border:solid 1px #caa;
+  padding-bottom:3em;
 }
 
 ul#content_menu_list > li {
@@ -42,6 +42,7 @@ ul#content_menu_list:after {
 }
 
 h2 {
+  margin:0.5em 1em;
   color:orange;
 }
 
@@ -49,17 +50,29 @@ table#profile_image {
   margin-bottom:2em;
 }
 
-
 table#profiles {
-  border:solid 1px #aaa;
-  td {
+  border:solid 3px #caa;
+  border-collapse:separate;
+  tr {
     border:solid 1px #aaa;
-    padding:5px 8px;
+    border-style:none none dashed none;
   }
-}
-
-h2 {
-  margin:0 1em;
+  th, td {
+    border:none 1px #aaa;
+    border-style:none none dashed none;
+    padding:8px 10px 4px 10px;
+  }
+  th {
+    border-style:none dashed dashed none;
+  }
+  td {
+    border-style:none none dashed none;
+  }
+  tr:last-child {
+    th, td {
+      border-style:none;
+    }
+  }
 }
 
 .mypage_content {

@@ -12,27 +12,27 @@
       </table>
       <table id="profiles">
         <tr>
-          <td><%= t(:nickname, scope:"activerecord.attributes.user_profile") %></td>
+          <th><%= t(:nickname, scope:"activerecord.attributes.user_profile") %></th>
           <td colspan="2"><%= @profile.nickname %></td>
           <td><%= @visibility.nickname ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
         </tr>
         <tr>
-          <td><%= t(:email, scope:"activerecord.attributes.user_profile") %></td>
+          <th><%= t(:email, scope:"activerecord.attributes.user_profile") %></th>
           <td colspan="2"><%= @profile.email %></td>
           <td><%= @visibility.email ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
         </tr>
         <tr>
-          <td><%= t(:sex, scope:"activerecord.attributes.user_profile") %></td>
+          <th><%= t(:sex, scope:"activerecord.attributes.user_profile") %></th>
           <td colspan="2"><%=translate_sex( @profile.sex ) %></td>
           <td><%= @visibility.sex ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
         </tr>
         <tr>
-          <td><%= t(:birthday, scope:"activerecord.attributes.user_profile") %></td>
+          <th><%= t(:birthday, scope:"activerecord.attributes.user_profile") %></th>
           <td colspan="2"><%= @profile.birthday %></td>
           <td><%= @visibility.birthday ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
         </tr>
         <tr>
-          <td><%= t(:comment, scope:"activerecord.attributes.user_profile") %></td>
+          <th><%= t(:comment, scope:"activerecord.attributes.user_profile") %></th>
           <td colspan="2"><%= @profile.comment %></td>
           <td><%= @visibility.comment ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
         </tr>
