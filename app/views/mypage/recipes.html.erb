@@ -1,12 +1,9 @@
-<% content_for :stylesheet_after do %>
-  <%= stylesheet_link_tag :contents %>
-<% end %>
 
-<div class="bace_bg">
-	<div id="content_body" class="contents_bg clearfix">
-		<%= render partial:"mypage/content_header" %>
+<div id="content_body">
+	<%= render partial:"mypage/content_header" %>
+	<div class="clearfix mypage_content">
 		<h2 class="txt20">マイレシピ一覧</h2>
-		<article class="cate01 clearfix">
+		<article class="cate01">
 			<div class="paginate"><%= paginate @recipes %></div>
 			<% @recipes.each do |recipe| %>
 				<section class="rec_cat4 clearfix">

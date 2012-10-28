@@ -1,9 +1,17 @@
 <div id="content_header">
   <ul id="content_menu_list">
-    <li><%= link_to "マイページ", { controller:"mypage", action:"index" } %></li>
-    <li><%= link_to "ブックマーク", { controller:"bookmarks", action:"index" } %></li>
-    <li><%= link_to "マイレシピ", { controller:"mypage", action:"recipes" } %></li>
-    <li><%= link_to "日記", { controller:"diary", action:"index" } %></li>
+    <% {
+      "マイページ" => { controller:"mypage", action:"index" },
+      "ブックマーク" => { controller:"bookmarks", action:"index" },
+      "マイレシピ" => { controller:"mypage", action:"recipes" },
+      "日記" => { controller:"diary", action:"index" },
+    }.each do |title,link| %>
+      <% if params[:controller] == link[:controller] and params[:action] == link[:action] %>
+        <li class="current"><%= link_to title, link %></li>
+      <% else %>
+        <li><%= link_to title, link %></li>
+      <% end %>
+    <% end %>
   </ul>
 </div>
 

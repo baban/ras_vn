@@ -1,23 +1,29 @@
 @charset "UTF-8";
 
-@import "parts/recipe_list.css";
-
 @mixin break_block{
   content:"";
   display:block;
   clear:both;
 }
 
-#mypage_content {
+.mypage_content {
   border:solid 1px #caa;
   padding-bottom:3em;
+}
+
+.paginate {
+  background-color:transparent;
+}
+
+.rec_cat4 {
+  border:solid 1px #caa;
 }
 
 ul#content_menu_list > li {
   display:block;
   width:auto;
   float:left;
-  background-color:white;
+  background-color:#efe7de;
   margin:0 0.3em 0 0;
   padding:0;
   border:solid 1px #aaa;
@@ -30,6 +36,9 @@ ul#content_menu_list > li {
     min-width:6em;
     padding:0.6em 0.7em 0.4em 0.7em;
   }
+}
+ul#content_menu_list > li.current {
+  background-color:#fff;
 }
 
 ul#content_menu_list:after {

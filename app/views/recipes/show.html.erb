@@ -81,6 +81,17 @@
 					</section>
 				</div>
 			<% end %>
+			<div id="recipe_comment_area" class="area">
+				<h3><%= t(:recipe_comments, scope:"activerecord.attributes.recipe") %></h3>
+				<%= form_for @recipe_comment do |f| %>
+					<p><%= f.hidden_field :recipe_id, value: @recipe.id %></p>
+					<p><%= f.label :image %></p>
+					<p><%= f.file_field :image, value: "" %></p>
+					<p><%= f.label :content %></p>
+					<p><%= f.text_area :content, size:"50x4", value: "" %></p>
+					<p><%= f.submit t(:post_report, scope:"views.recipes.show") %></p>
+				<% end %>
+			</div>
 
 		</div>
 		<!--main_clmEnd-->
