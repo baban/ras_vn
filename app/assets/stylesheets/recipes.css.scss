@@ -288,6 +288,12 @@ p#genre_description {
   clear:both;
 }
 
+#recipe_comment_area:before {
+  content:"";
+  display:block;
+  clear:both;
+}
+
 #recipe_comment_area {
   margin-top:1em;
 }
