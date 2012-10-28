@@ -20,13 +20,44 @@
 .side_c01 section img { float:left; margin-right:10px; width:50px; height:50px; }
 section .txtarea { overflow: auto; }
 .side_c01 section .txtarea .att { color:#999; margin-top:5px; }
-.cate01 { padding:10px 0px 0px 10px; background:#faf3e3; border:1px solid #e7dcc2; clear:both; margin-top:10px; }
-.cate01 h1 { font-weight:bold; color:#333; margin-bottom:5px }
-.cate01 section { width:290px; float:left; background:#FFF; padding:5px; margin-right:10px; position:relative; height:95px; margin-bottom:10px; }
-.cate01 section img { float:left; margin-right:10px; width:92px; height:92px; }
-.cate01 section.cate_m img { width:60px; height:60px; }
-.cate01 section h1 { font-weight:bold; color:#333; margin-bottom:5px; }
-.cate01 section .catelists li { margin-right:5px; line-height:22px; }
+.cate01 {
+  padding:10px 0px 0px 10px;
+  background:#faf3e3;
+  border:1px solid #e7dcc2;
+  clear:both;
+  margin-top:10px;
+  h1 {
+    font-weight:bold;
+    color:#333;
+    margin-bottom:5px;
+  }
+  section {
+    width:290px;
+    float:left;
+    background:#FFF;
+    padding:5px;
+    margin-right:10px;
+    position:relative;
+    height:95px;
+    margin-bottom:10px;
+    img {
+      float:left;
+      margin-right:10px;
+      width:92px;
+      height:92px;
+    }
+    h1 {
+      font-weight:bold;
+      color:#333;
+      margin-bottom:5px;
+    }
+    .catelists li {
+      margin-right:5px;
+      line-height:22px;
+    }
+  }
+  section.cate_m img { width:60px; height:60px; }
+}
 .more { position:absolute; right:5px; bottom:5px; }
 .more_cate { clear:both; text-align:right; margin-right:15px; margin-bottom:10px; }
 /*att*/

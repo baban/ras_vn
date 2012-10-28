@@ -1,48 +1,58 @@
-<h1>Profile</h1>
-
-<%= semantic_form_for @profile, url:{ action:'update' } do |f| %>
-  <table>
-    <tr>
-      <td><%=profile_image_tag @profile %></td>
-    </tr>
-    <tr>
-      <td>
-        <%=f.file_field :image %>
-        <p>(アップロードすると自動で変更されます)</p>
-      </td>
-    </tr>
-  </table>
-
-  <table>
-    <tr>
-      <th><%= f.label :nickname %></th>
-      <td colspan="2"><%=f.text_field :nickname, value: @profile.nickname %></td>
-      <td>
-        <%=visibility_radios( @visibility, :nickname )%>
-      </td>
-    </tr>
-    <tr>
-      <th><%= f.label :birthday %></th>
-      <td colspan="2"><%= f.text_field :birthday, value:@profile.birthday %></td>
-      <td><%= visibility_radios( @visibility, :birthday ) %></td>
-    </tr>
-    <tr>
-      <th><%= f.label :email %></th>
-      <td colspan="2"><%= f.text_field :email, value: @profile.email %></td>
-      <td><%= visibility_radios( @visibility, :email ) %></td>
-    </tr>
-    <tr>
-      <th><%= f.label :sex %></th>
-      <td colspan="2"><%= select_sex( f, @profile.sex ) %></td>
-      <td><%= visibility_radios( @visibility, :sex ) %></td>
-    </tr>
-    <tr>
-      <th><%= f.label :comment %></th>
-      <td colspan="2"><%= f.text_field :comment, value: @profile.comment %></td>
-      <td><%= visibility_radios( @visibility, :comment ) %></td>
-    </tr>
-    <tr>
-      <td colspan="4"><%= f.submit %></td>
-    </tr>
-  </table>
+<% content_for :style_after do %>
+	<%= stylesheet_link_tag "mypage" %>
 <% end %>
+
+<div id="content_body" class="bace_bg">
+	<%= render partial:"mypage/content_header" %>
+	<div id="mypage_content" class="clearfix mypage_content" >
+		<h2 class="txt20">Profile</h2>
+		<div class="content">
+		<%= semantic_form_for @profile, url:{ action:'update' } do |f| %>
+			<table>
+			  <tr>
+			    <td><%=profile_image_tag @profile %></td>
+			  </tr>
+			  <tr>
+			    <td>
+			      <%=f.file_field :image %>
+			      <p>(アップロードすると自動で変更されます)</p>
+			    </td>
+			  </tr>
+			</table>
+		
+			<table id="profiles">
+			  <tr>
+			    <th><%= f.label :nickname %></th>
+			    <td colspan="2"><%=f.text_field :nickname, value: @profile.nickname %></td>
+			    <td>
+			      <%=visibility_radios( @visibility, :nickname )%>
+			    </td>
+			  </tr>
+			  <tr>
+			    <th><%= f.label :birthday %></th>
+			    <td colspan="2"><%= f.text_field :birthday, value:@profile.birthday %></td>
+			    <td><%= visibility_radios( @visibility, :birthday ) %></td>
+			  </tr>
+			  <tr>
+			    <th><%= f.label :email %></th>
+			    <td colspan="2"><%= f.text_field :email, value: @profile.email %></td>
+			    <td><%= visibility_radios( @visibility, :email ) %></td>
+			  </tr>
+			  <tr>
+			    <th><%= f.label :sex %></th>
+			    <td colspan="2"><%= select_sex( f, @profile.sex ) %></td>
+			    <td><%= visibility_radios( @visibility, :sex ) %></td>
+			  </tr>
+			  <tr>
+			    <th><%= f.label :comment %></th>
+			    <td colspan="2"><%= f.text_field :comment, value: @profile.comment %></td>
+			    <td><%= visibility_radios( @visibility, :comment ) %></td>
+			  </tr>
+			  <tr>
+			    <td colspan="4"><%= f.submit %></td>
+			  </tr>
+			</table>
+		<% end %>
+	</div>
+</div>
+

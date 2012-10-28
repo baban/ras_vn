@@ -1,7 +1,11 @@
+<% content_for :style_after do %>
+	<%= stylesheet_link_tag "mypage" %>
+<% end %>
 
-<div id="content">
-	<h2><%= t( :bookmark, scope:"activerecord.models" ) %></h2>
-	<div id="content_body">
+<div id="content_body" class="bace_bg">
+	<%= render partial:"mypage/content_header" %>
+	<div id="mypage_content" class="clearfix mypage_content">
+		<h2 class="txt20"><%= t( :bookmark, scope:"activerecord.models" ) %></h2>
 		<article class="cate01 clearfix">
 			<div class="paginate"><%= paginate @recipes %></div>
 			<% @recipes.each do |recipe| %>
