@@ -17,5 +17,15 @@ class MypageController < ApplicationController
     @page = params[:page] || 1
     @user = current_user
     @diary = @user.diaries.page(@page)
- end
+  end
+
+  def follow
+    followers = Follower.where( user_id: current_user.id ).select(:follower_id)
+    @profiles = UserProfile.where( " user_id in (#{followers.to_sql}) " ).page( params[:page] || 1 )
+  end
+
+  def follower
+    followers = Follower.where( follower_id: current_user.id ).select(:user_id)
+    @profiles = UserProfile.where( " user_id in (#{followers.to_sql}) " ).page( params[:page] || 1 )
+  end
 end

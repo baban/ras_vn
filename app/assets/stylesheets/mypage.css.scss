@@ -96,3 +96,23 @@ table#profiles {
 .content {
   margin:0.5em 1em;
 }
+
+article {
+  border:none 1px #eaa;
+  border-style:none none dashed none;
+  margin-bottom:0.7em;
+}
+
+article:after {
+  content:"";
+  display:block;
+  clear:both;
+  width:100%;
+  height:3px;
+}
+
+.icon {
+  float:left;
+  margin:0 3px 0 0;
+  vertical-align:top;
+}

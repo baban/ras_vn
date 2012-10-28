@@ -5,6 +5,8 @@
       "ブックマーク" => { controller:"bookmarks", action:"index" },
       "マイレシピ" => { controller:"mypage", action:"recipes" },
       "日記" => { controller:"mypage", action:"diary" },
+      "フォロー" => { controller:"mypage", action:"follow" },
+      "フォロワー" => { controller:"mypage", action:"follower" },
     }.each do |title,link| %>
       <% if params[:controller] == link[:controller] and params[:action] == link[:action] %>
         <li class="current"><%= link_to title, link %></li>

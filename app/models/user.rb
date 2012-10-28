@@ -29,6 +29,7 @@ class User < ActiveRecord::Base
   has_many :recipes
   has_many :recipe_comments
   has_many :diaries
+  has_many :followers
 
   def initialize(*args)
     super(*args)

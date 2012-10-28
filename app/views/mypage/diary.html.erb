@@ -10,15 +10,15 @@
 		<div class="content">
 			<% if user_signed_in? %>
 				<div id="diary_create_link">
-					<%= link_to t(:new, scope:"views.diary"), action:"new" %>
+					<%= link_to t(:new, scope:"views.diary"), controller:"diary", action:"new" %>
 				</div>
 			<% end %>
 			<div id="articles" class="section">
 				<% @diary.each do |d| %>
-					<div class="article">
-						<h3><%= link_to d.title, action:"show", id: d.id %></h3>
+					<article>
+						<h3><%= link_to d.title, controller:"diary", action:"show", id: d.id %></h3>
 						<div><%= truncate( d.content, length: 150) %></div>
-					</div>
+					</article>
 				<% end %>
 			</div>
 		</div>
