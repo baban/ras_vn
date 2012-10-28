@@ -5,6 +5,7 @@ class CreateRecipeComments < ActiveRecord::Migration
     create_table :recipe_comments do |t|
       t.integer :recipe_id, null: false
       t.integer :user_id,   null: false
+      t.string  :title,     null: false, default:""
       t.text    :content,   null: false, default:""
       t.string  :image,     null: true
       t.timestamps

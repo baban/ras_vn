@@ -141,16 +141,14 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
   end
 
   create_table "recipe_comments", :force => true do |t|
-    t.integer  "recipe_id",  :null => false
-    t.integer  "user_id",    :null => false
-    t.text     "content",    :null => false
+    t.integer  "recipe_id",                  :null => false
+    t.integer  "user_id",                    :null => false
+    t.string   "title",      :default => "", :null => false
+    t.text     "content",                    :null => false
     t.string   "image"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
-
-  add_index "recipe_comments", ["recipe_id"], :name => "index_recipe_comments_on_recipe_id"
-  add_index "recipe_comments", ["user_id"], :name => "index_recipe_comments_on_user_id"
 
   create_table "recipe_drafts", :force => true do |t|
     t.integer  "user_id",                                           :null => false

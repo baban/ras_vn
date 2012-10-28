@@ -42,10 +42,12 @@
 					<div id="ingredients">
 						<div class="servings">
 							<h3>
-							<div class="material clearfix">
-								<span class="material_txt"> Nguyên liệu </span>
-								<span class="servings_for yield"><%= @recipe.amount && "(#{@recipe.amount} người ăn)"  %></span>
-							</div><div class="clear"></div></h3>
+								<div class="material clearfix">
+									<span class="material_txt"> Nguyên liệu </span>
+									<span class="servings_for yield"><%= @recipe.amount && "(#{@recipe.amount} người ăn)"  %></span>
+								</div>
+								<div class="clear"></div>
+							</h3>
 						</div>
 						<div class="ingredients_list">
 							<% @recipe.foodstuffs.each do |foodstuff| %>
@@ -57,38 +59,37 @@
 						</div>
 					</div>
 				</div>
-
 			</article>
 
-			<% @recipe.comments.each do |comment| %>
-				<div class="cate01 clearfix">
-					<section class="rec_cat5 clearfix">
-						<%= image_tag comment.image.url(:thumb), size:"280x466", alt:"" %>
-						<div class="txt">
-							<h1 class="txt16"><a href="#">豚しゃぶ用のお肉で肉巻きおにぎり</a></h1>
-							<p>
-								by&nbsp;<a href="#"><%= comment.chef.nickname %></a>
-							</p>
-							<h2>
-								<%= comment.content %>
-								<div class="info_area">
-									公開：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
-									更新：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
-									レシピID：<span>1509988</span>
-								</div>
-							</h2>
-						</div>
-					</section>
-				</div>
-			<% end %>
 			<div id="recipe_comment_area" class="area">
-				<h3><%= t(:recipe_comments, scope:"activerecord.attributes.recipe") %></h3>
+				<h3 id="comment_title"><%= t(:recipe_comments, scope:"activerecord.attributes.recipe") %></h3>
+				<% @recipe.comments.each do |comment| %>
+					<div class="cate01 clearfix">
+						<section class="rec_cat5 clearfix">
+							<%= image_tag comment.image.url(:thumb), size:"280x466", alt:"" %>
+							<div class="txt">
+								<h1 class="txt16"><%= comment.title %></h1>
+								<p>by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
+								<h2>
+									<%= comment.content %>
+									<div class="info_area">
+										公開：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+										更新：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+										レシピID：<span>1509988</span>
+									</div>
+								</h2>
+							</div>
+						</section>
+					</div>
+				<% end %>
 				<%= form_for @recipe_comment do |f| %>
 					<p><%= f.hidden_field :recipe_id, value: @recipe.id %></p>
+					<p><%= f.label :title %></p>
+					<p><%= f.text_field :title, size: 80, value: "" %></p>
 					<p><%= f.label :image %></p>
 					<p><%= f.file_field :image, value: "" %></p>
 					<p><%= f.label :content %></p>
-					<p><%= f.text_area :content, size:"50x4", value: "" %></p>
+					<p><%= f.text_area :content, size:"60x4", value: "" %></p>
 					<p><%= f.submit t(:post_report, scope:"views.recipes.show") %></p>
 				<% end %>
 			</div>
