@@ -11,4 +11,11 @@ class MypageController < ApplicationController
   def recipes
     @recipes = current_user.recipes.page(params[:page] || 1)
   end
+
+  def diary
+    id = params[:user_id]
+    @page = params[:page] || 1
+    @user = current_user
+    @diary = @user.diaries.page(@page)
+ end
 end
