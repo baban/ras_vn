@@ -27,12 +27,10 @@ class KitchensController < ApplicationController
   def follow
     return if !params[:id] or !params[:user_id]
 
-    follow = Follower.find_by_user_id_and_follower_id( params[:user_id], params[:id] )
-    ret = !follow
-    unless follow
-      Follower.create( user_id: params[:user_id], follower_id: params[:id] )
+    if ret = !Follower.find_by_user_id_and_follower_id( params[:user_id], params[:id] )
+      Follower.follow(   params[:user_id], params[:id] )
     else
-      follow.delete
+      Follower.unfollow( params[:user_id], params[:id] )
     end
 
     respond_to do |format|
