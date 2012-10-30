@@ -16,17 +16,48 @@ html>/**/body { font-size: 13px;  line-height: 1.6;} /* except Win IE */
 .txt26 { font-size: 200%; }	/* 26px */
 .txt30 { font-size: 240%; }	/* 26px */
 .txt40 { font-size: 280%; }	/* 26px */
-h1.indent{ margin:0 0 10px 0}
-.flo_l{ float:left;}
-.flo_r{ float:right;}
-.flo_n{ float:none!important;}
-.fo_b{ font-weight:bold;}
-.dot{ border-bottom:1px dotted #CCC;}
-.red{ color:#F00!important}
-.grn{ color:#009933!important}
 
-ul.none, li.none, dd.none, td.none{border:none!important; background:none!important; list-style:none!important;	}
-li.none01{border:none!important;}
+h1.indent {
+  margin:0 0 10px 0;
+}
+
+.flo_l {
+  float:left;
+}
+
+.flo_r {
+  float:right;
+}
+
+.flo_n {
+  float:none!important;
+}
+
+.fo_b {
+  font-weight:bold;
+}
+
+.dot {
+  border-bottom:1px dotted #CCC;
+}
+
+.red {
+  color:#F00 !important;
+}
+
+.grn {
+  color:#009933 !important;
+}
+
+ul.none, li.none, dd.none, td.none {
+  border:none!important;
+  background:none!important;
+  list-style:none!important;
+}
+
+li.none01 {
+  border:none!important;
+}
 
 html {
   background:#faf3e3;
@@ -43,14 +74,56 @@ input {
 }
 
 /*header*/
-header{ height:91px; background:url(/assets/common/hd_bg.png) repeat-x top; margin-bottom:5px;}
-header h1{ margin-left:100px;height:40px; line-height:40px; float:left; margin-right:20px;}
-header .inner{ width:970px; margin:0 auto; padding:0 10px; position:relative}
-header .mk{text-indent:-9999px; height:89px;width:89px; background:url(/assets/common/rogo_icon.png) no-repeat; position:absolute; top:0; left:10px;}
-header nav{ width:770px; float:left; height:40px; line-height:40px;}
-header nav a:link, header nav a:visited{ color:#FFF}
-header nav a:hover{ color:#CCC;}
-header nav ul{background:url(/assets/common/hd_line.gif) no-repeat 100% 50%;}
+header {
+  height:91px;
+  background:url("/assets/common/hd_bg.png") repeat-x top;
+  margin-bottom:5px;
+}
+
+header h1 {
+  margin-left:100px;
+  height:40px;
+  line-height:40px;
+  float:left;
+  margin-right:20px;
+}
+
+header .inner {
+  width:970px;
+  margin:0 auto;
+  padding:0 10px;
+  position:relative;
+}
+
+header .mk {
+  text-indent:-9999px;
+  height:89px;
+  width:89px;
+  background:url("/assets/common/rogo_icon.png") no-repeat;
+  position:absolute;
+  top:0;
+  left:10px;
+}
+
+header nav {
+  width:770px;
+  float:left;
+  height:40px;
+  line-height:40px;
+}
+
+header nav a:link, header nav a:visited {
+  color:#FFF;
+}
+
+header nav a:hover {
+  color:#CCC;
+}
+
+header nav ul {
+  background:url("/assets/common/hd_line.gif") no-repeat 100% 50%;
+}
+
 header nav li {
   float:left;
   background:url("/assets/common/hd_line.gif") no-repeat 0 50%;
@@ -62,6 +135,7 @@ header nav li {
   background:url("/assets/common/hd_line.gif") no-repeat 0 50%;
   padding:0 15px;
 }
+
 header nav ul.login li img {
   border: 1px solid #4E2100;
   float: left;
@@ -137,7 +211,7 @@ ul.s_att {
   -moz-box-shadow:    0px 0px 8px rgba(50, 50, 50, 0.6);
   box-shadow:         0px 0px 8px rgba(50, 50, 50, 0.6);
   border:2px solid #FFF;
-  background:url(/assets/common/contents_bg.gif) repeat-x #FFF;
+  background:url("/assets/common/contents_bg.gif") repeat-x #FFF;
   margin-bottom:10px;
 }
 
@@ -145,21 +219,45 @@ aside {
   margin-bottom:10px;
 }
 
-
 /*footer*/
-footer{ clear:both; margin-top:20px; padding-bottom:40px; }
-footer .inner{ width:970px; margin:0 auto; padding:0 10px }
-footer .inner li{ margin-left:10px;}
-.dlt{ text-indent:-9999px; display:none}
+footer {
+  clear:both;
+  margin-top:20px;
+  padding-bottom:40px;
+}
 
+footer .inner {
+  width:970px;
+  margin:0 auto;
+  padding:0 10px;
+}
 
+footer .inner li {
+  margin-left:10px;
+}
+
+.dlt {
+  text-indent:-9999px;
+  display:none
+}
 
 /*角丸3*/
-.radi3{-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
-.radi5{-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
-.radi10{
+.radi3 {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.radi5 {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.radi10 {
   -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .err {
@@ -226,3 +324,15 @@ img#profile_image_icon {
   border-color:#888;
   height:70px;
 }
+
+#signout_button {
+  color:#fff;
+  background-color:transparent;
+  border-style:none;
+  font-weight:bold;
+}
+
+#signout_button:hover {
+  color:#ccc;
+}
+

@@ -2,10 +2,12 @@
 /* CSS Document */
 
 /*ベーシックボタン*/
-.rbtn{
+.rbtn {
   font-weight:bold;
 }
-.rbtn a {
+
+.rbtn a,
+.rbtn input[type="submit"] {
   background: #fe6b1d;
   background: -moz-linear-gradient(top, #fe6b1d 0%, #cd0900 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fe6b1d), color-stop(100%,#cd0900));

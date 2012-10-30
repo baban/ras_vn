@@ -121,3 +121,20 @@ article:after {
   float:right;
   clear:none;
 }
+
+.status {
+  .public,.hidden {
+    float:left;
+    height:1.5em;
+    width:4em;
+    text-align:center;
+  }
+
+  .public {
+    border:solid 1px #aaa;
+  }
+
+  .hidden {
+    border:solid 1px #aaa;
+  }
+}
