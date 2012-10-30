@@ -62,7 +62,7 @@
 			</article>
 
 			<div id="recipe_comment_area" class="area">
-				<h3 id="comment_title"><%= t(:recipe_comments, scope:"activerecord.attributes.recipe") %></h3>
+				<h3 id="comment_title">つくれぽ</h3>
 				<% @recipe.comments.each do |comment| %>
 					<div class="cate01 clearfix">
 						<section class="rec_cat5 clearfix">
@@ -75,13 +75,13 @@
 									<div class="info_area">
 										公開：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
 										更新：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
-										レシピID：<span>1509988</span>
 									</div>
 								</h2>
 							</div>
 						</section>
 					</div>
 				<% end %>
+				<h3>つくれぽを書く</h3>
 				<%= form_for @recipe_comment do |f| %>
 					<p><%= f.hidden_field :recipe_id, value: @recipe.id %></p>
 					<p><%= f.label :title %></p>

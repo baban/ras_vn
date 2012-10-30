@@ -121,3 +121,26 @@ article:after {
   float:right;
   clear:none;
 }
+
+.status {
+  position:relative;
+  .public, .editing {
+    position:absolute;
+    float:left;
+    height:1.5em;
+    width:4em;
+    text-align:center;
+  }
+
+  .public {
+    color:#fff;
+    background-color:#ff7f50;
+    border:solid 1px #ff4500;
+  }
+
+  .editing {
+    color:#fff;
+    background-color:#66cdaa;
+    border:solid 1px #006400;
+  }
+}

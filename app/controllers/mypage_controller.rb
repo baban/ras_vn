@@ -9,7 +9,7 @@ class MypageController < ApplicationController
   end
 
   def recipes
-    @recipes = current_user.recipes.page(params[:page] || 1)
+    @recipes = current_user.recipes.order( "created_at DESC" ).page(params[:page] || 1)
   end
 
   def diary

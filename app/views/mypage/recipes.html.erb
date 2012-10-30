@@ -7,12 +7,15 @@
 			<div class="paginate"><%= paginate @recipes %></div>
 			<% @recipes.each do |recipe| %>
 				<section class="rec_cat4 clearfix">
+					<div class="status">
+						<% if recipe.public %><div class="public">公開</div><% else %><div class="editing">未公開</div><% end %>
+					</div>
 					<%= image_tag recipe.image.url(:thumb), width:"100", height:"141", alt:"" %>
 					<div class="txt">
-						<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
-						<p>by <%= link_to recipe.user.profile.nickname %></p>
+						<h1 class="txt16"><%= link_to truncate(recipe.title, length: 22 ), controller:"recipes", action:"show", id: recipe.id %></h1>
+						<p class="name">by <%= link_to recipe.user.profile.nickname %></p>
 						<h2>
-							<%= recipe.description %>
+							<%= truncate( recipe.description, length: 50 ) %>
 							<div class="info_area">
 								公開：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
 								更新：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;

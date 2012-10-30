@@ -61,10 +61,28 @@ section .txtarea { overflow: auto; }
 .more { position:absolute; right:5px; bottom:5px; }
 .more_cate { clear:both; text-align:right; margin-right:15px; margin-bottom:10px; }
 /*att*/
-.att_bg { width:600px; padding:10px; margin:0 auto; -webkit-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.6); -moz-box-shadow:    0px 0px 8px rgba(50, 50, 50, 0.6); box-shadow:         0px 0px 8px rgba(50, 50, 50, 0.6); background:#FFF }
-.att_bg h1 { border-bottom:1px solid #CCC; }
+.att_bg {
+  width:600px;
+  padding:10px;
+  margin:0 auto;
+  -webkit-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.6);
+  -moz-box-shadow:    0px 0px 8px rgba(50, 50, 50, 0.6);
+  box-shadow:         0px 0px 8px rgba(50, 50, 50, 0.6);
+  background:#FFF;
+}
+
+.att_bg h1 {
+  border-bottom:1px solid #CCC;
+}
+
 .login_ind h2 { font-weight:bold }
-s .login_ind { background:#f1f1f1; width:270px; padding:10px; margin:10px 0; min-height:170px; }
+s .login_ind {
+  background:#f1f1f1;
+  width:270px;
+  padding:10px;
+  margin:10px 0;
+  min-height:170px;
+}
 .login_ind label { display:block }
 .login_ind input { padding:2px; width:260px; }
 .login_ind .rbtn { margin:10px auto; text-align:center }
@@ -99,18 +117,73 @@ s .login_ind { background:#f1f1f1; width:270px; padding:10px; margin:10px 0; min
 .txt_cate img { vertical-align:baseline; float:left; margin-top:7px; margin-left:2px; }
 
 /*contents_recipes*/
-.contents_recipes {margin-top:10px;}
-.ttl_recipe {font-size:24px; font-weight:bold; margin-bottom:10px;}
-.contents_recipes img {float:left;}
-.explanation {margin-left:20px; display:block; float:left; width:335px;}
-.user_name {text-align:right; float:right; font-size:16px;}
-.material {clear:both; margin-top:20px;}
-.ingredients_list {border-top:1px solid #ccc;}
-.ingredient_name {float:left;}
-.ingredient_row {clear:both; border-bottom:1px solid #ccc; padding:5px;}
-.material_txt {font-size:18px; color:#CCAF8B;}
-.ingredient_quantity{float:right;}
-.rec_cat5 { width:605px !important; height:auto !important; }
-.rec_cat4 img { width:100px !important; height:141px !important; }
+.contents_recipes {
+  margin-top:10px;
+}
+
+.ttl_recipe {
+  font-size:24px;
+  font-weight:bold; 
+  margin-bottom:10px;
+}
+
+.contents_recipes img {
+  float:left;
+}
+
+.explanation {
+  margin-left:20px;
+  display:block;
+  float:left;
+  width:335px;
+}
+
+.user_name {
+  text-align:right;
+  float:right;
+  font-size:16px;
+}
+
+.material {
+  clear:both;
+  margin-top:20px;
+}
+
+.ingredients_list {
+  border-top:1px solid #ccc;
+}
+
+.ingredient_name {
+  float:left;
+}
+
+.ingredient_row {
+  clear:both;
+  border-bottom:1px solid #ccc;
+  padding:5px;
+}
+
+.material_txt {
+  font-size:18px;
+  color:#CCAF8B;
+}
+
+.ingredient_quantity {
+  float:right;
+}
+
+.rec_cat5 {
+  width:605px !important;
+  height:auto !important;
+}
+
+.rec_cat4 img {
+  width:100px !important;
+  height:141px !important;
+}
 /*サイドバー固定js*/
-#nav { width:300px; margin-top:10px; }
+#nav {
+  width:300px;
+  margin-top:10px;
+}
+

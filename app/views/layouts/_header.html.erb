@@ -16,7 +16,7 @@
 		<% else %>
 			<%=form_for :device, url: destroy_user_session_url, method:"DELETE" do |f| %>
 				<ul class="clearfix flo_r">
-					<li><%=f.submit t(:sign_out, scope:"views.header") %></li>
+					<li><%= f.submit t(:sign_out, scope:"views.header"), id:"signout_button" %></li>
 					<li>
 						<%= image_tag (current_user.profile.image.url(:icon).presence || "user_icon.png"), alt:"", id:"profile_image_icon" %>
 						<%= link_to current_user.profile.nickname, controller:"mypage", action:"index" %>
@@ -28,11 +28,11 @@
 	
 	<div class="search flo_l">
 		<%= form_for( :recipes, url: recipes_url, html:{ class:"cl" }, method:"GET" ) do |f| %>
-		<div class="box radi5">
-			<%= text_field_tag :word, "",class:"radi5", type:"search", placeholder: t(:placeholder, scope:"views.header")%>
-			<%= f.button t(:blank, scope:"views.header"), class:"radi3", title:"Tìm Kiếm"%>
-			<span class="hidden_elem">Tìm Kiếm</span>
-		</div>
+			<div class="box radi5">
+				<%= text_field_tag :word, "",class:"radi5", type:"search", placeholder: t(:placeholder, scope:"views.header") %>
+				<%= f.button t(:blank, scope:"views.header"), class:"radi3", title:"Tìm Kiếm" %>
+				<span class="hidden_elem">Tìm Kiếm</span>
+			</div>
 		<% end %>
 	</div>
 	<ul class="flo_l s_att clearfix">

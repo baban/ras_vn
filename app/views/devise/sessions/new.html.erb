@@ -1,25 +1,54 @@
-<h2>Sign in</h2>
+<div class="att_bg radi10">
+	<h1 class="txt16">ログイン</h1>
+	<div class="login_box clearfix">
+		<div class="login_ind flo_l line">
+			<h2>Nhahang24 IDでログイン</h2>
+			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+				<div>
+					<%= f.label :email %>
+					<%= f.email_field :email, class:"ipt" %>
+				</div>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+				<div>
+					<%= f.label :password %>
+					<%= f.password_field :password, class:"ipt" %>
+				</div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+				<% if devise_mapping.rememberable? %>
+					<div>
+						<%= f.check_box :remember_me, style:"display:inline;width:auto;" %>
+						<%= f.label :remember_me, style:"display:inline;" %>
+					</div>
+				<% end %>
+				<div class="rbtn cl"><%= f.submit "ログイン", id:"sign_in", class:"cblu radi10 txt12" %></div>
+				<p class="txt11 cap"><%= link_to "パスワードを忘れた方はこちら", controller:"" %></p>
+				<%= render "links" %>
+			<% end %>
+		</div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+		<div class="login_ind flo_r" id="get_account_area">
+			<h3 class="txt14 fo_b">IDをお持ちでない方はこちら</h3>
+			<div class="rbtn cl">
+				<%= link_to "無料メンバーを登録する", new_user_registration_url, class:"cblu radi10 txt12" %>
+			</div>
+		</div>
 
-  <div><%= f.submit "Sign in", id:"sign_in" %></div>
-<% end %>
+		<div class="cl clearfix">
+			<h2 class="fo_b">外部サービスのIDでログイン</h2>
+			<p>Facebook、Twitter、Google+のアカウントを使って、簡単なステップでメンバー登録ができます。</p>
+			<ul id="login_links" class="ant_s clearfix">
+				<li class="flo_l"><%= link_to raw(image_tag('/assets/common/fb.png', alt:'', size:'18x18'))+"Facebook", "/auth/facebook",      class:"radi5" %></li>
+				<li class="flo_l"><%= link_to raw(image_tag('/assets/common/tw.png', alt:'', size:'18x18'))+"Twitter",  "/auth/twitter",       class:"radi5" %></li>
+				<li class="flo_l"><%= link_to raw(image_tag('/assets/common/gp.png', alt:'', size:'18x18'))+"Google",   "/auth/google_oauth2", class:"radi5" %></li>
+			</ul>
 
-<p>Facebook、Twitter、Google+のアカウントを使って、簡単なステップでメンバー登録ができます。</p>
+			<p class="cl txt11">これらのサービスのアカウントをお持ちでない場合</p>
+			<ul>
+				<li class="flo_l"><a href="http://www.facebook.com/">Sign up with Facebook</a></li>
+				<li class="flo_l"><a href="https://twitter.com/">Sign up with Twitter</a></li>
+				<li class="flo_l"><a href="https://plus.google.com/up/search">Sign up with Google</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
 
-<ul id="login_links">
-  <li><%= link_to "Sign in with Facebook", "/auth/facebook" %></li>
-  <li><%= link_to "Sign in with Twitter",  "/auth/twitter" %></li>
-  <li><%= link_to "Sign in with Google",   "/auth/google_oauth2" %></li>
-</ul>
-
-<%= render "links" %>

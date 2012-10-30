@@ -9,13 +9,13 @@ class Stream < ActiveRecord::Base
     # user registration
     1=>->( user_id, *options ){
       user = User.find_by_id( user_id )
-      "新しくユーザー登録がありました"
+      "<a href='/kitchen/#{user.id}'>新しくユーザー登録がありました</a>"
     },
     # add recipe
     2=>->( user_id, *options ) do
       user = User.find_by_id( user_id )
       recipe = options.first
-      "#{user.profile.nickname} がレシピ[#{recipe.title}]を投稿しました"
+      "<a href='/recipes/#{recipe.id}'>#{user.profile.nickname} がレシピ[#{recipe.title}]を投稿しました</a>"
     end,
   }
 
