@@ -6,8 +6,10 @@ describe TopController do
   fixtures :all
   context "非ログイン時" do
     describe "GET 'index'" do
-      it "returns http success" do
+      before do
         get :index
+      end 
+      it "returns http success" do
         response.should be_success
       end
     end

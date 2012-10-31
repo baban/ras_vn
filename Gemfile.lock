@@ -102,7 +102,8 @@ GEM
     faraday (0.8.4)
       multipart-post (~> 1.1)
     ffi (1.1.5)
-    flextures (2.0.3)
+    flextures (2.0.5)
+      activerecord
     formtastic (2.1.0)
       actionpack (~> 3.0)
     hashie (1.2.0)
@@ -342,7 +343,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   faker-japanese
-  flextures (= 2.0.3)
+  flextures (= 2.0.5)
   formtastic (= 2.1.0)
   html5jp_graphs (= 0.0.1)
   i18n_generators (= 1.2.1)
