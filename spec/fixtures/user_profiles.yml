@@ -36,7 +36,7 @@ user_profiles_2:
   id: 3
   user_id: 3
   image: null
-  nickname: LinPon
+  nickname: じゅんばあ
   sex: 1
   first_name: ""
   family_name: ""
@@ -53,7 +53,7 @@ user_profiles_3:
   id: 4
   user_id: 4
   image: null
-  nickname: Cuncun
+  nickname: 春茶丸
   sex: 1
   first_name: ""
   family_name: ""
@@ -70,7 +70,7 @@ user_profiles_4:
   id: 5
   user_id: 5
   image: null
-  nickname: noitro
+  nickname: kajinのだんな
   sex: 1
   first_name: ""
   family_name: ""
@@ -87,7 +87,7 @@ user_profiles_5:
   id: 6
   user_id: 6
   image: null
-  nickname: daubep
+  nickname: ☆まきりん☆
   sex: 1
   first_name: ""
   family_name: ""
@@ -104,7 +104,7 @@ user_profiles_6:
   id: 7
   user_id: 7
   image: null
-  nickname: paipon
+  nickname: うまかっぺ 
   sex: 1
   first_name: ""
   family_name: ""
@@ -155,7 +155,7 @@ user_profiles_9:
   id: 10
   user_id: 10
   image: null
-  nickname: momoko
+  nickname: てんちょー
   sex: 1
   first_name: ""
   family_name: ""
@@ -172,7 +172,7 @@ user_profiles_10:
   id: 11
   user_id: 11
   image: null
-  nickname: ayaka
+  nickname: komomoもも
   sex: 1
   first_name: ""
   family_name: ""
@@ -257,7 +257,7 @@ user_profiles_15:
   id: 16
   user_id: 16
   image: null
-  nickname: smile_girl
+  nickname: スマイルメグ
   sex: 1
   first_name: ""
   family_name: ""
@@ -274,7 +274,7 @@ user_profiles_16:
   id: 17
   user_id: 17
   image: null
-  nickname: michan
+  nickname: みーみーさんさん
   sex: 1
   first_name: ""
   family_name: ""
@@ -308,7 +308,7 @@ user_profiles_18:
   id: 19
   user_id: 19
   image: null
-  nickname: lucky
+  nickname: ゆみらい♪
   sex: 1
   first_name: ""
   family_name: ""

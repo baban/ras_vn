@@ -1,16 +1,16 @@
 recipes_0:
   id: 1
   user_id: 2
-  title: Tôm sốt phô mai !
-  description: Tôm sốt phô mai !
+  title: キャベツを追加！ジャーマンポテトキャベツ
+  description: ジャーマンポテトにキャベツを足したら？ キャベツのシャキシャキとじゃが芋のホクホクがオイシ～♪ボリュームと美味しさUP↑
   public: true
-  recipe_image: Tôm sốt phô mai.jpg
-  one_point: Món nay ăn kèm bánh mì rất ngon .
+  recipe_image: recipe.jpg
+  one_point: じゃが芋は男爵、北あかりなどのホクホク系の品種がオススメ。レンジで火を通しておくことにより、調理が素早く出来ます。出来れば塩は岩塩、胡椒はブラックペッパーを使うと一層美味しさが増します。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
-  recipe_food_id: 24
+  recipe_food_id: 1
   del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2011-01-24 00:00:00 UTC
   updated_at: 2012-06-05 00:00:00 UTC

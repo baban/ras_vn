@@ -12,7 +12,7 @@ recipe_drafts_0:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2011-01-24 00:00:00 UTC
   updated_at: 2012-06-05 00:00:00 UTC
 recipe_drafts_1:
@@ -29,7 +29,7 @@ recipe_drafts_1:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2010-05-27 00:00:00 UTC
   updated_at: 2010-05-27 00:00:00 UTC
 recipe_drafts_2:
@@ -46,7 +46,7 @@ recipe_drafts_2:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2011-12-29 00:00:00 UTC
   updated_at: 2012-05-20 00:00:00 UTC
 recipe_drafts_3:
@@ -63,7 +63,7 @@ recipe_drafts_3:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2010-08-29 00:00:00 UTC
   updated_at: 2011-03-13 00:00:00 UTC
 recipe_drafts_4:
@@ -80,7 +80,7 @@ recipe_drafts_4:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-03-06 00:00:00 UTC
   updated_at: 2012-05-24 00:00:00 UTC
 recipe_drafts_5:
@@ -97,7 +97,7 @@ recipe_drafts_5:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-03-10 00:00:00 UTC
   updated_at: 2012-05-17 00:00:00 UTC
 recipe_drafts_6:
@@ -114,7 +114,7 @@ recipe_drafts_6:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-02-20 00:00:00 UTC
   updated_at: 2012-02-21 00:00:00 UTC
 recipe_drafts_7:
@@ -131,7 +131,7 @@ recipe_drafts_7:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-03-05 00:00:00 UTC
   updated_at: 2012-03-05 00:00:00 UTC
 recipe_drafts_8:
@@ -148,7 +148,7 @@ recipe_drafts_8:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2011-09-09 00:00:00 UTC
   updated_at: 2012-04-12 00:00:00 UTC
 recipe_drafts_9:
@@ -165,7 +165,7 @@ recipe_drafts_9:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2011-10-27 00:00:00 UTC
   updated_at: 2011-10-27 00:00:00 UTC
 recipe_drafts_10:
@@ -182,7 +182,7 @@ recipe_drafts_10:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_11:
@@ -199,7 +199,7 @@ recipe_drafts_11:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_12:
@@ -216,7 +216,7 @@ recipe_drafts_12:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_13:
@@ -233,7 +233,7 @@ recipe_drafts_13:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_14:
@@ -250,7 +250,7 @@ recipe_drafts_14:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_15:
@@ -267,7 +267,7 @@ recipe_drafts_15:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_16:
@@ -284,7 +284,7 @@ recipe_drafts_16:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_17:
@@ -301,7 +301,7 @@ recipe_drafts_17:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_18:
@@ -318,7 +318,7 @@ recipe_drafts_18:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_19:
@@ -335,7 +335,7 @@ recipe_drafts_19:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_20:
@@ -352,7 +352,7 @@ recipe_drafts_20:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_21:
@@ -369,7 +369,7 @@ recipe_drafts_21:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_22:
@@ -386,7 +386,7 @@ recipe_drafts_22:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_23:
@@ -403,7 +403,7 @@ recipe_drafts_23:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_24:
@@ -420,7 +420,7 @@ recipe_drafts_24:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_25:
@@ -437,7 +437,7 @@ recipe_drafts_25:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_26:
@@ -454,7 +454,7 @@ recipe_drafts_26:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_27:
@@ -471,7 +471,7 @@ recipe_drafts_27:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_28:
@@ -488,7 +488,7 @@ recipe_drafts_28:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_29:
@@ -505,7 +505,7 @@ recipe_drafts_29:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_30:
@@ -522,7 +522,7 @@ recipe_drafts_30:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_31:
@@ -539,7 +539,7 @@ recipe_drafts_31:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_32:
@@ -556,7 +556,7 @@ recipe_drafts_32:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_33:
@@ -573,7 +573,7 @@ recipe_drafts_33:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_34:
@@ -590,7 +590,7 @@ recipe_drafts_34:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_35:
@@ -607,7 +607,7 @@ recipe_drafts_35:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_36:
@@ -624,7 +624,7 @@ recipe_drafts_36:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_37:
@@ -641,7 +641,7 @@ recipe_drafts_37:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_38:
@@ -658,7 +658,7 @@ recipe_drafts_38:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_39:
@@ -675,7 +675,7 @@ recipe_drafts_39:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_40:
@@ -692,7 +692,7 @@ recipe_drafts_40:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_41:
@@ -709,7 +709,7 @@ recipe_drafts_41:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_42:
@@ -726,7 +726,7 @@ recipe_drafts_42:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_43:
@@ -743,7 +743,7 @@ recipe_drafts_43:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_44:
@@ -760,7 +760,7 @@ recipe_drafts_44:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_45:
@@ -777,7 +777,7 @@ recipe_drafts_45:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_46:
@@ -794,7 +794,7 @@ recipe_drafts_46:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_47:
@@ -811,7 +811,7 @@ recipe_drafts_47:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_48:
@@ -828,7 +828,7 @@ recipe_drafts_48:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_49:
@@ -845,7 +845,7 @@ recipe_drafts_49:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_50:
@@ -862,7 +862,7 @@ recipe_drafts_50:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_51:
@@ -879,7 +879,7 @@ recipe_drafts_51:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_52:
@@ -896,7 +896,7 @@ recipe_drafts_52:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_53:
@@ -913,7 +913,7 @@ recipe_drafts_53:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_54:
@@ -930,7 +930,7 @@ recipe_drafts_54:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_55:
@@ -947,7 +947,7 @@ recipe_drafts_55:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_56:
@@ -964,7 +964,7 @@ recipe_drafts_56:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_57:
@@ -981,7 +981,7 @@ recipe_drafts_57:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_58:
@@ -998,7 +998,7 @@ recipe_drafts_58:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_59:
@@ -1015,7 +1015,7 @@ recipe_drafts_59:
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_60:
@@ -1032,7 +1032,7 @@ recipe_drafts_60:
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_61:
@@ -1049,7 +1049,7 @@ recipe_drafts_61:
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_62:
@@ -1066,7 +1066,7 @@ recipe_drafts_62:
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_63:
@@ -1083,7 +1083,7 @@ recipe_drafts_63:
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_64:
@@ -1100,7 +1100,7 @@ recipe_drafts_64:
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_65:
@@ -1117,7 +1117,7 @@ recipe_drafts_65:
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_66:
@@ -1134,7 +1134,7 @@ recipe_drafts_66:
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_67:
@@ -1151,7 +1151,7 @@ recipe_drafts_67:
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_68:
@@ -1168,7 +1168,7 @@ recipe_drafts_68:
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_69:
@@ -1185,7 +1185,7 @@ recipe_drafts_69:
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_70:
@@ -1202,7 +1202,7 @@ recipe_drafts_70:
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_71:
@@ -1219,7 +1219,7 @@ recipe_drafts_71:
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_72:
@@ -1236,7 +1236,7 @@ recipe_drafts_72:
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_73:
@@ -1253,7 +1253,7 @@ recipe_drafts_73:
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_74:
@@ -1270,7 +1270,7 @@ recipe_drafts_74:
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_75:
@@ -1287,7 +1287,7 @@ recipe_drafts_75:
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_76:
@@ -1304,7 +1304,7 @@ recipe_drafts_76:
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_77:
@@ -1321,7 +1321,7 @@ recipe_drafts_77:
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_78:
@@ -1338,7 +1338,7 @@ recipe_drafts_78:
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_79:
@@ -1355,7 +1355,7 @@ recipe_drafts_79:
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_80:
@@ -1372,7 +1372,7 @@ recipe_drafts_80:
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_81:
@@ -1389,7 +1389,7 @@ recipe_drafts_81:
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_82:
@@ -1406,7 +1406,7 @@ recipe_drafts_82:
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_83:
@@ -1423,7 +1423,7 @@ recipe_drafts_83:
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_84:
@@ -1440,7 +1440,7 @@ recipe_drafts_84:
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_85:
@@ -1457,7 +1457,7 @@ recipe_drafts_85:
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_86:
@@ -1474,7 +1474,7 @@ recipe_drafts_86:
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_87:
@@ -1491,7 +1491,7 @@ recipe_drafts_87:
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_88:
@@ -1508,7 +1508,7 @@ recipe_drafts_88:
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_89:
@@ -1525,7 +1525,7 @@ recipe_drafts_89:
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_90:
@@ -1542,7 +1542,7 @@ recipe_drafts_90:
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_91:
@@ -1559,7 +1559,7 @@ recipe_drafts_91:
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_92:
@@ -1576,7 +1576,7 @@ recipe_drafts_92:
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_93:
@@ -1593,7 +1593,7 @@ recipe_drafts_93:
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_94:
@@ -1610,7 +1610,7 @@ recipe_drafts_94:
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_95:
@@ -1627,7 +1627,7 @@ recipe_drafts_95:
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_96:
@@ -1644,7 +1644,7 @@ recipe_drafts_96:
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_97:
@@ -1661,7 +1661,7 @@ recipe_drafts_97:
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_98:
@@ -1678,7 +1678,7 @@ recipe_drafts_98:
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_99:
@@ -1695,7 +1695,7 @@ recipe_drafts_99:
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_100:
@@ -1712,7 +1712,7 @@ recipe_drafts_100:
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_101:
@@ -1729,7 +1729,7 @@ recipe_drafts_101:
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_102:
@@ -1746,7 +1746,7 @@ recipe_drafts_102:
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_103:
@@ -1763,7 +1763,7 @@ recipe_drafts_103:
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_104:
@@ -1780,7 +1780,7 @@ recipe_drafts_104:
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_105:
@@ -1797,7 +1797,7 @@ recipe_drafts_105:
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_106:
@@ -1814,7 +1814,7 @@ recipe_drafts_106:
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_107:
@@ -1831,7 +1831,7 @@ recipe_drafts_107:
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_108:
@@ -1848,7 +1848,7 @@ recipe_drafts_108:
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_109:
@@ -1865,7 +1865,7 @@ recipe_drafts_109:
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_110:
@@ -1882,7 +1882,7 @@ recipe_drafts_110:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_111:
@@ -1899,7 +1899,7 @@ recipe_drafts_111:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_112:
@@ -1916,7 +1916,7 @@ recipe_drafts_112:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_113:
@@ -1933,7 +1933,7 @@ recipe_drafts_113:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_114:
@@ -1950,7 +1950,7 @@ recipe_drafts_114:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_115:
@@ -1967,7 +1967,7 @@ recipe_drafts_115:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_116:
@@ -1984,7 +1984,7 @@ recipe_drafts_116:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_117:
@@ -2001,7 +2001,7 @@ recipe_drafts_117:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_118:
@@ -2018,7 +2018,7 @@ recipe_drafts_118:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_119:
@@ -2035,7 +2035,7 @@ recipe_drafts_119:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_120:
@@ -2052,7 +2052,7 @@ recipe_drafts_120:
   amount: 0
   view_count: 0
   recipe_food_id: 10
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_121:
@@ -2069,7 +2069,7 @@ recipe_drafts_121:
   amount: 0
   view_count: 0
   recipe_food_id: 10
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_122:
@@ -2086,7 +2086,7 @@ recipe_drafts_122:
   amount: 0
   view_count: 0
   recipe_food_id: 10
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_123:
@@ -2103,7 +2103,7 @@ recipe_drafts_123:
   amount: 0
   view_count: 0
   recipe_food_id: 10
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_124:
@@ -2120,7 +2120,7 @@ recipe_drafts_124:
   amount: 0
   view_count: 0
   recipe_food_id: 10
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_125:
@@ -2137,7 +2137,7 @@ recipe_drafts_125:
   amount: 0
   view_count: 0
   recipe_food_id: 11
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_126:
@@ -2154,7 +2154,7 @@ recipe_drafts_126:
   amount: 0
   view_count: 0
   recipe_food_id: 11
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_127:
@@ -2171,7 +2171,7 @@ recipe_drafts_127:
   amount: 0
   view_count: 0
   recipe_food_id: 11
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_128:
@@ -2188,7 +2188,7 @@ recipe_drafts_128:
   amount: 0
   view_count: 0
   recipe_food_id: 11
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_129:
@@ -2205,7 +2205,7 @@ recipe_drafts_129:
   amount: 0
   view_count: 0
   recipe_food_id: 11
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_130:
@@ -2222,7 +2222,7 @@ recipe_drafts_130:
   amount: 0
   view_count: 0
   recipe_food_id: 12
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_131:
@@ -2239,7 +2239,7 @@ recipe_drafts_131:
   amount: 0
   view_count: 0
   recipe_food_id: 12
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_132:
@@ -2256,7 +2256,7 @@ recipe_drafts_132:
   amount: 0
   view_count: 0
   recipe_food_id: 12
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_133:
@@ -2273,7 +2273,7 @@ recipe_drafts_133:
   amount: 0
   view_count: 0
   recipe_food_id: 12
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_134:
@@ -2290,7 +2290,7 @@ recipe_drafts_134:
   amount: 0
   view_count: 0
   recipe_food_id: 12
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_135:
@@ -2307,7 +2307,7 @@ recipe_drafts_135:
   amount: 0
   view_count: 0
   recipe_food_id: 13
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_136:
@@ -2324,7 +2324,7 @@ recipe_drafts_136:
   amount: 0
   view_count: 0
   recipe_food_id: 13
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_137:
@@ -2341,7 +2341,7 @@ recipe_drafts_137:
   amount: 0
   view_count: 0
   recipe_food_id: 13
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_138:
@@ -2358,7 +2358,7 @@ recipe_drafts_138:
   amount: 0
   view_count: 0
   recipe_food_id: 13
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_139:
@@ -2375,7 +2375,7 @@ recipe_drafts_139:
   amount: 0
   view_count: 0
   recipe_food_id: 13
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_140:
@@ -2392,7 +2392,7 @@ recipe_drafts_140:
   amount: 0
   view_count: 0
   recipe_food_id: 14
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_141:
@@ -2409,7 +2409,7 @@ recipe_drafts_141:
   amount: 0
   view_count: 0
   recipe_food_id: 14
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_142:
@@ -2426,7 +2426,7 @@ recipe_drafts_142:
   amount: 0
   view_count: 0
   recipe_food_id: 14
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_143:
@@ -2443,7 +2443,7 @@ recipe_drafts_143:
   amount: 0
   view_count: 0
   recipe_food_id: 16
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_144:
@@ -2460,7 +2460,7 @@ recipe_drafts_144:
   amount: 0
   view_count: 0
   recipe_food_id: 16
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_145:
@@ -2477,7 +2477,7 @@ recipe_drafts_145:
   amount: 0
   view_count: 0
   recipe_food_id: 16
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_146:
@@ -2494,7 +2494,7 @@ recipe_drafts_146:
   amount: 0
   view_count: 0
   recipe_food_id: 17
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_147:
@@ -2511,7 +2511,7 @@ recipe_drafts_147:
   amount: 0
   view_count: 0
   recipe_food_id: 17
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_148:
@@ -2528,7 +2528,7 @@ recipe_drafts_148:
   amount: 0
   view_count: 0
   recipe_food_id: 17
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_149:
@@ -2545,7 +2545,7 @@ recipe_drafts_149:
   amount: 0
   view_count: 0
   recipe_food_id: 19
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_150:
@@ -2562,7 +2562,7 @@ recipe_drafts_150:
   amount: 0
   view_count: 0
   recipe_food_id: 19
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_151:
@@ -2579,7 +2579,7 @@ recipe_drafts_151:
   amount: 0
   view_count: 0
   recipe_food_id: 19
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_152:
@@ -2596,7 +2596,7 @@ recipe_drafts_152:
   amount: 0
   view_count: 0
   recipe_food_id: 18
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_153:
@@ -2613,7 +2613,7 @@ recipe_drafts_153:
   amount: 0
   view_count: 0
   recipe_food_id: 18
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_154:
@@ -2630,7 +2630,7 @@ recipe_drafts_154:
   amount: 0
   view_count: 0
   recipe_food_id: 18
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_155:
@@ -2647,7 +2647,7 @@ recipe_drafts_155:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_156:
@@ -2664,7 +2664,7 @@ recipe_drafts_156:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_157:
@@ -2681,7 +2681,7 @@ recipe_drafts_157:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_158:
@@ -2698,7 +2698,7 @@ recipe_drafts_158:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_159:
@@ -2715,7 +2715,7 @@ recipe_drafts_159:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_160:
@@ -2732,7 +2732,7 @@ recipe_drafts_160:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_161:
@@ -2749,7 +2749,7 @@ recipe_drafts_161:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_162:
@@ -2766,7 +2766,7 @@ recipe_drafts_162:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_163:
@@ -2783,7 +2783,7 @@ recipe_drafts_163:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_164:
@@ -2800,7 +2800,7 @@ recipe_drafts_164:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_165:
@@ -2817,7 +2817,7 @@ recipe_drafts_165:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_166:
@@ -2834,7 +2834,7 @@ recipe_drafts_166:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_167:
@@ -2851,7 +2851,7 @@ recipe_drafts_167:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_168:
@@ -2868,7 +2868,7 @@ recipe_drafts_168:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_169:
@@ -2885,7 +2885,7 @@ recipe_drafts_169:
   amount: 0
   view_count: 0
   recipe_food_id: 24
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_170:
@@ -2902,7 +2902,7 @@ recipe_drafts_170:
   amount: 0
   view_count: 0
   recipe_food_id: 24
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_171:
@@ -2919,7 +2919,7 @@ recipe_drafts_171:
   amount: 0
   view_count: 0
   recipe_food_id: 24
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_172:
@@ -2936,7 +2936,7 @@ recipe_drafts_172:
   amount: 0
   view_count: 0
   recipe_food_id: 25
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_173:
@@ -2953,7 +2953,7 @@ recipe_drafts_173:
   amount: 0
   view_count: 0
   recipe_food_id: 25
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_174:
@@ -2970,7 +2970,7 @@ recipe_drafts_174:
   amount: 0
   view_count: 0
   recipe_food_id: 25
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_175:
@@ -2987,7 +2987,7 @@ recipe_drafts_175:
   amount: 0
   view_count: 0
   recipe_food_id: 24
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_176:
@@ -3004,7 +3004,7 @@ recipe_drafts_176:
   amount: 0
   view_count: 0
   recipe_food_id: 24
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_177:
@@ -3021,7 +3021,7 @@ recipe_drafts_177:
   amount: 0
   view_count: 0
   recipe_food_id: 24
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_178:
@@ -3038,7 +3038,7 @@ recipe_drafts_178:
   amount: 0
   view_count: 0
   recipe_food_id: 26
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_179:
@@ -3055,7 +3055,7 @@ recipe_drafts_179:
   amount: 0
   view_count: 0
   recipe_food_id: 26
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_180:
@@ -3072,7 +3072,7 @@ recipe_drafts_180:
   amount: 0
   view_count: 0
   recipe_food_id: 26
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_181:
@@ -3089,7 +3089,7 @@ recipe_drafts_181:
   amount: 0
   view_count: 0
   recipe_food_id: 26
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_182:
@@ -3106,7 +3106,7 @@ recipe_drafts_182:
   amount: 0
   view_count: 0
   recipe_food_id: 26
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_183:
@@ -3123,7 +3123,7 @@ recipe_drafts_183:
   amount: 0
   view_count: 0
   recipe_food_id: 26
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_184:
@@ -3140,7 +3140,7 @@ recipe_drafts_184:
   amount: 0
   view_count: 0
   recipe_food_id: 40
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_185:
@@ -3157,7 +3157,7 @@ recipe_drafts_185:
   amount: 0
   view_count: 0
   recipe_food_id: 40
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_186:
@@ -3174,7 +3174,7 @@ recipe_drafts_186:
   amount: 0
   view_count: 0
   recipe_food_id: 40
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_187:
@@ -3191,7 +3191,7 @@ recipe_drafts_187:
   amount: 0
   view_count: 0
   recipe_food_id: 41
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_188:
@@ -3208,7 +3208,7 @@ recipe_drafts_188:
   amount: 0
   view_count: 0
   recipe_food_id: 41
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_189:
@@ -3225,7 +3225,7 @@ recipe_drafts_189:
   amount: 0
   view_count: 0
   recipe_food_id: 41
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_190:
@@ -3242,7 +3242,7 @@ recipe_drafts_190:
   amount: 0
   view_count: 0
   recipe_food_id: 43
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_191:
@@ -3259,7 +3259,7 @@ recipe_drafts_191:
   amount: 0
   view_count: 0
   recipe_food_id: 43
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_192:
@@ -3276,7 +3276,7 @@ recipe_drafts_192:
   amount: 0
   view_count: 0
   recipe_food_id: 43
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_193:
@@ -3293,7 +3293,7 @@ recipe_drafts_193:
   amount: 0
   view_count: 0
   recipe_food_id: 42
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_194:
@@ -3310,7 +3310,7 @@ recipe_drafts_194:
   amount: 0
   view_count: 0
   recipe_food_id: 42
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_195:
@@ -3327,7 +3327,7 @@ recipe_drafts_195:
   amount: 0
   view_count: 0
   recipe_food_id: 42
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_196:
@@ -3344,7 +3344,7 @@ recipe_drafts_196:
   amount: 0
   view_count: 0
   recipe_food_id: 44
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_197:
@@ -3361,7 +3361,7 @@ recipe_drafts_197:
   amount: 0
   view_count: 0
   recipe_food_id: 44
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_198:
@@ -3378,7 +3378,7 @@ recipe_drafts_198:
   amount: 0
   view_count: 0
   recipe_food_id: 44
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_199:
@@ -3395,7 +3395,7 @@ recipe_drafts_199:
   amount: 0
   view_count: 0
   recipe_food_id: 45
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_200:
@@ -3412,7 +3412,7 @@ recipe_drafts_200:
   amount: 0
   view_count: 0
   recipe_food_id: 45
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_201:
@@ -3429,7 +3429,7 @@ recipe_drafts_201:
   amount: 0
   view_count: 0
   recipe_food_id: 45
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_202:
@@ -3446,7 +3446,7 @@ recipe_drafts_202:
   amount: 0
   view_count: 0
   recipe_food_id: 46
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_203:
@@ -3463,7 +3463,7 @@ recipe_drafts_203:
   amount: 0
   view_count: 0
   recipe_food_id: 46
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_204:
@@ -3480,7 +3480,7 @@ recipe_drafts_204:
   amount: 0
   view_count: 0
   recipe_food_id: 46
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_205:
@@ -3497,7 +3497,7 @@ recipe_drafts_205:
   amount: 0
   view_count: 0
   recipe_food_id: 47
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_206:
@@ -3514,7 +3514,7 @@ recipe_drafts_206:
   amount: 0
   view_count: 0
   recipe_food_id: 47
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_207:
@@ -3531,7 +3531,7 @@ recipe_drafts_207:
   amount: 0
   view_count: 0
   recipe_food_id: 47
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_208:
@@ -3548,7 +3548,7 @@ recipe_drafts_208:
   amount: 0
   view_count: 0
   recipe_food_id: 48
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_209:
@@ -3565,7 +3565,7 @@ recipe_drafts_209:
   amount: 0
   view_count: 0
   recipe_food_id: 48
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_210:
@@ -3582,7 +3582,7 @@ recipe_drafts_210:
   amount: 0
   view_count: 0
   recipe_food_id: 48
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_211:
@@ -3599,7 +3599,7 @@ recipe_drafts_211:
   amount: 0
   view_count: 0
   recipe_food_id: 48
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_212:
@@ -3616,7 +3616,7 @@ recipe_drafts_212:
   amount: 0
   view_count: 0
   recipe_food_id: 48
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_213:
@@ -3633,7 +3633,7 @@ recipe_drafts_213:
   amount: 0
   view_count: 0
   recipe_food_id: 48
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_214:
@@ -3650,7 +3650,7 @@ recipe_drafts_214:
   amount: 0
   view_count: 0
   recipe_food_id: 49
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_215:
@@ -3667,7 +3667,7 @@ recipe_drafts_215:
   amount: 0
   view_count: 0
   recipe_food_id: 49
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_216:
@@ -3684,7 +3684,7 @@ recipe_drafts_216:
   amount: 0
   view_count: 0
   recipe_food_id: 49
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_217:
@@ -3701,7 +3701,7 @@ recipe_drafts_217:
   amount: 0
   view_count: 0
   recipe_food_id: 51
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_218:
@@ -3718,7 +3718,7 @@ recipe_drafts_218:
   amount: 0
   view_count: 0
   recipe_food_id: 51
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_219:
@@ -3735,7 +3735,7 @@ recipe_drafts_219:
   amount: 0
   view_count: 0
   recipe_food_id: 51
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_220:
@@ -3752,7 +3752,7 @@ recipe_drafts_220:
   amount: 0
   view_count: 0
   recipe_food_id: 52
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_221:
@@ -3769,7 +3769,7 @@ recipe_drafts_221:
   amount: 0
   view_count: 0
   recipe_food_id: 52
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_222:
@@ -3786,7 +3786,7 @@ recipe_drafts_222:
   amount: 0
   view_count: 0
   recipe_food_id: 52
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_223:
@@ -3803,7 +3803,7 @@ recipe_drafts_223:
   amount: 0
   view_count: 0
   recipe_food_id: 53
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_224:
@@ -3820,7 +3820,7 @@ recipe_drafts_224:
   amount: 0
   view_count: 0
   recipe_food_id: 53
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_225:
@@ -3837,7 +3837,7 @@ recipe_drafts_225:
   amount: 0
   view_count: 0
   recipe_food_id: 53
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_226:
@@ -3854,7 +3854,7 @@ recipe_drafts_226:
   amount: 0
   view_count: 0
   recipe_food_id: 54
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_227:
@@ -3871,7 +3871,7 @@ recipe_drafts_227:
   amount: 0
   view_count: 0
   recipe_food_id: 54
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_228:
@@ -3888,7 +3888,7 @@ recipe_drafts_228:
   amount: 0
   view_count: 0
   recipe_food_id: 54
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_229:
@@ -3905,7 +3905,7 @@ recipe_drafts_229:
   amount: 0
   view_count: 0
   recipe_food_id: 55
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_230:
@@ -3922,7 +3922,7 @@ recipe_drafts_230:
   amount: 0
   view_count: 0
   recipe_food_id: 55
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_231:
@@ -3939,7 +3939,7 @@ recipe_drafts_231:
   amount: 0
   view_count: 0
   recipe_food_id: 55
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_232:
@@ -3956,7 +3956,7 @@ recipe_drafts_232:
   amount: 0
   view_count: 0
   recipe_food_id: 59
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_233:
@@ -3973,7 +3973,7 @@ recipe_drafts_233:
   amount: 0
   view_count: 0
   recipe_food_id: 59
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_234:
@@ -3990,7 +3990,7 @@ recipe_drafts_234:
   amount: 0
   view_count: 0
   recipe_food_id: 59
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_235:
@@ -4007,7 +4007,7 @@ recipe_drafts_235:
   amount: 0
   view_count: 0
   recipe_food_id: 56
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_236:
@@ -4024,7 +4024,7 @@ recipe_drafts_236:
   amount: 0
   view_count: 0
   recipe_food_id: 56
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_237:
@@ -4041,6 +4041,6 @@ recipe_drafts_237:
   amount: 0
   view_count: 0
   recipe_food_id: 56
-  deleted_at: null
+  del_flg: 2000-01-01 00:00:00 UTC
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
