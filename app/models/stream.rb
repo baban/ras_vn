@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 class Stream < ActiveRecord::Base
+  ADD_USER = 1
   ADD_RECIPE = 2
 
   @@trannslaters = {

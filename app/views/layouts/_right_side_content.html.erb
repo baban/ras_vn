@@ -27,7 +27,7 @@
 			<ul id="stream_list">
 				<% @streams.each do |stream| %>
 					<li class="txtarea txt12">
-						<h3><%= stream.title %></h3>
+						<h3><%=raw stream.title %></h3>
 						<p class="att txt11">Từ: <%= stream.created_at %></p>
 					</li>
 				<% end %>
