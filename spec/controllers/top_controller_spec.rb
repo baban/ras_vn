@@ -14,6 +14,21 @@ describe TopController do
       end
     end
   end
+
   context "ログイン時" do
+    include Devise::TestHelpers
+    before do
+      @user = User.first
+      sign_in @user
+    end 
+
+    describe "GET 'index'" do
+      before do
+        get :index
+      end 
+      it "returns http success" do
+        response.should be_success
+      end
+    end
   end
 end

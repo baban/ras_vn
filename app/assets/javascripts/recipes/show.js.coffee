@@ -26,7 +26,7 @@ $(window).load ->
     .live( "ajax:success", (event, data, status, xhr) ->
       console.log("success")
       console.log(data)
-      $("#love_area").html("love("+data["count"]+")")
+      $("#love_area").html("<span class='loved'>love("+data["count"]+")</span>")
     )
     .live( "ajax:error", (data, status, xhr) ->
       console.log("error")

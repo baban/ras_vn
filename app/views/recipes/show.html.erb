@@ -25,10 +25,10 @@
 				<div class="explanation">
 					<% if login? and (not loved?) %>
 						<div id="love_area">
-							<%= link_to "love!(#{@recipe.love_count})", { action:"love", id: params[:id], user_id: current_user.id }, remote: true, id: "love_button" %>
+							<%= link_to raw("love!(#{@recipe.love_count})"), { action:"love", id: params[:id], user_id: current_user.id }, remote: true, id: "love_button" %>
 						</div>
 					<% else %>
-						love(<%= @recipe.love_count %>)
+						<span class="loved">love(<%= @recipe.love_count %>)</span>
 					<% end %>
 					<p><%= @recipe.description %></p>
 					<div class="clearfix">
@@ -60,6 +60,22 @@
 					</div>
 				</div>
 			</article>
+			<dl id="recipe_steps">
+				<% @recipe.steps.each.with_index(1) do |step,i| %>
+					<dl class="step">
+					<dt>Step<%= i %></dt>
+					<dd>
+						<% if step.image %>
+							<%= image_tag step.image.url(:thumb), alt:"" %>
+						<% end %>
+						<% if step.movie_url %>
+							<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
+						<% end %>
+						<%= step.content %>
+					</dd>
+				</dl>
+			<% end %>
+		</dl>
 
 			<div id="recipe_comment_area" class="area">
 				<h3 id="comment_title">つくれぽ</h3>
@@ -102,82 +118,4 @@
 </div>
 
 <%= render partial:"layouts/content_footer" %>
-
-<div id="content_body" class="section">
-	<div id="recipe_header">
-		<p class="chef">
-			<%= link_to @recipe.user.profile.nickname, kitchen_url(@user) %>
-			<%= t("page.recipes.creator") %>
-			(<%= @recipe.user.profile.recipe_count %><%= t("order.recipes") %>)
-		</p>
-	</div>
-	<h2><%= @recipe.title %></h2>
-	<div class="section" id="recipe_body">
-		<div id="recipe_base_info">
-			<div id="recipe_photo" class="figure">
-				<%= image_tag @recipe.recipe_image.url(:large_thumb) %>
-			</div>
-			<div id="description">
-				<%= @recipe.description %>
-			</div>
-			<div id="food_genre">
-				<%= @recipe.food.name %>
-			</div>
-			<h3> <%= t(:recipe_foodstuffs, scope:"activerecord.attributes.recipe") %>&nbsp;
-			<%= @recipe.amount && "(#{@recipe.amount}人前)"  %> </h3>
-			<table>
-				<% @recipe.foodstuffs.each do |foodstuff| %>
-				<tr>
-					<td><%= foodstuff.name %></td><td><%= foodstuff.amount %></td>
-				</tr>
-				<% end %>
-			</table>
-		</div>
-		<dl id="recipe_steps">
-			<% @recipe.steps.each.with_index(1) do |step,i| %>
-			<dl class="step">
-				<dt>
-					Step<%= i %>
-				</dt>
-				<dd>
-					<% if step.image %>
-					<%= image_tag step.image.url(:thumb), alt:"" %>
-					<% end %>
-					<% if step.movie_url %>
-					<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
-					<% end %>
-					<%= step.content %>
-				</dd>
-			</dl>
-			<% end %>
-		</dl>
-		<h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
-		<div class="section">
-			<%= @recipe.one_point %>
-		</div>
-		<div id="recipe_comment_area" class="area">
-			<h3><%= t(:recipe_comments, scope:"activerecord.attributes.recipe") %></h3>
-			<%= form_for @recipe_comment do |f| %>
-			<p>
-				<%= f.hidden_field :recipe_id, value: @recipe.id %>
-			</p>
-			<p>
-				<%= f.label :image %>
-			</p>
-			<p>
-				<%= f.file_field :image, value: "" %>
-			</p>
-			<p>
-				<%= f.label :content %>
-			</p>
-			<p>
-				<%= f.text_area :content, size:"50x4", value: "" %>
-			</p>
-			<p>
-				<%= f.submit t(:post_report, scope:"views.recipes.show") %>
-			</p>
-			<% end %>
-		</div>
-	</div>
-</div>
 

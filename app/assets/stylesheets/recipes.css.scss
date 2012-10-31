@@ -77,14 +77,25 @@ form#bookmark_button {
   clear:both;
 }
 
+
+#recipe_steps:before {
+  content:"";
+  display:block;
+  clear:both;
+}
+
 #recipe_steps {
   margin:0;
   padding:0;
   dl.step {
-    width:80%;
-    height:13em;
-    border:solid 1px #aaa;
-    margin:0 auto;
+    width:90%;
+    min-height:7em;
+    border:dashed 3px #fd8;
+    border-style:none none dashed none;
+    margin:0 auto 1em auto;
+    dt {
+      color:orange;
+    }
     dd {
       img {
         width:180px;
@@ -297,4 +308,11 @@ p#genre_description {
 h3#comment_title {
   font-size:24px;
   color:orange;
+}
+
+/* love button */
+.loved {
+  border:solid 1px #dd5;
+  background-color:#eea;
+  padding:1px 4px;
 }
