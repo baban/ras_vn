@@ -1,28 +1,36 @@
-<div id="content_footer">
-  footer
-</div>
-
-<div id="content_body">
-  <div class="paginate">
-    <%= paginate @recipes %>
-  </div>
-  <% @recipes.each do |recipe| %>
-    <div class="recipe">
-      <div class="figure recipe_photo">
-        <% if recipe.recipe_image.blank? %>
-          <%= image_tag recipe.recipe_image.url(:thumb), alt:"image" %>
-        <% else %>
-          <%= "no_image" %>
-        <% end %>
-      </div>
-      <%= link_to recipe.title, recipe_url(recipe) %>
-      <p class="description"><%= truncate(recipe.description) %></p>
-      <p class="chef">by <%= recipe.chef.profile.nickname %></p>
-      <ul class="recipe_status">
-        <li><%= t(:id, scope:"activerecord.attributes.recipe") %>:<%= recipe.id %></li>
-        <li><%= t(:created_at, scope:"activerecord.attributes.recipe") %>:<%= recipe.created_at.strftime("%Y-%m-%d") %></li>
-        <li><%= t(:updated_at, scope:"activerecord.attributes.recipe") %>:<%= recipe.updated_at.strftime("%Y-%m-%d") %></li>
-      </ul>
-    </div>
-  <% end %>
+<div class="bace_bg">
+	<div class="contents_bg clearfix">
+		<!--main_clm-->
+		<div class="main_clm">
+			<div class="contents_cate">
+				<article class="cate01 clearfix">
+					<% @recipes.each do |recipe| %>
+						<section class="rec_cat4 clearfix">
+							<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
+							<div class="txt">
+								<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
+								<p>by <%= link_to recipe.user.profile.nickname %></p>
+								<h2>
+									<%= recipe.description %>
+									<div class="info_area">
+										公開：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+										更新：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+										レシピID：<span><%= recipe.id %></span>
+									</div>
+								</h2>
+							</div>
+						</section>
+					<% end %>
+				</article>
+				<!--pagination-->
+				<div class="paginate">
+					<%= paginate @recipes %>
+				</div>
+				<!--pagination-->
+			</div>
+		</div>
+		<!--main_clmEnd-->
+		<%=render partial:"layouts/right_side_content" %>
+	</div>
+	<!--contents-->
 </div>
