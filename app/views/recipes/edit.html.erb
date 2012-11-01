@@ -41,7 +41,7 @@
 							</div><div class="clear"></div></h3>
 						</div>
 						<div class="ingredients_list" id="foodstuffs">
-							<% @recipe.foodstuffs.each do |foodstuff| %>
+							<% @recipe.edit_foodstuffs.each do |foodstuff| %>
 								<div class="ingredient_row clearfix">
 									<div class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder:"食材" %></div>
 									<div class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder:"分量" %></div>
@@ -53,7 +53,7 @@
 				</div>
 				<div id="recipes_steps_area" class="area">
 					<dl id="recipe_steps">
-					<% @recipe.edit_steps.each.with_index(1) do |step,i| %>
+					<% @steps.each.with_index(1) do |step,i| %>
 					<dl class="step" id="recipe_step_<%= i %>">
 						<dt>Step <%= i %></dt>
 						<dt class="selecter image_field">

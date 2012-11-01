@@ -274,12 +274,10 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.integer  "amount"
     t.integer  "view_count",     :default => 0,                     :null => false
     t.integer  "recipe_food_id"
-    t.time     "del_flg",        :default => '2000-01-01 00:00:00', :null => false
+    t.time     "deleted_at",     :default => '2000-01-01 00:00:00', :null => false
     t.datetime "created_at",                                        :null => false
     t.datetime "updated_at",                                        :null => false
   end
-
-  add_index "recipes", ["user_id"], :name => "index_recipes_on_user_id"
 
   create_table "search_logs", :force => true do |t|
     t.integer  "user_id",                    :null => false

@@ -1,9 +1,9 @@
 # encoding: utf-8
 
 class RecipesController < ApplicationController
-  before_filter :authenticate_user!,   except:[:index,:show]
-  before_filter :editable_user_filter, only:[:edit,:update,:destroy]
-  before_filter :advertisement_filter, except:[:create,:destroy]
+  before_filter :authenticate_user!,   except: %W[index show]
+  before_filter :editable_user_filter, only: %W[edit update destroy]
+  before_filter :advertisement_filter, except: %W[create destroy]
 
   helper_method :loved?, :bookmarked?, :my_recipe?
 
@@ -47,8 +47,8 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id]).draft
-    @steps  = @recipe.edit_steps
     @foodstuffs  = @recipe.edit_foodstuffs
+    @steps  = @recipe.edit_steps
   end
 
   def update
