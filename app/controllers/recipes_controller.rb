@@ -71,9 +71,9 @@ class RecipesController < ApplicationController
     @recipe.copy_public
 
     if params[:edit]
-      render( { action: "edit" }, notice: t(:tmp_save, scope:"views.recipes.edit") )
+      render( { action: "edit", id: @recipe.id }, notice: t(:tmp_save, scope:"views.recipes.edit") )
     else
-      redirect_to( recipe_url(@recipe), notice: t(:save_complete, scope:"views.recipes.edit") )
+      redirect_to( { action:"show", id: @recipe.id }, notice: t(:save_complete, scope:"views.recipes.edit") )
     end
   end
 
