@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
   helper_method :loved?, :bookmarked?, :my_recipe?
 
   def index
-    @recipes = RecipeSearcher.search( params.merge( user_id: current_user.try(:id).to_i ) )
+    redirect_to recipe_food_genres_url
   end
 
   def show
@@ -73,7 +73,7 @@ class RecipesController < ApplicationController
     if params[:edit]
       render( { action: "edit" }, notice: t(:tmp_save, scope:"views.recipes.edit") )
     else
-      redirect_to( { action:"show", id: @recipe }, notice: t(:save_complete, scope:"views.recipes.edit") )
+      redirect_to( recipe_url(@recipe), notice: t(:save_complete, scope:"views.recipes.edit") )
     end
   end
 
