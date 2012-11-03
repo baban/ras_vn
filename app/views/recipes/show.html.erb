@@ -74,7 +74,7 @@
 		</dl>
 
 			<div id="recipe_comment_area" class="area">
-				<h3 id="comment_title"><%= t(:comments, scope:"views:recipes:report")%></h3>
+				<h3 id="comment_title"><%= t(:comments, scope:"views.recipes.report")%></h3>
 				<% @recipe.comments.each do |comment| %>
 					<div class="cate01 clearfix">
 						<section class="rec_cat5 clearfix">
@@ -93,14 +93,14 @@
 						</section>
 					</div>
 				<% end %>
-				<h3><%= t(:post_title, scope:"views:recipes:report"%></h3>
+				<h3><%= t(:post_title, scope:"views.recipes.report")%></h3>
 				<%= form_for @recipe_comment do |f| %>
 					<p><%= f.hidden_field :recipe_id, value: @recipe.id %></p>
-					<p><%= f.label t(:title, scope:"views:recipe:report") %></p>
+					<p><%= f.label t(:title, scope:"views.recipes.report") %></p>
 					<p><%= f.text_field :title, size: 80, value: "" %></p>
-					<p><%= f.label t(:image, scope:"views:recipe:report") %></p>
+					<p><%= f.label t(:image, scope:"views.recipes.report") %></p>
 					<p><%= f.file_field :image, value: "" %></p>
-					<p><%= f.label t(:content, scope:"views:recipe:report") %></p>
+					<p><%= f.label t(:content, scope:"views.recipes.report") %></p>
 					<p><%= f.text_area :content, size:"60x4", value: "" %></p>
 					<p><%= f.submit t(:post_report, scope:"views.recipes.show") %></p>
 				<% end %>
@@ -112,6 +112,4 @@
 	</div>
 	<!--contents-->
 </div>
-
 <%= render partial:"layouts/content_footer" %>
-
