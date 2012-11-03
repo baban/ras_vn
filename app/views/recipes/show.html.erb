@@ -17,7 +17,7 @@
 				<% end %>
 				<h1 class="ttl_recipe">
 					<%= @recipe.title %>
-					<% if my_recipe? %><%= link_to "編集する", action:"edit" %><% end %>
+					<% if my_recipe? %><%= link_to "Chỉnh sửa", action:"edit" %><% end %>
 				</h1>
 				<div id="recipe_image_area">
 					<%= image_tag @recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"image", id:"recipe_image" %>
@@ -25,7 +25,7 @@
 				<div class="explanation">
 					<% if login? and (not loved?) %>
 						<div id="love_area">
-							<%= link_to raw("love!(#{@recipe.love_count})"), { action:"love", id: params[:id], user_id: current_user.id }, remote: true, id: "love_button" %>
+							<%= link_to raw("Love!(#{@recipe.love_count})"), { action:"love", id: params[:id], user_id: current_user.id }, remote: true, id: "love_button" %>
 						</div>
 					<% else %>
 						<span class="loved">love(<%= @recipe.love_count %>)</span>
@@ -74,7 +74,7 @@
 		</dl>
 
 			<div id="recipe_comment_area" class="area">
-				<h3 id="comment_title">つくれぽ</h3>
+				<h3 id="comment_title"><%= t(:comments, scope:"views:recipes:report")%></h3>
 				<% @recipe.comments.each do |comment| %>
 					<div class="cate01 clearfix">
 						<section class="rec_cat5 clearfix">
@@ -85,22 +85,22 @@
 								<h2>
 									<%= comment.content %>
 									<div class="info_area">
-										公開：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
-										更新：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+										Created：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+										Updated：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
 									</div>
 								</h2>
 							</div>
 						</section>
 					</div>
 				<% end %>
-				<h3>つくれぽを書く</h3>
+				<h3><%= t(:post_title, scope:"views:recipes:report"%></h3>
 				<%= form_for @recipe_comment do |f| %>
 					<p><%= f.hidden_field :recipe_id, value: @recipe.id %></p>
-					<p><%= f.label :title %></p>
+					<p><%= f.label t(:title, scope:"views:recipe:report") %></p>
 					<p><%= f.text_field :title, size: 80, value: "" %></p>
-					<p><%= f.label :image %></p>
+					<p><%= f.label t(:image, scope:"views:recipe:report") %></p>
 					<p><%= f.file_field :image, value: "" %></p>
-					<p><%= f.label :content %></p>
+					<p><%= f.label t(:content, scope:"views:recipe:report") %></p>
 					<p><%= f.text_area :content, size:"60x4", value: "" %></p>
 					<p><%= f.submit t(:post_report, scope:"views.recipes.show") %></p>
 				<% end %>
