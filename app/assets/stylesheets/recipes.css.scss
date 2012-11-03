@@ -138,8 +138,13 @@ dl#recipe_comments:after {
 
 /* new */
 
-#recipe_description {
+#recipe_title {
+  font-size:16px;
   width:30em;
+}
+
+#recipe_description {
+  width:25em;
   height:5em;
 }
 

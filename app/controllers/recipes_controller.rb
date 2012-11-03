@@ -57,10 +57,11 @@ class RecipesController < ApplicationController
     @recipe = @recipe_origin.draft
 
     @foodstuffs = params[:foodstuffs].presence || []
-    @foodstuffs = @foodstuffs.select{ |h| h["name"].present? }.map{ |h| RecipeFoodstuffDraft.new(name: h["name"], amount: h["amount"]) }
+    @foodstuffs = @foodstuffs.select{ |h| h["name"].present? and h["amount"].present? }.map{ |h| RecipeFoodstuffDraft.new(name: h["name"], amount: h["amount"]) }
     @recipe.foodstuffs= @foodstuffs
 
     @steps = params[:recipe_steps].select{ |o| o[:content].present? }.map { |v| RecipeStepDraft.new(v) }
+    logger.info @steps.inspect
     @recipe.steps= @steps
 
     @recipe.attributes= params[:recipe]

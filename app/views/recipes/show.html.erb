@@ -1,7 +1,7 @@
 <%= include_action_style_sheet %>
 <%= include_action_javascript %>
 
-<%#= render partial:"forbiddon_right_click" %>
+<%= render partial:"forbiddon_right_click" %>
 
 <div class="bace_bg">
 	<div class="contents_bg clearfix">
@@ -43,7 +43,7 @@
 						<div class="servings">
 							<h3>
 								<div class="material clearfix">
-									<span class="material_txt"> Nguyên liệu </span>
+									<span class="material_txt">Nguyên liệu</span>
 									<span class="servings_for yield"><%= @recipe.amount && "(#{@recipe.amount} người ăn)"  %></span>
 								</div>
 								<div class="clear"></div>
@@ -65,12 +65,8 @@
 					<dl class="step">
 					<dt>Step<%= i %></dt>
 					<dd>
-						<% if step.image %>
-							<%= image_tag step.image.url(:thumb), alt:"" %>
-						<% end %>
-						<% if step.movie_url %>
-							<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
-						<% end %>
+						<% if step.image.present? %><%= image_tag step.image.url(:thumb), alt:"image", style:"border:solid 1px #aaa;" %><% end %>
+						<% if step.movie_url.present? %><iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe><% end %>
 						<%= step.content %>
 					</dd>
 				</dl>
