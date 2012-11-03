@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.text     "content",                                        :null => false
     t.integer  "category_id", :default => 0,                     :null => false
     t.string   "image"
-    t.datetime "publiced_at", :default => '2012-10-16 00:00:00', :null => false
+    t.datetime "publiced_at", :default => '2012-11-03 00:00:00', :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
@@ -150,30 +150,31 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.datetime "updated_at",                 :null => false
   end
 
-  create_table "recipe_drafts", :force => true do |t|
-    t.integer  "user_id",                                           :null => false
-    t.integer  "recipe_id",                                         :null => false
-    t.string   "title",          :default => "",                    :null => false
-    t.text     "description",                                       :null => false
-    t.boolean  "public",         :default => false,                 :null => false
-    t.string   "recipe_image"
-    t.text     "one_point",                                         :null => false
-    t.integer  "love_count",     :default => 0,                     :null => false
-    t.integer  "eatstyle_id",    :default => 0,                     :null => false
-    t.integer  "amount"
-    t.integer  "view_count",     :default => 0,                     :null => false
-    t.integer  "recipe_food_id"
-    t.time     "del_flg",        :default => '2000-01-01 00:00:00', :null => false
-    t.datetime "created_at",                                        :null => false
-    t.datetime "updated_at",                                        :null => false
-  end
+  add_index "recipe_comments", ["recipe_id"], :name => "index_recipe_comments_on_recipe_id"
+  add_index "recipe_comments", ["user_id"], :name => "index_recipe_comments_on_user_id"
 
-  add_index "recipe_drafts", ["user_id"], :name => "index_recipe_drafts_on_user_id"
+  create_table "recipe_drafts", :force => true do |t|
+    t.integer  "user_id",                           :null => false
+    t.integer  "recipe_id",                         :null => false
+    t.string   "title",          :default => "",    :null => false
+    t.text     "description",                       :null => false
+    t.boolean  "public",         :default => false, :null => false
+    t.string   "recipe_image"
+    t.text     "one_point",                         :null => false
+    t.integer  "love_count",     :default => 0,     :null => false
+    t.integer  "eatstyle_id",    :default => 0,     :null => false
+    t.integer  "amount"
+    t.integer  "view_count",     :default => 0,     :null => false
+    t.integer  "recipe_food_id"
+    t.datetime "deletea_at"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+  end
 
   create_table "recipe_food_genre_rankings", :force => true do |t|
     t.integer  "recipe_food_genre_id",                           :null => false
     t.integer  "point",                :default => 0,            :null => false
-    t.date     "ranked_at",            :default => '2012-10-16', :null => false
+    t.date     "ranked_at",            :default => '2012-11-03', :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
@@ -278,6 +279,8 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.datetime "created_at",                                        :null => false
     t.datetime "updated_at",                                        :null => false
   end
+
+  add_index "recipes", ["user_id"], :name => "index_recipes_on_user_id"
 
   create_table "search_logs", :force => true do |t|
     t.integer  "user_id",                    :null => false

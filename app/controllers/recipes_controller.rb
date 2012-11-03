@@ -46,13 +46,15 @@ class RecipesController < ApplicationController
   end
 
   def edit
-    @recipe = Recipe.find(params[:id]).draft
+    @recipe_origin = Recipe.find(params[:id])
+    @recipe = @recipe_origin.draft
     @foodstuffs  = @recipe.edit_foodstuffs
     @steps  = @recipe.edit_steps
   end
 
   def update
-    @recipe = Recipe.find(params[:id]).draft
+    @recipe_origin = Recipe.find(params[:id])
+    @recipe = @recipe_origin.draft
 
     @foodstuffs = params[:foodstuffs].presence || []
     @foodstuffs = @foodstuffs.select{ |h| h["name"].present? }.map{ |h| RecipeFoodstuffDraft.new(name: h["name"], amount: h["amount"]) }
@@ -71,9 +73,9 @@ class RecipesController < ApplicationController
     @recipe.copy_public
 
     if params[:edit]
-      render( { action: "edit", id: @recipe.id }, notice: t(:tmp_save, scope:"views.recipes.edit") )
+      redirect_to( { action: "edit", id: params[:id] }, notice: t(:tmp_save, scope:"views.recipes.edit") )
     else
-      redirect_to( { action:"show", id: @recipe.id }, notice: t(:save_complete, scope:"views.recipes.edit") )
+      redirect_to( { action: "show", id: params[:id] }, notice: t(:save_complete, scope:"views.recipes.edit") )
     end
   end
 
