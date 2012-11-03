@@ -16,7 +16,7 @@ class CreateRecipeDrafts < ActiveRecord::Migration
       t.integer  :view_count,     null: false, default: 0
       t.integer  :recipe_food_id, null: true
 
-      t.datetime :deletea_at,     null: true
+      t.datetime :deleted_at,     null: true
       t.timestamps
     end
   end

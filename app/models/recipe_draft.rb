@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class RecipeDraft < ActiveRecord::Base
+  acts_as_paranoid
+
   paginates_per 12
 
   has_many :recipe_foodstuff_drafts

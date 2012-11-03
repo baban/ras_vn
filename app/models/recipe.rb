@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class Recipe < ActiveRecord::Base
+  acts_as_paranoid
+
   paginates_per 12
 
   ADD_RECIPE = 2
