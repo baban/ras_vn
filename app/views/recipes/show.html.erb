@@ -20,7 +20,7 @@
 					<% if my_recipe? %><%= link_to "Chỉnh sửa", action:"edit" %><% end %>
 				</h1>
 				<div id="recipe_image_area">
-					<%= image_tag @recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"image", id:"recipe_image" %>
+					<%= image_tag @recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"", id:"recipe_image" %>
 				</div>
 				<div class="explanation">
 					<% if login? and (not loved?) %>
