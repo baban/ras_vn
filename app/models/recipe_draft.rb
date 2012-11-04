@@ -59,6 +59,7 @@ class RecipeDraft < ActiveRecord::Base
       attributes.delete("recipe_draft_id")
       RecipeFoodstuff.new(attributes)
     end
+
     logger.info recipe.valid?
     logger.info recipe.errors.inspect
     recipe.save( validate: false )

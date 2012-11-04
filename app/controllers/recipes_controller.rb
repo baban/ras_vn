@@ -56,21 +56,16 @@ class RecipesController < ApplicationController
     @recipe_origin = Recipe.find(params[:id])
     @recipe = @recipe_origin.draft
 
-    @foodstuffs = params[:foodstuffs].presence || []
-    @foodstuffs = @foodstuffs.select{ |h| h["name"].present? and h["amount"].present? }.map{ |h| RecipeFoodstuffDraft.new(name: h["name"], amount: h["amount"]) }
-    @recipe.foodstuffs= @foodstuffs
-
-    @steps = params[:recipe_steps].select{ |o| o[:content].present? }.map { |v| RecipeStepDraft.new(v) }
-    logger.info @steps.inspect
-    @recipe.steps= @steps
+    @recipe.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
+    @recipe.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
 
     @recipe.attributes= params[:recipe]
     @recipe.user_id= current_user.id
     
-    @recipe.recipe_food_id = RecipeFood.create( recipe_food_genre_id: params[:recipe_genre_selecter], name: params[:new_food_genre] ).id if params[:new_food_genre]
+    @recipe.recipe_food_id= RecipeFood.create( recipe_food_genre_id: params[:recipe_genre_selecter], name: params[:new_food_genre] ).id if params[:new_food_genre]
     @recipe.save
 
-    # recipe_drafts data is copying
+    # recipe_drafts data is copying to recipes table
     @recipe.copy_public
 
     if params[:edit]
@@ -78,12 +73,6 @@ class RecipesController < ApplicationController
     else
       redirect_to( { action: "show", id: params[:id] }, notice: t(:save_complete, scope:"views.recipes.edit") )
     end
-  end
-
-  def destroy
-    @recipe = Recipe.find(params[:id])
-    @recipe.delete
-    redirect_to action:'index'
   end
 
   # if love button is cliced!

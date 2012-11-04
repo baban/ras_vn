@@ -6,4 +6,8 @@ class RecipeStepDraft < ActiveRecord::Base
   belongs_to :recipe_draft
 
   mount_uploader :image, RecipeStepsUploader
+
+  def self.post_filter( form_values )
+    form_values.select{ |o| o[:content].present? }.map { |v| RecipeStepDraft.new(v) }
+  end
 end

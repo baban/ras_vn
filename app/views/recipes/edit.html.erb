@@ -34,7 +34,7 @@
 					<p id="genre_description">希望のジャンルがない場合は、上のテキストボックスでジャンルを追加してください</p>
 					<div id="ingredients">
 						<span class="material_txt"> Nguyên liệu </span>
-						(<%= f.text_field :amount, size: 3 %> người ăn)
+						(<%= f.text_field :amount, size: 3, value: (@recipe.amount.to_i.zero? ? 1 : @recipe.amount) %> người ăn)
 						<div class="servings">
 							<h3>
 							<div class="material clearfix">

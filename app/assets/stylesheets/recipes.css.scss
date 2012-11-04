@@ -82,11 +82,17 @@ form#bookmark_button {
   content:"";
   display:block;
   clear:both;
+  margin:0;
+  border:dashed 1px #fd8;
+  border-style:dashed none none none;
 }
 
 #recipe_steps {
   margin:0;
   padding:0;
+  dl.step:first-child {
+    margin-top:2em;
+  }
   dl.step {
     width:90%;
     min-height:7em;

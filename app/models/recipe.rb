@@ -36,11 +36,6 @@ class Recipe < ActiveRecord::Base
 
   alias :chef :user
 
-  def view_count_increment!
-    self.view_count+=1
-    self.save
-  end
-
   def food
     RecipeFood.find_by_id(self.recipe_food_id)
   end
@@ -54,6 +49,11 @@ class Recipe < ActiveRecord::Base
 
     RecipeLoveLog.create( recipe_id: id, user_id: user_id )
     recipe
+  end
+
+  def view_count_increment!
+    self.view_count+=1
+    self.save
   end
 end
 

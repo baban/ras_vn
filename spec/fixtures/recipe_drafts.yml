@@ -12,24 +12,24 @@ recipe_drafts_0:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2011-01-24 00:00:00 UTC
   updated_at: 2012-06-05 00:00:00 UTC
 recipe_drafts_1:
   id: 2
   user_id: 3
   recipe_id: 2
-  title: ジャガイモで青椒肉絲 
-  description: ジャガイモの食感がなかなかですよ！ 
+  title: ジャガイモで青椒肉絲
+  description: ジャガイモの食感がなかなかですよ！
   public: true
   recipe_image: recipe.jpg
-  one_point: ジャガイモは食感が残るくらいの炒め具合がおすすめ！私は紹興酒の香りが好きなので☆☆☆もちろん日本酒でＯＫです！ 
+  one_point: ジャガイモは食感が残るくらいの炒め具合がおすすめ！私は紹興酒の香りが好きなので☆☆☆もちろん日本酒でＯＫです！
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2010-05-27 00:00:00 UTC
   updated_at: 2010-05-27 00:00:00 UTC
 recipe_drafts_2:
@@ -40,13 +40,13 @@ recipe_drafts_2:
   description: 塩ゆでしたじゃがいもを揚げるので、しっかり味がついてます。　 　片栗粉で揚げるのでサクサクの食感なんです。
   public: true
   recipe_image: recipe.jpg
-  one_point: あげたじゃがいもに塩を振るのではなく、先に塩味をつけてしまいます。片栗粉はしっかりつけるのが、サクサクな食感のコツです。 
+  one_point: あげたじゃがいもに塩を振るのではなく、先に塩味をつけてしまいます。片栗粉はしっかりつけるのが、サクサクな食感のコツです。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2011-12-29 00:00:00 UTC
   updated_at: 2012-05-20 00:00:00 UTC
 recipe_drafts_3:
@@ -63,14 +63,14 @@ recipe_drafts_3:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2010-08-29 00:00:00 UTC
   updated_at: 2011-03-13 00:00:00 UTC
 recipe_drafts_4:
   id: 5
   user_id: 6
   recipe_id: 5
-  title: じゃがいものコンビーフ卵炒め☆ 
+  title: じゃがいものコンビーフ卵炒め☆
   description: １０分もあれば出来ちゃう！卵とコンビーフの組み合わせがたまらない簡単美味しいおかずです♪
   public: true
   recipe_image: recipe.jpg
@@ -80,7 +80,7 @@ recipe_drafts_4:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-03-06 00:00:00 UTC
   updated_at: 2012-05-24 00:00:00 UTC
 recipe_drafts_5:
@@ -88,16 +88,16 @@ recipe_drafts_5:
   user_id: 7
   recipe_id: 6
   title: 焼きコロッケ？？シェパードパイ？
-  description: コロッケの材料をグラタン皿で焼いてシェパードパイもどきに！じゃがいもとひき肉、トロ～リチーズが美味しい♪人気検索１位感謝 
+  description: コロッケの材料をグラタン皿で焼いてシェパードパイもどきに！じゃがいもとひき肉、トロ～リチーズが美味しい♪人気検索１位感謝
   public: true
   recipe_image: recipe.jpg
-  one_point: ●●●上記の写真は倍の量で作っているところです。●●●一人分ずつココットなどで焼いても♪　その場合はトースターで焼けます。強で１０位焼きますが、焦げ目が付き過ぎるので、焦げそうになったらアルミホイルをかぶせて下さい。 
+  one_point: ●●●上記の写真は倍の量で作っているところです。●●●一人分ずつココットなどで焼いても♪　その場合はトースターで焼けます。強で１０位焼きますが、焦げ目が付き過ぎるので、焦げそうになったらアルミホイルをかぶせて下さい。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-03-10 00:00:00 UTC
   updated_at: 2012-05-17 00:00:00 UTC
 recipe_drafts_6:
@@ -105,7 +105,7 @@ recipe_drafts_6:
   user_id: 8
   recipe_id: 7
   title: くせになる☆ベーコンポテト
-  description: ベーコンたっぷりハッシュドポテト風♫ 味つけは仕上げの粗塩で！ 
+  description: ベーコンたっぷりハッシュドポテト風♫ 味つけは仕上げの粗塩で！
   public: true
   recipe_image: recipe.jpg
   one_point: 小エビのかわりにイカや、さっと炒めた豚ばら肉などを入れても美味しいですよ。
@@ -114,14 +114,14 @@ recipe_drafts_6:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-02-20 00:00:00 UTC
   updated_at: 2012-02-21 00:00:00 UTC
 recipe_drafts_7:
   id: 8
   user_id: 9
   recipe_id: 8
-  title: じゃがいもdeもっちり即席お好み焼き 
+  title: じゃがいもdeもっちり即席お好み焼き
   description: 生地にジャガイモをすりおろした物を使っているので、もっちりとしたチヂミ風のお好み焼きが作れます。
   public: true
   recipe_image: recipe.jpg
@@ -131,41 +131,41 @@ recipe_drafts_7:
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-03-05 00:00:00 UTC
   updated_at: 2012-03-05 00:00:00 UTC
 recipe_drafts_8:
   id: 9
   user_id: 7
   recipe_id: 9
-  title: じゃがいも＆卵のオーブン焼き 
-  description: 家に常備してある素材で、ボリューム有り☆☆☆オーストラリアで食べた家庭の味です。じゃが芋好きに好評でした！ 
+  title: じゃがいも＆卵のオーブン焼き
+  description: 家に常備してある素材で、ボリューム有り☆☆☆オーストラリアで食べた家庭の味です。じゃが芋好きに好評でした！
   public: true
   recipe_image: recipe.jpg
-  one_point: オーブントースターで焼く場合も、表面のチーズに焦げ目がつけば出来上がりです。オリーブオイルが味の決め手なので、ＥＸバージンオリーブオイルを使ってください。 
+  one_point: オーブントースターで焼く場合も、表面のチーズに焦げ目がつけば出来上がりです。オリーブオイルが味の決め手なので、ＥＸバージンオリーブオイルを使ってください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2011-09-09 00:00:00 UTC
   updated_at: 2012-04-12 00:00:00 UTC
 recipe_drafts_9:
   id: 10
   user_id: 10
   recipe_id: 10
-  title: アンチョビポテト 
-  description: アンチョビとにんにくのうまみが嬉しい、ほくほくポテト。ビールがすすんじゃいますよ。。。 
+  title: アンチョビポテト
+  description: アンチョビとにんにくのうまみが嬉しい、ほくほくポテト。ビールがすすんじゃいますよ。。。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2011-10-27 00:00:00 UTC
   updated_at: 2011-10-27 00:00:00 UTC
 recipe_drafts_10:
@@ -173,16 +173,16 @@ recipe_drafts_10:
   user_id: 1
   recipe_id: 11
   title: ♥アスパラとじゃがいものチーズサラダ♥
-  description: コロコロのアスパラとじゃがいもがとっても食べ易く、見た目も可愛いサラダです♡ 
+  description: コロコロのアスパラとじゃがいもがとっても食べ易く、見た目も可愛いサラダです♡
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_11:
@@ -190,67 +190,67 @@ recipe_drafts_11:
   user_id: 1
   recipe_id: 12
   title: じゃがいもといんげんのマヨマスタード炒め
-  description: マヨマスタードの味がくせになる〜 マヨ好きにはたまらない〜♪ ２０１２．５.１５話題入りしました♪ 
+  description: マヨマスタードの味がくせになる〜 マヨ好きにはたまらない〜♪ ２０１２．５.１５話題入りしました♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_12:
   id: 13
   user_id: 1
   recipe_id: 13
-  title: ほっこり、ウインナーとポテト 
+  title: ほっこり、ウインナーとポテト
   description: 材料を入れて煮るだけなのに、美味しいです。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_13:
   id: 14
   user_id: 1
   recipe_id: 14
-  title: 鮭とじゃがいものピカタ 
-  description: 鮭とじゃがいもの組み合わせがとても美味しいです。 
+  title: 鮭とじゃがいものピカタ
+  description: 鮭とじゃがいもの組み合わせがとても美味しいです。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_14:
   id: 15
   user_id: 1
   recipe_id: 15
-  title: ★ジャガイモのカレーそぼろチーズのせ★ 
+  title: ★ジャガイモのカレーそぼろチーズのせ★
   description: フライパンで簡単に出来ます☆ そのまま食卓へ♪ 材料、分量の変更を致しました。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_15:
@@ -258,118 +258,118 @@ recipe_drafts_15:
   user_id: 1
   recipe_id: 16
   title: ポテチー焼き
-  description: ジャガイモとチーズが好きな人なら間違いないメニューですよ～。 
+  description: ジャガイモとチーズが好きな人なら間違いないメニューですよ～。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_16:
   id: 17
   user_id: 1
   recipe_id: 17
-  title: まるごとじゃがチーズ☆ 
-  description: じゃがいもをチーズで包んじゃいました☆レンジで簡単！！おつまみ1品☆ トマトと一緒でさっぱり☆バターしょうゆが美味！ 
+  title: まるごとじゃがチーズ☆
+  description: じゃがいもをチーズで包んじゃいました☆レンジで簡単！！おつまみ1品☆ トマトと一緒でさっぱり☆バターしょうゆが美味！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_17:
   id: 18
   user_id: 1
   recipe_id: 18
-  title: 簡単うちの肉じゃが 
-  description: お肉もじゃが芋も味が染みて簡単にできる美味しい肉じゃがです。 
+  title: 簡単うちの肉じゃが
+  description: お肉もじゃが芋も味が染みて簡単にできる美味しい肉じゃがです。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_18:
   id: 19
   user_id: 1
   recipe_id: 19
-  title: じゃがいもともあえ 
-  description: 簡単！じゃがいも料理 じゃがいもと調味料さえあれば、すぐできます 
+  title: じゃがいもともあえ
+  description: 簡単！じゃがいも料理 じゃがいもと調味料さえあれば、すぐできます
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_19:
   id: 20
   user_id: 1
   recipe_id: 20
-  title: 洋風ジャガイモのきんぴら 
+  title: 洋風ジャガイモのきんぴら
   description: イタリアンな味付けですが和食にも合います♪冷めても美味しいのでお弁当にもどうぞ！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 1
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_20:
   id: 21
   user_id: 1
   recipe_id: 21
-  title: キャベツのコクうまスープ 
+  title: キャベツのコクうまスープ
   description: イタリアンな味付けですが和食にも合います♪冷めても美味しいのでお弁当にもどうぞ！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_21:
   id: 22
   user_id: 1
   recipe_id: 22
-  title: 簡単♡キャベツと油揚げの柚子胡椒炒め 
+  title: 簡単♡キャベツと油揚げの柚子胡椒炒め
   description: イタリアンな味付けですが和食にも合います♪冷めても美味しいのでお弁当にもどうぞ！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_22:
@@ -380,13 +380,13 @@ recipe_drafts_22:
   description: イタリアンな味付けですが和食にも合います♪冷めても美味しいのでお弁当にもどうぞ！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_23:
@@ -397,30 +397,30 @@ recipe_drafts_23:
   description: イタリアンな味付けですが和食にも合います♪冷めても美味しいのでお弁当にもどうぞ！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_24:
   id: 25
   user_id: 1
   recipe_id: 25
-  title: オイスターソース◎キャベツと豚の重ね蒸し 
+  title: オイスターソース◎キャベツと豚の重ね蒸し
   description: イタリアンな味付けですが和食にも合います♪冷めても美味しいのでお弁当にもどうぞ！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_25:
@@ -431,98 +431,98 @@ recipe_drafts_25:
   description: イタリアンな味付けですが和食にも合います♪冷めても美味しいのでお弁当にもどうぞ！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_26:
   id: 27
   user_id: 1
   recipe_id: 27
-  title: 簡単おいしいキャベツのゴマ和え 
+  title: 簡単おいしいキャベツのゴマ和え
   description: イタリアンな味付けですが和食にも合います♪冷めても美味しいのでお弁当にもどうぞ！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_27:
   id: 28
   user_id: 1
   recipe_id: 28
-  title: 超簡単！キャベツと桜エビのお手軽ソテー 
+  title: 超簡単！キャベツと桜エビのお手軽ソテー
   description: イタリアンな味付けですが和食にも合います♪冷めても美味しいのでお弁当にもどうぞ！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_28:
   id: 29
   user_id: 1
   recipe_id: 29
-  title: 塩麹で♪もりもりキャベツサラダ☆ 
+  title: 塩麹で♪もりもりキャベツサラダ☆
   description: イタリアンな味付けですが和食にも合います♪冷めても美味しいのでお弁当にもどうぞ！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_29:
   id: 30
   user_id: 1
   recipe_id: 30
-  title: キャベツのコクうまスープ 
+  title: キャベツのコクうまスープ
   description: 超簡単なのに、コクうま。 キャベツの甘みと豚肉のコクに、あっさり塩味のスープが染みこんで絶妙です。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_30:
   id: 31
   user_id: 1
   recipe_id: 31
-  title: 簡単♡キャベツと油揚げの柚子胡椒炒め 
-  description: 常備な２つの材料で超簡単にご飯に一品追加★お弁当にもおつまみにも♡ 焼き上げた油揚げとキャベツが合いますよ～♡ 
+  title: 簡単♡キャベツと油揚げの柚子胡椒炒め
+  description: 常備な２つの材料で超簡単にご飯に一品追加★お弁当にもおつまみにも♡ 焼き上げた油揚げとキャベツが合いますよ～♡
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_31:
@@ -530,16 +530,16 @@ recipe_drafts_31:
   user_id: 1
   recipe_id: 32
   title: 簡単！キャベツと豚肉の煮もの
-  description: パパパッと作れて、とっても美味しいですよ。 材料全部入れて煮るだけ♪ 
+  description: パパパッと作れて、とっても美味しいですよ。 材料全部入れて煮るだけ♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_32:
@@ -547,16 +547,16 @@ recipe_drafts_32:
   user_id: 1
   recipe_id: 33
   title: きゃべつと油揚げの煮物
-  description: きゃべつの甘みとじゅわ～っと味の染みた油揚げが 美味しい煮物です。 2011.7.25話題入り♪感謝です。 
+  description: きゃべつの甘みとじゅわ～っと味の染みた油揚げが 美味しい煮物です。 2011.7.25話題入り♪感謝です。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_33:
@@ -567,30 +567,30 @@ recipe_drafts_33:
   description: オイスターソースが効いてます（＾ｕ＾） 簡単なひと手間でキャベツがとろとろお肉と絡んでおいしいです！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_34:
   id: 35
   user_id: 1
   recipe_id: 35
-  title: ノンオイルでキャベツの卵とじ 
+  title: ノンオイルでキャベツの卵とじ
   description: 油を使わずに野菜炒め（？）。キャベツを卵とじにしてみました。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_35:
@@ -598,16 +598,16 @@ recipe_drafts_35:
   user_id: 1
   recipe_id: 36
   title: 簡単おいしいキャベツのゴマ和え
-  description: 超簡単！10分も掛からない‼ 包丁も使わない‼ 
+  description: 超簡単！10分も掛からない‼ 包丁も使わない‼
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_36:
@@ -618,47 +618,47 @@ recipe_drafts_36:
   description: ジャーマンポテトにキャベツを足したら？ キャベツのシャキシャキとじゃが芋のホクホクがオイシ～♪ボリュームと美味しさUP↑
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_37:
   id: 38
   user_id: 1
   recipe_id: 38
-  title: 塩麹で♪もりもりキャベツサラダ☆ 
+  title: 塩麹で♪もりもりキャベツサラダ☆
   description: キャベツをたっぷりいただけます！ あと一品というときにササッとできるのも嬉しいです♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_38:
   id: 39
   user_id: 1
   recipe_id: 39
-  title: あっ！という間に！きゃべつでホイコーロー 
+  title: あっ！という間に！きゃべつでホイコーロー
   description: 家にある調味料ですぐ出来ます(*´∪｀*)野菜と豚肉が合うわぁ～
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_39:
@@ -669,30 +669,30 @@ recipe_drafts_39:
   description: 材料はキャベツ、キュウリ、人参の三種類！ シンプルだけど、本当においしいんです♪ 野菜の水分をたっぷり出すのがポイント♡
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_40:
   id: 41
   user_id: 1
   recipe_id: 41
-  title: 春キャベツとあさりのワイン蒸し 
-  description: あさりのだしがすごーク出ておいしいワイン蒸しです。今が旬の春キャベツがバクバク食べれちゃう!! 
+  title: 春キャベツとあさりのワイン蒸し
+  description: あさりのだしがすごーク出ておいしいワイン蒸しです。今が旬の春キャベツがバクバク食べれちゃう!!
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_41:
@@ -703,64 +703,64 @@ recipe_drafts_41:
   description: 何にもしたくないとき、冷蔵庫に食材が少ないときにもってこい！！こんなに簡単なのに、とってもおいしいです☆
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_42:
   id: 43
   user_id: 1
   recipe_id: 43
-  title: 柚子とキャベツのさっぱり＊はしやすめ 
+  title: 柚子とキャベツのさっぱり＊はしやすめ
   description: 柚子のさわやかな風味が、お肉料理などのはしやすめにぴったりです。あと1品ほしいときに☆
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_43:
   id: 44
   user_id: 1
   recipe_id: 44
-  title: 爽やか！キャベツのSpring☆サラダ 
+  title: 爽やか！キャベツのSpring☆サラダ
   description: 野菜のシャキシャキとした食感やヨーグルトベースのさっぱりドレッシングが「春」にぴったりの爽やかなお手軽サラダです。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_44:
   id: 45
   user_id: 1
   recipe_id: 45
-  title: キャベツの塩辛炒め  
-  description: 早い安いうまい！塩辛が冷蔵庫で余ってたら是非〜(^ω^) 
+  title: キャベツの塩辛炒め
+  description: 早い安いうまい！塩辛が冷蔵庫で余ってたら是非〜(^ω^)
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_45:
@@ -771,81 +771,81 @@ recipe_drafts_45:
   description: 美味しかった給食の味を再現したくて。。。チーズが決め手のマヨネーズ味のサラダ♪ 期待通りの味になりました～♡
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_46:
   id: 47
   user_id: 1
   recipe_id: 47
-  title: キャベツしかない時 Part.1 
+  title: キャベツしかない時 Part.1
   description: 冷蔵庫にキャベツしか無くても作れる、おかずになる中華風サラダ。調理時間5分弱。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_47:
   id: 48
   user_id: 1
   recipe_id: 48
-  title: たくさん食べられる『温キャベツサラダ』♬ 
+  title: たくさん食べられる『温キャベツサラダ』♬
   description: 沢山キャベツが食べられる一品。 味付けもシンプルなのでキャベツの甘みが楽しめるよ♬ダイエットにもグ～！！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_48:
   id: 49
   user_id: 1
   recipe_id: 49
-  title: 時間が経つほど美味しいキャベツのマリネ 
+  title: 時間が経つほど美味しいキャベツのマリネ
   description: 超簡単マリネードサラダ。キャベツベースでお好みの野菜を刻んで混ぜて漬け込むだけ。だんだん美味しくなります
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_49:
   id: 50
   user_id: 1
   recipe_id: 50
-  title: 鶏モモとキャベツの簡単蒸し焼き～☆ 
+  title: 鶏モモとキャベツの簡単蒸し焼き～☆
   description: 時間がないとき、メインが決まらなくて悩むとき、手軽にパパッとできる我が家自慢の一品です(^_^)v
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_50:
@@ -856,30 +856,30 @@ recipe_drafts_50:
   description: 生姜がピリリと効いて、お肉の合間に持って来い！ 脂肪の消化も促進してくれます(*^^)v まな板無しで作れて簡単～♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_51:
   id: 52
   user_id: 1
   recipe_id: 52
-  title: ∮ エリンギきゅうりのコチュ炒め ∮ 
+  title: ∮ エリンギきゅうりのコチュ炒め ∮
   description: ぷりぷりエリンギとポリポリきゅうり。 ピリ辛コチュジャンで♪ ちゃちゃっと炒めました(*´ε｀*)♬♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_52:
@@ -887,16 +887,16 @@ recipe_drafts_52:
   user_id: 1
   recipe_id: 53
   title: キュウリとベーコンの塩炒め
-  description: キュウリの水分を塩でだしてから炒めると、青臭さがなくなって美味しい炒め物が出来ますよ。 
+  description: キュウリの水分を塩でだしてから炒めると、青臭さがなくなって美味しい炒め物が出来ますよ。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_53:
@@ -904,50 +904,50 @@ recipe_drafts_53:
   user_id: 1
   recipe_id: 54
   title: 白菜･きゅうり･すだちの簡単漬け物
-  description: すだちがたっぷり入った、爽やかで上品なお漬け物。とっても簡単に作れるので、スダチのおいしい季節にぜひどうぞ♪ 
+  description: すだちがたっぷり入った、爽やかで上品なお漬け物。とっても簡単に作れるので、スダチのおいしい季節にぜひどうぞ♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_54:
   id: 55
   user_id: 1
   recipe_id: 55
-  title: 【農家のレシピ】丸ごと1本キュウリの漬物 
+  title: 【農家のレシピ】丸ごと1本キュウリの漬物
   description: キュウリと調味液をビニール袋に入れて1日で完成の簡単キュウリの漬物。そのまま豪快にガブッっと食べても美味しいよ～♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_55:
   id: 56
   user_id: 1
   recipe_id: 56
-  title: サッパリ♪中華風浅漬け 
-  description: ２０１２/４/１６話題入り❤辛さを調節すれば子供もポリポリ食べます♪51 
+  title: サッパリ♪中華風浅漬け
+  description: ２０１２/４/１６話題入り❤辛さを調節すれば子供もポリポリ食べます♪51
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_56:
@@ -955,50 +955,50 @@ recipe_drafts_56:
   user_id: 1
   recipe_id: 57
   title: 【農家のレシピ】キュウリのピクルス
-  description: 熱いピクルス液に生のキュウリを漬けると、おいしく仕上がります。サンドイッチやホットドックにぜひどうぞ♪ 
+  description: 熱いピクルス液に生のキュウリを漬けると、おいしく仕上がります。サンドイッチやホットドックにぜひどうぞ♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_57:
   id: 58
   user_id: 1
   recipe_id: 58
-  title: 塩揉みきゅうりと香味野菜のすだち和え 
+  title: 塩揉みきゅうりと香味野菜のすだち和え
   description: 口元涼しい、浅漬け風のさわやかな和え物。大葉・みょうが・生姜の良い香りにポリポリのきゅうりが最高においしい箸休めです♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_58:
   id: 59
   user_id: 1
   recipe_id: 59
-  title: わかめときゅうりのゴマたっぷりサラダ 
+  title: わかめときゅうりのゴマたっぷりサラダ
   description: 火を使わないので、涼しくできます。冷蔵庫に寝かせても、味がなじんで、かつ冷たく美味しくいただけます。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_59:
@@ -1006,33 +1006,33 @@ recipe_drafts_59:
   user_id: 1
   recipe_id: 60
   title: イカときゅうりのコチュジャン和え
-  description: 酢の物にあきたらピリ辛サッパリ♪コリコリシャキシャキ歯ごたえも楽しんで(^o^) 
+  description: 酢の物にあきたらピリ辛サッパリ♪コリコリシャキシャキ歯ごたえも楽しんで(^o^)
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 2
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_60:
   id: 61
   user_id: 1
   recipe_id: 61
-  title: 厚揚げと茄子の味噌炒め 
+  title: 厚揚げと茄子の味噌炒め
   description: しっかり味なので、お酒にも合うかも♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_61:
@@ -1040,101 +1040,101 @@ recipe_drafts_61:
   user_id: 1
   recipe_id: 62
   title: ✿なすの肉味噌あんかけ✿
-  description: 焼きナスに甜麵醤で仕上げた肉味噌あんかけをかけました。あんかけの味噌味が濃すぎなくて丁度いいおいしさです（●＾o＾●）У 
+  description: 焼きナスに甜麵醤で仕上げた肉味噌あんかけをかけました。あんかけの味噌味が濃すぎなくて丁度いいおいしさです（●＾o＾●）У
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_62:
   id: 63
   user_id: 1
   recipe_id: 63
-  title: ∮ なすの南蛮漬けღ青じそ風味 ∮ 
-  description: ✿話題入り感謝です✿ 揚げずに簡単✰彡 レンジでチン(｡￫‿◕｡)✿♫ たっぷり作って常備菜にも♬ 
+  title: ∮ なすの南蛮漬けღ青じそ風味 ∮
+  description: ✿話題入り感謝です✿ 揚げずに簡単✰彡 レンジでチン(｡￫‿◕｡)✿♫ たっぷり作って常備菜にも♬
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_63:
   id: 64
   user_id: 1
   recipe_id: 64
-  title: 鶏肉とナスの揚げ漬け風 
-  description: ナスは揚げていませんが、鶏からの油と旨味をたっぷり吸って、美味＆ヘルシー＆簡単♪ 
+  title: 鶏肉とナスの揚げ漬け風
+  description: ナスは揚げていませんが、鶏からの油と旨味をたっぷり吸って、美味＆ヘルシー＆簡単♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_64:
   id: 65
   user_id: 1
   recipe_id: 65
-  title: 茹で豚の揚げナスのっけ！ 
+  title: 茹で豚の揚げナスのっけ！
   description: 簡単タレがしみこんだ揚げナスが美味しい～！！ with そうめんもおすすめです☆☆☆
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_65:
   id: 66
   user_id: 1
   recipe_id: 66
-  title: 茄子と豚肉の味噌炒め 
-  description: 話題入り感謝です！夏野菜＆豚肉の味噌炒めついついご飯がすすみます♡ 
+  title: 茄子と豚肉の味噌炒め
+  description: 話題入り感謝です！夏野菜＆豚肉の味噌炒めついついご飯がすすみます♡
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_66:
   id: 67
   user_id: 1
   recipe_id: 67
-  title: なすとピーマンのとろとろ煮 
-  description: 一人でもたくさんのﾋﾟｰﾏﾝ食べれます♪ 
+  title: なすとピーマンのとろとろ煮
+  description: 一人でもたくさんのﾋﾟｰﾏﾝ食べれます♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_67:
@@ -1142,16 +1142,16 @@ recipe_drafts_67:
   user_id: 1
   recipe_id: 68
   title: なすとピーマンの甘辛しょうが炒め✿
-  description: 時間のない時に超簡単にできるﾎﾞﾘｭｰﾑある一品♪ご飯も進みます☆（2012.05.28　100人話題入り♪感謝です♡） 
+  description: 時間のない時に超簡単にできるﾎﾞﾘｭｰﾑある一品♪ご飯も進みます☆（2012.05.28　100人話題入り♪感謝です♡）
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_68:
@@ -1159,33 +1159,33 @@ recipe_drafts_68:
   user_id: 1
   recipe_id: 69
   title: 田舎風☆茄子の甘辛とろっとろ煮
-  description: とろとろに煮た茄子が口の中でとろけます❤ 甘辛く濃いめの味で箸が止まりません♪ 2012/4/11✧話題入り✧感謝 
+  description: とろとろに煮た茄子が口の中でとろけます❤ 甘辛く濃いめの味で箸が止まりません♪ 2012/4/11✧話題入り✧感謝
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_69:
   id: 70
   user_id: 1
   recipe_id: 70
-  title: なすときのこの治部煮風 
+  title: なすときのこの治部煮風
   description: 朝晩肌寒く感じる頃は、こんなあたたかい一品が恋しくなります。 ピックアップ＆話題入り大感謝です♡
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 3
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_70:
@@ -1193,50 +1193,50 @@ recipe_drafts_70:
   user_id: 1
   recipe_id: 71
   title: ♪大根の皮でピリ辛きんぴら♪
-  description: 大根の皮を捨てないで～(๑￫‿ฺ￩๑) 
+  description: 大根の皮を捨てないで～(๑￫‿ฺ￩๑)
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_71:
   id: 72
   user_id: 1
   recipe_id: 72
-  title: 大根と帆立貝柱缶のサラダ 
-  description: 簡単に出来て、貝嫌い(嫁、息子)も大好きなサラダです！ 
+  title: 大根と帆立貝柱缶のサラダ
+  description: 簡単に出来て、貝嫌い(嫁、息子)も大好きなサラダです！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_72:
   id: 73
   user_id: 1
   recipe_id: 73
-  title: 月見大根サラダ 
-  description: 大根サラダのバリエーション第１弾。 食べる直前に、よく混ぜてお召し上がり下さい。 
+  title: 月見大根サラダ
+  description: 大根サラダのバリエーション第１弾。 食べる直前に、よく混ぜてお召し上がり下さい。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_73:
@@ -1244,84 +1244,84 @@ recipe_drafts_73:
   user_id: 1
   recipe_id: 74
   title: 温まるぅ～大根と豚ひき肉のトロトロ♪
-  description: 多めのトロトロ煮汁で体も心もポッカポカ♪ オイスターソースとごま油で、優しい中にもしっかり味のコク旨です★話題入り感謝★ 
+  description: 多めのトロトロ煮汁で体も心もポッカポカ♪ オイスターソースとごま油で、優しい中にもしっかり味のコク旨です★話題入り感謝★
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_74:
   id: 75
   user_id: 1
   recipe_id: 75
-  title: 大根☆しそ☆昆布の浅漬け 
-  description: 切って和えるだけのシンプルな香の物！ 手早く作ってプラス１品に･･･☆ 
+  title: 大根☆しそ☆昆布の浅漬け
+  description: 切って和えるだけのシンプルな香の物！ 手早く作ってプラス１品に･･･☆
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_75:
   id: 76
   user_id: 1
   recipe_id: 76
-  title: 大根、ひき肉、厚揚げ煮 
+  title: 大根、ひき肉、厚揚げ煮
   description: 大根、厚揚げ、ひきにく… 美味しい組み合わせです。ほっこり和食です！！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_76:
   id: 77
   user_id: 1
   recipe_id: 77
-  title: 圧力鍋で簡単❤大根とベーコンのスープ煮❤ 
-  description: 鍋に放り込むだけの乱暴な料理が、なんと優しい美味しさに変身♪材料も少なくて楽ちん♪ベーコンの旨みが大根に染みてる～✿ 
+  title: 圧力鍋で簡単❤大根とベーコンのスープ煮❤
+  description: 鍋に放り込むだけの乱暴な料理が、なんと優しい美味しさに変身♪材料も少なくて楽ちん♪ベーコンの旨みが大根に染みてる～✿
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_77:
   id: 78
   user_id: 1
   recipe_id: 78
-  title: 大根のたいたん 
+  title: 大根のたいたん
   description: 本日は大根尽くし。 御飯を炊いたので、米のとぎ汁を使って大根の灰汁を抜く。 大根1本198円也。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_78:
@@ -1329,16 +1329,16 @@ recipe_drafts_78:
   user_id: 1
   recipe_id: 79
   title: カクテキ（大根キムチ）風コチュジャン和え
-  description: ご家庭にある材料で簡単にカクテキ風の美味しい大根のお漬物が出来ます♪ 
+  description: ご家庭にある材料で簡単にカクテキ風の美味しい大根のお漬物が出来ます♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_79:
@@ -1346,33 +1346,33 @@ recipe_drafts_79:
   user_id: 1
   recipe_id: 80
   title: 中華大根サラダ
-  description: ごまの香り高い中華サラダ 
+  description: ごまの香り高い中華サラダ
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 5
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_80:
   id: 81
   user_id: 1
   recipe_id: 81
-  title: あったか～い♡オニオンスープ 
+  title: あったか～い♡オニオンスープ
   description: オニオンスープを簡単に！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_81:
@@ -1383,13 +1383,13 @@ recipe_drafts_81:
   description: ♥2011/04/13話題入り♥ 衣がキレイに絡む秘密のレシピ♡冷めてもサックサクですσ)´∪`*) ﾎﾞｰﾉ♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_82:
@@ -1397,33 +1397,33 @@ recipe_drafts_82:
   user_id: 1
   recipe_id: 83
   title: 玉ねぎと鰹節のめんつゆサラダ
-  description: 2012.5.14話題入り感謝！ 玉ねぎパクパクいけます✿サラダにも箸休めにも最高の一品♡冷奴にかけても♡簡単だよ～♫ 
+  description: 2012.5.14話題入り感謝！ 玉ねぎパクパクいけます✿サラダにも箸休めにも最高の一品♡冷奴にかけても♡簡単だよ～♫
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_83:
   id: 84
   user_id: 1
   recipe_id: 84
-  title: 玉葱ロースト☆★　サクサクベーコンON！ 
+  title: 玉葱ロースト☆★　サクサクベーコンON！
   description: 甘～い玉葱に、ベーコンとサクサクパン粉を♪フライパンだけ～お手軽な1品☆ おつまみにも♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_84:
@@ -1431,67 +1431,67 @@ recipe_drafts_84:
   user_id: 1
   recipe_id: 85
   title: 簡単！玉ねぎのキッシュ♪
-  description: 玉ねぎが主役のキッシュです。 年中ある野菜だし家計にも優しい！ フランス人の旦那も絶賛しました。笑 
+  description: 玉ねぎが主役のキッシュです。 年中ある野菜だし家計にも優しい！ フランス人の旦那も絶賛しました。笑
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_85:
   id: 86
   user_id: 1
   recipe_id: 86
-  title: 父の日に！玉ねぎたっぷりおつまみ 
-  description: 玉ねぎの甘みと、ケチャップの酸味がよく合います。おつまみにぜひ。簡単で彩りも良いので、お弁当にも。 
+  title: 父の日に！玉ねぎたっぷりおつまみ
+  description: 玉ねぎの甘みと、ケチャップの酸味がよく合います。おつまみにぜひ。簡単で彩りも良いので、お弁当にも。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_86:
   id: 87
   user_id: 1
   recipe_id: 87
-  title: 玉ねぎとウインナーのことっと煮 
+  title: 玉ねぎとウインナーのことっと煮
   description: 材料を入れて15分で完成です。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_87:
   id: 88
   user_id: 1
   recipe_id: 88
-  title: ワインにあう、焼き玉ねぎ 
+  title: ワインにあう、焼き玉ねぎ
   description: 玉ねぎ1個でも、ワインにあって、存在感のある一皿ができます。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_88:
@@ -1499,16 +1499,16 @@ recipe_drafts_88:
   user_id: 1
   recipe_id: 89
   title: 野菜とソーセージのあったかポトフ
-  description: 冬の大人気メニュー、ポトフ。でもあるものを加えることで、煮込み時間は短くてもいつものポトフが数倍おいしくなります。 
+  description: 冬の大人気メニュー、ポトフ。でもあるものを加えることで、煮込み時間は短くてもいつものポトフが数倍おいしくなります。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_89:
@@ -1516,16 +1516,16 @@ recipe_drafts_89:
   user_id: 1
   recipe_id: 90
   title: ♢♦玉ねぎとなめ茸でもう一品♦♢
-  description: 3つの食材で簡単にあと一品が作れます。 和えるだけのクイックお惣菜です。 夕飯のお助けメニューにいかがでしょうか？ 
+  description: 3つの食材で簡単にあと一品が作れます。 和えるだけのクイックお惣菜です。 夕飯のお助けメニューにいかがでしょうか？
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 4
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_90:
@@ -1533,16 +1533,16 @@ recipe_drafts_90:
   user_id: 1
   recipe_id: 91
   title: 絶対ビール！！☆鶏胸肉の辛いソテー☆
-  description: これ、絶対ビール(*^-^)♪　鶏胸肉安いし、家にある材料で簡単に出来ます。辛さ＆にんにくを調節してお弁当のおかずにも♪ 
+  description: これ、絶対ビール(*^-^)♪　鶏胸肉安いし、家にある材料で簡単に出来ます。辛さ＆にんにくを調節してお弁当のおかずにも♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_91:
@@ -1550,16 +1550,16 @@ recipe_drafts_91:
   user_id: 1
   recipe_id: 92
   title: 激うま☆鶏むね肉のジューシー柔らかソテー
-  description: あのむね肉が奇跡のように柔らかくて口にしたら「旨い！」って言うこと間違いなしです☆ヘルシー☆ジューシー☆安い☆絶品です☆ 
+  description: あのむね肉が奇跡のように柔らかくて口にしたら「旨い！」って言うこと間違いなしです☆ヘルシー☆ジューシー☆安い☆絶品です☆
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_92:
@@ -1567,16 +1567,16 @@ recipe_drafts_92:
   user_id: 1
   recipe_id: 93
   title: 油淋鶏(ユーリンチー)
-  description: 鶏ムネ肉を使ったガッツリメニューd(ﾟ∀ﾟd) 甘酸っぱいタレを揚げたての鶏肉にジュっとかければ、野菜もたっぷりいけます 
+  description: 鶏ムネ肉を使ったガッツリメニューd(ﾟ∀ﾟd) 甘酸っぱいタレを揚げたての鶏肉にジュっとかければ、野菜もたっぷりいけます
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_93:
@@ -1584,84 +1584,84 @@ recipe_drafts_93:
   user_id: 1
   recipe_id: 94
   title: ★旨ッ！！鶏むね肉DE鶏チャーシュー
-  description: 鶏肉で激ウマチャーシュー♪前日や朝に作って夕飯には味が染み染み〜★24,5,12つくレポ100人達成！！ 
+  description: 鶏肉で激ウマチャーシュー♪前日や朝に作って夕飯には味が染み染み〜★24,5,12つくレポ100人達成！！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_94:
   id: 95
   user_id: 1
   recipe_id: 95
-  title: 冬瓜と鶏胸肉のこってり煮 
-  description: あっさり胸肉と冬瓜がこってりおかずに大変身！ごはんが進む～。とろとろ冬瓜もおいしい！ 
+  title: 冬瓜と鶏胸肉のこってり煮
+  description: あっさり胸肉と冬瓜がこってりおかずに大変身！ごはんが進む～。とろとろ冬瓜もおいしい！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_95:
   id: 96
   user_id: 1
   recipe_id: 96
-  title: フライパンで☆簡単鶏チャーシュー☆ 
-  description: 茹でずにフライパンだけで簡単に出来る鶏胸肉を使ったヘルシーなやわらかチャーシューです。 
+  title: フライパンで☆簡単鶏チャーシュー☆
+  description: 茹でずにフライパンだけで簡単に出来る鶏胸肉を使ったヘルシーなやわらかチャーシューです。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_96:
   id: 97
   user_id: 1
   recipe_id: 97
-  title: ★鶏胸肉の豆乳マスタードクリームソテー★ 
-  description: H24.4.30話題入り★ 鶏胸肉が柔らか～ジューシー♪きのこ＆豆乳使用でヘルシーで美味しくちょっと豪華な一品です＾−＾ 
+  title: ★鶏胸肉の豆乳マスタードクリームソテー★
+  description: H24.4.30話題入り★ 鶏胸肉が柔らか～ジューシー♪きのこ＆豆乳使用でヘルシーで美味しくちょっと豪華な一品です＾−＾
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_97:
   id: 98
   user_id: 1
   recipe_id: 98
-  title: 鶏胸肉で★しょうが焼き～ 
-  description: 鶏胸肉でもおいしい生姜焼きになりました～ 
+  title: 鶏胸肉で★しょうが焼き～
+  description: 鶏胸肉でもおいしい生姜焼きになりました～
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_98:
@@ -1669,33 +1669,33 @@ recipe_drafts_98:
   user_id: 1
   recipe_id: 99
   title: むね肉やわらか！揚げないチキン南蛮
-  description: むね肉がやわらかジューシーなチキン南蛮！ 冷めても美味しいからお弁当にも♪ つくれぽ900件ありがとうございます！ 
+  description: むね肉がやわらかジューシーなチキン南蛮！ 冷めても美味しいからお弁当にも♪ つくれぽ900件ありがとうございます！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_99:
   id: 100
   user_id: 1
   recipe_id: 100
-  title: 簡単チキンナゲット♪  
-  description: 安い！簡単！美味しい！これだけ作って３００円ちょっとです♪ 
+  title: 簡単チキンナゲット♪
+  description: 安い！簡単！美味しい！これだけ作って３００円ちょっとです♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 7
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_100:
@@ -1703,33 +1703,33 @@ recipe_drafts_100:
   user_id: 1
   recipe_id: 101
   title: 鮭とほうれんそうの和風グラタン
-  description: ホワイトソースに豆腐が入った和風グラタンです。フライパン１つで簡単調理＆オーブンで焼くだけ！あっという間に完成です♪ 
+  description: ホワイトソースに豆腐が入った和風グラタンです。フライパン１つで簡単調理＆オーブンで焼くだけ！あっという間に完成です♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_101:
   id: 102
   user_id: 1
   recipe_id: 102
-  title: 簡単!!鮭のちゃんちゃん焼き 
-  description: 居酒屋で食べた『ちゃんちゃん焼き』がとても美味しかったので、鮭のアラを使って、再現してみました 
+  title: 簡単!!鮭のちゃんちゃん焼き
+  description: 居酒屋で食べた『ちゃんちゃん焼き』がとても美味しかったので、鮭のアラを使って、再現してみました
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_102:
@@ -1737,16 +1737,16 @@ recipe_drafts_102:
   user_id: 1
   recipe_id: 103
   title: 生鮭とホクホクじゃがいものバター醤油炒め
-  description: バター醤油炒めに砂糖を少し＾＾　甘しょっぱくてじゃが芋が美味しい♪お弁当にもどうぞ！ 24年1月7日話題入り感謝♪ 
+  description: バター醤油炒めに砂糖を少し＾＾　甘しょっぱくてじゃが芋が美味しい♪お弁当にもどうぞ！ 24年1月7日話題入り感謝♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_103:
@@ -1757,13 +1757,13 @@ recipe_drafts_103:
   description: 鮭の切り身をミンチにしてハンバーグに❤甘い照りソースとマヨネーズソースで更に美味しさＵＰです。大成功レシピ☆★☆
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_104:
@@ -1774,13 +1774,13 @@ recipe_drafts_104:
   description: 生鮭ときのこ、ミニトマト、パプリカ♪アルミホイルに包んでオーブンで焼きました♪♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_105:
@@ -1791,13 +1791,13 @@ recipe_drafts_105:
   description: みそ味とのりで白いご飯にピッタリ。食べやすくて子供もパクパク。
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_106:
@@ -1805,16 +1805,16 @@ recipe_drafts_106:
   user_id: 1
   recipe_id: 107
   title: 鮭のバター焼き
-  description: ❀2012/5/10話題入り感謝❀　 オーソドックスな鮭のムニエル♪最後にバターと醤油をたら～でいい香り♪♪ 
+  description: ❀2012/5/10話題入り感謝❀　 オーソドックスな鮭のムニエル♪最後にバターと醤油をたら～でいい香り♪♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_107:
@@ -1822,33 +1822,33 @@ recipe_drafts_107:
   user_id: 1
   recipe_id: 108
   title: 子供完食☆鮭マヨ　運動会弁当・お弁当にも
-  description: 運動会弁当おかずの研究結果。子供の大好きなエビマヨのアレンジ。オイスターソースの隠し味がきいてます！話題入り感謝です！ 
+  description: 運動会弁当おかずの研究結果。子供の大好きなエビマヨのアレンジ。オイスターソースの隠し味がきいてます！話題入り感謝です！
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_108:
   id: 109
   user_id: 1
   recipe_id: 109
-  title: 簡単！鮭の味噌マヨ焼き♪ 
-  description: あっさり鮭を味噌マヨで　旨～♪ 
+  title: 簡単！鮭の味噌マヨ焼き♪
+  description: あっさり鮭を味噌マヨで　旨～♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_109:
@@ -1856,16 +1856,16 @@ recipe_drafts_109:
   user_id: 1
   recipe_id: 110
   title: みょうがたっぷり！秋鮭のホイル焼き
-  description: 大量のみょうがが消費できるうえ、旬の鮭が美味しく食べれます♪ 
+  description: 大量のみょうがが消費できるうえ、旬の鮭が美味しく食べれます♪
   public: true
   recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
   love_count: 0
   eatstyle_id: 0
   amount: 0
   view_count: 0
   recipe_food_id: 8
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_110:
@@ -1873,7 +1873,7 @@ recipe_drafts_110:
   user_id: 1
   recipe_id: 111
   title: 肉巻きアスパラのヘルシーキムチソースがけ
-  description: 超簡単！スタミナたっぷり！爽やかでコク深いヘルシーキムチソースで暑い夏でも食がすすみます (*^-^*)ゞ 
+  description: 超簡単！スタミナたっぷり！爽やかでコク深いヘルシーキムチソースで暑い夏でも食がすすみます (*^-^*)ゞ
   public: true
   recipe_image: null
   one_point: ""
@@ -1882,7 +1882,7 @@ recipe_drafts_110:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_111:
@@ -1890,7 +1890,7 @@ recipe_drafts_111:
   user_id: 1
   recipe_id: 112
   title: 大人気☆豚バラとたまねぎの照り焼き
-  description: ごはんが進む一品で、家族やお友達にも 大人気!!! ランチや 熱々ごはんにのっけて、豚丼もおススメです☆ 
+  description: ごはんが進む一品で、家族やお友達にも 大人気!!! ランチや 熱々ごはんにのっけて、豚丼もおススメです☆
   public: true
   recipe_image: null
   one_point: ""
@@ -1899,14 +1899,14 @@ recipe_drafts_111:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_112:
   id: 113
   user_id: 1
   recipe_id: 113
-  title: 豚バラとかぼちゃのピリ辛炒め 
+  title: 豚バラとかぼちゃのピリ辛炒め
   description: にんにくをきかせて男子も喜ぶガッツリおかずにしました
   public: true
   recipe_image: null
@@ -1916,15 +1916,15 @@ recipe_drafts_112:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_113:
   id: 114
   user_id: 1
   recipe_id: 114
-  title: 豚バラ肉と卵の煮付け 
-  description: 男子の心鷲摑みのメニュー 
+  title: 豚バラ肉と卵の煮付け
+  description: 男子の心鷲摑みのメニュー
   public: true
   recipe_image: null
   one_point: ""
@@ -1933,7 +1933,7 @@ recipe_drafts_113:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_114:
@@ -1950,14 +1950,14 @@ recipe_drafts_114:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_115:
   id: 116
   user_id: 1
   recipe_id: 116
-  title: あと一品！豚バラのネギ巻き♫ 
+  title: あと一品！豚バラのネギ巻き♫
   description: 豚バラでおつまみにもおかずにもなる一品をサッと作ってしまいましょう！
   public: true
   recipe_image: null
@@ -1967,7 +1967,7 @@ recipe_drafts_115:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_116:
@@ -1975,7 +1975,7 @@ recipe_drafts_116:
   user_id: 1
   recipe_id: 117
   title: 白菜と豚のミルフィーユ蒸し
-  description: しょうがやねぎをたっぷり入れて、重ねて蒸すだけ。体も温まるので、寒い日にはもってこいの一品です♪ 
+  description: しょうがやねぎをたっぷり入れて、重ねて蒸すだけ。体も温まるので、寒い日にはもってこいの一品です♪
   public: true
   recipe_image: null
   one_point: ""
@@ -1984,7 +1984,7 @@ recipe_drafts_116:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_117:
@@ -1992,7 +1992,7 @@ recipe_drafts_117:
   user_id: 1
   recipe_id: 118
   title: 豚バラのさっと炒め☆大根おろし和え
-  description: 豚バラだから美味しい！ちょっとおかずが足りないときにいいかも＊ 
+  description: 豚バラだから美味しい！ちょっとおかずが足りないときにいいかも＊
   public: true
   recipe_image: null
   one_point: ""
@@ -2001,15 +2001,15 @@ recipe_drafts_117:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_118:
   id: 119
   user_id: 1
   recipe_id: 119
-  title: 水不要の簡単肉じゃが 
-  description: お水は一切入れません。玉ねぎの水分でほっこりちょっと甘めの肉じゃがの完成です。 
+  title: 水不要の簡単肉じゃが
+  description: お水は一切入れません。玉ねぎの水分でほっこりちょっと甘めの肉じゃがの完成です。
   public: true
   recipe_image: null
   one_point: ""
@@ -2018,7 +2018,7 @@ recipe_drafts_118:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_119:
@@ -2026,7 +2026,7 @@ recipe_drafts_119:
   user_id: 1
   recipe_id: 120
   title: 簡単！ゆで卵と豚肉と大根の甘辛煮。
-  description: つややかな醤油煮卵は、是非ご飯にのせて食べたいものです。勿論そのまま食べても美味しいですよ！ 
+  description: つややかな醤油煮卵は、是非ご飯にのせて食べたいものです。勿論そのまま食べても美味しいですよ！
   public: true
   recipe_image: null
   one_point: ""
@@ -2035,7 +2035,7 @@ recipe_drafts_119:
   amount: 0
   view_count: 0
   recipe_food_id: 9
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_120:
@@ -2043,7 +2043,7 @@ recipe_drafts_120:
   user_id: 1
   recipe_id: 121
   title: ビールに合う！鶏手羽中の唐揚げ
-  description: 簡単で醤油の香りがいい唐揚げです。片栗粉と小麦粉でカリッとふわっと揚がります！冷めてもおいしいのでお弁当にもどうぞ。 
+  description: 簡単で醤油の香りがいい唐揚げです。片栗粉と小麦粉でカリッとふわっと揚がります！冷めてもおいしいのでお弁当にもどうぞ。
   public: true
   recipe_image: null
   one_point: ""
@@ -2052,7 +2052,7 @@ recipe_drafts_120:
   amount: 0
   view_count: 0
   recipe_food_id: 10
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_121:
@@ -2060,7 +2060,7 @@ recipe_drafts_121:
   user_id: 1
   recipe_id: 122
   title: とろけるお肉✾手羽元と卵のやさしい煮物
-  description: お酢を入れてことこと煮るので、とってもジューシーで柔らかいお肉ができあがります！やさしい味にほっとする一品♪大根入りも♡ 
+  description: お酢を入れてことこと煮るので、とってもジューシーで柔らかいお肉ができあがります！やさしい味にほっとする一品♪大根入りも♡
   public: true
   recipe_image: null
   one_point: ""
@@ -2069,15 +2069,15 @@ recipe_drafts_121:
   amount: 0
   view_count: 0
   recipe_food_id: 10
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_122:
   id: 123
   user_id: 1
   recipe_id: 123
-  title: 手羽元の照り炒め煮★塩麹の焼き野菜添え 
-  description: ご飯もお酒もどちらもＯＫ♪骨付きお肉をがぶりっと♪♪♪ 
+  title: 手羽元の照り炒め煮★塩麹の焼き野菜添え
+  description: ご飯もお酒もどちらもＯＫ♪骨付きお肉をがぶりっと♪♪♪
   public: true
   recipe_image: null
   one_point: ""
@@ -2086,14 +2086,14 @@ recipe_drafts_122:
   amount: 0
   view_count: 0
   recipe_food_id: 10
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_123:
   id: 124
   user_id: 1
   recipe_id: 124
-  title: 簡単♪あっさり手羽元(鶏肉)の煮付け 
+  title: 簡単♪あっさり手羽元(鶏肉)の煮付け
   description: 味付けは『七五三』って覚えなさいと母に教わったレシピです♪作り方も簡単で不器用な私でも上手に出来ます(*^_^*)
   public: true
   recipe_image: null
@@ -2103,7 +2103,7 @@ recipe_drafts_123:
   amount: 0
   view_count: 0
   recipe_food_id: 10
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_124:
@@ -2111,7 +2111,7 @@ recipe_drafts_124:
   user_id: 1
   recipe_id: 125
   title: 旦那大好き☆手羽元のお酢煮
-  description: 焼くより揚げるより、手羽元はこれが一番ウマイ！と旦那がべた褒めの一品です☆ぷるぷるコラーゲンで私も嬉しい♪ 
+  description: 焼くより揚げるより、手羽元はこれが一番ウマイ！と旦那がべた褒めの一品です☆ぷるぷるコラーゲンで私も嬉しい♪
   public: true
   recipe_image: null
   one_point: ""
@@ -2120,7 +2120,7 @@ recipe_drafts_124:
   amount: 0
   view_count: 0
   recipe_food_id: 10
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_125:
@@ -2137,14 +2137,14 @@ recipe_drafts_125:
   amount: 0
   view_count: 0
   recipe_food_id: 11
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_126:
   id: 127
   user_id: 1
   recipe_id: 127
-  title: ささみとなすの白だしソテー 
+  title: ささみとなすの白だしソテー
   description: シンプルで簡単！ だけど、ご飯が進む青じそ香る白だしソテー
   public: true
   recipe_image: null
@@ -2154,7 +2154,7 @@ recipe_drafts_126:
   amount: 0
   view_count: 0
   recipe_food_id: 11
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_127:
@@ -2162,7 +2162,7 @@ recipe_drafts_127:
   user_id: 1
   recipe_id: 128
   title: ササミのさっぱりみぞれ和え
-  description: レンジで酒蒸しにした鶏のササミを使って、大根おろしと和えてさっぱりとした一品を作りました。 
+  description: レンジで酒蒸しにした鶏のササミを使って、大根おろしと和えてさっぱりとした一品を作りました。
   public: true
   recipe_image: null
   one_point: ""
@@ -2171,15 +2171,15 @@ recipe_drafts_127:
   amount: 0
   view_count: 0
   recipe_food_id: 11
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_128:
   id: 129
   user_id: 1
   recipe_id: 129
-  title: ささみと　きゅうりのごまだれ和え 
-  description: あっさりとしていますが、味はしっかり。　ダイエット中でも、スポーツをしている人にも、ぴったりの　メニューです。 
+  title: ささみと　きゅうりのごまだれ和え
+  description: あっさりとしていますが、味はしっかり。　ダイエット中でも、スポーツをしている人にも、ぴったりの　メニューです。
   public: true
   recipe_image: null
   one_point: ""
@@ -2188,15 +2188,15 @@ recipe_drafts_128:
   amount: 0
   view_count: 0
   recipe_food_id: 11
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_129:
   id: 130
   user_id: 1
   recipe_id: 130
-  title: ＊フライパンで簡単！梅ささみフライ＊ 
-  description: 【2012/2/12話題入り】大感謝♬ 味付けは梅だけ!!! 梅好きさんに大好評なんです♡* 是非お試しあれっ♪ 
+  title: ＊フライパンで簡単！梅ささみフライ＊
+  description: 【2012/2/12話題入り】大感謝♬ 味付けは梅だけ!!! 梅好きさんに大好評なんです♡* 是非お試しあれっ♪
   public: true
   recipe_image: null
   one_point: ""
@@ -2205,15 +2205,15 @@ recipe_drafts_129:
   amount: 0
   view_count: 0
   recipe_food_id: 11
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_130:
   id: 131
   user_id: 1
   recipe_id: 131
-  title: 冷えたビールと♪辛うま！汁なし麻婆担々麺 
-  description: うちの旦那様の得意な男の麺。 辛い辛い言いながらビールを流し込みます♪ 
+  title: 冷えたビールと♪辛うま！汁なし麻婆担々麺
+  description: うちの旦那様の得意な男の麺。 辛い辛い言いながらビールを流し込みます♪
   public: true
   recipe_image: null
   one_point: ""
@@ -2222,7 +2222,7 @@ recipe_drafts_130:
   amount: 0
   view_count: 0
   recipe_food_id: 12
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_131:
@@ -2230,7 +2230,7 @@ recipe_drafts_131:
   user_id: 1
   recipe_id: 132
   title: ソースがうまい☆我が家のハンバーグ
-  description: ♡話題入り感謝♡ 平凡だけど、このソースが一番手軽で一番美味しいんだよねー。 
+  description: ♡話題入り感謝♡ 平凡だけど、このソースが一番手軽で一番美味しいんだよねー。
   public: true
   recipe_image: null
   one_point: ""
@@ -2239,15 +2239,15 @@ recipe_drafts_131:
   amount: 0
   view_count: 0
   recipe_food_id: 12
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_132:
   id: 133
   user_id: 1
   recipe_id: 133
-  title: ビールがススム！味付不要なキムチ餃子 
-  description: キムチを刻んでひき肉と混ぜることで、白菜の面倒な塩もみ＆餃子の味付けを省略！簡単にタネが出来る上、タレも不要です。 
+  title: ビールがススム！味付不要なキムチ餃子
+  description: キムチを刻んでひき肉と混ぜることで、白菜の面倒な塩もみ＆餃子の味付けを省略！簡単にタネが出来る上、タレも不要です。
   public: true
   recipe_image: null
   one_point: ""
@@ -2256,14 +2256,14 @@ recipe_drafts_132:
   amount: 0
   view_count: 0
   recipe_food_id: 12
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_133:
   id: 134
   user_id: 1
   recipe_id: 134
-  title: 鶏団子のケチャップあんかけ 
+  title: 鶏団子のケチャップあんかけ
   description: 鶏団子は揚げずにゆで、ノンオイルであっさりとした鶏団子のあんかけに仕上げました。お弁当にもどうぞ！
   public: true
   recipe_image: null
@@ -2273,7 +2273,7 @@ recipe_drafts_133:
   amount: 0
   view_count: 0
   recipe_food_id: 12
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_134:
@@ -2281,7 +2281,7 @@ recipe_drafts_134:
   user_id: 1
   recipe_id: 135
   title: ピーマンの肉詰めの甘酢あんかけ♪
-  description: ピーマン嫌いの方も食べやすいお肉たっぷりのピーマンの肉詰めです。【2008/9/27】材料・作り方若干変更しました。 
+  description: ピーマン嫌いの方も食べやすいお肉たっぷりのピーマンの肉詰めです。【2008/9/27】材料・作り方若干変更しました。
   public: true
   recipe_image: null
   one_point: ""
@@ -2290,15 +2290,15 @@ recipe_drafts_134:
   amount: 0
   view_count: 0
   recipe_food_id: 12
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_135:
   id: 136
   user_id: 1
   recipe_id: 136
-  title: 一番簡単★チンジャオロース 
-  description: 100レポ達成ありがとう！ 節約★豚こまで工程２つの楽ちんレシピ！ だけどしっかりチンジャオロース！ 
+  title: 一番簡単★チンジャオロース
+  description: 100レポ達成ありがとう！ 節約★豚こまで工程２つの楽ちんレシピ！ だけどしっかりチンジャオロース！
   public: true
   recipe_image: null
   one_point: ""
@@ -2307,14 +2307,14 @@ recipe_drafts_135:
   amount: 0
   view_count: 0
   recipe_food_id: 13
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_136:
   id: 137
   user_id: 1
   recipe_id: 137
-  title: 我が家の回鍋肉 
+  title: 我が家の回鍋肉
   description: 家にある調味料でさっと作れる回鍋肉です。 子供も食べやすい味付けにしてあります。
   public: true
   recipe_image: null
@@ -2324,14 +2324,14 @@ recipe_drafts_136:
   amount: 0
   view_count: 0
   recipe_food_id: 13
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_137:
   id: 138
   user_id: 1
   recipe_id: 138
-  title: 豚肉の肉じゃが　～母の味～ 
+  title: 豚肉の肉じゃが　～母の味～
   description: お家の味といえばやっぱり肉じゃが♪じゃがいもが苦手な主人が一口食べて「うまい！」って言ってくれました！
   public: true
   recipe_image: null
@@ -2341,7 +2341,7 @@ recipe_drafts_137:
   amount: 0
   view_count: 0
   recipe_food_id: 13
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_138:
@@ -2349,7 +2349,7 @@ recipe_drafts_138:
   user_id: 1
   recipe_id: 139
   title: ご飯が進む♪かぶと豚肉の炒め煮
-  description: 旬のかぶを使って♪ご飯が進む１品です！ 旦那さんも大好きなお料理です！ 
+  description: 旬のかぶを使って♪ご飯が進む１品です！ 旦那さんも大好きなお料理です！
   public: true
   recipe_image: null
   one_point: ""
@@ -2358,15 +2358,15 @@ recipe_drafts_138:
   amount: 0
   view_count: 0
   recipe_food_id: 13
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_139:
   id: 140
   user_id: 1
   recipe_id: 140
-  title: 豚コマ肉でポークチャップ丼 
-  description: みんな大好きケチャップ味をフライパン一つでササッと♪ 豚こま肉に片栗粉をまぶす一手間で、タレが絡みとろ～り丼にピッタリ。 
+  title: 豚コマ肉でポークチャップ丼
+  description: みんな大好きケチャップ味をフライパン一つでササッと♪ 豚こま肉に片栗粉をまぶす一手間で、タレが絡みとろ～り丼にピッタリ。
   public: true
   recipe_image: null
   one_point: ""
@@ -2375,15 +2375,15 @@ recipe_drafts_139:
   amount: 0
   view_count: 0
   recipe_food_id: 13
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_140:
   id: 141
   user_id: 1
   recipe_id: 141
-  title: 一番簡単★チンジャオロース 
-  description: 100レポ達成ありがとう！ 節約★豚こまで工程２つの楽ちんレシピ！ だけどしっかりチンジャオロース！ 
+  title: 一番簡単★チンジャオロース
+  description: 100レポ達成ありがとう！ 節約★豚こまで工程２つの楽ちんレシピ！ だけどしっかりチンジャオロース！
   public: true
   recipe_image: null
   one_point: ""
@@ -2392,15 +2392,15 @@ recipe_drafts_140:
   amount: 0
   view_count: 0
   recipe_food_id: 14
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_141:
   id: 142
   user_id: 1
   recipe_id: 142
-  title: 我が家の回鍋肉 
-  description: 家にある調味料でさっと作れる回鍋肉です。 子供も食べやすい味付けにしてあります。 
+  title: 我が家の回鍋肉
+  description: 家にある調味料でさっと作れる回鍋肉です。 子供も食べやすい味付けにしてあります。
   public: true
   recipe_image: null
   one_point: ""
@@ -2409,15 +2409,15 @@ recipe_drafts_141:
   amount: 0
   view_count: 0
   recipe_food_id: 14
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_142:
   id: 143
   user_id: 1
   recipe_id: 143
-  title: 豚肉の肉じゃが　～母の味～ 
-  description: お家の味といえばやっぱり肉じゃが♪じゃがいもが苦手な主人が一口食べて「うまい！」って言ってくれました！ 
+  title: 豚肉の肉じゃが　～母の味～
+  description: お家の味といえばやっぱり肉じゃが♪じゃがいもが苦手な主人が一口食べて「うまい！」って言ってくれました！
   public: true
   recipe_image: null
   one_point: ""
@@ -2426,14 +2426,14 @@ recipe_drafts_142:
   amount: 0
   view_count: 0
   recipe_food_id: 14
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_143:
   id: 144
   user_id: 1
   recipe_id: 144
-  title: あっさり♪エビマヨ 
+  title: あっさり♪エビマヨ
   description: 揚げないので、あっさり。 簡単。。
   public: true
   recipe_image: null
@@ -2443,14 +2443,14 @@ recipe_drafts_143:
   amount: 0
   view_count: 0
   recipe_food_id: 16
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_144:
   id: 145
   user_id: 1
   recipe_id: 145
-  title: おうちのエビチリ♪  
+  title: おうちのエビチリ♪
   description: たまねぎとえびがあれば、おうち風エビチリ♪
   public: true
   recipe_image: null
@@ -2460,15 +2460,15 @@ recipe_drafts_144:
   amount: 0
   view_count: 0
   recipe_food_id: 16
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_145:
   id: 146
   user_id: 1
   recipe_id: 146
-  title: ウチの定番・エビチリ（カサ増し）。 
-  description: レンコンでカサ増しのエビチリです。 エビの風味を邪魔しない、レンコンとは好相性。材料多いですが、簡単ですよ！ 
+  title: ウチの定番・エビチリ（カサ増し）。
+  description: レンコンでカサ増しのエビチリです。 エビの風味を邪魔しない、レンコンとは好相性。材料多いですが、簡単ですよ！
   public: true
   recipe_image: null
   one_point: ""
@@ -2477,14 +2477,14 @@ recipe_drafts_145:
   amount: 0
   view_count: 0
   recipe_food_id: 16
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_146:
   id: 147
   user_id: 1
   recipe_id: 147
-  title: イカとじゃが芋のにんにくレモンバター炒め 
+  title: イカとじゃが芋のにんにくレモンバター炒め
   description: サッパリと☆でも、コクもあって美味しく簡単に出来るメニューです(＾−＾) 2012･04･07＊話題入り感謝です☆★☆★
   public: true
   recipe_image: null
@@ -2494,15 +2494,15 @@ recipe_drafts_146:
   amount: 0
   view_count: 0
   recipe_food_id: 17
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_147:
   id: 148
   user_id: 1
   recipe_id: 148
-  title: イカの照りテリ焼き 
-  description: こってり甘辛でご飯にもお酒にもピッタリです♪2012/4/13話題入り(*^^*)作って頂いた皆様ありがとうございます♬ 
+  title: イカの照りテリ焼き
+  description: こってり甘辛でご飯にもお酒にもピッタリです♪2012/4/13話題入り(*^^*)作って頂いた皆様ありがとうございます♬
   public: true
   recipe_image: null
   one_point: ""
@@ -2511,7 +2511,7 @@ recipe_drafts_147:
   amount: 0
   view_count: 0
   recipe_food_id: 17
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_148:
@@ -2519,7 +2519,7 @@ recipe_drafts_148:
   user_id: 1
   recipe_id: 149
   title: 豆イカで～大根とイカの煮物
-  description: 大根と一緒に煮ると かたくならないですよね～イカ～って♪ 煮汁をたっぷり含んだ美味しい煮物です 
+  description: 大根と一緒に煮ると かたくならないですよね～イカ～って♪ 煮汁をたっぷり含んだ美味しい煮物です
   public: true
   recipe_image: null
   one_point: ""
@@ -2528,15 +2528,15 @@ recipe_drafts_148:
   amount: 0
   view_count: 0
   recipe_food_id: 17
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_149:
   id: 150
   user_id: 1
   recipe_id: 150
-  title: 鯖のケチャップ焼き♡ 
-  description: 鯖を甘酸っぱいケチャップ味にしました♪ お子様にも食べ易い味付けです♡ お弁当にもΣd(ゝ∀･)good!!! 
+  title: 鯖のケチャップ焼き♡
+  description: 鯖を甘酸っぱいケチャップ味にしました♪ お子様にも食べ易い味付けです♡ お弁当にもΣd(ゝ∀･)good!!!
   public: true
   recipe_image: null
   one_point: ""
@@ -2545,15 +2545,15 @@ recipe_drafts_149:
   amount: 0
   view_count: 0
   recipe_food_id: 19
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_150:
   id: 151
   user_id: 1
   recipe_id: 151
-  title: ☆和食の基本☆さば味噌 
-  description: 味噌と生姜で臭みもなくおいしく仕上がります。 
+  title: ☆和食の基本☆さば味噌
+  description: 味噌と生姜で臭みもなくおいしく仕上がります。
   public: true
   recipe_image: null
   one_point: ""
@@ -2562,14 +2562,14 @@ recipe_drafts_150:
   amount: 0
   view_count: 0
   recipe_food_id: 19
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_151:
   id: 152
   user_id: 1
   recipe_id: 152
-  title: 皮も美味しい☆鯖の竜田～辛子醤油風～ 
+  title: 皮も美味しい☆鯖の竜田～辛子醤油風～
   description: 辛子が鯖の臭みを消してくれ、とっても香ばしい一品です♪辛くないのでお子様も食べられます☆ご飯、お酒がすすみます♪
   public: true
   recipe_image: null
@@ -2579,15 +2579,15 @@ recipe_drafts_151:
   amount: 0
   view_count: 0
   recipe_food_id: 19
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_152:
   id: 153
   user_id: 1
   recipe_id: 153
-  title: 骨無し！鯵の南蛮漬け☆ 
-  description: 骨いっさいOFFなので子供もぱくぱく食べれます♪ 2011/6/9　ピックアップレシピになりました♪ 
+  title: 骨無し！鯵の南蛮漬け☆
+  description: 骨いっさいOFFなので子供もぱくぱく食べれます♪ 2011/6/9　ピックアップレシピになりました♪
   public: true
   recipe_image: null
   one_point: ""
@@ -2596,7 +2596,7 @@ recipe_drafts_152:
   amount: 0
   view_count: 0
   recipe_food_id: 18
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_153:
@@ -2604,7 +2604,7 @@ recipe_drafts_153:
   user_id: 1
   recipe_id: 154
   title: 小アジのオリーブオイル煮
-  description: オイルサーディンのアジ版です。放っとけば出来上がる簡単レシピ^^ イタリアの白ワインとご一緒に♬♪ 
+  description: オイルサーディンのアジ版です。放っとけば出来上がる簡単レシピ^^ イタリアの白ワインとご一緒に♬♪
   public: true
   recipe_image: null
   one_point: ""
@@ -2613,7 +2613,7 @@ recipe_drafts_153:
   amount: 0
   view_count: 0
   recipe_food_id: 18
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_154:
@@ -2621,7 +2621,7 @@ recipe_drafts_154:
   user_id: 1
   recipe_id: 155
   title: アジのなめろう
-  description: 薬味たっぷり、なめらか~なお酒のあてにも白いご飯にもピッタリ！のなめろうです。 
+  description: 薬味たっぷり、なめらか~なお酒のあてにも白いご飯にもピッタリ！のなめろうです。
   public: true
   recipe_image: null
   one_point: ""
@@ -2630,15 +2630,15 @@ recipe_drafts_154:
   amount: 0
   view_count: 0
   recipe_food_id: 18
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_155:
   id: 156
   user_id: 1
   recipe_id: 156
-  title: イワシの蒲焼丼♪ 
-  description: お手頃イワシにボリュームを出しちゃいましょう☆ 
+  title: イワシの蒲焼丼♪
+  description: お手頃イワシにボリュームを出しちゃいましょう☆
   public: true
   recipe_image: null
   one_point: ""
@@ -2647,7 +2647,7 @@ recipe_drafts_155:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_156:
@@ -2664,7 +2664,7 @@ recipe_drafts_156:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_157:
@@ -2681,7 +2681,7 @@ recipe_drafts_157:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_158:
@@ -2689,7 +2689,7 @@ recipe_drafts_158:
   user_id: 1
   recipe_id: 159
   title: 小松菜シメジとシーチキンの醤油炒め
-  description: 野菜ときのこにシーチキンの水煮、10分で作れる低カロリーで栄養バランスが最高なレシピーです☆ 
+  description: 野菜ときのこにシーチキンの水煮、10分で作れる低カロリーで栄養バランスが最高なレシピーです☆
   public: true
   recipe_image: null
   one_point: ""
@@ -2698,14 +2698,14 @@ recipe_drafts_158:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_159:
   id: 160
   user_id: 1
   recipe_id: 160
-  title: ツナとほうれん草の納豆和え。 
+  title: ツナとほうれん草の納豆和え。
   description: ねばふわとろ～。栄養価の高い副菜です。
   public: true
   recipe_image: null
@@ -2715,15 +2715,15 @@ recipe_drafts_159:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_160:
   id: 161
   user_id: 1
   recipe_id: 161
-  title: ✽なすの甘辛ツナ炒め♬ごはんのおともに✽ 
-  description: とっても簡単～ツナ缶の油を使って♬ ぱぱっとできちゃいます！ 2011.9.17 祝話題入り♥ 写真・レシピ内容　変更 
+  title: ✽なすの甘辛ツナ炒め♬ごはんのおともに✽
+  description: とっても簡単～ツナ缶の油を使って♬ ぱぱっとできちゃいます！ 2011.9.17 祝話題入り♥ 写真・レシピ内容　変更
   public: true
   recipe_image: null
   one_point: ""
@@ -2732,7 +2732,7 @@ recipe_drafts_160:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_161:
@@ -2749,14 +2749,14 @@ recipe_drafts_161:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_162:
   id: 163
   user_id: 1
   recipe_id: 163
-  title: ♪簡単♡ぶりの煮付け♪  
+  title: ♪簡単♡ぶりの煮付け♪
   description: 煮付けるとぶりの身がとろけます～❤ 2012/04/13話題入り感謝です♬
   public: true
   recipe_image: null
@@ -2766,14 +2766,14 @@ recipe_drafts_162:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_163:
   id: 164
   user_id: 1
   recipe_id: 164
-  title: ゆずの香りのぶり照焼 
+  title: ゆずの香りのぶり照焼
   description: ゆずの果汁をたれに使ったぶりの照焼です。 冬が旬のぶりとゆず。相性ばっちりです！
   public: true
   recipe_image: null
@@ -2783,7 +2783,7 @@ recipe_drafts_163:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_164:
@@ -2800,14 +2800,14 @@ recipe_drafts_164:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_165:
   id: 166
   user_id: 1
   recipe_id: 166
-  title: かつおのたたき～生姜みぞれかけ～ 
+  title: かつおのたたき～生姜みぞれかけ～
   description: 今日はかつおのたたき♪たっぷりの大根おろしとネギと生姜を柚子の利いたこのポン酢で食べよう！
   public: true
   recipe_image: null
@@ -2817,15 +2817,15 @@ recipe_drafts_165:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_166:
   id: 167
   user_id: 1
   recipe_id: 167
-  title: タラのフライタルタルソースかけお弁当にも 
-  description: ふわふわサクサクのタラに大量のタルタルソース最高です！！ 
+  title: タラのフライタルタルソースかけお弁当にも
+  description: ふわふわサクサクのタラに大量のタルタルソース最高です！！
   public: true
   recipe_image: null
   one_point: ""
@@ -2834,15 +2834,15 @@ recipe_drafts_166:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_167:
   id: 168
   user_id: 1
   recipe_id: 168
-  title: タラのムニエル～タルタルソース添え✿ 
-  description: 白身魚のムニエルに手作りタルタルソースを添えて。濃厚バターとあっさりめのタルタルが合います✿2012.4.5話題入り♡ 
+  title: タラのムニエル～タルタルソース添え✿
+  description: 白身魚のムニエルに手作りタルタルソースを添えて。濃厚バターとあっさりめのタルタルが合います✿2012.4.5話題入り♡
   public: true
   recipe_image: null
   one_point: ""
@@ -2851,7 +2851,7 @@ recipe_drafts_167:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_168:
@@ -2859,7 +2859,7 @@ recipe_drafts_168:
   user_id: 1
   recipe_id: 169
   title: 鱈のムニエルと愉快なパプリカ達！
-  description: 鱈のムニエルをパプリカを添えて彩り鮮やかに料理しました。人気カテゴリに掲載して頂きありがとうございました。感謝です！ 
+  description: 鱈のムニエルをパプリカを添えて彩り鮮やかに料理しました。人気カテゴリに掲載して頂きありがとうございました。感謝です！
   public: true
   recipe_image: null
   one_point: ""
@@ -2868,7 +2868,7 @@ recipe_drafts_168:
   amount: 0
   view_count: 0
   recipe_food_id: 22
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_169:
@@ -2885,15 +2885,15 @@ recipe_drafts_169:
   amount: 0
   view_count: 0
   recipe_food_id: 24
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_170:
   id: 171
   user_id: 1
   recipe_id: 171
-  title: 八宝菜 
-  description: 八宝菜は材料だけ用意したら、あとは簡単！冷蔵庫にあるものでいいんです♪ 
+  title: 八宝菜
+  description: 八宝菜は材料だけ用意したら、あとは簡単！冷蔵庫にあるものでいいんです♪
   public: true
   recipe_image: null
   one_point: ""
@@ -2902,7 +2902,7 @@ recipe_drafts_170:
   amount: 0
   view_count: 0
   recipe_food_id: 24
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_171:
@@ -2919,15 +2919,15 @@ recipe_drafts_171:
   amount: 0
   view_count: 0
   recipe_food_id: 24
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_172:
   id: 173
   user_id: 1
   recipe_id: 173
-  title: バターキーマカレー（鶏ひき肉・スパイス） 
-  description: 家にいながらにして、スパイスの香り漂ううまいインドカレーを食べよう♪トマトたくさん入ってます。 
+  title: バターキーマカレー（鶏ひき肉・スパイス）
+  description: 家にいながらにして、スパイスの香り漂ううまいインドカレーを食べよう♪トマトたくさん入ってます。
   public: true
   recipe_image: null
   one_point: ""
@@ -2936,15 +2936,15 @@ recipe_drafts_172:
   amount: 0
   view_count: 0
   recipe_food_id: 25
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_173:
   id: 174
   user_id: 1
   recipe_id: 174
-  title: 簡単でおいしい☆ドライカレー 
-  description: 煮込む時間がほとんどいらないのでパパッと簡単に出来ちゃう☆ 
+  title: 簡単でおいしい☆ドライカレー
+  description: 煮込む時間がほとんどいらないのでパパッと簡単に出来ちゃう☆
   public: true
   recipe_image: null
   one_point: ""
@@ -2953,14 +2953,14 @@ recipe_drafts_173:
   amount: 0
   view_count: 0
   recipe_food_id: 25
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_174:
   id: 175
   user_id: 1
   recipe_id: 175
-  title: ☆バターチキンカレー☆ 
+  title: ☆バターチキンカレー☆
   description: 材料が多く難しそうに見えますが、作ってみるととっても簡単♪ おもてなしに最適です。 ご飯にもパンにも合います♡
   public: true
   recipe_image: null
@@ -2970,7 +2970,7 @@ recipe_drafts_174:
   amount: 0
   view_count: 0
   recipe_food_id: 25
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_175:
@@ -2987,15 +2987,15 @@ recipe_drafts_175:
   amount: 0
   view_count: 0
   recipe_food_id: 24
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_176:
   id: 177
   user_id: 1
   recipe_id: 177
-  title: タレが決め手！野菜たっぷり豚丼♪ 
-  description: 2012.4.18話題入り感謝♪甘辛旨ダレで、野菜もモリモリ食べられるジューシー豚丼♪すぐ出来て簡単です！ 
+  title: タレが決め手！野菜たっぷり豚丼♪
+  description: 2012.4.18話題入り感謝♪甘辛旨ダレで、野菜もモリモリ食べられるジューシー豚丼♪すぐ出来て簡単です！
   public: true
   recipe_image: null
   one_point: ""
@@ -3004,15 +3004,15 @@ recipe_drafts_176:
   amount: 0
   view_count: 0
   recipe_food_id: 24
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_177:
   id: 178
   user_id: 1
   recipe_id: 178
-  title: 簡単！アボガドビビンバ丼 
-  description: ナムルを用意する必要なし！ほとんど家に常備している食材で作れますよ(^0^)米印の食材はお好みで入れて下さい！ 
+  title: 簡単！アボガドビビンバ丼
+  description: ナムルを用意する必要なし！ほとんど家に常備している食材で作れますよ(^0^)米印の食材はお好みで入れて下さい！
   public: true
   recipe_image: null
   one_point: ""
@@ -3021,15 +3021,15 @@ recipe_drafts_177:
   amount: 0
   view_count: 0
   recipe_food_id: 24
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_178:
   id: 179
   user_id: 1
   recipe_id: 179
-  title: ☆鍋の残りできのこと鶏肉の炊き込みご飯☆ 
-  description: 鍋をした残りのシイタケやエノキを利用して炊き込みご飯！ 白菜でスープを作ったら片付きます！ 
+  title: ☆鍋の残りできのこと鶏肉の炊き込みご飯☆
+  description: 鍋をした残りのシイタケやエノキを利用して炊き込みご飯！ 白菜でスープを作ったら片付きます！
   public: true
   recipe_image: null
   one_point: ""
@@ -3038,7 +3038,7 @@ recipe_drafts_178:
   amount: 0
   view_count: 0
   recipe_food_id: 26
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_179:
@@ -3055,15 +3055,15 @@ recipe_drafts_179:
   amount: 0
   view_count: 0
   recipe_food_id: 26
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_180:
   id: 181
   user_id: 1
   recipe_id: 181
-  title: うどの炊き込みご飯 
-  description: おすすめ！春らしい炊き込みご飯。うどが苦手な人もこれなら大丈夫。 
+  title: うどの炊き込みご飯
+  description: おすすめ！春らしい炊き込みご飯。うどが苦手な人もこれなら大丈夫。
   public: true
   recipe_image: null
   one_point: ""
@@ -3072,7 +3072,7 @@ recipe_drafts_180:
   amount: 0
   view_count: 0
   recipe_food_id: 26
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_181:
@@ -3089,14 +3089,14 @@ recipe_drafts_181:
   amount: 0
   view_count: 0
   recipe_food_id: 26
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_182:
   id: 183
   user_id: 1
   recipe_id: 183
-  title: ｶﾆとﾚﾀｽのあんかけﾁｬｰﾊﾝ 
+  title: ｶﾆとﾚﾀｽのあんかけﾁｬｰﾊﾝ
   description: ｶﾆといってもｶﾆかまぼこですが。。。冷ご飯消費ﾚｼﾋﾟ！トロっとして食べやすく優しい味の炒飯です
   public: true
   recipe_image: null
@@ -3106,7 +3106,7 @@ recipe_drafts_182:
   amount: 0
   view_count: 0
   recipe_food_id: 26
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_183:
@@ -3114,7 +3114,7 @@ recipe_drafts_183:
   user_id: 1
   recipe_id: 184
   title: すぐ出来！めちゃ旨！ツナキムチチャーハン
-  description: キムチには魚介の旨味が合います！洗い物も少なく、すぐに出来るのでランチにいかがですか♪ 
+  description: キムチには魚介の旨味が合います！洗い物も少なく、すぐに出来るのでランチにいかがですか♪
   public: true
   recipe_image: null
   one_point: ""
@@ -3123,15 +3123,15 @@ recipe_drafts_183:
   amount: 0
   view_count: 0
   recipe_food_id: 26
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_184:
   id: 185
   user_id: 1
   recipe_id: 185
-  title: サーモンとポテトのキュウリ巻き一口サラダ 
-  description: 祝！100人の方に作っていただきました♪マッシュポテトをキュウリで巻いてサーモンをのせた見た目も可愛いサラダです！ 
+  title: サーモンとポテトのキュウリ巻き一口サラダ
+  description: 祝！100人の方に作っていただきました♪マッシュポテトをキュウリで巻いてサーモンをのせた見た目も可愛いサラダです！
   public: true
   recipe_image: null
   one_point: ""
@@ -3140,15 +3140,15 @@ recipe_drafts_184:
   amount: 0
   view_count: 0
   recipe_food_id: 40
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_185:
   id: 186
   user_id: 1
   recipe_id: 186
-  title: ☆アンチョビポテトサラダ 
-  description: ★09-9-18⑰＋10話題入り★アンチョビとポテトをあわせるだけ、簡単ポテトサラダ。つまみにもパーティーにも。 
+  title: ☆アンチョビポテトサラダ
+  description: ★09-9-18⑰＋10話題入り★アンチョビとポテトをあわせるだけ、簡単ポテトサラダ。つまみにもパーティーにも。
   public: true
   recipe_image: null
   one_point: ""
@@ -3157,14 +3157,14 @@ recipe_drafts_185:
   amount: 0
   view_count: 0
   recipe_food_id: 40
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_186:
   id: 187
   user_id: 1
   recipe_id: 187
-  title: フライドオニオンで！？ポテトサラダ☆ 
+  title: フライドオニオンで！？ポテトサラダ☆
   description: たまねぎのかわりにフライドオニオンを使用(*^^)v　香ばしく甘いフライドオニオンとコーンがポテトサラダと相性抜群！
   public: true
   recipe_image: null
@@ -3174,15 +3174,15 @@ recipe_drafts_186:
   amount: 0
   view_count: 0
   recipe_food_id: 40
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_187:
   id: 188
   user_id: 1
   recipe_id: 188
-  title: 水菜とパリパリ油揚げのサラダ 
-  description: カリカリに焼いたコクのある油揚げがさっぱりした水菜にぴったりです。 ぜひ、試してみてください＾＾ 
+  title: 水菜とパリパリ油揚げのサラダ
+  description: カリカリに焼いたコクのある油揚げがさっぱりした水菜にぴったりです。 ぜひ、試してみてください＾＾
   public: true
   recipe_image: null
   one_point: ""
@@ -3191,15 +3191,15 @@ recipe_drafts_187:
   amount: 0
   view_count: 0
   recipe_food_id: 41
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_188:
   id: 189
   user_id: 1
   recipe_id: 189
-  title: 簡単シンプル大根サラダ 
-  description: ポン酢とごま油をかけるだけの簡単大根サラダです。 
+  title: 簡単シンプル大根サラダ
+  description: ポン酢とごま油をかけるだけの簡単大根サラダです。
   public: true
   recipe_image: null
   one_point: ""
@@ -3208,14 +3208,14 @@ recipe_drafts_188:
   amount: 0
   view_count: 0
   recipe_food_id: 41
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_189:
   id: 190
   user_id: 1
   recipe_id: 190
-  title: 梅ツナごま❤和風パスタサラダ 
+  title: 梅ツナごま❤和風パスタサラダ
   description: 2012.05.28話題入り感謝♪さっぱりした和風な味つけのパスタサラダです。お好きな野菜をいれて作ってね。
   public: true
   recipe_image: null
@@ -3225,7 +3225,7 @@ recipe_drafts_189:
   amount: 0
   view_count: 0
   recipe_food_id: 41
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_190:
@@ -3242,7 +3242,7 @@ recipe_drafts_190:
   amount: 0
   view_count: 0
   recipe_food_id: 43
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_191:
@@ -3259,7 +3259,7 @@ recipe_drafts_191:
   amount: 0
   view_count: 0
   recipe_food_id: 43
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_192:
@@ -3267,7 +3267,7 @@ recipe_drafts_192:
   user_id: 1
   recipe_id: 193
   title: 大ヒット！グリーンピースサラダ
-  description: このサラダはポットラックパーティーによく作りますがいつも絶対大ヒット。グリーンピース嫌いな人もこれなら大好き。 
+  description: このサラダはポットラックパーティーによく作りますがいつも絶対大ヒット。グリーンピース嫌いな人もこれなら大好き。
   public: true
   recipe_image: null
   one_point: ""
@@ -3276,7 +3276,7 @@ recipe_drafts_192:
   amount: 0
   view_count: 0
   recipe_food_id: 43
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_193:
@@ -3284,7 +3284,7 @@ recipe_drafts_193:
   user_id: 1
   recipe_id: 194
   title: 夏バテ解消❤♡トマト＆お豆腐サラダ♡❤
-  description: 大好きなトマトとお豆腐サラダ♡ 食欲の無い時でもこれだけで栄養満点です(✿ฺ◕ฺ‿ฺ◡ฺ)♬ 
+  description: 大好きなトマトとお豆腐サラダ♡ 食欲の無い時でもこれだけで栄養満点です(✿ฺ◕ฺ‿ฺ◡ฺ)♬
   public: true
   recipe_image: null
   one_point: ""
@@ -3293,15 +3293,15 @@ recipe_drafts_193:
   amount: 0
   view_count: 0
   recipe_food_id: 42
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_194:
   id: 195
   user_id: 1
   recipe_id: 195
-  title: 大人なトマトサラダ 
-  description: ちゃちゃっと出来て、お酒がすすむトマトです！ 
+  title: 大人なトマトサラダ
+  description: ちゃちゃっと出来て、お酒がすすむトマトです！
   public: true
   recipe_image: null
   one_point: ""
@@ -3310,7 +3310,7 @@ recipe_drafts_194:
   amount: 0
   view_count: 0
   recipe_food_id: 42
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_195:
@@ -3327,14 +3327,14 @@ recipe_drafts_195:
   amount: 0
   view_count: 0
   recipe_food_id: 42
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_196:
   id: 197
   user_id: 1
   recipe_id: 197
-  title: 豆腐ときゅうりの梅ごまサラダ 
+  title: 豆腐ときゅうりの梅ごまサラダ
   description: ささっともう一品作りたいときにオススメ♪ 混ぜるだけで簡単！
   public: true
   recipe_image: null
@@ -3344,15 +3344,15 @@ recipe_drafts_196:
   amount: 0
   view_count: 0
   recipe_food_id: 44
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_197:
   id: 198
   user_id: 1
   recipe_id: 198
-  title: 夏バテ解消❤♡トマト＆お豆腐サラダ♡❤ 
-  description: 大好きなトマトとお豆腐サラダ♡ 食欲の無い時でもこれだけで栄養満点です(✿ฺ◕ฺ‿ฺ◡ฺ)♬ 
+  title: 夏バテ解消❤♡トマト＆お豆腐サラダ♡❤
+  description: 大好きなトマトとお豆腐サラダ♡ 食欲の無い時でもこれだけで栄養満点です(✿ฺ◕ฺ‿ฺ◡ฺ)♬
   public: true
   recipe_image: null
   one_point: ""
@@ -3361,7 +3361,7 @@ recipe_drafts_197:
   amount: 0
   view_count: 0
   recipe_food_id: 44
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_198:
@@ -3369,7 +3369,7 @@ recipe_drafts_198:
   user_id: 1
   recipe_id: 199
   title: 豆腐とトマトが美味しいアンチョビのソース
-  description: 美味しさの秘密は、お醤油とアンチョビとオリーブ油で作ったドレッシングです。あとは簡単！ 
+  description: 美味しさの秘密は、お醤油とアンチョビとオリーブ油で作ったドレッシングです。あとは簡単！
   public: true
   recipe_image: null
   one_point: ""
@@ -3378,7 +3378,7 @@ recipe_drafts_198:
   amount: 0
   view_count: 0
   recipe_food_id: 44
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
   updated_at: 2012-06-05 13:22:11 UTC
 recipe_drafts_199:
@@ -3395,7 +3395,7 @@ recipe_drafts_199:
   amount: 0
   view_count: 0
   recipe_food_id: 45
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_200:
@@ -3403,7 +3403,7 @@ recipe_drafts_200:
   user_id: 1
   recipe_id: 201
   title: わかめと卵のスープ
-  description: ★★★カテゴリ掲載ありがとう★★★ すぐできるお手軽中華スープです。 
+  description: ★★★カテゴリ掲載ありがとう★★★ すぐできるお手軽中華スープです。
   public: true
   recipe_image: null
   one_point: ""
@@ -3412,14 +3412,14 @@ recipe_drafts_200:
   amount: 0
   view_count: 0
   recipe_food_id: 45
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_201:
   id: 202
   user_id: 1
   recipe_id: 202
-  title: 豆腐となめこと長ねぎの中華スープ 
+  title: 豆腐となめこと長ねぎの中華スープ
   description: ほっこりおいしい中華スープ♪　なめこと白ネギで、自然なとろみがつきます。ごま油の香りもおいしい♪
   public: true
   recipe_image: null
@@ -3429,15 +3429,15 @@ recipe_drafts_201:
   amount: 0
   view_count: 0
   recipe_food_id: 45
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_202:
   id: 203
   user_id: 1
   recipe_id: 203
-  title: 白菜とツナのお味噌汁 
-  description: ツナ好きさんはぜひお試しを♪ ツナのだしがおいしいお味噌汁です！ 
+  title: 白菜とツナのお味噌汁
+  description: ツナ好きさんはぜひお試しを♪ ツナのだしがおいしいお味噌汁です！
   public: true
   recipe_image: null
   one_point: ""
@@ -3446,15 +3446,15 @@ recipe_drafts_202:
   amount: 0
   view_count: 0
   recipe_food_id: 46
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_203:
   id: 204
   user_id: 1
   recipe_id: 204
-  title: キャベツとワカメの味噌汁♪ 
-  description: キャベツとワカメの組み合わせが大好きで、 レシピとはいえないかもしれませんが、 ぜひこの組み合わせ試してみてください☆ 
+  title: キャベツとワカメの味噌汁♪
+  description: キャベツとワカメの組み合わせが大好きで、 レシピとはいえないかもしれませんが、 ぜひこの組み合わせ試してみてください☆
   public: true
   recipe_image: null
   one_point: ""
@@ -3463,14 +3463,14 @@ recipe_drafts_203:
   amount: 0
   view_count: 0
   recipe_food_id: 46
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_204:
   id: 205
   user_id: 1
   recipe_id: 205
-  title: 豚とサツマイモの塩麹味噌汁 
+  title: 豚とサツマイモの塩麹味噌汁
   description: おさつ芋の甘く優しい塩麹のみそ汁。 豚も入れると食べるおかずみそ汁になりますよ♪
   public: true
   recipe_image: null
@@ -3480,15 +3480,15 @@ recipe_drafts_204:
   amount: 0
   view_count: 0
   recipe_food_id: 46
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_205:
   id: 206
   user_id: 1
   recipe_id: 206
-  title: 具だくさん♡キャベツと卵のやさしいスープ 
-  description: 材料3つでとっても簡単☆ キャベツたっぷりでやさしいコンソメ味のスープです(*^。^*) 
+  title: 具だくさん♡キャベツと卵のやさしいスープ
+  description: 材料3つでとっても簡単☆ キャベツたっぷりでやさしいコンソメ味のスープです(*^。^*)
   public: true
   recipe_image: null
   one_point: ""
@@ -3497,14 +3497,14 @@ recipe_drafts_205:
   amount: 0
   view_count: 0
   recipe_food_id: 47
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_206:
   id: 207
   user_id: 1
   recipe_id: 207
-  title: 野菜のコンソメスープ 
+  title: 野菜のコンソメスープ
   description: ★★★話題入りありがとう★★★人気検索ありがとう★★★ 簡単にすぐ作れるスープです。
   public: true
   recipe_image: null
@@ -3514,7 +3514,7 @@ recipe_drafts_206:
   amount: 0
   view_count: 0
   recipe_food_id: 47
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_207:
@@ -3522,7 +3522,7 @@ recipe_drafts_207:
   user_id: 1
   recipe_id: 208
   title: 丸ごと♪新玉ねぎのコンソメスープ♪
-  description: 新たまねぎをまるごと１つ入れた贅沢スープです♪玉ねぎの甘みが美味しい❤ 簡単に作れるヘルシースープです♪ 
+  description: 新たまねぎをまるごと１つ入れた贅沢スープです♪玉ねぎの甘みが美味しい❤ 簡単に作れるヘルシースープです♪
   public: true
   recipe_image: null
   one_point: ""
@@ -3531,15 +3531,15 @@ recipe_drafts_207:
   amount: 0
   view_count: 0
   recipe_food_id: 47
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_208:
   id: 209
   user_id: 1
   recipe_id: 209
-  title: 我が家流★野菜がとろけるラタトゥイユ 
-  description: そのままで食べてもよし、ソースのように食べてもよしの万能常備菜です！コンソメとトマトでひたすら煮込むだけの簡単さ！ 
+  title: 我が家流★野菜がとろけるラタトゥイユ
+  description: そのままで食べてもよし、ソースのように食べてもよしの万能常備菜です！コンソメとトマトでひたすら煮込むだけの簡単さ！
   public: true
   recipe_image: null
   one_point: ""
@@ -3548,14 +3548,14 @@ recipe_drafts_208:
   amount: 0
   view_count: 0
   recipe_food_id: 48
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_209:
   id: 210
   user_id: 1
   recipe_id: 210
-  title: 瓜を使ってラタトゥイユ～♪ 
+  title: 瓜を使ってラタトゥイユ～♪
   description: 安価な瓜を使ったラタトゥイユです。ジャガイモ・人参も使いボリューム満天です。温かくても冷やしても美味しい一品です。
   public: true
   recipe_image: null
@@ -3565,7 +3565,7 @@ recipe_drafts_209:
   amount: 0
   view_count: 0
   recipe_food_id: 48
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_210:
@@ -3573,7 +3573,7 @@ recipe_drafts_210:
   user_id: 1
   recipe_id: 211
   title: 我が家の簡単・基本のラタトゥイユ
-  description: 夏はすぐそこ! 冷たくてもさっぱり美味しいラタトゥイユです^^ 野菜はお好きなものをいれて☆ 7/20改正 
+  description: 夏はすぐそこ! 冷たくてもさっぱり美味しいラタトゥイユです^^ 野菜はお好きなものをいれて☆ 7/20改正
   public: true
   recipe_image: null
   one_point: ""
@@ -3582,15 +3582,15 @@ recipe_drafts_210:
   amount: 0
   view_count: 0
   recipe_food_id: 48
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_211:
   id: 212
   user_id: 1
   recipe_id: 212
-  title: 夏に♪トマトとレタスの冷たいスープ☆☆ 
-  description: シャキシャキレタスがとても美味しいです。 トマトのリコピン効果でシミ予防にもなりますよ～☆ 
+  title: 夏に♪トマトとレタスの冷たいスープ☆☆
+  description: シャキシャキレタスがとても美味しいです。 トマトのリコピン効果でシミ予防にもなりますよ～☆
   public: true
   recipe_image: null
   one_point: ""
@@ -3599,15 +3599,15 @@ recipe_drafts_211:
   amount: 0
   view_count: 0
   recipe_food_id: 48
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_212:
   id: 213
   user_id: 1
   recipe_id: 213
-  title: トマトの冷たいスープ　トマトスープ 
-  description: トマトは、冷蔵庫に入れてはいけません。お陽さまにじゅうぶん当ててあげて真っ赤に熟すまで待ちましょう。素敵なスープに変身♪ 
+  title: トマトの冷たいスープ　トマトスープ
+  description: トマトは、冷蔵庫に入れてはいけません。お陽さまにじゅうぶん当ててあげて真っ赤に熟すまで待ちましょう。素敵なスープに変身♪
   public: true
   recipe_image: null
   one_point: ""
@@ -3616,15 +3616,15 @@ recipe_drafts_212:
   amount: 0
   view_count: 0
   recipe_food_id: 48
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_213:
   id: 214
   user_id: 1
   recipe_id: 214
-  title: ベーコンとレタスの美人トマトスープ♥ 
-  description: ビタミンCたっぷりのレタスとカロテンが多く含まれる完熟トマトを使った身体に優しいスープです♪旬のレタスの香りがGOOD！ 
+  title: ベーコンとレタスの美人トマトスープ♥
+  description: ビタミンCたっぷりのレタスとカロテンが多く含まれる完熟トマトを使った身体に優しいスープです♪旬のレタスの香りがGOOD！
   public: true
   recipe_image: null
   one_point: ""
@@ -3633,15 +3633,15 @@ recipe_drafts_213:
   amount: 0
   view_count: 0
   recipe_food_id: 48
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_214:
   id: 215
   user_id: 1
   recipe_id: 215
-  title: カレー粉でおいしい♡ミネストローネ 
-  description: ほんのちょっとのカレー粉で、いつものミネストローネがもっとおいしくなります。 
+  title: カレー粉でおいしい♡ミネストローネ
+  description: ほんのちょっとのカレー粉で、いつものミネストローネがもっとおいしくなります。
   public: true
   recipe_image: null
   one_point: ""
@@ -3650,7 +3650,7 @@ recipe_drafts_214:
   amount: 0
   view_count: 0
   recipe_food_id: 49
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_215:
@@ -3658,7 +3658,7 @@ recipe_drafts_215:
   user_id: 1
   recipe_id: 216
   title: 身体に優しい♡野菜たっぷり食べるスープ♪
-  description: 油は使わずたくさんのお野菜から栄養分も摂れてしかもお腹が一杯になるヘルシーなスープです☆ 作り方も簡単ですよ～♪ 
+  description: 油は使わずたくさんのお野菜から栄養分も摂れてしかもお腹が一杯になるヘルシーなスープです☆ 作り方も簡単ですよ～♪
   public: true
   recipe_image: null
   one_point: ""
@@ -3667,7 +3667,7 @@ recipe_drafts_215:
   amount: 0
   view_count: 0
   recipe_food_id: 49
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_216:
@@ -3675,7 +3675,7 @@ recipe_drafts_216:
   user_id: 1
   recipe_id: 217
   title: トマト缶とひよこ豆のミネストローネ
-  description: トマト缶を使って簡単にできる、ひよこ豆のミネストローネスープです。ひよこ豆のほくほくした食感がよいですよ。 
+  description: トマト缶を使って簡単にできる、ひよこ豆のミネストローネスープです。ひよこ豆のほくほくした食感がよいですよ。
   public: true
   recipe_image: null
   one_point: ""
@@ -3684,15 +3684,15 @@ recipe_drafts_216:
   amount: 0
   view_count: 0
   recipe_food_id: 49
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_217:
   id: 218
   user_id: 1
   recipe_id: 218
-  title: ブロッコリーとベーコンのスペインオムレツ 
-  description: ブロッコリーとベーコンというシンプルな具ですが、おいしくできて気に入りました。ブロッコリーの歯触り（？）がイイ感じです。 
+  title: ブロッコリーとベーコンのスペインオムレツ
+  description: ブロッコリーとベーコンというシンプルな具ですが、おいしくできて気に入りました。ブロッコリーの歯触り（？）がイイ感じです。
   public: true
   recipe_image: null
   one_point: ""
@@ -3701,7 +3701,7 @@ recipe_drafts_217:
   amount: 0
   view_count: 0
   recipe_food_id: 51
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_218:
@@ -3709,7 +3709,7 @@ recipe_drafts_218:
   user_id: 1
   recipe_id: 219
   title: ほうれん草とトマトチーズの洋風卵とじ
-  description: 2012.5.18話題入り！彩りが綺麗な洋風アレンジしたキッシュ風の卵とじ♪ジューシートマト＆とろ～りチーズが最高❤ 
+  description: 2012.5.18話題入り！彩りが綺麗な洋風アレンジしたキッシュ風の卵とじ♪ジューシートマト＆とろ～りチーズが最高❤
   public: true
   recipe_image: null
   one_point: ""
@@ -3718,7 +3718,7 @@ recipe_drafts_218:
   amount: 0
   view_count: 0
   recipe_food_id: 51
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_219:
@@ -3726,7 +3726,7 @@ recipe_drafts_219:
   user_id: 1
   recipe_id: 220
   title: 豆腐ときのことほうれんそうの卵とじ
-  description: 卵と豆腐がきのことほうれん草をうまい具合にまとめてくれる簡単料理です 
+  description: 卵と豆腐がきのことほうれん草をうまい具合にまとめてくれる簡単料理です
   public: true
   recipe_image: null
   one_point: ""
@@ -3735,15 +3735,15 @@ recipe_drafts_219:
   amount: 0
   view_count: 0
   recipe_food_id: 51
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_220:
   id: 221
   user_id: 1
   recipe_id: 221
-  title: ♥とろ～り優しい♥豆腐の鶏そぼろあんかけ 
-  description: ♥100人感謝♥つるんとのどごしのいいお豆腐に、挽き肉入りのあんかけをのせました。とろ～りあんかけが優しく嬉しい一品です 
+  title: ♥とろ～り優しい♥豆腐の鶏そぼろあんかけ
+  description: ♥100人感謝♥つるんとのどごしのいいお豆腐に、挽き肉入りのあんかけをのせました。とろ～りあんかけが優しく嬉しい一品です
   public: true
   recipe_image: null
   one_point: ""
@@ -3752,7 +3752,7 @@ recipe_drafts_220:
   amount: 0
   view_count: 0
   recipe_food_id: 52
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_221:
@@ -3760,7 +3760,7 @@ recipe_drafts_221:
   user_id: 1
   recipe_id: 222
   title: 冷凍豆腐で♬肉巻き豆腐ステーキ♥
-  description: 冷凍豆腐は扱いやすい！味が染みやすい！ヘルシー！食べ応え抜群♥しょうが焼き味で家族も大喜び♪ボリューム満点おかずです★ 
+  description: 冷凍豆腐は扱いやすい！味が染みやすい！ヘルシー！食べ応え抜群♥しょうが焼き味で家族も大喜び♪ボリューム満点おかずです★
   public: true
   recipe_image: null
   one_point: ""
@@ -3769,15 +3769,15 @@ recipe_drafts_221:
   amount: 0
   view_count: 0
   recipe_food_id: 52
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_222:
   id: 223
   user_id: 1
   recipe_id: 223
-  title: 具だくさん！ヘルシー麻婆豆腐 
-  description: 野菜がたっぷり入った、ヘルシーで具だくさんの麻婆豆腐。絹ごし豆腐を使って、フワフワで滑らかな食感に仕上げました。。。 
+  title: 具だくさん！ヘルシー麻婆豆腐
+  description: 野菜がたっぷり入った、ヘルシーで具だくさんの麻婆豆腐。絹ごし豆腐を使って、フワフワで滑らかな食感に仕上げました。。。
   public: true
   recipe_image: null
   one_point: ""
@@ -3786,7 +3786,7 @@ recipe_drafts_222:
   amount: 0
   view_count: 0
   recipe_food_id: 52
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_223:
@@ -3794,7 +3794,7 @@ recipe_drafts_223:
   user_id: 1
   recipe_id: 224
   title: ★我が家の定番★おから＆豆腐のサラダ
-  description: 我が家の定番、おからサラダ♪豆腐＋マヨソースでしっとりしているのでポテサラ感覚でたくさん食べれます♡ 
+  description: 我が家の定番、おからサラダ♪豆腐＋マヨソースでしっとりしているのでポテサラ感覚でたくさん食べれます♡
   public: true
   recipe_image: null
   one_point: ""
@@ -3803,14 +3803,14 @@ recipe_drafts_223:
   amount: 0
   view_count: 0
   recipe_food_id: 53
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_224:
   id: 225
   user_id: 1
   recipe_id: 225
-  title: おから椎茸ハンバーグ 
+  title: おから椎茸ハンバーグ
   description: おからと椎茸でデトックス！！
   public: true
   recipe_image: null
@@ -3820,14 +3820,14 @@ recipe_drafts_224:
   amount: 0
   view_count: 0
   recipe_food_id: 53
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_225:
   id: 226
   user_id: 1
   recipe_id: 226
-  title: おからのもっちり♪おやき 
+  title: おからのもっちり♪おやき
   description: モチモチ食感で子供も喜んで食べるヘルシーなおやきです♪おやつにもどうぞ❤ 2011・11・24話題入り感謝！
   public: true
   recipe_image: null
@@ -3837,7 +3837,7 @@ recipe_drafts_225:
   amount: 0
   view_count: 0
   recipe_food_id: 53
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_226:
@@ -3845,7 +3845,7 @@ recipe_drafts_226:
   user_id: 1
   recipe_id: 227
   title: ほうれん草とトマトチーズの洋風卵とじ
-  description: 2012.5.18話題入り！彩りが綺麗な洋風アレンジしたキッシュ風の卵とじ♪ジューシートマト＆とろ～りチーズが最高❤ 
+  description: 2012.5.18話題入り！彩りが綺麗な洋風アレンジしたキッシュ風の卵とじ♪ジューシートマト＆とろ～りチーズが最高❤
   public: true
   recipe_image: null
   one_point: ""
@@ -3854,15 +3854,15 @@ recipe_drafts_226:
   amount: 0
   view_count: 0
   recipe_food_id: 54
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_227:
   id: 228
   user_id: 1
   recipe_id: 228
-  title: 豆腐ときのことほうれんそうの卵とじ 
-  description: 卵と豆腐がきのことほうれん草をうまい具合にまとめてくれる簡単料理です 
+  title: 豆腐ときのことほうれんそうの卵とじ
+  description: 卵と豆腐がきのことほうれん草をうまい具合にまとめてくれる簡単料理です
   public: true
   recipe_image: null
   one_point: ""
@@ -3871,15 +3871,15 @@ recipe_drafts_227:
   amount: 0
   view_count: 0
   recipe_food_id: 54
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_228:
   id: 229
   user_id: 1
   recipe_id: 229
-  title: ♪簡単たまごむし♪ 
-  description: 材料これだけで美味しくできるよ！ 
+  title: ♪簡単たまごむし♪
+  description: 材料これだけで美味しくできるよ！
   public: true
   recipe_image: null
   one_point: ""
@@ -3888,7 +3888,7 @@ recipe_drafts_228:
   amount: 0
   view_count: 0
   recipe_food_id: 54
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_229:
@@ -3896,7 +3896,7 @@ recipe_drafts_229:
   user_id: 1
   recipe_id: 230
   title: 酒のつまみ♪燃える！ガーリックこんにゃく
-  description: 【０９.４.１ 話題入り】 にんにくの香り！唐辛子の辛さ！ 酒のつまみに持ってこいです♪ 
+  description: 【０９.４.１ 話題入り】 にんにくの香り！唐辛子の辛さ！ 酒のつまみに持ってこいです♪
   public: true
   recipe_image: null
   one_point: ""
@@ -3905,15 +3905,15 @@ recipe_drafts_229:
   amount: 0
   view_count: 0
   recipe_food_id: 55
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_230:
   id: 231
   user_id: 1
   recipe_id: 231
-  title: 超簡単★冷してこんにゃく　おつまみ 
-  description: さっばりと食べやすいこんにゃくのお摘み★☆ 
+  title: 超簡単★冷してこんにゃく　おつまみ
+  description: さっばりと食べやすいこんにゃくのお摘み★☆
   public: true
   recipe_image: null
   one_point: ""
@@ -3922,14 +3922,14 @@ recipe_drafts_230:
   amount: 0
   view_count: 0
   recipe_food_id: 55
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_231:
   id: 232
   user_id: 1
   recipe_id: 232
-  title: 激ウマ！超ヘルシー！こんにゃくステーキ 
+  title: 激ウマ！超ヘルシー！こんにゃくステーキ
   description: 油を使わず焼きます♪えのきソースにはほんの少しのゴマ油。美味しさの秘訣はガーリック♪食べ出したら止まらない！！
   public: true
   recipe_image: null
@@ -3939,15 +3939,15 @@ recipe_drafts_231:
   amount: 0
   view_count: 0
   recipe_food_id: 55
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_232:
   id: 233
   user_id: 1
   recipe_id: 233
-  title: 生姜で温まる★白菜とろ～り春雨のスープ 
-  description: 白菜が美味しい時期、具だくさんのスープを作りたい時などに重宝する簡単レシピ。 肉団子は冷凍品などを使ってもＯＫ！ 
+  title: 生姜で温まる★白菜とろ～り春雨のスープ
+  description: 白菜が美味しい時期、具だくさんのスープを作りたい時などに重宝する簡単レシピ。 肉団子は冷凍品などを使ってもＯＫ！
   public: true
   recipe_image: null
   one_point: ""
@@ -3956,15 +3956,15 @@ recipe_drafts_232:
   amount: 0
   view_count: 0
   recipe_food_id: 59
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_233:
   id: 234
   user_id: 1
   recipe_id: 234
-  title: カニカマと春雨のエスニックサラダ 
-  description: 安価なカニカマで、春雨のエスニックサラダを！　すっきりしたサラダは、肉料理や揚げ物にピッタリです♪ 
+  title: カニカマと春雨のエスニックサラダ
+  description: 安価なカニカマで、春雨のエスニックサラダを！　すっきりしたサラダは、肉料理や揚げ物にピッタリです♪
   public: true
   recipe_image: null
   one_point: ""
@@ -3973,7 +3973,7 @@ recipe_drafts_233:
   amount: 0
   view_count: 0
   recipe_food_id: 59
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_234:
@@ -3981,7 +3981,7 @@ recipe_drafts_234:
   user_id: 1
   recipe_id: 235
   title: お弁当にも！春雨のレモンペッパー風味。
-  description: オリーブオイルを使ってパスタ風の味付けにしています。レモンの酸味がほどよく効いて美味しい！ 
+  description: オリーブオイルを使ってパスタ風の味付けにしています。レモンの酸味がほどよく効いて美味しい！
   public: true
   recipe_image: null
   one_point: ""
@@ -3990,15 +3990,15 @@ recipe_drafts_234:
   amount: 0
   view_count: 0
   recipe_food_id: 59
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_235:
   id: 236
   user_id: 1
   recipe_id: 236
-  title: ∮切干とさやえんどうの黒コショウ炒め∮ 
-  description: にんにくを利かせた簡単炒め✰彡 切干の甘みに黒コショウで(｡￫‿◕｡)✿♦♫ 
+  title: ∮切干とさやえんどうの黒コショウ炒め∮
+  description: にんにくを利かせた簡単炒め✰彡 切干の甘みに黒コショウで(｡￫‿◕｡)✿♦♫
   public: true
   recipe_image: null
   one_point: ""
@@ -4007,7 +4007,7 @@ recipe_drafts_235:
   amount: 0
   view_count: 0
   recipe_food_id: 56
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_236:
@@ -4015,7 +4015,7 @@ recipe_drafts_236:
   user_id: 1
   recipe_id: 237
   title: 切り干し大根が好きになる♬家の味
-  description: しらたき入れるとおいしいんです！ 2011/12/2話題入り感謝❤ 
+  description: しらたき入れるとおいしいんです！ 2011/12/2話題入り感謝❤
   public: true
   recipe_image: null
   one_point: ""
@@ -4024,15 +4024,15 @@ recipe_drafts_236:
   amount: 0
   view_count: 0
   recipe_food_id: 56
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
 recipe_drafts_237:
   id: 238
   user_id: 1
   recipe_id: 238
-  title: ∮ 切干大根とザーサイの炒め煮 ∮ 
-  description: 甘みたっぷり切干のお出汁で簡単炒め煮♬ ラー油を利かせて(｡￫‿◕｡)✿♦♫ 
+  title: ∮ 切干大根とザーサイの炒め煮 ∮
+  description: 甘みたっぷり切干のお出汁で簡単炒め煮♬ ラー油を利かせて(｡￫‿◕｡)✿♦♫
   public: true
   recipe_image: null
   one_point: ""
@@ -4041,6 +4041,6 @@ recipe_drafts_237:
   amount: 0
   view_count: 0
   recipe_food_id: 56
-  del_flg: 2000-01-01 00:00:00 UTC
+  deleted_at: null
   created_at: 2012-06-17 06:19:46 UTC
   updated_at: 2012-06-17 06:19:46 UTC
