@@ -19,6 +19,14 @@
 					<%= @recipe.title %>
 					<% if my_recipe? %><%= link_to "Chỉnh sửa", action:"edit" %><% end %>
 				</h1>
+				<ul class="hd_sns sns clearfix">
+					<li><a href="#" class="radi5"><%= image_tag "common/fb.png", alt:"", width:"18", height:"18"%>facebook</a></li>
+					<li><a href="#" class="radi5"><%= image_tag "common/tw.png", alt:"", width:"18", height:"18"%>twitter</a></li>
+					<li><a href="#" class="radi5"><%= image_tag "common/gp.png", alt:"", width:"18", height:"18"%>google</a></li>
+					<li><a href="#" class="radi5"><%= image_tag "common/mail.png", alt:"", width:"18", height:"18"%>メールする</a></li>
+					<li><a href="#" class="radi5"><%= image_tag "common/print.png", alt:"", width:"18", height:"18"%>印刷する</a></li>
+					<li><a href="#" class="radi5"><%= image_tag "common/bookmark.png", alt:"", width:"18", height:"18"%>ブックマークする</a></li>
+				</ul>
 				<div id="recipe_image_area">
 					<%= image_tag @recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"image", id:"recipe_image" %>
 				</div>
@@ -28,7 +36,7 @@
 							<%= link_to raw("Love!(#{@recipe.love_count})"), { action:"love", id: params[:id], user_id: current_user.id }, remote: true, id: "love_button" %>
 						</div>
 					<% else %>
-						<span class="loved">love(<%= @recipe.love_count %>)</span>
+						<span class="loved">Love(<%= @recipe.love_count %>)</span>
 					<% end %>
 					<p><%= @recipe.description %></p>
 					<div class="clearfix">
@@ -43,7 +51,7 @@
 						<div class="servings">
 							<h3>
 								<div class="material clearfix">
-									<span class="material_txt">Nguyên liệu</span>
+									<span class="material_txt"> Nguyên liệu </span>
 									<span class="servings_for yield"><%= @recipe.amount && "(#{@recipe.amount} người ăn)"  %></span>
 								</div>
 								<div class="clear"></div>
@@ -60,18 +68,25 @@
 					</div>
 				</div>
 			</article>
-			<dl id="recipe_steps">
+			
+			<!--step-->
+			<div class="cate01 clearfix">
 				<% @recipe.steps.each.with_index(1) do |step,i| %>
-					<dl class="step">
-					<dt>Step<%= i %></dt>
-					<dd>
-						<% if step.image.present? %><%= image_tag step.image.url(:thumb), alt:"image", style:"border:solid 1px #aaa;" %><% end %>
-						<% if step.movie_url.present? %><iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe><% end %>
-						<%= step.content %>
-					</dd>
-				</dl>
-			<% end %>
-		</dl>
+					<section class="rec_cat5 clearfix">
+					<h3 class="material_txt">BƯỚC <%= i %></h3>
+					<% if step.image.present? %>
+						<%= image_tag step.image.url(:step_thumb), width:"136", height:"136" %>
+					<% end %>
+					<% if step.movie_url.present? %>
+						<iframe width="136" height="136" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
+					<% end %>
+					<div class="txt">
+						<p><%= step.content %></p>
+					</div>
+					</section>
+				<% end %>
+			</div>
+			<!--step-->
 
 			<div id="recipe_comment_area" class="area">
 				<h3 id="comment_title"><%= t(:comments, scope:"views.recipes.report")%></h3>

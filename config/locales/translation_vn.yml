@@ -96,7 +96,7 @@ vn:
 
       recipe_comment:
         content: Nội dung
-        image: 画像
+        image: Chọn hình ảnh
         recipe: activerecord.models.recipe  #g
 
       recipe_food:
@@ -116,7 +116,7 @@ vn:
       recipe_step:
         content: 本文
         deleted_at: deleted_at  #g
-        image: 画像
+        image: Chọn hình ảnh
         movie_url: Movie
         recipes: :activerecord.models.recipes  #g
 
