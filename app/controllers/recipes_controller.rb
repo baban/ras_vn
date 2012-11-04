@@ -53,20 +53,20 @@ class RecipesController < ApplicationController
   end
 
   def update
-    @recipe_origin = Recipe.find(params[:id])
-    @recipe = @recipe_origin.draft
+    @recipe = Recipe.find(params[:id])
+    @draft = @recipe.draft
 
-    @recipe.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
-    @recipe.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
+    @draft.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
+    @draft.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
 
-    @recipe.attributes= params[:recipe]
-    @recipe.user_id= current_user.id
+    @draft.attributes= params[:recipe]
+    @draft.user_id= current_user.id
     
-    @recipe.recipe_food_id= RecipeFood.create( recipe_food_genre_id: params[:recipe_genre_selecter], name: params[:new_food_genre] ).id if params[:new_food_genre]
-    @recipe.save
+    @draft.recipe_food_id= RecipeFood.create( recipe_food_genre_id: params[:recipe_genre_selecter], name: params[:new_food_genre] ).id if params[:new_food_genre]
+    @draft.save
 
     # recipe_drafts data is copying to recipes table
-    @recipe.copy_public
+    @draft.copy_public
 
     if params[:edit]
       redirect_to( { action: "edit", id: params[:id] }, notice: t(:tmp_save, scope:"views.recipes.edit") )
