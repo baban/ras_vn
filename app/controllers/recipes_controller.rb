@@ -46,32 +46,32 @@ class RecipesController < ApplicationController
   end
 
   def edit
-    @recipe_origin = Recipe.find(params[:id])
-    @recipe = @recipe_origin.draft
-    @foodstuffs  = @recipe.edit_foodstuffs
-    @steps  = @recipe.edit_steps
+    @recipe = Recipe.find(params[:id])
+    @draft = @recipe.draft
+    @foodstuffs = @draft.edit_foodstuffs
+    @steps = @draft.edit_steps
   end
 
   def update
     @recipe = Recipe.find(params[:id])
     @draft = @recipe.draft
 
-    @draft.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
-    @draft.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
-
     @draft.attributes= params[:recipe]
     @draft.user_id= current_user.id
     
+    @draft.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
+    @draft.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
     @draft.recipe_food_id= RecipeFood.create( recipe_food_genre_id: params[:recipe_genre_selecter], name: params[:new_food_genre] ).id if params[:new_food_genre]
+
     @draft.save
 
     # recipe_drafts data is copying to recipes table
     @draft.copy_public
 
     if params[:edit]
-      redirect_to( { action: "edit", id: params[:id] }, notice: t(:tmp_save, scope:"views.recipes.edit") )
+      redirect_to( { action: "edit", id: @recipe.id }, notice: t(:tmp_save, scope:"views.recipes.edit") )
     else
-      redirect_to( { action: "show", id: params[:id] }, notice: t(:save_complete, scope:"views.recipes.edit") )
+      redirect_to( { action: "show", id: @recipe.id }, notice: t(:save_complete, scope:"views.recipes.edit") )
     end
   end
 

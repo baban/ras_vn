@@ -6,42 +6,42 @@
 <% end %>
 
 <div class="bace_bg">
-	<%=semantic_form_for @recipe_origin, url: recipe_url(@recipe_origin.id), html:{ multipart: true } do |f| %>
+	<%=semantic_form_for @recipe, url: recipe_url(@recipe.id), html:{ multipart: true } do |f| %>
 	<div class="contents_bg clearfix">
 		<!--main_clm-->
 		<div class="main_clm">
 			<article class="contents_recipes">
-				<h1 class="ttl_recipe"><%= f.text_field :title, value: @recipe.title %></h1>
+				<h1 class="ttl_recipe"><%= f.text_field :title, value: @draft.title %></h1>
 				<%=f.file_field :recipe_image %>
 				<div id="recipe_image_area">
-					<%= image_tag @recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"image", id:"recipe_image" %>
+					<%= image_tag @draft.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"image", id:"recipe_image" %>
 				</div>
 				<div class="explanation">
-					<p><%= f.text_area :description, value: @recipe.description, size:"40x3" %></p>
+					<p><%= f.text_area :description, value: @draft.description, size:"40x3" %></p>
 					<div class="clearfix">
 						<p class="user_name">
 							<span class="flo_l">
 								<%= image_tag "common/user_ico.png", width:"22", height:"22", alt:"image" %>
 							</span>
-							<span class="flo_l"><%= link_to @recipe.user.profile.nickname, kitchen_url(@user) %></span>
+							<span class="flo_l"><%= link_to @draft.user.profile.nickname, kitchen_url(@user) %></span>
 						</p>
 					</div>
 					<div>
 						<h3><%= t(:genre, scope:"views.recipes.edit") %></h3>
-						<%= recipe_genre_select_area(f, value: @recipe.recipe_food_id ) %>
+						<%= recipe_genre_select_area(f, value: @draft.recipe_food_id ) %>
 						<p><%= label_tag :new_food_genre, "ジャンル追加" %>:<%= text_field_tag :new_food_genre, "", size: 10 %></p>
 					</div>
 					<p id="genre_description">希望のジャンルがない場合は、上のテキストボックスでジャンルを追加してください</p>
 					<div id="ingredients">
 						<span class="material_txt"> Nguyên liệu </span>
-						(<%= f.text_field :amount, size: 3, value: (@recipe.amount.to_i.zero? ? 1 : @recipe.amount) %> người ăn)
+						(<%= f.text_field :amount, size: 3, value: (@draft.amount.to_i.zero? ? 1 : @draft.amount) %> người ăn)
 						<div class="servings">
 							<h3>
 							<div class="material clearfix">
 							</div><div class="clear"></div></h3>
 						</div>
 						<div class="ingredients_list" id="foodstuffs">
-							<% @recipe.edit_foodstuffs.each do |foodstuff| %>
+							<% @draft.edit_foodstuffs.each do |foodstuff| %>
 								<div class="ingredient_row clearfix">
 									<div class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder:"食材" %></div>
 									<div class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder:"分量" %></div>
