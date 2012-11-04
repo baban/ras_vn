@@ -33,11 +33,7 @@ class RecipesController < ApplicationController
       return render(action:"new") unless @recipe.valid?
       @recipe.save
 
-      @draft = RecipeDraft.new
-      @draft.attributes= params[:recipe]
-      @draft.recipe_id= @recipe.id
-      @draft.user_id = current_user.id
-      @draft.save
+      @recipe.create_draft( params[:recipe] )
 
       Stream.push( Stream::ADD_RECIPE, current_user.id, @recipe )
     end
@@ -53,20 +49,20 @@ class RecipesController < ApplicationController
   end
 
   def update
-    @recipe = Recipe.find(params[:id])
-    @draft = @recipe.draft
-
-    @draft.attributes= params[:recipe]
-    @draft.user_id= current_user.id
+    ActiveRecord::Base.transaction do
+      @recipe = Recipe.find(params[:id])
+      @draft = @recipe.draft
+      @draft.attributes= params[:recipe]
+      @draft.user_id= current_user.id
     
-    @draft.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
-    @draft.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
-    @draft.recipe_food_id= RecipeFood.create( recipe_food_genre_id: params[:recipe_genre_selecter], name: params[:new_food_genre] ).id if params[:new_food_genre]
+      @draft.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
+      @draft.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
+      @draft.post_food_id( params )
+      @draft.save
 
-    @draft.save
-
-    # recipe_drafts data is copying to recipes table
-    @draft.copy_public
+      # recipe_drafts data is copying to recipes table
+      @draft.copy_public
+    end
 
     if params[:edit]
       redirect_to( { action: "edit", id: @recipe.id }, notice: t(:tmp_save, scope:"views.recipes.edit") )
@@ -108,3 +104,4 @@ class RecipesController < ApplicationController
     recipe && current_user && (recipe.user_id == current_user.id)
   end
 end
+

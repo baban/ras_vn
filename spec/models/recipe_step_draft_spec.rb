@@ -28,8 +28,8 @@ describe RecipeStepDraft do
         recipe_steps: [
           { movie_url: "", content: "かぼちゃは、種を取り除き洗う。\r\n\r\nビニール袋に入れて、竹串がスッと通るぐらいまで加熱する。　\r\n"},
           { movie_url: "", content: "食べやすい大きさにカットする。\r\n\r\nお好みの形でどうぞ～\r\n"},
-          { movie_url: "", content: ""},
-          { movie_url: "", content: ""},
+          { movie_url: "", content: "" },
+          { movie_url: "", content: "" },
         ]
       }
     end

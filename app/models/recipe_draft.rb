@@ -23,6 +23,12 @@ class RecipeDraft < ActiveRecord::Base
   end
   alias :chef :user
 
+  def post_food_id( form_values )
+    self.recipe_food_id = form_values[:recipe][:recipe_food_id] if form_values[:recipe][:recipe_food_id]
+    self.recipe_food_id= RecipeFood.create( recipe_food_genre_id: form_values[:recipe_genre_selecter], name: form_values[:new_food_genre] ).id if form_values[:new_food_genre]
+    self
+  end
+
   # this method generate steps for edit action
   def edit_steps
     # return value have at least 4 steps

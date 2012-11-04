@@ -55,5 +55,14 @@ class Recipe < ActiveRecord::Base
     self.view_count+=1
     self.save
   end
+
+  def create_draft( form_values )
+    draft = RecipeDraft.new
+    draft.attributes= form_values
+    draft.recipe_id= self.id
+    draft.user_id= self.user_id
+    draft.save
+    draft
+  end
 end
 
