@@ -1,16 +1,16 @@
 vn:
   views:
     bookmarks:
-      create: Bookmarked
-      update: Xóa bookmarked
+      create: Create
+      update: Update
     content_footer:
       recomment_recipe_title: Hôm nay ăn gì?
       rankings_title: Ranking
       pop_ranking_title: Món ăn được xem nhiều nhất
       food_ranking_title: Thực phẩm được dùng nhiều nhất
     diary:
-      new: Chia sẽ nhật ký
-      edit: Sửa
+      new: Viết nhật ký
+      edit: Chỉnh sửa
       create_button: Viết nhật ký
       update_button: Update
       create_notice: Update
@@ -43,16 +43,20 @@ vn:
         other_user_recipe_alert: Bạn không sửa được bài này
       show:
         creator: Recipe
-        bookmark: Bookmark
-        unbookmark: Delete bookmark
+        bookmark: Yêu thích
+        unbookmark: Xóa Yêu thích
         post_report: Đăng
+        recipe_foodstuffs: Nguyên liệu
+        recipe_image: Hình ảnh
+        recipe_steps: Cách làm
+        title: Tiêu đề
         forbiddon_right_click: No click
       new:
         create_recipe: Đăng recipe
         public: Công khai
         closed: Không công khai
         caution: Điều khoản đăng bài
-        next_step_button: Regist
+        next_step_button: Bước tiếp
       edit:
         edit_recipe: Sửa recipe
         genre: Category
@@ -64,6 +68,13 @@ vn:
         commit: Đăng xong recipe
         tmp_save: Save tạm thời
         save_complete: Saved
+      report:
+        comments: Nấu thử & Bình luận
+        post_title: Đăng món nấu thử của bạn
+        image: Hình ảnh
+        title: Tiêu đề
+        content: Nội dung
+        image: Hình ảnh
     pagination:
       first: "&laquo; Đầu"
       last: " Cuối &raquo;"
@@ -74,8 +85,8 @@ vn:
       image_description: (Đăng hình ảnh)
       update: Update
     mypage:
-      mypage_link: My page
-      bookmark_link: Bookmark
+      mypage_link: Trang cá nhân
+      bookmark_link: Món yêu thích
       kitchen_link: Kitchen
       diary_link: Nhật ký
       public: Công khai
@@ -99,8 +110,8 @@ vn:
   page:
     recipes:
       creator: Recipe
-      bookmark: Bookmark
-      unbookmark: Delete bookmark
+      bookmark: Món yêu thích
+      unbookmark: Xóa khỏi danh mục món yêu thích
     bookmarks:
-      create: Bookmarked
-      update: Deleted bookmark
+      create: Create
+      update: Update

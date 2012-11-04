@@ -11,27 +11,27 @@ vn:
       prefecture: Tên thành phố
       recipe: Recipe
       recipe_advertisement: Quảng cáo
-      recipe_comment: つくれぽ
-      recipe_food: ジャンル（小カテゴリ)
-      recipe_food_genre: ジャンル（大カテゴリ)
-      recipe_foodstuff: 食材
+      recipe_comment: Nấu thử & Bình luận
+      recipe_food: Phân loại（Nhỏ)
+      recipe_food_genre: Phân loại（Lớn)
+      recipe_foodstuff: Thực phẩm
       recipe_foodstuff_ranking: recipe_foodstuff_ranking  #g
       recipe_ranking: recipe_ranking  #g
-      recipe_step: レシピステップ
-      search_log: 検索ログ
+      recipe_step: Receip Step
+      search_log: SearchLog
       toppage_content: toppage_content  #g
-      tpl_set: デザインテンプレート
-      user: ユーザー
-      user_profile: プロフィール
-      user_profile_visibility: プロフィール表示
+      tpl_set: design template
+      user: User
+      user_profile: Profile
+      user_profile_visibility: Hiển thị profile
 
     attributes:
       admin_user:
         crypted_password: crypted_password  #g
-        email: メールアドレス
-        first_name: 姓
-        last_name: 名
-        preferences: preferences  #g
+        email: E-mail
+        first_name: Họ
+        last_name: Tên
+        preferences: Thành phố, quận  #g
         role: 権限
         salt: salt  #g
         status: status  #g
@@ -47,18 +47,18 @@ vn:
         prefecture: :activerecord.models.prefecture  #g
 
       diary:
-        title: タイトル
-        publiced_at: 公開日時
-        image: 画像
-        content: 本文
+        title: Tiêu đề
+        publiced_at: Ngày công khai
+        image: Hình ảnh
+        content: Nội dung
 
       food_genre:
-        name: 名前
+        name: Họ tên
 
       newsfeed:
-        title: タイトル
-        content: 内容
-        image: 画像
+        title: Tiêu đề
+        content: Nội dung
+        image: Hình ảnh
 
       omniuser:
         name: name  #g
@@ -67,26 +67,26 @@ vn:
         user: :activerecord.models.user  #g
 
       prefecture:
-        distincts: 市町村名
-        name: 県名
+        distincts: Tỉnh thành
+        name: Tên tỉnh thành
 
       recipe:
-        id: レシピID
-        amount: 人数
-        bookmarks: ブックマーク
-        deleted_at: 削除日
-        description: 紹介文
-        one_point: Point!!
-        public: 公開ステータス
-        recipe_comments: つくれぽ
-        recipe_foodstuffs: 材料
-        recipe_food_id: 料理ジャンル
-        recipe_image: 画像
-        recipe_steps: Step
-        title: タイトル
-        users: :activerecord.models.users  #g
-        created_at: 作成日 
-        updated_at: 更新日
+        id: ReceipID
+        amount: Số người ăn
+        bookmarks: Yêu thích
+        deleted_at: Ngày xóa
+        description: Giới thiệu về món ăn
+        one_point: Bí quyết
+        public: Công khai
+        recipe_comments: Nấu thử & Bình luận
+        recipe_foodstuffs: Nguyên liệu
+        recipe_food_id: Loại ẩm thực
+        recipe_image: Hình ảnh
+        recipe_steps: Cách làm
+        title: Tiêu đề
+        users: users  #g
+        created_at: Ngày đăng 
+        updated_at: Ngày chỉnh sửa
 
       recipe_advertisement:
         alt: alt  #g
@@ -95,13 +95,13 @@ vn:
         url: url  #g
 
       recipe_comment:
-        content: 本文
+        content: Nội dung
         image: 画像
-        recipe: :activerecord.models.recipe  #g
+        recipe: activerecord.models.recipe  #g
 
       recipe_food:
         name: name  #g
-        recipe_food_genre: :activerecord.models.recipe_food_genre  #g
+        recipe_food_genre: activerecord.models.recipe_food_genre  #g
 
       recipe_food_genre:
         name: name  #g
