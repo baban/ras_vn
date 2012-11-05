@@ -15,14 +15,14 @@ require "uri"
 require "whenever/capistrano"
 
 # アプリケーション名
-set :application, "ras_vn"
+set :application, "cook24.vn"
 
 # exportはgit cloneして .gitを除外
 set :deploy_via, :export
 
 # sshのユーザー情報
-set :user, "baban"
-set :password, "svc2027"
+set :user, "cook24"
+set :password, "qawsedrf"
 set :use_sudo, false
 
 # バージョン管理(git)
@@ -31,7 +31,7 @@ set :repository, "~/ras_vn/"
 set :scm_username, 'baban'
 set :scm_passphrase, "svc2027"
 
-set :runner, "baban"
+set :runner, "cook24"
 set :branch, "master"
 set :deploy_via, :checkout
 set :git_shallow_clone, 1
