@@ -47,7 +47,7 @@ vn:
         unbookmark: Xóa Yêu thích
         post_report: Đăng
         recipe_foodstuffs: Nguyên liệu
-        recipe_image: Hình ảnh
+        recipe_image: Chọn hình ảnh
         recipe_steps: Cách làm
         title: Tiêu đề
         forbiddon_right_click: No click
@@ -71,7 +71,7 @@ vn:
       report:
         comments: Nấu thử & Bình luận
         post_title: Đăng món nấu thử của bạn
-        image: Hình ảnh
+        image: Chọn hình ảnh
         title: Tiêu đề
         content: Nội dung
         image: Hình ảnh
