@@ -21,14 +21,14 @@
 					<div class="clearfix">
 						<p class="user_name">
 							<span class="flo_l">
-								<%= image_tag "common/user_ico.png", width:"22", height:"22", alt:"image" %>
+								<%= image_tag "common/user_ico.png", width:"22", height:"22", alt:"" %>
 							</span>
 							<span class="flo_l"><%= link_to @draft.user.profile.nickname, kitchen_url(@user) %></span>
 						</p>
 					</div>
 					<div>
 						<h3><%= t(:genre, scope:"views.recipes.edit") %></h3>
-						<%= recipe_genre_select_area(f, value: @draft.recipe_food_id ) %>
+						<%= recipe_genre_select_area(f, selected: @draft.recipe_food_id ) %>
 						<p><%= label_tag :new_food_genre, "ジャンル追加" %>:<%= text_field_tag :new_food_genre, "", size: 10 %></p>
 					</div>
 					<p id="genre_description">希望のジャンルがない場合は、上のテキストボックスでジャンルを追加してください</p>

@@ -5,4 +5,8 @@ class RecipeFood < ActiveRecord::Base
   has_many :recipes
 
   scope :show_top, ->{ where(" show_top = true ") }
+
+  def genre
+    RecipeFoodGenre.find_by_id( self.try(:recipe_food_genre_id) )
+  end
 end
