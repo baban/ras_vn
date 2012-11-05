@@ -3,14 +3,14 @@
 # ブランチは開発環境ではdevelop, 本番（ステージング）ではmaster
 set :branch, "master"
 
-set(:deploy_to)         { "/var/www/htdocs/#{application}" }
+set(:deploy_to)         { "/var/www/cook24.vn/#{application}" }
 
 set :rails_env, "production"
 
-role :web, "192.168.131.164", "192.168.131.169"
-role :app, "192.168.131.164", "192.168.131.169"
+role :web, "180.93.7.89"
+role :app, "180.93.7.89"
 
-role :db, "192.168.131.164", :primary => true
+role :db, "180.93.7.89", :primary => true
 
 set :default_run_options, :pty => true
 
