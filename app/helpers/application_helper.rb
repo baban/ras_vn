@@ -1,6 +1,11 @@
 # encoding: utf-8
 
 module ApplicationHelper
+ def hbr(s)
+    s = html_escape(s)
+    s.gsub(/\r\n|\r|\n/, "<br />").html_safe
+  end
+
   def profile_image_tag(profile)
     if profile and profile.image.url(:thumb).present?
       image_tag(profile.image.url(:thumb), alt: profile.nickname, size:"180x180")

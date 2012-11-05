@@ -28,7 +28,7 @@
 					<li><a href="#" class="radi5"><%= image_tag "common/bookmark.png", alt:"", width:"18", height:"18"%>ブックマークする</a></li>
 				</ul>
 				<div id="recipe_image_area">
-					<%= image_tag @recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"image", id:"recipe_image" %>
+					<%= image_tag @recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"", id:"recipe_image" %>
 				</div>
 				<div class="explanation">
 					<% if login? and (not loved?) %>
@@ -38,7 +38,7 @@
 					<% else %>
 						<span class="loved">Love(<%= @recipe.love_count %>)</span>
 					<% end %>
-					<p><%= @recipe.description %></p>
+					<p><%=hbr @recipe.description %></p>
 					<div class="clearfix">
 						<p class="user_name">
 							<span class="flo_l">
