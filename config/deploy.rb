@@ -28,8 +28,8 @@ set :use_sudo, true
 # バージョン管理(git)
 set :scm, :git
 set :repository, "~/ras_vn/"
-set :scm_username, 'baban'
-set :scm_passphrase, "svc2027"
+set :scm_username, 'cook24'
+set :scm_passphrase, "qawsedrf"
 
 set :runner, "cook24"
 set :branch, "master"
@@ -43,11 +43,6 @@ set :bundle_flags,    ""
 set :bundle_without,  [:development, :test]
 set :bundle_cmd,      "bundle"
 set :bundle_roles,    [:app]
-
-set :default_environment, {
-  'RBENV_ROOT' => '$HOME/.rbenv/bin/rbenv',
-  'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-}
 
 # releaseディレクトリを残す数
 set :keep_releases, 20
