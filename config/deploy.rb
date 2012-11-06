@@ -23,7 +23,7 @@ set :deploy_via, :export
 # sshのユーザー情報
 set :user, "cook24"
 set :password, "qawsedrf"
-set :use_sudo, false
+set :use_sudo, true
 
 # バージョン管理(git)
 set :scm, :git
