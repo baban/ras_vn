@@ -26,7 +26,7 @@ production:
 
 cook24_users:
   adapter: mysql2
-  database: cook24_mail
+  database: cook24_main
   username: cook24
   host: localhost
 
