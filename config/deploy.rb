@@ -37,13 +37,6 @@ set :deploy_via, :checkout
 set :git_shallow_clone, 1
 set :chmod755, "app config db lib public vendor script script/* public/disp*"
 
-set :bundle_gemfile,  "Gemfile"
-set :bundle_dir,      ""
-set :bundle_flags,    ""
-set :bundle_without,  [:development, :test]
-set :bundle_cmd,      "bundle"
-set :bundle_roles,    [:app]
-
 # releaseディレクトリを残す数
 set :keep_releases, 20
 

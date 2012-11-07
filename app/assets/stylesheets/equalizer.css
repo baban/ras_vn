@@ -161,6 +161,7 @@ pre {
    Non-Semantic Helper Classes
    ========================================================================== */
 
+/*
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
 .ir br { display: none; }
 .hidden { display: none !important; visibility: hidden; }
@@ -169,12 +170,14 @@ pre {
 .invisible { visibility: hidden; }
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }*/
+.clearfix { *zoom: 1; }
+*/
 
 /* =============================================================================
    Print Styles
    ========================================================================== * /
  
+/*
 @media print {
   * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s * /
   a, a:visited { text-decoration: underline; }
@@ -188,4 +191,5 @@ pre {
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
-} */
+} 
+*/
