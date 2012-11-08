@@ -20,12 +20,12 @@
 					<% if my_recipe? %><%= link_to "Chỉnh sửa", action:"edit" %><% end %>
 				</h1>
 				<ul class="hd_sns sns clearfix">
-					<li><a href="#" class="radi5"><%= image_tag "common/fb.png", alt:"", width:"18", height:"18"%>facebook</a></li>
-					<li><a href="#" class="radi5"><%= image_tag "common/tw.png", alt:"", width:"18", height:"18"%>twitter</a></li>
-					<li><a href="#" class="radi5"><%= image_tag "common/gp.png", alt:"", width:"18", height:"18"%>google</a></li>
-					<li><a href="#" class="radi5"><%= image_tag "common/mail.png", alt:"", width:"18", height:"18"%>メールする</a></li>
-					<li><a href="#" class="radi5"><%= image_tag "common/print.png", alt:"", width:"18", height:"18"%>印刷する</a></li>
-					<li><a href="#" class="radi5"><%= image_tag "common/bookmark.png", alt:"", width:"18", height:"18"%>ブックマークする</a></li>
+					<li><a href="#" class="radi5"><%= image_tag "common/fb.png", alt:"", width:"18", height:"18" %>facebook</a></li>
+					<li><a href="#" class="radi5"><%= image_tag "common/tw.png", alt:"", width:"18", height:"18" %>twitter</a></li>
+					<li><a href="#" class="radi5"><%= image_tag "common/gp.png", alt:"", width:"18", height:"18" %>google</a></li>
+					<li><a href="#" class="radi5"><%= image_tag "common/mail.png", alt:"", width:"18", height:"18" %>メールする</a></li>
+					<li><a href="#" class="radi5"><%= image_tag "common/print.png", alt:"", width:"18", height:"18" %>印刷する</a></li>
+					<li><a href="#" class="radi5"><%= image_tag "common/bookmark.png", alt:"", width:"18", height:"18" %>ブックマークする</a></li>
 				</ul>
 				<div id="recipe_image_area">
 					<%= image_tag @recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"", id:"recipe_image" %>

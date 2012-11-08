@@ -49,7 +49,7 @@ class RecipeDraft < ActiveRecord::Base
 
   # recipe draft data copy to open
   def copy_public
-    recipe = Recipe.find(self.id)
+    recipe = Recipe.find(self.recipe_id)
 
     attributes = self.attributes
     attributes.delete("recipe_id")
