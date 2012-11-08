@@ -32,18 +32,9 @@ def load_table(filename, klass)
 end
 
 {
-#  advices: Advice,
-#  arigato_counts: ArigatoCount,
-#  columns: Column,
-#  d_answers: Answer,
-#  d_mail_marathon: MailMarathon,
-#  information: Information,
-  bbs_category_masters: BbsCategoryMaster,
-#  bbs: Bbs,
-#  m_category: CategoryMaster,
-  m_answerer: AnswererMaster,
-#  user_reports: UserReport,  # みんなの掲示板はこんまり案件のみ
-#  tsubuyakis: Tsubuyaki,  # ある日のこんまりは、こんまり案件のみ
+  distincts: Distinct,
+  prefectures: Prefecture,
+  tpl_sets: TplSet,
 }.each do |filename,klass|
   puts "#{filename} reading..."
   load_table(filename,klass)
