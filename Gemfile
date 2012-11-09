@@ -45,6 +45,12 @@ gem "yard", '0.7.4' # document generator like javadoc
 #gem "guard" # notification rspec excute result (Mac only)
 #gem "guard-rspec"
 
+gem 'redcarpet'
+
+gem 'fb_graph'
+
+gem 'twitter', '~> 2.2.0'
+
 # test utilities
 gem 'flextures', "2.0.5" # add rake command for dump and load fixtures
 gem "kaminari" # paginate view
