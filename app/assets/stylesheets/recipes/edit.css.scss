@@ -1,10 +1,14 @@
 /* forbiddon select */
-
-
-input#recipe_draft_title {
-  font-size:1.0em;
-  width:23em;
+#edit_recipe_1 {
+  max-width:50em;
 }
+
+#foodstuffs_area:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
 
 .ingredient_row {
   .ingredient_name > input { 
@@ -28,8 +32,7 @@ input#recipe_draft_title {
     border-style:none;
     background-color:gray;
     padding:4px;
-  }
-  
+  }  
   input.movie_button {
     border-style:none;
   }
@@ -45,6 +48,40 @@ input#recipe_draft_title {
     input.movie_selecter {
       margin-top:3px;
     }  
+  }
+}
+
+dl.step > dt.selecter {
+  margin:0 0.2em;
+  padding:0;
+  float:left;
+  .button {
+    padding:0.1em 0.2em;
+    text-align:center;
+    background-color:#ddd;
+    border:outset 2px #ddd;
+    margin:0;
+  }
+  .button:active {
+    border-style:inset;
+  }
+  .movie_button_field {
+    display:inline;
+    border-style:inset;
+  }
+}
+
+dl.step > dd {
+  padding:0;
+  margin:0;
+  img {
+    background-color:#aaa;
+  }
+  .step_edit_area {
+    width:25em;
+    min-width:50%;
+    height:7em;
+    margin:0.5em;
   }
 }
 
@@ -83,6 +120,16 @@ input#recipe_draft_title {
       }
     }
   }
+  .movie_field {
+    label {
+      display:none;
+    }
+    input.movie_selecter {
+      border:solid 1px #000;
+      float:right;
+      display:inline;
+    }
+  }
   ul#search_result_list:after {
     content:"";
     display:block;
@@ -91,3 +138,45 @@ input#recipe_draft_title {
   }
 }
 
+#recipe_one_point {
+  width:80%;
+  height:4em;
+}
+
+/*
+.form_actions {
+  text-align:right;
+}
+
+p#genre_description {
+  font-size:small; 
+}
+
+#recipe_draft_one_point {
+  width:80%;
+  height:5em;
+}
+
+#search_youtube_area:after {
+  content:"";
+  display:block;
+  width:100%;
+  clear:both;
+}
+
+#recipe_comment_area:before {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+#recipe_comment_area {
+  margin-top:1em;
+}
+
+h3#comment_title {
+  font-size:24px;
+  color:orange;
+}
+
+*/

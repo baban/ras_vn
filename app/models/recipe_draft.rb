@@ -12,11 +12,12 @@ class RecipeDraft < ActiveRecord::Base
 
   mount_uploader :recipe_image, RecipeImageUploader
 
-  alias :foodstuffs :recipe_foodstuff_drafts
+  alias :foodstuffs  :recipe_foodstuff_drafts
   alias :foodstuffs= :recipe_foodstuff_drafts=
-  alias :steps :recipe_step_drafts
+  alias :steps  :recipe_step_drafts
   alias :steps= :recipe_step_drafts=
-  alias :image :recipe_image
+  alias :image  :recipe_image
+  alias :image= :recipe_image=
 
   def user
     User.find(self.user_id)
@@ -48,18 +49,22 @@ class RecipeDraft < ActiveRecord::Base
   end
 
   # recipe draft data copy to open
-  def copy_public
-    recipe = Recipe.find(self.id)
+  def copy_public( form_values = nil )
+    recipe = Recipe.find(self.recipe_id)
 
     attributes = self.attributes
     attributes.delete("recipe_id")
     recipe.attributes = attributes
+    # file data is cannot copy so recipe_image colum data is insert
+    recipe.recipe_image = form_values[:recipe][:recipe_image] if form_values[:recipe] && form_values[:recipe][:recipe_image]
 
-    recipe.steps= self.steps.map do |d|
+    recipe.steps= self.steps.map.with_index do |d,i|
       attributes = d.attributes
       attributes["recipe_id"] = attributes["recipe_draft_id"]
       attributes.delete("recipe_draft_id")
-      RecipeStep.new(attributes)
+      step = RecipeStep.new(attributes)
+      step.image= form_values[:recipe_steps][i][:image] if form_values[:recipe_steps] && form_values[:recipe_steps][i] && form_values[:recipe_steps][i][:image]
+      step
     end
 
     recipe.foodstuffs= self.foodstuffs.map do |d|
@@ -69,8 +74,6 @@ class RecipeDraft < ActiveRecord::Base
       RecipeFoodstuff.new(attributes)
     end
 
-    logger.info recipe.valid?
-    logger.info recipe.errors.inspect
     recipe.save( validate: false )
   end
 end

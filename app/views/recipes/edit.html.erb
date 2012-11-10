@@ -53,32 +53,29 @@
 				</div>
 				<div id="recipes_steps_area" class="area">
 					<dl id="recipe_steps">
-					<% @steps.each.with_index(1) do |step,i| %>
-					<dl class="step" id="recipe_step_<%= i %>">
-						<dt>Step <%= i %></dt>
-						<dt class="selecter image_field">
-							<%= label :image, "Image" %>
-							<%= file_field_tag "recipe_steps[][image]", class:"image_selecter", id:"recipe_steps_#{i}_image_selecter" %>
-						</dt>
-						<dt class="selecter movie_field">
-							<form class="movie_button_field">
-								<%= submit_tag "Movie url", type:"button", class:"movie_button"  %>
-								<%= hidden_field_tag "recipe_step_id_#{i}", i, class:"recipe_step_id" %>
-							</form>
-							<%= label :recipe_steps, "Movie url" %>
-							<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter", id:"recipe_steps_#{i}_movie_url" %>
-						</dt>
-						<dd>
-							<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area", id:"recipe_steps_#{i}_content" %>
-							<% if step.image %>
-								<%=image_tag step.image.url(:thumb), alt:"" %>
-							<% end %>
-							<% if step.movie_url %>
-								<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
-							<% end %>
-						</dd>
-					</dl>
-					<% end %>
+						<% @steps.each.with_index(1) do |step,i| %>
+							<dl class="step" id="recipe_step_<%= i %>">
+								<dt>Step <%= i %></dt>
+								<dt class="selecter image_field">
+									<%= label :image, "Image" %>
+									<%= file_field_tag "recipe_steps[][image]", class:"image_selecter", id:"recipe_steps_#{i}_image_selecter" %>
+								</dt>
+								<dt class="selecter movie_field">
+									<form class="movie_button_field">
+										<%= label :recipe_steps, "Movie url" %>
+										<%= submit_tag "Movie url", type:"button", class:"movie_button"  %>
+										<%= hidden_field_tag "recipe_step_id_#{i}", i, class:"recipe_step_id" %>
+									</form>
+								</dt>
+								<dd>
+								<%= step.image %>
+									<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter", id:"recipe_steps_#{i}_movie_url" %>
+									<% if step.image.present? %><%= image_tag step.image.url(:thumb), size:"120x120", alt:"" %><% end %>
+									<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area", id:"recipe_steps_#{i}_content" %>
+									<% if step.movie_url %><iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe><% end %>
+								</dd>
+							</dl>
+						<% end %>
 					</dl>
 					<form><%= submit_tag t(:add_step, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></form>
 				</div>
