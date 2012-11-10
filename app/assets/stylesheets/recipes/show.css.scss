@@ -1,4 +1,5 @@
-/* forbiddon select */
+/* forbiddon select function */
+
 body {
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -6,3 +7,12 @@ body {
   user-select: none;
 }
 
+#recipe_steps {
+  iframe {
+    float:left;
+  }
+  .txt {
+    min-width:15em;
+    width:80%;
+  }
+}

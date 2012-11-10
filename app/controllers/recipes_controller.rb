@@ -61,7 +61,7 @@ class RecipesController < ApplicationController
       @draft.save
 
       # recipe_drafts data is copying to recipes table
-      @draft.copy_public( bparams )
+      @draft.copy_public( params )
     end
 
     if params[:edit]
