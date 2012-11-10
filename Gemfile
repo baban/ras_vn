@@ -40,10 +40,16 @@ gem 'i18n_generators', "1.2.1" # gemerate multiple language message file
 gem "ruby-openid", "2.1.8" # openid
 gem "rails3_acts_as_paranoid", "0.2.4" # logical
 gem "ipaddress", '0.8.0' # ip addres check
-# gem 'jpmobile', '3.0.1', require:'action_pack' # emable smart_phone_filter 
-#gem "yard", '0.7.4' # document generator like javadoc
+gem 'jpmobile', '3.0.1', require:'action_pack' # emable smart_phone_filter 
+gem "yard", '0.7.4' # document generator like javadoc
 #gem "guard" # notification rspec excute result (Mac only)
 #gem "guard-rspec"
+
+gem 'redcarpet'
+
+gem 'fb_graph'
+
+gem 'twitter', '~> 2.2.0'
 
 # test utilities
 gem 'flextures', "2.0.5" # add rake command for dump and load fixtures
@@ -77,10 +83,10 @@ group :test, :development do
 end
 
 group :test do
-  # gem 'turn', '0.8.2', require:false # Pretty printed test output
+  gem 'turn', '0.8.2', require:false # Pretty printed test output
   gem "spork", "0.9.1" # rspec
-  # gem "simplecov", "0.5.4", require:false # test covarage files generate
-  # gem "simplecov-rcov", "0.2.3", require:false
+  gem "simplecov", "0.5.4", require:false # test covarage files generate
+  gem "simplecov-rcov", "0.2.3", require:false
   gem "capybara" # test driver
 end
 
@@ -91,7 +97,7 @@ group :development, :test do
   gem "pry-rails"
   # gem 'plymouth', require: false
   #gem 'pry-exception_explorer'
-  #gem 'pry-nav'
+  gem 'pry-nav'
   #gem 'pry-remote'
   #gem 'pry-stack_explorer'
 end
