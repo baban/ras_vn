@@ -41,12 +41,11 @@ gem "ruby-openid", "2.1.8" # openid
 gem "rails3_acts_as_paranoid", "0.2.4" # logical
 gem "ipaddress", '0.8.0' # ip addres check
 gem 'jpmobile', '3.0.1', require:'action_pack' # emable smart_phone_filter 
-gem "yard", '0.7.4' # document generator like javadoc
+gem "yard" # document generator like javadoc
 #gem "guard" # notification rspec excute result (Mac only)
 #gem "guard-rspec"
 
 gem 'redcarpet'
-
 gem 'fb_graph'
 
 gem 'twitter', '~> 2.2.0'
