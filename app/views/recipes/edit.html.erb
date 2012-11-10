@@ -59,7 +59,6 @@
 								<dt class="selecter image_field">
 									<%= label :image, "Image" %>
 									<%= file_field_tag "recipe_steps[][image]", class:"image_selecter", id:"recipe_steps_#{i}_image_selecter" %>
-									<%= hidden_field_tag "recipe_steps[][image]", step.image  %>
 								</dt>
 								<dt class="selecter movie_field">
 									<form class="movie_button_field">
@@ -69,6 +68,7 @@
 									</form>
 								</dt>
 								<dd>
+								<%= step.image %>
 									<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter", id:"recipe_steps_#{i}_movie_url" %>
 									<% if step.image.present? %><%= image_tag step.image.url(:thumb), size:"120x120", alt:"" %><% end %>
 									<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area", id:"recipe_steps_#{i}_content" %>

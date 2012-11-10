@@ -75,7 +75,7 @@
 					<section class="rec_cat5 clearfix">
 					<h3 class="material_txt">BƯỚC <%= i %></h3>
 					<% if step.image.present? %>
-						<%= image_tag step.image.url(:step_thumb), width:"136", height:"136" %>
+						<%= image_tag step.image.url(:thumb), width:"136", height:"136" %>
 					<% end %>
 					<% if step.movie_url.present? %>
 						<iframe width="136" height="136" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>

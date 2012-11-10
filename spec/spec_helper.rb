@@ -8,8 +8,8 @@ Spork.prefork do
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
 
-  require 'flextures/flextures_railtie'
-  require 'flextures/rspec_flextures_support'
+  #require 'flextures/flextures_railtie'
+  #require 'flextures/rspec_flextures_support'
 end
 
 Spork.each_run do
