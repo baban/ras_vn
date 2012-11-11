@@ -166,9 +166,8 @@ vn:
         distinct_id: thị trấn
 
       user_profile_visibility:
-        address: 住所
         address_point: address_point  #g
-        birthday: 生年月日
+        birthday: ngày sinh
         blood_type: blood_type  #g
         comment: bình luận
         first_name: tên

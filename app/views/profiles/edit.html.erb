@@ -1,7 +1,5 @@
-<% content_for :style_after do %>
-	<%= stylesheet_link_tag "mypage" %>
-<% end %>
 <%= include_action_javascript %>
+<% content_for :style_after do %><%= stylesheet_link_tag "mypage" %><% end %>
 
 <div id="content_body" class="bace_bg">
 	<%= render partial:"mypage/content_header" %>
