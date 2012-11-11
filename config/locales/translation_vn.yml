@@ -131,50 +131,49 @@ vn:
       user:
         access_secret: access_secret  #g
         access_token: access_token  #g
-        bookmarks: ブックマーク
+        bookmarks: đánh dấu
         current_sign_in_at: current_sign_in_at  #g
         current_sign_in_ip: current_sign_in_ip  #g
-        email: メールアドレス
-        encrypted_password: パスワード
-        password: パスワード
-        password_confirmation: パスワード(確認)
+        email: E-mail
+        encrypted_password: mật khẩu
+        password: mật khẩu
+        password_confirmation: mật khẩu(xác nhận)
         last_sign_in_at: last_sign_in_at  #g
         last_sign_in_ip: last_sign_in_ip  #g
         recipe: :activerecord.models.recipe  #g
-        recipe_comments: コメント
-        recipes: レシピ
+        recipe_comments: bình luận
+        recipes: Công thức
         remember_created_at: remember_created_at  #g
         reset_password_sent_at: reset_password_sent_at  #g
         reset_password_token: reset_password_token  #g
-        screen_name: ニックネーム
+        screen_name: biệt danh
         uid: UID
-        user_profile: プロフィール
+        user_profile: Hồ Sơ
 
       user_profile:
-        id: ユーザーID
-        birthday: 生年月日
-        comment: コメント
-        first_name: 名
-        image: 写真
-        family_name: 姓
-        mail_address: メールアドレス
-        nickname: ニックネーム
-        sex: 性別
+        id: user ID
+        birthday: ngày sinh
+        comment: Bình luận
+        first_name: tên
+        image: Hình ảnh
+        family_name: tên họ
+        mail_address: E-mail
+        nickname: biệt danh
+        sex: quan hệ tình dục
         user: :activerecord.models.user  #g
-        user_profile_visibility: 表示
-        prefecture_id: 住所
-        distinct_id: 住所
+        user_profile_visibility: Hiển thị
+        prefecture_id: tỉnh
+        distinct_id: thị trấn
 
       user_profile_visibility:
-        address: 住所
         address_point: address_point  #g
-        birthday: 生年月日
+        birthday: ngày sinh
         blood_type: blood_type  #g
-        comment: コメント
-        first_name: 姓
-        last_name: 名
+        comment: bình luận
+        first_name: tên
+        last_name: tên họ
         mail_address: mail_address  #g
-        nickname: ニックネーム
+        nickname: biệt danh
         postcode: postcode  #g
-        sex: 性別
+        sex: quan hệ tình dục
         user_profile: :activerecord.models.user_profile  #g

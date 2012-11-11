@@ -50,7 +50,7 @@ vn:
       failure: 'Could not authorize you from %{kind} because "%{reason}".'
     mailer:
       confirmation_instructions:
-        subject: 'Confirmation instructions'
+        subject: 'ユーザー登録を行います'
       reset_password_instructions:
         subject: 'Reset password instructions'
       unlock_instructions:

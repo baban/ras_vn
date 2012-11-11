@@ -1,6 +1,5 @@
-<% content_for :style_after do %>
-	<%= stylesheet_link_tag "mypage" %>
-<% end %>
+<%= include_action_javascript %>
+<% content_for :style_after do %><%= stylesheet_link_tag "mypage" %><% end %>
 
 <div id="content_body" class="bace_bg">
 	<%= render partial:"mypage/content_header" %>
@@ -42,6 +41,11 @@
 			    <th><%= f.label :sex %></th>
 			    <td colspan="2"><%= select_sex( f, @profile.sex ) %></td>
 			    <td><%= visibility_radios( @visibility, :sex ) %></td>
+			  </tr>
+			  <tr>
+			    <th><%= t(:distinct_id, scope:"activerecord.attributes.user_profile") %></th>
+			    <td colspan="2"><%= distinct_selecter( f, selected: @profile.distinct_id ) %></td>
+			    <td><%= visibility_radios( @visibility, :distinct_id ) %></td>
 			  </tr>
 			  <tr>
 			    <th><%= f.label :comment %></th>
