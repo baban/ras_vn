@@ -16,7 +16,7 @@ RasVn::Application.configure do
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = false
 
-  config.action_mailer.default_url_options = { :host => 'localhost' }
+  config.action_mailer.default_url_options = { :host => 'cook24.vn' }
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
