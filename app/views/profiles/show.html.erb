@@ -32,6 +32,10 @@
       <td colspan="2"><%= @profile.birthday %></td>
     </tr>
     <tr>
+      <td><%= t(:distinct_id, scope:"activerecord.attributes.user_profile") %></td>
+      <td colspan="2"><%= @profile.distinct_id %></td>
+    </tr>
+    <tr>
       <td colspan="3"><%=link_to "編集", edit_profile_url( @profile ) %></td>
     </tr>
   </table>
