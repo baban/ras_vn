@@ -56,14 +56,14 @@ class RecipeDraft < ActiveRecord::Base
     attributes.delete("recipe_id")
     recipe.attributes = attributes
     # file data is cannot copy so recipe_image colum data is insert
-    recipe.recipe_image = form_values[:recipe][:recipe_image] if form_values[:recipe] && form_values[:recipe][:recipe_image]
+    recipe.recipe_image = form_values[:recipe][:recipe_image] if form_values && form_values[:recipe] && form_values[:recipe][:recipe_image]
 
     recipe.steps= self.steps.map.with_index do |d,i|
       attributes = d.attributes
       attributes["recipe_id"] = attributes["recipe_draft_id"]
       attributes.delete("recipe_draft_id")
       step = RecipeStep.new(attributes)
-      step.image= form_values[:recipe_steps][i][:image] if form_values[:recipe_steps] && form_values[:recipe_steps][i] && form_values[:recipe_steps][i][:image]
+      step.image= form_values[:recipe_steps][i][:image] if form_values && form_values[:recipe_steps] && form_values[:recipe_steps][i] && form_values[:recipe_steps][i][:image]
       step
     end
 
