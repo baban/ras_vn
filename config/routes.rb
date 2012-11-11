@@ -5,9 +5,10 @@ RasVn::Application.routes.draw do
   match "/logout" => "sessions#destroy", :as => :logout
 
   root to:"top#index"
+  get "devise/registrations/registrated" => "devise/registrations#registrated"
+  get "user/registrated" => "devise/registrations#registrated"
   devise_for :user
   get "top/index", as:'user_root'
-
   match '/recipes/recipe_foods/:recipe_food_id', controller:"recipes", action:"index"
 
   resource(:profile)
