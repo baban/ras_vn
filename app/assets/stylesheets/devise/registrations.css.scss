@@ -47,3 +47,11 @@ form {
     margin:0 0.5em;
   }
 }
+
+select >  optgroup {
+  display:none;
+}
+select > optgroup:first-child {
+  display:block;
+}
+
