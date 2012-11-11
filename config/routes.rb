@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 RasVn::Application.routes.draw do
+  get "users/registrated"
+
   match "/auth/:provider/callback" => "sessions#callback"
   match "/logout" => "sessions#destroy", :as => :logout
 
