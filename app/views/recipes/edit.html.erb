@@ -68,11 +68,10 @@
 									</form>
 								</dt>
 								<dd>
-								<%= step.image %>
 									<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, class:"movie_selecter", id:"recipe_steps_#{i}_movie_url" %>
-									<% if step.image.present? %><%= image_tag step.image.url(:thumb), size:"120x120", alt:"" %><% end %>
-									<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area", id:"recipe_steps_#{i}_content" %>
 									<% if step.movie_url %><iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe><% end %>
+									<% if step.image.present? %><%= image_tag step.image.url(:thumb), width:"136", height:"136", alt:"" %><% end %>
+									<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area", id:"recipe_steps_#{i}_content" %>
 								</dd>
 							</dl>
 						<% end %>

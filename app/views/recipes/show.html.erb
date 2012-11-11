@@ -70,19 +70,13 @@
 			</article>
 			
 			<!--step-->
-			<div class="cate01 clearfix">
+			<div class="cate01 clearfix" id="recipe_steps">
 				<% @recipe.steps.each.with_index(1) do |step,i| %>
 					<section class="rec_cat5 clearfix">
-					<h3 class="material_txt">BƯỚC <%= i %></h3>
-					<% if step.image.present? %>
-						<%= image_tag step.image.url(:thumb), width:"136", height:"136" %>
-					<% end %>
-					<% if step.movie_url.present? %>
-						<iframe width="136" height="136" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
-					<% end %>
-					<div class="txt">
-						<p><%= step.content %></p>
-					</div>
+						<h3 class="material_txt">BƯỚC <%= i %></h3>
+						<% if step.movie_url.present? %><iframe width="136" height="136" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe><% end %>
+						<% if step.image.present? %><%= image_tag step.image.url(:thumb), width:"136", height:"136" %><% end %>
+						<div class="txt"><p><%= step.content %></p></div>
 					</section>
 				<% end %>
 			</div>
