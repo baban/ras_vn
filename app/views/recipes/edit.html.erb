@@ -37,25 +37,27 @@
 						(<%= f.text_field :amount, size: 3, value: (@draft.amount.to_i.zero? ? 1 : @draft.amount) %> người ăn)
 						<div class="servings">
 							<h3>
-							<div class="material clearfix">
-							</div><div class="clear"></div></h3>
+								<div class="material clearfix"></div>
+								<div class="clear"></div>
+							</h3>
 						</div>
-						<div class="ingredients_list" id="foodstuffs">
+						<table class="ingredients_list" id="foodstuffs">
 							<% @draft.edit_foodstuffs.each do |foodstuff| %>
-								<div class="ingredient_row clearfix">
-									<div class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder:"食材" %></div>
-									<div class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder:"分量" %></div>
-								</div>
+								<tr class="ingredient_row clearfix">
+									<td class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: "Thực phẩm" %></td>
+									<td class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: "Số tiền" %></td>
+									<td class="ingredient_close_button"><form><%= submit_tag "☓", type:"button" %></form></td>
+								</tr>
 							<% end %>
-						</div>
-						<form><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %></form>
+						</table>
+						<form id="add_foodstuff_form"><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %></form>
 					</div>
 				</div>
 				<div id="recipes_steps_area" class="area">
 					<dl id="recipe_steps">
 						<% @steps.each.with_index(1) do |step,i| %>
 							<dl class="step" id="recipe_step_<%= i %>">
-								<dt>Step <%= i %></dt>
+								<dt>BƯỚC <%= i %></dt>
 								<dt class="selecter image_field">
 									<%= label :image, "Image" %>
 									<%= file_field_tag "recipe_steps[][image]", class:"image_selecter", id:"recipe_steps_#{i}_image_selecter" %>
@@ -91,11 +93,13 @@
 				</p>
 
 				<div id="search_youtube_area">
-					<%= hidden_field_tag :step_number, "1", id:"search_youtube_step_number" %>
-					<%= text_field_tag :vq, "", id:"search_youtube_text" %>
-					<%= button_tag "検索", type:"button", id:"search_youtube_button" %>
-					<ul id="search_result_list"></ul>
-					<%= button_tag "close", type:"button", id:"search_youtube_area_close_button" %>
+					<div class="content">
+						<%= hidden_field_tag :step_number, "1", id:"search_youtube_step_number" %>
+						<%= text_field_tag :vq, "", id:"search_youtube_text" %>
+						<%= button_tag "検索", type:"button", id:"search_youtube_button" %>
+						<ul id="search_result_list"></ul>
+						<p id="search_youtube_area_close_button_row"><%= button_tag "close", type:"button", id:"search_youtube_area_close_button" %></p>
+					</div>
 				</div>
 			</article>
 		</div>

@@ -120,15 +120,5 @@ describe RecipeDraft do
       @draft.one_point.should == @recipe.one_point
     end
   end
-  describe "#copy_image_file_path" do
-    before do
-      @recipe = Recipe.find(1)
-      @draft  = @recipe.draft
-      @src, @dst = @draft.copy_image_file_path( @draft.image, @recipe.image )
-    end
-    it "ディレクトリ" do
-      @src.should == "uploads/recipe_draft/recipe_image/1/*"
-    end
-  end
 end
 
