@@ -46,7 +46,7 @@
 								<tr class="ingredient_row clearfix">
 									<td class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: "Thực phẩm" %></td>
 									<td class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: "Số tiền" %></td>
-									<td class="ingredient_close_button"><form><button>☓</button></form></td>
+									<td class="ingredient_close_button"><form><%= submit_tag "☓", type:"button" %></form></td>
 								</tr>
 							<% end %>
 						</table>
