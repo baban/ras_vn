@@ -5,10 +5,10 @@ send_youtube_url_button = ( i, url )->
 $(window).load ->
   food_stuff_row = (i)->
     s = 
-    '<div class="ingredient_row clearfix">'+
-      '<div class="ingredient_name"><input type="text" name="foodstuffs[][name]" value=""></div>'+
-      '<div class="ingredient_quantity"><input type="text" name="foodstuffs[][amount]" value=""></div>'+
-    '</div>';
+    '<tr class="ingredient_row clearfix">'+
+      '<td class="ingredient_name"><input type="text" name="foodstuffs[][name]" value="" placeholder="Thực phẩm" ></td>'+
+      '<td class="ingredient_quantity"><input type="text" name="foodstuffs[][amount]" value="" placeholder="Số tiền" ></td>'+
+    '</tr>';
     return s;
 
   $("#add_foodstuffs_row").click ->

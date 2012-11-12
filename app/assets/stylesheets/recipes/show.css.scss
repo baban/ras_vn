@@ -7,6 +7,10 @@ body {
   user-select: none;
 }
 
+form#bookmark_button {
+  float:right;
+}
+
 #recipe_steps {
   iframe {
     float:left;
@@ -15,4 +19,10 @@ body {
     min-width:15em;
     width:80%;
   }
+}
+
+.loved {
+  border:solid 1px #dd5;
+  background-color:#eea;
+  padding:1px 4px;
 }

@@ -1,49 +1,12 @@
 /* forbiddon select */
 
-input#recipe_draft_title {
-  font-size:1.0em;
-  width:23em;
+#recipe_title {
+  font-size:16px;
+  width:30em;
 }
 
-.ingredient_row {
-  .ingredient_name > input { 
-    width:14em;
-  }
-  .ingredient_quantity > input{ 
-    width:8em;
-  }
-  input {
-    margin:0;
-    font-size:13px;
-  }
-}
-
-#recipes_steps_area:before {
-  content:"";
-  display:block;
-  width:100%;
-  clear:both;
-  form.movie_button_field {
-    border-style:none;
-    background-color:gray;
-    padding:4px;
-  }
-  
-  input.movie_button {
-    border-style:none;
-  }
-}
-
-#recipes_steps_area {
-  .movie_field {
-    form.movie_button_field {
-      border-style:none;
-      margin:0;
-      padding:0;
-    }  
-    input.movie_selecter {
-      margin-top:3px;
-    }  
-  }
+#recipe_description {
+  width:25em;
+  height:5em;
 }
 
