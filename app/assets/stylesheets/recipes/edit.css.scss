@@ -6,6 +6,11 @@
   max-width:50em;
 }
 
+#recipe_title {
+  font-size:1.0em;
+  width:20em;
+}
+
 #foodstuffs_area:after {
   content:"";
   display:block;
@@ -60,37 +65,35 @@ table.ingredients_list {
   }
 }
 
-dl.step > dt.selecter {
-  margin:0 0.2em;
-  padding:0;
-  float:left;
-  .button {
-    padding:0.1em 0.2em;
-    text-align:center;
-    background-color:#ddd;
-    border:outset 2px #ddd;
-    margin:0;
-  }
-  .button:active {
-    border-style:inset;
-  }
-  .movie_button_field {
-    display:inline;
-    border-style:inset;
-  }
-}
-
 dl.step > dd {
   padding:0;
   margin:0;
-  img {
-    background-color:#aaa;
-  }
   .step_edit_area {
-    width:25em;
+    width:22em;
     min-width:50%;
     height:7em;
     margin:0.5em;
+    float:left;
+  }
+  .selecter {
+    margin:0 0.2em;
+    padding:0;
+    float:right;
+    width:230px;
+    .image_field {
+      img {
+        background-color:#aaa;
+      }
+      &:after {
+        @include separater;
+      }
+    }
+    form.movie_button_field {
+      display:block;
+    }
+  }
+  &:after {
+    @include separater;
   }
 }
 

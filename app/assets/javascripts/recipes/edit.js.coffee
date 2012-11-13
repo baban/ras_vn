@@ -3,10 +3,12 @@ send_youtube_url_button = ( i, url )->
   console.log url
 
 $(window).load ->
-  $(".ingredient_close_button input").click ->
-    tr = $(this).parent().parent().parent()
-    $( "input:text", tr ).val("")
-    tr.slideUp()
+  foodstuff_close_button_check=->
+    $(".ingredient_close_button input").click ->
+      tr = $(this).parent().parent().parent()
+      $( "input:text", tr ).val("")
+      tr.slideUp()
+  foodstuff_close_button_check()
 
   food_stuff_row = (i)->
     s = 
@@ -15,6 +17,7 @@ $(window).load ->
       '<td class="ingredient_quantity"><input type="text" name="foodstuffs[][amount]" value="" placeholder="Số tiền"></td>'+
       '<td class="ingredient_close_button"><form><input type="button" value="☓"></form></td>'+
     '</tr>';
+    foodstuff_close_button_check()
     return s;
 
   $("#add_foodstuffs_row").click ->
