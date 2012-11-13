@@ -16,10 +16,7 @@
 					<% end %>
 				<% else %>
 				<% end %>
-				<h1 class="ttl_recipe">
-					<%= @recipe.title %>
-					<% if my_recipe? %><%= link_to "Chỉnh sửa", action:"edit" %><% end %>
-				</h1>
+				<h1 class="ttl_recipe"><%= @recipe.title %><% if my_recipe? %><%= link_to "Chỉnh sửa", action:"edit" %><% end %></h1>
 				<ul class="hd_sns sns clearfix">
 					<li><a href="#" class="radi5"><%= image_tag "common/fb.png", alt:"", width:"18", height:"18" %>facebook</a></li>
 					<li><a href="#" class="radi5"><%= image_tag "common/tw.png", alt:"", width:"18", height:"18" %>twitter</a></li>
@@ -76,7 +73,7 @@
 					<section class="rec_cat5 clearfix">
 						<h3 class="material_txt">BƯỚC <%= i %></h3>
 						<% if step.movie_url.present? %><iframe width="136" height="136" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe><% end %>
-						<% if step.image.present? %><%= image_tag step.image.url(:thumb), width:"136", height:"136" %><% end %>
+						<% if step.image.present? %><%= image_tag step.image.url(:thumb), size:"136x136" %><% end %>
 						<div class="txt"><p><%= step.content %></p></div>
 					</section>
 				<% end %>

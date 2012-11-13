@@ -63,34 +63,29 @@ table.ingredients_list {
       margin-top:3px;
     }  
   }
+  #add_steps {
+    float:right;
+  }
+  &:after {
+    @include separater;
+  }
 }
 
 dl.step > dd {
   padding:0;
   margin:0;
   .step_edit_area {
-    width:22em;
-    min-width:50%;
+    width:85%;
     height:7em;
     margin:0.5em;
+  }
+  .image_field {
+    width:20em;
     float:left;
   }
-  .selecter {
-    margin:0 0.2em;
-    padding:0;
-    float:right;
-    width:230px;
-    .image_field {
-      img {
-        background-color:#aaa;
-      }
-      &:after {
-        @include separater;
-      }
-    }
-    form.movie_button_field {
-      display:block;
-    }
+  .movie_field {
+    width:20em;
+    float:left;
   }
   &:after {
     @include separater;
@@ -98,21 +93,21 @@ dl.step > dd {
 }
 
 #search_youtube_area {
+  border:solid 5px #ff9258;
+  background-color:white;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
   display:none;
   position:fixed;
   top:50%;
   left:50%;
   margin:-5em -300px;
-  background-color:white;
   width:600px;
   min-height:10em;
   max-height:20em;
   overflow-y:scroll;
-  border:solid 5px #ff9258;
   z-index:+3;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
   .content {
     margin:10px;
   }
@@ -123,10 +118,10 @@ dl.step > dd {
       float:left;
       clear:none;
       button {
+        border:solid 2px #ffeeef;
         width:170px;
         height:170px;
         background-color:transparent;
-        border:solid 2px #ffeeef;
         &:hover {
           background-color:#ffe;
           border-color:#fab;
@@ -168,11 +163,4 @@ dl.step > dd {
 .form_actions {
   text-align:right;
 }
-
-#recipe_draft_one_point {
-  width:80%;
-  height:5em;
-}
-
-
 

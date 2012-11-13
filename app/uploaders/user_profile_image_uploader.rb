@@ -7,4 +7,7 @@ class UserProfileImageUploader < BaseUploader
   version :icon do
     process resize_to_limit: [32, 32]  
   end
+  version :small_icon do
+    process resize_to_limit: [22, 22]  
+  end
 end

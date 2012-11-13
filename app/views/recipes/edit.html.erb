@@ -20,9 +20,11 @@
 					<p><%= f.text_area :description, value: @draft.description, size:"40x3" %></p>
 					<div class="clearfix">
 						<p class="user_name">
-							<span class="flo_l">
-								<%= image_tag "common/user_ico.png", width:"22", height:"22", alt:"" %>
-							</span>
+							<% if @draft.user.profile.image.blank? %>
+								<span class="flo_l"><%= image_tag "common/user_ico.png", size:"22x22", alt:"" %></span>
+							<% else %>
+								<span class="flo_l"><%= image_tag @draft.user.profile.image.url(:small_icon), size:"22x22", alt:"" %></span>
+							<% end %>
 							<span class="flo_l"><%= link_to @draft.user.profile.nickname, kitchen_url(@user) %></span>
 						</p>
 					</div>
@@ -33,14 +35,10 @@
 					</div>
 					<p id="genre_description">希望のジャンルがない場合は、上のテキストボックスでジャンルを追加してください</p>
 					<div id="ingredients">
-						<span class="material_txt"> Nguyên liệu </span>
-						(<%= f.text_field :amount, size: 3, value: (@draft.amount.to_i.zero? ? 1 : @draft.amount) %> người ăn)
-						<div class="servings">
-							<h3>
-								<div class="material clearfix"></div>
-								<div class="clear"></div>
-							</h3>
-						</div>
+						<p>
+							<span class="material_txt"> Nguyên liệu </span>
+							(<%= f.text_field :amount, size: 3, value: (@draft.amount.to_i.zero? ? 1 : @draft.amount) %> người ăn)
+						</p>
 						<table class="ingredients_list" id="foodstuffs">
 							<% @draft.edit_foodstuffs.each do |foodstuff| %>
 								<tr class="ingredient_row clearfix">
@@ -62,24 +60,26 @@
 									<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area", id:"recipe_steps_#{i}_content" %>
 									<div class="selecter">
 										<% if step.image.present? %>
-											<div class="image_field"><%= image_tag step.image.url(:thumb), width:"136", height:"136", alt:"" %></div>
+											<div class="image_field">
+												<%= file_field_tag "recipe_steps[][image]", id:"recipe_steps_#{i}_image_selecter", size: 15 %>
+												<%= image_tag step.image.url(:thumb), alt:"" %>
+											</div>
 										<% else %>
-											<%= label :image, "Image" %>
-											<%= file_field_tag "recipe_steps[][image]", class:"image_selecter", id:"recipe_steps_#{i}_image_selecter" %>
+											<div class="image_field">
+												<%= label :image, "Image" %>
+												<%= file_field_tag "recipe_steps[][image]", id:"recipe_steps_#{i}_image_selecter", size: 15 %>
+											</div>
 										<% end %>
 										<% if step.movie_url %>
 											<form class="movie_button_field">
-												<%= submit_tag "Movie url", type:"button", class:"movie_button"  %>
-												<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, 
-															class:"movie_selecter", id:"recipe_steps_#{i}_movie_url" %>
+												<%= submit_tag "Movie url", type:"button", class:"movie_button" %>
+												<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, id:"recipe_steps_#{i}_movie_url" %>
 												<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
 											</form>
 										<% else %>
 											<form class="movie_button_field">
-												<%= label :recipe_steps, "Movie url" %>
-												<%= submit_tag "Movie url", type:"button", class:"movie_button"  %>
-												<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, 
-															class:"movie_selecter", id:"recipe_steps_#{i}_movie_url", size: 35 %>
+												<%= submit_tag "Movie url", type:"button" %>
+												<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, size: 20, id:"recipe_steps_#{i}_movie_url" %>
 											</form>
 										<% end %>
 									</div>
@@ -87,7 +87,7 @@
 							</dl>
 						<% end %>
 					</dl>
-					<form><%= submit_tag t(:add_step, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></form>
+					<form id="add_step_form"><%= submit_tag t(:add_step, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></form>
 				</div>
 				
 				<h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
@@ -95,19 +95,17 @@
 				
 				<h3><%= t(:public, scope:"activerecord.attributes.recipe") %></h3>
 				<p><%= f.select :public, { t( :public, scope:"views.recipes.new" ) => true, t( :closed, scope:"views.recipes.new" ) => false } %></p>
-
 				<p class="form_actions">
 					<%= f.submit name:"edit", value: t( :edit,   scope:"views.recipes.edit" ), id:"edit_button" %>
 					<%= f.submit name:"save", value: t( :commit, scope:"views.recipes.edit" ), id:"save_button" %>
 				</p>
-
 				<div id="search_youtube_area">
 					<div class="content">
 						<%= hidden_field_tag :step_number, "1", id:"search_youtube_step_number" %>
 						<%= text_field_tag :vq, "", id:"search_youtube_text" %>
-						<%= button_tag "検索", type:"button", id:"search_youtube_button" %>
+						<%= button_tag "tìm kiếm", type:"button", id:"search_youtube_button" %>
 						<ul id="search_result_list"></ul>
-						<p id="search_youtube_area_close_button_row"><%= button_tag "close", type:"button", id:"search_youtube_area_close_button" %></p>
+						<p id="search_youtube_area_close_button_row"><%= button_tag "đóng", type:"button", id:"search_youtube_area_close_button" %></p>
 					</div>
 				</div>
 			</article>

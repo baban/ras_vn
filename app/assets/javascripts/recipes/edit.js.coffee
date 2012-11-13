@@ -27,7 +27,7 @@ $(window).load ->
     console.log("hoge");
     s = 
     '<dl class="step">'+
-      '<dt>New Step</dt>'+
+      '<dt>mới BƯỚC</dt>'+
       '<dd><textarea class="step_edit_area" name="steps[]"></textarea></dd>'+
     '</dl>';
     $("#recipe_steps").append(s)
