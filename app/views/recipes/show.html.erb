@@ -67,7 +67,6 @@
 				</div>
 			</article>
 			
-			<!--step-->
 			<div class="cate01 clearfix" id="recipe_steps">
 				<% @recipe.steps.each.with_index(1) do |step,i| %>
 					<section class="rec_cat5 clearfix">
@@ -78,7 +77,6 @@
 					</section>
 				<% end %>
 			</div>
-			<!--step-->
 
 			<div id="recipe_comment_area" class="area">
 				<h3 id="comment_title"><%= t(:comments, scope:"views.recipes.report")%></h3>
@@ -89,13 +87,11 @@
 							<div class="txt">
 								<h1 class="txt16"><%= comment.title %></h1>
 								<p>by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
-								<h2>
-									<%= comment.content %>
-									<div class="info_area">
-										Created：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
-										Updated：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
-									</div>
-								</h2>
+								<%= comment.content %>
+								<div class="info_area">
+									Created：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+									Updated：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+								</div>
 							</div>
 						</section>
 					</div>
@@ -112,7 +108,6 @@
 					<p><%= f.submit t(:post_report, scope:"views.recipes.show") %></p>
 				<% end %>
 			</div>
-
 		</div>
 		<!--main_clmEnd-->
 		<%=render partial:"layouts/right_side_content" %>

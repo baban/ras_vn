@@ -79,15 +79,22 @@ dl.step > dd {
     height:7em;
     margin:0.5em;
   }
-  .image_field {
-    width:20em;
-    float:left;
-  }
-  .movie_field {
-    width:20em;
-    float:left;
+  .selecter {
+    width:90%;
+    padding-left:10px;
+    .image_field {
+      min-width:150px;
+      width:17em;
+      float:left;
+    }
+    .movie_field {
+      min-width:150px;
+      width:20em;
+      float:left;
+    }
   }
   &:after {
+    margin-top:0.5em;
     @include separater;
   }
 }
