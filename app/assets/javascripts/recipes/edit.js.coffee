@@ -1,8 +1,17 @@
-send_youtube_url_button = ( i, url )->
-  console.log "url"
-  console.log url
-
 $(window).load ->
+  $("#recipe_genre_selecter").change ->
+    $("#recipe_draft_recipe_food_id").css( "display", "inline" )
+    $("select#recipe_genre_selecter option:selected").each -> 
+      labelname = $(this).text()
+      $("#recipe_draft_recipe_food_id optgroup").css( "display", "none" )
+      $("#recipe_draft_recipe_food_id optgroup[label='"+labelname+"']").css( "display", "block" )
+
+  recipe_food_id_select = ->
+    if $("#recipe_draft_recipe_food_id").val()
+      $("#recipe_draft_recipe_food_id").css( "display", "inline" )
+  recipe_food_id_select()  
+  
+  # delete recipe foodstuffs
   foodstuff_close_button_check=->
     $(".ingredient_close_button input").click ->
       tr = $(this).parent().parent().parent()
@@ -20,9 +29,11 @@ $(window).load ->
     foodstuff_close_button_check()
     return s;
 
+  # add recipe foodstuffs
   $("#add_foodstuffs_row").click ->
     $("#foodstuffs").append(food_stuff_row(4))
 
+  # add recipe steps
   $("#add_steps").click ->
     console.log("hoge");
     s = 
@@ -32,18 +43,14 @@ $(window).load ->
     '</dl>';
     $("#recipe_steps").append(s)
 
-  recipe_food_id_select = ->
-    if $("#recipe_draft_recipe_food_id").val()
-      $("#recipe_draft_recipe_food_id").css( "display", "inline" )
-  recipe_food_id_select()
-  
-  $("#recipe_genre_selecter").change ->
-    $("#recipe_draft_recipe_food_id").css( "display", "inline" )
-    $("select#recipe_genre_selecter option:selected").each -> 
-      labelname = $(this).text()
-      $("#recipe_draft_recipe_food_id optgroup").css( "display", "none" )
-      $("#recipe_draft_recipe_food_id optgroup[label='"+labelname+"']").css( "display", "block" )
-  
+  # open window youtupe movies
+  $(".movie_button").click ->
+    step_number = $(this).next().attr("value")
+    $("#search_youtube_step_number").attr( "value", step_number )
+    $("#search_youtube_area").css( { display:"block", opacity: 0.0 } )
+    $("#search_youtube_area").animate( { opacity: 1.0 }, { duration: 400 } )
+
+  # add youtupe movieto recipe step
   $("#search_youtube_button").live( "click", ->
     vq = $("#search_youtube_text").attr("value")
     step_number = $("#search_youtube_step_number").attr("value")
@@ -67,23 +74,14 @@ $(window).load ->
           number = $("#search_youtube_step_number").attr("value")
           a_tag = $(".button_link",this)
           href = a_tag.attr("href")
-          $("#recipe_step_#{number} .movie_selecter").attr("value", href)
+          console.log "#recipe_step_#{number}_movie_url"
           console.log href
+          $("#recipe_steps_#{number}_movie_url").val( href )
           $("#search_youtube_area").animate( { opacity: 0.0 }, 
             { duration: 300, complete: -> $(this).css("display", "none") } )
         this
     )
   )
-
-  $(".movie_button").click ->
-    step_number = $(this).next().attr("value")
-    $("#search_youtube_step_number").attr( "value", step_number )
-    $("#search_youtube_area").css( { display:"block", opacity: 0.0 } )
-    $("#search_youtube_area").animate( { opacity: 1.0 }, { duration: 400 } )
-
-  $("#search_youtube_area_close_button").click ->
-    $("#search_youtube_area").animate( { opacity: 0.0 },
-      { duration: 300, complete: -> $(this).css("display", "none") } )
 
   $("#search_youtube_text").keydown (evt)->
     charCode = evt.charCode || evt.which || evt.keyCode
@@ -92,3 +90,9 @@ $(window).load ->
       false
     else
       true
+
+  $("#search_youtube_area_close_button").click ->
+    $("#search_youtube_area").animate( { opacity: 0.0 },
+      { duration: 300, complete: -> $(this).css("display", "none") } )
+
+

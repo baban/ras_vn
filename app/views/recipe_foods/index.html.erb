@@ -1,13 +1,13 @@
 <% content_for :style_after do %>
 <style>
 .mini_paginate > nav.pagination span.page {
-  display:none;
+	display:none;
 }
 .mini_paginate > nav.pagination > span.page.current {
-  display:inline;
+	display:inline;
 }
 .mini_paginate > nav.pagination > span.page.current:after {
-  content:" / <%= @recipes.total_pages %> page ";
+	content:" / <%= @recipes.total_pages %> page ";
 }
 </style>
 <% end %>
@@ -20,14 +20,10 @@
 			<aside>
 				<div class="side_contents_l">
 					<ul class="footstamps">
-						<li>
-							<a href="/category/list" class="back_to_category_list">«カテゴリ一覧</a>
-						</li>
-						<li class="indent_level_1">
-							<%= @food_genre.name %>
-						</li>
+						<li><a href="/category/list" class="back_to_category_list">«カテゴリ一覧</a></li>
+						<li class="indent_level_1"><%= @food_genre.name %></li>
 						<ul class="sub_categories">
-						<% @food_genre.foods.each do |food| %>
+							<% @food_genre.foods.each do |food| %>
 								<li class="txt_cate">
 									<%= link_to food.name, recipe_foods_url(recipe_food_id: food.id) %>
 									<%= image_tag "arr01.png", width:"14", height:"14", alt:"Ẩm Thực Việt"%>
@@ -39,20 +35,18 @@
 			</aside>
 			<div class="contents_cate">
 				<h1 class="ttl_cate flo_l"><%= @food_genre.name %></h1>
-				<p class="txt_sum txt_sum02">
-					計：<span class="count"><%= @food_genre.amount %></span>件
-				</p>
+				<p class="txt_sum txt_sum02">計：<span class="count"><%= @food_genre.amount %></span>件</p>
 				<% if @recomment_food_genre_recipe %>
-				<article class="rec_cat rec_cat3 clearfix">
-					<%= image_tag @recomment_food_genre_recipe.image.url(:top_large_thumb), width:"120", height:"170", alt:"" %>
-					<div class="txt">
-						<h1 class="txt16"><%= link_to @recomment_food_genre_recipe.title, recipe_url(@recomment_food_genre_recipe) %></h1>
-						<h2>
-							<%= @recomment_food_genre_recipe.description %>
-							<p>by&nbsp;<%= @recomment_food_genre_recipe.user.profile.nickname %></p>
-						</h2>
-					</div>
-				</article>
+					<article class="rec_cat rec_cat3 clearfix">
+						<%= image_tag @recomment_food_genre_recipe.image.url(:top_large_thumb), width:"120", height:"170", alt:"" %>
+						<div class="txt">
+							<h1 class="txt16"><%= link_to @recomment_food_genre_recipe.title, recipe_url(@recomment_food_genre_recipe) %></h1>
+							<h2>
+								<%= @recomment_food_genre_recipe.description %>
+								<p>by&nbsp;<%= link_to @recomment_food_genre_recipe.chef.profile.nickname, kitchen_url(@recomment_food_genre_recipe.chef) %></p>
+							</h2>
+						</div>
+					</article>
 				<% end %>
 				<article class="cate01 clearfix">
 					<div class="clearfix">
@@ -72,7 +66,7 @@
 							<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
 							<div class="txt">
 								<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
-								<p>by <%= link_to recipe.user.profile.nickname %></p>
+								<p>by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %></p>
 								<h2>
 									<%= recipe.description %>
 									<div class="info_area">

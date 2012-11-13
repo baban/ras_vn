@@ -69,7 +69,7 @@
 			
 			<div class="cate01 clearfix" id="recipe_steps">
 				<% @recipe.steps.each.with_index(1) do |step,i| %>
-					<section class="rec_cat5 clearfix">
+					<section class="rec_cat5">
 						<h3 class="material_txt">BƯỚC <%= i %></h3>
 						<% if step.movie_url.present? %><iframe width="136" height="136" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe><% end %>
 						<% if step.image.present? %><%= image_tag step.image.url(:thumb), size:"136x136" %><% end %>
@@ -83,7 +83,7 @@
 				<% @recipe.comments.each do |comment| %>
 					<div class="cate01 clearfix">
 						<section class="rec_cat5 clearfix">
-							<%= image_tag comment.image.url(:thumb), size:"280x466", alt:"" %>
+							<% if comment.image.present? %><%= image_tag comment.image.url(:thumb), size:"280x466", alt:"" %><% end %>
 							<div class="txt">
 								<h1 class="txt16"><%= comment.title %></h1>
 								<p>by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>

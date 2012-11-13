@@ -79,7 +79,7 @@
 										<% else %>
 											<form class="movie_button_field">
 												<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, size: 20, id:"recipe_steps_#{i}_movie_url" %>
-												<%= submit_tag "Movie url", type:"button" %>
+												<%= submit_tag "Movie url", type:"button", class:"movie_button" %>
 											</form>
 										<% end %>
 									</div>

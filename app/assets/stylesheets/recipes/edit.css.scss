@@ -155,6 +155,10 @@ dl.step > dd {
     }
   }
   p#search_youtube_area_close_button_row {
+    &:before {
+      @include separater;
+    }
+    width:100%;
     text-align:right;
   }
   &:after {
