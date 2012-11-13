@@ -35,9 +35,10 @@ end
   distincts: Distinct,
   prefectures: Prefecture,
   tpl_sets: TplSet,
-  recipe_food_genre: RecipeFoodGenre,
+  recipe_food_genres: RecipeFoodGenre,
   recipe_foods: RecipeFood
 }.each do |filename,klass|
   puts "#{filename} reading..."
   load_table(filename,klass)
 end
+
