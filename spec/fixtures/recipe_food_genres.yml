@@ -35,7 +35,7 @@ recipe_food_genres_4:
   updated_at: 2012-09-17 13:24:59 UTC
 recipe_food_genres_5:
   id: 6
-  name: Bún/Miến/Soup
+  name: Bún/Miến/Udon
   image: food.jpg
   amount: 0
   created_at: 2012-09-25 12:13:44 UTC
