@@ -12,5 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require header_motion
 //= require jquery.exflexfixed-0.3.0
