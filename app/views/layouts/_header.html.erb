@@ -27,10 +27,10 @@
 	</nav>
 	
 	<div class="search flo_l">
-		<%= form_for :recipes, url: recipes_url, html:{ class:"cl" }, method:"GET" do |f| %>
+		<%= form_for :recipes, url: recipe_foods_url, html:{ class:"cl" }, method:"GET" do |f| %>
 			<div class="box radi5">
 				<%= text_field_tag :word, "", class:"radi5", type:"search", placeholder: t(:placeholder, scope:"views.header") %>
-				<%= f.button t(:blank, scope:"views.header"), class:"radi3", title:"Tìm Kiếm" %>
+				<%= f.button t(:blank, scope:"views.header"), name: "", class:"radi3", title:"Tìm Kiếm" %>
 				<span class="hidden_elem">Tìm Kiếm</span>
 			</div>
 		<% end %>

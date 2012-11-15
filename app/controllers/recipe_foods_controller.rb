@@ -16,7 +16,7 @@ class RecipeFoodsController < ApplicationController
     end
     food_genre_id = @food_genre.recipe_foods.pluck(:id)
 
-    @recipes = Recipe.where( recipe_food_id: food_genre_id  ).order(" view_count DESC ")
+    @recipes = Recipe.where( recipe_food_id: food_genre_id  )
     @recipes = (@order_mode=="new") ? @recipes.order(" created_at DESC ") : @recipes.order(" view_count DESC ")
     @recipes = @recipes.page( params[:page] || 1 ).per(5)
   end
