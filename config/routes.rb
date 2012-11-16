@@ -3,11 +3,10 @@
 RasVn::Application.routes.draw do
   get "users/registrated"
 
-  match "/auth/:provider" => "sessions#callback"
+  match "/auth/:provider/callback" => "sessions#callback"
   match "/logout" => "sessions#destroy", :as => :logout
 
   root to:"top#index"
-  get "devise/registrations/registrated" => "devise/registrations#registrated"
   get "user/registrated" => "devise/registrations#registrated"
   devise_for :user
   get "top/index", as:'user_root'
