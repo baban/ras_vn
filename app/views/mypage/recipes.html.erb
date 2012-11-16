@@ -10,6 +10,7 @@
 					<div class="status">
 						<% if recipe.public %><div class="public">公開</div><% else %><div class="editing">未公開</div><% end %>
 					</div>
+					<div style="text-align:right;"><%=link_to "編集する", recipe_url(recipe) %></div>
 					<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
 					<div class="txt">
 						<h1 class="txt16"><%= link_to truncate(recipe.title, length: 22 ), controller:"recipes", action:"show", id: recipe.id %></h1>
