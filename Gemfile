@@ -23,7 +23,7 @@ gem "typus", "3.1.10" # generte administration functions
 gem "formtastic", "2.1.0"
 gem "omniauth", "1.1.0"
 gem "omniauth-twitter", "0.0.9"
-gem "omniauth-facebook", "1.4.1"
+gem "omniauth-facebook", "1.4.0"
 gem "omniauth-google-oauth2", "0.1.10"
 gem "html5jp_graphs", "0.0.1"
 
