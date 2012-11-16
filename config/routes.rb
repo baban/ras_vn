@@ -3,7 +3,7 @@
 RasVn::Application.routes.draw do
   get "users/registrated"
 
-  match "/auth/:provider/callback" => "sessions#callback"
+  match "/auth/:provider" => "sessions#callback"
   match "/logout" => "sessions#destroy", :as => :logout
 
   root to:"top#index"
