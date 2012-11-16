@@ -25,10 +25,6 @@ class SessionsController < ApplicationController
          end
        else
          # ②が存在しない = Userモデルにレコードがない = Devise認証はまだ => ユーザ登録ページへ
-         # flash[:nickname] = auth["info"] && auth["info"]["name"]
-         # flash[:email] = auth["info"] && auth["info"]["email"]
-         flash[:nickname] = "aaaaa"
-         flash[:email] = "aaaa@hoge.jp"
          redirect_to new_user_registration_path, notice: "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントとはすでに接続済みです。メンバー登録に必要なメールアドレスとパスワードを入力してください。"
        end
     else
@@ -40,9 +36,7 @@ class SessionsController < ApplicationController
       # sessionにuid値を保存し、ユーザ登録のビューで使えるようにしておく。
       # sessionに保存した値を使ってOmniuserモデルを検索すれば、Omniuser.idを取得できる。
       session[:tmp_uid] = auth["uid"]
-      flash[:nickname] = "aaaaa"
-      flash[:email] = "aaaa@hoge.jp"
-      redirect_to new_user_registration_path, notice: "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントと接続しました。メンバー登録に必要なメールアドレスとパスワードを入力してください。"
+      redirect_to new_user_registration_path, :notice => "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントと接続しました。メンバー登録に必要なメールアドレスとパスワードを入力してください。"
     end
   end
 
