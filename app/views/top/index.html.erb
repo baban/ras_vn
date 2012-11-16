@@ -47,7 +47,7 @@
 					<h1><%="#{genre.name}(#{genre.amount})"%></h1>
 					<ul class="catelists">
 						<% genre.foods.page(1).per(3).each do |food| %>
-							<li class="arr txt11 flo_l"><%= link_to food.name, "/recipes/recipe_foods/#{food.id}" %></li>
+							<li class="arr txt11 flo_l"><%= link_to food.name, recipe_foods_url( recipe_food_id: food.id ) %></li>
 						<% end %>
 					</ul>
 				</div>

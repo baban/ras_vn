@@ -1,23 +1,11 @@
 <footer>
-<div class="inner">
-<ul>
-<li class="flo_l"><a href="#">会社概要</a></li>
-<li class="flo_l"><a href="#">利用規約</a></li>
-<li class="flo_l"><a href="#">お問い合わせ</a></li>
-<li class="flo_r txt12">copyright © 2012 Cook24 all rights reserved</li>
-</ul>
-
-</div>
+	<div class="inner">
+		<ul>
+			<li class="flo_l"><%=link_to t(:cooporate_profile, scope:"views.footer"), controller:"cooporations", action:"profile" %></li>
+			<li class="flo_l"><%=link_to t(:cooporate_terms,   scope:"views.footer"), controller:"cooporations",  action:"terms" %></li>
+			<li class="flo_l"><%=link_to t(:cooporate_q_and_a, scope:"views.footer"), controller:"cooporations",  action:"question_and_answers" %></li>
+			<li class="flo_r txt12">copyright © 2012 Cook24 all rights reserved</li>
+		</ul>
+	</div>
 </footer>
-<!--
-<div id="footer">
-  <div id="info_links_area">
-    <ul>
-      <li><%=link_to t(:cooporate_profile, scope:"views.footer"), controller:"cooporation", action:"profile" %></li>
-      <li><%=link_to t(:cooporate_terms,   scope:"views.footer"), controller:"cooporation", action:"terms" %></li>
-      <li><%=link_to t(:cooporate_q_and_a, scope:"views.footer"), controller:"cooporation", action:"question_and_answers" %></li>
-    </ul>
-  </div>
-  <p>CopyRigths &copy; 2012 Nhahang24. All rights reserverd</p>
-</div>
--->
+

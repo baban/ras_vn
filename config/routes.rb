@@ -25,6 +25,7 @@ RasVn::Application.routes.draw do
   end
   resources(:kitchens) { member { get :recipes, :follow } }
 
+  match '/cooporation(/:action(/:id))', controller:"cooporations"
   match '/statistics(/:action(/:id))', controller:"statistics"
 end
 
