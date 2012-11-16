@@ -20,7 +20,8 @@
 			<aside>
 				<div class="side_contents_l">
 					<ul class="footstamps">
-						<li><a href="/category/list" class="back_to_category_list">«カテゴリ一覧</a></li>
+            <%# TODO: 正しいリンクを張っておく %>
+            <li><a href="/category/list" class="back_to_category_list">«カテゴリ一覧</a></li>
 						<li class="indent_level_1"><%= @food_genre.name %></li>
 						<ul class="sub_categories">
 							<% @food_genre.foods.each do |food| %>
