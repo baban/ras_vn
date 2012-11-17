@@ -1,637 +1,952 @@
 distincts_0:
   id: 1
   prefecture_id: 1
-  name: ソンラ市
+  name: Quận 1
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:44:16 UTC
 distincts_1:
   id: 2
-  prefecture_id: 2
-  name: ホアビン
+  prefecture_id: 1
+  name: Quận 2
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:47:00 UTC
 distincts_2:
   id: 3
-  prefecture_id: 3
-  name: ディエンビエンフー
+  prefecture_id: 1
+  name: Quận 3
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:47:21 UTC
 distincts_3:
   id: 4
-  prefecture_id: 4
-  name: ライチャウ市
+  prefecture_id: 1
+  name: Quận 4
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:49:18 UTC
 distincts_4:
   id: 5
-  prefecture_id: 5
-  name: ラオカイ市
+  prefecture_id: 1
+  name: Quận 5
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:50:32 UTC
 distincts_5:
   id: 6
-  prefecture_id: 6
-  name: ハザン市
+  prefecture_id: 1
+  name: Quận 6
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:52:59 UTC
 distincts_6:
   id: 7
-  prefecture_id: 7
-  name: カオバン
+  prefecture_id: 1
+  name: Quận 7
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:53:40 UTC
 distincts_7:
   id: 8
-  prefecture_id: 8
-  name: イェンバイ市
+  prefecture_id: 1
+  name: Quận 8
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:54:12 UTC
 distincts_8:
   id: 9
-  prefecture_id: 9
-  name: トゥエンクアン市
+  prefecture_id: 1
+  name: Quận 9
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:54:41 UTC
 distincts_9:
   id: 10
-  prefecture_id: 10
-  name: ランソン市
+  prefecture_id: 1
+  name: Quận 10
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:55:10 UTC
 distincts_10:
   id: 11
-  prefecture_id: 11
-  name: ハロン市
+  prefecture_id: 1
+  name: Quận 11
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:55:36 UTC
 distincts_11:
   id: 12
-  prefecture_id: 12
-  name: 千葉県 
+  prefecture_id: 1
+  name: Quận 12
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-06-30 15:08:12 UTC
 distincts_12:
   id: 13
-  prefecture_id: 13
-  name: バックカン市
+  prefecture_id: 1
+  name: Quận Gò Vấp
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:56:26 UTC
 distincts_13:
   id: 14
-  prefecture_id: 14
-  name: フート市
+  prefecture_id: 1
+  name: Quận Tân Bình
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:57:25 UTC
 distincts_14:
   id: 15
-  prefecture_id: 15
-  name: タイグエン市
+  prefecture_id: 1
+  name: Quận Tân Phú
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-09 16:57:49 UTC
 distincts_15:
   id: 16
-  prefecture_id: 16
-  name: ニンビン市
+  prefecture_id: 1
+  name: Quận Bình Thạnh
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:21:28 UTC
 distincts_16:
   id: 17
-  prefecture_id: 17
-  name: タイビン市
+  prefecture_id: 1
+  name: Quận Phú Nhuận
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:22:07 UTC
 distincts_17:
   id: 18
-  prefecture_id: 18
-  name: ハイズオン市
+  prefecture_id: 1
+  name: Quận Thủ Đức
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:22:31 UTC
 distincts_18:
   id: 19
-  prefecture_id: 19
-  name: ハナム
+  prefecture_id: 1
+  name: Quận Bình Tân
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:23:03 UTC
 distincts_19:
   id: 20
-  prefecture_id: 20
-  name: フンイエン市
+  prefecture_id: 1
+  name: Củ Chi
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:23:26 UTC
 distincts_20:
   id: 21
-  prefecture_id: 21
-  name: ナムディン市
+  prefecture_id: 1
+  name: Hóc Môn
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:24:30 UTC
 distincts_21:
   id: 22
-  prefecture_id: 22
-  name: バクニン市
+  prefecture_id: 1
+  name: Bình Chánh
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:24:50 UTC
 distincts_22:
   id: 23
-  prefecture_id: 23
-  name: ヴィンフック
+  prefecture_id: 1
+  name: Nhà Bè
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:25:10 UTC
 distincts_23:
   id: 24
-  prefecture_id: 24
-  name: タインホア市
+  prefecture_id: 1
+  name: Cần Giờ
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:25:33 UTC
 distincts_24:
   id: 25
-  prefecture_id: 25
-  name: ヴィン市
+  prefecture_id: 2
+  name: Quận Hoàn kiếm
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:26:02 UTC
 distincts_25:
   id: 26
-  prefecture_id: 26
-  name: ハティン市
+  prefecture_id: 2
+  name: Quận Hai Bà Trưng
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:26:27 UTC
 distincts_26:
   id: 27
-  prefecture_id: 27
-  name: ドンホイ
+  prefecture_id: 2
+  name: Quận Ba Đình
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:27:08 UTC
 distincts_27:
   id: 28
-  prefecture_id: 28
-  name: クアンチ
+  prefecture_id: 2
+  name: Quận Đống Đa
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:27:43 UTC
 distincts_28:
   id: 29
-  prefecture_id: 29
-  name: フエ
+  prefecture_id: 2
+  name: Quận Tây Hồ
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:28:25 UTC
 distincts_29:
   id: 30
-  prefecture_id: 30
-  name: タムキー市
+  prefecture_id: 2
+  name: Quận Thanh Xuân
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:29:06 UTC
 distincts_30:
   id: 31
-  prefecture_id: 31
-  name: クアンガイ市
+  prefecture_id: 2
+  name: Quận Hoàng Mai
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:30:35 UTC
 distincts_31:
   id: 32
-  prefecture_id: 32
-  name: 島根県
+  prefecture_id: 2
+  name: Quận Long Biên
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-06-30 15:08:12 UTC
 distincts_32:
   id: 33
-  prefecture_id: 33
-  name: 岡山県
+  prefecture_id: 2
+  name: Quận Hà Đông
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-06-30 15:08:12 UTC
 distincts_33:
   id: 34
-  prefecture_id: 34
-  name: ニャチャン
+  prefecture_id: 2
+  name: Quận Cầu Giấy
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:35:38 UTC
 distincts_34:
   id: 35
-  prefecture_id: 35
-  name: コントゥム市
+  prefecture_id: 2
+  name: Từ Liêm
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:35:58 UTC
 distincts_35:
   id: 36
-  prefecture_id: 36
-  name: ザライ
+  prefecture_id: 2
+  name: Thanh Trì
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:36:34 UTC
 distincts_36:
   id: 37
-  prefecture_id: 37
-  name: バンメトート市
+  prefecture_id: 2
+  name: Gia Lâm
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:37:05 UTC
 distincts_37:
   id: 38
-  prefecture_id: 38
-  name: ダクノン
+  prefecture_id: 2
+  name: Đông Anh
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:38:46 UTC
 distincts_38:
   id: 39
-  prefecture_id: 39
-  name: ダラット
+  prefecture_id: 2
+  name: Sóc Sơn
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:39:17 UTC
 distincts_39:
   id: 40
-  prefecture_id: 40
-  name: ニントゥアン省
+  prefecture_id: 2
+  name: Mê Linh
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:40:23 UTC
 distincts_40:
   id: 41
-  prefecture_id: 41
-  name: タイニン市
+  prefecture_id: 2
+  name: Thanh Oai
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:40:44 UTC
 distincts_41:
   id: 42
-  prefecture_id: 42
-  name: ドンナイ
+  prefecture_id: 2
+  name: Quốc Oai
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:43:42 UTC
 distincts_42:
   id: 43
-  prefecture_id: 43
-  name: ファンティエット市
+  prefecture_id: 2
+  name: Chương Mỹ
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:44:15 UTC
 distincts_43:
   id: 44
-  prefecture_id: 44
-  name: ブンタウ
+  prefecture_id: 2
+  name: Thạch Thất
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:44:37 UTC
 distincts_44:
   id: 45
-  prefecture_id: 45
-  name: ビンズオン
+  prefecture_id: 2
+  name: Ba Vì
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:44:58 UTC
 distincts_45:
   id: 46
-  prefecture_id: 46
-  name: ビンフオック
+  prefecture_id: 2
+  name: Ứng Hòa
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-08-13 15:45:30 UTC
 distincts_46:
   id: 47
-  prefecture_id: 47
-  name: 沖縄県
+  prefecture_id: 2
+  name: Phú Xuyên
   public: true
   created_at: 2012-06-30 15:08:12 UTC
   updated_at: 2012-06-30 15:08:12 UTC
 distincts_47:
   id: 48
-  prefecture_id: 1
-  name: クインニャイ県
+  prefecture_id: 2
+  name: Hoài Đức
   public: true
   created_at: 2012-08-09 16:44:30 UTC
   updated_at: 2012-08-09 16:44:30 UTC
 distincts_48:
   id: 49
-  prefecture_id: 1
-  name: ムオンラー県
+  prefecture_id: 2
+  name: Mỹ Đức
   public: true
   created_at: 2012-08-09 16:44:46 UTC
   updated_at: 2012-08-09 16:44:46 UTC
 distincts_49:
   id: 50
-  prefecture_id: 1
-  name: トゥアンチャウ県
+  prefecture_id: 2
+  name: Đan Phượng
   public: true
   created_at: 2012-08-09 16:45:00 UTC
   updated_at: 2012-08-09 16:45:00 UTC
 distincts_50:
   id: 51
-  prefecture_id: 1
-  name: フーイエン県
+  prefecture_id: 2
+  name: Phúc Thọ
   public: true
   created_at: 2012-08-09 16:45:10 UTC
   updated_at: 2012-08-09 16:45:10 UTC
 distincts_51:
   id: 52
-  prefecture_id: 1
-  name: バクイエン県
+  prefecture_id: 2
+  name: Thường Tín
   public: true
   created_at: 2012-08-09 16:45:22 UTC
   updated_at: 2012-08-09 16:45:22 UTC
 distincts_52:
   id: 53
-  prefecture_id: 1
-  name: マイソン県
+  prefecture_id: 2
+  name: Sơn Tây
   public: true
   created_at: 2012-08-09 16:45:33 UTC
   updated_at: 2012-08-09 16:45:33 UTC
 distincts_53:
   id: 54
-  prefecture_id: 1
-  name: ソンマー県
+  prefecture_id: 3
+  name: Quận Hải Châu
   public: true
   created_at: 2012-08-09 16:45:44 UTC
   updated_at: 2012-08-09 16:45:44 UTC
 distincts_54:
   id: 55
-  prefecture_id: 1
-  name: イエンチャウ県
+  prefecture_id: 3
+  name: Quận Thanh Khê
   public: true
   created_at: 2012-08-09 16:45:54 UTC
   updated_at: 2012-08-09 16:45:54 UTC
 distincts_55:
   id: 56
-  prefecture_id: 1
-  name: モクチャウ県
+  prefecture_id: 3
+  name: Quận Sơn Trà
   public: true
   created_at: 2012-08-09 16:46:07 UTC
   updated_at: 2012-08-09 16:46:07 UTC
 distincts_56:
   id: 57
-  prefecture_id: 1
-  name: ソップコップ県
+  prefecture_id: 3
+  name: Quận Ngũ Hành Sơn
   public: true
   created_at: 2012-08-09 16:46:17 UTC
   updated_at: 2012-08-09 16:46:17 UTC
 distincts_57:
   id: 58
   prefecture_id: 3
-  name: ムオンレイ
+  name: Quận Liên Chiểu
   public: true
   created_at: 2012-08-09 16:47:32 UTC
   updated_at: 2012-08-09 16:47:32 UTC
 distincts_58:
   id: 59
   prefecture_id: 3
-  name: ディエンビエン県
+  name: Quận Cẩm Lệ
   public: true
   created_at: 2012-08-09 16:47:43 UTC
   updated_at: 2012-09-06 12:50:10 UTC
 distincts_59:
   id: 60
   prefecture_id: 3
-  name: ディエンビエンドン県
+  name: Huyện Hòa Vang
   public: true
   created_at: 2012-08-09 16:47:54 UTC
   updated_at: 2012-08-09 16:47:54 UTC
 distincts_60:
   id: 61
   prefecture_id: 3
-  name: ムオンアン県
+  name: Huyện đảo Hoàng Sa
   public: true
   created_at: 2012-08-09 16:48:04 UTC
   updated_at: 2012-09-06 12:50:20 UTC
 distincts_61:
   id: 62
-  prefecture_id: 3
-  name: ムオンチャ県
+  prefecture_id: 4
+  name: Quận Dương Kinh
   public: true
   created_at: 2012-08-09 16:48:16 UTC
   updated_at: 2012-08-09 16:48:16 UTC
 distincts_62:
   id: 63
-  prefecture_id: 3
-  name: ムオンニェ県
+  prefecture_id: 4
+  name: Quận Đồ Sơn
   public: true
   created_at: 2012-08-09 16:48:26 UTC
   updated_at: 2012-08-09 16:48:26 UTC
 distincts_63:
   id: 64
-  prefecture_id: 3
-  name: トゥアチュア県
+  prefecture_id: 4
+  name: Quận Hải An
   public: true
   created_at: 2012-08-09 16:48:37 UTC
   updated_at: 2012-08-09 16:48:37 UTC
 distincts_64:
   id: 65
-  prefecture_id: 3
-  name: トゥアンジャオ県
+  prefecture_id: 4
+  name: Quận Hồng Bàng
   public: true
   created_at: 2012-08-09 16:48:47 UTC
   updated_at: 2012-08-09 16:48:47 UTC
 distincts_65:
   id: 66
   prefecture_id: 4
-  name: ムオンテ県
+  name: Quận Kiến An
   public: true
   created_at: 2012-08-09 16:49:29 UTC
   updated_at: 2012-08-09 16:49:29 UTC
 distincts_66:
   id: 67
   prefecture_id: 4
-  name: フォントー県
+  name: Quận Lê Chân
   public: true
   created_at: 2012-08-09 16:49:40 UTC
   updated_at: 2012-08-09 16:49:40 UTC
 distincts_67:
   id: 68
   prefecture_id: 4
-  name: シンホー県
+  name: Quận Ngô Quyền
   public: true
   created_at: 2012-08-09 16:49:50 UTC
   updated_at: 2012-08-09 16:49:50 UTC
 distincts_68:
   id: 69
   prefecture_id: 4
-  name: タムドゥオン県
+  name: Huyện An Dương
   public: true
   created_at: 2012-08-09 16:49:59 UTC
   updated_at: 2012-08-09 16:49:59 UTC
 distincts_69:
   id: 70
   prefecture_id: 4
-  name: タンユエン県
+  name: Huyện An Lão
   public: true
   created_at: 2012-08-09 16:50:08 UTC
   updated_at: 2012-08-09 16:50:08 UTC
 distincts_70:
   id: 71
-  prefecture_id: 5
-  name: Bảo Thắng 県
+  prefecture_id: 4
+  name: Huyện Bạch Long Vĩ
   public: true
   created_at: 2012-08-09 16:50:47 UTC
   updated_at: 2012-08-09 16:50:47 UTC
 distincts_71:
   id: 72
-  prefecture_id: 5
-  name: Bảo Yên 県
+  prefecture_id: 4
+  name: Huyện Cát Hải
   public: true
   created_at: 2012-08-09 16:50:58 UTC
   updated_at: 2012-08-09 16:50:58 UTC
 distincts_72:
   id: 73
-  prefecture_id: 5
-  name: Bát Xát 県
+  prefecture_id: 4
+  name: Huyện Kiến Thụy
   public: true
   created_at: 2012-08-09 16:51:11 UTC
   updated_at: 2012-08-09 16:51:11 UTC
 distincts_73:
   id: 74
-  prefecture_id: 5
-  name: バックハー県
+  prefecture_id: 4
+  name: Huyện Thủy Nguyên
   public: true
   created_at: 2012-08-09 16:51:23 UTC
   updated_at: 2012-08-09 16:51:23 UTC
 distincts_74:
   id: 75
-  prefecture_id: 5
-  name: Mường Khương
+  prefecture_id: 4
+  name: Huyện Tiên Lãng
   public: true
   created_at: 2012-08-09 16:51:34 UTC
   updated_at: 2012-08-09 16:51:34 UTC
 distincts_75:
   id: 76
-  prefecture_id: 5
-  name: サパ県
+  prefecture_id: 4
+  name: Huyện Vĩnh Bảo
   public: true
   created_at: 2012-08-09 16:51:46 UTC
   updated_at: 2012-08-09 16:51:46 UTC
 distincts_76:
   id: 77
   prefecture_id: 5
-  name: Si Ma Cai 県
+  name: Thừa Thiên - Huế
   public: true
   created_at: 2012-08-09 16:51:56 UTC
   updated_at: 2012-08-09 16:51:56 UTC
 distincts_77:
   id: 78
-  prefecture_id: 5
-  name: Văn Bàn 県
+  prefecture_id: 6
+  name: An Giang
   public: true
   created_at: 2012-08-09 16:52:05 UTC
   updated_at: 2012-08-09 16:52:05 UTC
 distincts_78:
   id: 79
-  prefecture_id: 31
-  name: Ba Tơ
+  prefecture_id: 7
+  name: Bà Rịa-Vũng Tàu
   public: true
   created_at: 2012-08-13 15:30:45 UTC
   updated_at: 2012-08-13 15:30:45 UTC
 distincts_79:
   id: 80
-  prefecture_id: 31
-  name: Bình Sơn
+  prefecture_id: 8
+  name: Bạc Liêu
   public: true
   created_at: 2012-08-13 15:30:54 UTC
   updated_at: 2012-08-13 15:30:54 UTC
 distincts_80:
   id: 81
-  prefecture_id: 31
-  name: Đức Phổ
+  prefecture_id: 9
+  name: Bắc Kạn
   public: true
   created_at: 2012-08-13 15:31:05 UTC
   updated_at: 2012-08-13 15:31:05 UTC
 distincts_81:
   id: 82
-  prefecture_id: 31
-  name: Minh Long
+  prefecture_id: 10
+  name: Bắc Giang
   public: true
   created_at: 2012-08-13 15:31:23 UTC
   updated_at: 2012-08-13 15:31:23 UTC
 distincts_82:
   id: 83
-  prefecture_id: 31
-  name: Mộ Đức
+  prefecture_id: 11
+  name: Bắc Ninh
   public: true
   created_at: 2012-08-13 15:31:36 UTC
   updated_at: 2012-08-13 15:31:36 UTC
 distincts_83:
   id: 84
-  prefecture_id: 31
-  name: Nghĩa Hành
+  prefecture_id: 12
+  name: Bến Tre
   public: true
   created_at: 2012-08-13 15:31:50 UTC
   updated_at: 2012-08-13 15:31:50 UTC
 distincts_84:
   id: 85
-  prefecture_id: 31
-  name: Sơn Hà
+  prefecture_id: 13
+  name: Bình Dương
   public: true
   created_at: 2012-08-13 15:32:01 UTC
   updated_at: 2012-08-13 15:32:01 UTC
 distincts_85:
   id: 86
-  prefecture_id: 31
-  name: Sơn Tây
+  prefecture_id: 14
+  name: Bình Định
   public: true
   created_at: 2012-08-13 15:32:15 UTC
   updated_at: 2012-08-13 15:32:15 UTC
 distincts_86:
   id: 87
-  prefecture_id: 31
-  name: ソン・ティン県
+  prefecture_id: 15
+  name: Bình Phước
   public: true
   created_at: 2012-08-13 15:32:26 UTC
   updated_at: 2012-08-13 15:32:26 UTC
 distincts_87:
   id: 88
-  prefecture_id: 31
-  name: Tây Trà
+  prefecture_id: 16
+  name: Bình Thuận
   public: true
   created_at: 2012-08-13 15:32:36 UTC
   updated_at: 2012-08-13 15:32:36 UTC
 distincts_88:
   id: 89
-  prefecture_id: 31
-  name: Trà Bồng
+  prefecture_id: 17
+  name: Cà Mau
   public: true
   created_at: 2012-08-13 15:32:56 UTC
   updated_at: 2012-08-13 15:32:56 UTC
 distincts_89:
   id: 90
-  prefecture_id: 31
-  name: Tư Nghĩa
+  prefecture_id: 18
+  name: Cao Bằng
   public: true
   created_at: 2012-08-13 15:33:10 UTC
   updated_at: 2012-08-13 15:33:10 UTC
 distincts_90:
   id: 91
+  prefecture_id: 19
+  name: Cần Thơ
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_91:
+  id: 92
+  prefecture_id: 20 
+  name: Đắk Lắk
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_92:
+  id: 93
+  prefecture_id: 21
+  name: Đắk Nông
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_93:
+  id: 94
+  prefecture_id: 22
+  name: Điện Biên
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_94:
+  id: 95
+  prefecture_id: 23
+  name: Đồng Nai
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_95:
+  id: 96
+  prefecture_id: 24
+  name: Đồng Tháp
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_96:
+  id: 97
+  prefecture_id: 25
+  name: Gia Lai
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_97:
+  id: 98
+  prefecture_id: 26
+  name: Hà Giang
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_98:
+  id: 99
+  prefecture_id: 27
+  name: Hà Nam
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_99:
+  id: 100
+  prefecture_id: 28
+  name: Hà Tây
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_100:
+  id: 101
+  prefecture_id: 29
+  name: Hà Tĩnh
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_101:
+  id: 102
+  prefecture_id: 30
+  name: Hải Dương
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_102:
+  id: 103
   prefecture_id: 31
-  name: Lý Sơn 
+  name: Hòa Bình
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_103:
+  id: 104
+  prefecture_id: 32
+  name: Hậu Giang
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_104:
+  id: 105
+  prefecture_id: 33
+  name: Hưng Yên
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_105:
+  id: 106
+  prefecture_id: 34
+  name: Khánh Hòa
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_106:
+  id: 107
+  prefecture_id: 35
+  name: Kiên Giang
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_107:
+  id: 108
+  prefecture_id: 36
+  name: Kon Tum
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_108:
+  id: 109
+  prefecture_id: 37
+  name: Lai Châu
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_109:
+  id: 110
+  prefecture_id: 38
+  name: Lào Cai
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_110:
+  id: 111
+  prefecture_id: 39
+  name: Lạng Sơn
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_111:
+  id: 112
+  prefecture_id: 40
+  name: Lâm Đồng
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_112:
+  id: 113
+  prefecture_id: 41
+  name: Long An
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_113:
+  id: 114
+  prefecture_id: 42
+  name: Nam Định
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_114:
+  id: 115
+  prefecture_id: 43
+  name: Nghệ An
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_115:
+  id: 116
+  prefecture_id: 44
+  name: Ninh Bình
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_116:
+  id: 117
+  prefecture_id: 45
+  name: Ninh Thuận
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_117:
+  id: 118
+  prefecture_id: 46
+  name: Phú Thọ
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_118:
+  id: 119
+  prefecture_id: 47
+  name: Phú Yên
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_119:
+  id: 120
+  prefecture_id: 48
+  name: Quảng Bình
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_120:
+  id: 121
+  prefecture_id: 49
+  name: Quảng Nam
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_121:
+  id: 122
+  prefecture_id: 50
+  name: Quảng Ngãi
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_122:
+  id: 123
+  prefecture_id: 51
+  name: Quảng Ninh
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_123:
+  id: 124
+  prefecture_id: 52
+  name: Quảng Trị
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_124:
+  id: 125
+  prefecture_id: 53
+  name: Sóc Trăng
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_125:
+  id: 126
+  prefecture_id: 54
+  name: Sơn La
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_126:
+  id: 127
+  prefecture_id: 55
+  name: Tây Ninh
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_127:
+  id: 128
+  prefecture_id: 56
+  name: Thái Bình
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_128:
+  id: 129
+  prefecture_id: 57
+  name: Thái Nguyên
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_129:
+  id: 130
+  prefecture_id: 58
+  name: Thanh Hóa
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_130:
+  id: 131
+  prefecture_id: 59
+  name: Tiền Giang
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_131:
+  id: 132
+  prefecture_id: 60
+  name: Trà Vinh
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_132:
+  id: 133
+  prefecture_id: 61
+  name: Tuyên Quang
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_133:
+  id: 134
+  prefecture_id: 62
+  name: Vĩnh Long
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_134:
+  id: 135
+  prefecture_id: 63
+  name: Vĩnh Phúc
+  public: true
+  created_at: 2012-08-13 15:33:25 UTC
+  updated_at: 2012-08-13 15:33:25 UTC
+distincts_135:
+  id: 136
+  prefecture_id: 64
+  name: Yên Bái
   public: true
   created_at: 2012-08-13 15:33:25 UTC
   updated_at: 2012-08-13 15:33:25 UTC

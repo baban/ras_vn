@@ -316,7 +316,7 @@ recipe_foods_44:
 recipe_foods_45:
   id: 46
   recipe_food_genre_id: 5
-  name: Sốt Kem,cream
+  name: Sốt Kem
   show_top: true
   created_at: 2012-06-04 16:00:21 UTC
   updated_at: 2012-07-15 05:30:06 UTC
@@ -337,7 +337,7 @@ recipe_foods_47:
 recipe_foods_48:
   id: 49
   recipe_food_genre_id: 5
-  name: Mỳ Sốt Thịt Bò Xay
+  name: Mỳ Sốt Thịt Bò
   show_top: true
   created_at: 2012-06-04 16:00:21 UTC
   updated_at: 2012-07-15 05:30:06 UTC
@@ -435,7 +435,7 @@ recipe_foods_61:
 recipe_foods_62:
   id: 63
   recipe_food_genre_id: 7
-  name: Salad TrungQuốc
+  name: Salad T.Quốc
   show_top: true
   created_at: 2012-06-04 16:00:21 UTC
   updated_at: 2012-07-15 05:30:06 UTC
@@ -652,7 +652,7 @@ recipe_foods_92:
 recipe_foods_93:
   id: 94
   recipe_food_genre_id: 12
-  name: Lúc cho bú
+  name: Lúc cho con bú
   show_top: true
   created_at: 2012-06-04 16:00:21 UTC
   updated_at: 2012-07-15 05:30:06 UTC

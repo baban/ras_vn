@@ -1,198 +1,198 @@
 prefectures_0:
   id: 1
-  name: Sơn La
+  name: Hồ Chí Minh
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_1:
   id: 2
-  name: Hoà Bình
+  name: Hà Nội
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-09-06 12:48:49 UTC
 prefectures_2:
   id: 3
-  name: Điện Biên
+  name: Đà Nẵng
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_3:
   id: 4
-  name: Lai Châu
+  name: Hải Phòng
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_4:
   id: 5
-  name: Lào Cai,
+  name: Thừa Thiên - Huế
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_5:
   id: 6
-  name: Hà Giang
+  name: An Giang
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_6:
   id: 7
-  name: Cao Bằng
+  name: Bà Rịa-Vũng Tàu
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_7:
   id: 8
-  name: Yên Bái,
+  name: Bạc Liêu
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_8:
   id: 9
-  name: Tuyên Quang
+  name: Bắc Kạn
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_9:
   id: 10
-  name: Lạng Sơn,
+  name: Bắc Giang
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_10:
   id: 11
-  name: Quảng Ninh
+  name: Bắc Ninh
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_11:
   id: 12
-  name: Bắc Kạn
+  name: Bến Tre
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_12:
   id: 13
-  name: Bắc Giang
+  name: Bình Dương
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_13:
   id: 14
-  name: Phú Thọ
+  name: Bình Định
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_14:
   id: 15
-  name: Thái Nguyên
+  name: Bình Phước
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_15:
   id: 16
-  name: Ninh Bình
+  name: Bình Thuận
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_16:
   id: 17
-  name: Thái Bình
+  name: Cà Mau
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_17:
   id: 18
-  name: Hải Dương
+  name: Cao Bằng
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_18:
   id: 19
-  name: Hà Nam
+  name: Cần Thơ
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_19:
   id: 20
-  name: Hưng Yên,
+  name: Đắk Lắk
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_20:
   id: 21
-  name: Nam Định
+  name: Đắk Nông
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_21:
   id: 22
-  name: Bắc Ninh
+  name: Điện Biên
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_22:
   id: 23
-  name: Vĩnh Phúc
+  name: Đồng Nai
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_23:
   id: 24
-  name: Thanh Hóa
+  name: Đồng Tháp
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_24:
   id: 25
-  name: Nghệ An
+  name: Gia Lai
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_25:
   id: 26
-  name: Hà Tĩnh
+  name: Hà Giang
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_26:
   id: 27
-  name: Quảng Bình
+  name: Hà Nam
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_27:
   id: 28
-  name: Quảng Trị
+  name: Hà Tây
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_28:
   id: 29
-  name: Thừa Thiên–Huế,
+  name: Hà Tĩnh
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_29:
   id: 30
-  name: Quảng Nam
+  name: Hải Dương
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_30:
   id: 31
-  name: Quảng Ngãi,
+  name: Hòa Bình
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_31:
   id: 32
-  name: Bình Định
+  name: Hậu Giang
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_32:
   id: 33
-  name: Phú Yên
+  name: Hưng Yên
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
@@ -204,175 +204,181 @@ prefectures_33:
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_34:
   id: 35
-  name: Kon Tum
+  name: Kiên Giang
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_35:
   id: 36
-  name: Gia Lai,
+  name: Kon Tum
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_36:
   id: 37
-  name: Đăk Lăk
+  name: Lai Châu
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_37:
   id: 38
-  name: Đăk Nông
+  name: Lào Cai
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_38:
   id: 39
-  name: Lâm Đồng
+  name: Lạng Sơn
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_39:
   id: 40
-  name: Ninh Thuận
+  name: Lâm Đồng
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_40:
   id: 41
-  name: Tây Ninh,
+  name: Long An
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_41:
   id: 42
-  name: Đồng Nai,
+  name: Nam Định
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_42:
   id: 43
-  name: Bình Thuận
+  name: Nghệ An
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_43:
   id: 44
-  name: Bà Rịa-Vũng Tàu
+  name: Ninh Bình
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_44:
   id: 45
-  name: Bình Dương
+  name: Ninh Thuận
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_45:
   id: 46
-  name: Bình Phước
+  name: Phú Thọ
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_46:
   id: 47
-  name: Long An
+  name: Phú Yên
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_47:
   id: 48
-  name: An Giang
+  name: Quảng Bình
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_48:
   id: 49
-  name: Đồng Tháp
+  name: Quảng Nam
   public: true
   created_at: 2012-04-30 13:40:29 UTC
   updated_at: 2012-04-30 13:40:29 UTC
 prefectures_49:
   id: 50
-  name: Tiền Giang
+  name: Quảng Ngãi
   public: true
   created_at: 2012-04-30 13:40:30 UTC
   updated_at: 2012-04-30 13:40:30 UTC
 prefectures_50:
   id: 51
-  name: Kiên Giang
+  name: Quảng Ninh
   public: true
   created_at: 2012-04-30 13:40:30 UTC
   updated_at: 2012-04-30 13:40:30 UTC
 prefectures_51:
   id: 52
-  name: Vĩnh Long
+  name: Quảng Trị
   public: true
   created_at: 2012-04-30 13:40:30 UTC
   updated_at: 2012-04-30 13:40:30 UTC
 prefectures_52:
   id: 53
-  name: Bến Tre
+  name: Sóc Trăng
   public: true
   created_at: 2012-04-30 13:40:30 UTC
   updated_at: 2012-04-30 13:40:30 UTC
 prefectures_53:
   id: 54
-  name: Trà Vinh,
+  name: Sơn La
   public: true
   created_at: 2012-04-30 13:40:30 UTC
   updated_at: 2012-04-30 13:40:30 UTC
 prefectures_54:
   id: 55
-  name: Sóc Trăng
+  name: Tây Ninh
   public: true
   created_at: 2012-04-30 13:40:30 UTC
   updated_at: 2012-04-30 13:40:30 UTC
 prefectures_55:
   id: 56
-  name: Hậu Giang
+  name: Thái Bình
   public: true
   created_at: 2012-04-30 13:40:30 UTC
   updated_at: 2012-04-30 13:40:30 UTC
 prefectures_56:
   id: 57
-  name: Bạc Liêu
+  name: Thái Nguyên
   public: true
   created_at: 2012-04-30 13:40:30 UTC
   updated_at: 2012-04-30 13:40:30 UTC
 prefectures_57:
   id: 58
-  name: Cà Mau
+  name: Thanh Hóa
   public: true
   created_at: 2012-04-30 13:40:30 UTC
   updated_at: 2012-04-30 13:40:30 UTC
 prefectures_58:
   id: 59
-  name: Hà Nội,
+  name: Tiền Giang
   public: true
   created_at: 2012-08-09 16:41:24 UTC
   updated_at: 2012-08-09 16:41:24 UTC
 prefectures_59:
   id: 60
-  name: Hồ Chí Minh
+  name: Trà Vinh
   public: true
   created_at: 2012-08-09 16:41:41 UTC
   updated_at: 2012-08-09 16:41:41 UTC
 prefectures_60:
   id: 61
-  name: Đà Nẵng
+  name: Tuyên Quang
   public: true
   created_at: 2012-08-09 16:41:57 UTC
   updated_at: 2012-08-09 16:41:57 UTC
 prefectures_61:
   id: 62
-  name: Hải Phòng,
+  name: Vĩnh Long
   public: true
   created_at: 2012-08-09 16:42:10 UTC
   updated_at: 2012-08-09 16:42:10 UTC
 prefectures_62:
   id: 63
-  name: Cần Thơ
+  name: Vĩnh Phúc
+  public: true
+  created_at: 2012-08-09 16:42:23 UTC
+  updated_at: 2012-08-09 16:42:23 UTC
+prefectures_63:
+  id: 64
+  name: Yên Bái
   public: true
   created_at: 2012-08-09 16:42:23 UTC
   updated_at: 2012-08-09 16:42:23 UTC
