@@ -8,7 +8,7 @@ vn:
       food_genre: Loại ẩm thực
       newsfeed: Topic&News
       omniuser: omniuser  #g
-      prefecture: Tên thành phố
+      prefecture: Thành phố bạn đang sống
       recipe: Recipe
       recipe_advertisement: Quảng cáo
       recipe_comment: Nấu thử & Bình luận
@@ -32,19 +32,19 @@ vn:
         first_name: Họ
         last_name: Tên
         preferences: Thành phố, quận  #g
-        role: 権限
+        role: Role
         salt: salt  #g
-        status: status  #g
-        token: token  #g
+        status: Status  #g
+        token: Token  #g
 
       bookmark:
-        deleted_at: deleted_at  #g
-        recipes: :activerecord.models.recipes  #g
-        users: :activerecord.models.users  #g
+        deleted_at: Deleted_at  #g
+        recipes: Recipes  #g
+        users: Users  #g
 
       distinct:
-        name: name  #g
-        prefecture: :activerecord.models.prefecture  #g
+        name: Name  #g
+        prefecture: Thành phố bạn đang sống  #g
 
       diary:
         title: Tiêu đề
@@ -61,10 +61,10 @@ vn:
         image: Hình ảnh
 
       omniuser:
-        name: name  #g
+        name: Name  #g
         provider: provider  #g
         uid: uid  #g
-        user: :activerecord.models.user  #g
+        user: User  #g
 
       prefecture:
         distincts: Tỉnh thành
@@ -90,58 +90,58 @@ vn:
 
       recipe_advertisement:
         alt: alt  #g
-        image: image  #g
-        name: name  #g
-        url: url  #g
+        image: Image  #g
+        name: Name  #g
+        url: Url  #g
 
       recipe_comment:
         content: Nội dung
         image: Chọn hình ảnh
-        recipe: activerecord.models.recipe  #g
+        recipe: Recipe  #g
 
       recipe_food:
-        name: name  #g
-        recipe_food_genre: activerecord.models.recipe_food_genre  #g
+        name: Name  #g
+        recipe_food_genre: recipe_food_genre  #g
 
       recipe_food_genre:
-        name: name  #g
-        recipe_foods: recipe_foods  #g
+        name: Name  #g
+        recipe_foods: Recipe_foods  #g
 
       recipe_foodstuff:
-        amount: 分量
+        amount: Lượng
         deleted_at: deleted_at  #g
-        name: 名前
-        recipes: :activerecord.models.recipes  #g
+        name: Tên
+        recipes: Recipes  #g
 
       recipe_step:
-        content: 本文
-        deleted_at: deleted_at  #g
+        content: Nội dung
+        deleted_at: Deleted_at  #g
         image: Chọn hình ảnh
         movie_url: Movie
-        recipes: :activerecord.models.recipes  #g
+        recipes: Recipes  #g
 
       search_log:
-        location: location  #g
-        words: words  #g
+        location: Location  #g
+        words: Words  #g
 
       tpl_set:
-        name: 名前
-        content: 内容
+        name: Name
+        content: Nội dung
 
       user:
         access_secret: access_secret  #g
         access_token: access_token  #g
-        bookmarks: đánh dấu
+        bookmarks: Bookmark
         current_sign_in_at: current_sign_in_at  #g
         current_sign_in_ip: current_sign_in_ip  #g
         email: E-mail
-        encrypted_password: mật khẩu
-        password: mật khẩu
-        password_confirmation: mật khẩu(xác nhận)
+        encrypted_password: Mật khẩu
+        password: Mật khẩu
+        password_confirmation: Mật khẩu(xác nhận)
         last_sign_in_at: last_sign_in_at  #g
         last_sign_in_ip: last_sign_in_ip  #g
         recipe: :activerecord.models.recipe  #g
-        recipe_comments: bình luận
+        recipe_comments: Bình luận
         recipes: Công thức
         remember_created_at: remember_created_at  #g
         reset_password_sent_at: reset_password_sent_at  #g
@@ -152,28 +152,28 @@ vn:
 
       user_profile:
         id: user ID
-        birthday: ngày sinh
+        birthday: Sinh nhật
         comment: Bình luận
-        first_name: tên
+        first_name: Tên
         image: Hình ảnh
-        family_name: tên họ
+        family_name: Họ
         mail_address: E-mail
-        nickname: biệt danh
-        sex: quan hệ tình dục
-        user: :activerecord.models.user  #g
+        nickname: Nickname
+        sex: Giới tính
+        user: User  #g
         user_profile_visibility: Hiển thị
-        prefecture_id: tỉnh
-        distinct_id: thị trấn
+        prefecture_id: Tỉnh, Thành phố
+        distinct_id: Nơi sinh sống
 
       user_profile_visibility:
         address_point: address_point  #g
-        birthday: ngày sinh
+        birthday: Sinh nhật
         blood_type: blood_type  #g
-        comment: bình luận
-        first_name: tên
-        last_name: tên họ
+        comment: Bình luận
+        first_name: Tên
+        last_name: Họ
         mail_address: mail_address  #g
-        nickname: biệt danh
-        postcode: postcode  #g
-        sex: quan hệ tình dục
-        user_profile: :activerecord.models.user_profile  #g
+        nickname: Nickname
+        postcode: Mã số bưu điện  #g
+        sex: Giới tính
+        user_profile: User_profile  #g
