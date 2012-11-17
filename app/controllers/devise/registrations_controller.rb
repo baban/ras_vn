@@ -2,13 +2,23 @@
 
 # this source is copied /gems/devise-2.1.0/app/controllers/devise/registrations_controller.rb
 # create action is chenged source
+
+# if logic is changed by default
+# those area is write
+# =begin
+# =end
 class Devise::RegistrationsController < DeviseController
-  prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
+  prepend_before_filter :require_no_authentication, :only => [:new, :create, :cancel]
   prepend_before_filter :authenticate_scope!, :only => [:edit, :update, :destroy]
 
   # GET /resource/sign_up
   def new
     resource = build_resource({})
+    #=begin
+    resource.email = flash[:email]
+    resource.profile.nickname = flash[:nickname]
+    resource.profile.birthday = Date.new( Date.today.year-30, 1, 1 )
+    #=end
     respond_with resource
   end
 
@@ -21,15 +31,14 @@ class Devise::RegistrationsController < DeviseController
         sign_in(resource_name, resource)
         respond_with resource, :location => after_sign_up_path_for(resource)
       else
-        #######################################################################
+        #=begin
         Stream.push( Stream::ADD_USER, resource.id ) # add ras_vn_project!!!
-        #######################################################################
+        #=end
         set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_navigational_format?
         expire_session_data_after_sign_in!
-        #######################################################################
-        # respond_with resource, :location => after_inactive_sign_up_path_for(resource)
+        #=begin
         return redirect_to "/users/registrated" # change redirect action
-        #######################################################################
+        #=end
       end
     else
       clean_up_passwords resource
