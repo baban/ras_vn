@@ -21,12 +21,14 @@ class SessionsController < ApplicationController
            redirect_to root_url, notice: "ログインしました。"
          else
            # ③が無かった = メール確認が済んでいない
-           flash[:nickname] = auth["info"]["name"]
-           flash[:email] = auth["info"]["email"]
            redirect_to root_url, notice: "メールの確認ができていません。仮登録でメールを送信したので、確認してください。"
          end
        else
          # ②が存在しない = Userモデルにレコードがない = Devise認証はまだ => ユーザ登録ページへ
+         flash[:nickname] = auth["info"]["name"]
+         flash[:email] = auth["info"]["email"]
+         logger.info :omniuser
+         logger.info flash.inspect
          redirect_to new_user_registration_path, notice: "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントとはすでに接続済みです。メンバー登録に必要なメールアドレスとパスワードを入力してください。"
        end
     else
@@ -40,6 +42,8 @@ class SessionsController < ApplicationController
       session[:tmp_uid] = auth["uid"]
       flash[:nickname] = auth["info"]["name"]
       flash[:email] = auth["info"]["email"]
+      logger.info :omniuser
+      logger.info flash.inspect
       redirect_to new_user_registration_path, notice: "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントと接続しました。メンバー登録に必要なメールアドレスとパスワードを入力してください。"
     end
   end
