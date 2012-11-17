@@ -17,6 +17,7 @@ class Devise::RegistrationsController < DeviseController
     #=begin
     resource.email = flash[:email]
     resource.profile.nickname = flash[:nickname]
+    resource.profile.sex = { "male" => 1, "female" => 2 }[flash[:sex]]
     resource.profile.birthday = Date.new( Date.today.year-30, 1, 1 )
     #=end
     respond_with resource
@@ -26,10 +27,9 @@ class Devise::RegistrationsController < DeviseController
   def create
     build_resource
     #=begin
-    logger.info resource.inspect
-    # if created omniuser confirm mail is cancel
+    # if user is created by facebook,twitter,google+.
+    # confirmail mail is skipping
     resource.skip_confirmation! if params[:user] and params[:user][:omniuser_id]
-    logger.info resource.inspect
     #=end
     if resource.save
       if resource.active_for_authentication?

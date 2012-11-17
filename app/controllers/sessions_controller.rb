@@ -11,24 +11,22 @@ class SessionsController < ApplicationController
     
     # Omniuserモデルに:providerと:uidが存在してる？
     if omniuser
-      # 存在している(=OAuth認証済み)。続けて以下を調べる。。
-      # User.omniuser_id = omniuser.idとなるレコードが存在するか？
-      # User.confirmed_at に値が入っている = メール確認済みか？
+      # Oauth is authorized
       user = User.find_by_omniuser_id(omniuser.id)
        if user
-         # ②が存在した = Userモデルにレコードがある = Devise認証済み
+         # user is exist( devise authorise is success )
          if user.confirmed_at
-           # ③も存在した = メール確認済み => ログインしてルートページへ
+           # mail confirm is ended
+	   # user is login
            session[:user_id] = omniuser.id
            redirect_to root_url, notice: "Đăng nhập."
          else
-           # ③が無かった = メール確認が済んでいない
            redirect_to root_url, notice: "Tôi đã không thể kiểm tra e-mail. Bây giờ bạn đã gửi một email có đăng ký tạm thời, hãy kiểm tra."
          end
        else
-         # ②が存在しない = Userモデルにレコードがない = Devise認証はまだ => ユーザ登録ページへ
          flash[:nickname] = auth["info"]["name"]
          flash[:email] = auth["info"]["email"]
+         flash[:sex] = auth["extra"] && auth["extra"]["gender"]
          logger.info :omniuser
          logger.info flash.inspect
          redirect_to new_user_registration_path, notice: "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントとはすでに接続済みです。メンバー登録に必要なメールアドレスとパスワードを入力してください。"
@@ -44,6 +42,7 @@ class SessionsController < ApplicationController
       session[:tmp_uid] = auth["uid"]
       flash[:nickname] = auth["info"]["name"]
       flash[:email] = auth["info"]["email"]
+      flash[:sex] = auth["extra"] && auth["extra"]["gender"]
       logger.info :omniuser
       logger.info flash.inspect
       redirect_to new_user_registration_path, notice: "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントと接続しました。メンバー登録に必要なメールアドレスとパスワードを入力してください。"
