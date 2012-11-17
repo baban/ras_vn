@@ -143,6 +143,8 @@ ja:
         recipe: :activerecord.models.recipe  #g
         recipe_comments: コメント
         recipes: レシピ
+        remember_me: ログイン状態を維持する
+        remember_created_at: remember_created_at  #
         remember_created_at: remember_created_at  #g
         reset_password_sent_at: reset_password_sent_at  #g
         reset_password_token: reset_password_token  #g

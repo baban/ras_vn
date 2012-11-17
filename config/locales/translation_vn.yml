@@ -143,6 +143,7 @@ vn:
         recipe: :activerecord.models.recipe  #g
         recipe_comments: Bình luận
         recipes: Công thức
+        remember_me: Để đăng nhập
         remember_created_at: remember_created_at  #g
         reset_password_sent_at: reset_password_sent_at  #g
         reset_password_token: reset_password_token  #g
