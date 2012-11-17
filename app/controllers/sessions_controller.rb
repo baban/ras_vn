@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
        else
          flash[:nickname] = auth["info"] && auth["info"]["name"]
          flash[:email] = auth["info"] && auth["info"]["email"]
-         flash[:profile_image] = auth["info"] && auth["info"]["image"]
+         flash[:image] = auth["info"] && auth["info"]["image"]
          flash[:sex] = auth["extra"] && auth["extra"]["gender"]
          logger.info :omniuser
          logger.info flash.inspect
@@ -43,7 +43,7 @@ class SessionsController < ApplicationController
       session[:tmp_uid] = auth["uid"]
       flash[:nickname] = auth["info"] && auth["info"]["name"]
       flash[:email] = auth["info"] && auth["info"]["email"]
-      flash[:profile_image] = auth["info"] && auth["info"]["image"]
+      flash[:image] = auth["info"] && auth["info"]["image"]
       flash[:sex] = auth["extra"] && auth["extra"]["gender"]
       logger.info :omniuser
       logger.info flash.inspect
