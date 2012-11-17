@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+# http://npb.somewhatgood.com/blog/archives/752
+# FacebookとOmniauthのログイン方法の実装は上のURLを参考にしました
 class SessionsController < ApplicationController
   def callback
     # get omniauth.auth enviroment values
@@ -18,10 +20,10 @@ class SessionsController < ApplicationController
          if user.confirmed_at
            # ③も存在した = メール確認済み => ログインしてルートページへ
            session[:user_id] = omniuser.id
-           redirect_to root_url, notice: "ログインしました。"
+           redirect_to root_url, notice: "Đăng nhập."
          else
            # ③が無かった = メール確認が済んでいない
-           redirect_to root_url, notice: "メールの確認ができていません。仮登録でメールを送信したので、確認してください。"
+           redirect_to root_url, notice: "Tôi đã không thể kiểm tra e-mail. Bây giờ bạn đã gửi một email có đăng ký tạm thời, hãy kiểm tra."
          end
        else
          # ②が存在しない = Userモデルにレコードがない = Devise認証はまだ => ユーザ登録ページへ
