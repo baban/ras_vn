@@ -27,7 +27,7 @@ class Devise::RegistrationsController < DeviseController
     build_resource
     #=begin
     # if created omniuser confirm mail is cancel
-    resource.comfirmed_at=DateTime.now if params[:omniuser_id]
+    resource.comfirmed_at=DateTime.now if params[:user_omniuser_id]
     #=end
     if resource.save
       if resource.active_for_authentication?
