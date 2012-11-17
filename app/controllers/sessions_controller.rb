@@ -24,8 +24,9 @@ class SessionsController < ApplicationController
            redirect_to root_url, notice: "Tôi đã không thể kiểm tra e-mail. Bây giờ bạn đã gửi một email có đăng ký tạm thời, hãy kiểm tra."
          end
        else
-         flash[:nickname] = auth["info"]["name"]
-         flash[:email] = auth["info"]["email"]
+         flash[:nickname] = auth["info"] && auth["info"]["name"]
+         flash[:email] = auth["info"] && auth["info"]["email"]
+         flash[:profile_image] = auth["info"] && auth["info"]["image"]
          flash[:sex] = auth["extra"] && auth["extra"]["gender"]
          logger.info :omniuser
          logger.info flash.inspect
@@ -40,8 +41,9 @@ class SessionsController < ApplicationController
       # sessionにuid値を保存し、ユーザ登録のビューで使えるようにしておく。
       # sessionに保存した値を使ってOmniuserモデルを検索すれば、Omniuser.idを取得できる。
       session[:tmp_uid] = auth["uid"]
-      flash[:nickname] = auth["info"]["name"]
-      flash[:email] = auth["info"]["email"]
+      flash[:nickname] = auth["info"] && auth["info"]["name"]
+      flash[:email] = auth["info"] && auth["info"]["email"]
+      flash[:profile_image] = auth["info"] && auth["info"]["image"]
       flash[:sex] = auth["extra"] && auth["extra"]["gender"]
       logger.info :omniuser
       logger.info flash.inspect

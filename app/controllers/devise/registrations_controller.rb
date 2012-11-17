@@ -19,6 +19,7 @@ class Devise::RegistrationsController < DeviseController
     resource.profile.nickname = flash[:nickname]
     resource.profile.sex = { "male" => 1, "female" => 2 }[flash[:sex]]
     resource.profile.birthday = Date.new( Date.today.year-30, 1, 1 )
+    resource.profile.profile_image = flash[:profile_image]
     #=end
     respond_with resource
   end
