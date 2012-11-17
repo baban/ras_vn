@@ -26,8 +26,10 @@ class Devise::RegistrationsController < DeviseController
   def create
     build_resource
     #=begin
+    logger.info resource.inspect
     # if created omniuser confirm mail is cancel
-    resource.comfirmed_at=DateTime.now if params[:user_omniuser_id]
+    resource.skip_confirmation! if params[:user] and params[:user][:omniuser_id]
+    logger.info resource.inspect
     #=end
     if resource.save
       if resource.active_for_authentication?
@@ -36,7 +38,7 @@ class Devise::RegistrationsController < DeviseController
         respond_with resource, :location => after_sign_up_path_for(resource)
       else
         #=begin
-        Stream.push( Stream::ADD_USER, resource.id ) # add ras_vn_project!!!
+        Stream.push( Stream::ADD_USER, resource.id ) 
         #=end
         set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_navigational_format?
         expire_session_data_after_sign_in!
