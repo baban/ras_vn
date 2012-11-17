@@ -21,8 +21,8 @@ class SessionsController < ApplicationController
            redirect_to root_url, notice: "ログインしました。"
          else
            # ③が無かった = メール確認が済んでいない
-           flash[:nickname] = "aaaaaaa"
-           flash[:email] = "aaaaaaa@bbbb.jp"
+           flash[:nickname] = auth["info"]["name"]
+           flash[:email] = auth["info"]["email"]
            redirect_to root_url, notice: "メールの確認ができていません。仮登録でメールを送信したので、確認してください。"
          end
        else
@@ -38,9 +38,9 @@ class SessionsController < ApplicationController
       # sessionにuid値を保存し、ユーザ登録のビューで使えるようにしておく。
       # sessionに保存した値を使ってOmniuserモデルを検索すれば、Omniuser.idを取得できる。
       session[:tmp_uid] = auth["uid"]
-      flash[:nickname] = "aaaaaaa"
-      flash[:email] = "aaaaaaa@bbbb.jp"
-      redirect_to new_user_registration_path, :notice => "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントと接続しました。メンバー登録に必要なメールアドレスとパスワードを入力してください。"
+      flash[:nickname] = auth["info"]["name"]
+      flash[:email] = auth["info"]["email"]
+      redirect_to new_user_registration_path, notice: "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントと接続しました。メンバー登録に必要なメールアドレスとパスワードを入力してください。"
     end
   end
 
