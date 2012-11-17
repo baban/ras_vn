@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
          # user is exist( devise authorise is success )
          if user.confirmed_at
            # mail confirm is ended
-	   # user is login
+           # user is login
            session[:user_id] = omniuser.id
            redirect_to root_url, notice: "Đăng nhập."
          else
@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
          flash[:sex] = auth["extra"] && auth["extra"]["gender"]
          logger.info :omniuser
          logger.info flash.inspect
-         redirect_to new_user_registration_path, notice: "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントとはすでに接続済みです。メンバー登録に必要なメールアドレスとパスワードを入力してください。"
+         redirect_to new_user_registration_path, notice: "Nó đã được kết nối với tài khoản #{auth["provider"]} của ông #{auth["info"]["name"]}. Xin vui lòng nhập địa chỉ email của bạn và mật khẩu cần thiết để đăng ký thành viên."
        end
     else
       # Omniuserモデルに:providerと:uidが無い = OAuth認証がまだ
@@ -47,13 +47,13 @@ class SessionsController < ApplicationController
       flash[:sex] = auth["extra"] && auth["extra"]["gender"]
       logger.info :omniuser
       logger.info flash.inspect
-      redirect_to new_user_registration_path, notice: "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントと接続しました。メンバー登録に必要なメールアドレスとパスワードを入力してください。"
+      redirect_to new_user_registration_path, notice: "Tôi đã được kết nối với tài khoản #{auth["provider"]} của ông #{auth["info"]["name"]}. Xin vui lòng nhập địa chỉ email của bạn và mật khẩu cần thiết để đăng ký thành viên. "
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: "site logouted"
+    redirect_to root_url, notice: "Bạn đã đang xuất"
   end
 end
 
