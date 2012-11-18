@@ -1,6 +1,17 @@
-<ul id="recipe_menus">
-  <li><%=link_to t(:show_link, scope:"views.kitchens"), action:"show", id: params[:id] %></li>
-  <li><%=link_to t(:recipe_link, scope:"views.kitchens"), action:"recipes", id: params[:id] %></li>
-  <li><%=link_to t(:recipe_comment_link, scope:"views.kitchens"), action:"recipe_comments", id: params[:id] %></li>
-  <li><%=link_to t(:diary_link, scope:"views.kitchens"), controller:"diary", action:"index", user_id: params[:id] %></li>
-</ul>
+<div id="content_header">
+  <ul id="content_menu_list">
+    <% {
+      t(:show_link, scope:"views.kitchens") => { controller:"kitchens", action:"show", id: params[:id] },
+      t(:recipe_link, scope:"views.kitchens") => { controller:"kitchens", action:"recipes", id: params[:id] },
+      t(:recipe_comment_link, scope:"views.kitchens") => { controller:"kitchens", action:"recipe_comments", id: params[:id] },
+      t(:diary_link, scope:"views.kitchens") => { controller:"diary", action:"index", user_id: params[:id] },
+    }.each do |title,link| %>
+      <% if params[:controller] == link[:controller] and params[:action] == link[:action] %>
+        <li class="current"><%= link_to title, link %></li>
+      <% else %>
+        <li><%= link_to title, link %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+

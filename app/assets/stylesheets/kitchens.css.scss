@@ -1,51 +1,125 @@
 @charset "UTF-8";
 
-ul#recipe_menus {
+@charset "UTF-8";
+
+@import "parts/base";
+
+.mypage_content {
+  border:solid 1px #caa;
+  padding-bottom:3em;
+}
+
+.paginate {
+  background-color:transparent;
+}
+
+.rec_cat4 {
+  border:solid 1px #caa;
+}
+
+ul#content_menu_list > li {
+  display:block;
+  width:auto;
+  float:left;
+  background-color:#efe7de;
+  margin:0 0.3em 0 0;
+  padding:0;
   border:solid 1px #aaa;
-  padding:0.5em 0 0 0;
-  li {
-    border:solid 1px #aaa;
-    border-style:solid solid none solid;
-    margin:0.5em 0.1em 0 0.1em;
-    display:inline;
+  border-style:solid solid none solid;
+  border-radius: 10px 10px 0px 0px;
+  a {
+    display:block;
+    width:auto;
+    min-height:1.5em;
+    min-width:6em;
+    padding:0.6em 0.7em 0.4em 0.7em;
   }
 }
 
-ul.recipes {
-  li.recipe {
+ul#content_menu_list > li.current {
+  background-color:#fff;
+}
+
+ul#content_menu_list:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.cate01 {
+  background-color:transparent !important;
+  border-style:none;
+}
+
+#content_body {
+}
+
+h2 {
+  margin:0.5em 1em;
+  color:orange;
+}
+
+table#profile_image {
+  margin-bottom:2em;
+}
+
+table#profiles {
+  border:solid 3px #caa;
+  border-collapse:separate;
+  tr {
     border:solid 1px #aaa;
-    dl.recipe{
-      margin:0;
-      padding:0;
-      dt.image {
-        width:100px;
-        height:100px;
-        float:left;
-        border:dotted 1px #aaa;
-      }
-    }
-    dl.recipe:after {
-      content:"";
-      display:block;
-      clear:both;
+    border-style:none none dashed none;
+  }
+  th, td {
+    border:none 1px #aaa;
+    border-style:none none dashed none;
+    padding:8px 10px 4px 10px;
+  }
+  th {
+    border-style:none dashed dashed none;
+  }
+  td {
+    border-style:none none dashed none;
+  }
+  tr:last-child {
+    th, td {
+      border-style:none;
     }
   }
 }
 
-h3.foodstuffs_title{
-  font-size:1em;
-  font-weight:normal;
-  width:3em;
-  display:inline;
+.mypage_content {
+  background-color:white;
 }
 
-ul.foodstuffs {
-  display:inline;
-  li { display:inline; }
+.content {
+  margin:0.5em 1em;
 }
 
-ul.recipe_status {
-  li { display:inline; }
+#follow_button_area {
+  float:right;
+}
+
+article {
+  border:none 1px #eaa;
+  border-style:none none dashed none;
+  margin-bottom:0.7em;
+}
+
+article:after {
+  @include separater;
+  height:3px;
+}
+
+.icon {
+  float:left;
+  margin:0 3px 0 0;
+  vertical-align:top;
+}
+
+.follow_button {
+  float:right;
+  clear:none;
 }
 
 /* recipe_comments */
