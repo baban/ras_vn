@@ -2,25 +2,25 @@
 <div id="content_body" class="bace_bg">
 	<%= render partial:"mypage/content_header" %>
 	<div class="clearfix mypage_content">
-		<h2 class="txt20">マイレシピ一覧</h2>
+		<h2 class="txt20">Danh sách các công thức nấu ăn</h2>
 		<article class="cate01">
 			<div class="paginate"><%= paginate @recipes %></div>
 			<% @recipes.each do |recipe| %>
 				<section class="rec_cat4 clearfix">
 					<div class="status">
-						<% if recipe.public %><div class="public">公開</div><% else %><div class="editing">未公開</div><% end %>
+						<% if recipe.public %><div class="public">Công khai</div><% else %><div class="editing">Không công khai</div><% end %>
 					</div>
-					<div style="text-align:right;"><%=link_to "編集する", recipe_url(recipe) %></div>
+					<div style="text-align:right;"><%=link_to "chỉnh sửa", recipe_url(recipe) %></div>
 					<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
 					<div class="txt">
-						<h1 class="txt16"><%= link_to truncate(recipe.title, length: 22 ), controller:"recipes", action:"show", id: recipe.id %></h1>
+						<h1 class="txt16"><%= link_to truncate( recipe.title, length: 22 ), controller:"recipes", action:"show", id: recipe.id %></h1>
 						<p class="name">by <%= link_to recipe.user.profile.nickname %></p>
 						<h2>
 							<%= truncate( recipe.description, length: 50 ) %>
 							<div class="info_area">
-								公開：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
-								更新：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
-								レシピID：<span><%= recipe.id %></span>
+								<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+								<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+								<%= t(:id, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.id %></span>
 							</div>
 						</h2>
 					</div>
