@@ -1,17 +1,19 @@
-<h2>日記</h2>
 
-<div id="conent_body" class="section">
-  <% if user_signed_in? %>
-    <div id="diary_create_link">
-      <%= link_to t(:new, scope:"views.diary"), action:"new" %>
-    </div>
-  <% end %>
-  <div id="articles" class="section">
-    <% @diary.each do |d| %>
-      <div class="article">
-        <h3><%= link_to d.title, action:"show", id: d.id %></h3>
-        <div><%= d.content %></div>
-      </div>
-    <% end %>
-  </div>
+<div class="bace_bg">
+	<div class="contents_bg clearfix">
+		<% if user_signed_in? %>
+			<div id="diary_create_link">
+			<%= link_to t(:new, scope:"views.diary"), action:"new" %>
+			</div>
+		<% end %>
+		<% @diary.each do |d| %>
+			<article>
+				<h1 class="txt20"><%= d.title %></h1>
+				<div>
+					<%=hbr d.content %>
+				</div>
+			</article>
+		<% end %>
+	</div>
 </div>
+

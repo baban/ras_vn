@@ -1,7 +1,0 @@
-<h1>Newsfeeds</h1>
-
-<ul>
-  <% @newsfeeds.each do |feed| %>
-    <li><%= link_to feed.title, newsfeed_url(feed) %></li>
-  <% end %>
-</ul>

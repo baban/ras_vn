@@ -6,11 +6,11 @@
 		<div class="main_clm">
 		<!--ttl_page-->
 		<section class="colom_ttl_area">
-			<h1 class="ttl_cate flo_l">レシピカテゴリ</h1>
+			<h1 class="ttl_cate flo_l">công thức thể loại</h1>
 			<div class="search search_cate flo_r">
 				<%= form_for :word, url:"", html:{ class:"cl" } do |f| %>
 					<div class="box radi5">
-						<%= text_field_tag :word, "", placeholder:"カテゴリ名を検索", class:"radi5" %>
+						<%= text_field_tag :word, "", placeholder:"Tìm kiếm theo tên thể loại", class:"radi5" %>
 						<%= f.button "", class:"radi3" %>
 					</div>
 				<% end %>
@@ -30,7 +30,7 @@
 							<% end %>
 						</ul>
 					</div>
-					<p class="more arr txt11"><%= link_to "もっと見る", recipe_foods_url( recipe_food_genre_id: genre.id ) %></p>
+					<p class="more arr txt11"><%= link_to "Xem tiếp...", recipe_foods_url( recipe_food_genre_id: genre.id ) %></p>
 				</section>
 			<% end %>
 		</article>

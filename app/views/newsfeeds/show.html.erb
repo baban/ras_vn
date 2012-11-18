@@ -1,4 +1,12 @@
-<h1><%= @newsfeed.title %></h1>
-<div id="conent" class="section">
-  <%=raw @newsfeed.content %>
+
+<div class="bace_bg">
+	<div class="contents_bg clearfix">
+		<article>
+			<h1 class="txt20"><%= @newsfeed.title %></h1>
+			<div>
+				<%=hbr @newsfeed.content %>
+			</div>
+		</article>
+	</div>
 </div>
+

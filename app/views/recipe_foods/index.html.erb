@@ -20,8 +20,7 @@
 			<aside>
 				<div class="side_contents_l">
 					<ul class="footstamps">
-            <%# TODO: 正しいリンクを張っておく %>
-            <li><a href="/category/list" class="back_to_category_list">«カテゴリ一覧</a></li>
+						<li><a href="/category/list" class="back_to_category_list">«Danh sách chuyên mục</a></li>
 						<li class="indent_level_1"><%= @food_genre.name %></li>
 						<ul class="sub_categories">
 							<% @food_genre.foods.each do |food| %>
@@ -53,10 +52,10 @@
 					<div class="clearfix">
 						<div class="order_switch">
 							<% if @order_mode=="new" %><%= image_tag "/assets/common/ico_crown.png", class:"ico_crown", alt:"" %><% end %>
-							<%= link_to raw("<span> 新着順 </span>"), params.merge( order_mode: "new" ) %>
+							<%= link_to raw("<span> mới nhất </span>"), params.merge( order_mode: "new" ) %>
 							<span class="order_price"> | </span>
 							<% if @order_mode=="ranking" %><%= image_tag "/assets/common/ico_crown.png", class:"ico_crown", alt:""%><% end %>
-							<%= link_to raw("<span> 人気順 </span>"), params.merge( order_mode: "ranking" ) %>
+							<%= link_to raw("<span> bởi sự phổ biến </span>"), params.merge( order_mode: "ranking" ) %>
 						</div>
 						<div class="mini_paginate">
 							<%= paginate @recipes %>
@@ -71,9 +70,9 @@
 								<h2>
 									<%= recipe.description %>
 									<div class="info_area">
-										公開：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
-										更新：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
-										レシピID：<span><%= recipe.id %></span>
+										<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+										<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+										<%= t(:id, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.id %></span>
 									</div>
 								</h2>
 							</div>
@@ -81,9 +80,7 @@
 					<% end %>
 				</article>
 				<!--pagination-->
-				<div class="paginate">
-					<%= paginate @recipes %>
-				</div>
+				<div class="paginate"><%= paginate @recipes %></div>
 				<!--pagination-->
 			</div>
 		</div>
