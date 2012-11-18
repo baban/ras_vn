@@ -60,12 +60,16 @@ h2 {
 }
 
 table#profile_image {
-  margin-bottom:2em;
+  margin:1em 2em;
+  clear:none;
+  float:left;
 }
 
 table#profiles {
   border:solid 3px #caa;
   border-collapse:separate;
+  clear:none;
+  float:left;
   tr {
     border:solid 1px #aaa;
     border-style:none none dashed none;
@@ -86,6 +90,10 @@ table#profiles {
       border-style:none;
     }
   }
+}
+
+#recipes:before {
+  @include separater;
 }
 
 .mypage_content {
@@ -122,14 +130,3 @@ article:after {
   clear:none;
 }
 
-/* recipe_comments */
-
-ul.recipe_comments {
-  li.recipe_comment {
-    border:solid 1px #aaa;
-    width:10em;
-    height:12em;
-    float:left;
-    clear:none;
-  }
-}

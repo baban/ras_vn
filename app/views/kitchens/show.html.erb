@@ -54,8 +54,8 @@
 					</tr>
 				<% end %>
 			</table>
-			<h2 class="txt20">mới nhất công thức nấu ăn</h2>
-			<div>
+			<div id="recipes">
+ 				<h2 class="txt20">mới nhất công thức nấu ăn</h2>
 				<% @recipes.each do |recipe| %>
 					<section class="rec_cat4 clearfix">
 						<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>

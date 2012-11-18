@@ -1,29 +1,29 @@
-<h2><%= @profile.nickname %>のキッチン</h2>
+<div id="content_body" class="section bace_bg">
+	<%= render partial:"content_header" %> 
+	<div id="mypage_content" class="clearfix mypage_content" >
+		<h2>Recipe</h2>
+		<div class="paginate">
+			<%= paginate @recipes %>
+		</div>
+		<div id="recipes">
+			<% @recipes.each do |recipe| %>
+				<section class="rec_cat4 clearfix">
+					<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
+					<div class="txt">
+						<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
+						<p>by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %></p>
+						<h2>
+							<p><%= truncate(recipe.description, length: 50) %></p>
+							<div class="info_area">
+								<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+								<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+								<%= t(:id, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.id %></span>
+							</div>
+						</h2>
+					</div>
+				</section>
+			<% end %>
+		</div>
+	</div>
+</div>
 
-<%= render partial:"content_header" %> 
-
-<h2>レシピ</h2>
-<%= paginate @recipes %>
-<ul class="recipes">
-  <% @recipes.each do |recipe| %>
-    <li class="recipe">
-      <dl class="recipe">
-        <dt><%=link_to recipe.title, recipes_url(recipe) %></dt>
-        <dd>
-          <p><%= truncate(recipe.description) %></p>
-          <h3 class="foodstuffs_title">材料</h3>
-          <ul class="foodstuffs">
-            <% recipe.foodstuffs.each do |food| %>
-              <li><%= food.name %></li>
-            <% end %>
-          </ul>
-          <ul class="recipe_status">
-            <li>作成:<%= recipe.created_at.strftime("%Y/%m/%d") %></li>
-            <li>公開:<%= recipe.updated_at.strftime("%Y/%m/%d") %></li>
-            <li>レシピID:<%= recipe.id %></li>
-          </ul>
-        </dd>
-      </dl>
-    </li>
-  <% end %>
-</ul>

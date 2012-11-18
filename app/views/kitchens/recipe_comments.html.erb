@@ -1,18 +1,27 @@
-<h2><%= @profile.nickname %>のキッチン</h2>
+<div id="content_body" class="section bace_bg">
+	<%= render partial:"content_header" %> 
+	<div id="mypage_content" class="clearfix mypage_content" >
+		<h2 class="txt20">Đăng report</h2>
+		<div class="paginate"><%= paginate @recipe_comments %></div>
+		<div id="recipes">
+			<% @recipe_comments.each do |comment| %>
+				<div class="cate01 clearfix">
+					<section class="rec_cat5 clearfix">
+						<% if comment.image.present? %><%= image_tag comment.image.url(:thumb), size:"280x466", alt:"" %><% end %>
+						<div class="txt">
+							<h1 class="txt16"><%= comment.title %></h1>
+							<p>by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
+							<%= comment.content %>
+							<div class="info_area">
+								<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+								<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+							</div>
+						</div>
+					</section>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
 
-<%= render partial:"content_header" %> 
 
-<h2>つくれぽ</h2>
-<%= paginate @recipe_comments %>
-<ul class="recipe_comments">
-  <% @recipe_comments.each do |comment| %>
-    <li class="recipe_comment">
-      <dl class="recipe_comment">
-        <dt><%=image_tag comment.image, alt:"" %></dt>
-        <dd>
-          <p><%= truncate(comment.content) %></p>
-        </dd>
-      </dl>
-    </li>
-  <% end %>
-</ul>

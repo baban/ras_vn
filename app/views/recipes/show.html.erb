@@ -66,7 +66,7 @@
 					</div>
 				</div>
 			</article>
-			
+
 			<div class="cate01 clearfix" id="recipe_steps">
 				<% @recipe.steps.each.with_index(1) do |step,i| %>
 					<section class="rec_cat5">
@@ -87,10 +87,10 @@
 							<div class="txt">
 								<h1 class="txt16"><%= comment.title %></h1>
 								<p>by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
-								<%= comment.content %>
+								<p><%= comment.content %></p>
 								<div class="info_area">
-									Created：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
-									Updated：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+									<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+									<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
 								</div>
 							</div>
 						</section>

@@ -3,15 +3,15 @@
 
 html>/**/body { font-size: 13px;  line-height: 1.6;} /* except Win IE */
 /* for IE6 */
-* html body {font-size:81%;}
+* html body { font-size:81%; }
 /* for IE7 */
 *:first-child+html body {font-size: 81%;}
-.txt10{ font-size: 77%; }	/* 10px */
-.txt11 { font-size: 85%;}	/* 11px */
+.txt10 { font-size: 77%; }	/* 10px */
+.txt11 { font-size: 85%; }	/* 11px */
 .txt12 { font-size: 93%; }	/* 12px */
-.txt14 { font-size: 108%;}	/* 14px */
-.txt16 { font-size: 124%;}	/* 16px */
-.txt20 { font-size: 154%;}	/* 20px */
+.txt14 { font-size: 108%; }	/* 14px */
+.txt16 { font-size: 124%; }	/* 16px */
+.txt20 { font-size: 154%; }	/* 20px */
 .txt25 { font-size: 193%; line-height:30px;  }	/* 25px */
 .txt26 { font-size: 200%; }	/* 26px */
 .txt30 { font-size: 240%; }	/* 26px */
@@ -73,7 +73,7 @@ input {
   font-size:10px;
 }
 
-/*header*/
+/* header */
 header {
   height:91px;
   background:url("/assets/common/hd_bg.png") repeat-x top;
