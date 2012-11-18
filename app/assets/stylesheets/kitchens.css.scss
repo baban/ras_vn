@@ -41,17 +41,10 @@ ul#content_menu_list > li.current {
 }
 
 ul#content_menu_list:after {
+  @include clearfix;
   content:"";
   display:block;
   clear:both;
-}
-
-.cate01 {
-  background-color:transparent !important;
-  border-style:none;
-}
-
-#content_body {
 }
 
 h2 {
@@ -93,7 +86,7 @@ table#profiles {
 }
 
 #recipes:before {
-  @include separater;
+  @include clearfix;
 }
 
 .mypage_content {
@@ -115,7 +108,7 @@ article {
 }
 
 article:after {
-  @include separater;
+  @include clearfix;
   height:3px;
 }
 

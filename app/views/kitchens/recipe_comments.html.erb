@@ -1,6 +1,6 @@
 <div id="content_body" class="section bace_bg">
 	<%= render partial:"content_header" %> 
-	<div id="mypage_content" class="clearfix mypage_content" >
+	<div id="mypage_content" class="clearfix mypage_content main_clm">
 		<h2 class="txt20">Đăng report</h2>
 		<div class="paginate"><%= paginate @recipe_comments %></div>
 		<div id="recipes">
@@ -22,6 +22,7 @@
 			<% end %>
 		</div>
 	</div>
+	<%=render partial:"layouts/right_side_content" %>
 </div>
 
 
