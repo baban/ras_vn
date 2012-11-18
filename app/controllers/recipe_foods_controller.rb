@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class RecipeFoodsController < ApplicationController
-  before_filter :authenticate_user!,   except:[:new,:create]
+  before_filter :authenticate_user!, only:[:new,:create]
 
   def index
     top_content = ToppageContent.first
@@ -34,3 +34,4 @@ class RecipeFoodsController < ApplicationController
     redirect_to action:"new"
   end
 end
+
