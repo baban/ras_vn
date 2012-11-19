@@ -7,4 +7,7 @@ Movie削除ボタン
 production.logのローテーション
 informationのデザイン
 日記のデザイン
-
+カテゴリ一覧の動作、戻る
+カテゴリのバグ修正
+編集中になっていない
+streamがおかしい

@@ -31,4 +31,50 @@ describe Recipe do
       end
     end
   end
+
+  describe ".list" do
+    fixtures :recipe_food_genres, :recipe_foods
+    context "blank parameter" do
+      before do
+        @recipes = Recipe.list
+      end
+      it "class ActiveRecord::Relation" do
+        @recipes.should be_instance_of ActiveRecord::Relation
+      end
+      it "element is Recipe" do
+        @recipes.first.should be_instance_of Recipe
+      end
+      it "select created_at is nearest" do
+        @recipes.first.id.should == 1
+      end
+    end
+    context "recipe_food_id parameter" do
+      before do
+        @recipes = Recipe.list( recipe_food_id: 10 )
+      end
+      it "class ActiveRecord::Relation" do
+        @recipes.should be_instance_of ActiveRecord::Relation
+      end
+      it "element is Recipe" do
+        @recipes.first.should be_instance_of Recipe
+      end
+      it "select created_at is nearest" do
+        @recipes.first.id.should == 121
+      end
+    end
+    context "recipe_food_genre_id parameter" do
+      before do
+        @recipes = Recipe.list( recipe_food_genre_id: 2 )
+      end
+      it "class ActiveRecord::Relation" do
+        @recipes.should be_instance_of ActiveRecord::Relation
+      end
+      it "element is Recipe" do
+        @recipes.first.should be_instance_of Recipe
+      end
+      it "select created_at is nearest" do
+        @recipes.first.id.should == 136
+      end
+    end
+  end
 end

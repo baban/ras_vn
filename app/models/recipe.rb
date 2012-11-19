@@ -51,6 +51,22 @@ class Recipe < ActiveRecord::Base
     recipe
   end
 
+  def self.top_content
+    top_content = ToppageContent.first
+    top_content && Recipe.find_by_id(top_content.recommend_recipe_genre_id)
+  end
+
+  def self.list( params={}, order_mode=nil )
+    food_genre = RecipeFoodGenre.where( id: params[:recipe_food_genre_id] ).first
+
+    foods = RecipeFood.scoped
+    foods = RecipeFood.where( id: params[:recipe_food_id] ) if params[:recipe_food_id]
+    foods = food_genre.foods if food_genre
+
+    Recipe.where( recipe_food_id: foods.pluck(:id) )
+          .order( (order_mode=="new") ? " created_at DESC " : " view_count DESC " )
+  end
+
   def view_count_increment!
     self.view_count+=1
     self.save

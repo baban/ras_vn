@@ -1,11 +1,7 @@
 
 <div class="bace_bg">
 	<div class="contents_bg clearfix">
-		<% if user_signed_in? %>
-			<div id="diary_create_link">
-			<%= link_to t(:new, scope:"views.diary"), action:"new" %>
-			</div>
-		<% end %>
+		<% if user_signed_in? %><div id="diary_create_link" class="rbtn"><%= link_to t(:new, scope:"views.diary"), { action:"new" }, class:"radi10" %></div><% end %>
 		<% @diary.each do |d| %>
 			<article>
 				<h1 class="txt20"><%= d.title %></h1>

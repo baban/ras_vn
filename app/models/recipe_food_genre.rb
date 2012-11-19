@@ -19,4 +19,14 @@ class RecipeFoodGenre < ActiveRecord::Base
       genre.save
     end
   end
+
+  # get food_genre use recipe_food_genre_id or recipe_food_id parameter
+  def self.choice(params)
+    # get recipe_food_genre_id
+    food = params[:recipe_food_id] && RecipeFood.where( id: params[:recipe_food_id] ).first
+    recipe_food_genre_id = (params[:recipe_food_genre_id] or food.try(:recipe_food_genre_id))
+    genre = self
+    genre = genre.where( id: recipe_food_genre_id ) if recipe_food_genre_id
+    genre.first
+  end
 end
