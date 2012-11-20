@@ -9,7 +9,7 @@ recipes_0:
   love_count: 0
   eatstyle_id: 0
   amount: 0
-  view_count: 0
+  view_count: 1
   recipe_food_id: 1
   deleted_at: null
   created_at: 2011-01-24 00:00:00 UTC
@@ -25,7 +25,7 @@ recipes_1:
   love_count: 1
   eatstyle_id: 0
   amount: 0
-  view_count: 0
+  view_count: 2
   recipe_food_id: 1
   deleted_at: null
   created_at: 2010-05-27 00:00:00 UTC
@@ -41,7 +41,7 @@ recipes_2:
   love_count: 0
   eatstyle_id: 0
   amount: 0
-  view_count: 0
+  view_count: 3
   recipe_food_id: 1
   deleted_at: null
   created_at: 2011-12-29 00:00:00 UTC
@@ -57,7 +57,7 @@ recipes_3:
   love_count: 0
   eatstyle_id: 0
   amount: 0
-  view_count: 0
+  view_count: 4
   recipe_food_id: 1
   deleted_at: null
   created_at: 2010-08-29 00:00:00 UTC
@@ -73,7 +73,7 @@ recipes_4:
   love_count: 0
   eatstyle_id: 0
   amount: 0
-  view_count: 0
+  view_count: 5
   recipe_food_id: 1
   deleted_at: null
   created_at: 2012-03-06 00:00:00 UTC
@@ -89,7 +89,7 @@ recipes_5:
   love_count: 0
   eatstyle_id: 0
   amount: 0
-  view_count: 0
+  view_count: 6
   recipe_food_id: 1
   deleted_at: null
   created_at: 2012-03-10 00:00:00 UTC
@@ -105,7 +105,7 @@ recipes_6:
   love_count: 0
   eatstyle_id: 0
   amount: 0
-  view_count: 0
+  view_count: 5
   recipe_food_id: 1
   deleted_at: null
   created_at: 2012-02-20 00:00:00 UTC
@@ -121,7 +121,7 @@ recipes_7:
   love_count: 0
   eatstyle_id: 0
   amount: 0
-  view_count: 0
+  view_count: 4
   recipe_food_id: 1
   deleted_at: null
   created_at: 2012-03-05 00:00:00 UTC
@@ -137,7 +137,7 @@ recipes_8:
   love_count: 0
   eatstyle_id: 0
   amount: 0
-  view_count: 0
+  view_count: 3
   recipe_food_id: 1
   deleted_at: null
   created_at: 2011-09-09 00:00:00 UTC
@@ -153,7 +153,7 @@ recipes_9:
   love_count: 0
   eatstyle_id: 0
   amount: 0
-  view_count: 0
+  view_count: 2
   recipe_food_id: 1
   deleted_at: null
   created_at: 2011-10-27 00:00:00 UTC

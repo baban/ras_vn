@@ -1,6 +1,8 @@
 @charset "utf-8";
 /*FONT*/
 
+@import "parts/base";
+
 html>/**/body { font-size: 13px;  line-height: 1.6;} /* except Win IE */
 /* for IE6 */
 * html body { font-size:81%; }
@@ -78,31 +80,31 @@ header {
   height:91px;
   background:url("/assets/common/hd_bg.png") repeat-x top;
   margin-bottom:5px;
-}
-
-header h1 {
-  margin-left:100px;
-  height:40px;
-  line-height:40px;
-  float:left;
-  margin-right:20px;
-}
-
-header .inner {
-  width:970px;
-  margin:0 auto;
-  padding:0 10px;
-  position:relative;
-}
-
-header .mk {
-  text-indent:-9999px;
-  height:89px;
-  width:89px;
-  background:url("/assets/common/rogo_icon.png") no-repeat;
-  position:absolute;
-  top:0;
-  left:10px;
+  h1 {
+    margin-left:100px;
+    height:40px;
+    line-height:40px;
+    float:left;
+    margin-right:20px;
+  }
+  .inner {
+    width:970px;
+    margin:0 auto;
+    padding:0 10px;
+    position:relative;
+  }
+  .mk {
+    text-indent:-9999px;
+    height:89px;
+    width:89px;
+    background:url("/assets/common/rogo_icon.png") no-repeat;
+    position:absolute;
+    top:0;
+    left:10px;
+  }
+  &:after {
+    @include clearfix;
+  }
 }
 
 header nav {
@@ -268,7 +270,7 @@ footer .inner li {
 }
 
 #error_explanation {
-  color:red;
+  color:red !important;
 }
 
 .alert {

@@ -44,8 +44,8 @@ describe Recipe do
       it "element is Recipe" do
         @recipes.first.should be_instance_of Recipe
       end
-      it "select created_at is nearest" do
-        @recipes.first.id.should == 1
+      it "select view_count is higiest" do
+        @recipes.first.id.should == 6
       end
     end
     context "recipe_food_id parameter" do
@@ -74,6 +74,22 @@ describe Recipe do
       end
       it "select created_at is nearest" do
         @recipes.first.id.should == 136
+      end
+    end
+    context "sort by new" do
+      before do
+        @recipes = Recipe.list( { recipe_food_genre_id: 1 }, "new" )
+      end
+      it "select created_at is nearest element" do
+        @recipes.first.id.should == 11
+      end
+    end
+    context "sort by ranking" do
+      before do
+        @recipes = Recipe.list( { recipe_food_genre_id: 1 }, "ranking" )
+      end
+      it "select created_at is nearest element" do
+        @recipes.first.id.should == 6
       end
     end
   end
