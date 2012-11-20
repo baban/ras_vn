@@ -42,10 +42,8 @@
 					<p><%=hbr @recipe.description %></p>
 					<div class="clearfix">
 						<p class="user_name">
-							<span class="flo_l">
-								<%= image_tag "common/user_ico.png", width:"22", height:"22", alt:"Ẩm Thực Việt" %>
-							</span>
-							<span class="flo_l"><%= link_to @recipe.user.profile.nickname, kitchen_url(@user) %></span>
+							<span class="flo_l"><%= image_tag "common/user_ico.png", width:"22", height:"22", alt:"Ẩm Thực Việt" %></span>
+							<span class="flo_l"><%= link_to @recipe.user.profile.nickname, kitchen_url(@recipe.user) %></span>
 						</p>
 					</div>
 					<div id="ingredients">
