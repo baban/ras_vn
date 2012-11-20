@@ -2,6 +2,7 @@
 
 class RecipesController < ApplicationController
   before_filter :authenticate_user!,   except: %W[index show]
+  before_filter :publiced_filter,      only: %W[show]
   before_filter :editable_user_filter, only: %W[edit update destroy]
   before_filter :advertisement_filter, except: %W[create destroy]
 
@@ -12,7 +13,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
+    @recipe ||= Recipe.find(params[:id])
     @recipe_comment = RecipeComment.new
 
     @bookmark = Bookmark.find_by_recipe_id_and_user_id( params[:id], current_user.try(:id) ) || Bookmark.new
@@ -34,8 +35,6 @@ class RecipesController < ApplicationController
       @recipe.save
 
       @recipe.create_draft( params[:recipe] )
-
-      Stream.push( Stream::ADD_RECIPE, current_user.id, @recipe )
     end
 
     redirect_to( { action:'edit', id: @recipe.id }, notice: "create completed" )
@@ -53,8 +52,7 @@ class RecipesController < ApplicationController
       @recipe = Recipe.find(params[:id])
       @draft = @recipe.draft
       @draft.attributes= params[:recipe]
-      @draft.user_id= current_user.id
-    
+      @draft.user_id= current_user.id    
       @draft.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
       @draft.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
       @draft.post_food_id( params )
@@ -71,6 +69,15 @@ class RecipesController < ApplicationController
     end
   end
 
+  def publication
+    @recipe = Recipe.find(params[:id])
+    @recipe.public = true
+    @recipe.save
+    Stream.push( Stream::ADD_RECIPE, current_user.id, @recipe )
+
+    redirect_to action:"show", id: @recipe.id
+  end
+
   # if love button is cliced!
   # this action is called and, return json value set
   def love
@@ -81,6 +88,11 @@ class RecipesController < ApplicationController
   end
 
   private
+  def publiced_filter
+    @recipe = Recipe.where( id: params[:id] ).first
+    return redirect_to(recipe_food_genres_url, alert:"存在しないレシピです") if !@recipe.try(:public) and @recipe.user_id != current_user.try(:id)
+  end
+
   def editable_user_filter
     return redirect_to( action:'index' ) unless params[:id]
     return redirect_to( recipes_url, alert: t("views.recipes.create.other_user_recipe_alert") ) unless my_recipe?

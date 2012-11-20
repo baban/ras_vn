@@ -14,6 +14,9 @@
 						<%= f.hidden_field :user_id, value: current_user.id %>
 						<%= f.submit (bookmarked? ? t(:unbookmark, scope:"views.recipes.show") : t(:bookmark, scope:"views.recipes.show")) %>
 					<% end %>
+					<% unless @recipe.public %>
+						<div class="rbtn"><%= link_to "公開する", { action:"publication", id: @recipe.id }, class:"radi10" %></div>
+					<% end %>
 				<% else %>
 				<% end %>
 				<h1 class="ttl_recipe"><%= @recipe.title %></h1>
@@ -114,4 +117,4 @@
 	</div>
 	<!--contents-->
 </div>
-<%= render partial:"layouts/content_footer" %>
+
