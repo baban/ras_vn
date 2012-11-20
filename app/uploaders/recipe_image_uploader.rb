@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 class RecipeImageUploader < BaseUploader
+  process resize_to_fit: [640,480]
   version :thumb do
     process resize_to_fill: [140,50], watermarking: []
   end
@@ -15,9 +16,6 @@ class RecipeImageUploader < BaseUploader
   end
   version :detail_large_thumb do
     process resize_to_fill: [280,466], big_watermarking: []
-  end
-  version :step_thumb do
-    process resize_to_fill: [136,136], big_watermarking: []
   end
 
   def big_watermarking

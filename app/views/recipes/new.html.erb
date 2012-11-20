@@ -5,13 +5,12 @@
 	<div class="contents_bg clearfix">
 		<h2 class="txt20">レシピ作成</h2>
 		<%= semantic_form_for @recipe, html:{ multipart: true } do |f| %>
-			<% unless @recipe.valid? %>
+			<% if @recipe.errors.any? %>
 				<div id="error_explanation">
-					<% @recipe.errors.each do |key,errormes| %>
-						<p><%= errormes %></p>
+					<% @recipe.errors.full_messages.each do |mes| %>
+						<p><%= mes %></p>
 					<% end %>
 				</div>
-				<br />
 			<% end %>
 			<p><%= f.label :title %></p>
 			<p><%= f.text_field :title, value: @recipe.title, size: 70 %></p>
