@@ -2,6 +2,9 @@ vn:
   activerecord:
     errors:
       messages:
+        carrierwave_processing_error: "画像をリサイズ出来ませんでした"
+        carrierwave_integrity_error: "画像ファイルではありません"
+        carrierwave_download_error: "URLから画像を取得できませんでした"
         record_invalid: "Lỗi hệ thống"
       models:
         user:
