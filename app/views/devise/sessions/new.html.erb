@@ -1,8 +1,7 @@
 <div class="att_bg radi10">
-	<h1 class="txt16">đăng nhập</h1>
+	<h1 class="txt16">Đăng Nhập</h1>
 	<div class="login_box clearfix">
 		<div class="login_ind flo_l line">
-			<h2>Đăng nhập với Nhahang24 ID</h2>
 			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 				<div>
 					<%= f.label :email %>
@@ -20,22 +19,22 @@
 						<%= f.label :remember_me, style:"display:inline;" %>
 					</div>
 				<% end %>
-				<div class="rbtn cl"><%= f.submit "đăng nhập", id:"sign_in", class:"cblu radi10 txt12" %></div>
-				<p class="txt11 cap"><%= link_to "Mọi người đã quên mật khẩu, nhấn vào đây.", controller:"" %></p>
+				<div class="rbtn cl"><%= f.submit "Đăng Nhập", id:"sign_in", class:"cblu radi10 txt12" %></div>
+				<p class="txt11 cap"><%= link_to "Quên mật khẩu?", controller:"" %></p>
 				<%= render "links" %>
 			<% end %>
 		</div>
 
 		<div class="login_ind flo_r" id="get_account_area">
-			<h3 class="txt14 fo_b">Nếu bạn không có một ID, nhấn vào đây.</h3>
+			<h3 class="txt14">Hãy đăng kí ID tại đây!</h3>
 			<div class="rbtn cl">
 				<%= link_to "Đăng ký thành viên", new_user_registration_url, class:"cblu radi10 txt12" %>
 			</div>
 		</div>
 
 		<div class="cl clearfix">
-			<h2 class="fo_b">Đăng nhập với ID của các dịch vụ bên ngoài</h2>
-			<p>Sử dụng tài khoản Facebook, Twitter, Google+, các bước đơn giản có thể được đăng ký thành viên.</p>
+			<br />
+			<h2 class="fo_b"><p>Sử dụng tài khoản Facebook, Twitter, Google+ để đăng kí thành viên !</p></h2>
 			<ul id="login_links" class="ant_s clearfix">
 				<li class="flo_l"><%= link_to raw(image_tag('/assets/common/fb.png', alt:'', size:'18x18'))+"Facebook", "/auth/facebook",      class:"radi5" %></li>
 				<li class="flo_l"><%= link_to raw(image_tag('/assets/common/tw.png', alt:'', size:'18x18'))+"Twitter",  "/auth/twitter",       class:"radi5" %></li>
@@ -44,9 +43,9 @@
 
 			<p class="cl txt11">Nếu bạn không có một tài khoản với các dịch vụ này</p>
 			<ul>
-				<li class="flo_l"><a href="http://www.facebook.com/">Sign up with Facebook</a></li>
-				<li class="flo_l"><a href="https://twitter.com/">Sign up with Twitter</a></li>
-				<li class="flo_l"><a href="https://plus.google.com/up/search">Sign up with Google</a></li>
+				<li class="flo_l"><a href="http://www.facebook.com/">Sign up with Facebook</a></li><br />
+				<li class="flo_l"><a href="https://twitter.com/">Sign up with Twitter</a></li><br />
+				<li class="flo_l"><a href="https://plus.google.com/up/search">Sign up with Google</a></li><br />
 			</ul>
 		</div>
 	</div>
