@@ -15,9 +15,8 @@
 						<%= f.submit (bookmarked? ? t(:unbookmark, scope:"views.recipes.show") : t(:bookmark, scope:"views.recipes.show")) %>
 					<% end %>
 					<% unless @recipe.public %>
-						<div class="rbtn"><%= link_to "公開する", { action:"publication", id: @recipe.id }, class:"radi10" %></div>
+						<%= link_to "公開する", { action:"public_button", id: @recipe.id }, id:"public_button" %>
 					<% end %>
-				<% else %>
 				<% end %>
 				<h1 class="ttl_recipe"><%= @recipe.title %></h1>
 				<ul class="hd_sns sns clearfix">
@@ -73,7 +72,7 @@
 					<section class="rec_cat5">
 						<h3 class="material_txt">BƯỚC <%= i %></h3>
 						<% if step.movie_url.present? %><iframe width="136" height="136" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe><% end %>
-						<% if step.image.present? %><%= image_tag step.image.url(:thumb), size:"136x136" %><% end %>
+						<% if step.image.present? %><%= image_tag step.image.url, size:"136x136" %><% end %>
 						<div class="txt"><p><%= step.content %></p></div>
 					</section>
 				<% end %>
@@ -84,7 +83,7 @@
 				<% @recipe.comments.each do |comment| %>
 					<div class="cate01 clearfix">
 						<section class="rec_cat5 clearfix">
-							<% if comment.image.present? %><%= image_tag comment.image.url(:thumb), size:"280x466", alt:"" %><% end %>
+							<% if comment.image.present? %><%= image_tag comment.image.url, size:"280x466", alt:"" %><% end %>
 							<div class="txt">
 								<h1 class="txt16"><%= comment.title %></h1>
 								<p>by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
