@@ -589,68 +589,54 @@ recipe_foods_83:
 recipe_foods_84:
   id: 85
   recipe_food_genre_id: 10
-  name: Bánh ngọt
+  name: Bánh sinh nhật
   show_top: true
   created_at: 2012-06-04 16:00:21 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_85:
   id: 86
   recipe_food_genre_id: 10
-  name: Bánh sinh nhật
+  name: Bánh đám cưới
   show_top: true
   created_at: 2012-06-04 16:00:21 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_86:
   id: 87
   recipe_food_genre_id: 10
-  name: Bánh đám cưới
+  name: Loại bánh khác
   show_top: true
   created_at: 2012-06-04 16:00:21 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_87:
   id: 88
-  recipe_food_genre_id: 10
-  name: Bánh đám cưới
+  recipe_food_genre_id: 11
+  name: 5〜6 tháng
   show_top: true
   created_at: 2012-06-04 16:00:21 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_88:
   id: 89
-  recipe_food_genre_id: 10
-  name: Loại bánh khác
+  recipe_food_genre_id: 11
+  name: 7〜8 tháng
   show_top: true
   created_at: 2012-06-04 16:00:21 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_89:
   id: 90
   recipe_food_genre_id: 11
-  name: 5〜6 tháng
+  name: 9〜11 tháng
   show_top: true
   created_at: 2012-06-04 16:00:21 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_90:
   id: 91
-  recipe_food_genre_id: 11
-  name: 7〜8 tháng
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
-  updated_at: 2012-07-15 05:30:06 UTC
-recipe_foods_91:
-  id: 92
-  recipe_food_genre_id: 11
-  name: 9〜11 tháng
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
-  updated_at: 2012-07-15 05:30:06 UTC
-recipe_foods_92:
-  id: 93
   recipe_food_genre_id: 12
   name: Lúc mang bầu
   show_top: true
   created_at: 2012-06-04 16:00:21 UTC
   updated_at: 2012-07-15 05:30:06 UTC
-recipe_foods_93:
-  id: 94
+recipe_foods_91:
+  id: 92
   recipe_food_genre_id: 12
   name: Lúc cho con bú
   show_top: true

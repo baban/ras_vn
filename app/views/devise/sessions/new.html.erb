@@ -20,13 +20,13 @@
 					</div>
 				<% end %>
 				<div class="rbtn cl"><%= f.submit "Đăng Nhập", id:"sign_in", class:"cblu radi10 txt12" %></div>
-				<p class="txt11 cap"><%= link_to "Quên mật khẩu?", controller:"" %></p>
-				<%= render "links" %>
+				<!--<%= render "links" %>-->
+				<%= link_to "Nếu bạn quên Password?", new_password_path(resource_name) %><br />
 			<% end %>
 		</div>
 
 		<div class="login_ind flo_r" id="get_account_area">
-			<h3 class="txt14">Hãy đăng kí ID tại đây!</h3>
+			<h3 class="txt14">Nếu bạn chưa đăng kí thành viên?</h3>
 			<div class="rbtn cl">
 				<%= link_to "Đăng ký thành viên", new_user_registration_url, class:"cblu radi10 txt12" %>
 			</div>
