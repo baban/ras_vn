@@ -9,11 +9,11 @@
 		<%= semantic_form_for @profile, url:{ action:'update' } do |f| %>
 			<table>
 			  <tr>
-			    <td><%=profile_image_tag @profile %></td>
+			    <td><%= profile_image_tag @profile %></td>
 			  </tr>
 			  <tr>
 			    <td>
-			      <%=f.file_field :image %>
+			      <p>File:<%= f.file_field :image %> or URL:<%= f.text_field :remote_image_url %></p>
 			      <p>(アップロードすると自動で変更されます)</p>
 			    </td>
 			  </tr>
@@ -22,9 +22,9 @@
 			<table id="profiles">
 			  <tr>
 			    <th><%= f.label :nickname %></th>
-			    <td colspan="2"><%=f.text_field :nickname, value: @profile.nickname %></td>
+			    <td colspan="2"><%= f.text_field :nickname, value: @profile.nickname %></td>
 			    <td>
-			      <%=visibility_radios( @visibility, :nickname )%>
+			      <%= visibility_radios( @visibility, :nickname ) %>
 			    </td>
 			  </tr>
 			  <tr>
