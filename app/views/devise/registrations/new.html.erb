@@ -36,7 +36,7 @@
 							</li>
 						</ul>
 						<p><%= t(:address_description, scope:"views.users.sign_up") %></p>
-						<p>File:<%= profile.file_field :image %> or URL:<%= profile.text_field :remote_image_url %></p>
+						<p>File:<%= profile.file_field :image %> or URL:<%= profile.text_field :remote_image_url, value: flash[:image] %></p>
 					<% end %>
 
 					<div id="terms_of_description">
