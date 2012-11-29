@@ -4,6 +4,7 @@ class RecipeFoodsController < ApplicationController
   before_filter :authenticate_user!, only:[:new,:create]
 
   def index
+    params[:utf8]=params[:authenticity_token]=nil
     @recomment_food_genre_recipe = Recipe.top_content
     @order_mode = params[:order_mode] || "ranking"
     @food_genre = RecipeFoodGenre.choice(params)

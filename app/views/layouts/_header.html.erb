@@ -27,9 +27,11 @@
 	</nav>
 	
 	<div class="search flo_l">
-		<%= form_for :recipes, url: recipe_foods_url, html:{ class:"cl" }, method:"GET" do |f| %>
+		<%= form_for :recipes, url: recipe_foods_url, html:{ class:"cl" } do |f| %>
 			<div class="box radi5">
 				<%= text_field_tag :word, params[:word], class:"radi5", type:"search", placeholder: t(:placeholder, scope:"views.header") %>
+				<%= hidden_field_tag :recipe_food_id, params[:recipe_food_id] %>
+				<%= hidden_field_tag :recipe_food_genre_id, params[:recipe_food_genre_id] %>
 				<%= f.button t(:blank, scope:"views.header"), name: "", class:"radi3", title:"Tìm Kiếm" %>
 				<span class="hidden_elem">Tìm Kiếm</span>
 			</div>
