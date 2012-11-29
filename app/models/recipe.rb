@@ -60,11 +60,16 @@ class Recipe < ActiveRecord::Base
     food_genre = RecipeFoodGenre.where( id: params[:recipe_food_genre_id] ).first
 
     foods = RecipeFood.scoped
-    foods = RecipeFood.where( id: params[:recipe_food_id] ) if params[:recipe_food_id]
-    foods = food_genre.foods if food_genre
+    if params[:recipe_food_id]
+      foods = RecipeFood.where( id: params[:recipe_food_id] ) 
+    elsif food_genre
+      foods = food_genre.foods
+    end
 
-    Recipe.where( recipe_food_id: foods.pluck(:id) )
-          .order( (order_mode=="new") ? " created_at DESC " : " view_count DESC " )
+    recipes = Recipe.scoped
+    recipes = recipes.where( recipe_food_id: foods.pluck(:id) )
+    recipes = recipes.where( " title like ? ", "%#{params[:word]}%" ) if params[:word]
+    recipes.order( (order_mode=="new") ? " created_at DESC " : " view_count DESC " )
   end
 
   def view_count_increment!
