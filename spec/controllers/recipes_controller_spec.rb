@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe RecipesController do
-  fixtures :users, :user_profiles, :user_profile_visibilities, :recipes
+  fixtures :users, :user_profiles, :user_profile_visibilities, :recipes, :recipe_comments
 
   context "非ログイン時" do
     describe "GET 'index'" do

@@ -5,13 +5,11 @@ user_profile_visibilities_0:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -22,13 +20,11 @@ user_profile_visibilities_1:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -39,13 +35,11 @@ user_profile_visibilities_2:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -56,13 +50,11 @@ user_profile_visibilities_3:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -73,13 +65,11 @@ user_profile_visibilities_4:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -90,13 +80,11 @@ user_profile_visibilities_5:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -107,13 +95,11 @@ user_profile_visibilities_6:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -124,13 +110,11 @@ user_profile_visibilities_7:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -141,13 +125,11 @@ user_profile_visibilities_8:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -158,13 +140,11 @@ user_profile_visibilities_9:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -175,13 +155,11 @@ user_profile_visibilities_10:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -192,13 +170,11 @@ user_profile_visibilities_11:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -209,13 +185,11 @@ user_profile_visibilities_12:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -226,13 +200,11 @@ user_profile_visibilities_13:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -243,13 +215,11 @@ user_profile_visibilities_14:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -260,13 +230,11 @@ user_profile_visibilities_15:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -277,13 +245,11 @@ user_profile_visibilities_16:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -294,13 +260,11 @@ user_profile_visibilities_17:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -311,13 +275,11 @@ user_profile_visibilities_18:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-18 15:16:43 UTC
   updated_at: 2012-06-18 15:16:43 UTC
@@ -328,13 +290,11 @@ user_profile_visibilities_19:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -345,13 +305,11 @@ user_profile_visibilities_20:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -362,13 +320,11 @@ user_profile_visibilities_21:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -379,13 +335,11 @@ user_profile_visibilities_22:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -396,13 +350,11 @@ user_profile_visibilities_23:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -413,13 +365,11 @@ user_profile_visibilities_24:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -430,13 +380,11 @@ user_profile_visibilities_25:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -447,13 +395,11 @@ user_profile_visibilities_26:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -464,13 +410,11 @@ user_profile_visibilities_27:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -481,13 +425,11 @@ user_profile_visibilities_28:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -498,13 +440,11 @@ user_profile_visibilities_29:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -515,13 +455,11 @@ user_profile_visibilities_30:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -532,13 +470,11 @@ user_profile_visibilities_31:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -549,13 +485,11 @@ user_profile_visibilities_32:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -566,13 +500,11 @@ user_profile_visibilities_33:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -583,13 +515,11 @@ user_profile_visibilities_34:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -600,13 +530,11 @@ user_profile_visibilities_35:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -617,13 +545,11 @@ user_profile_visibilities_36:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -634,13 +560,11 @@ user_profile_visibilities_37:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-06-25 15:55:05 UTC
   updated_at: 2012-06-25 15:55:05 UTC
@@ -651,13 +575,11 @@ user_profile_visibilities_38:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -668,13 +590,11 @@ user_profile_visibilities_39:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -685,13 +605,11 @@ user_profile_visibilities_40:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -702,13 +620,11 @@ user_profile_visibilities_41:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -719,13 +635,11 @@ user_profile_visibilities_42:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -736,13 +650,11 @@ user_profile_visibilities_43:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -753,13 +665,11 @@ user_profile_visibilities_44:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -770,13 +680,11 @@ user_profile_visibilities_45:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -787,13 +695,11 @@ user_profile_visibilities_46:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -804,13 +710,11 @@ user_profile_visibilities_47:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -821,13 +725,11 @@ user_profile_visibilities_48:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -838,13 +740,11 @@ user_profile_visibilities_49:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -855,13 +755,11 @@ user_profile_visibilities_50:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -872,13 +770,11 @@ user_profile_visibilities_51:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -889,13 +785,11 @@ user_profile_visibilities_52:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -906,13 +800,11 @@ user_profile_visibilities_53:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -923,13 +815,11 @@ user_profile_visibilities_54:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -940,13 +830,11 @@ user_profile_visibilities_55:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -957,13 +845,11 @@ user_profile_visibilities_56:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-08-28 14:01:27 UTC
   updated_at: 2012-08-28 14:01:27 UTC
@@ -974,13 +860,11 @@ user_profile_visibilities_57:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -991,13 +875,11 @@ user_profile_visibilities_58:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1008,13 +890,11 @@ user_profile_visibilities_59:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1025,13 +905,11 @@ user_profile_visibilities_60:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1042,13 +920,11 @@ user_profile_visibilities_61:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1059,13 +935,11 @@ user_profile_visibilities_62:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1076,13 +950,11 @@ user_profile_visibilities_63:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1093,13 +965,11 @@ user_profile_visibilities_64:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1110,13 +980,11 @@ user_profile_visibilities_65:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1127,13 +995,11 @@ user_profile_visibilities_66:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1144,13 +1010,11 @@ user_profile_visibilities_67:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1161,13 +1025,11 @@ user_profile_visibilities_68:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1178,13 +1040,11 @@ user_profile_visibilities_69:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1195,13 +1055,11 @@ user_profile_visibilities_70:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1212,13 +1070,11 @@ user_profile_visibilities_71:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1229,13 +1085,11 @@ user_profile_visibilities_72:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1246,13 +1100,11 @@ user_profile_visibilities_73:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1263,13 +1115,11 @@ user_profile_visibilities_74:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1280,13 +1130,11 @@ user_profile_visibilities_75:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-01 13:23:18 UTC
   updated_at: 2012-09-01 13:23:18 UTC
@@ -1297,13 +1145,11 @@ user_profile_visibilities_76:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1314,13 +1160,11 @@ user_profile_visibilities_77:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1331,13 +1175,11 @@ user_profile_visibilities_78:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1348,13 +1190,11 @@ user_profile_visibilities_79:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1365,13 +1205,11 @@ user_profile_visibilities_80:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1382,13 +1220,11 @@ user_profile_visibilities_81:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1399,13 +1235,11 @@ user_profile_visibilities_82:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1416,13 +1250,11 @@ user_profile_visibilities_83:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1433,13 +1265,11 @@ user_profile_visibilities_84:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1450,13 +1280,11 @@ user_profile_visibilities_85:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1467,13 +1295,11 @@ user_profile_visibilities_86:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1484,13 +1310,11 @@ user_profile_visibilities_87:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1501,13 +1325,11 @@ user_profile_visibilities_88:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1518,13 +1340,11 @@ user_profile_visibilities_89:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:57 UTC
   updated_at: 2012-09-03 23:41:57 UTC
@@ -1535,13 +1355,11 @@ user_profile_visibilities_90:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:58 UTC
   updated_at: 2012-09-03 23:41:58 UTC
@@ -1552,13 +1370,11 @@ user_profile_visibilities_91:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:58 UTC
   updated_at: 2012-09-03 23:41:58 UTC
@@ -1569,13 +1385,11 @@ user_profile_visibilities_92:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:58 UTC
   updated_at: 2012-09-03 23:41:58 UTC
@@ -1586,13 +1400,11 @@ user_profile_visibilities_93:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:58 UTC
   updated_at: 2012-09-03 23:41:58 UTC
@@ -1603,13 +1415,11 @@ user_profile_visibilities_94:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-03 23:41:58 UTC
   updated_at: 2012-09-03 23:41:58 UTC
@@ -1620,13 +1430,11 @@ user_profile_visibilities_95:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1637,13 +1445,11 @@ user_profile_visibilities_96:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1654,13 +1460,11 @@ user_profile_visibilities_97:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1671,13 +1475,11 @@ user_profile_visibilities_98:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1688,13 +1490,11 @@ user_profile_visibilities_99:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1705,13 +1505,11 @@ user_profile_visibilities_100:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1722,13 +1520,11 @@ user_profile_visibilities_101:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1739,13 +1535,11 @@ user_profile_visibilities_102:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1756,13 +1550,11 @@ user_profile_visibilities_103:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1773,13 +1565,11 @@ user_profile_visibilities_104:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1790,13 +1580,11 @@ user_profile_visibilities_105:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1807,13 +1595,11 @@ user_profile_visibilities_106:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1824,13 +1610,11 @@ user_profile_visibilities_107:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1841,13 +1625,11 @@ user_profile_visibilities_108:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1858,13 +1640,11 @@ user_profile_visibilities_109:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1875,13 +1655,11 @@ user_profile_visibilities_110:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1892,13 +1670,11 @@ user_profile_visibilities_111:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1909,13 +1685,11 @@ user_profile_visibilities_112:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
@@ -1926,336 +1700,11 @@ user_profile_visibilities_113:
   sex: true
   first_name: true
   family_name: true
-  blood_type: true
   birthday: true
   email: true
   phone_number: true
-  postcode: true
-  address: true
-  address_point: true
+  prefecture_id: true
+  distinct_id: true
   comment: true
   created_at: 2012-09-08 06:47:49 UTC
   updated_at: 2012-09-08 06:47:49 UTC
-user_profile_visibilities_114:
-  id: 390
-  user_profile_id: 1
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_115:
-  id: 391
-  user_profile_id: 2
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_116:
-  id: 392
-  user_profile_id: 3
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_117:
-  id: 393
-  user_profile_id: 4
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_118:
-  id: 394
-  user_profile_id: 5
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_119:
-  id: 395
-  user_profile_id: 6
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_120:
-  id: 396
-  user_profile_id: 7
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_121:
-  id: 397
-  user_profile_id: 8
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_122:
-  id: 398
-  user_profile_id: 9
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_123:
-  id: 399
-  user_profile_id: 10
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_124:
-  id: 400
-  user_profile_id: 11
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_125:
-  id: 401
-  user_profile_id: 12
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_126:
-  id: 402
-  user_profile_id: 13
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_127:
-  id: 403
-  user_profile_id: 14
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_128:
-  id: 404
-  user_profile_id: 15
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_129:
-  id: 405
-  user_profile_id: 16
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_130:
-  id: 406
-  user_profile_id: 17
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_131:
-  id: 407
-  user_profile_id: 18
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC
-user_profile_visibilities_132:
-  id: 408
-  user_profile_id: 19
-  nickname: true
-  sex: true
-  first_name: true
-  family_name: true
-  blood_type: true
-  birthday: true
-  email: true
-  phone_number: true
-  postcode: true
-  address: true
-  address_point: true
-  comment: true
-  created_at: 2012-10-31 15:23:24 UTC
-  updated_at: 2012-10-31 15:23:24 UTC

@@ -8,7 +8,7 @@
 	<%= javascript_include_tag "colorbox/jquery.colorbox" %>
 	<%= javascript_include_tag "recipes/show" %>
 <% end %>
-<%#= render partial:"forbiddon_right_click" %>
+<%= render partial:"forbiddon_right_click" %>
 
 <div class="bace_bg">
 	<div class="contents_bg clearfix">
@@ -26,14 +26,6 @@
 					<% end %>
 				<% end %>
 				<h1 class="ttl_recipe"><%= @recipe.title %></h1>
-				<ul class="hd_sns sns clearfix">
-					<li><a href="#" class="radi5"><%= image_tag "common/fb.png", alt:"", width:"18", height:"18" %>facebook</a></li>
-					<li><a href="#" class="radi5"><%= image_tag "common/tw.png", alt:"", width:"18", height:"18" %>twitter</a></li>
-					<li><a href="#" class="radi5"><%= image_tag "common/gp.png", alt:"", width:"18", height:"18" %>google</a></li>
-					<li><a href="#" class="radi5"><%= image_tag "common/mail.png", alt:"", width:"18", height:"18" %>メールする</a></li>
-					<li><a href="#" class="radi5"><%= image_tag "common/print.png", alt:"", width:"18", height:"18" %>印刷する</a></li>
-					<li><a href="#" class="radi5"><%= image_tag "common/bookmark.png", alt:"", width:"18", height:"18" %>ブックマークする</a></li>
-				</ul>
 				<div id="recipe_image_area">
 					<%= link_to image_tag(@recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:""), @recipe.recipe_image.url, id:"recipe_image_link" %>
 				</div>
@@ -48,7 +40,7 @@
 					<p><%=hbr @recipe.description %></p>
 					<div class="clearfix">
 						<p class="user_name">
-							<span class="flo_l"><%= image_tag "common/user_ico.png", width:"22", height:"22", alt:"Ẩm Thực Việt" %></span>
+							<span class="flo_l"><%= image_tag (@recipe.user.profile.image.url(:small_icon) || "common/user_ico.png"), width:"22", height:"22", alt:"Ẩm Thực Việt" %></span>
 							<span class="flo_l"><%= link_to @recipe.user.profile.nickname, kitchen_url(@recipe.user) %></span>
 						</p>
 					</div>
@@ -80,7 +72,7 @@
 						<h3 class="material_txt">BƯỚC <%= i %></h3>
 						<% if step.movie_url.present? %><iframe width="136" height="136" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe><% end %>
 						<% if step.image.present? %><%= image_tag step.image.url, size:"136x136" %><% end %>
-						<div class="txt"><p><%= step.content %></p></div>
+						<div class="txt"><p><%= hbr step.content %></p></div>
 					</section>
 				<% end %>
 			</div>
@@ -94,7 +86,7 @@
 							<div class="txt">
 								<h1 class="txt16"><%= comment.title %></h1>
 								<p>by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
-								<p><%= comment.content %></p>
+								<p><%= hbr comment.content %></p>
 								<div class="info_area">
 									<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
 									<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
