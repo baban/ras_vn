@@ -31,3 +31,5 @@ $(window).load ->
     .live( "ajax:error", (data, status, xhr) ->
       console.log("error")
     )
+
+    $('#recipe_image_link').colorbox();
