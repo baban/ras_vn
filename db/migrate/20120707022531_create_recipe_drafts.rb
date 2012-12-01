@@ -13,6 +13,7 @@ class CreateRecipeDrafts < ActiveRecord::Migration
       t.integer  :love_count,     null: false, default: 0
       t.integer  :eatstyle_id,    null: false, default: 0
       t.integer  :amount,         null: true
+      t.integer  :calorie,        null: false, default: 0
       t.integer  :view_count,     null: false, default: 0
       t.integer  :recipe_food_id, null: true
 

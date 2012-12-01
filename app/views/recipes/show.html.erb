@@ -85,7 +85,7 @@
 							<% if comment.image.present? %><%= image_tag comment.image.url, size:"280x466", alt:"", class:"comment_image" %><% end %>
 							<div class="txt">
 								<h1 class="txt16"><%= comment.title %></h1>
-								<p class="userinfo">by&nbsp;<%= profile_image_tag(comment.chef, :small_icon) %><%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
+								<p class="userinfo">by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
 								<p><%= hbr comment.content %></p>
 								<div class="info_area">
 									<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>

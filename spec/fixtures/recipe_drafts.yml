@@ -10,6 +10,7 @@ recipe_drafts_0:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -27,6 +28,7 @@ recipe_drafts_1:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -44,6 +46,7 @@ recipe_drafts_2:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -61,6 +64,7 @@ recipe_drafts_3:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -78,6 +82,7 @@ recipe_drafts_4:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -95,6 +100,7 @@ recipe_drafts_5:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -112,6 +118,7 @@ recipe_drafts_6:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -129,6 +136,7 @@ recipe_drafts_7:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -146,6 +154,7 @@ recipe_drafts_8:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -163,6 +172,7 @@ recipe_drafts_9:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -180,6 +190,7 @@ recipe_drafts_10:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -197,6 +208,7 @@ recipe_drafts_11:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -214,6 +226,7 @@ recipe_drafts_12:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -231,6 +244,7 @@ recipe_drafts_13:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -248,6 +262,7 @@ recipe_drafts_14:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -265,6 +280,7 @@ recipe_drafts_15:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -282,6 +298,7 @@ recipe_drafts_16:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -299,6 +316,7 @@ recipe_drafts_17:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -316,6 +334,7 @@ recipe_drafts_18:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -333,6 +352,7 @@ recipe_drafts_19:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
@@ -350,6 +370,7 @@ recipe_drafts_20:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -367,6 +388,7 @@ recipe_drafts_21:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -384,6 +406,7 @@ recipe_drafts_22:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -401,6 +424,7 @@ recipe_drafts_23:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -418,6 +442,7 @@ recipe_drafts_24:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -435,6 +460,7 @@ recipe_drafts_25:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -452,6 +478,7 @@ recipe_drafts_26:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -469,6 +496,7 @@ recipe_drafts_27:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -486,6 +514,7 @@ recipe_drafts_28:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -503,6 +532,7 @@ recipe_drafts_29:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -520,6 +550,7 @@ recipe_drafts_30:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -537,6 +568,7 @@ recipe_drafts_31:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -554,6 +586,7 @@ recipe_drafts_32:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -571,6 +604,7 @@ recipe_drafts_33:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -588,6 +622,7 @@ recipe_drafts_34:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -605,6 +640,7 @@ recipe_drafts_35:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -622,6 +658,7 @@ recipe_drafts_36:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -639,6 +676,7 @@ recipe_drafts_37:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -656,6 +694,7 @@ recipe_drafts_38:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -673,6 +712,7 @@ recipe_drafts_39:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -690,6 +730,7 @@ recipe_drafts_40:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -707,6 +748,7 @@ recipe_drafts_41:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -724,6 +766,7 @@ recipe_drafts_42:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -741,6 +784,7 @@ recipe_drafts_43:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -758,6 +802,7 @@ recipe_drafts_44:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -775,6 +820,7 @@ recipe_drafts_45:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -792,6 +838,7 @@ recipe_drafts_46:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -809,6 +856,7 @@ recipe_drafts_47:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -826,6 +874,7 @@ recipe_drafts_48:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -843,6 +892,7 @@ recipe_drafts_49:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -860,6 +910,7 @@ recipe_drafts_50:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -877,6 +928,7 @@ recipe_drafts_51:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -894,6 +946,7 @@ recipe_drafts_52:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -911,6 +964,7 @@ recipe_drafts_53:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -928,6 +982,7 @@ recipe_drafts_54:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -945,6 +1000,7 @@ recipe_drafts_55:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -962,6 +1018,7 @@ recipe_drafts_56:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -979,6 +1036,7 @@ recipe_drafts_57:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -996,6 +1054,7 @@ recipe_drafts_58:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -1013,6 +1072,7 @@ recipe_drafts_59:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 2
   deleted_at: null
@@ -1030,6 +1090,7 @@ recipe_drafts_60:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 3
   deleted_at: null
@@ -1047,6 +1108,7 @@ recipe_drafts_61:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 3
   deleted_at: null
@@ -1064,6 +1126,7 @@ recipe_drafts_62:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 3
   deleted_at: null
@@ -1081,6 +1144,7 @@ recipe_drafts_63:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 3
   deleted_at: null
@@ -1098,6 +1162,7 @@ recipe_drafts_64:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 3
   deleted_at: null
@@ -1115,6 +1180,7 @@ recipe_drafts_65:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 3
   deleted_at: null
@@ -1132,6 +1198,7 @@ recipe_drafts_66:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 3
   deleted_at: null
@@ -1149,6 +1216,7 @@ recipe_drafts_67:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 3
   deleted_at: null
@@ -1166,6 +1234,7 @@ recipe_drafts_68:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 3
   deleted_at: null
@@ -1183,6 +1252,7 @@ recipe_drafts_69:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 3
   deleted_at: null
@@ -1200,6 +1270,7 @@ recipe_drafts_70:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 5
   deleted_at: null
@@ -1217,6 +1288,7 @@ recipe_drafts_71:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 5
   deleted_at: null
@@ -1234,6 +1306,7 @@ recipe_drafts_72:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 5
   deleted_at: null
@@ -1251,6 +1324,7 @@ recipe_drafts_73:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 5
   deleted_at: null
@@ -1268,6 +1342,7 @@ recipe_drafts_74:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 5
   deleted_at: null
@@ -1285,6 +1360,7 @@ recipe_drafts_75:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 5
   deleted_at: null
@@ -1302,6 +1378,7 @@ recipe_drafts_76:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 5
   deleted_at: null
@@ -1319,6 +1396,7 @@ recipe_drafts_77:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 5
   deleted_at: null
@@ -1336,6 +1414,7 @@ recipe_drafts_78:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 5
   deleted_at: null
@@ -1353,6 +1432,7 @@ recipe_drafts_79:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 5
   deleted_at: null
@@ -1370,6 +1450,7 @@ recipe_drafts_80:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 4
   deleted_at: null
@@ -1387,6 +1468,7 @@ recipe_drafts_81:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 4
   deleted_at: null
@@ -1404,6 +1486,7 @@ recipe_drafts_82:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 4
   deleted_at: null
@@ -1421,6 +1504,7 @@ recipe_drafts_83:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 4
   deleted_at: null
@@ -1438,6 +1522,7 @@ recipe_drafts_84:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 4
   deleted_at: null
@@ -1455,6 +1540,7 @@ recipe_drafts_85:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 4
   deleted_at: null
@@ -1472,6 +1558,7 @@ recipe_drafts_86:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 4
   deleted_at: null
@@ -1489,6 +1576,7 @@ recipe_drafts_87:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 4
   deleted_at: null
@@ -1506,6 +1594,7 @@ recipe_drafts_88:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 4
   deleted_at: null
@@ -1523,6 +1612,7 @@ recipe_drafts_89:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 4
   deleted_at: null
@@ -1540,6 +1630,7 @@ recipe_drafts_90:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 7
   deleted_at: null
@@ -1557,6 +1648,7 @@ recipe_drafts_91:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 7
   deleted_at: null
@@ -1574,6 +1666,7 @@ recipe_drafts_92:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 7
   deleted_at: null
@@ -1591,6 +1684,7 @@ recipe_drafts_93:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 7
   deleted_at: null
@@ -1608,6 +1702,7 @@ recipe_drafts_94:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 7
   deleted_at: null
@@ -1625,6 +1720,7 @@ recipe_drafts_95:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 7
   deleted_at: null
@@ -1642,6 +1738,7 @@ recipe_drafts_96:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 7
   deleted_at: null
@@ -1659,6 +1756,7 @@ recipe_drafts_97:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 7
   deleted_at: null
@@ -1676,6 +1774,7 @@ recipe_drafts_98:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 7
   deleted_at: null
@@ -1693,6 +1792,7 @@ recipe_drafts_99:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 7
   deleted_at: null
@@ -1710,6 +1810,7 @@ recipe_drafts_100:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 8
   deleted_at: null
@@ -1727,6 +1828,7 @@ recipe_drafts_101:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 8
   deleted_at: null
@@ -1744,6 +1846,7 @@ recipe_drafts_102:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 8
   deleted_at: null
@@ -1761,6 +1864,7 @@ recipe_drafts_103:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 8
   deleted_at: null
@@ -1778,6 +1882,7 @@ recipe_drafts_104:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 8
   deleted_at: null
@@ -1795,6 +1900,7 @@ recipe_drafts_105:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 8
   deleted_at: null
@@ -1812,6 +1918,7 @@ recipe_drafts_106:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 8
   deleted_at: null
@@ -1829,6 +1936,7 @@ recipe_drafts_107:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 8
   deleted_at: null
@@ -1846,6 +1954,7 @@ recipe_drafts_108:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 8
   deleted_at: null
@@ -1863,6 +1972,7 @@ recipe_drafts_109:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 8
   deleted_at: null
@@ -1880,6 +1990,7 @@ recipe_drafts_110:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 9
   deleted_at: null
@@ -1897,6 +2008,7 @@ recipe_drafts_111:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 9
   deleted_at: null
@@ -1914,6 +2026,7 @@ recipe_drafts_112:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 9
   deleted_at: null
@@ -1931,6 +2044,7 @@ recipe_drafts_113:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 9
   deleted_at: null
@@ -1948,6 +2062,7 @@ recipe_drafts_114:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 9
   deleted_at: null
@@ -1965,6 +2080,7 @@ recipe_drafts_115:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 9
   deleted_at: null
@@ -1982,6 +2098,7 @@ recipe_drafts_116:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 9
   deleted_at: null
@@ -1999,6 +2116,7 @@ recipe_drafts_117:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 9
   deleted_at: null
@@ -2016,6 +2134,7 @@ recipe_drafts_118:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 9
   deleted_at: null
@@ -2033,6 +2152,7 @@ recipe_drafts_119:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 9
   deleted_at: null
@@ -2050,6 +2170,7 @@ recipe_drafts_120:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 10
   deleted_at: null
@@ -2067,6 +2188,7 @@ recipe_drafts_121:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 10
   deleted_at: null
@@ -2084,6 +2206,7 @@ recipe_drafts_122:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 10
   deleted_at: null
@@ -2101,6 +2224,7 @@ recipe_drafts_123:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 10
   deleted_at: null
@@ -2118,6 +2242,7 @@ recipe_drafts_124:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 10
   deleted_at: null
@@ -2135,6 +2260,7 @@ recipe_drafts_125:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 11
   deleted_at: null
@@ -2152,6 +2278,7 @@ recipe_drafts_126:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 11
   deleted_at: null
@@ -2169,6 +2296,7 @@ recipe_drafts_127:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 11
   deleted_at: null
@@ -2186,6 +2314,7 @@ recipe_drafts_128:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 11
   deleted_at: null
@@ -2203,6 +2332,7 @@ recipe_drafts_129:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 11
   deleted_at: null
@@ -2220,6 +2350,7 @@ recipe_drafts_130:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 12
   deleted_at: null
@@ -2237,6 +2368,7 @@ recipe_drafts_131:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 12
   deleted_at: null
@@ -2254,6 +2386,7 @@ recipe_drafts_132:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 12
   deleted_at: null
@@ -2271,6 +2404,7 @@ recipe_drafts_133:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 12
   deleted_at: null
@@ -2288,6 +2422,7 @@ recipe_drafts_134:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 12
   deleted_at: null
@@ -2305,6 +2440,7 @@ recipe_drafts_135:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 13
   deleted_at: null
@@ -2322,6 +2458,7 @@ recipe_drafts_136:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 13
   deleted_at: null
@@ -2339,6 +2476,7 @@ recipe_drafts_137:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 13
   deleted_at: null
@@ -2356,6 +2494,7 @@ recipe_drafts_138:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 13
   deleted_at: null
@@ -2373,6 +2512,7 @@ recipe_drafts_139:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 13
   deleted_at: null
@@ -2390,6 +2530,7 @@ recipe_drafts_140:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 14
   deleted_at: null
@@ -2407,6 +2548,7 @@ recipe_drafts_141:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 14
   deleted_at: null
@@ -2424,6 +2566,7 @@ recipe_drafts_142:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 14
   deleted_at: null
@@ -2441,6 +2584,7 @@ recipe_drafts_143:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 16
   deleted_at: null
@@ -2458,6 +2602,7 @@ recipe_drafts_144:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 16
   deleted_at: null
@@ -2475,6 +2620,7 @@ recipe_drafts_145:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 16
   deleted_at: null
@@ -2492,6 +2638,7 @@ recipe_drafts_146:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 17
   deleted_at: null
@@ -2509,6 +2656,7 @@ recipe_drafts_147:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 17
   deleted_at: null
@@ -2526,6 +2674,7 @@ recipe_drafts_148:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 17
   deleted_at: null
@@ -2543,6 +2692,7 @@ recipe_drafts_149:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 19
   deleted_at: null
@@ -2560,6 +2710,7 @@ recipe_drafts_150:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 19
   deleted_at: null
@@ -2577,6 +2728,7 @@ recipe_drafts_151:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 19
   deleted_at: null
@@ -2594,6 +2746,7 @@ recipe_drafts_152:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 18
   deleted_at: null
@@ -2611,6 +2764,7 @@ recipe_drafts_153:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 18
   deleted_at: null
@@ -2628,6 +2782,7 @@ recipe_drafts_154:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 18
   deleted_at: null
@@ -2645,6 +2800,7 @@ recipe_drafts_155:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2662,6 +2818,7 @@ recipe_drafts_156:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2679,6 +2836,7 @@ recipe_drafts_157:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2696,6 +2854,7 @@ recipe_drafts_158:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2713,6 +2872,7 @@ recipe_drafts_159:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2730,6 +2890,7 @@ recipe_drafts_160:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2747,6 +2908,7 @@ recipe_drafts_161:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2764,6 +2926,7 @@ recipe_drafts_162:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2781,6 +2944,7 @@ recipe_drafts_163:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2798,6 +2962,7 @@ recipe_drafts_164:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2815,6 +2980,7 @@ recipe_drafts_165:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2832,6 +2998,7 @@ recipe_drafts_166:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2849,6 +3016,7 @@ recipe_drafts_167:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2866,6 +3034,7 @@ recipe_drafts_168:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 22
   deleted_at: null
@@ -2883,6 +3052,7 @@ recipe_drafts_169:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 24
   deleted_at: null
@@ -2900,6 +3070,7 @@ recipe_drafts_170:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 24
   deleted_at: null
@@ -2917,6 +3088,7 @@ recipe_drafts_171:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 24
   deleted_at: null
@@ -2934,6 +3106,7 @@ recipe_drafts_172:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 25
   deleted_at: null
@@ -2951,6 +3124,7 @@ recipe_drafts_173:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 25
   deleted_at: null
@@ -2968,6 +3142,7 @@ recipe_drafts_174:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 25
   deleted_at: null
@@ -2985,6 +3160,7 @@ recipe_drafts_175:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 24
   deleted_at: null
@@ -3002,6 +3178,7 @@ recipe_drafts_176:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 24
   deleted_at: null
@@ -3019,6 +3196,7 @@ recipe_drafts_177:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 24
   deleted_at: null
@@ -3036,6 +3214,7 @@ recipe_drafts_178:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 26
   deleted_at: null
@@ -3053,6 +3232,7 @@ recipe_drafts_179:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 26
   deleted_at: null
@@ -3070,6 +3250,7 @@ recipe_drafts_180:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 26
   deleted_at: null
@@ -3087,6 +3268,7 @@ recipe_drafts_181:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 26
   deleted_at: null
@@ -3104,6 +3286,7 @@ recipe_drafts_182:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 26
   deleted_at: null
@@ -3121,6 +3304,7 @@ recipe_drafts_183:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 26
   deleted_at: null
@@ -3138,6 +3322,7 @@ recipe_drafts_184:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 40
   deleted_at: null
@@ -3155,6 +3340,7 @@ recipe_drafts_185:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 40
   deleted_at: null
@@ -3172,6 +3358,7 @@ recipe_drafts_186:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 40
   deleted_at: null
@@ -3189,6 +3376,7 @@ recipe_drafts_187:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 41
   deleted_at: null
@@ -3206,6 +3394,7 @@ recipe_drafts_188:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 41
   deleted_at: null
@@ -3223,6 +3412,7 @@ recipe_drafts_189:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 41
   deleted_at: null
@@ -3240,6 +3430,7 @@ recipe_drafts_190:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 43
   deleted_at: null
@@ -3257,6 +3448,7 @@ recipe_drafts_191:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 43
   deleted_at: null
@@ -3274,6 +3466,7 @@ recipe_drafts_192:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 43
   deleted_at: null
@@ -3291,6 +3484,7 @@ recipe_drafts_193:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 42
   deleted_at: null
@@ -3308,6 +3502,7 @@ recipe_drafts_194:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 42
   deleted_at: null
@@ -3325,6 +3520,7 @@ recipe_drafts_195:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 42
   deleted_at: null
@@ -3342,6 +3538,7 @@ recipe_drafts_196:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 44
   deleted_at: null
@@ -3359,6 +3556,7 @@ recipe_drafts_197:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 44
   deleted_at: null
@@ -3376,6 +3574,7 @@ recipe_drafts_198:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 44
   deleted_at: null
@@ -3393,6 +3592,7 @@ recipe_drafts_199:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 45
   deleted_at: null
@@ -3410,6 +3610,7 @@ recipe_drafts_200:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 45
   deleted_at: null
@@ -3427,6 +3628,7 @@ recipe_drafts_201:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 45
   deleted_at: null
@@ -3444,6 +3646,7 @@ recipe_drafts_202:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 46
   deleted_at: null
@@ -3461,6 +3664,7 @@ recipe_drafts_203:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 46
   deleted_at: null
@@ -3478,6 +3682,7 @@ recipe_drafts_204:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 46
   deleted_at: null
@@ -3495,6 +3700,7 @@ recipe_drafts_205:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 47
   deleted_at: null
@@ -3512,6 +3718,7 @@ recipe_drafts_206:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 47
   deleted_at: null
@@ -3529,6 +3736,7 @@ recipe_drafts_207:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 47
   deleted_at: null
@@ -3546,6 +3754,7 @@ recipe_drafts_208:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 48
   deleted_at: null
@@ -3563,6 +3772,7 @@ recipe_drafts_209:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 48
   deleted_at: null
@@ -3580,6 +3790,7 @@ recipe_drafts_210:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 48
   deleted_at: null
@@ -3597,6 +3808,7 @@ recipe_drafts_211:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 48
   deleted_at: null
@@ -3614,6 +3826,7 @@ recipe_drafts_212:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 48
   deleted_at: null
@@ -3631,6 +3844,7 @@ recipe_drafts_213:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 48
   deleted_at: null
@@ -3648,6 +3862,7 @@ recipe_drafts_214:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 49
   deleted_at: null
@@ -3665,6 +3880,7 @@ recipe_drafts_215:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 49
   deleted_at: null
@@ -3682,6 +3898,7 @@ recipe_drafts_216:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 49
   deleted_at: null
@@ -3699,6 +3916,7 @@ recipe_drafts_217:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 51
   deleted_at: null
@@ -3716,6 +3934,7 @@ recipe_drafts_218:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 51
   deleted_at: null
@@ -3733,6 +3952,7 @@ recipe_drafts_219:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 51
   deleted_at: null
@@ -3750,6 +3970,7 @@ recipe_drafts_220:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 52
   deleted_at: null
@@ -3767,6 +3988,7 @@ recipe_drafts_221:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 52
   deleted_at: null
@@ -3784,6 +4006,7 @@ recipe_drafts_222:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 52
   deleted_at: null
@@ -3801,6 +4024,7 @@ recipe_drafts_223:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 53
   deleted_at: null
@@ -3818,6 +4042,7 @@ recipe_drafts_224:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 53
   deleted_at: null
@@ -3835,6 +4060,7 @@ recipe_drafts_225:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 53
   deleted_at: null
@@ -3852,6 +4078,7 @@ recipe_drafts_226:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 54
   deleted_at: null
@@ -3869,6 +4096,7 @@ recipe_drafts_227:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 54
   deleted_at: null
@@ -3886,6 +4114,7 @@ recipe_drafts_228:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 54
   deleted_at: null
@@ -3903,6 +4132,7 @@ recipe_drafts_229:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 55
   deleted_at: null
@@ -3920,6 +4150,7 @@ recipe_drafts_230:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 55
   deleted_at: null
@@ -3937,6 +4168,7 @@ recipe_drafts_231:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 55
   deleted_at: null
@@ -3954,6 +4186,7 @@ recipe_drafts_232:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 59
   deleted_at: null
@@ -3971,6 +4204,7 @@ recipe_drafts_233:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 59
   deleted_at: null
@@ -3988,6 +4222,7 @@ recipe_drafts_234:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 59
   deleted_at: null
@@ -4005,6 +4240,7 @@ recipe_drafts_235:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 56
   deleted_at: null
@@ -4022,6 +4258,7 @@ recipe_drafts_236:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 56
   deleted_at: null
@@ -4039,6 +4276,7 @@ recipe_drafts_237:
   love_count: 0
   eatstyle_id: 0
   amount: 0
+  calorie: 0
   view_count: 0
   recipe_food_id: 56
   deleted_at: null

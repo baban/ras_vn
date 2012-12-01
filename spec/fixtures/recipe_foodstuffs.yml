@@ -4,6 +4,7 @@ recipe_foodstuffs_0:
   recipe_food_id: 0
   name: じゃが芋 
   amount: 1～2個
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:13:41 UTC
   updated_at: 2012-05-13 14:13:41 UTC
@@ -13,6 +14,7 @@ recipe_foodstuffs_1:
   recipe_food_id: 0
   name: キャベツ
   amount: 1/4個
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:00 UTC
   updated_at: 2012-05-13 14:14:00 UTC
@@ -22,6 +24,7 @@ recipe_foodstuffs_2:
   recipe_food_id: 0
   name: ベーコン
   amount: 1袋
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -31,6 +34,7 @@ recipe_foodstuffs_3:
   recipe_food_id: 0
   name: バター 
   amount: 小さじ1/2
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -40,6 +44,7 @@ recipe_foodstuffs_4:
   recipe_food_id: 0
   name: 油
   amount: 適宜
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -49,6 +54,7 @@ recipe_foodstuffs_5:
   recipe_food_id: 0
   name: 塩コショウ
   amount: 適宜
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -58,6 +64,7 @@ recipe_foodstuffs_6:
   recipe_food_id: 0
   name: 豚もも薄切り
   amount: 200ｇ
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -67,6 +74,7 @@ recipe_foodstuffs_7:
   recipe_food_id: 0
   name: ピーマン
   amount: 3個～5個
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -76,6 +84,7 @@ recipe_foodstuffs_8:
   recipe_food_id: 0
   name: ジャガイモ
   amount: 中1個 
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -85,6 +94,7 @@ recipe_foodstuffs_9:
   recipe_food_id: 0
   name: ★しょうゆ 
   amount: 大1
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -94,6 +104,7 @@ recipe_foodstuffs_10:
   recipe_food_id: 0
   name: ★酒
   amount: 大1
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -103,6 +114,7 @@ recipe_foodstuffs_11:
   recipe_food_id: 0
   name: ★サラダ油 
   amount: 小1
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -112,6 +124,7 @@ recipe_foodstuffs_12:
   recipe_food_id: 0
   name: ★片栗粉
   amount: 小2
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -121,6 +134,7 @@ recipe_foodstuffs_13:
   recipe_food_id: 0
   name: ◎しょうゆ 
   amount: 大1
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -130,6 +144,7 @@ recipe_foodstuffs_14:
   recipe_food_id: 0
   name: ◎酒（紹興酒）
   amount: 大1
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -139,6 +154,7 @@ recipe_foodstuffs_15:
   recipe_food_id: 0
   name: ◎さとう 
   amount: 小1
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -148,6 +164,7 @@ recipe_foodstuffs_16:
   recipe_food_id: 0
   name: ◎オイスターソース 
   amount: 大1
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -157,6 +174,7 @@ recipe_foodstuffs_17:
   recipe_food_id: 0
   name: ◎鶏ガラスープの素 
   amount: 小1
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -166,6 +184,7 @@ recipe_foodstuffs_18:
   recipe_food_id: 0
   name: ごま油
   amount: 大1
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -175,6 +194,7 @@ recipe_foodstuffs_19:
   recipe_food_id: 0
   name: じゃがいも
   amount: ４個
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -184,6 +204,7 @@ recipe_foodstuffs_20:
   recipe_food_id: 0
   name: 片栗粉
   amount: 大匙２
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -193,6 +214,7 @@ recipe_foodstuffs_21:
   recipe_food_id: 0
   name: 青のり
   amount: 好きなだけ
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -202,6 +224,7 @@ recipe_foodstuffs_22:
   recipe_food_id: 0
   name: 塩
   amount: 適宜
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -211,6 +234,7 @@ recipe_foodstuffs_23:
   recipe_food_id: 0
   name: じゃがいも 
   amount: ２つ
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -220,6 +244,7 @@ recipe_foodstuffs_24:
   recipe_food_id: 0
   name: 唐辛子 
   amount: ５本
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -229,6 +254,7 @@ recipe_foodstuffs_25:
   recipe_food_id: 0
   name: 花椒（中国の山椒）
   amount: ５０粒位
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -238,6 +264,7 @@ recipe_foodstuffs_26:
   recipe_food_id: 0
   name: ニンニク
   amount: １かけ
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -247,6 +274,7 @@ recipe_foodstuffs_27:
   recipe_food_id: 0
   name: ラー油（または老干媽）
   amount: 数滴
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -256,6 +284,7 @@ recipe_foodstuffs_28:
   recipe_food_id: 0
   name: 黒胡椒 
   amount: 少々
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -265,6 +294,7 @@ recipe_foodstuffs_29:
   recipe_food_id: 0
   name: 塩 
   amount: 適量
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -274,6 +304,7 @@ recipe_foodstuffs_30:
   recipe_food_id: 0
   name: じゃがいも
   amount: 中３個
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -283,6 +314,7 @@ recipe_foodstuffs_31:
   recipe_food_id: 0
   name: コンビーフ缶詰
   amount: １缶
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -292,6 +324,7 @@ recipe_foodstuffs_32:
   recipe_food_id: 0
   name: 卵
   amount: ２個
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -301,6 +334,7 @@ recipe_foodstuffs_33:
   recipe_food_id: 0
   name: 塩こしょう
   amount: 少々
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -310,6 +344,7 @@ recipe_foodstuffs_34:
   recipe_food_id: 0
   name: 醤油
   amount: 小さじ１
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -319,6 +354,7 @@ recipe_foodstuffs_35:
   recipe_food_id: 0
   name: サラダ油
   amount: 小さじ１ 
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -328,6 +364,7 @@ recipe_foodstuffs_36:
   recipe_food_id: 0
   name: じゃがいも（皮付き）
   amount: ５００ｇ
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -337,6 +374,7 @@ recipe_foodstuffs_37:
   recipe_food_id: 0
   name: あいびき肉
   amount: １５０ｇ
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -346,6 +384,7 @@ recipe_foodstuffs_38:
   recipe_food_id: 0
   name: たまねぎ
   amount: 中１/２個
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -355,6 +394,7 @@ recipe_foodstuffs_39:
   recipe_food_id: 0
   name: 牛乳
   amount: ５０～７０ｃｃ
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -364,6 +404,7 @@ recipe_foodstuffs_40:
   recipe_food_id: 0
   name: とろけるチーズ
   amount: ２０～３０ｇ
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -373,6 +414,7 @@ recipe_foodstuffs_41:
   recipe_food_id: 0
   name: 塩
   amount: 小さじ１/４
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -382,6 +424,7 @@ recipe_foodstuffs_42:
   recipe_food_id: 0
   name: 醤油
   amount: 小さじ１/２
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -391,6 +434,7 @@ recipe_foodstuffs_43:
   recipe_food_id: 0
   name: こしょう
   amount: 少々
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -400,6 +444,7 @@ recipe_foodstuffs_44:
   recipe_food_id: 0
   name: ナツメグ
   amount: 少々
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -409,6 +454,7 @@ recipe_foodstuffs_45:
   recipe_food_id: 0
   name: 塩・こしょう（マッシュポテト用）
   amount: 適宜
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -418,6 +464,7 @@ recipe_foodstuffs_46:
   recipe_food_id: 0
   name: とき卵（ツヤ出し・なくても良い）
   amount: 適宜
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -427,6 +474,7 @@ recipe_foodstuffs_47:
   recipe_food_id: 0
   name: じゃがいも
   amount: 小さめ４個
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -436,6 +484,7 @@ recipe_foodstuffs_48:
   recipe_food_id: 0
   name: ベーコン（あればブロックタイプ
   amount: 100g
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -445,6 +494,7 @@ recipe_foodstuffs_49:
   recipe_food_id: 0
   name: 薄力粉
   amount: 大さじ３
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -454,6 +504,7 @@ recipe_foodstuffs_50:
   recipe_food_id: 0
   name: サラダ油 
   amount: 大さじ１
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -463,6 +514,7 @@ recipe_foodstuffs_51:
   recipe_food_id: 0
   name: 粗塩
   amount: 適宜
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -472,6 +524,7 @@ recipe_foodstuffs_52:
   recipe_food_id: 0
   name: ジャガイモ
   amount: 200ｇ
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -481,6 +534,7 @@ recipe_foodstuffs_53:
   recipe_food_id: 0
   name: お好み焼きソース
   amount: 適量
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -490,6 +544,7 @@ recipe_foodstuffs_54:
   recipe_food_id: 0
   name: かつおぶし
   amount: 適量
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -499,6 +554,7 @@ recipe_foodstuffs_55:
   recipe_food_id: 0
   name: 青のり
   amount: 適量
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -508,6 +564,7 @@ recipe_foodstuffs_56:
   recipe_food_id: 0
   name: 卵
   amount: 2個
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -517,6 +574,7 @@ recipe_foodstuffs_57:
   recipe_food_id: 0
   name: だしの素
   amount: 小さじ1
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -526,6 +584,7 @@ recipe_foodstuffs_58:
   recipe_food_id: 0
   name: 紅ショウガ（みじん切り） 
   amount: 小さじ2
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -535,6 +594,7 @@ recipe_foodstuffs_59:
   recipe_food_id: 0
   name: キャベツ（みじん切りにしておきます）
   amount: 2００ｇ
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -544,6 +604,7 @@ recipe_foodstuffs_60:
   recipe_food_id: 0
   name: ちくわ（たてに半分に切ってから薄切りにしておきます）
   amount: 2本
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -553,6 +614,7 @@ recipe_foodstuffs_61:
   recipe_food_id: 0
   name: 小エビ
   amount: 10～15匹
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -562,6 +624,7 @@ recipe_foodstuffs_62:
   recipe_food_id: 0
   name: じゃがいも
   amount: ５～６個（600ｇくらい）
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -571,6 +634,7 @@ recipe_foodstuffs_63:
   recipe_food_id: 0
   name: 卵
   amount: 4個
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -580,6 +644,7 @@ recipe_foodstuffs_64:
   recipe_food_id: 0
   name: ベーコン
   amount: 薄切り5～6枚
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -589,6 +654,7 @@ recipe_foodstuffs_65:
   recipe_food_id: 0
   name: とろけるチーズ
   amount: 100グラム位（好みで）
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -598,6 +664,7 @@ recipe_foodstuffs_66:
   recipe_food_id: 0
   name: EXバージンオリーブオイル
   amount: 適宜 
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -607,6 +674,7 @@ recipe_foodstuffs_67:
   recipe_food_id: 0
   name: 塩
   amount: 適宜 
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -616,6 +684,7 @@ recipe_foodstuffs_68:
   recipe_food_id: 0
   name: あらびき黒こしょう
   amount: 適宜 
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -625,6 +694,7 @@ recipe_foodstuffs_69:
   recipe_food_id: 0
   name: じゃが芋(男爵）
   amount: 3個
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -634,6 +704,7 @@ recipe_foodstuffs_70:
   recipe_food_id: 0
   name: にんにく
   amount: 1個
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -643,6 +714,7 @@ recipe_foodstuffs_71:
   recipe_food_id: 0
   name: アンチョビ
   amount: １５ｇ
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -652,6 +724,7 @@ recipe_foodstuffs_72:
   recipe_food_id: 0
   name: オリーブオイル
   amount: 大さじ１
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -661,6 +734,7 @@ recipe_foodstuffs_73:
   recipe_food_id: 0
   name: パセリ
   amount: 適量
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -670,6 +744,7 @@ recipe_foodstuffs_74:
   recipe_food_id: 0
   name: 塩
   amount: 適量
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -679,6 +754,7 @@ recipe_foodstuffs_75:
   recipe_food_id: 0
   name: アスパラ
   amount: ３本
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -688,6 +764,7 @@ recipe_foodstuffs_76:
   recipe_food_id: 0
   name: じゃがいも
   amount: 中２個(約250ｇ)
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -697,6 +774,7 @@ recipe_foodstuffs_77:
   recipe_food_id: 0
   name: プロセスチーズ
   amount: ２個(約30ｇ)
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -706,6 +784,7 @@ recipe_foodstuffs_78:
   recipe_food_id: 0
   name: ハム
   amount: ２枚
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -715,6 +794,7 @@ recipe_foodstuffs_79:
   recipe_food_id: 0
   name: マヨネーズ
   amount: 大さじ１～２
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -724,6 +804,7 @@ recipe_foodstuffs_80:
   recipe_food_id: 0
   name: 酢
   amount: 大さじ１/２
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC
@@ -733,6 +814,7 @@ recipe_foodstuffs_81:
   recipe_food_id: 0
   name: コショー
   amount: 少々
+  calorie: 0
   deleted_at: null
   created_at: 2012-05-13 14:14:22 UTC
   updated_at: 2012-05-13 14:14:22 UTC

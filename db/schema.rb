@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.text     "content",                                        :null => false
     t.integer  "category_id", :default => 0,                     :null => false
     t.string   "image"
-    t.datetime "publiced_at", :default => '2012-11-19 00:00:00', :null => false
+    t.datetime "publiced_at", :default => '2012-12-01 00:00:00', :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
@@ -164,6 +164,7 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.integer  "love_count",     :default => 0,     :null => false
     t.integer  "eatstyle_id",    :default => 0,     :null => false
     t.integer  "amount"
+    t.integer  "calorie",        :default => 0,     :null => false
     t.integer  "view_count",     :default => 0,     :null => false
     t.integer  "recipe_food_id"
     t.datetime "deleted_at"
@@ -176,7 +177,7 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
   create_table "recipe_food_genre_rankings", :force => true do |t|
     t.integer  "recipe_food_genre_id",                           :null => false
     t.integer  "point",                :default => 0,            :null => false
-    t.date     "ranked_at",            :default => '2012-11-19', :null => false
+    t.date     "ranked_at",            :default => '2012-12-01', :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
@@ -216,6 +217,7 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.integer  "recipe_food_id"
     t.string   "name",           :default => "", :null => false
     t.string   "amount",         :default => "", :null => false
+    t.integer  "calorie",        :default => 0,  :null => false
     t.time     "deleted_at"
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
@@ -275,6 +277,7 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.integer  "love_count",     :default => 0,     :null => false
     t.integer  "eatstyle_id",    :default => 0,     :null => false
     t.integer  "amount"
+    t.integer  "calorie",        :default => 0,     :null => false
     t.integer  "view_count",     :default => 0,     :null => false
     t.integer  "recipe_food_id"
     t.time     "deleted_at"

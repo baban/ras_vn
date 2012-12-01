@@ -7,7 +7,7 @@ class CreateRecipeFoodstuffs < ActiveRecord::Migration
       t.integer :recipe_food_id,  null: true
       t.string  :name,            null: false, default: ''
       t.string  :amount,          null: false, default: ''
-
+      t.integer :calorie,         null: false, default: 0
       t.time    :deleted_at,      null: true
       t.timestamps
     end
