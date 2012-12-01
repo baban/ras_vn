@@ -6,15 +6,6 @@ describe RecipesController do
   fixtures :users, :user_profiles, :user_profile_visibilities, :recipes, :recipe_comments
 
   context "非ログイン時" do
-    describe "GET 'index'" do
-      before do
-        get :index
-      end
-      it "returns http success" do
-        response.should be_success
-      end
-    end
-
     describe "GET 'show'" do
       before do
         get :show, id: 2
@@ -83,16 +74,8 @@ describe RecipesController do
       @request.env["devise.mapping"] = Devise.mappings[:user]
       @user = User.first
       sign_in @user
-      p session
     end
-    describe "GET 'index'" do
-      before do
-        get :index, recipe_food_id: 1
-      end
-      it "returns http success" do
-        response.should be_success
-      end
-    end
+
 =begin
     describe "GET 'show'" do
       before do

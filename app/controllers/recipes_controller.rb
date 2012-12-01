@@ -15,8 +15,8 @@ class RecipesController < ApplicationController
   def show
     @recipe ||= Recipe.find(params[:id])
     @recipe_comment = RecipeComment.new
-
-    @bookmark = Bookmark.find_by_recipe_id_and_user_id( params[:id], current_user.try(:id) ) || Bookmark.new
+    @comments = @recipe.comments
+    @bookmark = Bookmark.where( recipe_id: params[:id], user_id: current_user.try(:id) ).first || Bookmark.new
 
     @recipe.view_count_increment!
   end

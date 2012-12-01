@@ -2,55 +2,7 @@
 
 @import "parts/base";
 
-#content_footer {
-  width:28%;
-  floart:right;
-  display:block;
-  clear:none;
-}
-
-#content_body {
-  margin:0 2em;
-  width:70%;
-}
-
 /* show */
-#recipe_header {
-  p.chef {
-    width:50%;
-    float:left;
-  }
-  form.bookmark_form {
-    margin:0;
-    padding:0;
-    width:8em;
-    float:right;
-    input {
-      float:right;
-    }
-  }
-  &:after {
-    @include separater;
-  }
-}
-
-#recipe_body {
-  position:relative;
-  #recipe_photo {
-    position:relative;
-    min-width:200px;
-    min-height:200px;
-    border:solid 1px #aaa;
-    float:left;
-    clear:none;
-    padding:0;
-    margin:0 0.5em 0.5em 0.5em;
-    img {
-      margin:0;
-    }
-  }
-}
-
 #public_button {
   margin:0 1em;
   float:right;
@@ -76,53 +28,12 @@ table.ingredients_list {
   margin:1em 0 0 0;
   padding:0;
   &:before {
-    @include separater;
+    @include clearfix;
     margin:1em 0 0 0;
     padding:0;
   }
-  dl.step {
-    width:90%;
-    min-height:7em;
-    border:dashed 3px #fd8;
-    border-style:none none dashed none;
-    margin:0 auto 1em auto;
-    &:first-child {
-      margin-top:2em;
-    }    
-    dt {
-      color:orange;
-    }
-    dd {
-      img {
-        width:180px;
-	float:left;
-      }
-    }
-  }
-}
-
-#recipe_steps:after {
-  @include separater;
-}
-
-dl#recipe_comments > dd {
-  border:solid 1px #aaa;
-  width:10em;
-  heigth:15em;
-  margin:0 0.4em;
-  padding:0;
-  float:left;
-  clear:none;
-  dl.recipe_comment {
-    margin:0;
-    padding:0;
-    dt {
-      margin:0;
-      padding:0;  
-    }
-  }
   &:after {
-    @include separater;
+    @include clearfix;
   }
 }
 

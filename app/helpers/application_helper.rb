@@ -6,11 +6,12 @@ module ApplicationHelper
     s.gsub(/\r\n|\r|\n/, "<br />").html_safe
   end
 
-  def profile_image_tag(profile)
-    if profile and profile.image.url(:thumb).present?
-      image_tag(profile.image.url(:thumb), alt: profile.nickname, size:"180x180")
+  def profile_image_tag(profile, type=:thumb)
+    size = { thumb:"180x180", small_icon:"22x22" }[type.to_sym] || ""
+    if profile and profile.image.url(type).present?
+      image_tag(profile.image.url(type), alt: profile.nickname, size: size )
     else
-      image_tag("/assets/noimage.png", alt: "no_image", size:"180x180")
+      image_tag("/assets/noimage_#{type}.png", alt: "", size: size )
     end
   end
 

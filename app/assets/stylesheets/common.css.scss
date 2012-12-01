@@ -3,7 +3,7 @@
 
 @import "parts/base";
 
-html>/**/body { font-size: 13px;  line-height: 1.6;} /* except Win IE */
+html>/**/body { font-size: 13px; line-height: 1.6; } /* except Win IE */
 /* for IE6 */
 * html body { font-size:81%; }
 /* for IE7 */
@@ -338,3 +338,6 @@ img#profile_image_icon {
   color:#ccc;
 }
 
+.userinfo {
+  text-align:right;
+}

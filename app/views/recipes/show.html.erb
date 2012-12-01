@@ -8,7 +8,7 @@
 	<%= javascript_include_tag "colorbox/jquery.colorbox" %>
 	<%= javascript_include_tag "recipes/show" %>
 <% end %>
-<%= render partial:"forbiddon_right_click" %>
+<%#= render partial:"forbiddon_right_click" %>
 
 <div class="bace_bg">
 	<div class="contents_bg clearfix">
@@ -40,7 +40,7 @@
 					<p><%=hbr @recipe.description %></p>
 					<div class="clearfix">
 						<p class="user_name">
-							<span class="flo_l"><%= image_tag (@recipe.user.profile.image.url(:small_icon) || "common/user_ico.png"), width:"22", height:"22", alt:"Ẩm Thực Việt" %></span>
+							<span class="flo_l"><%= profile_image_tag(@recipe.user.profile, :small_icon) %></span>
 							<span class="flo_l"><%= link_to @recipe.user.profile.nickname, kitchen_url(@recipe.user) %></span>
 						</p>
 					</div>
@@ -79,13 +79,13 @@
 
 			<div id="recipe_comment_area" class="area">
 				<h3 id="comment_title"><%= t(:comments, scope:"views.recipes.report")%></h3>
-				<% @recipe.comments.each do |comment| %>
+				<% @comments.each do |comment| %>
 					<div class="cate01 clearfix">
 						<section class="rec_cat5 clearfix">
-							<% if comment.image.present? %><%= image_tag comment.image.url, size:"280x466", alt:"" %><% end %>
+							<% if comment.image.present? %><%= image_tag comment.image.url, size:"280x466", alt:"", class:"comment_image" %><% end %>
 							<div class="txt">
 								<h1 class="txt16"><%= comment.title %></h1>
-								<p>by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
+								<p class="userinfo">by&nbsp;<%= profile_image_tag(comment.chef, :small_icon) %><%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
 								<p><%= hbr comment.content %></p>
 								<div class="info_area">
 									<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
