@@ -56,7 +56,7 @@ vn:
         public: Công khai
         closed: Không công khai
         caution: Điều khoản đăng bài
-        next_step_button: Bước tiếp
+        next_step_button: Bước tiếp theo
       edit:
         edit_recipe: Sửa recipe
         genre: Nhóm thực phẩm

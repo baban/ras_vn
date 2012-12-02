@@ -99,7 +99,7 @@ vn:
         amount: Số người
         bookmarks: Bookmark
         deleted_at: Ngày xóa
-        description: Giới thiệu về món ăn
+        description: Giới thiệu khái quát về món ăn
         one_point: Mách nhỏ
         public: Status công khai
         recipe_comments: Recipe bạn làm theo

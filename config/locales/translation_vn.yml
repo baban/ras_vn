@@ -75,7 +75,7 @@ vn:
         amount: Số người ăn
         bookmarks: Yêu thích
         deleted_at: Ngày xóa
-        description: Giới thiệu về món ăn
+        description: Giới thiệu khái quát về món ăn
         one_point: Bí quyết
         public: Công khai
         recipe_comments: Nấu thử & Bình luận
