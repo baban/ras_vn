@@ -22,8 +22,8 @@ $(window).load ->
   food_stuff_row = (i)->
     s = 
     '<tr class="ingredient_row clearfix">'+
-      '<td class="ingredient_name"><input type="text" name="foodstuffs[][name]" value="" placeholder="Thực phẩm"></td>'+
-      '<td class="ingredient_quantity"><input type="text" name="foodstuffs[][amount]" value="" placeholder="Số tiền"></td>'+
+      '<td class="ingredient_name"><input type="text" name="foodstuffs[][name]" value="" placeholder="tên thực phẩm"></td>'+
+      '<td class="ingredient_quantity"><input type="text" name="foodstuffs[][amount]" value="" placeholder="dung lượng"></td>'+
       '<td class="ingredient_close_button"><form><input type="button" value="☓"></form></td>'+
     '</tr>';
     foodstuff_close_button_check()
