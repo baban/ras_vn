@@ -29,13 +29,20 @@ class Recipe < ActiveRecord::Base
   alias :steps :recipe_steps
   alias :steps= :recipe_steps=
   alias :image :recipe_image
-  alias :chef :user
 
   scope :visibles, ->{ where( "public = true" ) }
   scope :topics, -> { visibles.page(1).per(2) }
 
   def food
-    RecipeFood.find_by_id(self.recipe_food_id)
+    RecipeFood.whereid( id: self.recipe_food_id ).first
+  end
+
+  def chef
+    @chef_cache ||= self.user
+  end
+
+  def chef=(v)
+    @chef_cache = v
   end
 
   def comments
@@ -70,9 +77,15 @@ class Recipe < ActiveRecord::Base
     end
 
     recipes = Recipe.scoped
-    recipes = recipes.where( recipe_food_id: foods.pluck(:id) ) if foods.pluck(:id).present?
+    recipes = recipes.where( recipe_food_id: foods.pluck(:id) )       if foods.pluck(:id).present?
     recipes = recipes.where( " title like ? ", "%#{params[:word]}%" ) if params[:word]
     recipes.order( (order_mode=="new") ? " created_at DESC " : " view_count DESC " )
+  end
+
+  def include_user(recipes)
+    profs = UserProfiles.where( recipes.pluck(:user_id) )
+    recipes.map { |recipe| recipe.chef=profs.select{ |prof| prof.user_id==recipe.user_id }.first }
+    recipes
   end
 
   def view_count_increment!

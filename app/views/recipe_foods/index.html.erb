@@ -52,10 +52,10 @@
 					<div class="clearfix">
 						<div class="order_switch">
 							<% if @order_mode=="new" %><%= image_tag "/assets/common/ico_crown.png", class:"ico_crown", alt:"" %><% end %>
-							<%= link_to raw("<span> mới nhất </span>"), params.merge( order_mode: "new" ) %>
+							<%= link_to raw("mới nhất"), params.merge( order_mode: "new" ) %>
 							<span class="order_price"> | </span>
 							<% if @order_mode=="ranking" %><%= image_tag "/assets/common/ico_crown.png", class:"ico_crown", alt:""%><% end %>
-							<%= link_to raw("<span> bởi sự phổ biến </span>"), params.merge( order_mode: "ranking" ) %>
+							<%= link_to raw("bởi sự phổ biến"), params.merge( order_mode: "ranking" ) %>
 						</div>
 						<div class="mini_paginate">
 							<%= paginate @recipes %>
