@@ -8,12 +8,19 @@ class RecipeComment < ActiveRecord::Base
 
   mount_uploader :image, RecipeCommentUploader
 
-  def profs
-    UserProfile.where( user_id: self.user_id )
+  def include_profs
+    profs = self.to_a
+    
+    profs
   end
 
   def prof
     @cache || UserProfile.where( user_id: self.user_id ).first
   end
   alias :chef :prof
+
+  def prof=(v)
+    @cache=v
+  end
+  alias :chef= :prof=
 end

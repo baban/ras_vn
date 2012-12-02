@@ -19,7 +19,7 @@ class Recipe < ActiveRecord::Base
   belongs_to :recipe_ranking
   belongs_to :user
 
-  accepts_nested_attributes_for :recipe_steps # use formastic plug-in
+  accepts_nested_attributes_for :recipe_steps # use formtastic plug-in
 
   mount_uploader :recipe_image, RecipeImageUploader 
 
@@ -28,16 +28,21 @@ class Recipe < ActiveRecord::Base
   alias :foodstuffs= :recipe_foodstuffs=
   alias :steps :recipe_steps
   alias :steps= :recipe_steps=
-  alias :comments :recipe_comments
   alias :image :recipe_image
+  alias :chef :user
 
   scope :visibles, ->{ where( "public = true" ) }
   scope :topics, -> { visibles.page(1).per(2) }
 
-  alias :chef :user
-
   def food
     RecipeFood.find_by_id(self.recipe_food_id)
+  end
+
+  def comments
+    cmts = recipe_comments
+    profs = UserProfile.where( user_id: cmts.pluck(:user_id) )
+    cmts.map { |cmt| cmt.prof= profs.select{ |o| o.user_id==cmt.user_id }.first }
+    cmts
   end
 
   # this method is executed when [like] button cliked
