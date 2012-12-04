@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe RecipeFoodstuffRanking do
+describe ToppageContent do
   pending "add some examples to (or delete) #{__FILE__}"
 end

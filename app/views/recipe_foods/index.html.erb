@@ -35,7 +35,7 @@
 			</aside>
 			<div class="contents_cate">
 				<h1 class="ttl_cate flo_l"><%= @food_genre.name %></h1>
-				<p class="txt_sum txt_sum02">Kết quả : <span class="count"><%= @food_genre.amount %></span> bài</p>
+				<p class="txt_sum txt_sum02">Kết quả : <span class="count"><%= @recipes.total_count %></span> bài</p>
 				<% if @recomment_food_genre_recipe %>
 					<article class="rec_cat rec_cat3 clearfix">
 						<%= image_tag @recomment_food_genre_recipe.image.url(:top_large_thumb), width:"120", height:"170", alt:"" %>
