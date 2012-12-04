@@ -56,18 +56,18 @@ vn:
         public: Công khai
         closed: Không công khai
         caution: Điều khoản đăng bài
-        next_step_button: Bước tiếp
+        next_step_button: Bước tiếp theo
       edit:
         edit_recipe: Sửa recipe
-        genre: Category
-        select_genre: Chọn category
-        add_genre: Thêm category
-        add_foodstuff: Nhập tên thực phẩm
-        add_step: Thêm step
+        genre: Nhóm thực phẩm
+        select_genre: Chọn nhóm thực phẩm
+        add_genre: Thêm nhóm thực phẩm
+        add_foodstuff: Thêm thành phần
+        add_step: Thêm bước thực hiện
         edit: Save tạm thời
-        commit: Đăng xong recipe
+        commit: Đăng recipe
         tmp_save: Save tạm thời
-        save_complete: Saved
+        save_complete: Đã đăng hoàn thành
       report:
         comments: Nấu thử & Bình luận
         post_title: Đăng món nấu thử của bạn

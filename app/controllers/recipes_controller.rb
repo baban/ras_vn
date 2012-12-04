@@ -41,6 +41,13 @@ class RecipesController < ApplicationController
   end
 
   def edit
+    @play_holder = Array.new()
+    @play_holder[0] = ["Ví dụ: thịt heo", "200g"]
+    @play_holder[1] = ["Ví dụ: hành tím", "50g"]
+    @play_holder[2] = ["Ví dụ: nước mắm", "1 thìa"]
+    @play_holder[3] = ["Ví dụ: đường", "10g"]
+    @play_holder[4] = ["Ví dụ: dầu ăn", "1/2 thìa"]
+    
     @recipe = Recipe.find(params[:id])
     @draft = @recipe.draft
     @foodstuffs = @draft.edit_foodstuffs

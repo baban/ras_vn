@@ -31,23 +31,26 @@
 					<div>
 						<h3><%= t(:genre, scope:"views.recipes.edit") %></h3>
 						<%= recipe_genre_select_area(f, selected: @draft.recipe_food_id ) %>
-						<p><%= label_tag :new_food_genre, "Thêm thể loại" %>:<%= text_field_tag :new_food_genre, "", size: 10 %></p>
+						<p><%= label_tag :new_food_genre, "Nhập tên nhóm thực phẩm" %>:<%= text_field_tag :new_food_genre, "", size: 10 %></p>
 					</div>
-					<p id="genre_description">Nếu bạn không có một thể loại của sự lựa chọn của bạn, xin vui lòng thêm thể loại trong một hộp văn bản trên</p>
+					<p id="genre_description">Nhập tên nhóm thực phẩm nếu không tên có trong list.</p>
 					<div id="ingredients">
 						<p>
 							<span class="material_txt"> Nguyên liệu </span>
 							(<%= f.text_field :amount, size: 3, value: (@draft.amount.to_i.zero? ? 1 : @draft.amount) %> người ăn)
 						</p>
 						<table class="ingredients_list" id="foodstuffs">
+							<% i=0 %>
 							<% @draft.edit_foodstuffs.each do |foodstuff| %>
 								<tr class="ingredient_row clearfix">
-									<td class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: "Thực phẩm" %></td>
-									<td class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: "Số tiền" %></td>
+									<td class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: @play_holder[i][0] %></td>
+									<td class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: @play_holder[i][1] %></td>
 									<td class="ingredient_close_button"><form><%= submit_tag "☓", type:"button" %></form></td>
 								</tr>
+								<% i = i+1 %>
 							<% end %>
 						</table>
+						
 						<form id="add_foodstuff_form"><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %></form>
 					</div>
 				</div>
