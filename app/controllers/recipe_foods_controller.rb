@@ -4,8 +4,11 @@ class RecipeFoodsController < ApplicationController
   before_filter :authenticate_user!, only:[:new,:create]
 
   def index
+    # text search box is sending dust parameters
     params[:utf8]=params[:authenticity_token]=nil
-    @recomment_food_genre_recipe = Recipe.top_content
+
+    @recomment_food_genre_recipe = Recipe.food_genre_recommend_recipe(params)
+
     @order_mode = params[:order_mode] || "ranking"
     @food_genre = RecipeFoodGenre.choice(params)
     @recipes = Recipe.list( params, @order_mode ).page( params[:page] || 1 ).per(5)

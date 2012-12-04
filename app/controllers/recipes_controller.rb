@@ -73,6 +73,10 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.public = true
     @recipe.save
+    @recipe_food = RecipeFood.find( @recipe.recipe_food_id )
+    @recipe_food_genre = RecipeFoodGenre.find(@recipe_food.recipe_food_genre_id)
+    @recipe_food_genre.amount+=1
+    @recipe_food_genre.save
     Stream.push( Stream::ADD_RECIPE, current_user.id, @recipe )
 
     redirect_to action:"show", id: @recipe.id

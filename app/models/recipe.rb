@@ -90,12 +90,9 @@ class Recipe < ActiveRecord::Base
     recipes.order( (order_mode=="new") ? " created_at DESC " : " view_count DESC " )
   end
 
-  def self.include_user_prof(recipes)
-    us = User.where( id: recipes.pluck(:user_id) )
-    profs = UserProfile.where( user_id: recipes.pluck(:user_id) )
-    recipes = recipes.map { |recipe| recipe.chef= us.select{ |u| u.id==recipe.user_id }.first }
-    #recipes = recipes.map { |recipe| recipe.chef_profile= profs.select{ |prof| prof.user_id==recipe.user_id }.first }
-    recipes
+  def self.food_genre_recommend_recipe(params)
+    # current recommend recipe is newest recipe in search result
+    self.list( params, "new" ).first
   end
 
   def view_count_increment!
