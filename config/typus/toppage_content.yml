@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+ToppageContent:
+  fields:
+    default: recommend_recipe_id, recommend_recipe_genre_id
+    form: recommend_recipe_id, recommend_recipe_genre_id
+  relationships: 
+  application: Application

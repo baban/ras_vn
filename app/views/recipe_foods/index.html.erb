@@ -43,7 +43,7 @@
 							<h1 class="txt16"><%= link_to @recomment_food_genre_recipe.title, recipe_url(@recomment_food_genre_recipe) %></h1>
 							<h2>
 								<%= @recomment_food_genre_recipe.description %>
-								<p>by&nbsp;<%= link_to @recomment_food_genre_recipe.chef.profile.nickname, kitchen_url(@recomment_food_genre_recipe.chef) %></p>
+								<p>by&nbsp;<%= link_to @recomment_food_genre_recipe.chef_profile.nickname, kitchen_url(@recomment_food_genre_recipe.chef) %></p>
 							</h2>
 						</div>
 					</article>
@@ -66,7 +66,7 @@
 							<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
 							<div class="txt">
 								<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
-								<p>by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %></p>
+								<p>by <%= link_to recipe.chef_profile.nickname, kitchen_url(recipe.chef) %></p>
 								<h2>
 									<%= recipe.description %>
 									<div class="info_area">

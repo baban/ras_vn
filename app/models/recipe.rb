@@ -45,6 +45,14 @@ class Recipe < ActiveRecord::Base
     @chef_cache = v
   end
 
+  def chef_profile
+    @chef_info_cache ||= UserProfile.where( user_id: self.user_id ).first
+  end
+
+  def chef_profile=(v)
+    @chef_info_cache = v
+  end
+
   def comments
     cmts = recipe_comments
     profs = UserProfile.where( user_id: cmts.pluck(:user_id) )
@@ -82,9 +90,11 @@ class Recipe < ActiveRecord::Base
     recipes.order( (order_mode=="new") ? " created_at DESC " : " view_count DESC " )
   end
 
-  def include_user(recipes)
-    profs = UserProfiles.where( recipes.pluck(:user_id) )
-    recipes.map { |recipe| recipe.chef=profs.select{ |prof| prof.user_id==recipe.user_id }.first }
+  def self.include_user_prof(recipes)
+    us = User.where( id: recipes.pluck(:user_id) )
+    profs = UserProfile.where( user_id: recipes.pluck(:user_id) )
+    recipes = recipes.map { |recipe| recipe.chef= us.select{ |u| u.id==recipe.user_id }.first }
+    #recipes = recipes.map { |recipe| recipe.chef_profile= profs.select{ |prof| prof.user_id==recipe.user_id }.first }
     recipes
   end
 
