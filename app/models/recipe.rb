@@ -84,7 +84,7 @@ class Recipe < ActiveRecord::Base
       foods = food_genre.foods
     end
 
-    recipes = Recipe.scoped
+    recipes = Recipe.where( " public = true " )
     recipes = recipes.where( recipe_food_id: foods.pluck(:id) )       if foods.pluck(:id).present?
     recipes = recipes.where( " title like ? ", "%#{params[:word]}%" ) if params[:word]
     recipes.order( (order_mode=="new") ? " created_at DESC " : " view_count DESC " )

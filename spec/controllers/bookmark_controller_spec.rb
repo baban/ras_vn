@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe BookmarkController do
+describe BookmarksController do
 
   describe "GET 'index'" do
     it "returns http success" do

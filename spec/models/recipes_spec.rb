@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Recipe do
-  fixtures :recipes
+  fixtures :recipes, :recipe_food_genres, :recipe_foods
 
   describe "#view_count_increment!" do
     context "normal test" do
@@ -33,7 +33,6 @@ describe Recipe do
   end
 
   describe ".list" do
-    fixtures :recipe_food_genres, :recipe_foods
     context "blank parameter" do
       before do
         @recipes = Recipe.list
@@ -81,7 +80,7 @@ describe Recipe do
         @recipes = Recipe.list( { recipe_food_genre_id: 1 }, "new" )
       end
       it "select created_at is nearest element" do
-        @recipes.first.id.should == 11
+        @recipes.first.id.should == 12
       end
     end
     context "sort by ranking" do
@@ -93,4 +92,17 @@ describe Recipe do
       end
     end
   end
+  describe ".food_genre_recommend_recipe" do
+    let(:prms) do
+      h = {"order_mode"=>"new", "recipe_food_id"=>"1"}
+      ActiveSupport::HashWithIndifferentAccess.new(h)
+    end
+    before do
+      @recomment_food_genre_recipe = Recipe.food_genre_recommend_recipe(prms)
+    end
+    it "一番最近に作られたレシピを返す" do
+      @recomment_food_genre_recipe.id == 12
+    end
+  end
 end
+
