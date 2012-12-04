@@ -8,7 +8,6 @@ class RecipeFoodsController < ApplicationController
     params[:utf8]=params[:authenticity_token]=nil
 
     @recomment_food_genre_recipe = Recipe.food_genre_recommend_recipe(params)
-
     @order_mode = params[:order_mode] || "ranking"
     @food_genre = RecipeFoodGenre.choice(params)
     @recipes = Recipe.list( params, @order_mode ).page( params[:page] || 1 ).per(5)

@@ -69,31 +69,5 @@ describe RecipesController do
         "save"=>"Đăng xong recipe"
       }
     end
-
-    before do
-      @request.env["devise.mapping"] = Devise.mappings[:user]
-      @user = User.first
-      sign_in @user
-    end
-
-=begin
-    describe "GET 'show'" do
-      before do
-        get :show, id: 2
-      end
-      it "returns http success" do
-        response.should be_success
-      end
-    end
-
-    describe "GET 'new'" do
-      before do
-        get :new
-      end
-      it "returns http success" do
-        response.should be_success
-      end
-    end
-=end
   end
 end
