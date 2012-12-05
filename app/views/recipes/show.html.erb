@@ -5,10 +5,11 @@
 <% end %>
 
 <% content_for :javascript_after do %>
-	<%= javascript_include_tag "colorbox/jquery.colorbox" %>
+	<%= javascript_include_tag "colorbox/jquery.colorbox-min" %>
 	<%= javascript_include_tag "recipes/show" %>
 <% end %>
-<%#= render partial:"forbiddon_right_click" %>
+
+<%= render partial:"forbiddon_right_click" %>
 
 <div class="bace_bg">
 	<div class="contents_bg clearfix">

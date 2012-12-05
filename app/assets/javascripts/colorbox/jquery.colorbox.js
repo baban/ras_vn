@@ -1,4 +1,4 @@
-// ColorBox v1.3.20.2 - jQuery lightbox plugin
+// ColorBox v1.3.20.1 - jQuery lightbox plugin
 // (c) 2012 Jack Moore - jacklmoore.com
 // License: http://www.opensource.org/licenses/mit-license.php
 (function ($, document, window) {
@@ -187,7 +187,7 @@
 			}
 		}
 		
-		settings.rel = settings.rel || element.rel || $(element).data('rel') || 'nofollow';
+		settings.rel = settings.rel || element.rel || 'nofollow';
 		settings.href = settings.href || $(element).attr('href');
 		settings.title = settings.title || element.title;
 		
@@ -210,12 +210,13 @@
 		className = prefix + "Slideshow_",
 		click = "click." + prefix,
 		start,
-		stop;
+		stop,
+		clear;
 		
 		if (settings.slideshow && $related[1]) {
 			start = function () {
 				$slideshow
-					.html(settings.slideshowStop)
+					.text(settings.slideshowStop)
 					.unbind(click)
 					.bind(event_complete, function () {
 						if (settings.loop || $related[index + 1]) {
@@ -233,7 +234,7 @@
 			stop = function () {
 				clearTimeout(timeOut);
 				$slideshow
-					.html(settings.slideshowStart)
+					.text(settings.slideshowStart)
 					.unbind([event_complete, event_load, event_cleanup, click].join(' '))
 					.one(click, function () {
 						publicMethod.next();
@@ -269,7 +270,7 @@
 						relRelated;
 
 					if (data) {
-						relRelated =  $(this).data('rel') || data.rel || this.rel;
+						relRelated =  data.rel || this.rel;
 					}
 					
 					return (relRelated === settings.rel);
@@ -415,7 +416,7 @@
 					}
 				});
 
-				$(document).delegate('.'+boxElement, 'click', function(e) {
+				$('.' + boxElement, document).live('click', function (e) {
 					// ignore non-left-mouse-clicks and clicks modified with ctrl / command, shift, or alt.
 					// See: http://jacklmoore.com/notes/click-events/
 					if (!(e.which > 1 || e.shiftKey || e.altKey || e.metaKey)) {
@@ -722,33 +723,23 @@
 				if (frameBorder in iframe) {
 					iframe[frameBorder] = 0;
 				}
-				
 				if (allowTransparency in iframe) {
 					iframe[allowTransparency] = "true";
 				}
-
+				// give the iframe a unique name to prevent caching
+				iframe.name = prefix + (+new Date());
+				if (settings.fastIframe) {
+					complete();
+				} else {
+					$(iframe).one('load', complete);
+				}
+				iframe.src = settings.href;
 				if (!settings.scrolling) {
 					iframe.scrolling = "no";
 				}
-				
-				$(iframe)
-					.attr({
-						src: settings.href,
-						name: (new Date()).getTime(), // give the iframe a unique name to prevent caching
-						'class': prefix + 'Iframe',
-						allowFullScreen : true, // allow HTML5 video to go fullscreen
-						webkitAllowFullScreen : true,
-						mozallowfullscreen : true
-					})
-					.one('load', complete)
-					.one(event_purge, function () {
-						iframe.src = "//about:blank";
-					})
-					.appendTo($loaded);
-				
-				if (settings.fastIframe) {
-					$(iframe).trigger('load');
-				}
+				$(iframe).addClass(prefix + 'Iframe').appendTo($loaded).one(event_purge, function () {
+					iframe.src = "//about:blank";
+				});
 			} else {
 				complete();
 			}
@@ -878,7 +869,7 @@
 				photo.src = href;
 			}, 1);
 		} else if (href) {
-			$loadingBay.load(href, settings.data, function (data, status) {
+			$loadingBay.load(href, settings.data, function (data, status, xhr) {
 				prep(status === 'error' ? $tag(div, 'Error').html(settings.xhrError) : $(this).contents());
 			});
 		}
@@ -936,9 +927,8 @@
 		$box = null;
 		$('.' + boxElement)
 			.removeData(colorbox)
-			.removeClass(boxElement);
-
-		$(document).undelegate('.'+boxElement);
+			.removeClass(boxElement)
+			.die();
 	};
 
 	// A method for fetching the current element ColorBox is referencing.
@@ -949,4 +939,4 @@
 
 	publicMethod.settings = defaults;
 
-}(jQuery, document, window));
+}(jQuery, document, this));

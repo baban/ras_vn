@@ -96,8 +96,6 @@
 				<h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
 				<div class="section"><%=f.text_area :one_point, value: @recipe.one_point %></div>
 				
-				<h3><%= t(:public, scope:"activerecord.attributes.recipe") %></h3>
-				<p><%= f.select :public, { t( :public, scope:"views.recipes.new" ) => true, t( :closed, scope:"views.recipes.new" ) => false } %></p>
 				<p class="form_actions">
 					<%= f.submit name:"edit", value: t( :edit,   scope:"views.recipes.edit" ), id:"edit_button" %>
 					<%= f.submit name:"save", value: t( :commit, scope:"views.recipes.edit" ), id:"save_button" %>
@@ -119,6 +117,4 @@
 	<!--contents-->
 	<% end %>
 </div>
-
-<%= render partial:"layouts/content_footer" %>
 
