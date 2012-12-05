@@ -203,17 +203,17 @@ recipe_drafts_11:
   title: じゃがいもといんげんのマヨマスタード炒め
   description: マヨマスタードの味がくせになる〜 マヨ好きにはたまらない〜♪ ２０１２．５.１５話題入りしました♪
   public: true
-  recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
+  recipe_image: 0ff8078adc4d15e23ffa17e3f7364244.jpg
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
   love_count: 0
   eatstyle_id: 0
-  amount: 0
+  amount: 1
   calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
-  updated_at: 2012-06-05 13:22:11 UTC
+  updated_at: 2012-12-04 16:22:53 UTC
 recipe_drafts_12:
   id: 13
   user_id: 1
@@ -257,17 +257,17 @@ recipe_drafts_14:
   title: ★ジャガイモのカレーそぼろチーズのせ★
   description: フライパンで簡単に出来ます☆ そのまま食卓へ♪ 材料、分量の変更を致しました。
   public: true
-  recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
+  recipe_image: 0ff8078adc4d15e23ffa17e3f7364244.jpg
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
   love_count: 0
   eatstyle_id: 0
-  amount: 0
+  amount: 1
   calorie: 0
   view_count: 0
   recipe_food_id: 1
   deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
-  updated_at: 2012-06-05 13:22:11 UTC
+  updated_at: 2012-12-05 00:58:38 UTC
 recipe_drafts_15:
   id: 16
   user_id: 1
@@ -1283,17 +1283,17 @@ recipe_drafts_71:
   title: 大根と帆立貝柱缶のサラダ
   description: 簡単に出来て、貝嫌い(嫁、息子)も大好きなサラダです！
   public: true
-  recipe_image: recipe.jpg
-  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。
+  recipe_image: 4e420fe6c452f9abeffaab2865f9cdad.jpg
+  one_point: ③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 
   love_count: 0
   eatstyle_id: 0
-  amount: 0
+  amount: 1
   calorie: 0
   view_count: 0
   recipe_food_id: 5
   deleted_at: null
   created_at: 2012-06-05 13:22:11 UTC
-  updated_at: 2012-06-05 13:22:11 UTC
+  updated_at: 2012-12-04 15:32:58 UTC
 recipe_drafts_72:
   id: 73
   user_id: 1

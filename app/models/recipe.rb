@@ -108,5 +108,17 @@ class Recipe < ActiveRecord::Base
     draft.save
     draft
   end
+
+  def publication
+    self.public = true
+    recipe_food = RecipeFood.find( self.recipe_food_id )
+    recipe_food_genre = RecipeFoodGenre.find(recipe_food.recipe_food_genre_id)
+    recipe_food_genre.increment(:amount)
+    ActiveRecord::Base.transaction do
+      recipe_food_genre.save
+      self.save
+    end
+    self
+  end
 end
 

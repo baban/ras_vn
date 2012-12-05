@@ -3,7 +3,8 @@
 require 'spec_helper'
 
 describe RecipesController do
-  fixtures :users, :user_profiles, :user_profile_visibilities, :recipes, :recipe_comments
+  fixtures :users, :user_profiles, :user_profile_visibilities
+  fixtures :recipes, :recipe_comments, :recipe_drafts, :recipe_food_genres, :recipe_foods, :recipe_foodstuff_drafts, :recipe_foodstuffs, :recipe_step_drafts, :recipe_steps
 
   context "非ログイン時" do
     describe "GET 'show'" do
@@ -28,7 +29,7 @@ describe RecipesController do
       before do
         get :edit, id: 2
       end
-      it "returns http success" do
+      it "returns http redirect" do
         response.should be_redirect
       end
     end
@@ -38,7 +39,7 @@ describe RecipesController do
     include Devise::TestHelpers
 
     let(:prms) do
-      {
+      h = {
         id: 11,
         step_number: 1,
         recipe_genre_selecter: 1,
@@ -66,8 +67,73 @@ describe RecipesController do
           {"movie_url"=>"", "content"=>""},
           {"movie_url"=>"", "content"=>""}
         ],
-        "save"=>"Đăng xong recipe"
       }
+      ActiveSupport::HashWithIndifferentAccess.new(h)
+    end
+    describe "GET 'new'" do
+      before do
+        @request.env["devise.mapping"] = Devise.mappings[:admin]
+        @user = User.first
+        @user.confirm!
+        sign_in @user
+      end
+      before do
+        get :new
+      end
+      it "returns http success" do
+        response.should be_success
+      end
+    end
+
+    describe "GET 'edit'" do
+      before do
+        @request.env["devise.mapping"] = Devise.mappings[:admin]
+        @user = User.first
+        @user.confirm!
+        sign_in @user
+      end
+
+      context "my recipe" do
+        before do
+          get :edit, id: 11
+        end
+        it "returns http success" do
+          response.should be_success
+        end
+      end
+
+      context "other user's recipe " do
+        before do
+          get :edit, id: 1
+        end
+        it "returns http redirect" do
+          response.should be_redirect
+        end
+      end
+    end
+
+    describe "GET publication" do
+      context do
+        before do
+          @request.env["devise.mapping"] = Devise.mappings[:admin]
+          @user = User.first
+          @user.confirm!
+          sign_in @user
+        end
+
+        before do
+          get :publication, id: 15
+        end
+        it "returns http redirect" do
+          response.should be_redirect
+        end
+        it "returns redirect to show action" do
+          response.should redirect_to( action:"show", id: 15 )
+        end
+        it "returns http redirect" do
+          Recipe.find(15).public.should be_true
+        end
+      end
     end
   end
 end

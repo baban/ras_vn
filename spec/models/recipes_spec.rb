@@ -92,6 +92,7 @@ describe Recipe do
       end
     end
   end
+
   describe ".food_genre_recommend_recipe" do
     let(:prms) do
       h = {"order_mode"=>"new", "recipe_food_id"=>"1"}
@@ -102,6 +103,20 @@ describe Recipe do
     end
     it "一番最近に作られたレシピを返す" do
       @recomment_food_genre_recipe.id == 12
+    end
+  end
+
+  describe "#publication" do
+    before do
+      @genre = RecipeFoodGenre.find(1)
+      @recipe = Recipe.find(15)
+      @recipe.publication
+    end
+    it "公開ステータスを非公開から公開に変更する" do
+      @recipe.public.should be_true
+    end
+    it "ジャンルに属しているレシピの数をインクリメントする" do
+      RecipeFoodGenre.find(1).amount.should == @genre.amount+1
     end
   end
 end
