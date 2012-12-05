@@ -104,5 +104,19 @@ describe Recipe do
       @recomment_food_genre_recipe.id == 12
     end
   end
+
+  describe "#publication" do
+    before do
+      @genre = RecipeFoodGenre.find(1)
+      @recipe = Recipe.find(15)
+      @recipe.publication
+    end
+    it "公開ステータスを非公開から公開に変更する" do
+      @recipe.public.should be_true
+    end
+    it "ジャンルに属しているレシピの数をインクリメントする" do
+      RecipeFoodGenre.find(1).amount.should == @genre.amount+1
+    end
+  end
 end
 

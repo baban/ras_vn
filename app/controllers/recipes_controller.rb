@@ -41,13 +41,15 @@ class RecipesController < ApplicationController
   end
 
   def edit
-    @play_holder = Array.new()
-    @play_holder[0] = ["Ví dụ: thịt heo", "200g"]
-    @play_holder[1] = ["Ví dụ: hành tím", "50g"]
-    @play_holder[2] = ["Ví dụ: nước mắm", "1 thìa"]
-    @play_holder[3] = ["Ví dụ: đường", "10g"]
-    @play_holder[4] = ["Ví dụ: dầu ăn", "1/2 thìa"]
-    
+    # paly_holders is using in view
+    @play_holder = [
+      ["Ví dụ: thịt heo", "200g"],
+      ["Ví dụ: hành tím", "50g"],
+      ["Ví dụ: nước mắm", "1 thìa"],
+      ["Ví dụ: đường", "10g"],
+      ["Ví dụ: dầu ăn", "1/2 thìa"],
+    ]
+
     @recipe = Recipe.find(params[:id])
     @draft = @recipe.draft
     @foodstuffs = @draft.edit_foodstuffs
@@ -78,13 +80,8 @@ class RecipesController < ApplicationController
 
   def publication
     @recipe = Recipe.find(params[:id])
-    @recipe.public = true
-    @recipe.save
-    @recipe_food = RecipeFood.find( @recipe.recipe_food_id )
-    @recipe_food_genre = RecipeFoodGenre.find(@recipe_food.recipe_food_genre_id)
-    @recipe_food_genre.amount+=1
-    @recipe_food_genre.save
-    Stream.push( Stream::ADD_RECIPE, current_user.id, @recipe )
+    @recipe.publication
+    Stream.push( Stream::ADD_RECIPE, user.id, recipe )
 
     redirect_to action:"show", id: @recipe.id
   end
