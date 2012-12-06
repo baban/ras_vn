@@ -40,11 +40,10 @@
 							(<%= f.text_field :amount, size: 3, value: (@draft.amount.to_i.zero? ? 1 : @draft.amount) %> người ăn)
 						</p>
 						<table class="ingredients_list" id="foodstuffs">
-							<% i=0 %>
-							<% @draft.edit_foodstuffs.each do |foodstuff| %>
+							<% @draft.edit_foodstuffs.each_with_index do |foodstuff,i| %>
 								<tr class="ingredient_row clearfix">
-									<td class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: @play_holder[i][0] %></td>
-									<td class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: @play_holder[i][1] %></td>
+									<td class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: @play_holder[i] && @play_holder[i][0] %></td>
+									<td class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: @play_holder[i] && @play_holder[i][1] %></td>
 									<td class="ingredient_close_button"><form><%= submit_tag "☓", type:"button" %></form></td>
 								</tr>
 								<% i = i+1 %>
