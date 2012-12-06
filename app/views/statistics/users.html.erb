@@ -1,9 +1,6 @@
 <% content_for :javascripts do %>
-  <%= javascript_include_tag "prototype" %>
-  <%= javascript_include_tag "html5jp/graph/circle" %>
-  <%= javascript_include_tag "html5jp/graph/line" %>
-  <%= javascript_include_tag "html5jp/graph/rader" %>
-  <%= javascript_include_tag "html5jp/graph/vbar" %>
+  <%= javascript_include_tag "d3.v2" %>
+  <%= javascript_include_tag "statistics" %>
 <% end %>
 <% content_for :stylesheets do %>
   <%= stylesheet_link_tag :statistics %>
@@ -13,7 +10,8 @@
 
 <div class="widget">
   <h3>男女比</h3>
-  <%= pie_chart(@sex_rate_graph) %>
+  <div id="sex_rate" class="graph"></div>
+  <script>pie_chart( <%=raw @sex_rate_graph.to_json %>,"#sex_rate")</script>
   <table class="data">
     <% @sex_rate_graph.each do |k,v| %>
       <tr>
@@ -26,21 +24,27 @@
 
 <div class="widget">
   <h3>地域別登録人数</h3>
-  <%= vertical_bar_chart(*@prefecture_table) %>
+  <div id="area_rate" class="graph"></div>
+  <script>bar_chart( <%=raw @prefecture_table.to_json %>,"#area_rate")</script>
+  <table>
+    <tr>
+      <% @prefecture_table.each do |name,amount| %>
+        <th><%= name %></th>
+        <td><%= amount %></td>
+      <% end %>
+    </tr>
+  </table>
 </div>
 
 <div class="widget">
   <h3>年代別登録人数</h3>
-  <%= vertical_bar_chart(*@dicade_table) %>
+  <div id="age_rate" class="graph"></div>
+  <script>bar_chart( <%=raw @dicade_table.to_json %>,"#age_rate")</script>
   <table class="data">
     <tr>
-      <% @dicade_table.last[:x].each do |v| %>
-        <th><%= v %></th>
-      <% end %>
-    </tr>
-    <tr>
-      <% @dicade_table.first.each do |v| %>
-        <td><%= v %></td>
+      <% @dicade_table.each do |name,amount| %>
+        <th><%= name %></th>
+        <td><%= amount %></td>
       <% end %>
     </tr>
   </table>

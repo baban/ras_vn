@@ -71,21 +71,15 @@ class StatisticsController < Admin::BaseController
   def create_prefecture_table
     h = Prefecture.all.inject({}){ |h,o| h[o.id]=o.name; h }
     profiles = UserProfile.group(:sex).count
-    pref_names = ["県名"].concat( profiles.keys.map{ |v| h[v].to_s } )
-    params = { x: pref_names, y:["人数"], canvas_id:"prefecture_graph" }
-    values = ["県"].concat(profiles.values)
+    pref_names = profiles.keys.map{ |v| h[v].to_s }
+    values = profiles.values
 
-    [values,params]
+    [pref_names,values].transpose
   end
 
   def create_dicade_table
     profiles = UserProfile.find_by_sql(["select (t.birthday*10) as birthday, count(*) as sex from (select round(((curdate()+0)-(birthday + 0))/100000) as birthday from user_profiles) as t group by birthday;"])
-    keys, values = profiles.map { |o| [o.birthday.to_i, o.sex] }.transpose
-
-    params = { x: ["年代"].concat(keys), y:["人数"], canvas_id:"dicade_graph" }
-    values = ["会員数"].concat(values)
-
-    [values,params]
+    profiles.map { |o| [o.birthday.to_i, o.sex] }
   end
 end
 
