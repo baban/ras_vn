@@ -51,5 +51,5 @@ function bar_chart( data, html_id ){
   console.log(max);
   divs.enter().append("div").attr("class", "bar").style("opacity", 0);
   divs.exit().transition().duration(transitionDurationMS).style("opacity", 0).remove();
-  divs.transition().duration(transitionDurationMS).style("opacity",1).style("height", function(d){ return Math.ceil( (d / max)*200 ) + "px" }).text(function(d) { return d; });
+  divs.transition().duration(transitionDurationMS).style("opacity",1).style("height", function(d){ return Math.ceil( d*Math.min(250,d)/max )+"px" }).text(function(d) { return d; });
 }

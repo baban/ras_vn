@@ -11,8 +11,9 @@ class StatisticsController < Admin::BaseController
 
     @sex_rate_graph = create_profile_table
     @prefecture_table = create_prefecture_table
-
     @dicade_table = create_dicade_table
+    @food_genre_table = create_recipe_food_genre_table
+    @foodstuff_table = create_recipe_food_table
   end
 
   def access
@@ -80,6 +81,14 @@ class StatisticsController < Admin::BaseController
   def create_dicade_table
     profiles = UserProfile.find_by_sql(["select (t.birthday*10) as birthday, count(*) as sex from (select round(((curdate()+0)-(birthday + 0))/100000) as birthday from user_profiles) as t group by birthday;"])
     profiles.map { |o| [o.birthday.to_i, o.sex] }
+  end
+
+  def create_recipe_food_genre_table
+    RecipeFoodGenre.all.map { |o| [o.name,o.amount] }
+  end
+
+  def create_recipe_food_table
+    RecipeFoodstuff.group(:name).count.map{ |k,v| [k,v] }.sort { |a,b| b[1]<=>a[1] }[0..10]
   end
 end
 

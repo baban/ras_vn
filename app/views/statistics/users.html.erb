@@ -26,13 +26,13 @@
   <h3>地域別登録人数</h3>
   <div id="area_rate" class="graph"></div>
   <script>bar_chart( <%=raw @prefecture_table.to_json %>,"#area_rate")</script>
-  <table>
-    <tr>
-      <% @prefecture_table.each do |name,amount| %>
+  <table class="data">
+    <% @prefecture_table.each do |name,amount| %>
+      <tr>
         <th><%= name %></th>
         <td><%= amount %></td>
-      <% end %>
-    </tr>
+      </tr>
+    <% end %>
   </table>
 </div>
 
@@ -41,13 +41,40 @@
   <div id="age_rate" class="graph"></div>
   <script>bar_chart( <%=raw @dicade_table.to_json %>,"#age_rate")</script>
   <table class="data">
-    <tr>
-      <% @dicade_table.each do |name,amount| %>
+    <% @dicade_table.each do |name,amount| %>
+      <tr>
         <th><%= name %></th>
         <td><%= amount %></td>
-      <% end %>
-    </tr>
+      </tr>
+    <% end %>
   </table>
 </div>
 
+<div class="widget">
+  <h3>ジャンル別レシピ数</h3>
+  <div id="food_genre_rate" class="graph"></div>
+  <script>bar_chart( <%=raw @food_genre_table.to_json %>,"#food_genre_rate")</script>
+  <table class="data">
+    <% @food_genre_table.each do |name,amount| %>
+      <tr>
+        <th><%= name %></th>
+        <td><%= amount %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<div class="widget">
+  <h3>食材別ランキングベスト10</h3>
+  <div id="foodstuff_rate" class="graph"></div>
+  <script>bar_chart( <%=raw @foodstuff_table.to_json %>,"#foodstuff_rate")</script>
+  <table class="data">
+    <% @foodstuff_table.each do |name,amount| %>
+      <tr>
+        <th><%= name %></th>
+        <td><%= amount %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
 
