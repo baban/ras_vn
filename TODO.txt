@@ -7,3 +7,5 @@ production.logのローテーション
 streamがおかしい
 レシピジャンル別の統計を取得
 レシピジャンル別の統計を取得
+recipe_food_genreの検索バー
+
