@@ -22,7 +22,9 @@
 			</div>
 			<p>
 				<%= f.label :recipe_image %>
+				<%= link_to "(file uploaded)", @recipe.image.url if @recipe.image.present? %>
 				<%= f.file_field :recipe_image %>
+				<%= f.hidden_field :recipe_image_cache %>
 			</p>
 			<p><%= link_to t( :caution, scope:"views.recipes.new" ), action:"caution" %></p>
 			<p><%= f.submit t( :next_step_button, scope:"views.recipes.new" ), id:"regist_button" %></p>
