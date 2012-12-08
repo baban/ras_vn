@@ -8,6 +8,15 @@ class RecipesController < ApplicationController
 
   helper_method :loved?, :bookmarked?, :my_recipe?
 
+  # paly_holders is using in view
+  PLAY_HOLDERS = [
+    ["Ví dụ: thịt heo", "200g"],
+    ["Ví dụ: hành tím", "50g"],
+    ["Ví dụ: nước mắm", "1 thìa"],
+    ["Ví dụ: đường", "10g"],
+    ["Ví dụ: dầu ăn", "1/2 thìa"],
+  ]
+
   def index
     redirect_to recipe_food_genres_url
   end
@@ -41,14 +50,7 @@ class RecipesController < ApplicationController
   end
 
   def edit
-    # paly_holders is using in view
-    @play_holder = [
-      ["Ví dụ: thịt heo", "200g"],
-      ["Ví dụ: hành tím", "50g"],
-      ["Ví dụ: nước mắm", "1 thìa"],
-      ["Ví dụ: đường", "10g"],
-      ["Ví dụ: dầu ăn", "1/2 thìa"],
-    ]
+    @playholders = PLAY_HOLDERS
 
     @recipe = Recipe.find(params[:id])
     @draft = @recipe.draft
@@ -57,14 +59,7 @@ class RecipesController < ApplicationController
   end
 
   def update
-    # paly_holders is using in view
-    @play_holder = [
-      ["Ví dụ: thịt heo", "200g"],
-      ["Ví dụ: hành tím", "50g"],
-      ["Ví dụ: nước mắm", "1 thìa"],
-      ["Ví dụ: đường", "10g"],
-      ["Ví dụ: dầu ăn", "1/2 thìa"],
-    ]
+    @playholders = PLAY_HOLDERS
 
     @recipe = Recipe.find(params[:id])
     @draft = @recipe.draft
@@ -87,6 +82,8 @@ class RecipesController < ApplicationController
     if params[:edit]
       redirect_to( { action: "edit", id: @recipe.id }, notice: t(:tmp_save, scope:"views.recipes.edit") )
     else
+      # recipe_drafts data is copying to recipes table
+      @draft.copy_public
       redirect_to( { action: "show", id: @recipe.id }, notice: t(:save_complete, scope:"views.recipes.edit") )
     end
   end

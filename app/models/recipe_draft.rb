@@ -66,7 +66,7 @@ class RecipeDraft < ActiveRecord::Base
       attributes["recipe_id"] = attributes["recipe_draft_id"]
       attributes.delete("recipe_draft_id")
       step = RecipeStep.new(attributes)
-      # step.image= form_values[:recipe_steps][i][:image] if form_values && form_values[:recipe_steps] && form_values[:recipe_steps][i] && form_values[:recipe_steps][i][:image]
+      step.image= File.open(d.image.current_path) if d.image.present?
       step
     end
 

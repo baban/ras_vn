@@ -52,8 +52,8 @@
 						<table class="ingredients_list" id="foodstuffs">
 							<% @draft.edit_foodstuffs.each_with_index do |foodstuff,i| %>
 								<tr class="ingredient_row clearfix">
-									<td class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: @play_holder.try(:at,i).try(:at,0) %></td>
-									<td class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: @play_holder.try(:at,i).try(:at,1) %></td>
+									<td class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: @play_holders.try(:at,i).try(:at,0) %></td>
+									<td class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: @play_holders.try(:at,i).try(:at,1) %></td>
 									<td class="ingredient_close_button"><form><%= submit_tag "☓", type:"button" %></form></td>
 								</tr>
 							<% end %>
