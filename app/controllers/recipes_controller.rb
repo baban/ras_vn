@@ -79,14 +79,13 @@ class RecipesController < ApplicationController
       return render action:"edit" unless @draft.valid?
 
       @draft.save
-
-      # recipe_drafts data is copying to recipes table
-      @draft.copy_public( params )
     end
 
     if params[:edit]
       redirect_to( { action: "edit", id: @recipe.id }, notice: t(:tmp_save, scope:"views.recipes.edit") )
     else
+      # recipe_drafts data is copying to recipes table
+      @draft.copy_public
       redirect_to( { action: "show", id: @recipe.id }, notice: t(:save_complete, scope:"views.recipes.edit") )
     end
   end
