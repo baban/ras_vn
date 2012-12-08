@@ -82,6 +82,10 @@ class Recipe < ActiveRecord::Base
       foods = RecipeFood.where( id: params[:recipe_food_id] ) 
     elsif food_genre = RecipeFoodGenre.where( id: params[:recipe_food_genre_id] ).first
       foods = food_genre.foods
+    elsif params[:recipe_food_name]
+      # recipe_food_name parameter search recipe genre or recipe_foods
+      genred_food_ids = RecipeFoodGenre.where( name: params[:recipe_food_name] ).includes(:recipe_foods).map{ |o| o.recipe_foods.map(&:id) }.flatten
+      foods = RecipeFood.where( " name = ? OR recipe_food_genre_id IN (?) ", params[:recipe_food_name], genred_food_ids )
     end
 
     recipes = Recipe.where( " public = true " )

@@ -75,6 +75,16 @@ describe Recipe do
         @recipes.first.id.should == 136
       end
     end
+    context "recipe_food_name parameter" do
+      context "recipe_food_name" do
+        before do
+          @recipes = Recipe.list( recipe_food_name: "Khoai /Củ" ).page(1).per(5)
+        end
+        it "recipe_food_id is equal to recipe_food_name's house" do
+          @recipes.first.recipe_food_id.should == 2
+        end
+      end
+    end
     context "sort by new" do
       before do
         @recipes = Recipe.list( { recipe_food_genre_id: 1 }, "new" )
