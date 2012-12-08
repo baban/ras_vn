@@ -8,9 +8,9 @@
 		<section class="colom_ttl_area">
 			<h1 class="ttl_cate flo_l">Chọn thể loại món ăn</h1>
 			<div class="search search_cate flo_r">
-				<%= form_for :word, url:"", html:{ class:"cl" } do |f| %>
+				<%= form_for :word, url:{ controller:"recipe_foods", action:"index" }, method:"GET", html:{ class:"cl" } do |f| %>
 					<div class="box radi5">
-						<%= text_field_tag :word, "", placeholder:"Tìm kiếm theo tên thể loại", class:"radi5" %>
+						<%= text_field_tag :recipe_food_name, "", placeholder:"Tìm kiếm theo tên thể loại", class:"radi5" %>
 						<%= f.button "", class:"radi3" %>
 					</div>
 				<% end %>
