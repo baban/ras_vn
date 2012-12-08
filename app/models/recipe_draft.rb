@@ -27,6 +27,15 @@ class RecipeDraft < ActiveRecord::Base
   end
   alias :chef :user
 
+  def post( params, user )
+    self.attributes= params[:recipe]
+    self.user_id= user.id    
+    self.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
+    self.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
+    self.post_food_id( params )
+    self
+  end
+
   def post_food_id( form_values )
     if form_values[:new_food_genre].present?
       self.recipe_food_id= RecipeFood.create( recipe_food_genre_id: form_values[:recipe_genre_selecter], name: form_values[:new_food_genre] ).id 

@@ -62,18 +62,14 @@ class RecipesController < ApplicationController
 
     @recipe = Recipe.find(params[:id])
     @draft = @recipe.draft
-    @draft.attributes= params[:recipe]
+    @draft.post( params, current_user )
+
     @steps = @draft.edit_steps
-    @draft.user_id= current_user.id    
-    @draft.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
-    @draft.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
-    @draft.post_food_id( params )
+
+    return render action:"edit" unless @draft.valid?
 
     ActiveRecord::Base.transaction do
-      return render action:"edit" unless @draft.valid?
-
       @draft.save
-      
       # recipe_drafts data is copying to recipes table
       @draft.copy_public unless params[:edit]
     end
@@ -81,8 +77,6 @@ class RecipesController < ApplicationController
     if params[:edit]
       redirect_to( { action: "edit", id: @recipe.id }, notice: t(:tmp_save, scope:"views.recipes.edit") )
     else
-      # recipe_drafts data is copying to recipes table
-      @draft.copy_public
       redirect_to( { action: "show", id: @recipe.id }, notice: t(:save_complete, scope:"views.recipes.edit") )
     end
   end
