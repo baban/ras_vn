@@ -51,7 +51,6 @@ class RecipesController < ApplicationController
 
   def edit
     @playholders = PLAY_HOLDERS
-
     @recipe = Recipe.find(params[:id])
     @draft = @recipe.draft
     @foodstuffs = @draft.edit_foodstuffs
