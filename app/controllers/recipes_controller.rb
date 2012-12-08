@@ -66,22 +66,22 @@ class RecipesController < ApplicationController
       ["Ví dụ: dầu ăn", "1/2 thìa"],
     ]
 
-    ActiveRecord::Base.transaction do
-      @recipe = Recipe.find(params[:id])
-      @draft = @recipe.draft
-      @draft.attributes= params[:recipe]
-      @steps = @draft.edit_steps
-      @draft.user_id= current_user.id    
-      @draft.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
-      @draft.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
-      @draft.post_food_id( params )
+    @recipe = Recipe.find(params[:id])
+    @draft = @recipe.draft
+    @draft.attributes= params[:recipe]
+    @steps = @draft.edit_steps
+    @draft.user_id= current_user.id    
+    @draft.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
+    @draft.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
+    @draft.post_food_id( params )
 
+    ActiveRecord::Base.transaction do
       return render action:"edit" unless @draft.valid?
 
       @draft.save
-
+      
       # recipe_drafts data is copying to recipes table
-      @draft.copy_public( params )
+      @draft.copy_public unless params[:edit]
     end
 
     if params[:edit]
