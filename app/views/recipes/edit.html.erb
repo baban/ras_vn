@@ -7,12 +7,22 @@
 
 <div class="bace_bg">
 	<%=semantic_form_for @recipe, url: recipe_url(@recipe.id), html:{ multipart: true } do |f| %>
+	<% if @draft.errors.any? %>
+		<div class="alert">
+			<ul>
+				<% @draft.errors.full_messages.each do |error| %>
+					<li><%= error %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
 	<div class="contents_bg clearfix">
 		<!--main_clm-->
 		<div class="main_clm">
 			<article class="contents_recipes">
 				<h1 class="ttl_recipe"><%= f.text_field :title, value: @draft.title %></h1>
 				<%= f.file_field :recipe_image %>
+				<%= f.hidden_field :recipe_image_cache %>
 				<div id="recipe_image_area">
 					<%= image_tag @draft.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"", id:"recipe_image" %>
 				</div>
@@ -42,11 +52,10 @@
 						<table class="ingredients_list" id="foodstuffs">
 							<% @draft.edit_foodstuffs.each_with_index do |foodstuff,i| %>
 								<tr class="ingredient_row clearfix">
-									<td class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: @play_holder[i] && @play_holder[i][0] %></td>
-									<td class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: @play_holder[i] && @play_holder[i][1] %></td>
+									<td class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: @play_holder.try(:at,i).try(:at,0) %></td>
+									<td class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: @play_holder.try(:at,i).try(:at,1) %></td>
 									<td class="ingredient_close_button"><form><%= submit_tag "☓", type:"button" %></form></td>
 								</tr>
-								<% i = i+1 %>
 							<% end %>
 						</table>
 						

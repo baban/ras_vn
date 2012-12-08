@@ -57,14 +57,27 @@ class RecipesController < ApplicationController
   end
 
   def update
+    # paly_holders is using in view
+    @play_holder = [
+      ["Ví dụ: thịt heo", "200g"],
+      ["Ví dụ: hành tím", "50g"],
+      ["Ví dụ: nước mắm", "1 thìa"],
+      ["Ví dụ: đường", "10g"],
+      ["Ví dụ: dầu ăn", "1/2 thìa"],
+    ]
+
     ActiveRecord::Base.transaction do
       @recipe = Recipe.find(params[:id])
       @draft = @recipe.draft
       @draft.attributes= params[:recipe]
+      @steps = @draft.edit_steps
       @draft.user_id= current_user.id    
       @draft.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
       @draft.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
       @draft.post_food_id( params )
+
+      return render action:"edit" unless @draft.valid?
+
       @draft.save
 
       # recipe_drafts data is copying to recipes table

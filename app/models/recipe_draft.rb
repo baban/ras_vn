@@ -10,6 +10,9 @@ class RecipeDraft < ActiveRecord::Base
   belongs_to :user
   belongs_to :recipe
 
+  validates :title,        presence: true
+  validates :recipe_image, presence: true
+
   mount_uploader :recipe_image, RecipeImageUploader
 
   alias :foodstuffs  :recipe_foodstuff_drafts

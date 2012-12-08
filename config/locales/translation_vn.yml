@@ -99,6 +99,24 @@ vn:
         image: Chọn hình ảnh
         recipe: Recipe  #g
 
+      recipe_draft:
+        id: ReceipID
+        amount: Số người ăn
+        bookmarks: Yêu thích
+        deleted_at: Ngày xóa
+        description: Giới thiệu khái quát về món ăn
+        one_point: Bí quyết
+        public: Công khai
+        recipe_comments: Nấu thử & Bình luận
+        recipe_foodstuffs: Nguyên liệu
+        recipe_food_id: Loại ẩm thực
+        recipe_image: Hình ảnh
+        recipe_steps: Cách làm
+        title: Tiêu đề
+        users: users  #g
+        created_at: Ngày đăng 
+        updated_at: Ngày chỉnh sửa
+
       recipe_food:
         name: Name  #g
         recipe_food_genre: recipe_food_genre  #g

@@ -7,8 +7,8 @@ class Recipe < ActiveRecord::Base
 
   ADD_RECIPE = 2
 
-  validates :title, presence: true
-  validates :image, presence: true
+  validates :title,        presence: true
+  validates :recipe_image, presence: true
 
   has_one  :recipe_draft
   has_many :bookmarks

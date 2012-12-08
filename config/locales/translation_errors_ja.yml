@@ -6,6 +6,8 @@ ja:
         carrierwave_integrity_error: "画像ファイルではありません"
         carrierwave_download_error: "URLから画像を取得できませんでした"
         record_invalid: "保存エラー"
+        blank: は入力必須です
+        inclusion: は選択必須です
       models:
         user:
           attributes:
