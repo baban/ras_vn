@@ -21,7 +21,7 @@ recipe_food_genres_2:
   updated_at: 2012-09-17 12:09:18 UTC
 recipe_food_genres_3:
   id: 4
-  name: Cơm
+  name: Cơm /Xôi
   image: food.jpg
   amount: 0
   created_at: 2012-09-25 12:13:21 UTC
