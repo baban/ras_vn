@@ -15,7 +15,7 @@
 						<p>by<%= link_to @recommend_recipe.chef.profile.nickname, kitchen_url(@recommend_recipe.chef) %></p>
 					</h2>
 					<p class="arr txt11">
-						<%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_genre_id: @recommend_recipe.id ) %>
+						<%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_id: @recommend_recipe.recipe_food_id ) %>
 					</p>
 				</div>
 			<% end %>
