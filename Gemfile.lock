@@ -102,8 +102,7 @@ GEM
       rack-oauth2 (>= 0.14.4)
       tzinfo
     ffi (1.1.5)
-    flextures (2.0.5)
-      activerecord
+    flextures (2.0.9)
     formtastic (2.1.0)
       actionpack (~> 3.0)
     hashie (1.2.0)
@@ -348,7 +347,7 @@ DEPENDENCIES
   faker
   faker-japanese
   fb_graph
-  flextures (= 2.0.5)
+  flextures (= 2.0.9)
   formtastic (= 2.1.0)
   html5jp_graphs (= 0.0.1)
   i18n_generators (= 1.2.1)

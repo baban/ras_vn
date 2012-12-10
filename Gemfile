@@ -51,7 +51,7 @@ gem 'fb_graph'
 gem 'twitter', '~> 2.2.0'
 
 # test utilities
-gem 'flextures', "2.0.5" # add rake command for dump and load fixtures
+gem 'flextures', "2.0.9" # add rake command for dump and load fixtures
 gem "kaminari" # paginate view
 gem "whenever", '0.7.2', require:false # cron settiing automation 
 gem "acts_as_readonlyable", '0.0.9' # sharding slave databases
