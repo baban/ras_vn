@@ -38,12 +38,3 @@ table.ingredients_list {
 }
 
 /* new, edit */
-select#recipe_recipe_food_id {
-  optgroup {
-    display:none;
-  }
-  optgroup:first-child {
-    display:block;
-  }
-}
-
