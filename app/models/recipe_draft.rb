@@ -31,7 +31,7 @@ class RecipeDraft < ActiveRecord::Base
     self.attributes= params[:recipe]
     self.user_id= user.id    
     self.foodstuffs= RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
-    self.steps= RecipeStepDraft.post_filter( params[:recipe_steps] )
+    self.steps= RecipeStepDraft.post_filter( params[:recipe_steps], self.steps )
     self.post_food_id( params )
     self
   end

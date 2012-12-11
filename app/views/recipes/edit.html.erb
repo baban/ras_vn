@@ -69,7 +69,6 @@
 										<div class="image_field">
 											<%= label :image, "Image" %>
 											<%= file_field_tag "recipe_steps[][image]", id:"recipe_steps_#{i}_image_selecter", size: 15 %>
-											<%= hidden_field_tag "recipe_steps[][remote_image_url]", File.join(root_url,step.image.url.to_s) %>
 											<% if step.image.url.present? %><%#= image_tag step.image.url %><% end %>
 										</div>
 										<% if step.movie_url %>
