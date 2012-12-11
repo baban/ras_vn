@@ -27,7 +27,7 @@ set :use_sudo, true
 
 # バージョン管理(git)
 set :scm, :git
-set :repository, "~/ras_vn/"
+set :repository, "~/cook24/"
 set :scm_username, 'cook24'
 set :scm_passphrase, "qawsedrf"
 
