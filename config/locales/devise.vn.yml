@@ -8,8 +8,8 @@ vn:
       already_confirmed: "was already confirmed, please try signing in"
       not_locked: "was not locked"
       not_saved:
-        one: "エラーが %{resource} にあります:"
-        other: "%{count} 件のエラーが %{resource} にあります:"
+        one: "Error %{resource}"
+        other: "%{count} errors %{resource}"
 
   devise:
     failure:
@@ -50,7 +50,7 @@ vn:
       failure: 'Could not authorize you from %{kind} because "%{reason}".'
     mailer:
       confirmation_instructions:
-        subject: 'ユーザー登録を行います'
+        subject: 'Đăng kí thành viên'
       reset_password_instructions:
         subject: 'Reset password instructions'
       unlock_instructions:

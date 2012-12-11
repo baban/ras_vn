@@ -2,12 +2,12 @@ vn:
   activerecord:
     errors:
       messages:
-        carrierwave_processing_error: "画像をリサイズ出来ませんでした"
-        carrierwave_integrity_error: "画像ファイルではありません"
-        carrierwave_download_error: "URLから画像を取得できませんでした"
+        carrierwave_processing_error: "Không resize được ảnh này"
+        carrierwave_integrity_error: "Hãy upload file hình ảnh"
+        carrierwave_download_error: "Khong xác định được hình ảnh từ URL"
         record_invalid: "Lỗi hệ thống"
-        blank: は入力必須です
-        inclusion: は選択必須です
+        blank: Bạn đã nhập thiếu thông tin
+        inclusion: mục bắt buộc
       models:
         user:
           attributes:
