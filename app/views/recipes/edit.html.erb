@@ -77,6 +77,7 @@
 										<form class="movie_button_field">
 											<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, id:"recipe_steps_#{i}_movie_url" %>
 											<%= submit_tag "Movie url", type:"button", class:"movie_button" %>
+											<%= hidden_field_tag "step_number_#{i}", i %>
 											<% if step.movie_url.present? %>
 												<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
 											<% end %>
