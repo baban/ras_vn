@@ -68,7 +68,8 @@ namespace :deploy do
 
   # shared以下にアップロード画像のシンボリックリンクを作成する
   task :image_symlink do
-    run "ln -s -f #{current_path}/public/uploads #{deploy_to}/shared/uploads"
+    run "rm -rf #{current_path}/public/uploads"
+    run "ln -s -f #{deploy_to}/shared/uploads #{current_path}/public/uploads"
   end
 
   # shared以下にアップロード画像用のディレクトリを作成
