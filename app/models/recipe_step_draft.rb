@@ -19,7 +19,7 @@ class RecipeStepDraft < ActiveRecord::Base
       o.first[:content].present?
     end.map do |params,last_step|
       d = RecipeStepDraft.new(params)
-      d.image= File.open(last_step.image.current_path) if d.image.blank? and last_step.try(:image).present?
+      d.image= File.open(last_step.image.current_path) if d.image.blank? and last_step.try(:image).present? and File.exist?(last_step.image.current_path)
       d
     end
     steps

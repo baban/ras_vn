@@ -68,14 +68,14 @@ class RecipeDraft < ActiveRecord::Base
     attributes.delete("recipe_id")
     recipe.attributes = attributes
     # file data is cannot copy so recipe_image colum data is insert
-    recipe.recipe_image = File.open(self.recipe_image.current_path) if self.recipe_image.present?
+    recipe.recipe_image = File.open(self.recipe_image.current_path) if self.recipe_image.present? and File.exist?(self.recipe_image.current_path)
 
     recipe.steps= self.steps.map.with_index do |d,i|
       attributes = d.attributes
       attributes["recipe_id"] = attributes["recipe_draft_id"]
       attributes.delete("recipe_draft_id")
       step = RecipeStep.new(attributes)
-      step.image= File.open(d.image.current_path) if d.image.present?
+      step.image= File.open(d.image.current_path) if d.image.present? and File.exist?(d.image.current_path)
       step
     end
 
