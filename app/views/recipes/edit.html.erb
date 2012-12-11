@@ -69,20 +69,18 @@
 										<div class="image_field">
 											<%= label :image, "Image" %>
 											<%= file_field_tag "recipe_steps[][image]", id:"recipe_steps_#{i}_image_selecter", size: 15 %>
-											<% if step.image.url.present? %><%#= image_tag step.image.url %><% end %>
+											<% if step.image.present? %>
+												<p><%= check_box_tag "recipe_steps[][remove_image]" %>delete image</p>
+												<p><%= image_tag step.image.url %></p>
+											<% end %>
 										</div>
-										<% if step.movie_url %>
-											<form class="movie_button_field">
-												<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, id:"recipe_steps_#{i}_movie_url" %>
-												<%= submit_tag "Movie url", type:"button", class:"movie_button" %>
+										<form class="movie_button_field">
+											<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, id:"recipe_steps_#{i}_movie_url" %>
+											<%= submit_tag "Movie url", type:"button", class:"movie_button" %>
+											<% if step.movie_url.present? %>
 												<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
-											</form>
-										<% else %>
-											<form class="movie_button_field">
-												<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, size: 20, id:"recipe_steps_#{i}_movie_url" %>
-												<%= submit_tag "Movie url", type:"button", class:"movie_button" %>
-											</form>
-										<% end %>
+											<% end %>
+										</form>
 									</div>
 								</dd>
 							</dl>
