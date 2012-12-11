@@ -41,7 +41,7 @@
 					<p><%=hbr @recipe.description %></p>
 					<div class="clearfix">
 						<p class="user_name">
-							<span class="flo_l"><%= profile_image_tag(@recipe.user.profile, :small_icon) %></span>
+							<span class="flo_l"><%= profile_image_tag(@recipe.user.profile, :small_icon, alt:"" ) %></span>
 							<span class="flo_l"><%= link_to @recipe.user.profile.nickname, kitchen_url(@recipe.user) %></span>
 						</p>
 					</div>
