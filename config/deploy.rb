@@ -48,6 +48,7 @@ load "deploy/assets"
 set :whenever_command, "bundle exec whenever"
 
 after "deploy:restart", "deploy:cleanup"
+after "deploy:symlink", "deploy:image_symlink"
 
 def restart_task
   run "touch #{current_path}/tmp/restart.txt"
@@ -66,7 +67,8 @@ namespace :deploy do
   end
 
   # shared以下にアップロード画像のシンボリックリンクを作成する
-  task :link_uploads do
+  task :image_symlink do
+    run "ln -s #{deploy_to}/shared/uploads #{current_path}/public/uploads"
   end
 
   # shared以下にアップロード画像用のディレクトリを作成
