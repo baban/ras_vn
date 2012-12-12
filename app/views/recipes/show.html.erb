@@ -22,9 +22,6 @@
 						<%= f.hidden_field :user_id, value: current_user.id %>
 						<%= f.submit (bookmarked? ? t(:unbookmark, scope:"views.recipes.show") : t(:bookmark, scope:"views.recipes.show")) %>
 					<% end %>
-					<% unless @recipe.public %>
-						<%= link_to "公開する", { action:"publication", id: @recipe.id }, id:"public_button" %>
-					<% end %>
 				<% end %>
 				<h1 class="ttl_recipe"><%= @recipe.title %></h1>
 				<div id="recipe_image_area">

@@ -68,25 +68,21 @@ class RecipesController < ApplicationController
 
     return render action:"edit" unless @draft.valid?
 
-    ActiveRecord::Base.transaction do
-      @draft.save
-      # recipe_drafts data is copying to recipes table
-      @draft.copy_public unless params[:edit]
-    end
+    @draft.save
 
     if params[:edit]
       redirect_to( { action: "edit", id: @recipe.id }, notice: t(:tmp_save, scope:"views.recipes.edit") )
     else
+      ActiveRecord::Base.transaction do
+        # recipe_drafts data is copying to recipes table
+        @draft.copy_public
+        unless @recipe.public
+          @recipe.publication
+          Stream.push( Stream::ADD_RECIPE, current_user.id, @recipe )
+        end
+      end
       redirect_to( { action: "show", id: @recipe.id }, notice: t(:save_complete, scope:"views.recipes.edit") )
     end
-  end
-
-  def publication
-    @recipe = Recipe.find(params[:id])
-    @recipe.publication
-    Stream.push( Stream::ADD_RECIPE, current_user.id, @recipe )
-
-    redirect_to action:"show", id: @recipe.id
   end
 
   # if love button is cliced!
