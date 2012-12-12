@@ -7,9 +7,9 @@
 			<% @recipe_comments.each do |comment| %>
 				<div class="cate01 clearfix">
 					<section class="rec_cat5 clearfix">
-						<% if comment.image.present? %><%= image_tag comment.image.url(:thumb), size:"280x466", alt:"" %><% end %>
+						<% if comment.image.present? %><%= image_tag comment.image.url, size:"280x466", alt:"" %><% end %>
 						<div class="txt">
-							<h1 class="txt16"><%= comment.title %></h1>
+							<h1 class="txt16"><%= link_to comment.title, controller:"recipes", action:"show", id: comment.recipe_id %></h1>
 							<p>by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
 							<%= comment.content %>
 							<div class="info_area">

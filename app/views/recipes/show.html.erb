@@ -95,9 +95,8 @@
 				<% end %>
 				<h3><%= t(:post_title, scope:"views.recipes.report")%></h3>
 				<%= form_for @recipe_comment do |f| %>
-					<p><%= f.hidden_field :recipe_id, value: @recipe.id %></p>
-					<p><%= f.label t(:title, scope:"views.recipes.report") %></p>
-					<p><%= f.text_field :title, size: 80, value: "" %></p>
+					<%= f.hidden_field :recipe_id, value: @recipe.id %>
+					<%= f.hidden_field :title, size: 80, value: @recipe.title %>
 					<p><%= f.label t(:image, scope:"views.recipes.report") %></p>
 					<p><%= f.file_field :image, value: "" %></p>
 					<p><%= f.label t(:content, scope:"views.recipes.report") %></p>
