@@ -26,7 +26,7 @@ $(window).load ->
   # delete recipe foodstuffs
   foodstuff_close_button_check=->
     $(".ingredient_close_button input").click ->
-      tr = $(this).parent().parent().parent()
+      tr = $(this).parent().parent()
       $( "input:text", tr ).val("")
       tr.slideUp()
   foodstuff_close_button_check()
@@ -36,7 +36,7 @@ $(window).load ->
     '<tr class="ingredient_row clearfix">'+
       '<td class="ingredient_name"><input type="text" name="foodstuffs[][name]" value="" placeholder="tên thực phẩm"></td>'+
       '<td class="ingredient_quantity"><input type="text" name="foodstuffs[][amount]" value="" placeholder="dung lượng"></td>'+
-      '<td class="ingredient_close_button"><form><input type="button" value="☓"></form></td>'+
+      '<td class="ingredient_close_button"><input type="button" value="☓"></td>'+
     '</tr>';
     foodstuff_close_button_check()
     return s;
@@ -47,7 +47,6 @@ $(window).load ->
 
   # add recipe steps
   $("#add_steps").click ->
-    console.log("hoge");
     s = 
     '<dl class="step">'+
       '<dt>mới BƯỚC</dt>'+

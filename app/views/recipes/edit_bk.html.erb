@@ -50,11 +50,12 @@
 								<tr class="ingredient_row clearfix">
 									<td class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: @playholders.try(:at,i).try(:at,0) %></td>
 									<td class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: @playholders.try(:at,i).try(:at,1) %></td>
-									<td class="ingredient_close_button"><%= submit_tag "☓", type:"button" %></td>
+									<td class="ingredient_close_button"><form><%= submit_tag "☓", type:"button" %></form></td>
 								</tr>
 							<% end %>
 						</table>
-						<%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %>
+						
+						<form id="add_foodstuff_form"><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %></form>
 					</div>
 				</div>
 				<div id="recipes_steps_area" class="area">
@@ -73,19 +74,20 @@
 												<p><%= image_tag step.image.url %></p>
 											<% end %>
 										</div>
-										<div class="movie_button_field">
+										<form class="movie_button_field">
 											<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, id:"recipe_steps_#{i}_movie_url" %>
 											<%= submit_tag "Movie url", type:"button", class:"movie_button" %>
 											<%= hidden_field_tag "step_number_#{i}", i %>
 											<% if step.movie_url.present? %>
 												<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
 											<% end %>
-										</div>
+										</form>
 									</div>
 								</dd>
 							</dl>
 						<% end %>
 					</dl>
+					<form id="add_step_form"><%= submit_tag t(:add_step, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></form>
 				</div>
 				
 				<h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
