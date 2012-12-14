@@ -13,21 +13,21 @@ gem "moped", "1.2.1"
 gem "bson", "1.7.0"
 gem "bson_ext", "1.7.0"
 gem "bartt-ssl_requirement", "1.4.2", require: "ssl_requirement"
-gem "rails_config"
+gem "libv8", "3.3.10.4"
 
 # view urilities
-gem "jquery-rails"
+gem "jquery-rails", "2.1.3"
 
 gem "devise", "2.1.0" # add login, logout 
 gem "typus", "3.1.10" # generte administration functions
-gem "formtastic", "2.1.0"
+gem "formtastic", "2.1.0" # form helper(use in typus)
 gem "omniauth", "1.1.0"
-gem "omniauth-twitter", "0.0.9"
-gem "omniauth-facebook", "1.4.0"
-gem "omniauth-google-oauth2", "0.1.10"
+gem "omniauth-twitter", "0.0.9" # twitter login
+gem "omniauth-facebook", "1.4.0" # facebook login
+gem "omniauth-google-oauth2", "0.1.10" # google+ login
 
 # controller, model tools
-gem 'jbuilder'
+gem 'jbuilder', "0.8.2"
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem "mini_magick", "3.4"
 gem "carrierwave", "0.6.2"
@@ -35,16 +35,15 @@ gem "carrierwave", "0.6.2"
 # ruby extentions
 gem 'i18n_generators', "1.2.1" # gemerate multiple language message file
 gem "ruby-openid", "2.1.8" # openid
-gem "rails3_acts_as_paranoid", "0.2.4" # logical
+gem "rails3_acts_as_paranoid", "0.2.4" # DB delete method changed logical delete
 gem "ipaddress", '0.8.0' # ip addres check
-gem 'jpmobile', '3.0.1', require:'action_pack' # emable smart_phone_filter 
 gem "yard" # document generator like javadoc
 
-gem 'fb_graph'
+gem 'fb_graph', "2.5.8"
 
 # test utilities
 gem 'flextures', "2.0.9" # add rake command for dump and load fixtures
-gem "kaminari" # paginate view
+gem "kaminari", "0.14.1" # paginate view
 gem "whenever", '0.7.2', require:false # cron settiing automation 
 gem "acts_as_readonlyable", '0.0.9' # sharding slave databases
 
@@ -57,7 +56,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer'
+  gem 'therubyracer', "0.10.2"
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -67,9 +66,6 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'faker' # generate fake data for test
   gem 'faker-japanese' # generate fake japanese names for test
-end
-
-group :test do
   gem 'turn', '0.8.2', require:false # Pretty printed test output
   gem "spork", "0.9.1" # rspec
   gem "simplecov", "0.5.4", require:false # test covarage files generate
@@ -78,9 +74,9 @@ group :test do
 end
 
 group :development, :test do
-  gem "pry" # add commands [rails colsole]
-  gem "pry-doc"
-  gem "pry-rails"
+  gem "pry", "0.9.10" # add commands [rails colsole]
+  gem "pry-doc", "0.4.4"
+  gem "pry-rails", "0.2.2"
   # gem 'plymouth', require: false
   #gem 'pry-exception_explorer'
   gem 'pry-nav'
