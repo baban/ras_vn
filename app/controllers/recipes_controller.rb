@@ -4,7 +4,6 @@ class RecipesController < ApplicationController
   before_filter :authenticate_user!,   except: %W[index show]
   before_filter :publiced_filter,      only: %W[show]
   before_filter :editable_user_filter, only: %W[edit update destroy]
-  before_filter :advertisement_filter, except: %W[create destroy]
 
   helper_method :loved?, :bookmarked?, :my_recipe?
 
@@ -103,11 +102,6 @@ class RecipesController < ApplicationController
   def editable_user_filter
     return redirect_to( action:'index' ) unless params[:id]
     return redirect_to( recipes_url, alert: t("views.recipes.create.other_user_recipe_alert") ) unless my_recipe?
-  end
-
-  # get advartisement banner image and description
-  def advertisement_filter
-    @advertisement = RecipeAdvertisement.choice
   end
 
   def loved?

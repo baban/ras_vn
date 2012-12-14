@@ -31,6 +31,8 @@ class ApplicationController < ActionController::Base
   end
 
   def sidebar_filter
+    # get advartisement banner image and description
+    @sidebar_advertisement = RecipeAdvertisement.choice
     @newsfeeds = Newsfeed.topics
     @streams = Stream.topics
   end
