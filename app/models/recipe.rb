@@ -3,7 +3,7 @@
 class Recipe < ActiveRecord::Base
   acts_as_paranoid
 
-  paginates_per 12
+  paginates_per 10
 
   ADD_RECIPE = 2
 
