@@ -25,7 +25,6 @@ gem "omniauth", "1.1.0"
 gem "omniauth-twitter", "0.0.9"
 gem "omniauth-facebook", "1.4.0"
 gem "omniauth-google-oauth2", "0.1.10"
-gem "html5jp_graphs", "0.0.1"
 
 # controller, model tools
 gem 'jbuilder'
@@ -34,21 +33,14 @@ gem "mini_magick", "3.4"
 gem "carrierwave", "0.6.2"
 
 # ruby extentions
-#gem "tapp" # add tapp(tap print) method
-gem "letters"
 gem 'i18n_generators', "1.2.1" # gemerate multiple language message file
 gem "ruby-openid", "2.1.8" # openid
 gem "rails3_acts_as_paranoid", "0.2.4" # logical
 gem "ipaddress", '0.8.0' # ip addres check
 gem 'jpmobile', '3.0.1', require:'action_pack' # emable smart_phone_filter 
 gem "yard" # document generator like javadoc
-#gem "guard" # notification rspec excute result (Mac only)
-#gem "guard-rspec"
 
-gem 'redcarpet'
 gem 'fb_graph'
-
-gem 'twitter', '~> 2.2.0'
 
 # test utilities
 gem 'flextures', "2.0.9" # add rake command for dump and load fixtures
@@ -59,7 +51,6 @@ gem "acts_as_readonlyable", '0.0.9' # sharding slave databases
 gem "capistrano", "2.9.0"
 gem "capistrano_colors", "0.5.5"
 gem "capistrano-ext", "1.2.1"
-#gem "rvm-capistrano"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -72,13 +63,10 @@ group :assets do
 end
 
 group :test, :development do
-  # gem "jasmine-rails"
   gem 'rspec' # unit test utilities
   gem 'rspec-rails'
   gem 'faker' # generate fake data for test
   gem 'faker-japanese' # generate fake japanese names for test
-  # gem "factory_girl_rails" # unit test data generate utilities
-  #gem "shoulda"
 end
 
 group :test do
@@ -90,14 +78,11 @@ group :test do
 end
 
 group :development, :test do
-  # gem 'sextant'
   gem "pry" # add commands [rails colsole]
   gem "pry-doc"
   gem "pry-rails"
   # gem 'plymouth', require: false
   #gem 'pry-exception_explorer'
   gem 'pry-nav'
-  #gem 'pry-remote'
-  #gem 'pry-stack_explorer'
 end
 
