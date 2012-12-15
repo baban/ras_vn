@@ -4,7 +4,7 @@
 
 <div class="side_contents">
 	<aside>
-		<%= image_tag @sidebar_advertisement.try(:image).try(:url).to_s, width:"300", height:"250", alt: @sidebar_advertisement.alt.presence || @sidebar_advertisement.name %>
+		<%= image_tag @sidebar_advertisement.try(:image).try(:url).to_s, width:"300", height:"250", alt: @sidebar_advertisement.try(:alt).presence || @sidebar_advertisement.try(:name).to_s %>
 	</aside>
 
 	<article class="side_c01">
