@@ -31,7 +31,7 @@ vn:
         email: E-mail
         first_name: Họ
         last_name: Tên
-        preferences: Thành phố, quận  #g
+        preferences: Nơi sinh sống  #g
         role: Role
         salt: salt  #g
         status: Status  #g
@@ -76,7 +76,7 @@ vn:
         bookmarks: Yêu thích
         deleted_at: Ngày xóa
         description: Giới thiệu khái quát về món ăn
-        one_point: Bí quyết
+        one_point: Mách nhỏ
         public: Công khai
         recipe_comments: Nấu thử & Bình luận
         recipe_foodstuffs: Nguyên liệu

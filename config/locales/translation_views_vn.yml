@@ -25,9 +25,9 @@ vn:
       cooporate_terms: Thỏa thuận sử dụng
       cooporate_q_and_a: Liên hệ hỏi đáp
     kitchens:
-      show_link: Show
+      show_link: Profile
       recipe_link: Recipe
-      recipe_comment_link: Đăng report
+      recipe_comment_link: Report
       diary_link: Nhật ký
     header:
       title: Cook24

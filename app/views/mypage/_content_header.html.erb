@@ -1,12 +1,12 @@
 <div id="content_header">
   <ul id="content_menu_list">
     <% {
-      "マイページ" => { controller:"mypage", action:"index" },
-      "ブックマーク" => { controller:"bookmarks", action:"index" },
-      "マイレシピ" => { controller:"mypage", action:"recipes" },
-      "日記" => { controller:"mypage", action:"diary" },
-      "フォロー" => { controller:"mypage", action:"follow" },
-      "フォロワー" => { controller:"mypage", action:"follower" },
+      "Profile" => { controller:"mypage", action:"index" },
+      "Recipe yêu thích" => { controller:"bookmarks", action:"index" },
+      "Recipe đã đăng" => { controller:"mypage", action:"recipes" },
+      "Nhật kí" => { controller:"mypage", action:"diary" },
+      "Follow" => { controller:"mypage", action:"follow" },
+      "Follower" => { controller:"mypage", action:"follower" },
     }.each do |title,link| %>
       <% if params[:controller] == link[:controller] and params[:action] == link[:action] %>
         <li class="current"><%= link_to title, link %></li>

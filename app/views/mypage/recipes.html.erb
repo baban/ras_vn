@@ -10,7 +10,7 @@
 					<div class="status">
 						<% if recipe.public %><div class="public">Công khai</div><% else %><div class="editing">Không công khai</div><% end %>
 					</div>
-					<div style="text-align:right;"><%=link_to "chỉnh sửa", edit_recipe_url(recipe) %></div>
+					<div style="text-align:right;"><%=link_to "Sửa", edit_recipe_url(recipe) %></div>
 					<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
 					<div class="txt">
 						<h1 class="txt16"><%= link_to truncate( recipe.title, length: 22 ), controller:"recipes", action:"edit", id: recipe.id %></h1>

@@ -4,10 +4,10 @@ vn:
       messages:
         carrierwave_processing_error: "Không resize được ảnh này"
         carrierwave_integrity_error: "Hãy upload file hình ảnh"
-        carrierwave_download_error: "Khong xác định được hình ảnh từ URL"
+        carrierwave_download_error: "Không xác định được hình ảnh từ URL"
         record_invalid: "Lỗi hệ thống"
         blank: Bạn đã nhập thiếu thông tin
-        inclusion: mục bắt buộc
+        inclusion: Mục bắt buộc
       models:
         user:
           attributes:
@@ -17,7 +17,7 @@ vn:
             password:
               blank: Nhập mật khẩu
             password_confirmation:
-              blank: Nhập xác nhận mật khẩu
+              blank: Xác nhận mật khẩu
             prefecture_id:
               inclusion: Chọn nơi sinh sống
         user_profile:

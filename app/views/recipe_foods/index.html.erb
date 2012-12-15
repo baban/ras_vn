@@ -20,7 +20,7 @@
 			<aside>
 				<div class="side_contents_l">
 					<ul class="footstamps">
-						<li><%=link_to "«Danh sách thực phẩm", { controller:"recipe_food_genres", action:"index" }, class:"back_to_category_list" %></li>
+						<li><%=link_to "«Trở về danh mục", { controller:"recipe_food_genres", action:"index" }, class:"back_to_category_list" %></li>
 						<li class="indent_level_1"><%= @food_genre.name %></li>
 						<ul class="sub_categories">
 							<% @food_genre.foods.each do |food| %>

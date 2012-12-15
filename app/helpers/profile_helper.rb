@@ -2,14 +2,14 @@
 
 module ProfileHelper
   def select_sex( f, value=nil, options={} )
-    f.select( :sex, { "----"=>nil, "nam"=>1, "Nữ"=>2, "other"=>0 }, {selected: 1}, options )
+    f.select( :sex, { "----"=>nil, "Nam"=>1, "Nữ"=>2, "Other"=>0 }, {selected: 1}, options )
   end
 
   def translate_sex( sex )
     case sex
-    when 1; "nam"
+    when 1; "Nam"
     when 2; "Nữ"
-    when 3; "other"
+    when 3; "Other"
     else  ; "Unknown"
     end
   end
