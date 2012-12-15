@@ -3,13 +3,13 @@
 <div id="content_body" class="section bace_bg">
 	<%= render partial:"content_header" %> 
 	<div id="mypage_content" class="clearfix mypage_content main_clm">
-		<h1 class="txt20"><%= @profile.nickname %> nhà bếp</h1>
+		<!--<h1 class="txt20"><%= @profile.nickname %> nhà bếp</h1>-->
 		<div class="content">
 			<% if user_signed_in? %>
 				<% unless myself? or followed? %>
-					<div class="rbtn" id="follow_button_area"><%= link_to "follow",   { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button", class:"radi10" %></div>
+					<div class="rbtn" id="follow_button_area"><%= link_to "Follow",   { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button", class:"radi10" %></div>
 				<% else %>
-					<div class="rbtn" id="follow_button_area"><%= link_to "unfollow", { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button", class:"radi10" %></div>
+					<div class="rbtn" id="follow_button_area"><%= link_to "Unfollow", { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button", class:"radi10" %></div>
 				<% end %>
 			<% end %>
 
@@ -19,10 +19,6 @@
 			</table>
 
 			<table id="profiles">
-				<tr>
-					<th><%= t(:id, scope:"activerecord.attributes.user_profile") %></th>
-					<td><%= @profile.id %></td>
-				</tr>
 				<% if @visibility.nickname %>
 					<tr>
 						<th><%= t(:nickname, scope:"activerecord.attributes.user_profile") %></th>
@@ -55,7 +51,7 @@
 				<% end %>
 			</table>
 			<div id="recipes">
- 				<h2 class="txt20">mới nhất công thức nấu ăn</h2>
+ 				<h2 class="txt20">Recipe bạn <%= @profile.nickname %> đã đăng</h2>
 				<% @recipes.each do |recipe| %>
 					<section class="rec_cat4 clearfix">
 						<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>

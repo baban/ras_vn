@@ -172,7 +172,7 @@ vn:
       user_profile:
         id: user ID
         birthday: Sinh nhật
-        comment: Bình luận
+        comment: Giới thiệu
         first_name: Tên
         image: Hình ảnh
         family_name: Họ
