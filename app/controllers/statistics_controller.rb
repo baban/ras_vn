@@ -1,8 +1,6 @@
 # encoding: utf-8
 
 class StatisticsController < Admin::BaseController
-  helper :html5jp_graphs
-
   def index
   end
 
