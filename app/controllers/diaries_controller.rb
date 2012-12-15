@@ -1,12 +1,11 @@
 # encoding: utf-8
 
-class DiaryController < ApplicationController
+class DiariesController < ApplicationController
   helper_method :my_diary?
 
   def index
-    id = params[:user_id]
     @page = params[:page] || 1
-    @user = User.find_by_id(id) || current_user
+    @user = User.where( id: params[:user_id] ).first || current_user
     @diary = @user.diaries.page(@page)
   end
 
@@ -24,7 +23,7 @@ class DiaryController < ApplicationController
     diary.user_id= current_user.id
     diary.save
 
-    redirect_to action:"edit", id: diary.id
+    redirect_to action:"show", id: diary.id
   end
 
   def edit

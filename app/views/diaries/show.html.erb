@@ -1,0 +1,18 @@
+<div class="bace_bg">
+	<div class="contents_bg clearfix">
+		<h2 class="txt20"><%= t("activerecord.models.diary") %></h2>
+		<% if user_signed_in? %>
+			<div id="diary_create_link">
+				<%= link_to t(:new, scope:"views.diary"), action:"new" %>
+			</div>
+		<% end %>
+		<div class="article">
+			<h3><%= @diary.title %></h3>
+			<% if @diary.image %>
+				<%= image_tag @diary.image_url.to_s, alt:"" %>
+			<% end %>
+			<div><%= @diary.content %></div>
+		</div>
+	</div>
+</div>
+

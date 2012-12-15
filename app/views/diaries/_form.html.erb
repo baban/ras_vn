@@ -1,0 +1,29 @@
+
+<%= form_for @diary do |f| %>
+	<% if @diary.errors.any? %>
+		<div class="alert">
+			<ul>
+				<% @diary.errors.full_messages.each do |error| %>
+					<li><%= error %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<p>
+		<%=f.label :title %>
+		<%=f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label :image %>
+		<%= f.file_field :image %>
+	</p>
+	<% if @diary.image %>
+		<%= image_tag @diary.image_url.to_s, alt:"" %>
+	<% end %>
+	<p><%= f.label :content %></p>
+	<p><%= f.text_area :content %></p>
+	<p><%= f.label :publiced_at %></p>
+	<p><%= f.date_select :publiced_at, use_month_numbers: true %></p>
+	<p><%= f.submit %></p>
+<% end %>
+

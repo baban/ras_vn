@@ -10,7 +10,7 @@
 		<div class="content">
 			<% if user_signed_in? %>
 				<div id="diary_create_link">
-					<%= link_to t(:new, scope:"views.diary"), controller:"diary", action:"new" %>
+					<%= link_to t(:new, scope:"views.diary"), controller:"diaries", action:"new" %>
 				</div>
 			<% end %>
 			<div id="articles" class="section">

@@ -13,9 +13,11 @@ RasVn::Application.routes.draw do
   match '/recipes/recipe_foods/:recipe_food_id', controller:"recipes", action:"index"
 
   resource(:profile)
-  resources(:bookmarks, :diary, :information)
+  resources(:bookmarks)
+  resources(:diaries)
+  resources(:information)
   resources(:recipes) { collection { get :love, :caution, :publication } }
-  resources(:recipe_advertisements, :recipe_comments)
+  resources(:recipe_comments)
   resources(:recipe_foods, only:[:index]){ collection{ post :index } }
   resources(:recipe_food_genres, only:[:index])
   resources(:streams)
