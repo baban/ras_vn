@@ -24,6 +24,8 @@ class SessionsController < ApplicationController
            redirect_to root_url, notice: "Tôi đã không thể kiểm tra e-mail. Bây giờ bạn đã gửi một email có đăng ký tạm thời, hãy kiểm tra."
          end
        else
+         logger.info :auth
+         logger.info auth.inspect
          flash[:nickname] = auth["info"] && auth["info"]["name"]
          flash[:email] = auth["info"] && auth["info"]["email"]
          flash[:image] = auth["info"] && auth["info"]["image"]
