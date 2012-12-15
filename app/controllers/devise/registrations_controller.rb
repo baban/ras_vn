@@ -18,7 +18,8 @@ class Devise::RegistrationsController < DeviseController
     resource.email = flash[:email]
     resource.profile.nickname = flash[:nickname]
     resource.profile.sex = { "male" => 1, "female" => 2 }[flash[:sex]]
-    resource.profile.birthday = Date.new( Date.today.year-30, 1, 1 )
+    resource.profile.birthday = flash[:birthday]
+    resource.profile.birthday ||= Date.new( Date.today.year-30, 1, 1 )
     #=end
     respond_with resource
   end

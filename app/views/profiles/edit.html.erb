@@ -6,7 +6,7 @@
 	<div id="mypage_content" class="clearfix mypage_content" >
 		<h2 class="txt20">Profile編集</h2>
 		<div class="content">
-			<%= semantic_form_for @profile, url:{ action:'update' } do |f| %>
+			<%= semantic_form_for @profile, url:{ action:"update" } do |f| %>
 				<table>
 					<tr><td><%= profile_image_tag @profile %></td></tr>
 					<tr>
@@ -25,7 +25,7 @@
 				</tr>
 				<tr>
 					<th><%= f.label :birthday %></th>
-					<td colspan="2"><%= f.text_field :birthday, value:@profile.birthday %></td>
+					<td colspan="2"><%= f.text_field :birthday, value: @profile.birthday %></td>
 					<td><%= visibility_radios( @visibility, :birthday ) %></td>
 				</tr>
 				<tr>
