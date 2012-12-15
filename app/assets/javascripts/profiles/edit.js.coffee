@@ -1,13 +1,18 @@
 $(window).load ->
-  prefecture_selecteion = ->
-    $("select#user_profile_prefecture_id option:selected").each ->
-      labelname = $(this).text()
-      $("select#user_profile_distinct_id optgroup").css( "display", "none" )
-      $("select#user_profile_distinct_id optgroup[label='"+labelname+"']").css( "display", "block" )
-  prefecture_selecteion()    
-
-  $("select#user_profile_prefecture_id").change ->
-    $("select#user_profile_prefecture_id option:selected").each ->
-      labelname = $(this).text()
-      $("select#user_profile_distinct_id optgroup").css( "display", "none" )
-      $("select#user_profile_distinct_id optgroup[label='"+labelname+"']").css( "display", "block" )
+  city_selecter = ->
+    sctr = $("#user_profile_distinct_id")
+    sctr.show()
+    sctr2 = $(sctr).clone(true)
+    sctr2.insertAfter(sctr)
+    sctr.hide()
+    $("optgroup:not(:first-child)",sctr2).remove()
+    $("#user_profile_prefecture_id").change ->
+      $("#user_profile_prefecture_id option:selected").each ->
+        sctr2.remove()
+        sctr.show()
+        sctr2 = sctr.clone()
+        sctr2.insertAfter(sctr)
+        sctr.hide()
+        labelname = $(this).text()
+        $("optgroup[label!='"+labelname+"']",sctr2).remove()
+  city_selecter()
