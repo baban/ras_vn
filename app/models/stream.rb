@@ -10,7 +10,7 @@ class Stream < ActiveRecord::Base
     # user registration
     1=>->( user_id, *options ){
       user = User.find_by_id( user_id )
-      "<a href='/kitchen/#{user.id}'>Có một người dùng mới đăng ký</a>"
+      "<a href='/kitchens/#{user.id}'>Có một người dùng mới đăng ký</a>"
     },
     # add recipe
     2=>->( user_id, *options ) do
