@@ -21,7 +21,7 @@
 				<tr>
 					<th><%= f.label :nickname %></th>
 						<td colspan="2"><%= f.text_field :nickname, value: @profile.nickname %></td>
-					<td><%= visibility_radios( @visibility, :nickname ) %></td>
+					<td><%= t( :public, scope:"status" ) %></td>
 				</tr>
 				<tr>
 					<th><%= f.label :birthday %></th>
@@ -46,7 +46,7 @@
 				<tr>
 					<th><%= f.label :comment %></th>
 					<td colspan="2"><%= f.text_field :comment, value: @profile.comment %></td>
-					<td><%= visibility_radios( @visibility, :comment ) %></td>
+					<td><%= t( :public, scope:"status" ) %></td>
 				</tr>
 				<tr>
 					<td colspan="4"><%= f.submit %></td>
