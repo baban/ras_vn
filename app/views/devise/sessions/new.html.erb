@@ -1,3 +1,5 @@
+<% include_action_javascript %>
+
 <div class="att_bg radi10">
 	<h1 class="txt16">Đăng Nhập</h1>
 	<div class="login_box clearfix">
@@ -21,33 +23,34 @@
 				<% end %>
 				<div class="rbtn cl"><%= f.submit "Đăng Nhập", id:"sign_in", class:"cblu radi10 txt12" %></div>
 				<!--<%= render "links" %>-->
-				<%= link_to "Nếu bạn quên Password?", new_password_path(resource_name) %><br />
+				<%= link_to "Nếu bạn quên mật khẩu?", new_password_path(resource_name) %><br />
 			<% end %>
 		</div>
 
 		<div class="login_ind flo_r" id="get_account_area">
-			<h3 class="txt14">Nếu bạn chưa đăng kí thành viên?</h3>
+			<h3 class="txt14">Nếu bạn chưa có tài khoản?</h3>
 			<div class="rbtn cl">
 				<%= link_to "Đăng ký thành viên", new_user_registration_url, class:"cblu radi10 txt12" %>
 			</div>
 		</div>
-
+		<br />
 		<div class="cl clearfix">
 			<br />
-			<h2 class="fo_b"><p>Sử dụng tài khoản Facebook, Twitter, Google+ để đăng kí thành viên !</p></h2>
+			<h2 class="fo_b"><p>Đăng kí thành viên qua Facebook, Google+ hoặc Twitter !</p></h2>
 			<ul id="login_links" class="ant_s clearfix">
 				<li class="flo_l"><%= link_to raw(image_tag('/assets/common/fb.png', alt:'', size:'18x18'))+"Facebook", "/auth/facebook",      class:"radi5" %></li>
 				<li class="flo_l"><%= link_to raw(image_tag('/assets/common/tw.png', alt:'', size:'18x18'))+"Twitter",  "/auth/twitter",       class:"radi5" %></li>
 				<li class="flo_l"><%= link_to raw(image_tag('/assets/common/gp.png', alt:'', size:'18x18'))+"Google",   "/auth/google_oauth2", class:"radi5" %></li>
 			</ul>
 
-			<p class="cl txt11">Nếu bạn không có tài khoản của Facebook hoặc Google+ thì hãy click vào link dưới đây</p>
+			<p class="cl txt12">Nếu bạn chưa có tài khoản của Facebook hoặc Google+ thì hãy click vào link dưới đây !</p>
 			<ul>
 				<li class="flo_l"><a href="http://www.facebook.com/">Sign up with Facebook</a></li><br />
 				<li class="flo_l"><a href="https://twitter.com/">Sign up with Twitter</a></li><br />
 				<li class="flo_l"><a href="https://plus.google.com/up/search">Sign up with Google</a></li><br />
 			</ul>
 		</div>
+		
 	</div>
 </div>
 

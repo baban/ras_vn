@@ -22,3 +22,60 @@ form.new_user {
   color:#aaa;
 }
 
+@charset "UTF-8";
+
+h2 {
+  font-size:20px;
+  color:orange;
+}
+
+h3 {
+  font-size:18px;
+  color:orange;
+}
+
+form {
+  label {
+    display:block;
+  }
+  li.date > fieldset {
+    ol {
+      label{ display:inline; }
+      list-style-type:none;
+      li{
+        display:inline;
+      }
+    }
+  }
+  li.radio > fieldset {
+    ol {
+      label{ display:inline; }
+      list-style-type:none;
+      li{ display:inline; }
+    }
+  }
+  fieldset#birthday_select_boxes {
+    select:before {
+      content:"/";
+    }
+  }
+}
+
+#terms_of_description {
+  font-size:10px;
+  border:inset 1px #aaa;
+  overflow-y:scroll;
+  height:10em;
+  width:90%;
+  ol {
+    margin:0 0.5em;
+  }
+}
+
+select >  optgroup {
+  display:none;
+}
+select > optgroup:first-child {
+  display:block;
+}
+
