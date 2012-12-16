@@ -1,4 +1,7 @@
 vn:
+  errors:
+    messages:
+      extension_white_list_error: 画像のフォーマットではありません
   activerecord:
     errors:
       messages:

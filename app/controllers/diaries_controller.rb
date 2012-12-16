@@ -18,12 +18,14 @@ class DiariesController < ApplicationController
   end
 
   def create
-    diary = Diary.new
-    diary.attributes= params[:diary]
-    diary.user_id= current_user.id
-    diary.save
+    @diary = Diary.new
+    @diary.attributes= params[:diary]
+    @diary.user_id= current_user.id
+    @diary.save
 
-    redirect_to action:"show", id: diary.id
+    return render action:"new" unless @diary.valid?
+
+    redirect_to action:"show", id: @diary.id
   end
 
   def edit
