@@ -152,15 +152,15 @@ vn:
         bookmarks: Bookmark
         current_sign_in_at: current_sign_in_at  #g
         current_sign_in_ip: current_sign_in_ip  #g
-        email: E-mail
+        email: E-mail*
         encrypted_password: Mật khẩu
-        password: Mật khẩu
+        password: Mật khẩu*
         password_confirmation: Mật khẩu(xác nhận)
         last_sign_in_at: last_sign_in_at  #g
         last_sign_in_ip: last_sign_in_ip  #g
-        recipe: :activerecord.models.recipe  #g
+        recipe: Recipe  #g
         recipe_comments: Bình luận
-        recipes: Công thức
+        recipes: Recipe
         remember_me: Nhớ mật khẩu
         remember_created_at: remember_created_at  #g
         reset_password_sent_at: reset_password_sent_at  #g
@@ -176,8 +176,8 @@ vn:
         first_name: Tên
         image: Hình ảnh
         family_name: Họ
-        mail_address: E-mail
-        nickname: Nickname
+        mail_address: E-mail*
+        nickname: Nickname*
         sex: Giới tính
         user: User  #g
         user_profile_visibility: Hiển thị
