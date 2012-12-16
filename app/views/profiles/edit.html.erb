@@ -4,15 +4,14 @@
 <div id="content_body" class="bace_bg">
 	<%= render partial:"mypage/content_header" %>
 	<div id="mypage_content" class="clearfix mypage_content" >
-		<h2 class="txt20">Profile編集</h2>
+		<h2 class="txt20">Thay đổi Profile</h2>
 		<div class="content">
 			<%= semantic_form_for @profile, url:{ action:"update" } do |f| %>
 				<table>
 					<tr><td><%= profile_image_tag @profile %></td></tr>
 					<tr>
 						<td>
-							<p>File:<%= f.file_field :image %></p>
-							<p>(アップロードすると自動で変更されます)</p>
+							<p><%= f.file_field :image %></p>
 						</td>
 					</tr>
 				</table>
