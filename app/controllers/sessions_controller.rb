@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     if omniuser
       # Oauth is authorized
       user = User.find_by_omniuser_id(omniuser.id)
-       if user
+      if user
          # user is exist( devise authorise is success )
          if user.confirmed_at
            # mail confirm is ended
