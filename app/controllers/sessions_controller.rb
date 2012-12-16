@@ -19,9 +19,9 @@ class SessionsController < ApplicationController
            # mail confirm is ended
            # user is login
            session[:user_id] = omniuser.id
-           redirect_to root_url, notice: "Đăng nhập."
+           redirect_to root_url, notice: "Đăng nhập"
          else
-           redirect_to root_url, notice: "Tôi đã không thể kiểm tra e-mail. Bây giờ bạn đã gửi một email có đăng ký tạm thời, hãy kiểm tra."
+           redirect_to root_url, notice: "Hãy kiểm tra email."
          end
        else
          logger.info :auth
@@ -55,7 +55,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: "Bạn đã đang xuất"
+    redirect_to root_url, notice: "Đã logout"
   end
 end
 
