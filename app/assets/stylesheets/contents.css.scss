@@ -416,3 +416,29 @@ s .login_ind {
   margin-top:10px;
 }
 
+
+/*sns*/
+ul.sns li {float:left; margin:3px;}
+ul.sns li img {margin:0px 3px;}
+.ft_sns {margin-top:10px;}
+.hd_sns {margin-bottom:10px;}
+
+
+/*会員登録*/
+
+.inp_a{ background:#FFF; padding:10px;}
+.inp_a h1{ font-weight:bold; color:#333; margin-bottom:10px;}
+.inp_a section .ltc{ margin-bottom:20px;}
+.inp_a section .ltc p{width:200px; float:left; margin-right:20px;}
+.inp_a section .ibox{width:450px; float:left;}
+.inp_a section .ltc input{ width:450px; float:left; padding:2px;}
+.inp_a section .ltc .ivie, .inp_a section .sltc .ivie{ width:100px; float:right; padding-top:2px; text-align:center}
+.inp_a section .ltc .ive, .inp_a section .sltc .ive{ background:#999; padding:0 10px; color:#FFF}
+.inp_a section .sltc{ margin-bottom:20px;}
+.inp_a section .sltc p{width:200px; float:left; margin-right:20px;}
+.inp_a section .sltc label{ margin-right:20px;}
+.inp_a .inp_t{border: solid 1px #AAA;overflow-y: scroll;height: 150px;}
+.inp_a .inp_btn{ text-align:center}
+.inp_a .inp_btn input{ min-width:100px; padding:5px 20px; cursor:pointer}
+.sns_a{ background:#EEE; padding:10px; margin-top:20px;}
+.inp_a section .ltc textarea{ width:450px; float:left; padding:2px;}

@@ -1,33 +1,50 @@
 <% content_for :javascript_after do %><%= javascript_include_tag "recipes/new" %><% end %>
 <% content_for :style_after do %><%= stylesheet_link_tag "recipes/new" %><% end %>
 
-<div id="content_body" class="section bace_bg">
+<div class="bace_bg">
 	<div class="contents_bg clearfix">
-		<h2 class="txt20">Đăng món ăn của bạn</h2>
-		<%= semantic_form_for @recipe, html:{ multipart: true } do |f| %>
-			<% if @recipe.errors.any? %>
+		<article class="inp_a clearfix">
+			<h2 class="txt20">Đăng món ăn của bạn</h2>
+			<section>
+			<%= semantic_form_for @recipe, html:{ multipart: true } do |f| %>
+				<% if @recipe.errors.any? %>
 				<div id="error_explanation">
 					<% @recipe.errors.full_messages.each do |mes| %>
 						<p><%= mes %></p>
 					<% end %>
 				</div>
-			<% end %>
-			<p><%= f.label :title %></p>
-			<p><%= f.text_field :title, value: @recipe.title, size: 70 %></p>
-			<p><%= f.label :description %></p>
-			<p><%= f.text_area :description, value: @recipe.description %></p>
-			<div id="recipe_genre_select_area" class="area">
-				<%= f.label :recipe_food_id %>
-				<%= recipe_genre_select_area(f) %>
-			</div>
-			<p>
-				<%= f.label :recipe_image %>
-				<%= link_to "(file uploaded)", @recipe.image.url if @recipe.image.present? %>
-				<%= f.file_field :recipe_image %>
-				<%= f.hidden_field :recipe_image_cache %>
-			</p>
-			<p><%= link_to t( :caution, scope:"views.recipes.new" ), action:"caution" %></p>
-			<p><%= f.submit t( :next_step_button, scope:"views.recipes.new" ), id:"regist_button" %></p>
-		<% end %>
+				<% end %>
+			
+				<div class="ltc cl clearfix">
+					<p><%= f.label :title %></p>
+					<%= f.text_field :title, value: @recipe.title, size: 70 %>
+				</div>
+				<div class="ltc cl clearfix">
+					<p><%= f.label :description %></p>
+					<%= f.text_area :description, value: @recipe.description, rows:6 %>
+				</div>
+
+				<div class="ltc cl clearfix">
+					<p><%= f.label :recipe_food_id %></p>
+					<div class="ibox">
+						<%= recipe_genre_select_area(f) %>
+					</div>
+				</div>
+				<div class="ltc cl clearfix">
+					<p><%= f.label :recipe_image %></p>
+					<div class="ibox">
+						<%= link_to "(file uploaded)", @recipe.image.url if @recipe.image.present? %>
+						<%= f.file_field :recipe_image %>
+						<%= f.hidden_field :recipe_image_cache %>
+					</div>
+				</div>
+				
+				<p><a href="#"><%= link_to t( :caution, scope:"views.recipes.new" ), action:"caution" %></a></p>
+				<div class="inp_btn cl">
+					<%= f.submit t( :next_step_button, scope:"views.recipes.new" ), id:"regist_button" %>
+				</div>
+				<% end %>
+			</section>
+		</article>
 	</div>
 </div>
