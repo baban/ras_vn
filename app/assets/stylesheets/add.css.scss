@@ -1,0 +1,72 @@
+@import "parts/base";
+
+.err{ background:url(/assets/ell.gif) no-repeat 0 2px; padding-left:20px; color:#F00!important; margin:5px 0 20px 0;} 
+
+#error_explanation > p {
+  color:red !important;
+}
+
+.alert {
+  color:#F00;
+  text-align:center;
+}
+
+.notice {
+  color:green;
+  text-align:center;
+}
+
+/*pagination*/
+.paginate {
+  font-size:17px;
+  text-align:center;
+  display:block;
+  margin-top:10px;
+  width:100%;
+}
+
+.current_page {
+  font-size:20px;
+  color: #666666;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.next_page {
+  font-size:14px;
+}
+
+img#profile_image_icon {
+  width:32px;
+  height:32px;
+}
+
+#stream_list_box {
+  border-width:1px;
+  border-style:inset;
+  border-color:#ddd;
+}
+
+#stream_list {
+  margin:0.5em;
+  height:300px;
+  overflow:hidden;
+}
+
+#stream_list li {
+  border-width:1px;
+  border-style:none none dashed none;
+  border-color:#888;
+  height:70px;
+}
+
+#signout_button {
+  color:#fff;
+  background-color:transparent;
+  border-style:none;
+  font-weight:bold;
+}
+
+#signout_button:hover {
+  color:#ccc;
+}
