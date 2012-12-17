@@ -21,7 +21,6 @@ class SessionsController < ApplicationController
            session[:user_id] = omniuser.id
            sign_in(:user, user)
            redirect_to root_url, notice: "Đăng nhập"
-           #respond_with resource, :location => after_sign_up_path_for(resource)
          else
            redirect_to root_url, notice: "Hãy kiểm tra email."
          end
