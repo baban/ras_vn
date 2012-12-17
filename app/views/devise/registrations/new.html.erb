@@ -36,9 +36,9 @@
 				<%= profile.semantic_errors %>
 				<div class="ltc cl clearfix">
 					<p>
-						<p><%= f.label :nickname %></p>
+						<p><%= profile.label :nickname %></p>
 					</p>
-					<input type="text" />
+					<%= profile.text_field :nickname %>
 					<p class="ivie">
 						<span class="ive txt11 radi10">Công khai</span>
 					</p>
