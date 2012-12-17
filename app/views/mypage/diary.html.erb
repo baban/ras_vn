@@ -16,7 +16,7 @@
 			<div id="articles" class="section">
 				<% @diary.each do |d| %>
 					<article>
-						<h3><%= link_to d.title, controller:"diary", action:"show", id: d.id %></h3>
+						<h3><%= link_to d.title, controller:"diaries", action:"show", id: d.id %></h3>
 						<div><%= truncate( d.content, length: 150) %></div>
 					</article>
 				<% end %>

@@ -25,7 +25,7 @@ class DiariesController < ApplicationController
 
     return render action:"new" unless @diary.valid?
 
-    redirect_to action:"show", id: @diary.id
+    redirect_to controller:"mypage", action:"diary"
   end
 
   def edit
@@ -37,13 +37,13 @@ class DiariesController < ApplicationController
     diary.attributes= params[:diary]
     diary.save
 
-    redirect_to( { action:"show", id: diary.id }, notice: t(:update_notice, scope:"views.diary") )
+    redirect_to( { controller:"mypage", action:"diary" }, notice: t(:update_notice, scope:"views.diary") )
   end
 
   def destroy
     Diary.find(params[:id]).destroy
     
-    redirect_to( { action: "index" }, notice: t(:diary_notice, scope:"views.diary") )
+    redirect_to( { controller:"mypage", action:"diary" }, notice: t(:diary_notice, scope:"views.diary") )
   end
 
   private 

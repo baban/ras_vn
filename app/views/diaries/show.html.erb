@@ -3,7 +3,7 @@
 		<h2 class="txt20"><%= t("activerecord.models.diary") %></h2>
 		<% if user_signed_in? %>
 			<div id="diary_create_link">
-				<%= link_to t(:new, scope:"views.diary"), action:"new" %>
+				<%= link_to t(:new, scope:"views.diary"), action:"edit" %>
 			</div>
 		<% end %>
 		<div class="article">
