@@ -7,109 +7,121 @@
 
 <div class="bace_bg">
 	<%=semantic_form_for @recipe, url: recipe_url(@recipe.id), html:{ multipart: true } do |f| %>
-	<% if @draft.errors.any? %>
-		<div class="alert">
-			<ul>
-				<% @draft.errors.full_messages.each do |error| %>
-					<li><%= error %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
-	<div class="contents_bg clearfix">
-		<!--main_clm-->
-		<div class="main_clm">
-			<article class="contents_recipes">
-				<h1 class="ttl_recipe"><%= f.text_field :title, value: @draft.title %></h1>
-				<div class="pimages">
-					<%= image_tag @draft.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"", id:"recipe_image" %>
-					<p>メイン画像の変更<%= f.file_field :recipe_image %></p>
-					<%= f.hidden_field :recipe_image_cache %>
-				</div>
-				<div class="explanation">
-					<p><%= f.text_area :description, value: @draft.description, size:"40x3" %></p>
-					<div class="clearfix">
-						<p class="user_name">
-							<span class="flo_l"><%= image_tag (@draft.user.profile.image.url(:small_icon) || "common/user_ico.png"), size:"22x22", alt:"" %></span>
-							<span class="flo_l"><%= link_to @draft.user.profile.nickname, kitchen_url(@user) %></span>
-						</p>
+		<% if @draft.errors.any? %>
+			<div class="alert">
+				<ul>
+					<% @draft.errors.full_messages.each do |error| %>
+						<li><%= error %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+		<div class="contents_bg clearfix">
+			<!--main_clm-->
+			<div class="main_clm">
+				<article class="contents_recipes">
+					<h1 class="ttl_recipe"><%= f.text_field :title, value: @draft.title %></h1>
+					<div class="pimages">
+						<%= image_tag @draft.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:"", id:"recipe_image" %>
+						<p>メイン画像の変更<%= f.file_field :recipe_image %></p>
+						<%= f.hidden_field :recipe_image_cache %>
 					</div>
-					<div>
-						<h3><%= t(:genre, scope:"views.recipes.edit") %></h3>
-						<%= recipe_genre_select_area(f, selected: @draft.recipe_food_id ) %>
-						<p><%= label_tag :new_food_genre, "Nhập tên nhóm thực phẩm" %>:<%= text_field_tag :new_food_genre, "", size: 10 %></p>
-					</div>
-					<p id="genre_description">Nhập tên nhóm thực phẩm nếu không tên có trong list.</p>
-					<div id="ingredients">
-						<p>
-							<span class="material_txt"> Nguyên liệu </span>
-							(<%= f.text_field :amount, size: 3, value: (@draft.amount.to_i.zero? ? 1 : @draft.amount) %> người ăn)
-						</p>
-						<table class="ingredients_list" id="foodstuffs">
-							<% @draft.edit_foodstuffs.each_with_index do |foodstuff,i| %>
-								<tr class="ingredient_row clearfix">
-									<td class="ingredient_name"><%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: @playholders.try(:at,i).try(:at,0) %></td>
-									<td class="ingredient_quantity"><%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: @playholders.try(:at,i).try(:at,1) %></td>
-									<td class="ingredient_close_button"><%= submit_tag "☓", type:"button" %></td>
-								</tr>
-							<% end %>
-						</table>
-						<%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %>
-					</div>
-				</div>
-				<div id="recipes_steps_area" class="area">
-					<dl id="recipe_steps">
-						<% @steps.each.with_index(1) do |step,i| %>
-							<dl class="step" id="recipe_step_<%= i %>">
-								<dt>BƯỚC <%= i %></dt>
-								<dd>
-									<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area", id:"recipe_steps_#{i}_content" %>
-									<div class="selecter">
-										<div class="image_field">
-											<%= label :image, "Image" %>
-											<%= file_field_tag "recipe_steps[][image]", id:"recipe_steps_#{i}_image_selecter", size: 15 %>
-											<% if step.image.present? %>
-												<p><%= check_box_tag "recipe_steps[][remove_image]" %>delete image</p>
-												<p><%= image_tag step.image.url %></p>
-											<% end %>
-										</div>
-										<div class="movie_button_field">
-											<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, id:"recipe_steps_#{i}_movie_url" %>
-											<%= submit_tag "Movie url", type:"button", class:"movie_button" %>
-											<%= hidden_field_tag "step_number_#{i}", i %>
-											<% if step.movie_url.present? %>
-												<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
-											<% end %>
-										</div>
+					<div class="explanation">
+						<p><%= f.text_area :description, value: @draft.description, size:"40x3" %></p>
+						<div class="clearfix">
+							<p class="user_name">
+								<span class="flo_l"><%= image_tag (@draft.user.profile.image.url(:small_icon) || "common/user_ico.png"), size:"22x22", alt:"" %></span>
+								<span class="flo_l"><%= link_to @draft.user.profile.nickname, kitchen_url(@user) %></span>
+							</p>
+						</div>
+						<div class="ltc cl clearfix">
+							<p>Nhóm thực phẩm</p>
+							<div class="ibox">
+								<%= recipe_genre_select_area(f, selected: @draft.recipe_food_id ) %>
+								<p class="i_att"><%= label_tag :new_food_genre, "Nhập tên nhóm thực phẩm" %>:<%= text_field_tag :new_food_genre, "", size: 10 %>Nhập tên nhóm thực phẩm nếu không tên có trong list.</p>
+							</div>
+						</div>
+						<div id="ingredients">
+							<div class="servings">
+								<h3>
+									<div class="material clearfix">
+										<span class="material_txt"> Nguyên liệu </span>
+										<span class="servings_for yield">
+											(<%= f.text_field :amount, size: 3, value: (@draft.amount.to_i.zero? ? 1 : @draft.amount) %> người ăn)
+										</span>
 									</div>
-								</dd>
-							</dl>
-						<% end %>
-					</dl>
-				</div>
-				
-				<h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
-				<div class="section"><%=f.text_area :one_point, value: @recipe.one_point %></div>
-				
-				<p class="form_actions">
-					<%= f.submit name:"edit", value: t( :edit,   scope:"views.recipes.edit" ), id:"edit_button" %>
-					<%= f.submit name:"save", value: t( :commit, scope:"views.recipes.edit" ), id:"save_button" %>
-				</p>
-				<div id="search_youtube_area">
-					<div class="content">
-						<%= hidden_field_tag :step_number, "1", id:"search_youtube_step_number" %>
-						<%= text_field_tag :vq, "", id:"search_youtube_text" %>
-						<%= button_tag "tìm kiếm", type:"button", id:"search_youtube_button" %>
-						<ul id="search_result_list"></ul>
-						<p id="search_youtube_area_close_button_row"><%= button_tag "đóng", type:"button", id:"search_youtube_area_close_button" %></p>
+								</h3>
+							</div>
+							<table class="ingredients_list" id="foodstuffs">
+								<% @draft.edit_foodstuffs.each_with_index do |foodstuff,i| %>
+									<tr class="ingredient_row clearfix">
+										<td class="ingredient_name">
+											<%= text_field_tag "foodstuffs[][name]", foodstuff.name, placeholder: @playholders.try(:at,i).try(:at,0) %>
+										</td>
+										<td class="ingredient_quantity">
+											<%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: @playholders.try(:at,i).try(:at,1) %>
+										</td>
+										<td class="ingredient_close_button">
+											<p class="close"><%= submit_tag "☓", type:"button" %></p>
+										</td>
+									</tr>
+								<% end %>
+							</table>
+							<div class="btn cl"><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %></div>
+						</div>
 					</div>
-				</div>
-			</article>
-		</div>
-		<!--main_clmEnd-->
+					<div class="cate01 clearfix">
+						<div id="steps">
+							<% @steps.each.with_index(1) do |step,i| %>
+								<section class="rec_cat5 clearfix">
+									<h3 class="material_txt">BƯỚC <%= i %></h3>
+									<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area", id:"recipe_steps_#{i}_content" %>
+									<div class="iimg_a">
+										<p><%= label :image, "Image" %></p>
+										<%= file_field_tag "recipe_steps[][image]", id:"recipe_steps_#{i}_image_selecter", size: 15 %>
+										<% if step.image.present? %>
+											<p><%= check_box_tag "recipe_steps[][remove_image]" %>delete image</p>
+											<p><%= image_tag step.image.url %></p>
+										<% end %>
+									</div>
+									<p><%= label_tag :movie_url %>:</p>
+									<div class="movie_button_field">
+										<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, id:"recipe_steps_#{i}_movie_url" %>
+										<%= submit_tag "Movie url", type:"button", class:"movie_button" %>
+										<%= hidden_field_tag "step_number_#{i}", i %>
+										<% if step.movie_url.present? %>
+											<iframe width="224" height="126" src="<%= step.movie_url %>" frameborder="0" allowfullscreen></iframe>
+										<% end %>
+									</div>
+								</section>
+							<% end %>
+						</div>
+
+						<div id="search_youtube_area">
+							<div class="content">
+								<%= hidden_field_tag :step_number, "1", id:"search_youtube_step_number" %>
+								<%= text_field_tag :vq, "", id:"search_youtube_text" %>
+								<%= button_tag "tìm kiếm", type:"button", id:"search_youtube_button" %>
+								<ul id="search_result_list"></ul>
+								<p id="search_youtube_area_close_button_row"><%= button_tag "đóng", type:"button", id:"search_youtube_area_close_button" %></p>
+								<p><%= label_tag :movie_url %>:</p>
+							</div>
+						</div>
+
+						<div class="btn"><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></div>
+						<section class="rec_cat5 clearfix">
+							<h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
+							<div class="section"><%=f.text_area :one_point, value: @recipe.one_point %></div>
+						</section>
+						<p class="form_actions btn">
+							<%= f.submit name:"edit", value: t( :edit,   scope:"views.recipes.edit" ), id:"edit_button" %>
+							<%= f.submit name:"save", value: t( :commit, scope:"views.recipes.edit" ), id:"save_button" %>
+						</p>
+					</div>
+				</article>
+			</div>
+			<!--main_clmEnd-->
+		<% end %>
 		<%=render partial:"layouts/right_side_content" %>
 	</div>
-	<!--contents-->
-	<% end %>
 </div>
-

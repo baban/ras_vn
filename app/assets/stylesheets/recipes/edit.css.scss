@@ -7,7 +7,8 @@
 }
 
 #recipe_title {
-  font-size:1.0em;
+  font-size:24px;
+  font-weight:bold;
   width:20em;
 }
 
@@ -39,20 +40,11 @@ table.ingredients_list {
     td.ingredient_close_button input {
       margin:2px 4px;
       font-weight:bold;
-      background-color:#ddd;
-      border-color:#ddd;
-      &:hover {
-        background-color:#ffd700;
-        border-color:#ffd700;
-      }
     }
   }
 }
 
 #recipes_steps_area {
-  &:before {
-    @include separater;
-  }
   .movie_field {
     form.movie_button_field {
       border-style:none;
@@ -66,37 +58,14 @@ table.ingredients_list {
   #add_steps {
     float:right;
   }
-  &:after {
-    @include separater;
-  }
 }
 
-dl.step > dd {
-  padding:0;
-  margin:0;
-  .step_edit_area {
-    width:85%;
-    height:7em;
-    margin:0.5em;
-  }
-  .selecter {
-    width:90%;
-    padding-left:10px;
-    .image_field {
-      min-width:150px;
-      width:17em;
-      float:left;
-    }
-    .movie_field {
-      min-width:150px;
-      width:20em;
-      float:left;
-    }
-  }
-  &:after {
-    margin-top:0.5em;
-    @include separater;
-  }
+.step_edit_area {
+  height:10em;
+}
+
+#recipe_one_point {
+  height:9em;
 }
 
 #search_youtube_area {
@@ -164,11 +133,6 @@ dl.step > dd {
   &:after {
     @include separater;
   }
-}
-
-#recipe_one_point {
-  width:80%;
-  height:4em;
 }
 
 .form_actions {

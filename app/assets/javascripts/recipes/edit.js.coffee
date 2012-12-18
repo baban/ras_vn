@@ -26,7 +26,7 @@ $(window).load ->
   # delete recipe foodstuffs
   foodstuff_close_button_check=->
     $(".ingredient_close_button input").click ->
-      tr = $(this).parent().parent()
+      tr = $(this).parent().parent().parent()
       $( "input:text", tr ).val("")
       tr.slideUp()
   foodstuff_close_button_check()
@@ -48,15 +48,17 @@ $(window).load ->
   # add recipe steps
   $("#add_steps").click ->
     s = 
-    '<dl class="step">'+
-      '<dt>mới BƯỚC</dt>'+
-      '<dd><textarea class="step_edit_area" name="steps[]"></textarea></dd>'+
-    '</dl>';
-    $("#recipe_steps").append(s)
+    '<section class="rec_cat5 clearfix">'+
+      '<h3 class="material_txt">mới BƯỚC</h3>'+
+      '<textarea class="step_edit_area" name="steps[]"></textarea>'+
+    '</section>';
+    $("#steps").append(s)
 
   # open window youtupe movies
   $(".movie_button").click ->
+    console.log "movie_button"
     step_number = $(this).next().attr("value")
+    console.log step_number
     $("#search_youtube_step_number").attr( "value", step_number )
     $("#search_youtube_area").css( { display:"block", opacity: 0.0 } )
     $("#search_youtube_area").animate( { opacity: 1.0 }, { duration: 400 } )
