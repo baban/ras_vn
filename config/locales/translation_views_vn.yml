@@ -42,7 +42,7 @@ vn:
       create:
         other_user_recipe_alert: Bạn không sửa được bài này
       show:
-        creator: Recipe
+        creator: Creator
         bookmark: Yêu thích
         unbookmark: Xóa Yêu thích
         post_report: Đăng
@@ -54,7 +54,7 @@ vn:
       new:
         create_recipe: Đăng recipe
         public: Public
-        closed: Close
+        closed: Private
         caution: Điều khoản đăng bài
         next_step_button: Bước tiếp theo
       edit:
@@ -64,9 +64,9 @@ vn:
         add_genre: Thêm nhóm thực phẩm
         add_foodstuff: Thêm thành phần
         add_step: Thêm bước thực hiện
-        edit: Save tạm thời
+        edit: Lưu tạm thời
         commit: Đăng recipe
-        tmp_save: Save tạm thời
+        tmp_save: Lưu tạm thời
         save_complete: Đã đăng hoàn thành
       report:
         comments: Nấu thử & Bình luận
@@ -90,7 +90,7 @@ vn:
       kitchen_link: Kitchen
       diary_link: Nhật ký
       public: Public
-      closed: Bí mật
+      closed: Private
       edit: Sửa
     top:
       index:
