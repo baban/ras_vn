@@ -1,46 +1,52 @@
 <% content_for :stylesheet_after do %>
-  <%= stylesheet_link_tag :contents %>
+<%= stylesheet_link_tag :contents %>
 <% end %>
 
-<div id="content_body" class="bace_bg">
-  <%= render partial:"mypage/content_header" %>
-  <div id="mypage_content" class="clearfix mypage_content" >
-    <h2 class="txt20"><%= t(:user_profile, scope:"activerecord.models") %></h2>
-    <div class="content">
-      <table id="profile_image">
-        <tr><td><%= profile_image_tag @profile %></td></tr>
-      </table>
-      <table id="profiles">
-        <tr>
-          <th><%= t(:nickname, scope:"activerecord.attributes.user_profile") %></th>
-          <td colspan="2"><%= @profile.nickname %></td>
-          <td><%= @visibility.nickname ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
-        </tr>
-        <tr>
-          <th><%= t(:email, scope:"activerecord.attributes.user_profile") %></th>
-          <td colspan="2"><%= @profile.email %></td>
-          <td><%= @visibility.email ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
-        </tr>
-        <tr>
-          <th><%= t(:sex, scope:"activerecord.attributes.user_profile") %></th>
-          <td colspan="2"><%=translate_sex( @profile.sex ) %></td>
-          <td><%= @visibility.sex ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
-        </tr>
-        <tr>
-          <th><%= t(:birthday, scope:"activerecord.attributes.user_profile") %></th>
-          <td colspan="2"><%= @profile.birthday %></td>
-          <td><%= @visibility.birthday ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
-        </tr>
-        <tr>
-          <th><%= t(:comment, scope:"activerecord.attributes.user_profile") %></th>
-          <td colspan="2"><%= @profile.comment %></td>
-          <td><%= @visibility.comment ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
-        </tr>
-        <tr>
-          <td colspan="4"><%=link_to t(:edit, scope:"views.mypage"), controller:"profiles", action:"edit" %></td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</div>
+<div class="bace_bg">
+	<div class="contents_bg clearfix">
+		<%= render partial:"mypage/content_header" %>
+		<div class="clearfix mypage_content" >
+			<h2 class="txt16 ttl_mypage"><%= t(:user_profile, scope:"activerecord.models") %></h2>
+			<p class="profile_image">
+				<%= profile_image_tag @profile %>
+			</p>
+			<div class="flo_l">
+				<table id="profiles">
+					<tr>
+						<th><%= t(:nickname, scope:"activerecord.attributes.user_profile") %></th>
+						<td colspan="2"><%= @profile.nickname %></td>
+						<td><%= @visibility.nickname ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
+					</tr>
+					
+					<tr>
+						<th><span class="translation_missing"><%= t(:email, scope:"activerecord.attributes.user_profile") %></span></th>
+						<td colspan="2"><%= @profile.email %></td>
+						<td><%= @visibility.email ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
+					</tr>
+					
+					<tr>
+						<th><%= t(:sex, scope:"activerecord.attributes.user_profile") %></th>
+						<td colspan="2"><%= translate_sex( @profile.sex ) %></td>
+						<td><%= @visibility.sex ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
+					</tr>
+					
+					<tr>
+						<th><%= t(:birthday, scope:"activerecord.attributes.user_profile") %></th>
+						<td colspan="2"><%= @profile.birthday %></td>
+						<td><%= @visibility.birthday ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
+					</tr>
 
+					<tr>
+						<th><%= t(:comment, scope:"activerecord.attributes.user_profile") %></th>
+						<td colspan="2"><%= @profile.comment %></td>
+						<td><%= @visibility.comment ? t(:public, scope:"views.mypage") : t(:closed, scope:"views.mypage") %></td>
+					</tr>
+				</table>
+				<p class="cbtn flo_r">
+					<%= link_to t(:edit, scope:"views.mypage"), controller:"profiles", action:"edit" %>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--contents-->
+</div>

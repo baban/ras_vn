@@ -14,10 +14,10 @@ object,embed {vertical-align: top;}
 hr,legend {	visibility:hidden;margin:0px;padding:0px;}
 img,abbr,acronym,fieldset {border:0;margin: 0;padding: 0;}
 img{vertical-align: middle; line-height:0;}
-ul,li,ol{list-style-type:none;margin:0;padding:0;font-style:0;font-weight:0;}
+ul,li,ol{list-style-type:none;margin:0;padding:0;font-style:normal;font-weight:normal;}
 table,td,th{border:none;}	
 address,caption,cite,code,dfn,em,strong,th,var,dl,dt,dd {font-style: normal;}	
-h1,h2,h3,h4,h5,h6,em,address,p,th {	font-style:normal;	font-weight:normal;	font-size:normal;	margin:0;	padding:0;}	
+h1,h2,h3,h4,h5,h6,em,address,p,th {	font-style:normal;	font-weight:normal;	font-size:13px;	margin:0;	padding:0;}	
 h1,h2,h3,h4,h5,h6 {font-size: 100%;font-style:normal;font-weight:normal;margin:0;padding:0;}
 
 

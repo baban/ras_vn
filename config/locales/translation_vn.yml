@@ -10,10 +10,10 @@ vn:
       omniuser: omniuser  #g
       prefecture: Thành phố bạn đang sống
       recipe: Recipe
-      recipe_advertisement: Quảng cáo
+      recipe_advertisement: Đăng quảng cáo
       recipe_comment: Nấu thử & Bình luận
-      recipe_food: Phân loại（Nhỏ)
-      recipe_food_genre: Phân loại（Lớn)
+      recipe_food: Category Small
+      recipe_food_genre: Category Big
       recipe_foodstuff: Thực phẩm
       recipe_foodstuff_ranking: recipe_foodstuff_ranking  #g
       recipe_ranking: recipe_ranking  #g
@@ -48,7 +48,7 @@ vn:
 
       diary:
         title: Tiêu đề
-        publiced_at: Ngày công khai
+        publiced_at: Public_at
         image: Hình ảnh
         content: Nội dung
 
@@ -77,7 +77,7 @@ vn:
         deleted_at: Ngày xóa
         description: Giới thiệu khái quát về món ăn
         one_point: Mách nhỏ
-        public: Công khai
+        public: Public
         recipe_comments: Nấu thử & Bình luận
         recipe_foodstuffs: Nguyên liệu
         recipe_food_id: Loại ẩm thực
@@ -106,7 +106,7 @@ vn:
         deleted_at: Ngày xóa
         description: Giới thiệu khái quát về món ăn
         one_point: Bí quyết
-        public: Công khai
+        public: Public
         recipe_comments: Nấu thử & Bình luận
         recipe_foodstuffs: Nguyên liệu
         recipe_food_id: Loại ẩm thực

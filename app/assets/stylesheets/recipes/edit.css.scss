@@ -44,24 +44,20 @@ table.ingredients_list {
   }
 }
 
-#recipes_steps_area {
-  .movie_field {
-    form.movie_button_field {
-      border-style:none;
-      margin:0;
-      padding:0;
-    }  
-    input.movie_selecter {
-      margin-top:3px;
-    }  
+#steps {
+  .step_edit_area {
+    height:10em;
   }
-  #add_steps {
-    float:right;
+  .iimg_a {
+    min-width:250px;
+    width:45%;
+    float:left;
   }
-}
-
-.step_edit_area {
-  height:10em;
+  .movie_button_field {
+    min-width:250px;
+    width:45%;
+    float:left;
+  }
 }
 
 #recipe_one_point {

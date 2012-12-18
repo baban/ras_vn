@@ -13,5 +13,5 @@ vn:
   order:
     recipes: Recipe
   status:
-    public: Công khai
-    closed: Không công khai
+    public: Public
+    closed: Private

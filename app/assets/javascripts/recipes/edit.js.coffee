@@ -36,7 +36,7 @@ $(window).load ->
     '<tr class="ingredient_row clearfix">'+
       '<td class="ingredient_name"><input type="text" name="foodstuffs[][name]" value="" placeholder="tên thực phẩm"></td>'+
       '<td class="ingredient_quantity"><input type="text" name="foodstuffs[][amount]" value="" placeholder="dung lượng"></td>'+
-      '<td class="ingredient_close_button"><input type="button" value="☓"></td>'+
+      '<td class="ingredient_close_button"><p class="close"><input type="button" value="☓"></p></td>'+
     '</tr>';
     foodstuff_close_button_check()
     return s;
@@ -64,7 +64,7 @@ $(window).load ->
     $("#search_youtube_area").animate( { opacity: 1.0 }, { duration: 400 } )
 
   # add youtupe movieto recipe step
-  $("#search_youtube_button").live( "click", ->
+  search_youtube = ->
     vq = $("#search_youtube_text").attr("value")
     step_number = $("#search_youtube_step_number").attr("value")
     console.log "vq: " + vq
@@ -94,12 +94,16 @@ $(window).load ->
             { duration: 300, complete: -> $(this).css("display", "none") } )
         this
     )
-  )
 
+  # button action
+  $("#search_youtube_button").live( "click", search_youtube )
+
+  # enter key action
   $("#search_youtube_text").keydown (evt)->
     charCode = evt.charCode || evt.which || evt.keyCode
     console.log "charCode : " + charCode
     if (Number(charCode) == 13 || Number(charCode) == 3)
+      search_youtube()
       false
     else
       true
@@ -107,5 +111,4 @@ $(window).load ->
   $("#search_youtube_area_close_button").click ->
     $("#search_youtube_area").animate( { opacity: 0.0 },
       { duration: 300, complete: -> $(this).css("display", "none") } )
-
 

@@ -1,25 +1,143 @@
 <%= include_action_javascript %>
 <% content_for :style_after do %><%= stylesheet_link_tag "mypage" %><% end %>
 
+<div class="bace_bg">
+	<%= render partial:"mypage/content_header" %>
+	<div class="contents_bg clearfix">
+		<article class="inp_a clearfix">
+			<h1 class="txt16">Thay đổi Profile</h1>
+			<%= semantic_form_for @profile, url:{ action:"update" } do |f| %>
+			<!--
+			<div class="err">
+				不正な値です
+			</div>
+			-->
+			<section class="line">
+
+				<div class="ltc cl clearfix">
+					<p>Hình ảnh</p>
+					<%= profile_image_tag @profile %>
+					<%= f.file_field :image %>
+
+					<p class="ivie">
+						<span class="ive txt11 radi10">Public</span>
+					</p>
+				</div>
+				<div class="ltc cl clearfix">
+					<p>
+						<%= f.label :nickname %>
+					</p>
+					<%= f.text_field :nickname, value: @profile.nickname %>
+					<p class="ivie">
+						<span class="ive txt11 radi10"><%= t( :public, scope:"status" ) %></span>
+					</p>
+				</div>
+				
+				<div class="ltc cl clearfix">
+					<p>
+						<%= f.label :birthday %>
+					</p>
+					<div class="ibox">
+						<%= f.text_field :birthday, value: @profile.birthday %>
+					</div>
+					<div class="piv">
+						<label>
+						<%= visibility_radios( @visibility, :birthday ) %>
+						</label>
+					</div>
+				</div>
+
+				<div class="ltc cl clearfix">
+					<p>
+						<%= f.label :email %>
+					</p>
+					<%= f.text_field :email, value: @profile.email %>
+					<div class="piv">
+						<label>
+						<%= visibility_radios( @visibility, :email ) %>
+						</label>
+					</div>
+				</div>
+				<div class="sltc cl clearfix">
+					<p>
+						<%= f.label :sex %>
+					</p>
+					<div class="ibox">
+						<label>
+						<%= select_sex( f, @profile.sex ) %>
+						</label>
+					</div>
+					<div class="piv">
+						<label>
+						<%= visibility_radios( @visibility, :sex ) %>
+						</label>
+					</div>
+				</div>
+
+				<div class="ltc cl clearfix">
+					<p>
+						<%= t(:distinct_id, scope:"activerecord.attributes.user_profile") %>
+					</p>
+					<div class="ibox">
+						<%= distinct_selecter( f, selected: @profile.distinct_id ) %>
+						<p class="txt11">
+							Chọn địa danh đang sinh sống
+						</p>
+					</div>
+					<div class="piv">
+						<label>
+							<%= visibility_radios( @visibility, :distinct_id ) %>
+						</label>
+					</div>
+				</div>
+				
+				<div class="ltc cl clearfix">
+					<p>
+						<%= f.label :comment %>
+					</p>
+					<div class="ibox">
+						<%= f.text_field :comment, value: @profile.comment %>
+					</div>
+					<div class="piv">
+						<p class="ivie">
+							<span class="ive txt11 radi10"><%= t( :public, scope:"status" ) %></span>
+						</p>
+					</div>
+
+				</div>
+				<div class="inp_btn cl">
+					<%= f.submit %>
+				</div>
+			</section>
+			<% end %>
+		</article>
+	</div>
+	<!--contents-->
+</div>
+
+<!--
 <div id="content_body" class="bace_bg">
 	<%= render partial:"mypage/content_header" %>
 	<div id="mypage_content" class="clearfix mypage_content" >
 		<h2 class="txt20">Thay đổi Profile</h2>
 		<div class="content">
 			<%= semantic_form_for @profile, url:{ action:"update" } do |f| %>
-				<table>
-					<tr><td><%= profile_image_tag @profile %></td></tr>
-					<tr>
-						<td>
-							<p><%= f.file_field :image %></p>
-						</td>
-					</tr>
-				</table>
-				
-				<table id="profiles">
+			<table>
+				<tr>
+					<td><%= profile_image_tag @profile %></td>
+				</tr>
+				<tr>
+					<td>
+					<p>
+						<%= f.file_field :image %>
+					</p></td>
+				</tr>
+			</table>
+
+			<table id="profiles">
 				<tr>
 					<th><%= f.label :nickname %></th>
-						<td colspan="2"><%= f.text_field :nickname, value: @profile.nickname %></td>
+					<td colspan="2"><%= f.text_field :nickname, value: @profile.nickname %></td>
 					<td><%= t( :public, scope:"status" ) %></td>
 				</tr>
 				<tr>
@@ -51,7 +169,7 @@
 					<td colspan="4"><%= f.submit %></td>
 				</tr>
 			</table>
-		<% end %>
+			<% end %>
+		</div>
 	</div>
-</div>
-
+-->

@@ -84,8 +84,8 @@
 											<p><%= image_tag step.image.url %></p>
 										<% end %>
 									</div>
-									<p><%= label_tag :movie_url %>:</p>
 									<div class="movie_button_field">
+										<p><%= label_tag :movie_url %>:</p>
 										<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, id:"recipe_steps_#{i}_movie_url" %>
 										<%= submit_tag "Movie url", type:"button", class:"movie_button" %>
 										<%= hidden_field_tag "step_number_#{i}", i %>
@@ -97,18 +97,19 @@
 							<% end %>
 						</div>
 
+						<div class="btn"><%= submit_tag t(:add_step, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></div>
+
 						<div id="search_youtube_area">
 							<div class="content">
 								<%= hidden_field_tag :step_number, "1", id:"search_youtube_step_number" %>
 								<%= text_field_tag :vq, "", id:"search_youtube_text" %>
 								<%= button_tag "tìm kiếm", type:"button", id:"search_youtube_button" %>
 								<ul id="search_result_list"></ul>
-								<p id="search_youtube_area_close_button_row"><%= button_tag "đóng", type:"button", id:"search_youtube_area_close_button" %></p>
-								<p><%= label_tag :movie_url %>:</p>
+								<p id="search_youtube_area_close_button_row">
+									<%= button_tag "đóng", type:"button", id:"search_youtube_area_close_button" %>
+								</p>
 							</div>
 						</div>
-
-						<div class="btn"><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></div>
 						<section class="rec_cat5 clearfix">
 							<h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
 							<div class="section"><%=f.text_area :one_point, value: @recipe.one_point %></div>
