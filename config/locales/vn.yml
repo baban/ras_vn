@@ -14,4 +14,4 @@ vn:
     recipes: Recipe
   status:
     public: Public
-    closed: Close
+    closed: Private
