@@ -10,6 +10,7 @@ class UserProfile < ActiveRecord::Base
   accepts_nested_attributes_for :user
 
   validates :nickname,      presence: true
+  validates :birthday,      presence: true
   validates :prefecture_id, presence: true
   validates :distinct_id,   presence: true
 
