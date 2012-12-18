@@ -3,6 +3,7 @@
 class RecipeStepDraft < ActiveRecord::Base
   acts_as_paranoid
 
+  validates :content, length: { maximum: 800 }
   belongs_to :recipe_draft
 
   mount_uploader :image, RecipeStepsUploader
