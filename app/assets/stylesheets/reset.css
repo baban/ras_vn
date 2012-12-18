@@ -47,3 +47,55 @@ header, footer, nav, article, section, aside{ display:block;}
 a:hover img { filter: alpha(opacity=80);  -moz-opacity:0.8;  opacity:0.8;}
 textarea{resize: vertical;}
 .global_header img, .global_footer img {_background:#FFF;*background:#FFF;background /*\**/: #FFF\9;}
+
+
+
+
+
+
+
+*{margin:0;	padding:0;}
+*{zoom:1;}
+html {margin: 0;padding: 0;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin: 0;padding: 0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style: normal;}
+table {	border-collapse: collapse;	border-spacing: 0;}
+caption,th {text-align: left;}
+q:before,q:after {	content: '';}
+object,embed {vertical-align: top;}
+hr,legend {	visibility:hidden;margin:0px;padding:0px;}
+img,abbr,acronym,fieldset {border:0;margin: 0;padding: 0;}
+img{vertical-align: middle; line-height:0;}
+ul,li,ol{list-style-type:none;margin:0;padding:0;font-style:0;font-weight:0;}
+table,td,th{border:none;}	
+address,caption,cite,code,dfn,em,strong,th,var,dl,dt,dd {font-style: normal;}	
+h1,h2,h3,h4,h5,h6,em,address,p,th {	font-style:normal;	font-weight:normal;	font-size:normal;	margin:0;	padding:0;}	
+h1,h2,h3,h4,h5,h6 {font-size: 100%;font-style:normal;font-weight:normal;margin:0;padding:0;}
+
+
+/*______________________________clearFix*/
+.clear { clear: both;  font-size: 0; line-height: 0; height: 0px; visibility: hidden;}
+.clearfix {	display: inline-block;}/* Hides from IE-mac \*/	
+.clearfix:after {content: ".";display: block;height: 0;clear: both;	visibility: hidden;}	
+* html .clearfix { height: 1%;}
+.clearfix {	display: block;	}/* End hide from IE-mac */
+.cf:after {content: "."; display: block;visibility: hidden;height: 0.1px;font-size: 0.1em;line-height: 0;clear: both;}
+.cf{display: inline-block; zoom: 100%;}
+.cl{clear:both;}
+/*______________________________clearFix end*/
+
+/* Reset input[type="search"] */
+input[type="search"] { -webkit-appearance: textfield; -webkit-box-sizing: content-box;}
+input[type="search"]:focus { outline-offset: -2px;}
+input[type="search"]::-webkit-search-decoration { display: none;}
+input:focus, textarea:focus {outline: none;}
+
+/*link*/
+a:link, a:visited {text-decoration: none;outline:none; color:#222B44}
+a:hover, a:active, a:focus { color:#9095A1}
+
+/**********************/
+header, footer, nav, article, section, aside{ display:block;}
+a:hover img { filter: alpha(opacity=80);  -moz-opacity:0.8;  opacity:0.8;}
+textarea{resize: vertical;}
+.global_header img, .global_footer img {_background:#FFF;*background:#FFF;background /*\**/: #FFF\9;}

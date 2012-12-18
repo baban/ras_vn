@@ -53,8 +53,8 @@ vn:
         forbiddon_right_click: No click
       new:
         create_recipe: Đăng recipe
-        public: Công khai
-        closed: Không công khai
+        public: Public
+        closed: Close
         caution: Điều khoản đăng bài
         next_step_button: Bước tiếp theo
       edit:
@@ -89,8 +89,8 @@ vn:
       bookmark_link: Món yêu thích
       kitchen_link: Kitchen
       diary_link: Nhật ký
-      public: Công khai
-      closed: Không công khai
+      public: Public
+      closed: Bí mật
       edit: Sửa
     top:
       index:

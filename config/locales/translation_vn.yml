@@ -48,7 +48,7 @@ vn:
 
       diary:
         title: Tiêu đề
-        publiced_at: Ngày công khai
+        publiced_at: Public_at
         image: Hình ảnh
         content: Nội dung
 
@@ -77,7 +77,7 @@ vn:
         deleted_at: Ngày xóa
         description: Giới thiệu khái quát về món ăn
         one_point: Mách nhỏ
-        public: Công khai
+        public: Public
         recipe_comments: Nấu thử & Bình luận
         recipe_foodstuffs: Nguyên liệu
         recipe_food_id: Loại ẩm thực
@@ -106,7 +106,7 @@ vn:
         deleted_at: Ngày xóa
         description: Giới thiệu khái quát về món ăn
         one_point: Bí quyết
-        public: Công khai
+        public: Public
         recipe_comments: Nấu thử & Bình luận
         recipe_foodstuffs: Nguyên liệu
         recipe_food_id: Loại ẩm thực
