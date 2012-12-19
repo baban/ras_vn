@@ -13,13 +13,13 @@ $(window).load ->
       genre_name
 
     clone_selecter()
-    #
+    $(sctr2).val( $("#hidden_recipe_food_id").val() )
     # when change selecter
     $("#recipe_genre_selecter").change ->
       $("select#recipe_genre_selecter option:selected").each ->
         sctr2.remove()
         genre_name = clone_selecter()
-        # $("optgroup[label='#{genre_name}'] option:first-child",sctr2).select()
+        $("optgroup[label='#{genre_name}'] option:first-child",sctr2).select()
   genre_initializer()
   
   # delete recipe foodstuffs

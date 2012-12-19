@@ -38,6 +38,7 @@
 							<p>Nhóm thực phẩm</p>
 							<div class="ibox">
 								<%= recipe_genre_select_area(f, selected: @draft.recipe_food_id ) %>
+								<%= hidden_field_tag :hidden_recipe_food_id, @draft.recipe_food_id %>
 								<p class="i_att"><%= label_tag :new_food_genre, "Nhập tên nhóm thực phẩm" %>:<%= text_field_tag :new_food_genre, "", size: 10 %>Nhập tên nhóm thực phẩm nếu không tên có trong list.</p>
 							</div>
 						</div>
