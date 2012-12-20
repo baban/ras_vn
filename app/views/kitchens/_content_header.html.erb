@@ -1,4 +1,4 @@
-  <ul id="content_menu_list">
+<ul id="content_menu_list">
     <% {
       t(:show_link, scope:"views.kitchens") => { controller:"kitchens", action:"show", id: params[:id] },
       t(:recipe_link, scope:"views.kitchens") => { controller:"kitchens", action:"recipes", id: params[:id] },
@@ -11,4 +11,4 @@
         <li><%= link_to title, link %></li>
       <% end %>
     <% end %>
-  </ul>
+</ul>
