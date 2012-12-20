@@ -49,13 +49,13 @@
 					<% unless myself? or followed? %>
 					<div class="mypage_btn_area">
 						<p class="fbtn radi5 flo_r">
-							<%= link_to "Follow",   { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button" %>
+							<%= link_to "Kết bạn",   { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button" %>
 						</p>
 					</div>
 					<% else %>
 					<div class="mypage_btn_area">
 						<p class="fbtn radi5 flo_r">
-							<%= link_to "Unfollow", { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button" %>
+							<%= link_to "Thôi kết bạn", { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button" %>
 						</p>
 					</div>
 					<% end %>

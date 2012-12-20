@@ -1,11 +1,11 @@
 <% content_for :style_after do %>
 	<%= stylesheet_link_tag "mypage" %>
 <% end %>
-
+<!--
 <div id="content_body" class="bace_bg">
 	<%= render partial:"mypage/content_header" %>
 	<div id="mypage_content" class="clearfix mypage_content" >
-		<h2 class="txt20">Follower</h2>
+		<h2 class="txt20">Danh sách những người đang kết nối với bạn</h2>
 		<div class="paginate"><%= paginate @follows %></div>
 		<div class="content">
 			<div id="articles" class="section">
@@ -25,4 +25,33 @@
 		</div>
 	</div>
 </div>
-
+-->
+<div class="bace_bg">
+	<div class="contents_bg clearfix">
+		<%= render partial:"mypage/content_header" %>
+		<div class="clearfix mypage_content" >
+			<h2 class="txt16 ttl_mypage">Danh sách những người đang kết nối với bạn</h2>
+			<% @follows.each do |follow| %>
+				<ul class="clearfix follow_user">
+					<li><%= image_tag follow.user_profile.image.url(:icon) || "user_icon.png", alt:"", size:"32x32", class:"icon" %>
+					<%= link_to follow.user_profile.nickname, kitchen_url( id: follow.follower_id ) %>
+					</li>
+					<!--hoverで解除ボタンが出るように。twitterと同じUI-->
+					<% unless follow.follow? %>
+					<li>
+						<span class="fbtn radi5">
+							<%= link_to "Kết bạn", follow_kitchen_url( id: follow.user_id, user_id: current_user.id ), remote: true, class:"radi10 follow_button" %>
+						</span>
+					</li>
+					<% else %>
+					<li>
+						<span class="fbtn radi5">
+							<a href="#">Đang kết nối</a>
+						</span>
+					</li>
+					<% end %>
+				</ul>
+			<% end %>
+		</div>
+	</div>
+</div>

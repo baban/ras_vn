@@ -1,6 +1,7 @@
 # endoing: utf-8
 
 class MypageController < ApplicationController
+  helper_method :myself?, :followed?
   before_filter :authenticate_user!
 
   def index
@@ -26,5 +27,15 @@ class MypageController < ApplicationController
 
   def follower
     @follows = Follower.where( follower_id: current_user.id ).page( params[:page] || 1 )
+  end
+  
+  private
+  def myself?
+    return true if current_user.id == params[:id]
+    false
+  end
+
+  def followed?
+    !!Follower.find_by_user_id_and_follower_id( current_user.id, params[:id] )
   end
 end
