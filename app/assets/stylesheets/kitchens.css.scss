@@ -1,130 +1,128 @@
-@charset "UTF-8";
-
-@charset "UTF-8";
-
-@import "parts/base";
-
-.mypage_content {
-  border:solid 1px #caa;
-  padding-bottom:3em;
-}
-
-.paginate {
-  background-color:transparent;
-}
-
-.rec_cat4 {
-  border:solid 1px #caa;
-}
-
-ul#content_menu_list > li {
-  display:block;
-  width:auto;
-  float:left;
-  background-color:#efe7de;
-  margin:0 0.3em 0 0;
-  padding:0;
-  border:solid 1px #aaa;
-  border-style:solid solid none solid;
-  border-radius: 10px 10px 0px 0px;
-  a {
-    display:block;
-    width:auto;
-    min-height:1.5em;
-    min-width:6em;
-    padding:0.6em 0.7em 0.4em 0.7em;
-  }
-}
-
-ul#content_menu_list > li.current {
-  background-color:#fff;
-}
-
-ul#content_menu_list:after {
-  @include clearfix;
-  content:"";
-  display:block;
-  clear:both;
-}
-
-h2 {
-  margin:0.5em 1em;
-  color:orange;
-}
-
-table#profile_image {
-  margin:1em 2em;
-  clear:none;
-  float:left;
-}
-
-table#profiles {
-  border:solid 3px #caa;
-  border-collapse:separate;
-  clear:none;
-  float:left;
-  tr {
-    border:solid 1px #aaa;
-    border-style:none none dashed none;
-  }
-  th, td {
-    border:none 1px #aaa;
-    border-style:none none dashed none;
-    padding:8px 10px 4px 10px;
-  }
-  th {
-    border-style:none dashed dashed none;
-  }
-  td {
-    border-style:none none dashed none;
-  }
-  tr:last-child {
-    th, td {
-      border-style:none;
-    }
-  }
-}
-
-#recipes:before {
-  @include clearfix;
-}
-
-.mypage_content {
-  background-color:white;
-}
-
-.content {
-  margin:0.5em 1em;
-}
-
-#follow_button_area {
-  float:right;
-}
-
-article.cate01 {
-  border-style:none;
-  background-color:transparent;
-}
-
-article {
-  border:none 1px #eaa;
-  border-style:none none dashed none;
-  margin-bottom:0.7em;
-}
-
-article:after {
-  @include clearfix;
-  height:3px;
-}
-
-.icon {
-  float:left;
-  margin:0 3px 0 0;
-  vertical-align:top;
-}
-
-.follow_button {
-  float:right;
-  clear:none;
-}
-
+// @charset "UTF-8";
+// 
+// @import "parts/base";
+// 
+// .mypage_content {
+  // border:solid 1px #caa;
+  // padding-bottom:3em;
+// }
+// 
+// .paginate {
+  // background-color:transparent;
+// }
+// 
+// .rec_cat4 {
+  // border:solid 1px #caa;
+// }
+// 
+// ul#content_menu_list > li {
+  // display:block;
+  // width:auto;
+  // float:left;
+  // background-color:#efe7de;
+  // margin:0 0.3em 0 0;
+  // padding:0;
+  // border:solid 1px #aaa;
+  // border-style:solid solid none solid;
+  // border-radius: 10px 10px 0px 0px;
+  // a {
+    // display:block;
+    // width:auto;
+    // min-height:1.5em;
+    // min-width:6em;
+    // padding:0.6em 0.7em 0.4em 0.7em;
+  // }
+// }
+// 
+// ul#content_menu_list > li.current {
+  // background-color:#fff;
+// }
+// 
+// ul#content_menu_list:after {
+  // @include clearfix;
+  // content:"";
+  // display:block;
+  // clear:both;
+// }
+// 
+// h2 {
+  // margin:0.5em 1em;
+  // color:orange;
+// }
+// 
+// table#profile_image {
+  // margin:1em 2em;
+  // clear:none;
+  // float:left;
+// }
+// 
+// table#profiles {
+  // border:solid 3px #caa;
+  // border-collapse:separate;
+  // clear:none;
+  // float:left;
+  // tr {
+    // border:solid 1px #aaa;
+    // border-style:none none dashed none;
+  // }
+  // th, td {
+    // border:none 1px #aaa;
+    // border-style:none none dashed none;
+    // padding:8px 10px 4px 10px;
+  // }
+  // th {
+    // border-style:none dashed dashed none;
+  // }
+  // td {
+    // border-style:none none dashed none;
+  // }
+  // tr:last-child {
+    // th, td {
+      // border-style:none;
+    // }
+  // }
+// }
+// 
+// #recipes:before {
+  // @include clearfix;
+// }
+// 
+// .mypage_content {
+  // background-color:white;
+// }
+// 
+// .content {
+  // margin:0.5em 1em;
+// }
+// 
+// #follow_button_area {
+  // float:right;
+// }
+// 
+// article.cate01 {
+  // border-style:none;
+  // background-color:transparent;
+// }
+// 
+// article {
+  // border:none 1px #eaa;
+  // border-style:none none dashed none;
+  // margin-bottom:0.7em;
+// }
+// 
+// article:after {
+  // @include clearfix;
+  // height:3px;
+// }
+// 
+// .icon {
+  // float:left;
+  // margin:0 3px 0 0;
+  // vertical-align:top;
+// }
+// 
+// .follow_button {
+  // float:right;
+  // clear:none;
+// }
+// 

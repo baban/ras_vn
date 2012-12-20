@@ -1,80 +1,182 @@
 <%= include_action_javascript %>
-
-<div id="content_body" class="section bace_bg">
-	<%= render partial:"content_header" %> 
-	<div id="mypage_content" class="clearfix mypage_content main_clm">
-		<!--<h1 class="txt20"><%= @profile.nickname %> nhà bếp</h1>-->
-		<div class="content">
-			<% if user_signed_in? %>
-				<% unless myself? or followed? %>
-					<div class="rbtn" id="follow_button_area"><%= link_to "Follow",   { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button", class:"radi10" %></div>
-				<% else %>
-					<div class="rbtn" id="follow_button_area"><%= link_to "Unfollow", { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button", class:"radi10" %></div>
-				<% end %>
-			<% end %>
-
-			<table id="profile_image">
-				<tr><td><div><%= profile_image_tag(@profile) %></div></td></tr>
-				<tr><td><%= @profile.nickname %></td></tr>
-			</table>
-
-			<table id="profiles">
-				<% if @visibility.nickname %>
+<div class="bace_bg">
+	<div class="contents_bg clearfix">
+		<%= render partial:"content_header" %>
+		<div class="clearfix mypage_content" >
+			<br />
+			<p class="profile_image">
+				<%= profile_image_tag(@profile) %>
+			</p>
+			<div class="flo_l">
+				<table id="profiles">
+					<% if @visibility.nickname %>
 					<tr>
-						<th><%= t(:nickname, scope:"activerecord.attributes.user_profile") %></th>
-						<td><%= @profile.nickname %></td>
+						<th>Nickname</th>
+						<td colspan="2"><%= @profile.nickname %></td>
+						<td>Công khai</td>
 					</tr>
-				<% end %>
-				<% if @visibility.email %>
+					<% end %>
+					<% if @visibility.email %>
 					<tr>
-						<th><%= t(:email, scope:"activerecord.attributes.user_profile") %></th>
-						<td><%= @profile.email %></td>
+						<th><span class="translation_missing">Email</span></th>
+						<td colspan="2"><%= @profile.email %></td>
+						<td>Công khai</td>
 					</tr>
-				<% end %>
-				<% if @visibility.sex %>
+					<% end %>
+					<% if @visibility.sex %>
 					<tr>
-						<th><%= t(:sex, scope:"activerecord.attributes.user_profile") %></th>
-						<td><%= translate_sex( @profile.sex ) %></td>
+						<th>Giới tính</th>
+						<td colspan="2"><%= translate_sex( @profile.sex ) %></td>
+						<td>Công khai</td>
 					</tr>
-				<% end %>
-				<% if @visibility.birthday %>
+					<% end %>
+					<% if @visibility.birthday %>
 					<tr>
-						<th><%= t(:birthday, scope:"activerecord.attributes.user_profile") %></th>
-						<td><%= @profile.birthday %></td>
+						<th>Sinh nhật</th>
+						<td colspan="2"><%= @profile.birthday %></td>
+						<td>Công khai</td>
 					</tr>
-				<% end %>
-				<% if @visibility.comment %>
+					<% end %>
+					<% if @visibility.comment %>
 					<tr>
-						<th><%= t(:comment, scope:"activerecord.attributes.user_profile") %></th>
-						<td><%= @profile.comment %></td>
+						<th>Giới thiệu</th>
+						<td colspan="2"><%= @profile.comment %></td>
+						<td>Công khai</td>
 					</tr>
+					<% end %>
+				</table>
+				<% if user_signed_in? %>
+					<% unless myself? or followed? %>
+					<div class="mypage_btn_area">
+						<p class="fbtn radi5 flo_r">
+							<%= link_to "Kết bạn",   { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button" %>
+						</p>
+					</div>
+					<% else %>
+					<div class="mypage_btn_area">
+						<p class="fbtn radi5 flo_r">
+							<%= link_to "Thôi kết bạn", { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button" %>
+						</p>
+					</div>
+					<% end %>
 				<% end %>
-			</table>
-			<div id="recipes">
- 				<h2 class="txt20">Recipe bạn <%= @profile.nickname %> đã đăng</h2>
-				<% @recipes.each do |recipe| %>
+			</div>
+			<h2 class="txt16 ttl_mypage cl">Recipe <%= @profile.nickname %> đã đăng</h2>
+			<article class="cate01 clearfix">
+				<% @recipes.each do |recipe| %> <!--rec_recipe-->
+				<div class="flo_l mypage_rec4">
 					<section class="rec_cat4 clearfix">
+						<ul class="user_oneself clearfix">
+							<li class="oneself_name">
+								<%= recipe.chef.profile.nickname %>
+							</li>
+						</ul>
 						<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
 						<div class="txt">
 							<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
-							<p>by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %></p>
-							<h2>
-								<p><%= truncate(recipe.description, length: 50) %></p>
-								<div class="info_area">
-									<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
-									<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+							<p>
+								by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %>
+							</p>
+							<h2><%= truncate(recipe.description, length: 50) %>
+							<div class="info_area">
+								<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+								<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
 								<%= t(:id, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.id %></span>
-								</div>
-							</h2>
+							</div></h2>
 						</div>
 					</section>
+				</div>
+				<% end %>
+			</article>
+		</div>
+		</div
+	</div>
+</div>
+
+<!--
+<div id="content_body" class="section bace_bg">
+	<%= render partial:"content_header" %>
+	<div id="mypage_content" class="clearfix mypage_content main_clm">
+		<div class="content">
+			<% if user_signed_in? %>
+			<% unless myself? or followed? %>
+			<div class="rbtn" id="follow_button_area">
+				<%= link_to "Follow",   { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button", class:"radi10" %>
+			</div>
+			<% else %>
+			<div class="rbtn" id="follow_button_area">
+				<%= link_to "Unfollow", { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button", class:"radi10" %>
+			</div>
+			<% end %>
+			<% end %>
+			<table id="profile_image">
+				<tr>
+					<td>
+					<div>
+						<%= profile_image_tag(@profile) %>
+					</div></td>
+				</tr>
+				<tr>
+					<td><%= @profile.nickname %></td>
+				</tr>
+			</table>
+			<table id="profiles">
+				<% if @visibility.nickname %>
+				<tr>
+					<th><%= t(:nickname, scope:"activerecord.attributes.user_profile") %></th>
+					<td><%= @profile.nickname %></td>
+				</tr>
+				<% end %>
+				<% if @visibility.email %>
+				<tr>
+					<th><%= t(:email, scope:"activerecord.attributes.user_profile") %></th>
+					<td><%= @profile.email %></td>
+				</tr>
+				<% end %>
+				<% if @visibility.sex %>
+				<tr>
+					<th><%= t(:sex, scope:"activerecord.attributes.user_profile") %></th>
+					<td><%= translate_sex( @profile.sex ) %></td>
+				</tr>
+				<% end %>
+				<% if @visibility.birthday %>
+				<tr>
+					<th><%= t(:birthday, scope:"activerecord.attributes.user_profile") %></th>
+					<td><%= @profile.birthday %></td>
+				</tr>
+				<% end %>
+				<% if @visibility.comment %>
+				<tr>
+					<th><%= t(:comment, scope:"activerecord.attributes.user_profile") %></th>
+					<td><%= @profile.comment %></td>
+				</tr>
+				<% end %>
+			</table>
+			<div id="recipes">
+				<h2 class="txt20">Recipe bạn <%= @profile.nickname %> đã đăng</h2>
+				<% @recipes.each do |recipe| %>
+				<section class="rec_cat4 clearfix">
+					<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
+					<div class="txt">
+						<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
+						<p>
+							by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %>
+						</p>
+						<h2>
+						<p>
+							<%= truncate(recipe.description, length: 50) %>
+						</p>
+						<div class="info_area">
+							<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+							<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+							<%= t(:id, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.id %></span>
+						</div></h2>
+					</div>
+				</section>
 				<% end %>
 			</div>
 		</div>
 	</div>
-	<%=render partial:"layouts/right_side_content" %>
+	<%= render partial:"layouts/right_side_content" %>
 </div>
-
-
-
-
+-->
