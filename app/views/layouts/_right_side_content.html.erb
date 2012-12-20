@@ -5,7 +5,7 @@
 <div class="side_contents">
 	<aside>
 		<% if @sidebar_advertisement %>
-			<%= image_tag @sidebar_advertisement.image.url, width:"300", height:"250", alt: @sidebar_advertisement.alt.presence || @sidebar_advertisement.name %>
+			<%=link_to image_tag(@sidebar_advertisement.image.url, width:"300", height:"250", alt: @sidebar_advertisement.alt.presence || @sidebar_advertisement.name), @sidebar_advertisement.url %>
 		<% end %>
 	</aside>
 
