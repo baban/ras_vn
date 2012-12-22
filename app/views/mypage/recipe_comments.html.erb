@@ -1,0 +1,26 @@
+
+<div id="content_body" class="bace_bg">
+	<%= render partial:"mypage/content_header" %>
+	<div class="clearfix mypage_content">
+		<h2 class="txt20">Recipe Comments</h2>
+		<article class="cate01">
+			<div class="paginate"><%= paginate @comments %></div>
+			<% @comments.each do |comment| %>
+				<div class="cate01 clearfix">
+					<section class="rec_cat5 clearfix">
+						<% if comment.image.present? %><%= image_tag comment.image.url, size:"280x466", alt:"", class:"comment_image" %><% end %>
+						<div class="txt">
+							<h1 class="txt16"><%= link_to comment.title, controller:"recipes", action:"show", id: comment.recipe_id %></h1>
+							<p><%= hbr comment.content %></p>
+							<div class="info_area">
+								<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+								<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+							</div>
+						</div>
+					</section>
+				</div>
+			<% end %>
+		</article>
+	</div>
+</div>
+

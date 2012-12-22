@@ -13,6 +13,10 @@ class MypageController < ApplicationController
     @recipes = current_user.recipes.order( "created_at DESC" ).page(params[:page] || 1)
   end
 
+  def recipe_comments
+    @comments = current_user.recipe_comments.page(params[:page] || 1)
+  end
+
   def diary
     id = params[:user_id]
     @page = params[:page] || 1
