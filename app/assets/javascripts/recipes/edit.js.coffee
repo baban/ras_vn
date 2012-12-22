@@ -75,9 +75,7 @@ $(window).load ->
           "</button>"+
         "</li>"
       )
-      $("#search_result_list").empty()
-      $("#search_result_list").append( result_list.join("") )
-      $("#search_result_list").map ->
+      $("#search_result_list").empty().append( result_list.join("") ).map ->
         $("button", this).click ->
           number = $("#search_youtube_step_number").attr("value")
           a_tag = $(".button_link",this)

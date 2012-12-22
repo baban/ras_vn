@@ -1,32 +1,6 @@
 <% content_for :style_after do %>
-<%= stylesheet_link_tag "mypage" %>
+	<%= stylesheet_link_tag "mypage" %>
 <% end %>
-<!--
-<div id="content_body" class="bace_bg">
-	<%= render partial:"mypage/content_header" %>
-	<div id="mypage_content" class="clearfix mypage_content" >
-		<h2 class="txt20">Danh sách những người bạn đang kết nối</h2>
-		<div class="paginate">
-			<%= paginate @profiles %>
-		</div>
-		<div class="content">
-			<div id="articles" class="section">
-				<% @profiles.each do |profile| %>
-				<article>
-					<%= image_tag profile.image.url(:icon) || "user_icon.png", alt:"", size:"32x32", class:"icon" %>
-					<p>
-						<%= link_to profile.nickname, kitchen_url( id: profile.user_id ) %>
-					</p>
-					<p>
-						<%= truncate( profile.comment, length: 40 ) %>
-					</p>
-				</article>
-				<% end %>
-			</div>
-		</div>
-	</div>
-</div>
--->
 
 <div class="bace_bg">
 	<div class="contents_bg clearfix">
@@ -35,8 +9,9 @@
 			<h2 class="txt16 ttl_mypage">Danh sách những người bạn đang kết nối</h2>
 			<% @profiles.each do |profile| %>
 				<ul class="clearfix follow_user">
-					<li><%=  image_tag profile.image.url(:icon) || "user_icon.png", alt:"", size:"32x32", class:"icon" %>
-					<%= link_to profile.nickname, kitchen_url( id: profile.user_id ) %>
+					<li>
+						<%= image_tag profile.image.url(:icon) || "user_icon.png", alt:"", size:"32x32", class:"icon" %>
+						<%= link_to profile.nickname, kitchen_url( id: profile.user_id ) %>
 					</li>
 					<!--hoverで解除ボタンが出るように。twitterと同じUI-->
 					<li>
