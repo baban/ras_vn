@@ -88,9 +88,7 @@ class RecipesController < ApplicationController
   # this action is called and, return json value set
   def love
     @recipe = Recipe.love( id: params[:id], user_id: params[:user_id]  )
-    respond_to do |format|
-      format.json { render json: { id: params[:id], count: @recipe.love_count } }
-    end
+    render json: { id: params[:id], count: @recipe.love_count }, status: 200
   end
 
   private

@@ -55,9 +55,7 @@ $(window).load ->
 
   # open window youtupe movies
   $(".movie_button").click ->
-    console.log "movie_button"
     step_number = $(this).next().attr("value")
-    console.log step_number
     $("#search_youtube_step_number").attr( "value", step_number )
     $("#search_youtube_area").css( { display:"block", opacity: 0.0 } )
     $("#search_youtube_area").animate( { opacity: 1.0 }, { duration: 400 } )
@@ -66,12 +64,10 @@ $(window).load ->
   search_youtube = ->
     vq = $("#search_youtube_text").attr("value")
     step_number = $("#search_youtube_step_number").attr("value")
-    console.log "vq: " + vq
     $.getJSON( "http://gdata.youtube.com/feeds/api/videos/", { vq: vq, "max-results": 5, alt: "json" }, (json)->
       result_list = $.map( json.feed.entry, (item)->
         title = item.title["$t"]
         movie_url = item["media$group"]["media$content"][0].url
-        console.log movie_url
         thumb_url = item["media$group"]["media$thumbnail"][1].url
         "<li>"+
           "<button type='button'>"+
@@ -86,21 +82,20 @@ $(window).load ->
           number = $("#search_youtube_step_number").attr("value")
           a_tag = $(".button_link",this)
           href = a_tag.attr("href")
-          console.log "#recipe_step_#{number}_movie_url"
-          console.log href
           $("#recipe_steps_#{number}_movie_url").val( href )
           $("#search_youtube_area").animate( { opacity: 0.0 }, 
             { duration: 300, complete: -> $(this).css("display", "none") } )
         this
     )
+    false
 
   # button action
-  $("#search_youtube_button").live( "click", search_youtube )
+  $("#search_youtube_button").click ->
+    search_youtube()
 
   # enter key action
   $("#search_youtube_text").keydown (evt)->
     charCode = evt.charCode || evt.which || evt.keyCode
-    console.log "charCode : " + charCode
     if (Number(charCode) == 13 || Number(charCode) == 3)
       search_youtube()
       false

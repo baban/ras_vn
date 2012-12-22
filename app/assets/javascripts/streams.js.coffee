@@ -14,7 +14,6 @@ $(window).load ->
     $('#stream_list > li:first').slideDown();
 
   add_element = (req) ->
-    console.log req
     s = req.text
     if s.length > 0
       append_stream_element s

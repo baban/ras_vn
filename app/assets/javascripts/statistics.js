@@ -42,13 +42,10 @@ function pie_chart( data, html_id ){
 }
 
 function bar_chart( data, html_id ){
-  console.log(data);
   var data = data.map(function( data ){ return data[1]; });
   var max = Math.max.apply(null,data);
   var transitionDurationMS = 200;
   var divs = d3.select(html_id).selectAll("div").data(data);
-  console.log(data);
-  console.log(max);
   divs.enter().append("div").attr("class", "bar").style("opacity", 0);
   divs.exit().transition().duration(transitionDurationMS).style("opacity", 0).remove();
   divs.transition().duration(transitionDurationMS).style("opacity",1).style("height", function(d){ return Math.ceil( d*Math.min(250,d)/max )+"px" }).text(function(d) { return d; });
