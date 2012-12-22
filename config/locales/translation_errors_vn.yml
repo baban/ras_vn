@@ -11,6 +11,7 @@ vn:
         record_invalid: "Lỗi hệ thống"
         blank: Bạn đã nhập thiếu thông tin
         inclusion: Mục bắt buộc
+        too_long: text is too long
       models:
         user:
           attributes:
