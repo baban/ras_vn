@@ -10,39 +10,39 @@
 			<div class="flo_l">
 				<table id="profiles">
 					<% if @visibility.nickname %>
-					<tr>
-						<th>Nickname</th>
-						<td colspan="2"><%= @profile.nickname %></td>
-						<td>Công khai</td>
-					</tr>
+						<tr>
+							<th>Nickname</th>
+							<td colspan="2"><%= @profile.nickname %></td>
+							<td>Công khai</td>
+						</tr>
 					<% end %>
 					<% if @visibility.email %>
-					<tr>
-						<th><span class="translation_missing">Email</span></th>
-						<td colspan="2"><%= @profile.email %></td>
-						<td>Công khai</td>
-					</tr>
+						<tr>
+							<th><span class="translation_missing">Email</span></th>
+							<td colspan="2"><%= @profile.email %></td>
+							<td>Công khai</td>
+						</tr>
 					<% end %>
 					<% if @visibility.sex %>
-					<tr>
-						<th>Giới tính</th>
-						<td colspan="2"><%= translate_sex( @profile.sex ) %></td>
-						<td>Công khai</td>
-					</tr>
+						<tr>
+							<th>Giới tính</th>
+							<td colspan="2"><%= translate_sex( @profile.sex ) %></td>
+							<td>Công khai</td>
+						</tr>
 					<% end %>
 					<% if @visibility.birthday %>
-					<tr>
-						<th>Sinh nhật</th>
-						<td colspan="2"><%= @profile.birthday %></td>
-						<td>Công khai</td>
-					</tr>
+						<tr>
+							<th>Sinh nhật</th>
+							<td colspan="2"><%= @profile.birthday %></td>
+							<td>Công khai</td>
+						</tr>
 					<% end %>
 					<% if @visibility.comment %>
-					<tr>
-						<th>Giới thiệu</th>
-						<td colspan="2"><%= @profile.comment %></td>
-						<td>Công khai</td>
-					</tr>
+						<tr>
+							<th>Giới thiệu</th>
+							<td colspan="2"><%= @profile.comment %></td>
+							<td>Công khai</td>
+						</tr>
 					<% end %>
 				</table>
 				<% if user_signed_in? %>

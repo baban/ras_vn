@@ -1,3 +1,7 @@
+<% content_for :javascript_after do %>
+	<%= javascript_include_tag "mypage/follow" %>
+<% end %>
+
 <% content_for :style_after do %>
 	<%= stylesheet_link_tag "mypage" %>
 <% end %>
@@ -14,21 +18,15 @@
 						<%= link_to profile.nickname, kitchen_url( id: profile.user_id ) %>
 					</li>
 					<!--hoverで解除ボタンが出るように。twitterと同じUI-->
-					<li>
-						<span class="fbtn radi5"><a href="#">Đang kết bạn</a></span>
-					</li>
-					
-					<!--
 					<% unless myself? or followed? %>
-					<li>
-						<span class="fbtn radi5"><%= link_to "Kết bạn",   { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button" %></span>
-					</li>
+						<li>
+							<span class="fbtn radi5"><%= link_to raw("<span>unfollow</span>"), follow_kitchen_url( id: profile.user_id, user_id: current_user.id ), remote: true, class:"follow_button follow" %></span>
+						</li>
 					<% else %>
-					<li>
-						<span class="fbtn radi5"><%= link_to "Thôi kết bạn", { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button" %></span>
-					</li>
+						<li>
+							<span class="fbtn radi5"><%= link_to raw("<span>follow</span>"), follow_kitchen_url( id: profile.user_id, user_id: current_user.id ), remote: true, class:"follow_button unfollow" %></span>
+						</li>
 					<% end %>
-					-->
 				</ul>
 			<% end %>
 		</div>
