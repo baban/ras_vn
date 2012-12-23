@@ -322,6 +322,7 @@ DEPENDENCIES
   devise (= 2.1.0)
   faker
   faker-japanese
+  faraday
   fb_graph (= 2.5.8)
   flextures (= 2.0.9)
   formtastic (= 2.1.0)

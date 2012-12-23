@@ -14,6 +14,7 @@ gem "bson", "1.7.0"
 gem "bson_ext", "1.7.0"
 gem "bartt-ssl_requirement", "1.4.2", require: "ssl_requirement"
 gem "libv8", "3.3.10.4"
+gem "faraday"
 
 # view urilities
 gem "jquery-rails", "2.1.3"
