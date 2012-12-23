@@ -64,26 +64,27 @@ $(window).load ->
   search_youtube = ->
     vq = $("#search_youtube_text").attr("value")
     step_number = $("#search_youtube_step_number").attr("value")
-    $.getJSON( "http://gdata.youtube.com/feeds/api/videos/", { vq: vq, "max-results": 5, alt: "json" }, (json)->
-      result_list = $.map( json.feed.entry, (item)->
-        title = item.title["$t"]
-        movie_url = item["media$group"]["media$content"][0].url
-        thumb_url = item["media$group"]["media$thumbnail"][1].url
-        "<li>"+
-          "<button type='button'>"+
-            "<a href='#{movie_url}' class='button_link'>#{title}</a><br /><img src='#{thumb_url}' />"+
-          "</button>"+
-        "</li>"
-      )
-      $("#search_result_list").empty().append( result_list.join("") ).map ->
-        $("button", this).click ->
-          number = $("#search_youtube_step_number").attr("value")
-          a_tag = $(".button_link",this)
-          href = a_tag.attr("href")
-          $("#recipe_steps_#{number}_movie_url").val( href )
-          $("#search_youtube_area").animate( { opacity: 0.0 }, 
-            { duration: 300, complete: -> $(this).css("display", "none") } )
-        this
+    $.getJSON( "/recipes/youtube", { vq: vq, "max-results": 5, alt: "json" }, (json)->
+      make_list = ->
+        $.map( json.feed.entry, (item)->
+          title = item.title["$t"]
+          movie_url = item["media$group"]["media$content"][0].url
+          thumb_url = item["media$group"]["media$thumbnail"][1].url
+          button = $("<button />").attr("type","button")
+                     .append( $("<a />").attr("href",movie_url).addClass("button_link").text(title) )
+                     .append( "<br />" )
+                     .append( $("<img />").attr("src",thumb_url) )
+          button.click ->
+            number = $("#search_youtube_step_number").attr("value")
+            href = $(this).children().attr("href")
+            $("#recipe_steps_#{number}_movie_url").val( href )
+            $("#search_youtube_area").animate( { opacity: 0.0 }, { duration: 300, complete: -> $(this).css("display", "none") } )
+          
+          li = $("<li/>").append(button)
+          $("#search_result_list").append( li )
+        )
+      $("#search_result_list").empty()
+      make_list()
     )
     false
 

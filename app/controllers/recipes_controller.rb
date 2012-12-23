@@ -94,6 +94,15 @@ class RecipesController < ApplicationController
     render json: { id: params[:id], count: @recipe.love_count }, status: 200
   end
 
+  def youtube
+    prms = { vq: params[:vq], :"max-results" => 5, alt: "json" }.map{ |k,v| "#{k}=#{v}" }*"&"
+    url = "http://gdata.youtube.com/feeds/api/videos/?#{prms}"
+    logger.info url
+    response = Faraday.get url
+    logger.info response.body
+    render text: response.body, status: 200
+  end
+
   private
   def publiced_filter
     @recipe = Recipe.where( id: params[:id] ).first
