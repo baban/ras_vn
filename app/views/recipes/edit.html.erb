@@ -22,8 +22,8 @@
 										<li>foodstuff<%= i %>&nbsp;<%= error %></li>
 									<% end %>
 								<% end %>
-								<% @steps.each do |step| %>
-									<% step.errors.full_messages.each.with_index(1) do |error, i| %>
+								<% @steps.each.with_index(1) do |step,i| %>
+									<% step.errors.full_messages.each do |error| %>
 										<li>Step<%= i %>&nbsp;<%= error %></li>
 									<% end %>
 								<% end %>

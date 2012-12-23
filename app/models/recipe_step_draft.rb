@@ -22,6 +22,9 @@ class RecipeStepDraft < ActiveRecord::Base
     end.map do |params,last_step|
       d = RecipeStepDraft.new(params)
       d.image= File.open(last_step.image.current_path) if d.image.blank? and last_step.try(:image).present? and File.exist?(last_step.image.current_path)
+      # movie and image cannot upload both files
+      d.movie_url = "" if d.image.current_path
+      Rails.logger.info d.inspect
       d
     end
     steps

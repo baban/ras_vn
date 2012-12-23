@@ -68,8 +68,8 @@ class RecipesController < ApplicationController
 
     return render action:"edit" if (not @draft.valid?) or @steps.map(&:valid?).include?(false) or @foodstuffs.map(&:valid?).include?(false)
 
-    # @draft.foodstuffs= @foodstuffs
-    # @draft.steps= @steps
+    @draft.foodstuffs= @foodstuffs
+    @draft.steps= @steps
     @draft.save
 
     if params[:edit]
