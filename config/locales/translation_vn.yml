@@ -177,7 +177,7 @@ vn:
         image: Hình ảnh
         family_name: Họ
         mail_address: E-mail*
-        nickname: Nickname*
+        nickname: Nickname
         sex: Giới tính
         user: User  #g
         user_profile_visibility: Hiển thị

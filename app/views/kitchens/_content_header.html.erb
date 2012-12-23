@@ -3,7 +3,7 @@
       t(:show_link, scope:"views.kitchens") => { controller:"kitchens", action:"show", id: params[:id] },
       t(:recipe_link, scope:"views.kitchens") => { controller:"kitchens", action:"recipes", id: params[:id] },
       t(:recipe_comment_link, scope:"views.kitchens") => { controller:"kitchens", action:"recipe_comments", id: params[:id] },
-      t(:diary_link, scope:"views.kitchens") => { controller:"diaries", action:"index", user_id: params[:id] },
+      #t(:diary_link, scope:"views.kitchens") => { controller:"diaries", action:"index", user_id: params[:id] },
     }.each do |title,link| %>
       <% if params[:controller] == link[:controller] and params[:action] == link[:action] %>
         <li class="current"><%= link_to title, link %></li>
