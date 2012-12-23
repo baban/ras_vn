@@ -63,10 +63,13 @@ class RecipesController < ApplicationController
     @draft = @recipe.draft
     @draft.post( params, current_user )
 
-    @steps = @draft.edit_steps
+    @foodstuffs = RecipeFoodstuffDraft.post_filter( params[:foodstuffs] )
+    @steps = RecipeStepDraft.post_filter( params[:recipe_steps], @draft.steps )
 
-    return render action:"edit" unless @draft.valid?
+    return render action:"edit" if (not @draft.valid?) or @steps.map(&:valid?).include?(false) or @foodstuffs.map(&:valid?).include?(false)
 
+    # @draft.foodstuffs= @foodstuffs
+    # @draft.steps= @steps
     @draft.save
 
     if params[:edit]

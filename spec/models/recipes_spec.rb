@@ -32,6 +32,74 @@ describe Recipe do
     end
   end
 
+  describe ".post" do
+    fixtures :users, :user_profiles, :user_profile_visibilities, :recipe_drafts, :recipe_foodstuff_drafts, :recipe_step_drafts
+
+    let(:prms) do
+      h = {
+        "id"=>"11",
+        "step_number_1"=>"1",
+        "step_number_2"=>"2",
+        "step_number_3"=>"3",
+        "step_number_4"=>"4", 
+        "step_number"=>"1", "vq"=>"", 
+        "edit"=>"Lưu tạm thời", 
+        "recipe_genre_selecter"=>"2",
+        "hidden_recipe_food_id"=>"13",
+        "new_food_genre"=>"",
+        "recipe"=>{
+          "title"=>"♥アスパラとじゃがいものチーズサラダ♥",
+          "recipe_image_cache"=>"",
+          "description"=>"コロコロのアスパラとじゃがいもがとっても食べ易く、見た目も可愛いサラダです♡",
+          "recipe_food_id"=>"13",
+          "amount"=>"1",
+          "one_point"=>"③では塩を1つまみくらいいれました。アンチョビの塩分によって変わるので、調整をしてください。 "
+        },
+        "foodstuffs"=>[
+           {"name"=>"アスパラ", "amount"=>"３本"},
+           {"name"=>"じゃがいも", "amount"=>"中２個(約250ｇ)"},
+           {"name"=>"プロセスチーズ", "amount"=>"２個(約30ｇ)"},
+           {"name"=>"ハム", "amount"=>"２枚"},
+           {"name"=>"マヨネーズ", "amount"=>"大さじ１～２"},
+           {"name"=>"酢", "amount"=>"大さじ１/２"},
+           {"name"=>"コショー", "amount"=>"少々"}
+        ], 
+        "recipe_steps"=>[
+          {"content"=>"aaaa", "movie_url"=>"http://www.youtube.com/v/h8BNqDkf77w?version=3&f=videos&app=youtube_gdata"},
+          {"content"=>"", "movie_url"=>"http://www.youtube.com/v/B3T_Kf1LPeA?version=3&f=videos&app=youtube_gdata"}, 
+          {"content"=>"", "movie_url"=>"http://www.youtube.com/v/XlrLp4EpVLU?version=3&f=videos&app=youtube_gdata"},
+          {"content"=>"", "movie_url"=>""}
+        ], 
+      }
+      ActiveSupport::HashWithIndifferentAccess.new(h)
+    end
+    context "normal test" do
+      before do
+        params = prms
+        @user = User.first
+        @draft = RecipeDraft.find( params[:id] )
+        @draft.post( params, @user )
+        @draft.recipe_image = File.open( File.join(Rails.root.to_path,"public/favicon.gif") )
+      end
+      it "validation is true" do
+        @draft.valid?.should be_true
+      end
+    end
+
+    context "step text is too long" do
+      before do
+        params = prms
+        @user = User.first
+        @draft = RecipeDraft.find( params[:id] )
+        @draft.post( params, @user )
+        @draft.recipe_image = File.open( File.join(Rails.root.to_path,"public/favicon.gif") )
+      end
+      it "validation is true" do
+        @draft.valid?.should be_true
+      end
+    end
+  end
+
   describe ".list" do
     context "blank parameter" do
       before do

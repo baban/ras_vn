@@ -30,7 +30,7 @@ class Recipe < ActiveRecord::Base
   alias :steps= :recipe_steps=
   alias :image :recipe_image
 
-  scope :visibles, ->{ where( "public = true" ) }
+  scope :visibles, -> { where( "public = true" ) }
   scope :topics, -> { visibles.page(1).per(2) }
 
   def food
