@@ -72,6 +72,9 @@
 										<td class="ingredient_quantity">
 											<%= text_field_tag "foodstuffs[][amount]", foodstuff.amount, placeholder: @playholders.try(:at,i).try(:at,1) %>
 										</td>
+										<td class="ingredient_calory">
+											<%= text_field_tag "foodstuffs[][calory]", foodstuff.calory, placeholder: "kcal" %>
+										</td>
 										<td class="ingredient_close_button">
 											<p class="close"><%= submit_tag "☓", type:"button" %></p>
 										</td>
@@ -79,6 +82,7 @@
 								<% end %>
 							</table>
 							<div class="btn cl"><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %></div>
+							<span class="servings_for yield">(total: <%= f.text_field :calory, size: 2, value: @draft.calory %> kcal)</span>
 						</div>
 					</div>
 					<div class="cate01 clearfix">

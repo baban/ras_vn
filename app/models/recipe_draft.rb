@@ -43,6 +43,10 @@ class RecipeDraft < ActiveRecord::Base
     self
   end
 
+  def calc_total_calory
+    self.calory = self.foodstuffs.map{ |foodstuff| foodstuff.calory.to_i }.sum
+  end
+
   # this method generate steps for edit action
   def edit_steps
     # return value have at least 4 steps
