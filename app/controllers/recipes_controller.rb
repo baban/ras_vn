@@ -70,6 +70,7 @@ class RecipesController < ApplicationController
 
     @draft.foodstuffs= @foodstuffs
     @draft.steps= @steps
+    @draft.calc_total_calory
     @draft.save
 
     if params[:edit]

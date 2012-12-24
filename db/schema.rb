@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121027091301) do
+ActiveRecord::Schema.define(:version => 20121224143905) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.text     "content",                                        :null => false
     t.integer  "category_id", :default => 0,                     :null => false
     t.string   "image"
-    t.datetime "publiced_at", :default => '2012-11-21 00:00:00', :null => false
+    t.datetime "publiced_at", :default => '2012-11-17 00:00:00', :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
@@ -89,6 +89,15 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.integer  "follower_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "food_calories", :force => true do |t|
+    t.string   "name",                      :null => false
+    t.integer  "calory",     :default => 0, :null => false
+    t.integer  "amount",     :default => 0, :null => false
+    t.string   "unit",                      :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "food_genres", :force => true do |t|
@@ -169,6 +178,7 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.datetime "deleted_at"
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
+    t.integer  "calory"
   end
 
   add_index "recipe_drafts", ["user_id"], :name => "index_recipe_drafts_on_user_id"
@@ -176,7 +186,7 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
   create_table "recipe_food_genre_rankings", :force => true do |t|
     t.integer  "recipe_food_genre_id",                           :null => false
     t.integer  "point",                :default => 0,            :null => false
-    t.date     "ranked_at",            :default => '2012-11-21', :null => false
+    t.date     "ranked_at",            :default => '2012-11-17', :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
@@ -207,6 +217,7 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.time     "deleted_at"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
+    t.integer  "calory"
   end
 
   add_index "recipe_foodstuff_drafts", ["recipe_draft_id"], :name => "index_recipe_foodstuff_drafts_on_recipe_draft_id"
@@ -219,6 +230,7 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.time     "deleted_at"
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
+    t.integer  "calory"
   end
 
   add_index "recipe_foodstuffs", ["recipe_id"], :name => "index_recipe_foodstuffs_on_recipe_id"
@@ -280,6 +292,7 @@ ActiveRecord::Schema.define(:version => 20121027091301) do
     t.time     "deleted_at"
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
+    t.integer  "calory"
   end
 
   add_index "recipes", ["user_id"], :name => "index_recipes_on_user_id"
