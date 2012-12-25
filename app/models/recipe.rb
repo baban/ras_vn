@@ -77,22 +77,37 @@ class Recipe < ActiveRecord::Base
   end
 
   def self.list( params={}, order_mode=nil )
+    wheres = []
+
+    foods = self.parse_parameter_for_foods( params )
+    wheres<< [" recipe_food_id IN (?) ", foods.pluck(:id) ] if foods.pluck(:id).present?
+
+    if params[:word]
+      foodstuffs = RecipeFoodstuff.where( " name LIKE ? ", "#{params[:recipe_food_name]}" ).select("distinct recipe_id").pluck(:recipe_id)
+      wheres<< [" id IN (?) ", foodstuffs ]
+      wheres<< [" title like ? ", "%#{params[:word]}%" ]      
+    end
+
+    wheres = [ wheres.map(&:first).join(" OR "), *wheres.map(&:second) ]
+
+    recipes = Recipe.where( " public = true " )
+    recipes = recipes.where( *wheres )
+    recipes.order( (order_mode=="new") ? " created_at DESC " : " view_count DESC " )
+  end
+
+  def self.parse_parameter_for_foods( params )
     foods = RecipeFood.scoped
     if params[:recipe_food_id]
       foods = RecipeFood.where( id: params[:recipe_food_id] ) 
-    elsif food_genre = RecipeFoodGenre.where( id: params[:recipe_food_genre_id] ).first
+    elsif params[:recipe_food_genre_id]
+      food_genre = RecipeFoodGenre.where( id: params[:recipe_food_genre_id] ).first
       foods = food_genre.foods
     elsif params[:recipe_food_name]
       # recipe_food_name parameter search recipe genre or recipe_foods
       genred_food_ids = RecipeFoodGenre.where( " name LIKE ? ", "%#{params[:recipe_food_name]}%" ).includes(:recipe_foods).map{ |o| o.recipe_foods.map(&:id) }.flatten
       foods = RecipeFood.where( " name LIKE ? OR recipe_food_genre_id IN (?) ", "%#{params[:recipe_food_name]}%", genred_food_ids )
-      # foodstuffs = RecipeFoodStuffs.where( " name LIKE ? ", "%#{params[:recipe_food_name]}%" )
     end
-
-    recipes = Recipe.where( " public = true " )
-    recipes = recipes.where( recipe_food_id: foods.pluck(:id) )       if foods.pluck(:id).present?
-    recipes = recipes.where( " title like ? ", "%#{params[:word]}%" ) if params[:word]
-    recipes.order( (order_mode=="new") ? " created_at DESC " : " view_count DESC " )
+    foods
   end
 
   def self.food_genre_recommend_recipe(params)
