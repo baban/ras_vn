@@ -48,7 +48,7 @@
 								<div class="material clearfix">
 									<span class="material_txt"> Nguyên liệu </span>
 									<span class="servings_for yield"><%= @recipe.amount && "(#{@recipe.amount} người ăn)"  %></span>
-									<%= @recipe.calory.zero? ? "" : "(#{@recipe.calory} kcal)" %>
+									<%= @recipe.calory.blank? ? "" : "(#{@recipe.calory} kcal)" %>
 								</div>
 								<div class="clear"></div>
 							</h3>
