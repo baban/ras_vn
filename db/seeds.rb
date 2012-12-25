@@ -36,7 +36,8 @@ end
   prefectures: Prefecture,
   tpl_sets: TplSet,
   recipe_food_genres: RecipeFoodGenre,
-  recipe_foods: RecipeFood
+  recipe_foods: RecipeFood,
+  food_calories: FoodCalory,
 }.each do |filename,klass|
   puts "#{filename} reading..."
   load_table(filename,klass)
