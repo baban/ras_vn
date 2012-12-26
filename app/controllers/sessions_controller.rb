@@ -51,7 +51,7 @@ class SessionsController < ApplicationController
       flash[:email] = auth["info"] && auth["info"]["email"]
       flash[:image] = auth["info"] && auth["info"]["image"]
       flash[:sex] = auth["extra"] && auth["extra"]["gender"]
-      flash[:birthday] = auth["extra"] && auth["extra"]["user_birthday"]
+      flash[:birthday] = auth["birthday"]
       logger.info :omniuser
       logger.info flash.inspect
       redirect_to new_user_registration_path, notice: "Tôi đã được kết nối với tài khoản #{auth["provider"]} của ông #{auth["info"]["name"]}. Xin vui lòng nhập địa chỉ email của bạn và mật khẩu cần thiết để đăng ký thành viên. "
