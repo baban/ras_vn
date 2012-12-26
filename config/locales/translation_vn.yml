@@ -83,6 +83,7 @@ vn:
         recipe_food_id: Loại ẩm thực
         recipe_image: Hình ảnh
         recipe_steps: Cách làm
+        status: status
         title: Tiêu đề
         users: users  #g
         created_at: Ngày đăng 

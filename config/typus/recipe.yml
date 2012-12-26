@@ -2,7 +2,7 @@
 
 Recipe:
   fields:
-    default: user_id, title, description, one_point
-    form: user_id, title, description, one_point
+    default: user_id, title, description, one_point, status
+    form: user_id, title, description, one_point, status
   relationships: recipe_steps, recipe_foodstuffs
   application: Application

@@ -107,7 +107,8 @@ class RecipesController < ApplicationController
   private
   def publiced_filter
     @recipe = Recipe.where( id: params[:id] ).first
-    return redirect_to(recipe_food_genres_url, alert:"存在しないレシピです") if !@recipe.try(:public) and @recipe.user_id != current_user.try(:id)
+    return redirect_to(recipe_food_genres_url, alert:"this recipe is not public") if @recipe.status == Recipe::Status::REJECT
+    return redirect_to(recipe_food_genres_url, alert:"this recipe is not public") if (not @recipe.try(:public)) and @recipe.user_id != current_user.try(:id)
   end
 
   def editable_user_filter

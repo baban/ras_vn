@@ -12,9 +12,9 @@
 						<ul class="user_oneself clearfix">
 							<li class="oneself_name">
 								<% if recipe.public %>
-									Công khai
+									<%= link_to "Công khai", "" %>
 								<% else %>
-									Không công khai
+									<%= link_to "Không công khai", "" %>
 								<% end %>
 							</li>
 							<li class="oneself_place">

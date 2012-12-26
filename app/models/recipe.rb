@@ -7,6 +7,11 @@ class Recipe < ActiveRecord::Base
 
   ADD_RECIPE = 2
 
+  module Status
+    OPEN = 0
+    REJECT = 1 # if administrator is set reject, recipe is unpubliced
+  end
+
   validates :title,        presence: true
   validates :recipe_image, presence: true
 
@@ -30,7 +35,7 @@ class Recipe < ActiveRecord::Base
   alias :steps= :recipe_steps=
   alias :image :recipe_image
 
-  scope :visibles, -> { where( "public = true" ) }
+  scope :visibles, -> { where( "public = true" ).where( status: Status::OPEN ) }
   scope :topics, -> { visibles.page(1).per(2) }
 
   def food
