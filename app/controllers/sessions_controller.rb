@@ -30,8 +30,8 @@ class SessionsController < ApplicationController
          flash[:nickname] = auth["info"] && auth["info"]["name"]
          flash[:email] = auth["info"] && auth["info"]["email"]
          flash[:image] = auth["info"] && auth["info"]["image"]
-         flash[:sex] = auth["extra"] && auth["extra"]["gender"]
-         flash[:birthday] = auth["extra"] && auth["extra"]["birthday"]
+         flash[:sex] = auth["extra"] && auth["extra"]["raw_info"] && auth["extra"]["raw_info"]["gender"]
+         flash[:birthday] = auth["extra"] && auth["extra"]["raw_info"] && auth["extra"]["raw_info"]["birthday"]
          logger.info :omniuser
          logger.info flash.inspect
          redirect_to new_user_registration_path, notice: "Nó đã được kết nối với tài khoản #{auth["provider"]} của ông #{auth["info"]["name"]}. Xin vui lòng nhập địa chỉ email của bạn và mật khẩu cần thiết để đăng ký thành viên."
@@ -50,8 +50,8 @@ class SessionsController < ApplicationController
       flash[:nickname] = auth["info"] && auth["info"]["name"]
       flash[:email] = auth["info"] && auth["info"]["email"]
       flash[:image] = auth["info"] && auth["info"]["image"]
-      flash[:sex] = auth["extra"] && auth["extra"]["gender"]
-      flash[:birthday] = auth["extra"] && auth["extra"]["birthday"]
+      flash[:sex] = auth["extra"] && auth["extra"]["raw_info"] && auth["extra"]["raw_info"]["gender"]
+      flash[:birthday] = auth["extra"] && auth["extra"]["raw_info"] && auth["extra"]["raw_info"]["birthday"]
       logger.info :omniuser
       logger.info flash.inspect
       redirect_to new_user_registration_path, notice: "Tôi đã được kết nối với tài khoản #{auth["provider"]} của ông #{auth["info"]["name"]}. Xin vui lòng nhập địa chỉ email của bạn và mật khẩu cần thiết để đăng ký thành viên. "
