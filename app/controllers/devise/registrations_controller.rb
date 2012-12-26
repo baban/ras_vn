@@ -26,6 +26,7 @@ class Devise::RegistrationsController < DeviseController
     resource.profile.birthday = Chronic.parse(flash[:birthday])
     logger.info :resource
     logger.info resource.inspect
+    logger.info resource.profile.inspect
     #=end
     respond_with resource
   end
