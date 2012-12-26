@@ -7,6 +7,11 @@
 # those area is write
 # =begin
 # =end
+
+#=begin
+require 'chronic'
+#=end
+
 class Devise::RegistrationsController < DeviseController
   prepend_before_filter :require_no_authentication, :only => [:new, :create, :cancel]
   prepend_before_filter :authenticate_scope!, :only => [:edit, :update, :destroy]
@@ -18,7 +23,7 @@ class Devise::RegistrationsController < DeviseController
     resource.email = flash[:email]
     resource.profile.nickname = flash[:nickname]
     resource.profile.sex = { "male" => 1, "female" => 2 }[flash[:sex]]
-    resource.profile.birthday = flash[:birthday]
+    resource.profile.birthday = Chronic.parse(flash[:birthday])
     logger.info :resource
     logger.info resource.inspect
     #=end
