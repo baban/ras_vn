@@ -19,8 +19,8 @@ class Devise::RegistrationsController < DeviseController
     resource.profile.nickname = flash[:nickname]
     resource.profile.sex = { "male" => 1, "female" => 2 }[flash[:sex]]
     resource.profile.birthday = flash[:birthday]
-    logger.info :recource
-    logger.info recource.inspect
+    logger.info :resource
+    logger.info resource.inspect
     #=end
     respond_with resource
   end
