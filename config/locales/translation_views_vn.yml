@@ -18,16 +18,16 @@ vn:
       destroy_notice: Đã xóa
     content_menu:
       search_recipe: Tìm recipe
-      new_recipe: Đăng recipe
+      new_recipe: Đăng món ăn của bạn
       edit_recipe: Sửa recipe
     footer:
       cooporate_profile: Giới thiệu
       cooporate_terms: Thỏa thuận sử dụng
       cooporate_q_and_a: Liên hệ /Trợ giúp
     kitchens:
-      show_link: Profile
-      recipe_link: Recipe
-      recipe_comment_link: Report
+      show_link: Trang cá nhân
+      recipe_link: Món ăn đã đăng
+      recipe_comment_link: Bình luận
       diary_link: Nhật ký
     header:
       title: Cook24

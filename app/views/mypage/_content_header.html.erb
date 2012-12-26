@@ -1,12 +1,12 @@
   <ul id="content_menu_list">
     <% {
-      "Profile" => { controller:"mypage", action:"index" },
-      "Recipe yêu thích" => { controller:"bookmarks", action:"index" },
-      "Recipe đã đăng" => { controller:"mypage", action:"recipes" },
-      "recipe comments" => { controller:"mypage", action:"recipe_comments" },
+      "Trang cá nhân" => { controller:"mypage", action:"index" },
+      "Món ăn yêu thích" => { controller:"bookmarks", action:"index" },
+      "Món ăn đã đăng" => { controller:"mypage", action:"recipes" },
+      "Bình luận" => { controller:"mypage", action:"recipe_comments" },
       "Nhật kí" => { controller:"mypage", action:"diary" },
-      "Follow" => { controller:"mypage", action:"follow" },
-      "Follower" => { controller:"mypage", action:"follower" },
+      "Kết bạn" => { controller:"mypage", action:"follow" },
+      "Bạn đang được kết nối" => { controller:"mypage", action:"follower" },
     }.each do |title,link| %>
       <% if params[:controller] == link[:controller] and params[:action] == link[:action] %>
         <li class="current"><%= link_to title, link %></li>
