@@ -28,6 +28,7 @@
 				<div id="recipe_image_area">
 					<%= link_to image_tag(@recipe.recipe_image.url(:detail_large_thumb), width:"280", height:"466", alt:""), @recipe.recipe_image.url, id:"recipe_image_link" %>
 				</div>
+				
 				<div class="explanation">
 					<% if login? and (not loved?) %>
 						<div id="love_area">
@@ -65,8 +66,10 @@
 					</div>
 				</div>
 			</article>
-
+			<br />
+			
 			<div class="cate01 clearfix" id="recipe_steps">
+				<h1 class="ttl_recipe" style="color: #FF9258">Các bước thực hiện:</h1>
 				<% @recipe.steps.each.with_index(1) do |step,i| %>
 					<section class="rec_cat5">
 						<h3 class="material_txt">BƯỚC <%= i %></h3>
@@ -76,17 +79,20 @@
 					</section>
 				<% end %>
 			</div>
-
+			
+			<br />
 			<div id="recipe_comment_area" class="area">
-				<h3 id="comment_title"><%= t(:comments, scope:"views.recipes.report")%></h3>
+				<h1 class="ttl_recipe" style="color: #FF9258"><%= t(:comments, scope:"views.recipes.report")%></h1>
+				<!--<h1 class="txt14"><%= t(:post_title, scope:"views.recipes.report")%></h1>-->
+				<h1 class="txt14">Bạn có thể đăng bình luận về món ăn này và đăng hình ảnh về món ăn mà bạn đã thực hiện công thức trên</h1>
 				<% @comments.each do |comment| %>
 					<div class="cate01 clearfix">
 						<section class="rec_cat5 clearfix">
-							<% if comment.image.present? %><%= image_tag comment.image.url, size:"280x466", alt:"", class:"comment_image" %><% end %>
+							<% if comment.image.present? %><%= image_tag comment.image.url, size:"280x466", alt:"#{comment.title}", class:"comment_image" %><% end %>
 							<div class="txt">
-								<h1 class="txt16"><%= comment.title %></h1>
+								<h1 class="txt16"><%= hbr comment.content %></h1>
 								<p class="userinfo">by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
-								<p><%= hbr comment.content %></p>
+								
 								<div class="info_area">
 									<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
 									<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
@@ -95,7 +101,8 @@
 						</section>
 					</div>
 				<% end %>
-				<h3><%= t(:post_title, scope:"views.recipes.report")%></h3>
+				
+				<br />
 				<%= form_for @recipe_comment do |f| %>
 					<%= f.hidden_field :recipe_id, value: @recipe.id %>
 					<%= f.hidden_field :title, size: 80, value: @recipe.title %>

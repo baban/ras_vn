@@ -1,21 +1,21 @@
-<% content_for :title do %><%=raw @recommend_recipe.title if @recommend_recipe %><% end %>
+ <% content_for :title do %><%=raw @recommend_recipe.title if @recommend_recipe %><% end %>
 <div class="bace_bg">
 <div class="contents_bg clearfix">
 
 <!--main_clm-->
 <div class="main_clm">
 	<article class="rec_cat clearfix">
-		<h1 class="txt12"><%= t(:recomment_recipe_title, scope:"views.content_footer") %></h1>
+		<h1 class="txt16"><%= t(:recomment_recipe_title, scope:"views.content_footer") %></h1>
 		<section>
 			<% if @recommend_recipe %>
-				<%= image_tag @recommend_recipe.image.url(:top_large_thumb) || "no_image_cook.png", width:"170", height:"250", alt:"" %>
+				<%= link_to(raw("#{image_tag(@recommend_recipe.image.url(:top_large_thumb) || 'no_image_cook.png', width:170, height:250, alt:"#{@recommend_recipe.title}")}"), recipe_url(@recommend_recipe))%>
 				<div class="txt">
 					<h1 class="txt16"><%= link_to @recommend_recipe.title, recipe_url(@recommend_recipe) %></h1>
 					<h2>
 						<%= @recommend_recipe.description %>
 						<p>by<%= link_to @recommend_recipe.chef.profile.nickname, kitchen_url(@recommend_recipe.chef) %></p>
 					</h2>
-					<p class="arr txt11">
+					<p class="arr txt12">
 						<%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_id: @recommend_recipe.recipe_food_id ) %>
 					</p>
 				</div>
@@ -24,10 +24,10 @@
 	</article>
 
 	<article class="rec_cat2 clearfix">
-		<h1 class="txt12"><%= t(:pop_ranking_title, scope:"views.content_footer") %></h1>
+		<h1 class="txt16"><%= t(:pop_ranking_title, scope:"views.content_footer") %></h1>
 		<% @ranking.each do |recipe| %>
 			<section class="clearfix">
-				<%= image_tag recipe.image.url(:top_thumb), width:"75", height:"105", alt:"" %>
+				<%= link_to(raw("#{image_tag(recipe.image.url(:top_thumb), width:"75", height:"105", alt:"#{recipe.title}")}"), recipe_url(recipe))%>
 				<div class="txt">
 					<h1 class="txt16"><%= link_to recipe.title, recipe_url(recipe) %></h1>
 					<p>by<%= link_to recipe.user.profile.nickname, kitchen_url(recipe.user) %></p>
@@ -40,22 +40,22 @@
 	</article>
 
 	<article class="cate01 clearfix">
-		<h1><%= t(:category_list_title,scope:"views.top.index") %></h1>
+		<h1 class="txt15"><%= t(:category_list_title,scope:"views.top.index") %></h1>
 		<% @food_genres.each do |genre| %>
 			<section>
-				<%= image_tag genre.image, width:"92", height:"92", alt:"" %>
+				<%= link_to(raw("#{image_tag(genre.image, width:"92", height:"92", alt:"#{genre.name}")}"), recipe_foods_url( recipe_food_genre_id: genre.id ))%>
 				<div class="txtarea">
-					<h1><%="#{genre.name}(#{genre.amount})"%></h1>
+					<h1 class="txt15"><%="#{genre.name}(#{genre.amount})"%></h1>
 					<ul class="catelists">
 						<% genre.foods.page(1).per(3).each do |food| %>
 							<li class="arr txt11 flo_l"><%= link_to food.name, recipe_foods_url( recipe_food_id: food.id ) %></li>
 						<% end %>
 					</ul>
 				</div>
-				<p class="more arr txt11"><%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_genre_id: genre.id ) %></p>
+				<p class="more arr txt13"><%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_genre_id: genre.id ) %></p>
 			</section>
 		<% end %>
-		<%= link_to t(:all_categories, scope:"views.top.index"), recipe_food_genres_url %>
+		<h1 class="txt16"><%= link_to t(:all_categories, scope:"views.top.index"), recipe_food_genres_url %></h1>
 	</article>
 </div>
 <!--main_clmEnd-->

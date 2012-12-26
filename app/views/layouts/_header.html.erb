@@ -2,7 +2,7 @@
 <header>
 <div class="inner clearfix txt12">
 	<h1><%= link_to (image_tag "/assets/ck24logo.png", alt:"cook24", width:"77", height:"16"), root_url %></h1>
-	<p class="mk">mark</p>
+	<%= link_to(raw("<p class='mk'>mark</p>"), root_url) %>
 	<nav>
 		<ul class="clearfix flo_l">
 			<li class=""><%= link_to t(:search_restaurants, scope:"views.top.index"), root_url %></li>

@@ -5,9 +5,20 @@
 <div id="content_body" class="bace_bg">
 	<%= render partial:"mypage/content_header" %>
 	<div id="mypage_content" class="clearfix mypage_content">
-		<h2 class="txt20"><%= t( :bookmark, scope:"activerecord.models" ) %></h2>
+		<h2 class="txt20">Món ăn yêu thích</h2>
 		<article class="cate01 clearfix">
 			<div class="paginate"><%= paginate @recipes %></div>
+			<% if @recipes.size == 0 %>
+				<section class="rec_cat4 clearfix">
+					<div class="txt">
+						<h1 class="txt16">Bạn chưa có món ăn yêu thích nào.</h1>
+						<p>
+							Bạn có thể add những món ăn yêu thích vào list của mình đấy!
+							Hãy bấm nút [yêu thích] trên món ăn mà bạn đã xem nhé!
+						</p>
+					</div>
+				</section>
+			<% end %>
 			<% @recipes.each do |recipe| %>
 				<section class="rec_cat4 clearfix">
 					<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>

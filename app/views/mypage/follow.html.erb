@@ -11,6 +11,13 @@
 		<%= render partial:"mypage/content_header" %>
 		<div class="clearfix mypage_content" >
 			<h2 class="txt16 ttl_mypage">Danh sách những người bạn đang kết nối</h2>
+			<% if @profiles.size==0%>
+				<ul class="clearfix follow_user">
+					<li>
+						Chưa có người bạn nào
+					</li>
+				</ul>
+			<% end %>
 			<% @profiles.each do |profile| %>
 				<ul class="clearfix follow_user">
 					<li>

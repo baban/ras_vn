@@ -5,6 +5,18 @@
 		<div class="clearfix mypage_content" >
 			<h2 class="txt16 ttl_mypage">List các món ăn đã đăng</h2>
 			<article class="cate01 clearfix">
+				<% if @recipes.size != 0 %>
+				<div class="flo_l mypage_rec4">
+					<section class="rec_cat4 clearfix">
+						<div class="txt">
+							<h1 class="txt16">Bạn chưa đăng món ăn nào.</h1>
+							<p>
+								Hãy share những món ăn yêu thích với bạn bè của mình và cùng mọi người giao lưu nhé!
+							</p>
+						</div>
+					</section>
+				</div>
+				<% end %>
 				<% @recipes.each do |recipe| %>
 				<!--rec_recipe-->
 				<div class="flo_l mypage_rec4">
