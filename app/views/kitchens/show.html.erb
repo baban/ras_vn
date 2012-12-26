@@ -61,7 +61,7 @@
 					<% end %>
 				<% end %>
 			</div>
-			<h2 class="txt16 ttl_mypage cl">Recipe <%= @profile.nickname %> đã đăng</h2>
+			<h2 class="txt16 ttl_mypage cl">Recipe <%= link_to(@profile.nickname, kitchen_url(@profile)) %> đã đăng</h2>
 			<article class="cate01 clearfix">
 				<% @recipes.each do |recipe| %> <!--rec_recipe-->
 				<div class="flo_l mypage_rec4">
@@ -71,7 +71,7 @@
 								<%= recipe.chef.profile.nickname %>
 							</li>
 						</ul>
-						<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
+						<%= link_to(raw(image_tag(recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"#{recipe.title}")), controller:"recipes", action:"show", id: recipe.id)%>
 						<div class="txt">
 							<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
 							<p>

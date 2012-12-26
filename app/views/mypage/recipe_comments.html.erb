@@ -2,9 +2,18 @@
 <div id="content_body" class="bace_bg">
 	<%= render partial:"mypage/content_header" %>
 	<div class="clearfix mypage_content">
-		<h2 class="txt20">Recipe Comments</h2>
+		<h2 class="txt20">Bình luận</h2>
 		<article class="cate01">
 			<div class="paginate"><%= paginate @comments %></div>
+			<% if @comments.size == 0%>
+			<div class="cate01 clearfix">
+				<section class="rec_cat5 clearfix">
+					<div class="txt">
+						<h1 class="txt16">Bạn chưa có bài bình luận nào</h1>
+					</div>
+				</section>
+			</div>
+			<% end %>
 			<% @comments.each do |comment| %>
 				<div class="cate01 clearfix">
 					<section class="rec_cat5 clearfix">
