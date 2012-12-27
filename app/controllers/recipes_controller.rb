@@ -3,7 +3,7 @@
 class RecipesController < ApplicationController
   before_filter :authenticate_user!,   except: %W[index show]
   before_filter :publiced_filter,      only: %W[show]
-  before_filter :editable_user_filter, only: %W[edit update destroy]
+  before_filter :editable_user_filter, only: %W[edit update destroy publication]
 
   helper_method :loved?, :bookmarked?, :my_recipe?
 
@@ -80,7 +80,7 @@ class RecipesController < ApplicationController
         # recipe_drafts data is copying to recipes table
         @draft.copy_public
         unless @recipe.public
-          @recipe.publication
+          @recipe.publication( true )
           Stream.push( Stream::ADD_RECIPE, current_user.id, @recipe )
         end
       end
@@ -93,6 +93,13 @@ class RecipesController < ApplicationController
   def love
     @recipe = Recipe.love( id: params[:id], user_id: params[:user_id]  )
     render json: { id: params[:id], count: @recipe.love_count }, status: 200
+  end
+
+  def publication
+    @recipe = Recipe.find(params[:id])
+    @recipe.publication( eval(params[:public]) )
+
+    redirect_to( { controller:"mypage", action:"recipes" }, notice: "status changed" )
   end
 
   def youtube

@@ -16,7 +16,7 @@ RasVn::Application.routes.draw do
   resources(:bookmarks)
   resources(:diaries)
   resources(:information)
-  resources(:recipes) { collection { get :love, :caution, :youtube } }
+  resources(:recipes) { collection { get :love, :caution, :youtube, :publication } }
   resources(:recipe_comments)
   resources(:recipe_foods, only:[:index]){ collection{ post :index } }
   resources(:recipe_food_genres, only:[:index])

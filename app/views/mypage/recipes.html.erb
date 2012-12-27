@@ -10,9 +10,7 @@
 					<section class="rec_cat4 clearfix">
 						<div class="txt">
 							<h1 class="txt16">Bạn chưa đăng món ăn nào.</h1>
-							<p>
-								Hãy share những món ăn yêu thích với bạn bè của mình và cùng mọi người giao lưu nhé!
-							</p>
+							<p>Hãy share những món ăn yêu thích với bạn bè của mình và cùng mọi người giao lưu nhé!</p>
 						</div>
 					</section>
 				</div>
@@ -24,9 +22,9 @@
 						<ul class="user_oneself clearfix">
 							<li class="oneself_name">
 								<% if recipe.public %>
-									<%= link_to "Công khai", "" %>
+									<%= link_to "Công khai", controller:"recipes", action:"publication", id: recipe.id, public: false %>
 								<% else %>
-									<%= link_to "Không công khai", "" %>
+									<%= link_to "Không công khai", controller:"recipes", action:"publication", id: recipe.id, public: true %>
 								<% end %>
 							</li>
 							<li class="oneself_place">

@@ -35,6 +35,7 @@ $(window).load ->
     '<tr class="ingredient_row clearfix">'+
       '<td class="ingredient_name"><input type="text" name="foodstuffs[][name]" value="" placeholder="tên thực phẩm"></td>'+
       '<td class="ingredient_quantity"><input type="text" name="foodstuffs[][amount]" value="" placeholder="dung lượng"></td>'+
+      '<td class="ingredient_calory"><input type="text" name="foodstuffs[][calory]" value="" placeholder="kcal"></td>'+
       '<td class="ingredient_close_button"><p class="close"><input type="button" value="☓"></p></td>'+
     '</tr>';
     foodstuff_close_button_check()

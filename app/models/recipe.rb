@@ -8,8 +8,9 @@ class Recipe < ActiveRecord::Base
   ADD_RECIPE = 2
 
   module Status
-    OPEN = 0
-    REJECT = 1 # if administrator is set reject, recipe is unpubliced
+    EDITING = 0
+    OPEN    = 1
+    REJECT  = 2 # if administrator is set reject, recipe is unpubliced
   end
 
   validates :title,        presence: true
@@ -134,11 +135,20 @@ class Recipe < ActiveRecord::Base
     draft
   end
 
-  def publication
-    self.public = true
+  # @param type
+  def publication( type )
     recipe_food = RecipeFood.find( self.recipe_food_id )
     recipe_food_genre = RecipeFoodGenre.find(recipe_food.recipe_food_genre_id)
-    recipe_food_genre.increment(:amount)
+
+    if type
+      self.public = true
+      self.status = (self.status == 0) ? 1 : self.status
+      recipe_food_genre.amount += 1
+    else
+      self.public = false
+      recipe_food_genre.amount -= 1
+    end
+
     ActiveRecord::Base.transaction do
       recipe_food_genre.save
       self.save

@@ -185,16 +185,36 @@ describe Recipe do
   end
 
   describe "#publication" do
-    before do
-      @genre = RecipeFoodGenre.find(1)
-      @recipe = Recipe.find(15)
-      @recipe.publication
+    context "recipe status change public to unpublic" do
+      before do
+        @genre = RecipeFoodGenre.find(1)
+        @recipe = Recipe.find(15)
+        @recipe.status = 0
+        @recipe.publication( true )
+      end
+      it "公開ステータスを非公開から公開に変更する" do
+        @recipe.public.should be_true
+      end
+      it "recipe status change 'editing' to 'open'" do
+        @recipe.status.should == Recipe::Status::OPEN
+      end
+      it "ジャンルに属しているレシピの数をインクリメントする" do
+        RecipeFoodGenre.find(1).amount.should == @genre.amount+1
+      end
     end
-    it "公開ステータスを非公開から公開に変更する" do
-      @recipe.public.should be_true
-    end
-    it "ジャンルに属しているレシピの数をインクリメントする" do
-      RecipeFoodGenre.find(1).amount.should == @genre.amount+1
+    context "recipe status change public to unpublic" do
+      before do
+        @recipe = Recipe.find(15)
+        @recipe.publication( true )
+        @genre = RecipeFoodGenre.find(1)
+        @recipe.publication( false )
+      end
+      it "公開ステータスを非公開から公開に変更する" do
+        @recipe.public.should be_false
+      end
+      it "ジャンルに属しているレシピの数をデクリメントする" do
+        RecipeFoodGenre.find(1).amount.should == @genre.amount-1
+      end
     end
   end
 end
