@@ -1,11 +1,10 @@
 <div class="bace_bg">
 	<div class="contents_bg clearfix">
 		<%= render partial:"mypage/content_header" %>
-		
 		<div class="clearfix mypage_content" >
 			<h2 class="txt16 ttl_mypage">List các món ăn đã đăng</h2>
 			<article class="cate01 clearfix">
-				<% if @recipes.size != 0 %>
+				<% if @recipes.size == 0 %>
 				<div class="flo_l mypage_rec4">
 					<section class="rec_cat4 clearfix">
 						<div class="txt">
@@ -34,15 +33,15 @@
 						<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
 						<div class="txt">
 							<h1 class="txt16"><%= link_to truncate( recipe.title, length: 22 ), controller:"recipes", action:"edit", id: recipe.id %></h1>
-							<p>
-								by <%= link_to recipe.user.profile.nickname %>
-							</p>
-							<h2><%= truncate( recipe.description, length: 50 ) %>
-							<div class="info_area">
-							<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
-							<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
-							<%= t(:id, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.id %></span>
-							</div></h2>
+							<p>by <%= link_to recipe.user.profile.nickname %></p>
+							<h2>
+								<%= truncate( recipe.description, length: 50 ) %>
+								<div class="info_area">
+									<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+									<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+									<%= t(:id, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.id %></span>
+								</div>
+							</h2>
 						</div>
 					</section>
 				</div>
@@ -50,59 +49,10 @@
 				
 			</article>
 			<!--pagination-->
-			<div class="paginate mypage_paginate">
-				<%= paginate @recipes %>
-				<!--
-				<span class="current_page">1</span><a href="#">2</a><a href="#">3</a><a rel="" href="#">4</a><a rel="" href="#">5</a><a href="#">&nbsp;<span rel="next" class="next_page">次へ</span>»</a>
-				-->
-			</div>
+			<div class="paginate mypage_paginate"><%= paginate @recipes %></div>
 			<!--pagination-->
 		</div>
 	</div>
 	<!--contents-->
 </div>
 
-<!--
-<div id="content_body" class="bace_bg">
-	<%= render partial:"mypage/content_header" %>
-	<div class="clearfix mypage_content">
-		<h2 class="txt20">Danh sách các công thức nấu ăn</h2>
-		<article class="cate01">
-			<div class="paginate">
-				<%= paginate @recipes %>
-			</div>
-			<% @recipes.each do |recipe| %>
-			<section class="rec_cat4 clearfix">
-				<div class="status">
-					<% if recipe.public %>
-					<div class="public">
-						Công khai
-					</div>
-					<% else %>
-					<div class="editing">
-						Không công khai
-					</div>
-					<% end %>
-				</div>
-				<div style="text-align:right;">
-					<%= link_to "Sửa", edit_recipe_url(recipe) %>
-				</div>
-				<%= image_tag recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"" %>
-				<div class="txt">
-					<h1 class="txt16"><%= link_to truncate( recipe.title, length: 22 ), controller:"recipes", action:"edit", id: recipe.id %></h1>
-					<p class="name">
-						by <%= link_to recipe.user.profile.nickname %>
-					</p>
-					<h2> <%= truncate( recipe.description, length: 50 ) %>
-					<div class="info_area">
-						<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
-						<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
-						<%= t(:id, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.id %></span>
-					</div></h2>
-				</div>
-			</section>
-			<% end %>
-		</article>
-	</div>
-</div>
--->
