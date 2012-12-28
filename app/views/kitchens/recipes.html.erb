@@ -2,36 +2,47 @@
 	<div class="contents_bg clearfix">
 		<%= render partial:"content_header" %>
 		<div class="clearfix mypage_content" >
-			<h2 class="txt16 ttl_mypage">Các món ăn đã đăng</h2>
-			<article class="cate01 clearfix">
-				<div class="paginate">
-					<%= paginate @recipes %>
-				</div>
-				<% @recipes.each do |recipe| %>
-				<!--rec_recipe-->
+			<% if @recipes.size == 0 %>
+			<br />
 				<div class="flo_l mypage_rec4">
 					<section class="rec_cat4 clearfix">
-						<%= link_to(raw(image_tag(recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"#{recipe.title}")), kitchen_url(recipe.chef))%>
 						<div class="txt">
-							<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
-							<p>
-								by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %>
-							</p>
-							<h2><%= truncate(recipe.description, length: 50) %>
-							<div class="info_area">
-								<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
-								<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
-								<%= t(:id, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.id %></span>
-							</div>
-							</h2>
+							<h1 class="txt16">Bạn <%= link_to(@profile.nickname, kitchen_url(@profile)) %> chưa đăng món ăn nào.</h1>
 						</div>
 					</section>
 				</div>
-				<% end %>
-				<div class="paginate">
-					<%= paginate @recipes %>
-				</div>
-			</article>
+			<% else %>
+				<h2 class="txt16 ttl_mypage">Các món ăn bạn<%= link_to(@profile.nickname, kitchen_url(@profile)) %> đã đăng</h2>
+				<article class="cate01 clearfix">
+					<div class="paginate">
+						<%= paginate @recipes %>
+					</div>
+					<% @recipes.each do |recipe| %>
+					<!--rec_recipe-->
+					<div class="flo_l mypage_rec4">
+						<section class="rec_cat4 clearfix">
+							<%= link_to(raw(image_tag(recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"#{recipe.title}")), kitchen_url(recipe.chef))%>
+							<div class="txt">
+								<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
+								<p>
+									by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %>
+								</p>
+								<h2><%= truncate(recipe.description, length: 50) %>
+								<div class="info_area">
+									<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+									<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %></span>&nbsp;&nbsp;
+									<%= t(:id, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.id %></span>
+								</div>
+								</h2>
+							</div>
+						</section>
+					</div>
+					<% end %>
+					<div class="paginate">
+						<%= paginate @recipes %>
+					</div>
+				</article>
+			<% end %>
 		</div>
 	</div>
 </div>

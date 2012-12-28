@@ -61,33 +61,35 @@
 					<% end %>
 				<% end %>
 			</div>
-			<h2 class="txt16 ttl_mypage cl">Recipe <%= link_to(@profile.nickname, kitchen_url(@profile)) %> đã đăng</h2>
-			<article class="cate01 clearfix">
-				<% @recipes.each do |recipe| %> <!--rec_recipe-->
-				<div class="flo_l mypage_rec4">
-					<section class="rec_cat4 clearfix">
-						<ul class="user_oneself clearfix">
-							<li class="oneself_name">
-								<%= recipe.chef.profile.nickname %>
-							</li>
-						</ul>
-						<%= link_to(raw(image_tag(recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"#{recipe.title}")), controller:"recipes", action:"show", id: recipe.id)%>
-						<div class="txt">
-							<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
-							<p>
-								by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %>
-							</p>
-							<h2><%= truncate(recipe.description, length: 50) %>
-							<div class="info_area">
-								<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
-								<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
-								<%= t(:id, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.id %></span>
-							</div></h2>
-						</div>
-					</section>
-				</div>
-				<% end %>
-			</article>
+			<% if @recipes.size != 0 %>
+				<h2 class="txt16 ttl_mypage cl">Món ăn <%= link_to(@profile.nickname, kitchen_url(@profile)) %> đã đăng</h2>
+				<article class="cate01 clearfix">
+					<% @recipes.each do |recipe| %> <!--rec_recipe-->
+					<div class="flo_l mypage_rec4">
+						<section class="rec_cat4 clearfix">
+							<ul class="user_oneself clearfix">
+								<li class="oneself_name">
+									<%= recipe.chef.profile.nickname %>
+								</li>
+							</ul>
+							<%= link_to(raw(image_tag(recipe.image.url(:top_large_thumb), width:"100", height:"141", alt:"#{recipe.title}")), controller:"recipes", action:"show", id: recipe.id)%>
+							<div class="txt">
+								<h1 class="txt16"><%= link_to recipe.title, controller:"recipes", action:"show", id: recipe.id %></h1>
+								<p>
+									by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %>
+								</p>
+								<h2><%= truncate(recipe.description, length: 50) %>
+								<div class="info_area">
+									<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+									<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+									<%= t(:id, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.id %></span>
+								</div></h2>
+							</div>
+						</section>
+					</div>
+					<% end %>
+				</article>
+			<% end %>
 		</div>
 		</div
 	</div>
