@@ -17,7 +17,7 @@ vn:
       update_notice: Updated
       destroy_notice: Đã xóa
     content_menu:
-      search_recipe: Tìm recipe
+      search_recipe: Tìm món ăn
       new_recipe: Đăng món ăn của bạn
       edit_recipe: Sửa recipe
     footer:
@@ -31,7 +31,7 @@ vn:
       diary_link: Nhật ký
     header:
       title: Cook24
-      search_button: Tìm recipe
+      search_button: Tìm món ăn
       placeholder: Nhập tên món ăn, thực phẩm
       blank: ""
       sign_up: Đăng ký
