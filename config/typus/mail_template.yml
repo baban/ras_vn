@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+MailTemplate:
+  fields:
+    default: title, content, opened_at, closed_at, from, reply_to, bcc, public
+    form: title, content, opened_at, closed_at, from, reply_to, bcc, public
+  relationships: 
+  application: Application

@@ -34,4 +34,8 @@ every 1.day, at:"00:10" do
   runner "RecipeFoodRanking.aggrigation"
 end
 
+every 1.day, at:"11:00" do
+  # runner "MailBuffer.send_mail_magazines"
+end
+
 # Learn more: http://github.com/javan/whenever
