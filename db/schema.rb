@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121229035744) do
+ActiveRecord::Schema.define(:version => 20121230030505) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20121229035744) do
     t.text     "content",                                        :null => false
     t.integer  "category_id", :default => 0,                     :null => false
     t.string   "image"
-    t.datetime "publiced_at", :default => '2012-11-17 00:00:00', :null => false
+    t.datetime "publiced_at", :default => '2012-12-01 00:00:00', :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
@@ -204,6 +204,7 @@ ActiveRecord::Schema.define(:version => 20121229035744) do
     t.integer  "love_count",     :default => 0,     :null => false
     t.integer  "eatstyle_id",    :default => 0,     :null => false
     t.integer  "amount"
+    t.integer  "calorie",        :default => 0,     :null => false
     t.integer  "view_count",     :default => 0,     :null => false
     t.integer  "recipe_food_id"
     t.datetime "deleted_at"
@@ -217,7 +218,7 @@ ActiveRecord::Schema.define(:version => 20121229035744) do
   create_table "recipe_food_genre_rankings", :force => true do |t|
     t.integer  "recipe_food_genre_id",                           :null => false
     t.integer  "point",                :default => 0,            :null => false
-    t.date     "ranked_at",            :default => '2012-11-17', :null => false
+    t.date     "ranked_at",            :default => '2012-12-01', :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
@@ -258,6 +259,7 @@ ActiveRecord::Schema.define(:version => 20121229035744) do
     t.integer  "recipe_food_id"
     t.string   "name",           :default => "", :null => false
     t.string   "amount",         :default => "", :null => false
+    t.integer  "calorie",        :default => 0,  :null => false
     t.time     "deleted_at"
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
@@ -318,6 +320,7 @@ ActiveRecord::Schema.define(:version => 20121229035744) do
     t.integer  "love_count",     :default => 0,     :null => false
     t.integer  "eatstyle_id",    :default => 0,     :null => false
     t.integer  "amount"
+    t.integer  "calorie",        :default => 0,     :null => false
     t.integer  "view_count",     :default => 0,     :null => false
     t.integer  "recipe_food_id"
     t.time     "deleted_at"
@@ -395,19 +398,20 @@ ActiveRecord::Schema.define(:version => 20121229035744) do
   create_table "user_profiles", :force => true do |t|
     t.integer  "user_id"
     t.string   "image"
-    t.string   "nickname",      :default => "", :null => false
+    t.string   "nickname",      :default => "",   :null => false
     t.integer  "sex"
     t.string   "first_name",    :default => ""
     t.string   "family_name",   :default => ""
     t.date     "birthday"
     t.string   "email"
     t.string   "phone_number"
-    t.integer  "prefecture_id", :default => 1,  :null => false
-    t.integer  "distinct_id",   :default => 1,  :null => false
-    t.text     "comment",                       :null => false
-    t.integer  "recipe_count",  :default => 0,  :null => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.integer  "prefecture_id", :default => 1,    :null => false
+    t.integer  "distinct_id",   :default => 1,    :null => false
+    t.text     "comment",                         :null => false
+    t.integer  "recipe_count",  :default => 0,    :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.boolean  "mail_status",   :default => true
   end
 
   add_index "user_profiles", ["user_id"], :name => "index_user_profiles_on_user_id"

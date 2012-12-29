@@ -47,12 +47,22 @@ $(window).load ->
 
   # add recipe steps
   $("#add_steps").click ->
-    s = 
-    '<section class="rec_cat5 clearfix">'+
-      '<h3 class="material_txt">mới BƯỚC</h3>'+
-      '<textarea class="step_edit_area" name="steps[]"></textarea>'+
-    '</section>';
-    $("#steps").append(s)
+    i = $("#steps section").size() + 1
+    iimg_a = $('<div />').addClass('iimg_a')
+               .append( $('<p />').append( $('<label />').text('Image') ) )
+	       .append( $('<input />').attr('type','file').attr('size',15).attr('name',"recipe_steps[][image]") )
+    movie_button_field = $('<div />').addClass('movie_button_field')
+                           .append( $('<p />').append( $('<label />').text('Movie Url') ) )
+                           .append( $('<input />').attr('type','text').attr('name','recipe_steps[][movie_url]') )
+                           .append( $('<input />').attr('type','button').addClass('movie_button').attr('value','Movie Url') )
+                           .append( $('<input />').attr('type','hidden').addClass("step_number_#{i}").attr('value', i ) )
+    section = $('<section />').attr('class','rec_cat5 clearfix')
+                .append( $("<h3 />").addClass('material_txt').text("BƯỚC #{i}") )
+                .append( $("<textarea />").addClass('step_edit_area').attr('name','steps[]') )
+                .append( iimg_a )
+                .append( movie_button_field )
+    console.log section
+    $("#steps").append(section)
 
   # open window youtupe movies
   $(".movie_button").click ->

@@ -1,6 +1,13 @@
 # encoding: utf-8
 
 class MailBuffer < ActiveRecord::Base
+  validates :user_id,  presence: true
+  validates :from,     presence: true
+  validates :reply_to, presence: true
+  validates :bcc,      presence: true
+  validates :subject,  presence: true
+  validates :body,     presence: true
+
   def self.send_mail_magazines
     self.create_mail_buffers
     self.send_mail_buffers
