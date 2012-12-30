@@ -45,17 +45,26 @@ $(window).load ->
   $("#add_foodstuffs_row").click ->
     $("#foodstuffs").append(food_stuff_row(4))
 
+  movie_button_click = ->
+    step_number = $(this).next().attr("value")
+    console.log step_number
+    $("#search_youtube_step_number").attr( "value", step_number )
+    $("#search_youtube_area").css( { display:"block", opacity: 0.0 } )
+    $("#search_youtube_area").animate( { opacity: 1.0 }, { duration: 400 } )
+
   # add recipe steps
   $("#add_steps").click ->
     i = $("#steps section").size() + 1
     iimg_a = $('<div />').addClass('iimg_a')
                .append( $('<p />').append( $('<label />').text('Image') ) )
 	       .append( $('<input />').attr('type','file').attr('size',15).attr('name',"recipe_steps[][image]") )
+    movie_button = $('<input />').attr('type','button').addClass('movie_button').attr('value','Movie Url')
+    movie_button.click movie_button_click
     movie_button_field = $('<div />').addClass('movie_button_field')
                            .append( $('<p />').append( $('<label />').text('Movie Url') ) )
-                           .append( $('<input />').attr('type','text').attr('name','recipe_steps[][movie_url]') )
-                           .append( $('<input />').attr('type','button').addClass('movie_button').attr('value','Movie Url') )
-                           .append( $('<input />').attr('type','hidden').addClass("step_number_#{i}").attr('value', i ) )
+                           .append( $('<input />').attr('type','text').attr('name','recipe_steps[][movie_url]').attr('id',"recipe_steps_#{i}_movie_url") )
+                           .append( movie_button )
+                           .append( $('<input />').attr('type','hidden').attr('id',"step_number_#{i}").attr('name',"step_number_#{i}").attr('value', i ) )
     section = $('<section />').attr('class','rec_cat5 clearfix')
                 .append( $("<h3 />").addClass('material_txt').text("BƯỚC #{i}") )
                 .append( $("<textarea />").addClass('step_edit_area').attr('name','steps[]') )
@@ -64,11 +73,7 @@ $(window).load ->
     $("#steps").append(section)
 
   # open window youtupe movies
-  $(".movie_button").click ->
-    step_number = $(this).next().attr("value")
-    $("#search_youtube_step_number").attr( "value", step_number )
-    $("#search_youtube_area").css( { display:"block", opacity: 0.0 } )
-    $("#search_youtube_area").animate( { opacity: 1.0 }, { duration: 400 } )
+  $(".movie_button").click movie_button_click
 
   # add youtupe movieto recipe step
   search_youtube = ->

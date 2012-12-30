@@ -2,7 +2,7 @@
 
 class RecipeCommentsController < ApplicationController
   def create
-    comment =params[:recipe_comment]
+    comment = params[:recipe_comment]
     comment[:user_id] = current_user.id
     @comment = RecipeComment.new
     @comment.attributes = comment
