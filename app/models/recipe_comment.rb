@@ -3,6 +3,12 @@
 class RecipeComment < ActiveRecord::Base
   belongs_to :recipe
 
+  validates :recipe_id, presence: true
+  validates :user_id,   presence: true
+  validates :title,     presence: true
+  validates :image,     presence: true
+  validates :content,   presence: true
+
   scope :visibles, ->{ scoped }
   scope :topics, ->{ visibles.page(1).per(3) }
 

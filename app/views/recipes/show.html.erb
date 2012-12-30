@@ -106,6 +106,13 @@
 				
 				<br />
 				<%= form_for @recipe_comment do |f| %>
+					<% if @recipe_comment.errors.any? %>
+						<div id="error_explanation">
+							<% @recipe_comment.errors.each do |error| %>
+								<li><%= error %></li>
+							<% end %>
+						</div>
+					<% end %>
 					<%= f.hidden_field :recipe_id, value: @recipe.id %>
 					<%= f.hidden_field :title, size: 80, value: @recipe.title %>
 					<p><%= f.label t(:image, scope:"views.recipes.report") %></p>
