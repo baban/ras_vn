@@ -61,7 +61,6 @@ $(window).load ->
                 .append( $("<textarea />").addClass('step_edit_area').attr('name','steps[]') )
                 .append( iimg_a )
                 .append( movie_button_field )
-    console.log section
     $("#steps").append(section)
 
   # open window youtupe movies

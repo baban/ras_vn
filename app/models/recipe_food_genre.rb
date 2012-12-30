@@ -14,7 +14,7 @@ class RecipeFoodGenre < ActiveRecord::Base
     foods = Recipe.group(:recipe_food_id).count
     RecipeFoodGenre.all.each_with_index do |genre,idx|
       foods = genre.foods.select(:id)
-      amount = Recipe.where( " recipe_food_id in (#{foods.to_sql}) " ).count
+      amount = Recipe.visibles.where( " recipe_food_id in (#{foods.to_sql}) " ).count
       genre.amount = amount
       genre.save
     end
