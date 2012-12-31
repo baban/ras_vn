@@ -92,9 +92,8 @@
 						<section class="rec_cat5 clearfix">
 							<% if comment.image.present? %><%= image_tag comment.image.url, size:"280x466", alt:"#{comment.title}", class:"comment_image" %><% end %>
 							<div class="txt">
-								<h1 class="txt16"><%= hbr comment.content %></h1>
+								<p><%= hbr comment.content %></p>
 								<p class="userinfo">by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
-								
 								<div class="info_area">
 									<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
 									<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
@@ -103,7 +102,6 @@
 						</section>
 					</div>
 				<% end %>
-				
 				<br />
 				<%= form_for @recipe_comment do |f| %>
 					<% if @recipe_comment.errors.any? %>
@@ -111,6 +109,11 @@
 							<% @recipe_comment.errors.each do |error| %>
 								<li><%= error %></li>
 							<% end %>
+						</div>
+					<% end %>
+					<% if flash[:error_explanation] %>
+						<div id="error_explanation">
+							<ul><%=raw flash[:error_explanation] %></ul>
 						</div>
 					<% end %>
 					<%= f.hidden_field :recipe_id, value: @recipe.id %>

@@ -14,12 +14,6 @@ class RecipeComment < ActiveRecord::Base
 
   mount_uploader :image, RecipeCommentUploader
 
-  def include_profs
-    profs = self.to_a
-    
-    profs
-  end
-
   def prof
     @cache || UserProfile.where( user_id: self.user_id ).first
   end

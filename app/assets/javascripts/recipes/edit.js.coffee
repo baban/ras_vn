@@ -47,7 +47,6 @@ $(window).load ->
 
   movie_button_click = ->
     step_number = $(this).next().attr("value")
-    console.log step_number
     $("#search_youtube_step_number").attr( "value", step_number )
     $("#search_youtube_area").css( { display:"block", opacity: 0.0 } )
     $("#search_youtube_area").animate( { opacity: 1.0 }, { duration: 400 } )
@@ -104,8 +103,7 @@ $(window).load ->
     false
 
   # button action
-  $("#search_youtube_button").click ->
-    search_youtube()
+  $("#search_youtube_button").click search_youtube
 
   # enter key action
   $("#search_youtube_text").keydown (evt)->
