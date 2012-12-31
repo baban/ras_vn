@@ -32,6 +32,10 @@ class MypageController < ApplicationController
   def follower
     @follows = Follower.where( follower_id: current_user.id ).page( params[:page] || 1 )
   end
+
+  # retire description
+  def retire
+  end
   
   private
   def myself?

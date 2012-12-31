@@ -15,6 +15,8 @@ user_profiles_0:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-06-24 09:05:59 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_1:
   id: 2
   user_id: 2
@@ -32,6 +34,8 @@ user_profiles_1:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_2:
   id: 3
   user_id: 3
@@ -49,6 +53,8 @@ user_profiles_2:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_3:
   id: 4
   user_id: 4
@@ -66,6 +72,8 @@ user_profiles_3:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_4:
   id: 5
   user_id: 5
@@ -83,6 +91,8 @@ user_profiles_4:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_5:
   id: 6
   user_id: 6
@@ -100,6 +110,8 @@ user_profiles_5:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_6:
   id: 7
   user_id: 7
@@ -117,6 +129,8 @@ user_profiles_6:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_7:
   id: 8
   user_id: 8
@@ -134,6 +148,8 @@ user_profiles_7:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_8:
   id: 9
   user_id: 9
@@ -151,6 +167,8 @@ user_profiles_8:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_9:
   id: 10
   user_id: 10
@@ -168,6 +186,8 @@ user_profiles_9:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_10:
   id: 11
   user_id: 11
@@ -185,6 +205,8 @@ user_profiles_10:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_11:
   id: 12
   user_id: 12
@@ -202,6 +224,8 @@ user_profiles_11:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_12:
   id: 13
   user_id: 13
@@ -219,6 +243,8 @@ user_profiles_12:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_13:
   id: 14
   user_id: 14
@@ -236,6 +262,8 @@ user_profiles_13:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_14:
   id: 15
   user_id: 15
@@ -253,6 +281,8 @@ user_profiles_14:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_15:
   id: 16
   user_id: 16
@@ -270,6 +300,8 @@ user_profiles_15:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_16:
   id: 17
   user_id: 17
@@ -287,6 +319,8 @@ user_profiles_16:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_17:
   id: 18
   user_id: 18
@@ -304,6 +338,8 @@ user_profiles_17:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null
 user_profiles_18:
   id: 19
   user_id: 19
@@ -321,3 +357,5 @@ user_profiles_18:
   recipe_count: 0
   created_at: 2012-05-12 15:27:00 UTC
   updated_at: 2012-05-12 15:27:00 UTC
+  mail_status: true
+  deleted_at: null

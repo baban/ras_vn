@@ -2,6 +2,8 @@
 
 class User < ActiveRecord::Base
   establish_connection "cook24_users" if [:staging,:production].include?(Rails.env.to_sym)
+
+  acts_as_paranoid
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
@@ -33,6 +35,13 @@ class User < ActiveRecord::Base
     profile.email=h[:email]
     
     profile
+  end
+
+  def retire
+    self.entry_flg= false
+    self.save
+    self.recipes.update_all( " public = false " )
+    self
   end
 
   def admin?
