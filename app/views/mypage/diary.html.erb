@@ -9,7 +9,7 @@
 		<div class="paginate"><%= paginate @diary %></div>
 		<div class="content">
 			<% if user_signed_in? %>
-				<div id="diary_create_link">
+				<div id="diary_create_link" class="rbtn_s">
 					<%= link_to t(:new, scope:"views.diary"), controller:"diaries", action:"new" %>
 				</div>
 			<% end %>

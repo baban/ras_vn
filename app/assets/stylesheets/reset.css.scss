@@ -33,17 +33,41 @@ h1,h2,h3,h4,h5,h6 {font-size: 100%;font-style:normal;font-weight:normal;margin:0
 /*______________________________clearFix end*/
 
 /* Reset input[type="search"] */
-input[type="search"] { -webkit-appearance: textfield; -webkit-box-sizing: content-box;}
+input[type="search"] {
+  -webkit-appearance: textfield; -webkit-box-sizing: content-box;
+}
 input[type="search"]:focus { outline-offset: -2px;}
 input[type="search"]::-webkit-search-decoration { display: none;}
 input:focus, textarea:focus {outline: none;}
 
 /*link*/
-a:link, a:visited {text-decoration: none;outline:none; color:#222B44}
-a:hover, a:active, a:focus { color:#9095A1}
+a:link, a:visited {
+  text-decoration: none;
+  outline:none;
+  color:#222B44;
+}
+
+a:hover, a:active, a:focus {
+  color:#9095A1;
+}
 
 /**********************/
-header, footer, nav, article, section, aside{ display:block;}
-a:hover img { filter: alpha(opacity=80);  -moz-opacity:0.8;  opacity:0.8;}
-textarea{resize: vertical;}
-.global_header img, .global_footer img {_background:#FFF;*background:#FFF;background /*\**/: #FFF\9;}
+header, footer, nav, article, section, aside {
+  display:block;
+}
+
+a:hover img {
+  filter: alpha(opacity=80);
+  -moz-opacity:0.8; 
+  opacity:0.8;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.global_header img, .global_footer img {
+  _background:#FFF;
+  *background:#FFF;
+  background /*\**/: #FFF\9;
+}

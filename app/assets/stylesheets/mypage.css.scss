@@ -1,5 +1,21 @@
 @charset "UTF-8";
 
+.follow_user {
+  float:left;
+  margin-bottom:20px;
+  margin-left:30px;
+  li {
+    float:left;
+    padding:0 15px;
+    img {
+      border: 1px solid #4E2100;
+      float: left;
+      margin-right: 5px;
+      width: 22px;
+    }
+  }
+}
+
 .follow_button {
   &.follow:before {
     content:"following";
@@ -19,5 +35,30 @@
 li.oneself_name > a {
   color:white !important;
   text-decoration:underline;
+}
+
+/*日記編集*/
+.nbtn {
+  margin-top:20px;
+}
+
+.rbtn_s {
+  font-weight:bold;
+  margin-right:10px;
+  a {
+    background: #fe6b1d;
+    background: -moz-linear-gradient(top, #fe6b1d 0%, #cd0900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fe6b1d), color-stop(100%, #cd0900));
+    background: -webkit-linear-gradient(top, #fe6b1d 0%, #cd0900 100%);
+    background: -o-linear-gradient(top, #fe6b1d 0%, #cd0900 100%);
+    background: -ms-linear-gradient(top, #fe6b1d 0%, #cd0900 100%); border:1px solid #cd0900;
+    padding:5px 20px;
+    text-align:center;
+    -webkit-box-shadow: 0px 0px 3px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow:    0px 0px 3px rgba(50, 50, 50, 0.2);
+    box-shadow:         0px 0px 3px rgba(50, 50, 50, 0.2);
+  }
+  a:link, a:visited { color:#FFF }
+  a:hover { color:#CCC }
 }
 

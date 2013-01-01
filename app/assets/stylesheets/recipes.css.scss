@@ -2,11 +2,45 @@
 
 @import "parts/base";
 
-/* show */
-#public_button {
-  margin:0 1em;
-  float:right;
+.ttl_recipe {
+  font-size:24px;
+  font-weight:bold;
+  input {
+    width: 500px;
+    padding: 3px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 }
+
+.explanation {
+  margin-left:20px;
+  display:block;
+  float:left;
+  width:335px;
+  textarea {
+    width:333px;
+  }
+}
+
+.user_name {
+  text-align:right;
+  float:right;
+  font-size:16px;
+}
+
+.material {
+  clear:both;
+  margin-top:20px;
+}
+
+.material_txt {
+  font-size:18px;
+  color:#CCAF8B;
+}
+
+/* show */
 
 table.ingredients_list {
   width:100%;
@@ -50,24 +84,37 @@ table.ingredients_list {
     margin-bottom:5px;
   }
 }
+
 .rec_cat5 input {
   font-size:13px;
-}
-
-.explanation  textarea {
-  width:333px;
 }
 
 .i_att {
   margin:10px 0;
 }
 
-.close input{ height:25px; width:25px;  color:#fe6b1d; line-height:24px; font-size:15px; text-align:right; background:none; border:none; cursor:pointer}
-.ingredient_row input{ padding:3px;}
-.ingredient_quantity input{ width:80px; margin-right:5px}
-#ingredients .btn { text-align:right; margin:10px 0 0;}
-#ingredients .btn input{ cursor:pointer; padding:0 5px}
-.servings_for input{ width:50px; padding:3px; margin-right:5px;}
+.close input {
+  height:25px;
+  width:25px;
+  color:#fe6b1d;
+  line-height:24px;
+  font-size:15px;
+  text-align:right;
+  background:none; border:none;
+  cursor:pointer
+}
+.ingredient_row input {
+  padding:3px;
+}
+.ingredient_quantity input{
+  width:80px;
+  margin-right:5px
+}
+.servings_for input{
+  width:50px;
+  padding:3px;
+  margin-right:5px;
+}
 
 .cate01 textarea{ width:590px; padding:5px;}
 .iimg_a{ width:250px; float: left;}
@@ -75,15 +122,21 @@ table.ingredients_list {
 .cate01 .btn{ text-align:right; margin:5px 0 20px; margin-right:10px}
 .cate01 .btn input{ padding:5px;}
 .ltc img{ width:80px; height:80px; float:left; border:1px solid #CCC; margin-right:10px;}
-.inp_a section .piv{ text-align:right; padding-top:5px; float:right}
-.inp_a section .piv label{ margin-right:10px; cursor:pointer}
-.inp_a section .piv input{ width:auto; float:none; margin-right:5px}
-
-.ttl_recipe input {
-  width: 500px;
-  padding: 3px;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+.inp_a section .piv {
+  text-align:right;
+  padding-top:5px;
+  float:right
+  label {
+    margin-right:10px;
+    cursor:pointer;
+  }
+  input {
+    width:auto;
+    float:none;
+    margin-right:5px;
+  }
 }
-.btn input {font-size:13px;}
+
+.btn input {
+  font-size:13px;
+}

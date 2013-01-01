@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class RecipeComment < ActiveRecord::Base
+  acts_as_paranoid
+
   belongs_to :recipe
 
   validates :recipe_id, presence: true
