@@ -960,5 +960,12 @@ a:hover.blu {
   a:hover { color:#CCC }
 }
 
-a:link.blu, a:visited.blu { background:#222b44; color:#FFF }
-a:hover.blu { background:#222b44; }
+a.blu {
+  &:link, &:visited {
+    background:#222b44;
+    color:#FFF;
+  }
+  &:hover {
+    background:#222b44;
+  }
+}
