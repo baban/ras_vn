@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-@mixin separater {
-  content:"";
-  display:block;
-  width:100%;
-  clear:both;
-}
-
 @mixin clearfix {
   content:"";
   display:block;

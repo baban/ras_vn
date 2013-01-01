@@ -136,18 +136,18 @@ table.ingredients_list {
       display:inline;
     }
     &:after {
-      @include separater;
+      @include clearfix;
     }
   }
   p#search_youtube_area_close_button_row {
     &:before {
-      @include separater;
+      @include clearfix;
     }
     width:100%;
     text-align:right;
   }
   &:after {
-    @include separater;
+    @include clearfix;
   }
 }
 
