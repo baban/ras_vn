@@ -6,8 +6,7 @@
 		<meta content=",cook24,ẩm thực,recipe,món ăn,cookpad,đơn giản,nấu ăn,công thức nấu ăn,nấu ngon,ăn ngon" name="keywords" />
 		<meta content="Cook24 là Website lớn nhất Việt Nam, tập hợp tấc cả các món ăn Việt nam, Âu, Á, và đặt biệt là các món ăn Nhật đang được rất yêu chuộng ở Việt Nam. Tìm kiếm phương pháp và cách nấu các món ăn gia đình do các bà mẹ và chị em đăng lên. Nhiều món ăn với phương pháp chế biến đơn giản, dể hiểu. Bạn có thề đăng món ăn yêu thích của mình lên trang web một cách đơn giản và nhanh chóng" name="description" />
 		<link rel="shortcut icon" href="/favicon.gif" type="image/png" />
-		<%= stylesheet_link_tag "reset.css" %>
-		<%= stylesheet_link_tag "common.css" %>
+		<%= stylesheet_link_tag "application" %>
 		<%= stylesheet_link_tag params[:controller] %>
 		<%= yield :style_after %>
 		<% unless [:development,:text].include?(Rails.env.to_sym) %><%= javascript_include_tag :google_analytics %><% end %>
