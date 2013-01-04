@@ -48,6 +48,7 @@ gem "kaminari", "0.14.1" # paginate view
 gem "whenever", '0.7.2', require:false # cron settiing automation 
 gem "acts_as_readonlyable", '0.0.9' # sharding slave databases
 
+# deploy settings
 gem "capistrano", "2.9.0"
 gem "capistrano_colors", "0.5.5"
 gem "capistrano-ext", "1.2.1"
