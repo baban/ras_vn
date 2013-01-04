@@ -89,11 +89,13 @@ class Recipe < ActiveRecord::Base
     wheres<< [" recipe_food_id IN (?) ", foods.pluck(:id) ] if foods.pluck(:id).present?
 
     if params[:word]
-      foodstuffs = RecipeFoodstuff.where( " name LIKE ? ", "#{params[:recipe_food_name]}" ).select("distinct recipe_id").pluck(:recipe_id)
-      wheres<< [" id IN (?) ", foodstuffs ]
-      wheres<< [" title like ? ", "%#{params[:word]}%" ]      
+      word = params[:word].gsub( /^\s*/,'').gsub(/\s+$/,'')
+      foodstuffs = RecipeFoodstuff.where( " name = ? ", "#{word}" ).select("distinct recipe_id").pluck(:recipe_id)
+      wheres<< [ " id IN (?) ", foodstuffs ]
+      wheres<< [" title like ? ", "%#{word}%" ]
     end
 
+    # array pair data change to sql where segment
     wheres = [ wheres.map(&:first).join(" OR "), *wheres.map(&:second) ]
 
     recipes = Recipe.where( " public = true " )
