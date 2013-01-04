@@ -41,7 +41,7 @@
 						<div class="clearfix">
 							<p class="user_name">
 								<span class="flo_l"><%= image_tag (@draft.user.profile.image.url(:small_icon) || "common/user_ico.png"), size:"22x22", alt:"" %></span>
-								<span class="flo_l"><%= link_to @draft.user.profile.nickname, kitchen_url(@user) %></span>
+								<span class="flo_l"><%= link_to @draft.user.profile.nickname, kitchens_url(@user) %></span>
 							</p>
 						</div>
 						<div class="ltc cl clearfix">
