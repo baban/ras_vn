@@ -149,15 +149,14 @@ header {
     float:left;
     height:40px;
     line-height:40px;
-    a:link, a:visited {
-      color:#FFF
+    a {
+      &:link, &:visited {
+        color:#FFF
+      }
+      &:hover {
+        color:#CCC;
+      }
     }
-    a:hover {
-      color:#CCC;
-    }
-  }
-  ul {
-    background:url(/assets/common/hd_line.gif) no-repeat 100% 50%;
   }
   li {
     float:left;
