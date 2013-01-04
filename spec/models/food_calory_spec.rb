@@ -3,6 +3,7 @@
 require 'spec_helper'
 
 describe FoodCalory do
+  fixtures :food_calories
   describe "#calc_calory" do
     context "個数" do
       before do

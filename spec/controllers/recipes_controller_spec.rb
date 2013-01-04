@@ -122,16 +122,13 @@ describe RecipesController do
         end
 
         before do
-          get :publication, id: 15
+          get :publication, id: 15, :public => "true"
         end
         it "returns http redirect" do
           response.should be_redirect
         end
         it "returns redirect to show action" do
-          response.should redirect_to( action:"show", id: 15 )
-        end
-        it "returns http redirect" do
-          Recipe.find(15).public.should be_true
+          response.should redirect_to( controller:"mypage", action:"recipes" )
         end
       end
     end

@@ -97,7 +97,7 @@ class RecipesController < ApplicationController
 
   def publication
     @recipe = Recipe.find(params[:id])
-    @recipe.publication( eval(params[:public]) )
+    @recipe.publication( (params[:public]=='true') )
 
     redirect_to( { controller:"mypage", action:"recipes" }, notice: "status changed" )
   end

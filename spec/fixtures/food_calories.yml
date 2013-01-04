@@ -1,0 +1,1200 @@
+food_calories_0:
+  id: 1
+  name: キャベツ
+  calory: 20
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_1:
+  id: 2
+  name: きゅうり
+  calory: 10
+  amount: 1
+  unit: 本
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_2:
+  id: 3
+  name: ゴーヤ
+  calory: 34
+  amount: 1
+  unit: 本
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_3:
+  id: 4
+  name: サラダ菜
+  calory: 14
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_4:
+  id: 5
+  name: リーフレタス
+  calory: 16
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_5:
+  id: 6
+  name: レタス
+  calory: 12
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_6:
+  id: 7
+  name: セロリ
+  calory: 12
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_7:
+  id: 8
+  name: アルファルファ
+  calory: 12
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_8:
+  id: 9
+  name: ほうれん草
+  calory: 20
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_9:
+  id: 10
+  name: チンゲンサイ
+  calory: 12
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_10:
+  id: 11
+  name: 小松菜
+  calory: 14
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_11:
+  id: 12
+  name: 春菊
+  calory: 22
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_12:
+  id: 13
+  name: 白菜
+  calory: 180
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_13:
+  id: 14
+  name: かぶ
+  calory: 13
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_14:
+  id: 15
+  name: 大根
+  calory: 18
+  amount: 100
+  unit: 本
+  created_at: 2012-12-24 07:15:40 UTC
+  updated_at: 2012-12-24 07:15:40 UTC
+food_calories_15:
+  id: 16
+  name: 人参
+  calory: 80
+  amount: 1
+  unit: 本
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_16:
+  id: 17
+  name: ごぼう
+  calory: 76
+  amount: 1
+  unit: 本
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_17:
+  id: 18
+  name: じゃがいも
+  calory: 160
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_18:
+  id: 19
+  name: さつまいも
+  calory: 250
+  amount: 1
+  unit: 本
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_19:
+  id: 20
+  name: さといも
+  calory: 130
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_20:
+  id: 21
+  name: 山芋
+  calory: 65
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_21:
+  id: 22
+  name: 玉ねぎ
+  calory: 80
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_22:
+  id: 23
+  name: 長ねぎ
+  calory: 27
+  amount: 1
+  unit: 本
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_23:
+  id: 24
+  name: かぼちゃ
+  calory: 49
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_24:
+  id: 25
+  name: ピーマン
+  calory: 7
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_25:
+  id: 26
+  name: トマト
+  calory: 28
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_26:
+  id: 27
+  name: プチトマト
+  calory: 4
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_27:
+  id: 28
+  name: なす
+  calory: 15
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_28:
+  id: 29
+  name: ブロッコリー
+  calory: 8
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_29:
+  id: 30
+  name: カリフラワー
+  calory: 7
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_30:
+  id: 31
+  name: アスパラ
+  calory: 22
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_31:
+  id: 32
+  name: おかひじき
+  calory: 16
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_32:
+  id: 33
+  name: 枝豆
+  calory: 135
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_33:
+  id: 34
+  name: オクラ
+  calory: 3
+  amount: 1
+  unit: 本
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_34:
+  id: 35
+  name: とうもろこし
+  calory: 180
+  amount: 1
+  unit: 本
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_35:
+  id: 36
+  name: 味付け海苔（8枚切り）
+  calory: 6
+  amount: 8
+  unit: 枚
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_36:
+  id: 37
+  name: 韓国海苔（8枚切り）
+  calory: 16
+  amount: 8
+  unit: 枚
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_37:
+  id: 38
+  name: 青のり
+  calory: 0
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_38:
+  id: 39
+  name: 生麩
+  calory: 160
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_39:
+  id: 40
+  name: 観世麩
+  calory: 380
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_40:
+  id: 41
+  name: 板麩
+  calory: 380
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_41:
+  id: 42
+  name: 車麩
+  calory: 390
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_42:
+  id: 43
+  name: 竹輪麩
+  calory: 170
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_43:
+  id: 44
+  name: 干し湯葉
+  calory: 0
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_44:
+  id: 45
+  name: こうや豆腐
+  calory: 87
+  amount: 1
+  unit: 個
+  created_at: 2012-12-24 07:38:17 UTC
+  updated_at: 2012-12-24 07:38:17 UTC
+food_calories_45:
+  id: 46
+  name: 干ししいたけ
+  calory: 0
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:18 UTC
+  updated_at: 2012-12-24 07:38:18 UTC
+food_calories_46:
+  id: 47
+  name: だしこんぶ
+  calory: 0
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:18 UTC
+  updated_at: 2012-12-24 07:38:18 UTC
+food_calories_47:
+  id: 48
+  name: 塩こんぶ
+  calory: 0
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:18 UTC
+  updated_at: 2012-12-24 07:38:18 UTC
+food_calories_48:
+  id: 49
+  name: とろろこんぶ
+  calory: 0
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:18 UTC
+  updated_at: 2012-12-24 07:38:18 UTC
+food_calories_49:
+  id: 50
+  name: 乾燥わかめ
+  calory: 0
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:18 UTC
+  updated_at: 2012-12-24 07:38:18 UTC
+food_calories_50:
+  id: 51
+  name: 乾燥ふのり
+  calory: 0
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:18 UTC
+  updated_at: 2012-12-24 07:38:18 UTC
+food_calories_51:
+  id: 52
+  name: 乾燥ひじき
+  calory: 0
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 07:38:18 UTC
+  updated_at: 2012-12-24 07:38:18 UTC
+food_calories_52:
+  id: 53
+  name: 牛肩ロース
+  calory: 316
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 08:06:21 UTC
+  updated_at: 2012-12-24 08:06:21 UTC
+food_calories_53:
+  id: 54
+  name: リブロース
+  calory: 331
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 08:06:21 UTC
+  updated_at: 2012-12-24 08:06:21 UTC
+food_calories_54:
+  id: 55
+  name: サーロイン
+  calory: 317
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 08:06:21 UTC
+  updated_at: 2012-12-24 08:06:21 UTC
+food_calories_55:
+  id: 56
+  name: 牛もも肉
+  calory: 191
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 08:06:21 UTC
+  updated_at: 2012-12-24 08:06:21 UTC
+food_calories_56:
+  id: 57
+  name: 牛ランプ肉
+  calory: 211
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 08:06:21 UTC
+  updated_at: 2012-12-24 08:06:21 UTC
+food_calories_57:
+  id: 58
+  name: 牛ヒレ肉
+  calory: 223
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 08:06:21 UTC
+  updated_at: 2012-12-24 08:06:21 UTC
+food_calories_58:
+  id: 59
+  name: 牛ひき肉
+  calory: 224
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 08:06:21 UTC
+  updated_at: 2012-12-24 08:06:21 UTC
+food_calories_59:
+  id: 60
+  name: 牛タン
+  calory: 270
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 08:06:21 UTC
+  updated_at: 2012-12-24 08:06:21 UTC
+food_calories_60:
+  id: 61
+  name: はつ
+  calory: 142
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 08:06:21 UTC
+  updated_at: 2012-12-24 08:06:21 UTC
+food_calories_61:
+  id: 62
+  name: ビーフジャーキー
+  calory: 316
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 08:06:21 UTC
+  updated_at: 2012-12-24 08:06:21 UTC
+food_calories_62:
+  id: 63
+  name: コンビーフ
+  calory: 202
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 08:06:21 UTC
+  updated_at: 2012-12-24 08:06:21 UTC
+food_calories_63:
+  id: 64
+  name: スモークタン
+  calory: 284
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 08:06:21 UTC
+  updated_at: 2012-12-24 08:06:21 UTC
+food_calories_64:
+  id: 65
+  name: 手羽先
+  calory: 195
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_65:
+  id: 66
+  name: 鶏むね肉
+  calory: 244
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_66:
+  id: 67
+  name: 鶏もも肉
+  calory: 253
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_67:
+  id: 68
+  name: ささみ
+  calory: 114
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_68:
+  id: 69
+  name: 鶏挽肉
+  calory: 166
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_69:
+  id: 70
+  name: 鶏レバー
+  calory: 110
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_70:
+  id: 71
+  name: 鶏砂肝
+  calory: 95
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_71:
+  id: 72
+  name: 真アジ
+  calory: 164
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_72:
+  id: 73
+  name: アナゴ
+  calory: 194
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_73:
+  id: 74
+  name: アユ
+  calory: 117
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_74:
+  id: 75
+  name: かたくちイワシ
+  calory: 332
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_75:
+  id: 76
+  name: 真イワシ
+  calory: 217
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_76:
+  id: 77
+  name: しらす
+  calory: 206
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_77:
+  id: 78
+  name: うなぎ
+  calory: 293
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_78:
+  id: 79
+  name: メカジキ
+  calory: 141
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_79:
+  id: 80
+  name: カツオ
+  calory: 165
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_80:
+  id: 81
+  name: かつお節
+  calory: 360
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_81:
+  id: 82
+  name: カマス
+  calory: 145
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_82:
+  id: 83
+  name: カレイ
+  calory: 143
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_83:
+  id: 84
+  name: 鮭
+  calory: 154
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_84:
+  id: 85
+  name: 塩鮭
+  calory: 199
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_85:
+  id: 86
+  name: 銀鮭
+  calory: 257
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_86:
+  id: 87
+  name: ニジマス
+  calory: 265
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_87:
+  id: 88
+  name: サバ
+  calory: 291
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_88:
+  id: 89
+  name: しめサバ
+  calory: 339
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_89:
+  id: 90
+  name: サバ缶
+  calory: 217
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_90:
+  id: 91
+  name: サンマ
+  calory: 299
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_91:
+  id: 92
+  name: ししゃも
+  calory: 177
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_92:
+  id: 93
+  name: すけそうタラ
+  calory: 98
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_93:
+  id: 94
+  name: 真タラ
+  calory: 109
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_94:
+  id: 95
+  name: にしん
+  calory: 246
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_95:
+  id: 96
+  name: フグ
+  calory: 85
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_96:
+  id: 97
+  name: ホッケ
+  calory: 142
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_97:
+  id: 98
+  name: 赤マグロ
+  calory: 125
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_98:
+  id: 99
+  name: トロ
+  calory: 344
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_99:
+  id: 100
+  name: ツナ缶
+  calory: 277
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_100:
+  id: 101
+  name: ムツ(水煮)
+  calory: 173
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_101:
+  id: 102
+  name: ワカサギ(佃煮)
+  calory: 317
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_102:
+  id: 103
+  name: カズノコ
+  calory: 90
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_103:
+  id: 104
+  name: タラコ
+  calory: 170
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_104:
+  id: 105
+  name: 明太子
+  calory: 130
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:03 UTC
+food_calories_105:
+  id: 106
+  name: イクラ
+  calory: 270
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:03 UTC
+  updated_at: 2012-12-24 13:51:04 UTC
+food_calories_106:
+  id: 107
+  name: キャビア
+  calory: 260
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:51:04 UTC
+  updated_at: 2012-12-24 13:51:04 UTC
+food_calories_107:
+  id: 108
+  name: アサリ
+  calory: 30
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_108:
+  id: 109
+  name: アワビ
+  calory: 73
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_109:
+  id: 110
+  name: 干しアワビ
+  calory: 273
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_110:
+  id: 111
+  name: 生カキ
+  calory: 60
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_111:
+  id: 112
+  name: サザエ
+  calory: 97
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_112:
+  id: 113
+  name: シジミ
+  calory: 51
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_113:
+  id: 114
+  name: ハマグリ
+  calory: 77
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_114:
+  id: 115
+  name: ホタテ
+  calory: 72
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_115:
+  id: 116
+  name: ホタテ貝柱
+  calory: 97
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_116:
+  id: 117
+  name: ホッキ貝
+  calory: 73
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_117:
+  id: 118
+  name: ミル貝
+  calory: 82
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_118:
+  id: 119
+  name: 甘エビ
+  calory: 87
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_119:
+  id: 120
+  name: 伊勢エビ
+  calory: 92
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_120:
+  id: 121
+  name: 車エビ
+  calory: 124
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_121:
+  id: 122
+  name: 大正エビ
+  calory: 95
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_122:
+  id: 123
+  name: ブラックタイガー
+  calory: 82
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_123:
+  id: 124
+  name: 干しエビ
+  calory: 230
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_124:
+  id: 125
+  name: エビ佃煮
+  calory: 240
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_125:
+  id: 126
+  name: 毛ガニ
+  calory: 83
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_126:
+  id: 127
+  name: ズワイガニ
+  calory: 69
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_127:
+  id: 128
+  name: タラバガニ
+  calory: 80
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_128:
+  id: 129
+  name: けんさきイカ
+  calory: 84
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_129:
+  id: 130
+  name: するめイカ
+  calory: 88
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_130:
+  id: 131
+  name: ほたるイカ
+  calory: 104
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_131:
+  id: 132
+  name: ほたるイカ
+  calory: 325
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_132:
+  id: 133
+  name: やりイカ(生)
+  calory: 85
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_133:
+  id: 134
+  name: するめ
+  calory: 334
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_134:
+  id: 135
+  name: さきイカ
+  calory: 279
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_135:
+  id: 136
+  name: イカ燻製
+  calory: 206
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_136:
+  id: 137
+  name: イカの塩辛
+  calory: 115
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_137:
+  id: 138
+  name: 真ダコ
+  calory: 76
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_138:
+  id: 139
+  name: ゆでダコ
+  calory: 99
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_139:
+  id: 140
+  name: ウニ(生)20ｇ
+  calory: 24
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_140:
+  id: 141
+  name: カニかま
+  calory: 90
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_141:
+  id: 142
+  name: 蒸しかまぼこ
+  calory: 96
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_142:
+  id: 143
+  name: ちくわ
+  calory: 122
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_143:
+  id: 144
+  name: 伊達巻き
+  calory: 126
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_144:
+  id: 145
+  name: つみれ
+  calory: 114
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_145:
+  id: 146
+  name: なると
+  calory: 80
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_146:
+  id: 147
+  name: はんぺん
+  calory: 94
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_147:
+  id: 148
+  name: さつま揚げ
+  calory: 139
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_148:
+  id: 149
+  name: 魚肉ハム
+  calory: 160
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC
+food_calories_149:
+  id: 150
+  name: 魚肉ソーセージ
+  calory: 160
+  amount: 100
+  unit: g
+  created_at: 2012-12-24 13:58:23 UTC
+  updated_at: 2012-12-24 13:58:23 UTC

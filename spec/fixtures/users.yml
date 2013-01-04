@@ -1,9 +1,7 @@
 users_0:
   id: 1
   email: babanba.n@gmail.com
-  encrypted_password: JDJhJDEwJFNHMHpxeUFSQlNXQU02RlJMNXVvNk9uUFNCUFVXaTI0SUEzaXIw
-bFd4dkl2N1JHVlVucVo2
-
+  encrypted_password: JDJhJDEwJFNHMHpxeUFSQlNXQU02RlJMNXVvNk9uUFNCUFVXaTI0SUEzaXIwbFd4dkl2N1JHVlVucVo2
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -24,9 +22,7 @@ bFd4dkl2N1JHVlVucVo2
 users_1:
   id: 2
   email: 1@test.jp
-  encrypted_password: JDJhJDEwJEliVXU5eTRvVFpPYmFjZFRRaEJ3SE9lNDlGZldiM2tVQVpOU0lp
-Q3pnUHhnd3FxTTU2VWhx
-
+  encrypted_password: JDJhJDEwJEliVXU5eTRvVFpPYmFjZFRRaEJ3SE9lNDlGZldiM2tVQVpOU0lpQ3pnUHhnd3FxTTU2VWhx
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -47,9 +43,7 @@ Q3pnUHhnd3FxTTU2VWhx
 users_2:
   id: 3
   email: 2@test.jp
-  encrypted_password: JDJhJDEwJEhlVXdXSVl5QmhvWGMzSUdkYVdzdGVCRFF5TlB1MUFDTERKckUx
-cnNidGFMcnJzdy4udDFX
-
+  encrypted_password: JDJhJDEwJEhlVXdXSVl5QmhvWGMzSUdkYVdzdGVCRFF5TlB1MUFDTERKckUxcnNidGFMcnJzdy4udDFX
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -70,9 +64,7 @@ cnNidGFMcnJzdy4udDFX
 users_3:
   id: 4
   email: 3@test.jp
-  encrypted_password: JDJhJDEwJDR3US91NmhwamdmYXVJdFI4bWtnTS4yelRJUUdFaHdWL2Z0UGxu
-bHl2MElFUzdIMlNVcTB1
-
+  encrypted_password: JDJhJDEwJDR3US91NmhwamdmYXVJdFI4bWtnTS4yelRJUUdFaHdWL2Z0UGxubHl2MElFUzdIMlNVcTB1
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -93,9 +85,7 @@ bHl2MElFUzdIMlNVcTB1
 users_4:
   id: 5
   email: 4@test.jp
-  encrypted_password: JDJhJDEwJGVMUGZyMmo0MThLV1RSdGdUSWRzYk9sSC5GZW00RS5UajJST3dP
-UnRQVXEyeXZnM2xFUlVP
-
+  encrypted_password: JDJhJDEwJGVMUGZyMmo0MThLV1RSdGdUSWRzYk9sSC5GZW00RS5UajJST3dPUnRQVXEyeXZnM2xFUlVP
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -116,9 +106,7 @@ UnRQVXEyeXZnM2xFUlVP
 users_5:
   id: 6
   email: 5@test.jp
-  encrypted_password: JDJhJDEwJFRKV1JRYW5mcExVVGZQckxkWTNkb3VkaEx4SS44MVYvbFJYZ2gu
-dHJXNlV2SmVrZlhLQkZx
-
+  encrypted_password: JDJhJDEwJFRKV1JRYW5mcExVVGZQckxkWTNkb3VkaEx4SS44MVYvbFJYZ2gudHJXNlV2SmVrZlhLQkZx
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -139,9 +127,7 @@ dHJXNlV2SmVrZlhLQkZx
 users_6:
   id: 7
   email: 6@test.jp
-  encrypted_password: JDJhJDEwJGd3MG5EQUhHSjJtNEZDTXlYeW5UUnVBMmwyNFNzUXBxd3JmaC95
-aFM2UzJJS3VrbWRUL0JH
-
+  encrypted_password: JDJhJDEwJGd3MG5EQUhHSjJtNEZDTXlYeW5UUnVBMmwyNFNzUXBxd3JmaC95aFM2UzJJS3VrbWRUL0JH
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -162,9 +148,7 @@ aFM2UzJJS3VrbWRUL0JH
 users_7:
   id: 8
   email: 7@test.jp
-  encrypted_password: JDJhJDEwJG5PTGRxb2ZhL3ZONDNVVmJ6MzJKTmVTbzFKU3hOMDdhN1F6WDNx
-UENJYjlyWFVjNVI4ektt
-
+  encrypted_password: JDJhJDEwJG5PTGRxb2ZhL3ZONDNVVmJ6MzJKTmVTbzFKU3hOMDdhN1F6WDNxUENJYjlyWFVjNVI4ektt
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -185,9 +169,7 @@ UENJYjlyWFVjNVI4ektt
 users_8:
   id: 9
   email: 8@test.jp
-  encrypted_password: JDJhJDEwJERNNEpHTjVrb3MwOU04MGRJRy5xWmVHL3lmNlBsejVVLmh4SC51
-TGVGQmR5RTFxSWVuSzcy
-
+  encrypted_password: JDJhJDEwJERNNEpHTjVrb3MwOU04MGRJRy5xWmVHL3lmNlBsejVVLmh4SC51TGVGQmR5RTFxSWVuSzcy
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -208,9 +190,7 @@ TGVGQmR5RTFxSWVuSzcy
 users_9:
   id: 10
   email: 9@test.jp
-  encrypted_password: JDJhJDEwJGZSRzFJVEZKUWVEQ3IyeFJxRVR2QWVWajBHeW5ZbDB1ZzkzMy9M
-MTk4Q2tFWFJEUFlTUUxT
-
+  encrypted_password: JDJhJDEwJGZSRzFJVEZKUWVEQ3IyeFJxRVR2QWVWajBHeW5ZbDB1ZzkzMy9MMTk4Q2tFWFJEUFlTUUxT
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -231,9 +211,7 @@ MTk4Q2tFWFJEUFlTUUxT
 users_10:
   id: 11
   email: 10@test.jp
-  encrypted_password: JDJhJDEwJFV2eTdzUE5MSWZsY3hySFFDM3IzSWVGQ2dPRnNJNjNJUWR3dlp0
-WlZxdktNNjc3RW9UTkRX
-
+  encrypted_password: JDJhJDEwJFV2eTdzUE5MSWZsY3hySFFDM3IzSWVGQ2dPRnNJNjNJUWR3dlp0WlZxdktNNjc3RW9UTkRX
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -254,9 +232,7 @@ WlZxdktNNjc3RW9UTkRX
 users_11:
   id: 12
   email: 11@test.jp
-  encrypted_password: JDJhJDEwJEp5WkRQNGVRS1ZiVTFjLmlkOEVWamVOdDJyeDRKYTduRENIUGta
-UnhYVWpaN1hwVXYzZDVP
-
+  encrypted_password: JDJhJDEwJEp5WkRQNGVRS1ZiVTFjLmlkOEVWamVOdDJyeDRKYTduRENIUGtaUnhYVWpaN1hwVXYzZDVP
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -277,9 +253,7 @@ UnhYVWpaN1hwVXYzZDVP
 users_12:
   id: 13
   email: 12@test.jp
-  encrypted_password: JDJhJDEwJERnYXhQL3BMU0NmdXNMYTdya2V2YS5KaW5BeVR6LjdJRnJub0s0
-bE53c21oWXJraGx4Y0o2
-
+  encrypted_password: JDJhJDEwJERnYXhQL3BMU0NmdXNMYTdya2V2YS5KaW5BeVR6LjdJRnJub0s0bE53c21oWXJraGx4Y0o2
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -300,9 +274,7 @@ bE53c21oWXJraGx4Y0o2
 users_13:
   id: 14
   email: 13@test.jp
-  encrypted_password: JDJhJDEwJDVJMjE1ZXNWZHo1Ums3WEZmRUFzaE9KQ1VoT2VJQmFiUnpzdkll
-cnBoaU12WHdrQ29vWTFl
-
+  encrypted_password: JDJhJDEwJDVJMjE1ZXNWZHo1Ums3WEZmRUFzaE9KQ1VoT2VJQmFiUnpzdkllcnBoaU12WHdrQ29vWTFl
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -323,9 +295,7 @@ cnBoaU12WHdrQ29vWTFl
 users_14:
   id: 15
   email: 14@test.jp
-  encrypted_password: JDJhJDEwJG53NVVsbklJQXd0MHlqck5xWlJJeC5JOFRXTG1Bdm9qUThNNTBU
-cnVUTFA1WDlaSm9NT1lP
-
+  encrypted_password: JDJhJDEwJG53NVVsbklJQXd0MHlqck5xWlJJeC5JOFRXTG1Bdm9qUThNNTBUcnVUTFA1WDlaSm9NT1lP
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -346,9 +316,7 @@ cnVUTFA1WDlaSm9NT1lP
 users_15:
   id: 16
   email: 15@test.jp
-  encrypted_password: JDJhJDEwJEVtZHM2MDdTSzhOcXkvR0hHaFFjMy5yeEl4aTVSdVVjYkE4VC5u
-aURBU1lILm90cUIyTkxx
-
+  encrypted_password: JDJhJDEwJEVtZHM2MDdTSzhOcXkvR0hHaFFjMy5yeEl4aTVSdVVjYkE4VC5uaURBU1lILm90cUIyTkxx
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -369,9 +337,7 @@ aURBU1lILm90cUIyTkxx
 users_16:
   id: 17
   email: 16@test.jp
-  encrypted_password: JDJhJDEwJEtUWWsvZ1Q5UTNoUGg5SnNCOGxMSXVxaG15dHZsY0U0TG9qLmFP
-U1ouLnRLQm1BNVd5NDdt
-
+  encrypted_password: JDJhJDEwJEtUWWsvZ1Q5UTNoUGg5SnNCOGxMSXVxaG15dHZsY0U0TG9qLmFPU1ouLnRLQm1BNVd5NDdt
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -392,9 +358,7 @@ U1ouLnRLQm1BNVd5NDdt
 users_17:
   id: 18
   email: 17@test.jp
-  encrypted_password: JDJhJDEwJENFNS8xVmguc09ZaFUuRmZWbU11S09NUkhzOGVTVmFFa1I2Umtj
-NlQuN1d2enAvTFRPQjRP
-
+  encrypted_password: JDJhJDEwJENFNS8xVmguc09ZaFUuRmZWbU11S09NUkhzOGVTVmFFa1I2UmtjNlQuN1d2enAvTFRPQjRP
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -415,9 +379,7 @@ NlQuN1d2enAvTFRPQjRP
 users_18:
   id: 19
   email: 18@test.jp
-  encrypted_password: JDJhJDEwJHRWaTJBT21mM1IvNXNPUTFRRW9vS3U3dGtQOE9yYm9XZWliZElY
-VDJuakpVM0ltMjBYMHlX
-
+  encrypted_password: JDJhJDEwJHRWaTJBT21mM1IvNXNPUTFRRW9vS3U3dGtQOE9yYm9XZWliZElYVDJuakpVM0ltMjBYMHlX
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -438,9 +400,7 @@ VDJuakpVM0ltMjBYMHlX
 users_19:
   id: 20
   email: 19@test.jp
-  encrypted_password: JDJhJDEwJGdGNFM3OU5lT2xEdDlZUnQuYWpQVU85Mmk5cDZKVlNXUkdxUXBw
-a2lTRkhpeGMzMnM1R2NL
-
+  encrypted_password: JDJhJDEwJGdGNFM3OU5lT2xEdDlZUnQuYWpQVU85Mmk5cDZKVlNXUkdxUXBwa2lTRkhpeGMzMnM1R2NL
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
@@ -461,9 +421,7 @@ a2lTRkhpeGMzMnM1R2NL
 users_20:
   id: 21
   email: 20@test.jp
-  encrypted_password: JDJhJDEwJDIvU0QzdTZOdU82dnRteDNoY1Q3V09TUnVHMzB5T0xVeml5b1pz
-am5JRzd4SFNNNmtUTzNH
-
+  encrypted_password: JDJhJDEwJDIvU0QzdTZOdU82dnRteDNoY1Q3V09TUnVHMzB5T0xVeml5b1pzam5JRzd4SFNNNmtUTzNH
   reset_password_token: null
   reset_password_sent_at: null
   remember_created_at: null
