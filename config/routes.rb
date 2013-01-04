@@ -12,7 +12,7 @@ RasVn::Application.routes.draw do
   get "top/index", as:'user_root'
   match '/recipes/recipe_foods/:recipe_food_id', controller:"recipes", action:"index"
 
-  resource(:profile)
+  resource(:profile){ collection { get :delete_confirm } }
   resources(:bookmarks)
   resources(:diaries)
   resources(:facebook_friends) { collection { get :invited; post :invite } }

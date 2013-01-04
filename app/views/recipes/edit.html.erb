@@ -111,9 +111,7 @@
 								</section>
 							<% end %>
 						</div>
-
 						<div class="btn"><%= submit_tag t(:add_step, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></div>
-
 						<div id="search_youtube_area">
 							<div class="content">
 								<%= hidden_field_tag :step_number, "1", id:"search_youtube_step_number" %>
@@ -138,6 +136,5 @@
 			</div>
 			<!--main_clmEnd-->
 		<% end %>
-		<%=render partial:"layouts/right_side_content" %>
 	</div>
 </div>

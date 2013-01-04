@@ -7,168 +7,78 @@
 		<article class="inp_a clearfix">
 			<h1 class="txt16">Thay đổi Profile</h1>
 			<%= semantic_form_for @profile, url:{ action:"update" } do |f| %>
-			<!--
-			<div class="err">
-				不正な値です
-			</div>
-			-->
-			<section class="line">
-				<div class="ltc cl clearfix">
-					<p>Hình ảnh</p>
-					<%= profile_image_tag @profile %>
-					<%= f.file_field :image %>
-
-					<p class="ivie">
-						<span class="ive txt11 radi10">Public</span>
-					</p>
-				</div>
-				<div class="ltc cl clearfix">
-					<p>
-						<%= f.label :nickname %>
-					</p>
-					<%= f.text_field :nickname, value: @profile.nickname %>
-					<p class="ivie">
-						<span class="ive txt11 radi10"><%= t( :public, scope:"status" ) %></span>
-					</p>
-				</div>
-				
-				<div class="ltc cl clearfix">
-					<p>
-						<%= f.label :birthday %>
-					</p>
-					<div class="ibox">
-						<%= f.text_field :birthday, value: @profile.birthday %>
+				<% if @profile.errors.any? %>
+					<div id="error_explanation">
+						<ul>
+							<% @profile.errors.each do |error| %>
+								<li><%= error %></li>
+							<% end %>
+						</ul>
 					</div>
-					<div class="piv">
-						<label>
-						<%= visibility_radios( @visibility, :birthday ) %>
-						</label>
+				<% end %>
+				<section class="line">
+					<div class="ltc cl clearfix">
+						<p>Hình ảnh</p>
+						<%= profile_image_tag @profile %>
+						<%= f.file_field :image %>
+						<p class="ivie"><span class="ive txt11 radi10">Public</span></p>
 					</div>
-				</div>
-				
-				<div class="ltc cl clearfix">
-					<p>
-						<%= f.label :email %>
-					</p>
-					<%= f.text_field :email, value: @profile.email %>
-					<div class="piv">
-						<label>
-						<%= visibility_radios( @visibility, :email ) %>
-						</label>
+					<div class="ltc cl clearfix">
+						<p><%= f.label :nickname %></p>
+						<%= f.text_field :nickname, value: @profile.nickname %>
+						<p class="ivie"><span class="ive txt11 radi10"><%= t( :public, scope:"status" ) %></span></p>
 					</div>
-				</div>
-				<div class="sltc cl clearfix">
-					<p>
-						<%= f.label :sex %>
-					</p>
-					<div class="ibox">
-						<label>
-						<%= select_sex( f, @profile.sex ) %>
-						</label>
+					<div class="ltc cl clearfix">
+						<p><%= f.label :birthday %></p>
+						<div class="ibox">
+							<%= f.text_field :birthday, value: @profile.birthday %>
+						</div>
+						<div class="piv">
+							<label><%= visibility_radios( @visibility, :birthday ) %></label>
+						</div>
 					</div>
-					<div class="piv">
-						<label>
-						<%= visibility_radios( @visibility, :sex ) %>
-						</label>
+					<div class="ltc cl clearfix">
+						<p><%= f.label :email %></p>
+						<%= f.text_field :email, value: @profile.email %>
+						<div class="piv">
+							<label><%= visibility_radios( @visibility, :email ) %></label>
+						</div>
 					</div>
-				</div>
-
-				<div class="ltc cl clearfix">
-					<p>
-						<%= t(:distinct_id, scope:"activerecord.attributes.user_profile") %>
-					</p>
-					<div class="ibox">
-						<%= distinct_selecter( f, selected: @profile.distinct_id ) %>
-						<p class="txt11">
-							Chọn địa danh đang sinh sống
-						</p>
+					<div class="sltc cl clearfix">
+						<p><%= f.label :sex %></p>
+						<div class="ibox">
+							<label><%= select_sex( f, @profile.sex ) %></label>
+						</div>
+						<div class="piv">
+							<label><%= visibility_radios( @visibility, :sex ) %></label>
+						</div>
 					</div>
-					<div class="piv">
-						<label>
-							<%= visibility_radios( @visibility, :distinct_id ) %>
-						</label>
+					<div class="ltc cl clearfix">
+						<p><%= t(:distinct_id, scope:"activerecord.attributes.user_profile") %></p>
+						<div class="ibox">
+							<%= distinct_selecter( f, selected: @profile.distinct_id ) %>
+							<p class="txt11">Chọn địa danh đang sinh sống</p>
+						</div>
+						<div class="piv">
+							<label><%= visibility_radios( @visibility, :distinct_id ) %></label>
+						</div>
 					</div>
-				</div>
-				
-				<div class="ltc cl clearfix">
-					<p>
-						<%= f.label :comment %>
-					</p>
-					<div class="ibox">
-						<%= f.text_field :comment, value: @profile.comment %>
+					<div class="ltc cl clearfix">
+						<p><%= f.label :comment %></p>
+						<div class="ibox">
+							<%= f.text_field :comment, value: @profile.comment %>
+						</div>
+						<div class="piv">
+							<p class="ivie">
+								<span class="ive txt11 radi10"><%= t( :public, scope:"status" ) %></span>
+							</p>
+						</div>
 					</div>
-					<div class="piv">
-						<p class="ivie">
-							<span class="ive txt11 radi10"><%= t( :public, scope:"status" ) %></span>
-						</p>
-					</div>
-
-				</div>
-				<div class="inp_btn cl">
-					<%= f.submit %>
-				</div>
-			</section>
+					<div class="inp_btn cl"><%= f.submit %></div>
+				</section>
 			<% end %>
 		</article>
+		<p class="flo_r"><%=link_to "stop account", action:"delete_confirm" %></p>
 	</div>
 </div>
 
-<!--
-<div id="content_body" class="bace_bg">
-	<%= render partial:"mypage/content_header" %>
-	<div id="mypage_content" class="clearfix mypage_content" >
-		<h2 class="txt20">Thay đổi Profile</h2>
-		<div class="content">
-			<%= semantic_form_for @profile, url:{ action:"update" } do |f| %>
-			<table>
-				<tr>
-					<td><%= profile_image_tag @profile %></td>
-				</tr>
-				<tr>
-					<td>
-					<p>
-						<%= f.file_field :image %>
-					</p></td>
-				</tr>
-			</table>
-
-			<table id="profiles">
-				<tr>
-					<th><%= f.label :nickname %></th>
-					<td colspan="2"><%= f.text_field :nickname, value: @profile.nickname %></td>
-					<td><%= t( :public, scope:"status" ) %></td>
-				</tr>
-				<tr>
-					<th><%= f.label :birthday %></th>
-					<td colspan="2"><%= f.text_field :birthday, value: @profile.birthday %></td>
-					<td><%= visibility_radios( @visibility, :birthday ) %></td>
-				</tr>
-				<tr>
-					<th><%= f.label :email %></th>
-					<td colspan="2"><%= f.text_field :email, value: @profile.email %></td>
-					<td><%= visibility_radios( @visibility, :email ) %></td>
-				</tr>
-				<tr>
-					<th><%= f.label :sex %></th>
-					<td colspan="2"><%= select_sex( f, @profile.sex ) %></td>
-					<td><%= visibility_radios( @visibility, :sex ) %></td>
-				</tr>
-				<tr>
-					<th><%= t(:distinct_id, scope:"activerecord.attributes.user_profile") %></th>
-					<td colspan="2"><%= distinct_selecter( f, selected: @profile.distinct_id ) %></td>
-					<td><%= visibility_radios( @visibility, :distinct_id ) %></td>
-				</tr>
-				<tr>
-					<th><%= f.label :comment %></th>
-					<td colspan="2"><%= f.text_field :comment, value: @profile.comment %></td>
-					<td><%= t( :public, scope:"status" ) %></td>
-				</tr>
-				<tr>
-					<td colspan="4"><%= f.submit %></td>
-				</tr>
-			</table>
-			<% end %>
-		</div>
-	</div>
-</div>
--->
