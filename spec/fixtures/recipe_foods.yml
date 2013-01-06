@@ -3,642 +3,796 @@ recipe_foods_0:
   recipe_food_genre_id: 1
   name: Bầu /Bí
   show_top: true
-  created_at: 2012-05-24 13:50:47 UTC
+  created_at: 2012-06-24 13:50:47 UTC
   updated_at: 2012-07-15 05:30:05 UTC
 recipe_foods_1:
   id: 2
   recipe_food_genre_id: 1
   name: Khoai /Củ
   show_top: true
-  created_at: 2012-05-25 12:16:49 UTC
+  created_at: 2012-06-24 13:50:48 UTC
   updated_at: 2012-07-15 05:30:05 UTC
 recipe_foods_2:
   id: 3
   recipe_food_genre_id: 1
-  name: Su /Cà
+  name: Nấm
   show_top: true
-  created_at: 2012-05-25 12:17:01 UTC
+  created_at: 2012-06-24 13:50:49 UTC
   updated_at: 2012-07-15 05:30:05 UTC
 recipe_foods_3:
   id: 4
   recipe_food_genre_id: 1
-  name: Rau /Cải
-  show_top: true
-  created_at: 2012-05-25 12:17:15 UTC
-  updated_at: 2012-07-15 05:30:06 UTC
+  name: Su /Cà
+  show_top: false
+  created_at: 2012-06-24 13:50:50 UTC
+  updated_at: 2012-07-15 05:30:05 UTC
 recipe_foods_4:
   id: 5
   recipe_food_genre_id: 1
-  name: Mướp /Đu đủ
-  show_top: true
-  created_at: 2012-05-25 12:17:27 UTC
+  name: Rau /Cải
+  show_top: false
+  created_at: 2012-06-24 13:50:51 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_5:
   id: 6
   recipe_food_genre_id: 1
-  name: Đậu /Bắp
-  show_top: true
-  created_at: 2012-05-25 12:17:54 UTC
+  name: Mướp /Đu đủ
+  show_top: false
+  created_at: 2012-06-24 13:50:52 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_6:
   id: 7
   recipe_food_genre_id: 1
-  name: Cà /Dưa
-  show_top: true
-  created_at: 2012-05-25 12:17:54 UTC
+  name: Đậu /Bắp
+  show_top: false
+  created_at: 2012-06-24 13:50:53 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_7:
   id: 8
   recipe_food_genre_id: 1
-  name: Măng /Giá
-  show_top: true
-  created_at: 2012-05-25 12:17:54 UTC
+  name: Cà /Dưa
+  show_top: false
+  created_at: 2012-06-24 13:50:54 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_8:
   id: 9
   recipe_food_genre_id: 1
-  name: Hành /Thơm
-  show_top: true
-  created_at: 2012-05-25 12:17:54 UTC
+  name: Măng /Giá
+  show_top: false
+  created_at: 2012-06-24 13:50:55 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_9:
   id: 10
   recipe_food_genre_id: 1
-  name: Bông /Ngọn
-  show_top: true
-  created_at: 2012-05-25 12:17:54 UTC
+  name: Hành /Thơm
+  show_top: false
+  created_at: 2012-06-24 13:50:56 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_10:
   id: 11
   recipe_food_genre_id: 1
-  name: Nghệ /Me
-  show_top: true
-  created_at: 2012-05-25 12:17:54 UTC
+  name: Bông /Ngọn
+  show_top: false
+  created_at: 2012-06-24 13:50:57 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_11:
   id: 12
   recipe_food_genre_id: 1
-  name: Rong/Tảo/...
-  show_top: true
-  created_at: 2012-05-25 12:17:54 UTC
+  name: Nghệ /Me
+  show_top: false
+  created_at: 2012-06-24 13:50:58 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_12:
   id: 13
-  recipe_food_genre_id: 2
-  name: Thịt Bò
-  show_top: true
-  created_at: 2012-05-25 12:19:00 UTC
+  recipe_food_genre_id: 1
+  name: Rong/Tảo/...
+  show_top: false
+  created_at: 2012-06-24 13:50:59 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_13:
   id: 14
   recipe_food_genre_id: 2
-  name: Thịt Lợn
+  name: Thịt Bò
   show_top: true
-  created_at: 2012-05-25 12:19:15 UTC
+  created_at: 2012-06-24 13:51:00 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_14:
   id: 15
   recipe_food_genre_id: 2
-  name: Thịt heo rừng
+  name: Thịt Lợn
   show_top: true
-  created_at: 2012-05-25 12:19:29 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_15:
   id: 16
   recipe_food_genre_id: 2
-  name: Thịt Dê
+  name: Thịt heo rừng
   show_top: true
-  created_at: 2012-05-25 12:19:42 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_16:
   id: 17
   recipe_food_genre_id: 2
-  name: Thịt Trâu
-  show_top: true
-  created_at: 2012-05-25 12:19:53 UTC
+  name: Thịt Dê
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_17:
   id: 18
   recipe_food_genre_id: 2
-  name: Thịt Gà
-  show_top: true
-  created_at: 2012-05-25 12:20:03 UTC
+  name: Thịt Trâu
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_18:
   id: 19
   recipe_food_genre_id: 2
-  name: Thịt Vịt
-  show_top: true
-  created_at: 2012-05-25 12:20:14 UTC
+  name: Thịt Gà
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_19:
   id: 20
   recipe_food_genre_id: 2
-  name: Thịt Chim
-  show_top: true
-  created_at: 2012-05-25 12:20:26 UTC
+  name: Thịt Vịt
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_20:
   id: 21
   recipe_food_genre_id: 2
-  name: Thịt Ếch
-  show_top: true
-  created_at: 2012-05-25 12:20:44 UTC
+  name: Thịt Chim
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_21:
   id: 22
-  recipe_food_genre_id: 3
-  name: Cá Biển
-  show_top: true
-  created_at: 2012-05-25 12:20:54 UTC
+  recipe_food_genre_id: 2
+  name: Thịt Ếch
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_22:
   id: 23
-  recipe_food_genre_id: 3
-  name: Cá Nước Ngọt
-  show_top: true
-  created_at: 2012-05-25 12:21:06 UTC
+  recipe_food_genre_id: 2
+  name: Thịt hiếm
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_23:
   id: 24
   recipe_food_genre_id: 3
-  name: Tôm
+  name: Cá Biển
   show_top: true
-  created_at: 2012-05-25 12:21:21 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_24:
   id: 25
   recipe_food_genre_id: 3
-  name: Cua /Ghẹ
+  name: Cá Nước Ngọt
   show_top: true
-  created_at: 2012-05-25 12:21:33 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_25:
   id: 26
   recipe_food_genre_id: 3
-  name: Mực
+  name: Tôm
   show_top: true
-  created_at: 2012-05-25 12:21:43 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_26:
   id: 27
   recipe_food_genre_id: 3
-  name: Lương /Chình
-  show_top: true
-  created_at: 2012-05-25 12:21:52 UTC
+  name: Cua /Ghẹ
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_27:
   id: 28
   recipe_food_genre_id: 3
-  name: Ba ba
-  show_top: true
-  created_at: 2012-05-25 12:22:01 UTC
+  name: Mực
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_28:
   id: 29
   recipe_food_genre_id: 3
-  name: Ngêu /Sò
-  show_top: true
-  created_at: 2012-05-25 12:22:16 UTC
+  name: Lương /Chình
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_29:
   id: 30
   recipe_food_genre_id: 3
-  name: Ốc /Hến
-  show_top: true
-  created_at: 2012-06-04 15:55:20 UTC
+  name: Ba ba
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_30:
   id: 31
   recipe_food_genre_id: 3
-  name: Món Mắm
-  show_top: true
-  created_at: 2012-06-04 15:55:35 UTC
+  name: Ngêu /Sò
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_31:
   id: 32
-  recipe_food_genre_id: 4
-  name: Sushi
-  show_top: true
-  created_at: 2012-06-04 15:55:49 UTC
+  recipe_food_genre_id: 3
+  name: Ốc /Hến
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_32:
   id: 33
-  recipe_food_genre_id: 4
-  name: Cơm chiên
-  show_top: true
-  created_at: 2012-06-04 15:56:01 UTC
+  recipe_food_genre_id: 3
+  name: Món Mắm
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_33:
   id: 34
   recipe_food_genre_id: 4
-  name: Cơm tấm
+  name: Sushi
   show_top: true
-  created_at: 2012-06-04 15:56:13 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_34:
   id: 35
   recipe_food_genre_id: 4
-  name: Cơm cá
+  name: Sashimi
   show_top: true
-  created_at: 2012-06-04 15:56:56 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_35:
   id: 36
   recipe_food_genre_id: 4
-  name: Cơm ga
+  name: Cơm hải sản
   show_top: true
-  created_at: 2012-06-04 15:57:11 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_36:
   id: 37
   recipe_food_genre_id: 4
-  name: Cơm mực
-  show_top: true
-  created_at: 2012-06-04 15:57:36 UTC
+  name: Cơm chiên
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_37:
   id: 38
   recipe_food_genre_id: 4
-  name: Cơm thịt bò
-  show_top: true
-  created_at: 2012-06-04 15:57:54 UTC
+  name: Cơm tấm
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_38:
   id: 39
   recipe_food_genre_id: 4
-  name: Cơm thịt lợn
-  show_top: true
-  created_at: 2012-06-04 15:58:11 UTC
+  name: Cơm cá
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_39:
   id: 40
   recipe_food_genre_id: 4
-  name: Cơm tôm
-  show_top: true
-  created_at: 2012-06-04 15:59:13 UTC
+  name: Cơm gà
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_40:
   id: 41
   recipe_food_genre_id: 4
-  name: Cơm Chay
-  show_top: true
-  created_at: 2012-06-04 15:59:25 UTC
+  name: Cơm mực
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_41:
   id: 42
   recipe_food_genre_id: 4
-  name: Cơm hến
-  show_top: true
-  created_at: 2012-06-04 15:59:38 UTC
+  name: Cơm thịt bò
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_42:
   id: 43
   recipe_food_genre_id: 4
-  name: Cơm hộp
-  show_top: true
-  created_at: 2012-06-04 15:59:51 UTC
+  name: Cơm thịt lợn
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_43:
   id: 44
   recipe_food_genre_id: 4
-  name: Cari
-  show_top: true
-  created_at: 2012-06-04 16:00:05 UTC
+  name: Cơm tôm
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_44:
   id: 45
-  recipe_food_genre_id: 5
-  name: Sốt cà chua
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 4
+  name: Cơm chay
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_45:
   id: 46
-  recipe_food_genre_id: 5
-  name: Sốt Kem
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 4
+  name: Cơm hến
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_46:
   id: 47
-  recipe_food_genre_id: 5
-  name: Sốt Oil & Muối
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 4
+  name: Cơm hộp
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_47:
   id: 48
-  recipe_food_genre_id: 5
-  name: Mỳ Xào Hải Sản
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 4
+  name: Xôi
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_48:
   id: 49
-  recipe_food_genre_id: 5
-  name: Mỳ Sốt Thịt Bò
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 4
+  name: Cơm cà ri
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_49:
   id: 50
-  recipe_food_genre_id: 5
-  name: Mỳ Sốt Jambong
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 4
+  name: Loại khác
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_50:
   id: 51
-  recipe_food_genre_id: 6
-  name: Bún bò
+  recipe_food_genre_id: 5
+  name: Sốt cà chua
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_51:
   id: 52
-  recipe_food_genre_id: 6
-  name: Phở
+  recipe_food_genre_id: 5
+  name: Sốt Kem\cream
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_52:
   id: 53
-  recipe_food_genre_id: 6
-  name: Bánh canh
+  recipe_food_genre_id: 5
+  name: Sốt Oil & Muối
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_53:
   id: 54
-  recipe_food_genre_id: 6
-  name: Ramen
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 5
+  name: Mỳ Xào Hải Sản
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_54:
   id: 55
-  recipe_food_genre_id: 6
-  name: Hủ tiếu
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 5
+  name: Mỳ Sốt Thịt Bò Xay
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_55:
   id: 56
-  recipe_food_genre_id: 6
-  name: Mì hoàng thánh
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 5
+  name: Mỳ Sốt Jambong
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_56:
   id: 57
-  recipe_food_genre_id: 6
-  name: Bún hến
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 5
+  name: Loại khác
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_57:
   id: 58
   recipe_food_genre_id: 6
-  name: Mì quảng
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  name: Bún bò
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_58:
   id: 59
   recipe_food_genre_id: 6
-  name: Cao lầu mì
+  name: Phở
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_59:
   id: 60
-  recipe_food_genre_id: 7
-  name: Salad Italia
+  recipe_food_genre_id: 6
+  name: Miến
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_60:
   id: 61
-  recipe_food_genre_id: 7
-  name: Salad Nhật
+  recipe_food_genre_id: 6
+  name: Bánh canh
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_61:
   id: 62
-  recipe_food_genre_id: 7
-  name: Salad HànQuốc
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 6
+  name: Ramen
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_62:
   id: 63
-  recipe_food_genre_id: 7
-  name: Salad T.Quốc
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 6
+  name: Udon
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_63:
   id: 64
-  recipe_food_genre_id: 7
-  name: Salad Cá
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 6
+  name: Soba
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_64:
   id: 65
-  recipe_food_genre_id: 7
-  name: Salad thịt
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 6
+  name: Somen
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_65:
   id: 66
-  recipe_food_genre_id: 7
-  name: Salad rong biển
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 6
+  name: Shabu-shabu
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_66:
   id: 67
-  recipe_food_genre_id: 7
-  name: Salad rau,bông
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 6
+  name: Lẩu
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_67:
   id: 68
-  recipe_food_genre_id: 7
-  name: Gỏi
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 6
+  name: Hủ tiếu
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_68:
   id: 69
-  recipe_food_genre_id: 8
-  name: Miền bắc
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 6
+  name: Mì hoàng thánh
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_69:
   id: 70
-  recipe_food_genre_id: 8
-  name: Miền trung
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 6
+  name: Bún hến
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_70:
   id: 71
-  recipe_food_genre_id: 8
-  name: Miền Nam
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 6
+  name: Mì quảng
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_71:
   id: 72
-  recipe_food_genre_id: 8
-  name: Sốt NhậtBản
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 6
+  name: Cao lầu mì
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_72:
   id: 73
-  recipe_food_genre_id: 8
-  name: Sốt HànQuốc
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 6
+  name: Loại khác
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_73:
   id: 74
-  recipe_food_genre_id: 8
-  name: Sốt TrungQuốc
+  recipe_food_genre_id: 7
+  name: Salad Italia
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_74:
   id: 75
-  recipe_food_genre_id: 8
-  name: Sốt Italia
+  recipe_food_genre_id: 7
+  name: Salad Nhật
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_75:
   id: 76
-  recipe_food_genre_id: 9
-  name: Chè thập cẩm
+  recipe_food_genre_id: 7
+  name: Salad HànQuốc
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_76:
   id: 77
-  recipe_food_genre_id: 9
-  name: Chè khoai
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 7
+  name: Salad T.Quốc
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_77:
   id: 78
-  recipe_food_genre_id: 9
-  name: Chè đậu
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 7
+  name: Salad cá
+  show_top: false
+  created_at: 2013-01-06 17:35:36 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_78:
   id: 79
-  recipe_food_genre_id: 9
-  name: Chè trái cây
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 7
+  name: Salad hải sản
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_79:
   id: 80
-  recipe_food_genre_id: 9
-  name: Chè thạch
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 7
+  name: Salad thịt
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_80:
   id: 81
-  recipe_food_genre_id: 9
-  name: Mứt
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 7
+  name: Salad rong biển
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_81:
   id: 82
-  recipe_food_genre_id: 9
-  name: Kẹo
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 7
+  name: Salad rau-bông
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_82:
   id: 83
-  recipe_food_genre_id: 10
-  name: Bánh ngọt
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 7
+  name: Gỏi
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_83:
   id: 84
-  recipe_food_genre_id: 10
-  name: Bánh mặn
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 7
+  name: Loại khác
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_84:
   id: 85
-  recipe_food_genre_id: 10
-  name: Bánh sinh nhật
+  recipe_food_genre_id: 8
+  name: Miền bắc
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_85:
   id: 86
-  recipe_food_genre_id: 10
-  name: Bánh đám cưới
+  recipe_food_genre_id: 8
+  name: Miền trung
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_86:
   id: 87
-  recipe_food_genre_id: 10
-  name: Loại bánh khác
+  recipe_food_genre_id: 8
+  name: Miền Nam
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_87:
   id: 88
-  recipe_food_genre_id: 11
-  name: 5〜6 tháng
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 8
+  name: Sốt NhậtBản
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_88:
   id: 89
-  recipe_food_genre_id: 11
-  name: 7〜8 tháng
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 8
+  name: Sốt HànQuốc
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_89:
   id: 90
-  recipe_food_genre_id: 11
-  name: 9〜11 tháng
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 8
+  name: Sốt TrungQuốc
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_90:
   id: 91
-  recipe_food_genre_id: 12
-  name: Lúc mang bầu
-  show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  recipe_food_genre_id: 8
+  name: Sốt Italia
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
 recipe_foods_91:
   id: 92
-  recipe_food_genre_id: 12
-  name: Lúc cho con bú
+  recipe_food_genre_id: 9
+  name: Chè thập cẩm
   show_top: true
-  created_at: 2012-06-04 16:00:21 UTC
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_92:
+  id: 93
+  recipe_food_genre_id: 9
+  name: Chè khoai
+  show_top: true
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_93:
+  id: 94
+  recipe_food_genre_id: 9
+  name: Chè đậu
+  show_top: true
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_94:
+  id: 95
+  recipe_food_genre_id: 9
+  name: Chè trái cây
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_95:
+  id: 96
+  recipe_food_genre_id: 9
+  name: Chè thạch
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_96:
+  id: 97
+  recipe_food_genre_id: 9
+  name: Trôi nước
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_97:
+  id: 98
+  recipe_food_genre_id: 9
+  name: Chè loại khác
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_98:
+  id: 99
+  recipe_food_genre_id: 9
+  name: Mứt
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_99:
+  id: 100
+  recipe_food_genre_id: 9
+  name: Kẹo
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_100:
+  id: 101
+  recipe_food_genre_id: 9
+  name: Loại khác
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_101:
+  id: 102
+  recipe_food_genre_id: 10
+  name: Bánh ngọt
+  show_top: true
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_102:
+  id: 103
+  recipe_food_genre_id: 10
+  name: Bánh mặn
+  show_top: true
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_103:
+  id: 104
+  recipe_food_genre_id: 10
+  name: Bánh sinh nhật
+  show_top: true
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_104:
+  id: 105
+  recipe_food_genre_id: 10
+  name: Bánh đám cưới
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_105:
+  id: 106
+  recipe_food_genre_id: 10
+  name: Loại bánh khác
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_106:
+  id: 107
+  recipe_food_genre_id: 11
+  name: 5〜6 tháng
+  show_top: true
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_107:
+  id: 108
+  recipe_food_genre_id: 11
+  name: 7〜8 tháng
+  show_top: true
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_108:
+  id: 109
+  recipe_food_genre_id: 11
+  name: 9〜11 tháng
+  show_top: true
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_109:
+  id: 110
+  recipe_food_genre_id: 11
+  name: Trên 11 tháng
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_110:
+  id: 111
+  recipe_food_genre_id: 12
+  name: Đang mang bầu
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_111:
+  id: 112
+  recipe_food_genre_id: 12
+  name: Lúc cho bú
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_112:
+  id: 113
+  recipe_food_genre_id: 12
+  name: Dinh dưỡng
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
+  updated_at: 2012-07-15 05:30:06 UTC
+recipe_foods_113:
+  id: 114
+  recipe_food_genre_id: 12
+  name: Giảm cân
+  show_top: false
+  created_at: 2013-01-06 17:35:37 UTC
   updated_at: 2012-07-15 05:30:06 UTC
