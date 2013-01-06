@@ -101,6 +101,7 @@ class Recipe < ActiveRecord::Base
 
     recipes = Recipe.where( " public = true " )
     recipes = recipes.where( *wheres )
+    recipes = recipes.includes( :user => :user_profile )
     recipes.order( (order_mode=="new") ? " created_at DESC " : " view_count DESC " )
   end
 
