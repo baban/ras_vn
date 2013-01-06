@@ -16,6 +16,7 @@ class Recipe < ActiveRecord::Base
   validates :title,        presence: true
   validates :recipe_image, presence: true
 
+  has_one  :user
   has_one  :recipe_draft
   has_many :bookmarks
   has_many :recipe_foodstuffs

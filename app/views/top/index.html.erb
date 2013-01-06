@@ -47,7 +47,7 @@
 				<div class="txtarea">
 					<h1 class="txt15"><%="#{genre.name}(#{genre.amount})"%></h1>
 					<ul class="catelists">
-						<% genre.foods.page(1).per(3).each do |food| %>
+						<% genre.foods.each do |food| %>
 							<li class="arr txt11 flo_l"><%= link_to food.name, recipe_foods_url( recipe_food_id: food.id ) %></li>
 						<% end %>
 					</ul>

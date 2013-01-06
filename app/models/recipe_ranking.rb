@@ -4,7 +4,7 @@ class RecipeRanking < ActiveRecord::Base
   paginates_per 10
 
   def self.topics
-    Recipe.where( id: page(1).per(2).pluck(:recipe_id) )
+    Recipe.where( id: page(1).per(2).pluck(:recipe_id) ).includes( :user => :user_profile )
   end
 
   # create ranking
