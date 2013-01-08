@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# encoding: utf-8
 
 # ブランチは開発環境ではdevelop, 本番（ステージング）ではmaster
 set :branch, "master"
