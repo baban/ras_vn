@@ -64,7 +64,7 @@ class StatisticsController < Admin::BaseController
 
   def create_profile_table
     sex_label = ["その他","男性","女性"]
-    UserProfile.group(:sex).count.map{ |k,v| [sex_label[k],v] }
+    UserProfile.group(:sex).count.map{ |k,v| [sex_label[k.to_i],v] }
   end
 
   def create_prefecture_table
