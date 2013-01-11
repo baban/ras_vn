@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
   end
 
   def member?
-    self.entry_flg==1
+    self.entry_flg
   end
 
   def bookmarked_recipes
