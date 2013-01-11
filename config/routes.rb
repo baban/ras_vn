@@ -26,7 +26,7 @@ RasVn::Application.routes.draw do
   resources(:mypage, only:[:index]) do
     collection { get :recipes, :diary, :recipe_comments, :follow, :follower, :retire }
   end
-  resources(:kitchens) { member { get :recipes, :follow, :recipe_comments } }
+  resources(:kitchens) { member { get :recipes, :follow, :recipe_comments, :retired_chef } }
 
   match '/cooporation(/:action(/:id))', controller:"cooporations"
   match '/statistics(/:action(/:id))', controller:"statistics"

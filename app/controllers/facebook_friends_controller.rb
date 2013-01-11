@@ -2,7 +2,10 @@
 
 class FacebookFriendsController < ApplicationController
   def index
-    @friedns = FbGraph::User.me(ACCESS_TOKEN)
+    @friend_list = FbGraph::FriendList.new('100002130858178', access_token: FACEBOOK_ACCESS_TOKEN )
+    @members = @friend_list.members
+    logger.info :members
+    logger.info @members.inspect
   end
 
   def invite

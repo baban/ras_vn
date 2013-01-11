@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class KitchensController < ApplicationController
+  before_filter :memberd_chef_filter, except:[:retired_chef]
+
   helper_method :myself?, :followed?
 
   def show
@@ -15,13 +17,13 @@ class KitchensController < ApplicationController
     @user = User.find(params[:id])
     @profile = @user.profile
     @visibility = @profile.visibility
-    @recipes = @user.recipes.visibles.page(params[:page] || 1)
+    @recipes = @user.recipes.visibles.page( params[:page] || 1 )
   end
 
   def recipe_comments
     @user = User.find(params[:id])
     @profile = @user.profile
-    @recipe_comments = @user.recipe_comments.page(params[:page] || 1)
+    @recipe_comments = @user.recipe_comments.page( params[:page] || 1 )
   end
 
   def follow
@@ -38,6 +40,9 @@ class KitchensController < ApplicationController
     end
   end
 
+  def retired_chef
+  end
+
   private
   def myself?
     return true if current_user.id == params[:id]
@@ -46,5 +51,10 @@ class KitchensController < ApplicationController
 
   def followed?
     !!Follower.find_by_user_id_and_follower_id( current_user.id, params[:id] )
+  end
+
+  def memberd_chef_filter
+    user = User.find(params[:id])
+    redirect_to( action:"retired_chef" ) unless user.member?
   end
 end

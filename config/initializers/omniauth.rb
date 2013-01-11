@@ -6,3 +6,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :google_oauth2, "1046178131442.apps.googleusercontent.com", "jS2F9tJHOo2RcRAiZvH-mkbg"
 end
 
+# access token get metho is written below url
+# https://github.com/nov/fb_graph/wiki/App-Access-Token
+FACEBOOK_ACCESS_TOKEN = "452090888159529|2aLPrLa7PPhxocdT-ECw7SJHkMY"

@@ -48,6 +48,10 @@ class User < ActiveRecord::Base
     admin
   end
 
+  def member?
+    self.entry_flg==1
+  end
+
   def bookmarked_recipes
     recipe_ids = Bookmark.where( user_id: self.id ).select(:recipe_id)
     Recipe.where( " id IN (#{recipe_ids.to_sql}) " )

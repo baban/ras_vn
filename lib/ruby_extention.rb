@@ -11,6 +11,10 @@ class Object
     yield(self, *args)
   end
 
+  def to_bool
+    !!self
+  end
+
   def method_hooking( name, &b )
     (method(name).to_proc * ->(*_){ b.call(*_) }).do { |p| define_method(name) &p }
   end
