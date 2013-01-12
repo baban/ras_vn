@@ -1,6 +1,16 @@
-<h1>friend list</h1>
-<ul>
-  <% @friends.each do |friend| %>
-    <li><%= friend.name %></li>
-  <% end %>
-</ul>
+<%= include_action_javascript %>
+
+<div id="content_body" class="section bace_bg">
+	<h2>friend list</h2>
+	<div class="contents_bg clearfix">
+		<ul>
+			<% @friends.each do |friend| %>
+				<li>
+					<%= image_tag friend.picture %>
+					<%= friend.name %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+</div>
+
