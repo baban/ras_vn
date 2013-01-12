@@ -1,54 +1,107 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-	<meta charset="UTF-8" />
-	<title>Cook24</title>
-	<link rel="shortcut icon" href="/favicon.gif" type="image/png" />
-	<link href="/assets/reset.css?body=1" media="screen" rel="stylesheet" type="text/css" />
-	<link href="/assets/common.css?body=1" media="screen" rel="stylesheet" type="text/css" />
-	<meta content="authenticity_token" name="csrf-param" />
-</head>
-<body>
-<!-- header start -->
-<header>
-	<div class="inner clearfix txt12">
-		<h1><a href="/"><img alt="cook24" height="16" src="/assets/ck24logo.png" width="77" /></a></h1>
-		<p class="mk">mark</p>
-		<nav>
-			<ul class="clearfix flo_l">
-				<li><a href="/">Tìm Kiếm Nhà Hàng</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
+	<head>
+		<meta charset="UTF-8" />
+		<title>404 error </title>
+		<meta content=",cook24,ẩm thực,recipe,món ăn,cookpad,đơn giản,nấu ăn,công thức nấu ăn,nấu ngon,ăn ngon" name="keywords" />
+		<meta content="Cook24 là Website lớn nhất Việt Nam, tập hợp tấc cả các món ăn Việt nam, Âu, Á, và đặt biệt là các món ăn Nhật đang được rất yêu chuộng ở Việt Nam. Tìm kiếm phương pháp và cách nấu các món ăn gia đình do các bà mẹ và chị em đăng lên. Nhiều món ăn với phương pháp chế biến đơn giản, dể hiểu. Bạn có thề đăng món ăn yêu thích của mình lên trang web một cách đơn giản và nhanh chóng" name="description" />
+		<link rel="shortcut icon" href="/favicon.gif" type="image/png" />
+		<link href="/assets/reset.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+		<link href="/assets/common.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+		<link href="/assets/top.css?body=1" media="screen" rel="stylesheet" type="text/css" />
 
-<div class="bace_bg">
-	<div class="contents_bg clearfix ctr">
-		<h2 class="txt30">404 Page Not Found</h2>
-		<div>
-			<p>This is not the web page. you are looking for.</p>
-			<p>if you want to join this service.</p>
-			<br />
-			<p class="rbtn"><a href="/user/sign_up">sign up</a></p>
-			<br />
-			<p>if you have account.</p>
-			<br />
-			<p class="rbtn"><a href="/user/sign_in">login</a></p>
-			<br />
+		<script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+		<script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+
+		<script src="/assets/streams.js?body=1" type="text/javascript"></script>
+
+		<meta content="authenticity_token" name="csrf-param" />
+		<meta content="6dsKREM6atPilSy2LKVxQKEIxdNWc1H8miSnT679V/M=" name="csrf-token" />
+	</head>
+	<body>
+		<!-- ヘッダ start -->
+		<header>
+			<div class="inner clearfix txt12">
+				<h1><a href="http://localhost:3000/"><img alt="cook24" height="16" src="/assets/ck24logo.png" width="77" /></a></h1>
+				<a href="http://localhost:3000/">
+				<p class='mk'>
+					mark
+				</p></a>
+				<nav>
+					<ul class="clearfix flo_l">
+						<li class="">
+							<a href="http://localhost:3000/">Tìm Kiếm Nhà Hàng</a>
+						</li>
+					</ul>
+
+					<ul class="clearfix flo_r">
+						<li>
+							<a href="http://localhost:3000/user/sign_in">Đăng nhập</a>
+						</li>
+						<li>
+							<a href="http://localhost:3000/user/sign_up">Đăng ký</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="search flo_l">
+					<form accept-charset="UTF-8" action="http://localhost:3000/recipe_foods" class="cl" method="post">
+						<div style="margin:0;padding:0;display:inline">
+							<input name="utf8" type="hidden" value="&#x2713;" />
+							<input name="authenticity_token" type="hidden" value="6dsKREM6atPilSy2LKVxQKEIxdNWc1H8miSnT679V/M=" />
+						</div>
+						<div class="box radi5">
+							<input class="radi5" id="word" name="word" placeholder="Nhập tên món ăn, thực phẩm" type="search" />
+							<input id="recipe_food_id" name="recipe_food_id" type="hidden" />
+							<input id="recipe_food_genre_id" name="recipe_food_genre_id" type="hidden" />
+							<button class="radi3" name="" title="Tìm Kiếm" type="submit"></button>
+							<span class="hidden_elem">Tìm Kiếm</span>
+						</div>
+					</form>
+				</div>
+				<ul class="flo_l s_att clearfix">
+					<li class="arr">
+						<a href="http://localhost:3000/">Tìm món ăn</a>
+					</li>
+				</ul>
+
+				<div class="rbtn">
+					<a href="/recipes/new" class="radi10">Đăng món ăn của bạn</a>
+				</div>
+			</div>
+		</header>
+		<div class="bace_bg">
+			<div class="contents_bg clearfix ctr">
+				<h2 class="txt30">404 Page Not Found</h2>
+				<p>
+					Không tìm được trang này. <br />
+					Xin vui lòng truy cập lại lần nữa.
+				</p>
+				<br />
+				<br />
+				<p class="rbtn">
+					<a href="/user/sign_in">Đăng nhập</a>
+				</p>
+				<br />
+			</div>
 		</div>
-	</div>
-</div>
-
-<footer>
-	<div class="inner">
-		<ul>
-			<li class="flo_l"><a href="/cooporation/profile">Giới thiệu</a></li>
-			<li class="flo_l"><a href="/cooporation/terms">Thỏa thuận sử dụng</a></li>
-			<li class="flo_l"><a href="/cooporation/question_and_answers">Liên hệ /Trợ giúp</a></li>
-			<li class="flo_r txt12">copyright © 2012 Cook24 all rights reserved</li>
-		</ul>
-	</div>
-</footer>
-
-</body>
+		<footer>
+			<div class="inner">
+				<ul>
+					<li class="flo_l">
+						<a href="/cooporation/profile">Giới thiệu</a>
+					</li>
+					<li class="flo_l">
+						<a href="/cooporation/terms">Thỏa thuận sử dụng</a>
+					</li>
+					<li class="flo_l">
+						<a href="/cooporation/question_and_answers">Liên hệ /Trợ giúp</a>
+					</li>
+					<li class="flo_r txt12">
+						copyright © 2012 Cook24 all rights reserved
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
 </html>
