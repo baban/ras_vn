@@ -80,27 +80,13 @@
 			</div>
 			<br />
 			<section class="rec_cat5">
-				<h2 class="material_txt txt14">One Point</h2>
+				<h2 class="material_txt txt14">Mách nhỏ</h2>
 				<%= @recipe.one_point %>
 			</section>
+			<br /><br />
 			<div id="recipe_comment_area" class="area">
 				<h1 class="ttl_recipe" style="color: #FF9258"><%= t(:comments, scope:"views.recipes.report")%></h1>
-				<p class="txt14">Bạn có thể đăng bình luận về món ăn này và đăng hình ảnh về món ăn mà bạn đã thực hiện công thức trên</p>
-				<% @comments.each do |comment| %>
-					<div class="cate01 clearfix">
-						<section class="rec_cat5 clearfix">
-							<% if comment.image.present? %><%= image_tag comment.image.url, size:"280x466", alt:"#{comment.title}", class:"comment_image" %><% end %>
-							<div class="txt">
-								<p><%= hbr comment.content %></p>
-								<p class="userinfo">by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
-								<div class="info_area">
-									<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
-									<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
-								</div>
-							</div>
-						</section>
-					</div>
-				<% end %>
+				<p class="txt14">Bạn có thể đăng bình luận về món ăn này và đăng hình ảnh về món ăn mà bạn đã thực hiện theo công thức trên</p>
 				<br />
 				<%= form_for @recipe_comment do |f| %>
 					<% if flash[:error_explanation] %>
@@ -116,6 +102,22 @@
 					<p><%= f.text_area :content, size:"60x4", value: "" %></p>
 					<p><%= f.submit t(:post_report, scope:"views.recipes.show") %></p>
 				<% end %>
+				<% @comments.each do |comment| %>
+					<div class="cate01 clearfix">
+						<section class="rec_cat5 clearfix">
+							<% if comment.image.present? %><%= image_tag comment.image.url, size:"280x466", alt:"#{comment.title}", class:"comment_image" %><% end %>
+							<div class="txt">
+								<p><%= hbr comment.content %></p>
+								<p class="userinfo">by&nbsp;<%= link_to comment.chef.nickname, kitchen_url(comment.chef) %></p>
+								<div class="info_area">
+									<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.created_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+									<%= t(:updated_at, scope:"activerecord.attributes.recipe") %>：<span><%= comment.updated_at.strftime("%Y/%m/%d") %>&nbsp;&nbsp;</span>
+								</div>
+							</div>
+						</section>
+					</div>
+				<% end %>
+				
 			</div>
 		</div>
 		<!--main_clmEnd-->
