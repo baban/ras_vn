@@ -9,7 +9,7 @@ class FacebookFriendsController < ApplicationController
     @friends = user.friends
     logger.info :friends
     logger.info @friends.inspect
-    File.binwrite(Rails.root.to_path+"/resources/friends.data", Marshal.dump(@friends))
+    File.binwrite(Rails.root.to_path+"/friends.data", Marshal.dump(@friends))
   end
 
   def invite
