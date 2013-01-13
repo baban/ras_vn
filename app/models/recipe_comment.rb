@@ -8,7 +8,6 @@ class RecipeComment < ActiveRecord::Base
   validates :recipe_id, presence: true
   validates :user_id,   presence: true
   validates :title,     presence: true
-  validates :image,     presence: true
   validates :content,   presence: true
 
   scope :visibles, ->{ scoped }
