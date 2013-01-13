@@ -23,7 +23,7 @@
 				<section class="cate_m">
 					<%= link_to(raw("#{image_tag(genre.image.url(:thumb), size:"60x60", alt:"#{genre.name}")}"), recipe_foods_url( recipe_food_genre_id: genre.id ))%>
 					<div class="txtarea">
-						<h1><%= genre.name %>（<%= genre.amount %>件）</h1>
+						<h1><%= genre.name %>&nbsp;（<%= genre.amount %>）</h1>
 						<ul class="catelists">
 							<% genre.foods.limit(4).each do |food| %>
 								<li class="arr txt11 flo_l"><%= link_to food.name, recipe_foods_url( recipe_food_id: food.id) %></li>
