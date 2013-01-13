@@ -21,7 +21,7 @@
 		<article class="cate01 cate02 clearfix">
 			<% @food_genres.each do |genre| %>
 				<section class="cate_m">
-					<%= image_tag genre.image.url(:thumb), size:"60x60", alt:"" %>
+					<%= link_to(raw("#{image_tag(genre.image.url(:thumb), size:"60x60", alt:"#{genre.name}")}"), recipe_foods_url( recipe_food_genre_id: genre.id ))%>
 					<div class="txtarea">
 						<h1><%= genre.name %>（<%= genre.amount %>件）</h1>
 						<ul class="catelists">
