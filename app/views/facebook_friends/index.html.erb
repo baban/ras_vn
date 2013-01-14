@@ -4,7 +4,7 @@
 	<div class="contents_bg clearfix">
 		<h2 class="txt20">friend list</h2>
 		<%= form_for :friends, url: { action:"invite" } do |f| %>
-			<%= select :invite, :name, @friends.map { |o| [o.name,o.identifier] }, 
+			<%= select :invite, :name, @friends.map { |o| [o.name,o.identifier] }.sort { |a,b| a.first<=>b.first } , 
 				{}, { multiple: true, size: 10, name: "friends[invite][]" } %>
 			<%= f.submit "send" %>
 		<% end %>

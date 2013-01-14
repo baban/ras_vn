@@ -5,7 +5,7 @@ class FacebookFriendsController < ApplicationController
     # TODO: ログイン済みユーザーチェック
     # TODO: facebookから来たのかをチェック
     # TODO: facebookID取得
-    @friends = Marshal.load(File.binread(Rails.root.to_path+"/resource/friends.dat"))
+    # @friends = Marshal.load(File.binread(Rails.root.to_path+"/resource/friends.dat"))
     
     logger.info current_user.inspect
     omniuser = Omniuser.find(current_user.omniuser_id)
@@ -16,7 +16,6 @@ class FacebookFriendsController < ApplicationController
     uid = omniuser.uid
     logger.info uid
     user = FbGraph::User.fetch(uid, access_token: FACEBOOK_ACCESS_TOKEN)
-    # user = FbGraph::User.fetch('100002130858178', access_token: FACEBOOK_ACCESS_TOKEN)
     logger.info :user
     logger.info user.inspect
     @friends = user.friends
