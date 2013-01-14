@@ -1,10 +1,9 @@
 # encoding: utf-8
 
 class FacebookFriendsController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
-    # TODO: ログイン済みユーザーチェック
-    # TODO: facebookから来たのかをチェック
-    # TODO: facebookID取得
     # @friends = Marshal.load(File.binread(Rails.root.to_path+"/resource/friends.dat"))
     
     logger.info current_user.inspect
