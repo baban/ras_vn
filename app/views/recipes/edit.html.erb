@@ -38,7 +38,7 @@
 					</div>
 					<div class="explanation">
 						<p><%= f.text_area :description, value: @draft.description, size:"40x3" %></p>
-						<div class="clearfix">
+						<div class="clearfix" style="width: 453px;">
 							<p class="user_name">
 								<span class="flo_l"><%= image_tag (@draft.user.profile.image.url(:small_icon) || "common/user_ico.png"), size:"22x22", alt:"" %></span>
 								<span class="flo_l"><%= link_to @draft.user.profile.nickname, kitchens_url(@user) %></span>
@@ -47,9 +47,11 @@
 						<div class="ltc cl clearfix">
 							<p>Nhóm thực phẩm</p>
 							<div class="ibox">
-								<%= recipe_genre_select_area(f, selected: @draft.recipe_food_id ) %>
+								<%= recipe_genre_select_area(f, selected: @draft.recipe_food_id, style:"width: 160px;") %>
 								<%= hidden_field_tag :hidden_recipe_food_id, @draft.recipe_food_id %>
+								<!--
 								<p class="i_att"><%= label_tag :new_food_genre, "Nhập tên nhóm thực phẩm" %>:<%= text_field_tag :new_food_genre, "", size: 10 %>Nhập tên nhóm thực phẩm nếu không tên có trong list.</p>
+								-->
 							</div>
 						</div>
 						<div id="ingredients">
@@ -85,14 +87,15 @@
 							<span class="servings_for yield">(total: <%= f.text_field :calory, size: 2, value: @draft.calory %> kcal)</span>
 						</div>
 					</div>
-					<div class="cate01 clearfix">
+					
+					<div class="cate01 clearfix" style="width: 780px;">
 						<div id="steps">
 							<% @steps.each.with_index(1) do |step,i| %>
 								<section class="rec_cat5 clearfix">
 									<h3 class="material_txt">BƯỚC <%= i %></h3>
-									<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area", id:"recipe_steps_#{i}_content" %>
+									<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area", id:"recipe_steps_#{i}_content", style:"width: 742px;" %>
 									<div class="iimg_a">
-										<p><%= label :image, "Image" %></p>
+										<p><%= label :image, "Hình ảnh" %></p>
 										<%= file_field_tag "recipe_steps[][image]", id:"recipe_steps_#{i}_image_selecter", size: 15 %>
 										<% if step.image.present? %>
 											<p><%= check_box_tag "recipe_steps[][remove_image]" %>delete image</p>
@@ -100,8 +103,9 @@
 										<% end %>
 									</div>
 									<div class="movie_button_field">
-										<p><%= label_tag :movie_url %>:</p>
-										<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, id:"recipe_steps_#{i}_movie_url" %>
+										<p style="color: red;"><%= label_tag "Tìm video dạy cách nấu ăn trên Youtube" %>:</p>
+										<p style="width: 412px; color: #008000;">Cách tìm: Click vào Movie url -> Nhập tên món ăn -> Enter -> Click vào video muốn tìm.</p>
+										<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, id:"recipe_steps_#{i}_movie_url", style:"width: 248px;" %>
 										<%= submit_tag "Movie url", type:"button", class:"movie_button" %>
 										<%= hidden_field_tag "step_number_#{i}", i %>
 										<% if step.movie_url.present? %>

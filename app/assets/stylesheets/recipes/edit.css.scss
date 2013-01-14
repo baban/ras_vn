@@ -13,8 +13,8 @@
     margin-bottom:5px;
   }
 }
-.rec_cat5 input {font-size:13px;}
-.explanation  textarea{ width:333px;}
+.rec_cat5 input {font-size:14px;}
+.explanation  textarea{ width:480px;}
 .i_att{ margin:10px 0}
 .close input{ float:right; height:25px; width:25px;  color:#fe6b1d; line-height:24px; font-size:15px; text-align:right; background:none; border:none; cursor:pointer}
 .servings_for input{ width:50px; padding:3px; margin-right:5px;}
@@ -44,15 +44,15 @@ table.ingredients_list {
     td {
       width:100%;
       input {
-        margin:0 0.3em;
-        font-size:13px;
+        margin:0 0.2em;
+        font-size:16px;
       }
     }
     td.ingredient_name > input {
-      width:10em;
+      width:16em;
     }
     td.ingredient_quantity > input {
-      width:6em;
+      width:7em;
     }
     td.ingredient_calory > input {
       width:2.5em;
