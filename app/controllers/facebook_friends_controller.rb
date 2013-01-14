@@ -26,7 +26,12 @@ class FacebookFriendsController < ApplicationController
 
   def invite
     friend_ids = params[:friends][:invite]
-    flash[:invites] = friend_ids
+    flash[:invites] = []
+    friend_ids.each do |uid|
+      friend = FbGraph::User.fetch(uid, access_token: FACEBOOK_ACCESS_TOKEN)
+      logger.info friends.inspect
+      flash[:invites]<< friend.name
+    end
     redirect_to action:"invited"
   end
 
