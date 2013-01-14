@@ -62,7 +62,7 @@ vn:
         genre: Nhóm thực phẩm
         select_genre: Chọn nhóm thực phẩm
         add_genre: Thêm nhóm thực phẩm
-        add_foodstuff: Thêm thành phần
+        add_foodstuff: Thêm mục nguyên liệu
         add_step: Thêm bước thực hiện
         edit: Lưu tạm thời
         commit: Đăng recipe

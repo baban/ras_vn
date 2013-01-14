@@ -79,11 +79,15 @@
 				<% end %>
 			</div>
 			<br />
+			
+			<% if @recipe.one_point.size > 0 %>
 			<section class="rec_cat5">
 				<h2 class="material_txt txt14">Mách nhỏ</h2>
 				<%= @recipe.one_point %>
 			</section>
 			<br /><br />
+			<% end %>
+			
 			<div id="recipe_comment_area" class="area">
 				<h1 class="ttl_recipe" style="color: #FF9258"><%= t(:comments, scope:"views.recipes.report")%></h1>
 				<p class="txt14">Bạn có thể đăng bình luận về món ăn này và đăng hình ảnh về món ăn mà bạn đã thực hiện theo công thức trên</p>
