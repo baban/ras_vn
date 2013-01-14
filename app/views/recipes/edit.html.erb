@@ -103,7 +103,8 @@
 										<% end %>
 									</div>
 									<div class="movie_button_field">
-										<p><%= label_tag "Tìm chọn Video" %>:</p>
+										<p style="color: red;"><%= label_tag "Tìm video dạy cách nấu ăn trên Youtube" %>:</p>
+										<p>Cách tìm: Click vào Movie url -> Nhập tên món ăn -> Enter -> Click vào video muốn tìm.</p>
 										<%= text_field_tag "recipe_steps[][movie_url]", step.movie_url, id:"recipe_steps_#{i}_movie_url", style:"width: 248px;" %>
 										<%= submit_tag "Movie url", type:"button", class:"movie_button" %>
 										<%= hidden_field_tag "step_number_#{i}", i %>
