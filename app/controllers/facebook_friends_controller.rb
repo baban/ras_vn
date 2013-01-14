@@ -7,6 +7,7 @@ class FacebookFriendsController < ApplicationController
     # TODO: facebookID取得
     @friends = Marshal.load(File.binread(Rails.root.to_path+"/resource/friends.dat"))
     
+    logger.info current_user.inspect
     omniuser = Omniuser.find(current_user.omniuser_id)
     logger.info :omniuser
     logger.info omniuser.inspect
