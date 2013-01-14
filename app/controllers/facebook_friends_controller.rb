@@ -15,7 +15,6 @@ class FacebookFriendsController < ApplicationController
 
     uid = omniuser.uid
     logger.info uid
-=begin
     user = FbGraph::User.fetch(uid, access_token: FACEBOOK_ACCESS_TOKEN)
     # user = FbGraph::User.fetch('100002130858178', access_token: FACEBOOK_ACCESS_TOKEN)
     logger.info :user
@@ -24,7 +23,6 @@ class FacebookFriendsController < ApplicationController
     logger.info :friends
     logger.info @friends.inspect
     # File.binwrite(Rails.root.to_path+"/friends.data", Marshal.dump(@friends))
-=end
   end
 
   def invite
