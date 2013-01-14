@@ -2,19 +2,37 @@
 
 class FacebookFriendsController < ApplicationController
   def index
-    # @friends = File.binread(Rails.root.to_path+"/resource/friends.data")
-    user = FbGraph::User.fetch('100002130858178', access_token: FACEBOOK_ACCESS_TOKEN)
+    # TODO: ログイン済みユーザーチェック
+    # TODO: facebookから来たのかをチェック
+    # TODO: facebookID取得
+    @friends = Marshal.load(File.binread(Rails.root.to_path+"/resource/friends.dat"))
+    
+    omniuser = Omniuser.find(current_user.omniuser_id)
+    logger.info :omniuser
+    logger.info omniuser.inspect
+    return redirect_to "/" unless omniuser.provider=="facebook"
+
+    uid = omniuser.uid
+    logger.info uid
+=begin
+    user = FbGraph::User.fetch(uid, access_token: FACEBOOK_ACCESS_TOKEN)
+    # user = FbGraph::User.fetch('100002130858178', access_token: FACEBOOK_ACCESS_TOKEN)
     logger.info :user
     logger.info user.inspect
     @friends = user.friends
     logger.info :friends
     logger.info @friends.inspect
-    File.binwrite(Rails.root.to_path+"/friends.data", Marshal.dump(@friends))
+    # File.binwrite(Rails.root.to_path+"/friends.data", Marshal.dump(@friends))
+=end
   end
 
   def invite
+    friend_ids = params[:friends][:invite]
+    flash[:invites] = friend_ids
+    redirect_to action:"invited"
   end
 
   def invited
+    @friends = flash[:invites].join(", ")
   end
 end
