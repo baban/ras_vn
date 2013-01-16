@@ -11,6 +11,10 @@ end
 # app = FbGraph::Application.new(APP_ID, secret: APP_SECRET)
 # app.get_access_token
 
+# uid = "100002130858178"
+# user = FbGraph::User.fetch( uid, access_token: FACEBOOK_ACCESS_TOKEN )
+# user.event!( name:"test", start_time: 1.week.from_now, end_time: 2.week.from_now )
+
 # access token get metho is written below url
 # https://github.com/nov/fb_graph/wiki/App-Access-Token
 FACEBOOK_ACCESS_TOKEN = "452090888159529|2aLPrLa7PPhxocdT-ECw7SJHkMY"

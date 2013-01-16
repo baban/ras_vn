@@ -40,6 +40,5 @@ class FacebookFriendsController < ApplicationController
   end
 
   def invited
-    @friends = flash[:invites].join(", ")
   end
 end
