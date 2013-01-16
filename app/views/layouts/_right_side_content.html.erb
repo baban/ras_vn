@@ -9,6 +9,7 @@
 		<% end %>
 	</aside>
 
+	<% if @newsfeeds.size > 0%>
 	<article class="side_c01">
 		<h1 class="txt12">Topic&amp;News</h1>
 		<% @newsfeeds.each do |feed| %>
@@ -23,6 +24,7 @@
 		</section>
 		<% end %>
 	</article>
+	<% end %>
 	<article class="side_c01" id="stream_area">
 		<h1 class="txt12">Stream</h1>
 		<div id="stream_list_box">
@@ -35,6 +37,7 @@
 				<% end %>
 			</ul>
 		</div>
+		<br />
 	</article>
 	<br />
 	<article class="side_c01" id="stream_area">
