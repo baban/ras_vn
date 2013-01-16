@@ -4,6 +4,7 @@ class FacebookFriendsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+    @headers = request.headers
     @headers['Pragma'] = 'public'
     @headers['Cache-Control'] = "max-age=#{60*60*24*365}"
     @headers['Expires'] = 1.year.from_now.strftime("%a, %d %b %Y %H:%i:%s")
