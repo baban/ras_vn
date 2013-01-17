@@ -9,7 +9,9 @@
 		<%= stylesheet_link_tag :common %>
 		<%= stylesheet_link_tag params[:controller] %>
 		<%= yield :style_after %>
-		<%= javascript_include_tag :common %>
+		<%= javascript_include_tag :jquery %>
+		<%= javascript_include_tag :jquery_ujs %>
+		<%= javascript_include_tag :google_analytics %>
 		<%= yield :javascript_after %>
 		<%= csrf_meta_tags %>
 	</head>
