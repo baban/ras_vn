@@ -105,7 +105,7 @@ vn:
       sign_up:
         title: Đăng kí thành viên qua Cook24.vn
         sub_title: Profile
-        address_description: Chọn địa điểm nơi bạn đang sống
+        address_description: Chọn nơi bạn đang sinh sống
         post_button: Đăng ký
   page:
     recipes:
