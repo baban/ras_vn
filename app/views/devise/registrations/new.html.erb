@@ -48,7 +48,7 @@
 						<%= profile.label :birthday %>
 					</p>
 					<div class="ibox">
-						<%= profile.date_select :birthday, include_blank: true, use_month_numbers: true, start_year: 1930, end_year: Time.now.year, date_separator:'/' %>
+						<%= profile.date_select :birthday, :prompt => { :day => 'Ngày', :month => 'Tháng', :year => 'Năm' }, :use_month_numbers=> true, :start_year=> 1930, :end_year=> Time.now.year, :date_separator=>'/' %>
 					</div>
 					<p class="ivie">
 						<span class="ive txt11 radi10">Công khai</span>
@@ -72,7 +72,7 @@
 						<%= profile.label :distinct_id %>
 					</p>
 					<div class="ibox">
-						<%= distinct_selecter( profile, selected: 1 ) %>
+						<%= distinct_selecter( profile, selected: 0 ) %>
 						<p class="txt11">
 							<%= t(:address_description, scope:"views.users.sign_up") %>
 						</p>
