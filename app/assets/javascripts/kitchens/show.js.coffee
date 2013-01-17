@@ -1,4 +1,4 @@
-$(window).load ->
+window.onload = ->
   $("#follow_button")
     .live( "ajax:success", (event, data, status, xhr) ->
       if data["value"]

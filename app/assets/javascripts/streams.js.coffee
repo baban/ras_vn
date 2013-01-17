@@ -1,4 +1,4 @@
-$(window).load ->
+window.onload = ->
   last_request_time = new Date()
 
   append_stream_element = ( el )->
