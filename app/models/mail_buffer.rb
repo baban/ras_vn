@@ -31,7 +31,7 @@ class MailBuffer < ActiveRecord::Base
 
   # mail sendable users
   def self.mail_senders_info
-    UserProfile.scoped
+    UserProfile.where( mail_status: true )
   end
 
   def self.create_mail_buffer( profile, mail )
