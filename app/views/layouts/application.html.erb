@@ -9,9 +9,7 @@
 		<%= stylesheet_link_tag :common %>
 		<%= stylesheet_link_tag params[:controller] %>
 		<%= yield :style_after %>
-		<%= javascript_include_tag :jquery %>
-		<%= javascript_include_tag :jquery_ujs %>
-		<% unless [:development,:test].include?(Rails.env.to_sym) %><%= javascript_include_tag :google_analytics %><% end %>
+		<%= javascript_include_tag :common %>
 		<%= yield :javascript_after %>
 		<%= csrf_meta_tags %>
 	</head>
