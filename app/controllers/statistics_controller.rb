@@ -14,47 +14,6 @@ class StatisticsController < Admin::BaseController
     @foodstuff_table = create_recipe_food_table
   end
 
-  def access
-  end
-
-  def access_source
-    h = {
-      nodes:[
-             { label: "/", amount: 546 },
-             { label: "/mypage", amount: 300 },
-             { label: "/columns", amount: 150 },
-             { label: "/user_reports", amount: 10 },
-             { label: "/questions", amount: 10 },
-             { label: "/navi_questions", amount: 10 },
-             { label: "/free", amount: 10 },
-             { label: "/charge", amount: 10 },
-             { label: "/errors", amount: 10 },
-             { label: "/answers", amount: 10 },
-            ],
-      links: [
-              { source: 0, target: 1, weight: 0.5, amount: 100 },
-              { source: 0, target: 4, weight: 0.5, amount: 10 },
-              { source: 0, target: 3, weight: 0.5, amount: 150 },
-              { source: 0, target: 2, weight: 0.5, amount: 200 },
-              { source: 4, target: 5, weight: 0.5, amount: 300 },
-              { source: 4, target: 9, weight: 0.5, amount: 10 },
-              { source: 5, target: 9, weight: 0.5, amount: 10 },
-              { source: 1, target: 4, weight: 0.5, amount: 10 },
-              { source: 1, target: 5, weight: 0.5, amount: 10 },
-              { source: 0, target: 6, weight: 0.5, amount: 10 },
-              { source: 0, target: 7, weight: 0.5, amount: 10 },
-              { source: 8, target: 9, weight: 0.5, amount: 10 },
-             ]
-    }
-
-    h = FluentLog.aggrigation
-
-    respond_to do |format|
-      format.json { render json: h }
-      format.html { render json: h }
-    end
-  end
-
   def profile
     @prefecture_amount_greph = UserProfile.group(:prefecture_id).count
     # @age_amount_greph = UserProfile.group(:prefecture_id).count
