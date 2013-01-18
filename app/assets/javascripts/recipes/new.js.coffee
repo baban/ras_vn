@@ -1,4 +1,4 @@
-$(window).load ->
+window.onload = ->
   genre_initializer = ->
     sctr = $("#recipe_recipe_food_id")
     sctr.show()
