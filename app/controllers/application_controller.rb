@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 class ApplicationController < ActionController::Base
+  include ::SslRequirement
   include FormHelper
 
   before_filter :sidebar_filter
