@@ -1,4 +1,4 @@
-$(window).load ->
+window.load = ->
   city_selecter = ->
     sctr = $("#user_user_profile_attributes_distinct_id")
     sctr.show()
