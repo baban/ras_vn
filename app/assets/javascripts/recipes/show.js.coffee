@@ -1,4 +1,4 @@
-$(window).load ->
+window.onload = ->
   $("#bookmark_button")
     .live( "ajax:complete", (xhr) ->
       v = $("#bookmark_button").text()
