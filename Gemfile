@@ -6,6 +6,9 @@ gem 'rails', '3.2.9'
 gem "mysql2", "0.3.11"
 gem "memcache-client", "1.8.5" # user memcashed
 gem "dalli", "2.1.0"           # memcached hig-perfirmance settinged gem
+gem "moped", "1.2.1"
+gem "bson", "1.7.0"
+gem "bson_ext", "1.7.0"
 gem "bartt-ssl_requirement", "1.4.2", require: "ssl_requirement"
 gem "libv8", "3.3.10.4"
 gem "faraday"
