@@ -11,7 +11,8 @@ window.onload = ->
 
   $("#love_button")
     .live( "ajax:success", (event, data, status, xhr) ->
+      console.log "aaaaaa"
       $("#love_area").html("<span class='loved'>love("+data["count"]+")</span>")
     )
 
-    $('#recipe_image_link').colorbox();
+  $('#recipe_image_link').colorbox();

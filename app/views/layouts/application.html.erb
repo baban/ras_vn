@@ -13,14 +13,16 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
+		<%= javascript_include_tag :jquery %>
+		<%= javascript_include_tag :jquery_ujs %>
+
 		<%= render partial:"layouts/header" %>
 		<% if flash[:alert] %><div class="alert"><%= flash[:alert] %></div><% end %>
 		
 		<%= yield %>
 		
 		<%= render partial:"layouts/footer" %>
-		<%= javascript_include_tag :jquery %>
-		<%= javascript_include_tag :jquery_ujs %>
+
 		<%= javascript_include_tag :google_analytics %>
 	</body>
 </html>

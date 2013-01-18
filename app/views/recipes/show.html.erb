@@ -8,17 +8,12 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <!--FBのいいね！ボタン-->
-		
+
 <% content_for :title do %><%= @recipe.title %><% end %>
 
 <% content_for :style_after do %>
 	<%= stylesheet_link_tag "colorbox/colorbox" %>
 	<%= stylesheet_link_tag "recipes/show" %>
-<% end %>
-
-<% content_for :javascript_after do %>
-	<%= javascript_include_tag "colorbox/jquery.colorbox-min" %>
-	<%= javascript_include_tag "recipes/show" %>
 <% end %>
 
 <%= render partial:"forbiddon_right_click" %>
@@ -145,3 +140,5 @@
 	<!--contents-->
 </div>
 
+<%= javascript_include_tag "colorbox/jquery.colorbox-min" %>
+<%= javascript_include_tag "recipes/show" %>
