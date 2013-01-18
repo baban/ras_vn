@@ -38,4 +38,8 @@ every 1.day, at:"11:00" do
   # runner "MailBuffer.send_mail_magazines"
 end
 
+every 1.hour do
+  # runner "FacebookFriendInvite.invites"
+end
+
 # Learn more: http://github.com/javan/whenever
