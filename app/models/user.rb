@@ -52,6 +52,15 @@ class User < ActiveRecord::Base
     self.entry_flg
   end
 
+  def facebook
+    Omniuser.find_by_id(current_user.omniuser_id)
+  end
+
+  def facebook?
+    omniuser = Omniuser.find_by_id(current_user.omniuser_id)
+    omniuser.try(:provider)=="facebook"
+  end
+
   def bookmarked_recipes
     recipe_ids = Bookmark.where( user_id: self.id ).select(:recipe_id)
     Recipe.where( " id IN (#{recipe_ids.to_sql}) " )

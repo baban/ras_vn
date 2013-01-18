@@ -1,0 +1,15 @@
+#invite_area {
+  height:40em;
+  ul.friends {
+    height:20em;
+    overflow-y:scroll;
+    border:inset 2px #aaa;
+    li {
+      width:200px;
+      border:solid 1px #aaa;
+      float:left;
+      padding:2px;
+      margin:2px;
+    }
+  }
+}
