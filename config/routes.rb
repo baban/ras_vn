@@ -7,7 +7,6 @@ RasVn::Application.routes.draw do
   match "/logout" => "sessions#destroy", :as => :logout
 
   root to:"top#index"
-  get "user/registrated" => "devise/registrations#registrated"
   devise_for :user
   get "top/index", as:'user_root'
   match '/recipes/recipe_foods/:recipe_food_id', controller:"recipes", action:"index"
@@ -17,6 +16,7 @@ RasVn::Application.routes.draw do
   resources(:diaries)
   resources(:facebook_friends) { collection { get :invited; post :invite } }
   resources(:information)
+  resources(:kitchens) { member { get :recipes, :follow, :recipe_comments, :retired_chef } }
   resources(:recipes) { collection { get :love, :caution, :youtube, :publication } }
   resources(:recipe_comments)
   resources(:recipe_foods, only:[:index]){ collection{ post :index } }
@@ -26,7 +26,7 @@ RasVn::Application.routes.draw do
   resources(:mypage, only:[:index]) do
     collection { get :recipes, :diary, :recipe_comments, :follow, :follower, :retire }
   end
-  resources(:kitchens) { member { get :recipes, :follow, :recipe_comments, :retired_chef } }
+  resources(:users, only: []){ collection{ get :stop_confirm, :stoped; post :stop } }
 
   match '/cooporation(/:action(/:id))', controller:"cooporations"
   match '/statistics(/:action(/:id))', controller:"statistics"

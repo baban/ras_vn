@@ -37,10 +37,13 @@ class User < ActiveRecord::Base
     profile
   end
 
-  def retire
-    self.entry_flg= false
+  def stop
+    self.retire_flg = true
     self.save
     self.recipes.update_all( " public = false " )
+    self.diaries.delete_all
+    self.followers.delete_all
+    Follower.where( follower_id: self.id ).delete_all
     self
   end
 
@@ -49,7 +52,7 @@ class User < ActiveRecord::Base
   end
 
   def member?
-    self.entry_flg
+    !self.retire_flg
   end
 
   def facebook

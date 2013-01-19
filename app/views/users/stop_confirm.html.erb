@@ -1,0 +1,23 @@
+<% include_action_javascript %>
+
+<div class="bace_bg">
+	<div class="att_bg clearfix">
+		<!--main_clm-->
+		<div class="main_clm">
+			<article class="contents_recipes">
+				<h1 class="txt20">Stop account</h1>
+				<p>below button clicked,account is stoped</p>
+				<p>if your account is stopped</p>
+				<ul>
+					<li>Your profile is changes unpublic</li>
+					<li>All your recipe is changed unpublic</li>
+					<li>your follower is all unlinked</li>
+				</ul>
+				<%= form_for current_user, url:{ action:"stop" }, method:"POST" do |f| %>
+					<%= f.submit "Stop Account" %>
+				<% end %>
+				<p class="txt11 cap"><%= link_to "go to TOP", "/" %></p>
+			</article>
+		</div>
+	</div>
+</div>
