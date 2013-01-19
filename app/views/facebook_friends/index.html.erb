@@ -8,8 +8,8 @@
 				<% @friends.each do |friend| %>
 					<li>
 						<%= check_box_tag "invite[]", friend.identifier %>
-						<%= image_tag friend.picture, alt:"" %>
-						<%= friend.name %>
+						<span class="friend_picture"><%= image_tag friend.picture, alt:"" %></span>
+						<span class="friend_name"><%= friend.name %></span>
 					</li>
 				<% end %>
 			</ul>

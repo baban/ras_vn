@@ -5,11 +5,14 @@
     overflow-y:scroll;
     border:inset 2px #aaa;
     li {
-      width:200px;
+      display:block;
+      min-width:150px;
+      width:18%;
+      height:54px;
       border:solid 1px #aaa;
       float:left;
-      padding:2px;
       margin:2px;
+      overflow:hidden;
     }
   }
 }
