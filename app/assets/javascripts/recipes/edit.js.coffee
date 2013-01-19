@@ -60,7 +60,10 @@ window.onload = ->
     movie_button = $('<input />').attr('type','button').addClass('movie_button').attr('value','Movie Url')
     movie_button.click movie_button_click
     movie_button_field = $('<div />').addClass('movie_button_field')
-                           .append( $('<p />').append( $('<label />').text('Movie Url') ) )
+                           .append( $('<p />').append( $('<label />')
+                           .append( $('<p style="color: red;">').text('Tìm video dạy cách nấu ăn trên Youtube:') ) ) )
+                           .append( $('<p style="width: 412px; color: #008000;">').text('Cách tìm: Click vào Movie url -> Nhập tên món ăn -> Enter -> Click vào video muốn tìm.'))
+                           .append( $('</p>') )
                            .append( $('<input />').attr('type','text').attr('name','recipe_steps[][movie_url]').attr('id',"recipe_steps_#{i}_movie_url") )
                            .append( movie_button )
                            .append( $('<input />').attr('type','hidden').attr('id',"step_number_#{i}").attr('name',"step_number_#{i}").attr('value', i ) )
