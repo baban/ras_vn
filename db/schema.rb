@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130118181928) do
+ActiveRecord::Schema.define(:version => 20130119142724) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -294,25 +294,25 @@ ActiveRecord::Schema.define(:version => 20130118181928) do
   add_index "recipe_rankings", ["recipe_id"], :name => "index_recipe_rankings_on_recipe_id"
 
   create_table "recipe_step_drafts", :force => true do |t|
-    t.integer  "recipe_draft_id",                 :null => false
+    t.integer  "recipe_draft_id", :null => false
     t.string   "image"
     t.string   "movie_url"
-    t.string   "content",         :default => "", :null => false
+    t.text     "content",         :null => false
     t.datetime "deleted_at"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   add_index "recipe_step_drafts", ["recipe_draft_id"], :name => "index_recipe_step_drafts_on_recipe_draft_id"
 
   create_table "recipe_steps", :force => true do |t|
-    t.integer  "recipe_id",                  :null => false
+    t.integer  "recipe_id",  :null => false
     t.string   "image"
     t.string   "movie_url"
-    t.string   "content",    :default => "", :null => false
+    t.text     "content",    :null => false
     t.datetime "deleted_at"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "recipe_steps", ["recipe_id"], :name => "index_recipe_steps_on_recipe_id"
