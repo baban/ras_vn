@@ -1,14 +1,3 @@
-<!--FBのいいね！ボタン-->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=452090888159529";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<!--FBのいいね！ボタン-->
-
 <% content_for :title do %><%= @recipe.title %><% end %>
 
 <% content_for :style_after do %>
@@ -87,16 +76,17 @@
 						<div class="txt"><p><%= hbr step.content %></p></div>
 					</section>
 				<% end %>
+				<% if @recipe.one_point.size > 0 %>
+					<section class="rec_cat5">
+						<h2 class="material_txt txt14">Mách nhỏ</h2>
+						<%= @recipe.one_point %>
+					</section>
+					<br /><br />
+				<% end %>
 			</div>
 			<br />
 			
-			<% if @recipe.one_point.size > 0 %>
-			<section class="rec_cat5">
-				<h2 class="material_txt txt14">Mách nhỏ</h2>
-				<%= @recipe.one_point %>
-			</section>
-			<br /><br />
-			<% end %>
+			
 			
 			<div id="recipe_comment_area" class="area">
 				<h1 class="ttl_recipe" style="color: #FF9258"><%= t(:comments, scope:"views.recipes.report")%></h1>
