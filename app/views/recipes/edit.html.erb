@@ -91,7 +91,7 @@
 					<div class="cate01 clearfix" style="width: 780px;">
 						<div id="steps">
 							<% @steps.each.with_index(1) do |step,i| %>
-								<section class="rec_cat5 clearfix">
+								<section class="rec_cat7 clearfix">
 									<h3 class="material_txt">BƯỚC <%= i %></h3>
 									<%= text_area_tag "recipe_steps[][content]", step.content, class:"step_edit_area", id:"recipe_steps_#{i}_content", style:"width: 742px;" %>
 									<div class="iimg_a">
@@ -127,7 +127,7 @@
 								</p>
 							</div>
 						</div>
-						<section class="rec_cat5 clearfix">
+						<section class="rec_cat7 clearfix">
 							<h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
 							<div class="section"><%=f.text_area :one_point, value: @recipe.one_point, style:"width: 742px;" %></div>
 						</section>
