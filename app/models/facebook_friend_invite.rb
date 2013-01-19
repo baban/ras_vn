@@ -8,10 +8,13 @@ class FacebookFriendInvite < ActiveRecord::Base
   end
 
   def self.invites
+    Rails.logger.info "batch start : FacebookFriendInvite.invites"
     self.find_each do |invite|
+      next if [:development,:test].include?(Rails.env.to_sym)
       friend = self.invite( invite.invite_user_id )
       friend.delete
     end
+    Rails.logger.info "batch end   : FacebookFriendInvite.invites"
   end
 
   def self.invite( uid )
