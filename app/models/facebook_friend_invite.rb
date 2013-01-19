@@ -16,7 +16,7 @@ class FacebookFriendInvite < ActiveRecord::Base
   def self.invite( uid )
     friend = FbGraph::User.fetch(uid, access_token: FACEBOOK_ACCESS_TOKEN)
   rescue => e
-    logger.error ;frinend_invite_error
+    logger.error :frinend_invite_error
     logger.error invite.inspect
     logger.error e.inspect
   end
