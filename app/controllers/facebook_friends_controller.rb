@@ -8,6 +8,7 @@ class FacebookFriendsController < ApplicationController
       @friends = Marshal.load(File.binread(Rails.root.to_path+"/resource/friends.dat")).sort{ |a,b| a.name<=>b.name }
     else
       logger.info current_user.inspect
+
       return redirect_to "/" unless current_user.facebook?
 
       uid = current_user.facebook.uid

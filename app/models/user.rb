@@ -53,11 +53,11 @@ class User < ActiveRecord::Base
   end
 
   def facebook
-    Omniuser.find_by_id(current_user.omniuser_id)
+    Omniuser.where( id: self.omniuser_id ).first
   end
 
   def facebook?
-    omniuser = Omniuser.find_by_id(current_user.omniuser_id)
+    omniuser = Omniuser.where( id: self.omniuser_id ).first
     omniuser.try(:provider)=="facebook"
   end
 
