@@ -38,7 +38,7 @@ set :git_shallow_clone, 1
 set :chmod755, "app config db lib public vendor script script/* public/disp*"
 
 # releaseディレクトリを残す数
-set :keep_releases, 20
+set :keep_releases, 10
 
 # public以下のjavascriptやCSSファイルのタイムスタンプを更新するコマンドを無効化
 set :normalize_asset_timestamps, false
