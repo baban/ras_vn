@@ -24,9 +24,9 @@ RasVn::Application.routes.draw do
   resources(:streams)
   resources(:newsfeeds, only:[:index,:show])
   resources(:mypage, only:[:index]) do
-    collection { get :recipes, :diary, :recipe_comments, :follow, :follower, :retire }
+    collection { get :recipes, :diary, :recipe_comments, :follow, :follower, :account_setting }
   end
-  resources(:users, only: []){ collection{ get :stop_confirm, :stoped; post :stop } }
+  resources(:users, only: []){ collection{ get :stop_confirm, :stoped, :recover_confirm, :recovered; post :stop, :recover } }
 
   match '/cooporation(/:action(/:id))', controller:"cooporations"
   match '/statistics(/:action(/:id))', controller:"statistics"

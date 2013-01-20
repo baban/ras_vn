@@ -1,0 +1,19 @@
+<div class="bace_bg">
+	<div class="contents_bg clearfix">
+		<%= render partial:"mypage/content_header" %>
+		<div class="clearfix mypage_content">
+			<h2 class="txt16 ttl_mypage">account setting</h2>
+			<article class="cate01 clearfix">
+				<% if current_user.member? %>
+					<p>your account is enable, if you stop account some your information is deleted</p>
+					<%= link_to "account stop page",    { controller:"users", action:"stop_confirm" }, class:"txt20" %>
+				<% else %>
+					<p>your account is enable, if you stop account some your information is deleted</p>
+					<%= link_to "account recover page", { controller:"users", action:"stop_confirm" }, class:"txt20" %>
+				<% end %>
+			</article>
+		</div>
+	</div>
+	<!--contents-->
+</div>
+

@@ -42,8 +42,15 @@ class User < ActiveRecord::Base
     self.save
     self.recipes.update_all( " public = false " )
     self.diaries.delete_all
+    self.recipe_comments.delete_all
     self.followers.delete_all
     Follower.where( follower_id: self.id ).delete_all
+    self
+  end
+
+  def user_recover
+    self.retire_flg = false
+    self.save
     self
   end
 

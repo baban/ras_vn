@@ -16,6 +16,18 @@ class UsersController < ApplicationController
   def stoped
   end
 
+  def recover_confirm
+  end
+
+  def recover
+    current_user.user_recover
+
+    redirect_to action:"recovered"
+  end
+
+  def recovered
+  end
+
   def registrated
   end
 end

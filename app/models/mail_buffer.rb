@@ -31,7 +31,8 @@ class MailBuffer < ActiveRecord::Base
 
   # mail sendable users
   def self.mail_senders_info
-    UserProfile.where( mail_status: true )
+    users = User.where( retire_flg: false ).select(:id)
+    UserProfile.where( mail_status: 1 ).where( " user_id IN (#{users.to_sql}) " )
   end
 
   def self.create_mail_buffer( profile, mail )

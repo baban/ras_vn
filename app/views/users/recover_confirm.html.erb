@@ -1,0 +1,15 @@
+<% include_action_javascript %>
+
+<div class="bace_bg">
+	<div class="att_bg clearfix">
+		<!--main_clm-->
+		<div class="main_clm">
+			<article class="contents_recipes">
+				<h1 class="txt20">recover your account</h1>
+				<%= form_for current_user, url:{ action:"recover" }, method:"POST" do |f| %>
+					<%= f.submit "recover account" %>
+				<% end %>
+			</article>
+		</div>
+	</div>
+</div>

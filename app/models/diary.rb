@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class Diary < ActiveRecord::Base
+  acts_as_paranoid
+
   belongs_to :user
 
   validates :title,   presence: true

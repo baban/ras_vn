@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class Follower < ActiveRecord::Base
+  acts_as_paranoid
+
   belongs_to :users
 
   def self.follow( from, to )

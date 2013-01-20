@@ -22,6 +22,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe ||= Recipe.find(params[:id])
+
     @recipe_comment = RecipeComment.new
     @comments = @recipe.comments
     @bookmark = Bookmark.where( recipe_id: params[:id], user_id: current_user.try(:id) ).first || Bookmark.new
@@ -114,8 +115,8 @@ class RecipesController < ApplicationController
   private
   def publiced_filter
     @recipe = Recipe.where( id: params[:id] ).first
-    return redirect_to(recipe_food_genres_url, alert:"this recipe is not public") if @recipe.status == Recipe::Status::REJECT
-    return redirect_to(recipe_food_genres_url, alert:"this recipe is not public") if (not @recipe.try(:public)) and @recipe.user_id != current_user.try(:id)
+    return render(action:"unpubliced_recipe") if @recipe.status == Recipe::Status::REJECT
+    return render(action:"unpubliced_recipe") if (not @recipe.try(:public)) and @recipe.user_id != current_user.try(:id)
   end
 
   def editable_user_filter

@@ -33,8 +33,8 @@ class MypageController < ApplicationController
     @follows = Follower.where( follower_id: current_user.id ).page( params[:page] || 1 )
   end
 
-  # retire description
-  def retire
+  # retire, recover account
+  def account_setting
   end
   
   private
