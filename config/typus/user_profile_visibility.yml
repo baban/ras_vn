@@ -2,7 +2,7 @@
 
 UserProfileVisibility:
   fields:
-    default: user_profile_id, nickname, sex, first_name, family_name, birthday, email, postcode, address
-    form: user_profile_id, nickname, sex, first_name, family_name, birthday, email, postcode, address
+    default: user_profile_id, nickname, sex, first_name, family_name, email, postcode, address
+    form: user_profile_id, nickname, sex, first_name, family_name, email, postcode, address
   relationships: 
   application: Application
