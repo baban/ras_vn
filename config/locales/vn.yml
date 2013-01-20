@@ -7,6 +7,8 @@ vn:
       - :day
       - :month
       - :year
+    formats:
+      default: "%Y-%m-%d"
   time:
     formats:
       default: "%d-%m-%Y"
