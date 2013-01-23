@@ -14,7 +14,7 @@ RasVn::Application.routes.draw do
   resource(:profile){ collection { get :delete_confirm } }
   resources(:bookmarks)
   resources(:diaries)
-  resources(:facebook_friends) { collection { get :invited; post :invite } }
+  resources(:facebook_friends) { collection { get :invited, :come; post :invite } }
   resources(:information)
   resources(:kitchens) { member { get :recipes, :follow, :recipe_comments, :retired_chef } }
   resources(:recipes) { collection { get :love, :caution, :youtube, :publication } }

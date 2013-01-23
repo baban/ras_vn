@@ -35,7 +35,7 @@ every 1.day, at:"00:10" do
 end
 
 every 1.day, at:"11:00" do
-  # runner "MailBuffer.send_mail_magazines"
+  # runner "MailBuffer.send_mail_buffers"
 end
 
 every 1.hour do

@@ -37,4 +37,11 @@ class FacebookFriendsController < ApplicationController
 
   def invited
   end
+
+  def come
+    invite = FacebookFriendInvite.find( params[:id] )
+    invite.complete
+
+    redirect_to "/auth/facebook"
+  end
 end

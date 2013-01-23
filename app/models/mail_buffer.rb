@@ -19,12 +19,14 @@ class MailBuffer < ActiveRecord::Base
 
     # get today's mail data
     mail = MailTemplate.todays_mail
+
     return false unless mail
 
     profiles = self.mail_senders_info
     profiles.find_each( batch_size: 500 ) do |profile|
       self.create_mail_buffer( profile, mail )
     end
+
     Rails.logger.info "mail buffer : create end"
     true
   end
@@ -36,15 +38,14 @@ class MailBuffer < ActiveRecord::Base
   end
 
   def self.create_mail_buffer( profile, mail )
-    mail = MagazineMailer.magazine( profile, mail )
+    # mail = MagazineMailer.magazine( profile, mail )
     row = {
       user_id: profile.user_id,
-      email: profile.mail_address,
-      from: mail.magazine_from,
-      reply_to: mail.magazine_reply,
-      bcc: mail.magazine_bcc,
-      subject: mail.subject,
-      body: mail.contents,
+      email: profile.email,
+      from: mail.from,
+      bcc: mail.bcc,
+      subject: mail.title,
+      body: mail.content,
     }
 
     buffer = self.create( row, without_protection: true )

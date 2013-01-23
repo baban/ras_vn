@@ -3,8 +3,9 @@
 class MagazineMailer < ActionMailer::Base
   default from: "info@cook24.vn"
 
-  def magazine( buffer )
+  def magazine( profile, buffer )
     @buffer = buffer
-    mail( subject: @buffer.subject, from: @buffer.from, to: @buffer.to, 'Reply-to' => @buffer.reply_to )
+    @profile = profile
+    mail( subject: @buffer.title, from: @buffer.from, to: @profile.email, 'Reply-to' => @buffer.reply_to )
   end
 end
