@@ -32,8 +32,8 @@ ja:
     - Saturday
     formats:
       default: ! '%Y-%m-%d'
-      long: ! '%B %d, %Y'
-      short: ! '%b %d'
+      long: ! '%Y-%m-%d %H:%M:%S'
+      short: ! '%Y-%m-%d'
     month_names:
     - 
     - January
@@ -188,11 +188,7 @@ ja:
     array:
       last_word_connector: ! ', and '
       two_words_connector: ! ' and '
-  date:
-    formats:
-      default: ! '%Y-%m-%d'
-      long: ! '%Y-%m-%d %H:%M:%S'
-      short: ! '%Y-%m-%d'
+      words_connector: ! ', '
   time:
     am: am
     formats:

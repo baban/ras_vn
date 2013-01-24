@@ -32,8 +32,8 @@ vn:
     - Saturday
     formats:
       default: ! '%Y-%m-%d'
-      long: ! '%B %d, %Y'
-      short: ! '%b %d'
+      long: ! '%Y-%m-%d %H:%M:%S'
+      short: ! '%Y-%m-%d'
     month_names:
     - 
     - January
@@ -189,11 +189,6 @@ vn:
       last_word_connector: ! ', and '
       two_words_connector: ! ' and '
       words_connector: ! ', '
-  date:
-    formats:
-      default: ! '%Y-%m-%d'
-      long: ! '%Y-%m-%d %H:%M:%S'
-      short: ! '%Y-%m-%d'
   time:
     am: am
     formats:
