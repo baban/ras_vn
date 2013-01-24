@@ -41,7 +41,7 @@ class FacebookFriendsController < ApplicationController
   def come
     invite = FacebookFriendInvite.find( params[:id] )
 
-    return redirect_to "/" if invite.status == 1
+    return redirect_to("/", alert:"invite status completed") unless invite.status == 1
 
     invite.complete
 
