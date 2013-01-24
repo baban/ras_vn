@@ -27,7 +27,7 @@ class FacebookFriendInvite < ActiveRecord::Base
     friend = FbGraph::User.fetch( invite.invite_user_id, access_token: FACEBOOK_ACCESS_TOKEN )
     Rails.logger.info friend.inspect
     mail = UserMailer.facebook_friend_invite( invite, invite_user, friend )
-    mail.deliver if [:development,:test].include?(Rails.env.to_sym)
+    mail.deliver unless [:development,:test].include?(Rails.env.to_sym)
     invite.sended
     Rails.logger.info :sended
     friend
