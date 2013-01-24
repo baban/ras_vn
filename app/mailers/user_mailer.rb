@@ -20,6 +20,7 @@ class UserMailer < ActionMailer::Base
     @friend      = friend
     @invite_user = invite_user
 
+    Rails.logger.info " facebook invite emai send to : #{friend.email} "
     mail( subject:"#{friend.name} join cook24.vn!!", to: friend.email )
   end
 end
