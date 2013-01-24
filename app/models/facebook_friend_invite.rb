@@ -22,16 +22,19 @@ class FacebookFriendInvite < ActiveRecord::Base
 
   # invite mail send
   def self.invite( invite )
+    Rails.logger.info invite.inspect
     invite_user = User.where( id: invite.user_id ).first
     friend = FbGraph::User.fetch( invite.invite_user_id, access_token: FACEBOOK_ACCESS_TOKEN )
+    Rails.logger.info friend.inspect
     mail = UserMailer.facebook_friend_invite( invite, invite_user, friend )
     mail.deliver if [:development,:test].include?(Rails.env.to_sym)
     invite.sended
+    Rails.logger.info :sended
     friend
   rescue => e
-    logger.error :frinend_invite_error
-    logger.error invite.inspect
-    logger.error e.inspect
+    Rails.logger.error :frinend_invite_error
+    Rails.logger.error invite.inspect
+    Rails.logger.error e.inspect
   end
 
   def sended
