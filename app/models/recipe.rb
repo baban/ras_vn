@@ -2,6 +2,7 @@
 
 class Recipe < ActiveRecord::Base
   acts_as_paranoid
+  default_scope order: 'id DESC'
 
   paginates_per 10
 
