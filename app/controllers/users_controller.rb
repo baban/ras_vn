@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   # user account is exist, but all recipes, profiles is unpubliced
   def stop
     current_user.stop
+    EntretLog.retire( current_user.id )
 
     redirect_to action:"stoped"
   end
@@ -21,6 +22,7 @@ class UsersController < ApplicationController
 
   def recover
     current_user.user_recover
+    EntretLog.reentry( current_user.id )
 
     redirect_to action:"recovered"
   end

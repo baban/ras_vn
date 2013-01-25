@@ -13,6 +13,9 @@ class MailTemplate < ActiveRecord::Base
   end
 
   def self.squueze_recipe_ranking
+    rank = RecipeViewLog.ranking
+    recipes = Recipe.where( id: rank.pluck(:recipe_id) )
     
+    recipes.map { |recipe| "#{recipe.title}\nhttp://cook24.vn/recipes/#{recipe.id}" }.join("\n\n")
   end
 end

@@ -54,6 +54,7 @@ class Devise::RegistrationsController < DeviseController
         expire_session_data_after_sign_in!
         #=begin
         Stream.push( Stream::ADD_USER, resource.id )
+        EntretLog.entry( resource.id )
         return redirect_to "/users/registrated" # change redirect action
         #=end
       end
