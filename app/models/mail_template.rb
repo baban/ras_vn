@@ -11,4 +11,8 @@ class MailTemplate < ActiveRecord::Base
   def self.todays_mail
     self.visibles.first
   end
+
+  def self.squueze_recipe_ranking
+    
+  end
 end

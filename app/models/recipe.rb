@@ -139,6 +139,7 @@ class Recipe < ActiveRecord::Base
     draft
   end
 
+  # recipe status change to public
   # @param type
   def publication( type )
     recipe_food = RecipeFood.find( self.recipe_food_id )
@@ -157,6 +158,7 @@ class Recipe < ActiveRecord::Base
       recipe_food_genre.save
       self.save
     end
+
     self
   end
 end
