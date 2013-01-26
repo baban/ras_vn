@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130125162355) do
+ActiveRecord::Schema.define(:version => 20130126040416) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -89,6 +89,18 @@ ActiveRecord::Schema.define(:version => 20130125162355) do
     t.integer  "status",     :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "entret_results", :force => true do |t|
+    t.date     "day",                         :null => false
+    t.integer  "entry",        :default => 0, :null => false
+    t.integer  "retire",       :default => 0, :null => false
+    t.integer  "entret",       :default => 0, :null => false
+    t.integer  "entry_total",  :default => 0, :null => false
+    t.integer  "retire_total", :default => 0, :null => false
+    t.integer  "active_total", :default => 0, :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "facebook_friend_invites", :force => true do |t|
