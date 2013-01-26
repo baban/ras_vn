@@ -10,7 +10,7 @@ class EntretLog < ActiveRecord::Base
   end
 
   def self.migrate
-    User.find_each.each do |user|
+    User.find_each do |user|
       self.entry( user.id )
     end
   end
