@@ -73,8 +73,7 @@ vn:
         post_title: Đăng món nấu thử của bạn
         image: Chọn hình ảnh
         title: Tiêu đề
-        content: Nội dung
-        image: Hình ảnh
+        content: Nội dung bình luận
     pagination:
       first: "&laquo; Đầu"
       last: " Cuối &raquo;"
