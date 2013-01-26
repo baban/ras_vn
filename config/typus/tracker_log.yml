@@ -1,8 +1,0 @@
-# Use the README file as a reference to customize settings.
-
-TrackerLog:
-  fields:
-    default: session_id, tracker_code, completeted_at, user_id, carrier
-    form: session_id, tracker_code, completeted_at, user_id, carrier
-  relationships: 
-  application: Application

@@ -22,7 +22,7 @@ class TrackerLog < ActiveRecord::Base
   # 取引完了の時間を記録する
   # @param [String] user_id ユーザーID、完了処理が不要の場合はそもそもユーザーIDを取らない
   def self.complete( user_id=nil )
-    log = self.where( " user_id = ? ", user_id ).last
+    log = self.where( user_id: user_id ).last
     return log unless log
     return log if log.limit_at < Time.now
     log.completed_at = Time.now

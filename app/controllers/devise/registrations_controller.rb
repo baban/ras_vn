@@ -55,6 +55,10 @@ class Devise::RegistrationsController < DeviseController
         #=begin
         Stream.push( Stream::ADD_USER, resource.id )
         EntretLog.entry( resource.id )
+        if session[:__tracker]
+          TrackerLog.entry( session[:__tracker], resource.id )
+          TrackerLog.complete( resource.id )
+        end
         return redirect_to "/users/registrated" # change redirect action
         #=end
       end

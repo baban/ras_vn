@@ -40,7 +40,11 @@ end
 
 # caliculate today's entry and retire users amount
 every 1.day, at:"00:30" do
-  # runner "EntretResult.aggrigate"
+  runner "EntretResult.aggrigate"
+end
+
+every 1.day, at:"01:00" do
+  runner "TrackerResult.aggrigate"
 end
 
 every 1.hour do

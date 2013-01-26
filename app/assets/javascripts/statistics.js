@@ -50,3 +50,7 @@ function bar_chart( data, html_id ){
   divs.exit().transition().duration(transitionDurationMS).style("opacity", 0).remove();
   divs.transition().duration(transitionDurationMS).style("opacity",1).style("height", function(d){ return Math.ceil( d*Math.min(250,d)/max )+"px" }).text(function(d) { return d; });
 }
+
+fucntion chart( data, html_id ){
+  
+}
