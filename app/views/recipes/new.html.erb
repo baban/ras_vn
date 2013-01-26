@@ -39,10 +39,10 @@
 					</div>
 				</div>
 				
-				<p><a href="#"><%= link_to t( :caution, scope:"views.recipes.new" ), action:"caution" %></a></p>
-				<div class="inp_btn cl">
-					<%= f.submit t( :next_step_button, scope:"views.recipes.new" ), id:"regist_button" %>
-				</div>
+				<!--<p><a href="#"><%= link_to t( :caution, scope:"views.recipes.new" ), action:"caution" %></a></p>-->
+				<div class="btn_comment">
+	               <%= f.submit t( :next_step_button, scope:"views.recipes.new" ), id:"regist_button", class:"radi10" %>
+	            </div>
 				<% end %>
 			</section>
 		</article>

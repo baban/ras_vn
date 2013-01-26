@@ -83,7 +83,11 @@
 									</tr>
 								<% end %>
 							</table>
-							<div class="btn cl"><%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row" %></div>
+							
+							<div class="btn_food">
+								<%= submit_tag t(:add_foodstuff, scope:"views.recipes.edit"), type:"button", id:"add_foodstuffs_row", class:"radi10" %>
+							</div>
+							
 							<span class="servings_for yield">(total: <%= f.text_field :calory, size: 2, value: @draft.calory %> kcal)</span>
 						</div>
 					</div>
@@ -115,7 +119,11 @@
 								</section>
 							<% end %>
 						</div>
-						<div class="btn"><%= submit_tag t(:add_step, scope:"views.recipes.edit"), type:"button", id:"add_steps" %></div>
+						<div class="btn">
+							<%= submit_tag t(:add_step, scope:"views.recipes.edit"), type:"button", id:"add_steps" %>
+						</div>
+
+						<br />
 						<div id="search_youtube_area">
 							<div class="content">
 								<%= hidden_field_tag :step_number, "1", id:"search_youtube_step_number" %>
@@ -131,10 +139,15 @@
 							<h3><%= t(:one_point, scope:"activerecord.attributes.recipe") %></h3>
 							<div class="section"><%=f.text_area :one_point, value: @recipe.one_point, style:"width: 742px;" %></div>
 						</section>
+						<div class="btn_save">
+							<%= f.submit name:"save", value: t( :commit, scope:"views.recipes.edit" ), id:"save_button" %>
+						</div>
+						<!--
 						<p class="form_actions btn">
 							<%= f.submit name:"edit", value: t( :edit,   scope:"views.recipes.edit" ), id:"edit_button" %>
 							<%= f.submit name:"save", value: t( :commit, scope:"views.recipes.edit" ), id:"save_button" %>
 						</p>
+						-->
 					</div>
 				</article>
 			</div>

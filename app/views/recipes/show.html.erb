@@ -19,8 +19,9 @@
 					<%=form_for( @bookmark, html:{ id:"bookmark_button" } ) do |f| %>
 						<%= f.hidden_field :recipe_id, value: @recipe.id %>
 						<%= f.hidden_field :user_id, value: current_user.id %>
-						<img src="/assets/common/bookmark.png" width="18" height="18">
-						<%= f.submit (bookmarked? ? t(:unbookmark, scope:"views.recipes.show") : t(:bookmark, scope:"views.recipes.show")) %>
+						<div class="btn_bookmark radi10">
+				            <%= f.submit (bookmarked? ? t(:unbookmark, scope:"views.recipes.show", name:"Bookmark", type:"button") : t(:bookmark, scope:"views.recipes.show", name:"Bookmark",type:"button")) %>
+				        </div>
 					<% end %>
 				<% end %>
 				<h1 class="ttl_recipe"><%= @recipe.title %></h1>
@@ -103,8 +104,12 @@
 					<p><%= f.label t(:image, scope:"views.recipes.report") %></p>
 					<p><%= f.file_field :image, value: "" %></p>
 					<p><%= f.label t(:content, scope:"views.recipes.report") %></p>
-					<p><%= f.text_area :content, size:"60x4", value: "" %></p>
-					<p><%= f.submit t(:post_report, scope:"views.recipes.show") %></p>
+					<p><%= f.text_area :content, size:"60x4", value: "", style:"height: 90px; width: 634px;" %></p>
+					
+					<div class="btn_comment">
+						<%= f.submit t(:post_report, scope:"views.recipes.show", type:"button", class:"radi10") %>
+			        </div>
+			        <br /><br />
 				<% end %>
 				<% @comments.each do |comment| %>
 					<div class="cate01 clearfix">
