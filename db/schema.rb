@@ -328,7 +328,7 @@ ActiveRecord::Schema.define(:version => 20130125162355) do
   add_index "recipe_steps", ["recipe_id"], :name => "index_recipe_steps_on_recipe_id"
 
   create_table "recipe_view_logs", :force => true do |t|
-    t.string   "recipe_id",  :null => false
+    t.integer  "recipe_id",  :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

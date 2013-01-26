@@ -9,13 +9,19 @@ class EntretLog < ActiveRecord::Base
     REENTRY = 3
   end
 
+  def self.migrate
+    User.find_each.each do |user|
+      self.entry( user.id )
+    end
+  end
+
   def self.entry( user_id )
     self.create( user_id: user_id, status: Status::ENTRY )
   rescue => e
     logger.info " entry user : #{user_id}"
   end
 
-  def self.retire( user_id )
+  def self.stop( user_id )
     self.create( user_id: user_id, status: Status::RETIRE )
   rescue => e
     logger.info " entry user : #{user_id}"
