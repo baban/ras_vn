@@ -28,6 +28,7 @@ class RecipesController < ApplicationController
     @bookmark = Bookmark.where( recipe_id: params[:id], user_id: current_user.try(:id) ).first || Bookmark.new
 
     @recipe.view_count_increment!
+    RecipeViewLog.add( @recipe.id )
   end
 
   def new
