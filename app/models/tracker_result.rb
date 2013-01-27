@@ -10,7 +10,7 @@ class TrackerResult < ActiveRecord::Base
   end
 
   def self.aggrigation( day = Date.today )
-    tracker_codes = TrackerLog.where( created_at: d.beginning_of_month..d.end_of_month )
+    tracker_codes = TrackerLog.where( created_at: day.beginning_of_month..day.end_of_month )
                               .group(:tracker_code)
                               .pluck(:tracker_code)
 
