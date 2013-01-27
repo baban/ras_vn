@@ -50,3 +50,14 @@ function bar_chart( data, html_id ){
   divs.exit().transition().duration(transitionDurationMS).style("opacity", 0).remove();
   divs.transition().duration(transitionDurationMS).style("opacity",1).style("height", function(d){ return Math.ceil( d*Math.min(250,d)/max )+"px" }).text(function(d) { return d; });
 }
+
+/*
+function line_chart( data, html_id ){
+  var data = [3, 6, 2, 7, 5, 2, 1, 3, 8, 9, 2, 5, 7];
+  var w = 400;
+  var h = 200;
+  var margin = 20;
+  var y = d3.scale.linear().domain([0, d3.max(data)]).range([0 + margin, h - margin]);
+  var x = d3.scale.linear().domain([0, data.length]).range([0 + margin, w - margin]);
+}
+*/

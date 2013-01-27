@@ -38,6 +38,15 @@ every 1.day, at:"11:00" do
   # runner "MailBuffer.send_mail_buffers"
 end
 
+# caliculate today's entry and retire users amount
+every 1.day, at:"00:30" do
+  runner "EntretResult.aggrigate"
+end
+
+every 1.day, at:"01:00" do
+  runner "TrackerResult.aggrigate"
+end
+
 every 1.hour do
   runner "FacebookFriendInvite.invites"
 end

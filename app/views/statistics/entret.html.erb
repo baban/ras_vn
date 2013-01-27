@@ -1,0 +1,27 @@
+
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "d3.v2" %>
+  <%= javascript_include_tag "statistics" %>
+<% end %>
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag :statistics %>
+<% end %>
+
+<h2>入会。退会集計(<%= @month.strftime("%Y年%m月") %>)</h2>
+
+<ul class="data month_selecter">
+  <li><%= link_to "先月", month: @month.prev_month.strftime("%Y-%m-%d") %></li>
+  <li><%= link_to "来月", month: @month.next_month.strftime("%Y-%m-%d") %></li>
+</ul>
+
+<table class="data">
+  <% @items.each do |key,values| %>
+    <tr>
+      <th><%= key %></th>
+      <% values.each do |v| %>
+        <td><%= v %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+

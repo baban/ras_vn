@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130125162355) do
+ActiveRecord::Schema.define(:version => 20130126073900) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -89,6 +89,18 @@ ActiveRecord::Schema.define(:version => 20130125162355) do
     t.integer  "status",     :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "entret_results", :force => true do |t|
+    t.date     "day",                         :null => false
+    t.integer  "entry",        :default => 0, :null => false
+    t.integer  "retire",       :default => 0, :null => false
+    t.integer  "entret",       :default => 0, :null => false
+    t.integer  "entry_total",  :default => 0, :null => false
+    t.integer  "retire_total", :default => 0, :null => false
+    t.integer  "active_total", :default => 0, :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "facebook_friend_invites", :force => true do |t|
@@ -390,17 +402,23 @@ ActiveRecord::Schema.define(:version => 20130125162355) do
   end
 
   create_table "tracker_logs", :force => true do |t|
-    t.string   "session_id",     :null => false
-    t.string   "tracker_code",   :null => false
-    t.datetime "completeted_at"
+    t.string   "session_id",   :null => false
+    t.string   "tracker_code", :null => false
+    t.datetime "limit_at"
+    t.datetime "completed_at"
     t.string   "user_id"
     t.integer  "carrier"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
-  add_index "tracker_logs", ["session_id"], :name => "index_tracker_logs_on_session_id", :unique => true
-  add_index "tracker_logs", ["user_id"], :name => "index_tracker_logs_on_user_id"
+  create_table "tracker_results", :force => true do |t|
+    t.date     "day",                       :null => false
+    t.integer  "come",       :default => 0, :null => false
+    t.integer  "entry",      :default => 0, :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
 
   create_table "user_profile_visibilities", :force => true do |t|
     t.integer  "user_profile_id", :default => 1

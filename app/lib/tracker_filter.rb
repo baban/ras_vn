@@ -1,12 +1,10 @@
 # encoding: utf-8
 
 module TrackerFilter
-  # commerce_code があるかチェックして、あるときはログをとっておく
+  # check tracker code parameter, and if tracker exist, save tracker_log table
   def add_tracker_code
-    #tracker = params[:tracker]
-    tracker = params[:e_code]
+    tracker = params[:tracker]
     return unless tracker
-    #return if session[:__tracker] # テーブルに複数回値を保存しない
 
     Rails.logger.info " add_tracker_code : #{request.remote_ip}, tracker_code : #{tracker} "
 
@@ -16,7 +14,7 @@ module TrackerFilter
     Rails.logger.error e
   end
 
-  # 入会説明ページに来た時には、それを成果としてログに保存しておく
+  # bind user_id to tracker session_id
   def entry_tracker_code
     Rails.logger.info "entry_tracker_code"
     return unless session[:__tracker]
@@ -29,7 +27,7 @@ module TrackerFilter
     Rails.logger.error e
   end
 
-  # 入会が完了した時に、commerce_codeに完了フラグを入れておく
+  # when user is entrying, entry time set
   def complete_tracker_code
     Rails.logger.info "complete_tracker_code"
 
