@@ -16,6 +16,7 @@ class FacebookFriendsController < ApplicationController
       user = FbGraph::User.fetch(uid, access_token: FACEBOOK_ACCESS_TOKEN)
       logger.info " user : #{user.inspect} "
       @friends = user.friends.sort{ |a,b| a.name<=>b.name }
+      @invited = params[:invited]
       logger.info " friends : #{@friends.inspect} "
       # File.binwrite(Rails.root.to_path+"/friends.data", Marshal.dump(@friends))
     end
@@ -32,7 +33,7 @@ class FacebookFriendsController < ApplicationController
         logger.error e.inspect
       end
     end    
-    redirect_to action:"invited"
+    redirect_to action:"index", invited: "invited"
   end
 
   def invited

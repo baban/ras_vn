@@ -1,19 +1,37 @@
 <%= include_action_javascript %>
 
-<div id="content_body" class="section bace_bg">
-	<div class="contents_bg clearfix" id="invite_area">
-		<h2 class="txt20">friend list</h2>
+<div id="content_body" class="section bace_bg" style="background: #FFF;">
+	<div class="contents_bg clearfix" id="invite_area" style="background: #FFF;">
+		<% if @invited %>
+			<p style="font-weight: bold;font-size: 20px;color: orange;">Lời mời đã được gởi qua E-mail.</p>
+			<p class="cl txt12">Check vào danh sách bạn muốn mời rồi bấm nút [Gởi lời mời] phía dưới. Lời mời của bạn sẽ được gởi qua E-mail!</p>
+		<% else %>
+			<p style="font-weight: bold;font-size: 20px;color: orange;">Mời thêm bạn cùng tham gia vào cộng đồng Cook24.</p>
+			<p class="cl txt12">Check vào danh sách bạn muốn mời rồi bấm nút [Gởi lời mời] phía dưới. Lời mời của bạn sẽ được gởi qua E-mail!</p>
+		<% end %>
+		
+		<br />
 		<%= form_for :friends, url:{ action:"invite" } do |f| %>
-			<ul class="friends">
+			<ul class="friends" style="height: 422px; border:"inset 4px #AC9;">
 				<% @friends.each do |friend| %>
-					<li>
+					<li style="
+    					border-right-width: 2px;
+    					border-left-width: 2px;
+    					margin-right: 1px;
+    					height: 51px;
+    					width: 180px;
+    					margin-top: 2px;
+    					border-top-width: 2px;
+    					border-bottom-width: 2px;">
 						<%= check_box_tag "invite[]", friend.identifier %>
 						<span class="friend_picture"><%= image_tag friend.picture, alt:"" %></span>
 						<span class="friend_name"><%= friend.name %></span>
 					</li>
 				<% end %>
 			</ul>
-			<%=f.submit "invite" %>
+			<div class="btn_comment" style="margin-top: 6px;">
+			<%=f.submit "Gởi lời mời" %>
+			</div>
 		<% end %>
 	</div>
 </div>
