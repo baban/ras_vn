@@ -2,7 +2,7 @@
 
 <div id="content_body" class="section bace_bg">
 	<div class="contents_bg clearfix" id="invite_area">
-		<h2 class="txt20">Check vào danh sách bạn muốn mời và bấm nút [Mời] phía dưới nhé!</h2>
+		<h2 class="txt20">Check vào danh sách bạn muốn mời rồi bấm nút [Gởi lời mời] phía dưới. Lời mời của bạn sẽ được chuyển đến qua E-mail!</h2>
 		<%= form_for :friends, url:{ action:"invite" } do |f| %>
 			<ul class="friends" style="height: 422px;">
 				<% @friends.each do |friend| %>
@@ -15,7 +15,7 @@
 			</ul>
 			
 			<div class="btn_comment">
-			<%=f.submit "invite" %>
+			<%=f.submit "Gởi lời mời" %>
 			</div>
 		<% end %>
 	</div>
