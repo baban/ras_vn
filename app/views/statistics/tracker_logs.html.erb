@@ -14,6 +14,8 @@
   <li><%= link_to "来月", month: @month.next_month.strftime("%Y-%m-%d") %></li>
 </ul>
 
+<div id="graph" class="aGraph" style="position:absolute;top:0px;left:0; float:left;"></div>
+
 <table class="data">
   <% @items.each do |key,*values| %>
     <tr>
