@@ -35,7 +35,7 @@ class StatisticsController < Admin::BaseController
     # @genres = TrackerResult.get_genres
     @tracker_code = params[:tracker_code] ||  @tracker_codes.first
 
-    @items = TrackerResult.where( day: @month.beginning_of_month..@month.end_of_month ).where( tracker_code: @tracker_code )
+    @items = TrackerResult.where( day: @month.beginning_of_month..@month.end_of_month ).where( tracker_code: @tracker_code ).order("day DESC")
   end
 
   private
