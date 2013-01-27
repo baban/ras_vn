@@ -2,7 +2,9 @@
 
 <div id="content_body" class="section bace_bg">
 	<div class="contents_bg clearfix" id="invite_area">
-		<h2 class="txt20">Check vào danh sách bạn muốn mời rồi bấm nút [Gởi lời mời] phía dưới. Lời mời của bạn sẽ được chuyển đến qua E-mail!</h2>
+		<h2 class="fo_b">Mời bạn cùng tham gia vào cộng đồng Cook24.</h2>
+		<p class="cl txt12">Check vào danh sách bạn muốn mời rồi bấm nút [Gởi lời mời] phía dưới. Lời mời của bạn sẽ được chuyển đến qua E-mail!</p>
+		
 		<%= form_for :friends, url:{ action:"invite" } do |f| %>
 			<ul class="friends" style="height: 422px;">
 				<% @friends.each do |friend| %>
