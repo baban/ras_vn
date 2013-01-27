@@ -21,7 +21,7 @@ class StatisticsController < Admin::BaseController
 
   def entret
     @month = params[:month] ? Date.parse( params[:month] ) : Date.today
-    @items = EntretResult.where( day: @month.beginning_of_month..@month.end_of_month )
+    @items = EntretResult.where( day: @month.beginning_of_month..@month.end_of_month ).order("day DESC")
   end 
 
   def tracker_logs

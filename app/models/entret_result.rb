@@ -2,7 +2,7 @@
 
 class EntretResult < ActiveRecord::Base
   # called by batch
-  def self.aggritate( day = Date.yesterday )
+  def self.aggrigate( day = Date.yesterday )
     y = day.yesterday
     yrow = self.where( day: y ).first
 
