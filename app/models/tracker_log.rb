@@ -19,7 +19,7 @@ class TrackerLog < ActiveRecord::Base
     log
   end
 
-  # 取引完了の時間を記録する
+  # if user is entry
   # @param [String] user_id ユーザーID、完了処理が不要の場合はそもそもユーザーIDを取らない
   def self.complete( user_id=nil )
     log = self.where( user_id: user_id ).last
@@ -29,6 +29,11 @@ class TrackerLog < ActiveRecord::Base
     log.user_id = user_id
     log.save
     log
+  end
+
+  # genre get
+  def self.tracker_codes( d = Date.today )
+    TrackerLog.where( created_at: d.beginning_of_day..d.end_of_day ).group(:tracker_code).pluck(:tracker_code)
   end
 
 end

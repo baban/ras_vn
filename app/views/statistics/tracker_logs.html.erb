@@ -16,6 +16,10 @@
 
 <div id="graph" class="aGraph" style="position:absolute;top:0px;left:0; float:left;"></div>
 
+<%=form_for :user do |f| %>
+  <%=f.select :genre, @genres %>
+<% end %>
+
 <table class="data">
   <tr>
     <th>日付</th>

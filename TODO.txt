@@ -1,9 +1,6 @@
 カロリー計算機能
 production.logのローテーション
 ジャンル選択ができていない
-JSがロードされるまで以下のボタンをdisable
-レシピのlove
-マイページ、キッチンのfollow
 
 lessの研究
 
