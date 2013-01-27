@@ -44,8 +44,8 @@ vn:
       show:
         creator: Creator
         bookmark: Yêu thích
-        unbookmark: Xóa Yêu thích
-        post_report: Đăng
+        unbookmark: Xóa yêu thích
+        post_report: Đăng bình luận
         recipe_foodstuffs: Nguyên liệu
         recipe_image: Chọn hình ảnh
         recipe_steps: Cách làm
@@ -65,7 +65,7 @@ vn:
         add_foodstuff: Thêm mục nguyên liệu
         add_step: Thêm bước thực hiện
         edit: Lưu tạm thời
-        commit: Đăng recipe
+        commit: Đăng món ăn
         tmp_save: Lưu tạm thời
         save_complete: Đã đăng hoàn thành
       report:
@@ -73,8 +73,7 @@ vn:
         post_title: Đăng món nấu thử của bạn
         image: Chọn hình ảnh
         title: Tiêu đề
-        content: Nội dung
-        image: Hình ảnh
+        content: Nội dung bình luận
     pagination:
       first: "&laquo; Đầu"
       last: " Cuối &raquo;"
