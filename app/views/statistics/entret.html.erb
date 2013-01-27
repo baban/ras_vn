@@ -15,12 +15,18 @@
 </ul>
 
 <table class="data">
-  <% @items.each do |key,values| %>
+  <tr>
+    <th>日付</th>
+    <th>入会者数</th>
+    <th>退会者数</th>
+    <th>アクティブユーザー数</th>
+  </tr>
+  <% @items.each do |item| %>
     <tr>
-      <th><%= key %></th>
-      <% values.each do |v| %>
-        <td><%= v %></td>
-      <% end %>
+      <th><%= item.day %></th>
+      <td><%= item.entry %></td>
+      <td><%= item.retire %></td>
+      <td><%= item.active_total %></td>
     </tr>
   <% end %>
 </table>

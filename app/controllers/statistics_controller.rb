@@ -21,12 +21,7 @@ class StatisticsController < Admin::BaseController
 
   def entret
     @month = params[:month] ? Date.parse( params[:month] ) : Date.today
-    titles = (EntretResult.columns.map(&:name).map(&:to_sym) - [:id,:created_at,:updated_at]).map(&:to_s)
     @items = EntretResult.where( day: @month.beginning_of_month..@month.end_of_month )
-    @items = @items.map { |row| [ row.day.day, row.entry, row.retire, row.entry_total, row.retire_total, row.active_total, row.active_total ].map(&:to_s) }
-    @items = [ titles, *@items ]
-    @items = @items.transpose
-    @items = @items.inject({}) { |h,row| key,*values = row; h[key]=values; h }
   end 
 
   def tracker_logs
