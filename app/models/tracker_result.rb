@@ -5,17 +5,23 @@ class TrackerResult < ActiveRecord::Base
 
   validates :day, presence: true
 
+  def self.tracker_codes( d = Date.today )
+    self.where( created_at: d.beginning_of_day..d.end_of_day ).group(:tracker_code).pluck(:tracker_code)
+  end
+
   def self.aggrigation( day = Date.today )
-    tracker_codes = TrackerLog.tracker_codes( day )
+    tracker_codes = self.tracker_codes( day )
 
     y = day.yesterday
     yrow = self.where( day: y ).first
 
     tracker_codes.map do |code|
-      row = self.find_or_create_by_day( day )
-      row.day   = day
-      row.come  = day.to_datetime.instance_eval { |d| TrackerLog.where( tracker_code: code ).where( created_at: d.beginning_of_day..d.end_of_day ).count }
-      row.entry = day.to_datetime.instance_eval { |d| TrackerLog.where( tracker_code: code ).where( created_at: d.beginning_of_day..d.end_of_day ).where( " completed_at IS NOT NULL " ).count }
+      row = self.find_or_create_by_day_and_tracker_code( day, code )
+      day.to_datetime.instance_eval do |d|
+        tl = TrackerLog.where( tracker_code: code ).where( created_at: d.beginning_of_day..d.end_of_day )
+        row.come  = tl.count 
+        row.entry = tl.where( " completed_at IS NOT NULL " ).count
+      end
       row.save
       row
     end

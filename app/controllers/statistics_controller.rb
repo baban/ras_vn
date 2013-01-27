@@ -31,11 +31,11 @@ class StatisticsController < Admin::BaseController
 
   def tracker_logs
     @month = params[:month] ? Date.parse( params[:month] ) : Date.today
-    @genres = TrackerResult.where( day: @month.beginning_of_month..@month.end_of_month )
+    @tracker_codes = TrackerResult.tracker_codes
     # @genres = TrackerResult.get_genres
-    @genre  = params[:genre] || @genres.first
+    @tracker_code = params[:tracker_code] ||  @tracker_codes.first
 
-    @items = TrackerResult.where( day: @month.beginning_of_month..@month.end_of_month )
+    @items = TrackerResult.where( day: @month.beginning_of_month..@month.end_of_month ).where( tracker_code: @tracker_code )
   end
 
   private

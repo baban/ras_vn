@@ -33,7 +33,7 @@ class TrackerLog < ActiveRecord::Base
 
   # genre get
   def self.tracker_codes( d = Date.today )
-    TrackerLog.where( created_at: d.beginning_of_day..d.end_of_day ).group(:tracker_code).pluck(:tracker_code)
+    self.where( created_at: d.beginning_of_day..d.end_of_day ).group(:tracker_code).pluck(:tracker_code)
   end
 
 end

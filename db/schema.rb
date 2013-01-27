@@ -367,9 +367,7 @@ ActiveRecord::Schema.define(:version => 20130126073900) do
   add_index "recipes", ["user_id"], :name => "index_recipes_on_user_id"
 
   create_table "search_logs", :force => true do |t|
-    t.integer  "user_id",                    :null => false
     t.string   "words",      :default => "", :null => false
-    t.string   "location",   :default => "", :null => false
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
   end

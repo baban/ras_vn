@@ -7,7 +7,7 @@
   <%= stylesheet_link_tag :statistics %>
 <% end %>
 
-<h2>入会。退会集計(<%= @month.strftime("%Y年%m月") %>)</h2>
+<h2>「<%= @tracker_code %>」入会。退会集計(<%= @month.strftime("%Y年%m月") %>)</h2>
 
 <ul class="data month_selecter">
   <li><%= link_to "先月", month: @month.prev_month.strftime("%Y-%m-%d") %></li>
@@ -16,8 +16,9 @@
 
 <div id="graph" class="aGraph" style="position:absolute;top:0px;left:0; float:left;"></div>
 
-<%=form_for :user do |f| %>
-  <%=f.select :genre, @genres %>
+<%=form_for :tracker_code, method:"GET" do |f| %>
+  <%=select_tag :tracker_code, options_for_select(@tracker_codes) %>
+  <%=f.submit "select tracker code" %>
 <% end %>
 
 <table class="data">

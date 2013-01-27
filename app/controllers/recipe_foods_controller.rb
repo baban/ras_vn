@@ -7,6 +7,8 @@ class RecipeFoodsController < ApplicationController
     # text search box is sending dust parameters
     params[:utf8]=params[:authenticity_token]=nil
 
+    SearchLog.add( params[:word] ) if params[:word]
+
     @recomment_food_genre_recipe = Recipe.food_genre_recommend_recipe(params)
     @order_mode = params[:order_mode] || "ranking"
     @food_genre = RecipeFoodGenre.choice(params)
