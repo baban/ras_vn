@@ -1,4 +1,6 @@
 window.onload = ->
+  $("#love_button").removeClass("disable")
+
   $("#bookmark_button")
     .live( "ajax:complete", (xhr) ->
       v = $("#bookmark_button").text()

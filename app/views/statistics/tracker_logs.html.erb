@@ -17,12 +17,16 @@
 <div id="graph" class="aGraph" style="position:absolute;top:0px;left:0; float:left;"></div>
 
 <table class="data">
-  <% @items.each do |key,*values| %>
+  <tr>
+    <th>日付</th>
+    <th>来訪者数</th>
+    <th>入会者数</th>
+  </tr>
+  <% @items.each do |item| %>
     <tr>
-      <th><%= key %></th>
-      <% values.each do |v| %>
-        <td><%= v %></td>
-      <% end %>
+      <td><%= item.day %></td>
+      <td><%= item.come %></td>
+      <td><%= item.entry %></td>
     </tr>
   <% end %>
 </table>

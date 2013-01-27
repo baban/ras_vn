@@ -31,11 +31,10 @@ class StatisticsController < Admin::BaseController
 
   def tracker_logs
     @month = params[:month] ? Date.parse( params[:month] ) : Date.today
-    titles = [ :day, :come_amount, :entry ]
+    @genres = TrackerResult.where( day: @month.beginning_of_month..@month.end_of_month )
+    @genre  = @genres.first
+
     @items = TrackerResult.where( day: @month.beginning_of_month..@month.end_of_month )
-    @items = @items.map { |row| [ row.day.day, row.come, row.entry ] }
-    @items = [ titles, *@items ]
-    @items = @items.transpose
   end
 
   private

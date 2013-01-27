@@ -20,13 +20,13 @@
 					<% unless follow.follow? %>
 						<li>
 							<span class="fbtn radi5">
-								<%= link_to raw("<span>Kết bạn</span>"), follow_kitchen_url( id: follow.user_id, user_id: current_user.id ), remote: true, class:"radi10 follow_button follow" %>
+								<%= link_to raw("<span>Kết bạn</span>"), follow_kitchen_url( id: follow.user_id, user_id: current_user.id ), remote: true, class:"radi10 follow_button follow disable" %>
 							</span>
 						</li>
 					<% else %>
 						<li>
 							<span class="fbtn radi5">
-								<%= link_to raw("<span>Đang kết nối</span>"), follow_kitchen_url( id: follow.user_id, user_id: current_user.id ), remote: true, class:"radi10 follow_button unfollow" %>
+								<%= link_to raw("<span>Đang kết nối</span>"), follow_kitchen_url( id: follow.user_id, user_id: current_user.id ), remote: true, class:"radi10 follow_button unfollow disable" %>
 							</span>
 						</li>
 					<% end %>

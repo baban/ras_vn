@@ -1,4 +1,5 @@
 window.onload = ->
+  $("#follow_button").removeClass("disable")
   $("#follow_button")
     .live( "ajax:success", (event, data, status, xhr) ->
       if data["value"]

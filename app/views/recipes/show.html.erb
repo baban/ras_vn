@@ -13,15 +13,15 @@
 		<div class="main_clm">
 			<article class="contents_recipes">
 				<ul class="hd_sns sns clearfix">
-				<li><div class="fb-like" data-href="http://cook24.vn/recipes/<%= @recipe.id%>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div></li>
+					<li><div class="fb-like" data-href="http://cook24.vn/recipes/<%= @recipe.id%>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div></li>
 				</ul>
 				<% if user_signed_in? %>
 					<%=form_for( @bookmark, html:{ id:"bookmark_button" } ) do |f| %>
 						<%= f.hidden_field :recipe_id, value: @recipe.id %>
 						<%= f.hidden_field :user_id, value: current_user.id %>
 						<div class="btn_bookmark radi10">
-				            <%= f.submit (bookmarked? ? t(:unbookmark, scope:"views.recipes.show", name:"Bookmark", type:"button") : t(:bookmark, scope:"views.recipes.show", name:"Bookmark",type:"button")) %>
-				        </div>
+							<%= f.submit (bookmarked? ? t(:unbookmark, scope:"views.recipes.show", name:"Bookmark", type:"button") : t(:bookmark, scope:"views.recipes.show", name:"Bookmark",type:"button")) %>
+						</div>
 					<% end %>
 				<% end %>
 				<h1 class="ttl_recipe"><%= @recipe.title %></h1>
@@ -32,7 +32,7 @@
 				<div class="explanation">
 					<% if login? and (not loved?) %>
 						<div id="love_area">
-							<%= link_to raw("Love!(#{@recipe.love_count})"), { action:"love", id: params[:id], user_id: current_user.id }, remote: true, id: "love_button" %>
+							<%= link_to raw("Love!(#{@recipe.love_count})"), { action:"love", id: params[:id], user_id: current_user.id }, remote: true, id: "love_button", class: "disable" %>
 						</div>
 					<% else %>
 						<span class="loved">Love(<%= @recipe.love_count %>)</span>

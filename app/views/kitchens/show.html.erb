@@ -47,15 +47,15 @@
 				</table>
 				<% if user_signed_in? %>
 					<% unless myself? or followed? %>
-					<div class="mypage_btn_area">
-						<p class="fbtn radi5 flo_r">
-							<%= link_to "Kết bạn",   { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button" %>
-						</p>
-					</div>
+						<div class="mypage_btn_area">
+							<p class="fbtn radi5 flo_r">
+								<%= link_to "Kết bạn",   { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button", class:"disable" %>
+							</p>
+						</div>
 					<% else %>
 					<div class="mypage_btn_area">
 						<p class="fbtn radi5 flo_r">
-							<%= link_to "Thôi kết bạn", { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button" %>
+							<%= link_to "Thôi kết bạn", { action:"follow", id: params[:id], user_id: current_user.id }, remote: true, id:"follow_button", class:"disable" %>
 						</p>
 					</div>
 					<% end %>
