@@ -1,4 +1,6 @@
 <% include_action_javascript %>
+
+<% if @facebook %>
 <div class="bace_bg">
 	<div class="contents_bg clearfix">
 		<article class="inp_a clearfix">
@@ -118,7 +120,7 @@
 					</div>
 				</div>
 				<div class="btn_comment">
-					<%= f.submit t(:post_button, scope:"views.users.sign_up"), id:"sign_in_button", type:"button", class:"radi10" %>
+					<%= f.submit t(:post_button, scope:"views.users.sign_up"), id:"sign_in_button", class:"radi10" %>
 				</div>
 				<% end %>
 			</section>
@@ -126,7 +128,7 @@
 
 			<section class="sns_a" style="margin-top: 50px;">
 				<div class="cl clearfix">
-					<h2 class="fo_b">Đăng kí thành viên qua Facebook, Google+ hoặc Twitter</h2>
+					<h2 class="fo_b">Đăng ký thành viên qua Facebook, Google+ hoặc Twitter</h2>
 					<div class="txt14">
 						Bạn có thể đăng kí thành viên nhanh chóng qua tài khoản của Facebook, Google+ hoặc Twitter.<br />
 						Hãy click một trong những link sau để đăng kí thành viên.
@@ -165,7 +167,31 @@
 		</article>
 	</div>
 </div>
-
+<% else %>
+<div class="att_bg radi10">
+	<h2 class="fo_b">Đăng ký thành viên qua Facebook, Google+ hoặc Twitter</h2>
+	<p class="cl txt12">Bạn có thể đăng kí thành viên nhanh chóng qua tài khoản của Facebook, Google+ hoặc Twitter.</p>
+	<p class="cl txt12">Hãy click một trong những link sau để đăng kí thành viên:</p>
+	<div class="cl clearfix">
+		<ul id="login_links" class="ant_s clearfix">
+			<li class="flo_l"><%= link_to raw(image_tag('/assets/common/fb.png', alt:'', size:'18x18'))+"Facebook",
+							"http://cook24.vn/auth/facebook", class:"radi5" %></li>
+			<li class="flo_l"><%= link_to raw(image_tag('/assets/common/tw.png', alt:'', size:'18x18'))+"Twitter", 
+							"http://cook24.vn/auth/twitter", class:"radi5" %></li>
+			<li class="flo_l"><%= link_to raw(image_tag('/assets/common/gp.png', alt:'', size:'18x18'))+"Google",
+							"http://cook24.vn/auth/google_oauth2", class:"radi5" %></li>
+		</ul>
+		
+		<p class="cl txt12">Nếu bạn chưa có tài khoản của Facebook hoặc Google+ thì hãy click vào link dưới đây !</p>
+		<ul>
+			<li class="flo_l"><a href="http://www.facebook.com/" style="color: #FE6B1D;">Sign up with Facebook</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+			<li class="flo_l"><a href="https://twitter.com/" style="color: #FE6B1D;">Sign up with Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+			<li class="flo_l"><a href="https://plus.google.com/up/search" style="color: #FE6B1D;">Sign up with Google</a></li>
+		</ul>
+	</div>
+	<br />
+</div>
+<% end %>
 <!--
 <div class="bace_bg">
 	<div class="att_bg clearfix">
