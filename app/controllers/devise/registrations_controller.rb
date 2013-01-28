@@ -21,6 +21,7 @@ class Devise::RegistrationsController < DeviseController
   # GET /resource/sign_up
   def new
     resource = build_resource({})
+    @facebook = flash[:facebook];
     #=begin
     resource.email = flash[:email]
     resource.profile.nickname = flash[:nickname]
