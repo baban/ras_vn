@@ -36,6 +36,7 @@ vn:
       blank: ""
       sign_up: Đăng ký
       sign_in: Đăng nhập
+      invite: Mời bạn
       sign_out: Thoát
       mypage: My Page
     recipes:
