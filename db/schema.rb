@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130126073900) do
+ActiveRecord::Schema.define(:version => 20130130121952) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -366,6 +366,13 @@ ActiveRecord::Schema.define(:version => 20130126073900) do
 
   add_index "recipes", ["user_id"], :name => "index_recipes_on_user_id"
 
+  create_table "recomment_recipe_mails", :force => true do |t|
+    t.date     "day",        :null => false
+    t.integer  "recipe_id",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "search_logs", :force => true do |t|
     t.string   "words",      :default => "", :null => false
     t.datetime "created_at",                 :null => false
@@ -406,6 +413,10 @@ ActiveRecord::Schema.define(:version => 20130126073900) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
+  add_index "tracker_logs", ["created_at"], :name => "index_tracker_logs_on_created_at"
+  add_index "tracker_logs", ["session_id"], :name => "index_tracker_logs_on_session_id", :unique => true
+  add_index "tracker_logs", ["user_id"], :name => "index_tracker_logs_on_user_id"
 
   create_table "tracker_results", :force => true do |t|
     t.date     "day",                         :null => false

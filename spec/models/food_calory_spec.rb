@@ -374,6 +374,58 @@ describe FoodCalory do
         end
       end
     end
+    context "nhánh" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("3 tép")
+        end
+        it "数値が意図通り" do
+          @amount.should == 3.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "tép"
+        end
+      end
+    end
+    context "muỗng cà phê" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1/4 muỗng cà phê")
+        end
+        it "数値が意図通り" do
+          @amount.should == 0.25
+        end
+        it "単位が意図通り" do
+          @unit.should == "muỗng cà phê"
+        end
+      end
+    end
+    context "miếng" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("5 miếng")
+        end
+        it "数値が意図通り" do
+          @amount.should == 5.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "miếng"
+        end
+      end
+    end
+    context "cái" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 cái")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "cái"
+        end
+      end
+    end
   end
 end
 
