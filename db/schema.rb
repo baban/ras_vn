@@ -154,10 +154,10 @@ ActiveRecord::Schema.define(:version => 20130130121952) do
   create_table "mail_buffers", :force => true do |t|
     t.integer  "user_id",                    :null => false
     t.string   "from",                       :null => false
-    t.string   "reply_to",                   :null => false
-    t.string   "bcc",                        :null => false
+    t.string   "to",                         :null => false
     t.string   "subject",    :default => "", :null => false
     t.text     "body",                       :null => false
+    t.datetime "deleted_at"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
   end

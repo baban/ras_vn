@@ -1,0 +1,46 @@
+<%= @recipe.description %>
+
+
+『<%= @recipe.title %>』
+
+ by <%= @profile.nickname %>
+
+
+～　Nguyên liệu(<%= @recipe.amount %> người ăn)　～
+<% @recipe.foodstuffs do |food| %>
+  <%= food.name %>...<%= food.amount %>
+<% end %>
+
+
+～　Các bước thực hiện　～
+<% @recipe.steps.each.with_index(1) do |step,i| %>
+  [<%= i %>] <%= step.content %>
+<% end %>
+
+
+～　Mách nhỏ　～
+<%= @recipe.one_point %>
+
+
+
+recipe URL
+<%= url_for( controller:"recipes", action:"show", id: @recipe.id, only_path: false ) %>
+
+※「れぴまが」発行後に、レシピ情報が更新される場合がありますので、
+　予めご了承ください。最新情報は上記URL記載のものとなります。
+※サービス向上のため、レイアウトを随時変更しております。
+
+━━━━━━━━━━━━━━━
+■「れぴまが」毎日レシピを配信！
+
+【配信停止】
+下記のURLにアクセスしお知らせメールの配信設定内容をご変更ください。
+<%= url_for( controller:"profiles", action:"edit", only_path: false ) %>
+
+【お問い合わせ】
+※このメールは送信専用のメールアドレスから配信を行なっております。
+
+ copyright © 2012 Cook24 all rights reserved
+
+━━━━━━━━━━━━━━━
+

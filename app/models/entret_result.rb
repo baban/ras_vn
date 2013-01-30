@@ -2,8 +2,8 @@
 
 class EntretResult < ActiveRecord::Base
   # called by batch
-  def self.aggrigate( day = Date.yesterday )
-    Rails.logger.info " EntretResult.aggrigate : START "
+  def self.aggrigation( day = Date.yesterday )
+    Rails.logger.info " EntretResult.aggrigation : START "
     y = day.yesterday
     yrow = self.where( day: y ).first
 
@@ -16,7 +16,7 @@ class EntretResult < ActiveRecord::Base
     row.retire_total = yrow.try(:retire_total).to_i + row.retire
     row.active_total = row.entry_total - row.retire_total
     row.save
-    Rails.logger.info " EntretResult.aggrigate : END "
+    Rails.logger.info " EntretResult.aggrigation : END "
     row
   end
 end
