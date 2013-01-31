@@ -3,8 +3,7 @@
 class MailBuffer < ActiveRecord::Base
   validates :user_id,  presence: true
   validates :from,     presence: true
-  validates :reply_to, presence: true
-  validates :bcc,      presence: true
+  validates :to,       presence: true
   validates :subject,  presence: true
   validates :body,     presence: true
 
