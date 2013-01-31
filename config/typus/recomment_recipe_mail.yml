@@ -2,7 +2,7 @@
 
 RecommentRecipeMail:
   fields:
-    default: day, recipe_id
-    form: day, recipe_id
+    default: day, recipe_id, news_text
+    form: day, recipe_id, news_text
   relationships: 
   application: Application

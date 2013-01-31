@@ -5,6 +5,7 @@ class CreateRecommentRecipeMails < ActiveRecord::Migration
     create_table :recomment_recipe_mails do |t|
       t.date    :day,       null: false
       t.integer :recipe_id, null: false
+      t.text    :news_text, null: true
 
       t.timestamps
     end

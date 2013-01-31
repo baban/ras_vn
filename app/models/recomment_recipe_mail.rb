@@ -3,11 +3,11 @@
 class RecommentRecipeMail < ActiveRecord::Base
 
   def self.send_mail_magazines
-    self.create_mail_buffers
+    self.create_mail_buffers( self.mail_senders_info )
   end
 
   # set mail fatas mail buffer table
-  def self.create_mail_buffers
+  def self.create_mail_buffers( profiles )
     Rails.logger.info "mail buffer : create start"
 
     # get today's mail data
@@ -16,7 +16,6 @@ class RecommentRecipeMail < ActiveRecord::Base
 
     return false if !tmpl or !recipe
 
-    profiles = self.mail_senders_info
     profiles.find_each( batch_size: 500 ) do |profile|
       self.create_mail_buffer( profile, tmpl, recipe )
     end
@@ -24,6 +23,10 @@ class RecommentRecipeMail < ActiveRecord::Base
     Rails.logger.info "mail buffer : create end"
 
     true
+  end
+
+  def self.todays_data
+    self.where( day: Date.today ).first
   end
 
   # mail sendable users
@@ -36,12 +39,7 @@ class RecommentRecipeMail < ActiveRecord::Base
     mail = MagazineMailer.recipe_magazine( profile, mail, recipe )
     MailBuffer.create!( user_id: profile.user_id, from: mail.from, to: mail.to, subject: mail.subject, body: mail.body )
   rescue => e
-    Rails.logger.error " magazine create error : #{profile.inspect} "
+    Rails.logger.error " magazine create error : #{profile.inspect} : #{e.inspect} "
   end
-
-  def self.todays_data
-    self.where( day: Date.today ).first
-  end
-
 end
 

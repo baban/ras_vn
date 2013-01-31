@@ -369,6 +369,7 @@ ActiveRecord::Schema.define(:version => 20130130121952) do
   create_table "recomment_recipe_mails", :force => true do |t|
     t.date     "day",        :null => false
     t.integer  "recipe_id",  :null => false
+    t.text     "news_text"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
