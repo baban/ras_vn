@@ -42,7 +42,7 @@ class RecommendRecipeMail < ActiveRecord::Base
 
   def self.create_mail_buffer( profile, mail, recipe )
     mail = MagazineMailer.recipe_magazine( profile, mail, recipe )
-    buffer = MailBuffer.create!( user_id: profile.user_id, from: mail.from, to: mail.to, subject: mail.subject, body: mail.body )
+    buffer = MailBuffer.create!( user_id: profile.user_id, from: mail.from.first, to: mail.to.first, subject: mail.subject, body: mail.body.to_s )
   rescue => e
     Rails.logger.error " magazine create error : #{profile.inspect} : #{e.inspect} "
   end
