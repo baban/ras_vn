@@ -1,6 +1,6 @@
 # Use the README file as a reference to customize settings.
 
-RecommentRecipeMail:
+RecommendRecipeMail:
   fields:
     default: day, recipe_id, news_text
     form: day, recipe_id, news_text

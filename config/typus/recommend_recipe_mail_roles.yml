@@ -1,4 +1,4 @@
 # Use the README file as a reference to customize settings.
 
 admin:
-  RecommentRecipeMail: create, read, update, delete
+  RecommendRecipeMail: create, read, update, delete

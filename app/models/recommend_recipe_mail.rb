@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class RecommentRecipeMail < ActiveRecord::Base
+class RecommendRecipeMail < ActiveRecord::Base
 
   def self.send_mail_magazines
     self.create_mail_buffers( self.mail_senders_info )

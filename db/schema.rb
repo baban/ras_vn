@@ -366,7 +366,7 @@ ActiveRecord::Schema.define(:version => 20130130121952) do
 
   add_index "recipes", ["user_id"], :name => "index_recipes_on_user_id"
 
-  create_table "recomment_recipe_mails", :force => true do |t|
+  create_table "recommend_recipe_mails", :force => true do |t|
     t.date     "day",        :null => false
     t.integer  "recipe_id",  :null => false
     t.text     "news_text"
