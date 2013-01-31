@@ -43,7 +43,7 @@ class MailBuffer < ActiveRecord::Base
         buffer.delete
       rescue => e
         Rails.logger.error " mail send error : #{mail.inspect} "
-        FailMail.set_fail_mail( buffer.to )
+        FailMail.set_fail_mail( buffer.to ) # TODO: 動作check
       end
     end
     Rails.logger.info "send mail buffers:end"
