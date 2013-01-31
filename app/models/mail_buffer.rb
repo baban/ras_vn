@@ -40,7 +40,7 @@ class MailBuffer < ActiveRecord::Base
       next unless mail
       begin
         mail.deliver
-        mail.delete
+        buffer.delete
       rescue => e
         Rails.logger.error " mail send error : #{mail.inspect} "
         FailMail.set_fail_mail( buffer.to )
