@@ -11,6 +11,6 @@ class RecipeRanking < ActiveRecord::Base
   def self.aggrigate
     # ranking sorted by only page view_count
     ranking = Recipe.order("view_count desc").limit(10)
-    ranking.map{ |recipe| self.create( recipe_id: recipe.id ) }
+    ranking.map{ |recipe| self.create( day: Date.today, recipe_id: recipe.id ) }
   end
 end

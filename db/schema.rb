@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130130121952) do
+ActiveRecord::Schema.define(:version => 20130201145345) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -308,9 +308,10 @@ ActiveRecord::Schema.define(:version => 20130130121952) do
   add_index "recipe_love_logs", ["user_id"], :name => "index_recipe_love_logs_on_user_id"
 
   create_table "recipe_rankings", :force => true do |t|
-    t.integer  "recipe_id",  :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "recipe_id",                            :null => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
+    t.date     "day",        :default => '2013-02-01'
   end
 
   add_index "recipe_rankings", ["recipe_id"], :name => "index_recipe_rankings_on_recipe_id"
