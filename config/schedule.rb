@@ -52,7 +52,7 @@ every 1.hour do
 end
 
 every 1.day, at:"10:00" do
-  # runner "RecommendRecipeMail.send_mail_magazines"
+  runner "RecommendRecipeMail.send_mail_magazines"
 end
 
 # Learn more: http://github.com/javan/whenever

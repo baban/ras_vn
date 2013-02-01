@@ -426,6 +426,32 @@ describe FoodCalory do
         end
       end
     end
+    context "bó" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 bó")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "bó"
+        end
+      end
+    end
+    context "con" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 con")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "con"
+        end
+      end
+    end
   end
 end
 

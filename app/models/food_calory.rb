@@ -28,7 +28,7 @@ class FoodCalory < ActiveRecord::Base
      /([0-9]+)(個)/,
      /\s*([0-9]+|[1-9]+\/[1-9]+)\s*(trai|cai|thìa cà phê|tai|lát|thìa|củ)\s*/,
      /\s*([0-9]+|[1-9]+\/[1-9]+)\s*(muỗng canh|muỗng cà phê|muỗng|quả|bát|gói|hộp|lá|chén|ít|trái|nhánh)\s*/,
-     /\s*([0-9]+|[1-9]+\/[1-9]+)\s*(miếng|tép|cái)\s*/,
+     /\s*([0-9]+|[1-9]+\/[1-9]+)\s*(miếng|tép|cái|bó|con)\s*/,
      /\s*([0-9]+|[1-9]+\/[1-9]+)\s*(cup|g|gr|ml|kg)\s*/,
     ].each do |regexp|
       m = amount.match(regexp)
