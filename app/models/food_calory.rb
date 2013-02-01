@@ -21,22 +21,48 @@ class FoodCalory < ActiveRecord::Base
     amount
   end
 
+  def self.number_amount_parse( amount )
+    units = [
+      "個","m cà-phê","tô","nửa củ","ống","thia","chiếc","cọng","trai","cai","thìa cà phê","tai","lát","thìa","củ","muỗng canh",
+      "muỗng cà phê", "muỗng","quả","bát","gói","hộp","lá","chén","nhúm nhỏ","nhúm","lọn nhỏ","lóng","lon","ít","trái","nhánh",
+      "miếng","tép","cái","cây","viên","bánh","cốc","thỏi","bó","con","bịch","lít","cup","gr","g","ml","kg"
+    ].join("|")
+    regexp = /\s*([0-9]+|[0-9]\.[0-9]|[1-9]+\/[1-9]+)\s*(#{units})\s*/
+    m = amount.match(regexp)
+    return unless m
+    origin, amount2, unit = m.to_a
+    amount3 = self.parse_amount( amount2 )
+    [origin,amount3,unit]
+  end
+
+  def self.name_parse_unit( amount )
+    units = [
+     "thìa cà phê","Một chút", "Một ít", "Vừa ăn", "Vừa đủ", "một chút", "một miếng","một ít",
+     "nửa củ", "nữa chén", "phan nguoi an", "tí xíu", "tùy khẩu vị", "tùy thích", "vua du",
+     "vài nhánh", "vừa ăn", "vừa đủ"
+    ]
+    regexp = /\s*(#{units})\s*/
+    m = amount.match(regexp)
+
+    return unless m
+
+    origin, unit = m.to_a
+    [origin, 1, unit]
+  end
+
   def self.parse_unit( amount )
     amount = self.change_fraction( amount )
     amount = amount.tr('０-９','0-9').tr('／','/')
-    [ 
-     /([0-9]+)(個)/,
-     /\s*([0-9]+|[1-9]+\/[1-9]+)\s*(trai|cai|thìa cà phê|tai|lát|thìa|củ)\s*/,
-     /\s*([0-9]+|[1-9]+\/[1-9]+)\s*(muỗng canh|muỗng cà phê|muỗng|quả|bát|gói|hộp|lá|chén|ít|trái|nhánh)\s*/,
-     /\s*([0-9]+|[1-9]+\/[1-9]+)\s*(miếng|tép|cái|bó|con)\s*/,
-     /\s*([0-9]+|[1-9]+\/[1-9]+)\s*(cup|g|gr|ml|kg)\s*/,
-    ].each do |regexp|
-      m = amount.match(regexp)
-      next unless m
-      origin, amount, unit = m.to_a
-      amount = self.parse_amount( amount )
-      return [origin,amount,unit]
-    end
+    amount = amount.gsub(/([0-9]+),([0-9]+)/,"\\1.\\2")
+
+    values = self.number_amount_parse( amount )
+
+    return values if values
+
+    values = self.name_parse_unit( amount )
+
+    return values if values
+
     nil
   end
 end

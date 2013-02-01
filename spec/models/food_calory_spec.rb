@@ -452,6 +452,266 @@ describe FoodCalory do
         end
       end
     end
+    context "bịch" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 bịch")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "bịch"
+        end
+      end
+    end
+    context "lít" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("0,8 lít")
+        end
+        it "数値が意図通り" do
+          @amount.should == 0.8
+        end
+        it "単位が意図通り" do
+          @unit.should == "lít"
+        end
+      end
+    end
+    context "cây" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 cây ")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "cây"
+        end
+      end
+    end
+    context "lon" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 lon ")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "lon"
+        end
+      end
+    end
+    context "lóng" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 lóng")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "lóng"
+        end
+      end
+    end
+    context "lọn nhỏ" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 lọn nhỏ")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "lọn nhỏ"
+        end
+      end
+    end
+    context "lọn nhỏ" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 nhúm nhỏ")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "nhúm nhỏ"
+        end
+      end
+    end
+    context "lọn nhỏ" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 nhúm nhỏ")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "nhúm nhỏ"
+        end
+      end
+    end
+    context "nhúm" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 nhúm")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "nhúm"
+        end
+      end
+    end
+    context "m cà-phê" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 m cà-phê")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "m cà-phê"
+        end
+      end
+    end
+    context "nửa củ" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 nửa củ")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "nửa củ"
+        end
+      end
+    end
+    context "ống" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 ống")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "ống"
+        end
+      end
+    end
+    context "tô" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 tô")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "tô"
+        end
+      end
+    end
+    context "thia" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1/2 thia ")
+        end
+        it "数値が意図通り" do
+          @amount.should == 0.5
+        end
+        it "単位が意図通り" do
+          @unit.should == "thia"
+        end
+      end
+    end
+    context "chiếc" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1 chiếc")
+        end
+        it "数値が意図通り" do
+          @amount.should == 1.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "chiếc"
+        end
+      end
+    end
+    context "cọng" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("2 cọng")
+        end
+        it "数値が意図通り" do
+          @amount.should == 2.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "cọng"
+        end
+      end
+    end
+    context "viên" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("10 viên ")
+        end
+        it "数値が意図通り" do
+          @amount.should == 10.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "viên"
+        end
+      end
+    end
+    context "bánh" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("10 bánh ")
+        end
+        it "数値が意図通り" do
+          @amount.should == 10.0
+        end
+        it "単位が意図通り" do
+          @unit.should == "bánh"
+        end
+      end
+    end
+    context "cốc" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1/4 cốc")
+        end
+        it "数値が意図通り" do
+          @amount.should == 0.25
+        end
+        it "単位が意図通り" do
+          @unit.should == "cốc"
+        end
+      end
+    end
+    context "thỏi" do
+      context "正常系" do
+        before do
+          @origin, @amount, @unit = FoodCalory.parse_unit("1/3 thỏi")
+        end
+        it "数値が意図通り" do
+          @amount.should == (1.0/3)
+        end
+        it "単位が意図通り" do
+          @unit.should == "thỏi"
+        end
+      end
+    end
   end
 end
 
