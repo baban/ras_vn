@@ -1,3 +1,4 @@
+
 .widget {
   width:480px;
   min-height:200px;
@@ -44,7 +45,7 @@ ul.month_selecter {
 
 path {
   stroke-width: 1;
-  fill: none;
+  stroke:#000;
 }
 
 .data1 {
@@ -91,3 +92,5 @@ path {
 .y.axisLeft text {
   fill: steelblue;
 }
+
+

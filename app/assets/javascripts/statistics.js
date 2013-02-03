@@ -1,9 +1,13 @@
-
+// https://github.com/aespinosa/oreilly-d3js/blob/master/pie_chart.html
 function pie_chart( data, html_id ){
- var w = 400, //width
-    h = 400, //height
-    r = 150, //radius
-    color = d3.scale.category20c(); //builtin range of colors
+  function color(i){
+    return null;
+  }
+
+  var w = 300, //width
+      h = 300, //height
+      r = 130, //radius
+      color = d3.scale.category20c(); //builtin range of colors
     
     var data = data.map(function( row ){ return { "label": row[0], "value": row[1] }; })
     var vis = d3.select(html_id)
@@ -12,7 +16,7 @@ function pie_chart( data, html_id ){
             .attr("width", w) //set the width and height of our visualization (these will be attributes of the <svg> tag
             .attr("height", h)
         .append("svg:g") //make a group to hold our pie chart
-            .attr("transform", "translate(" + r + "," + r + ")") //move the center of the pie chart from 0, 0 to radius, radius
+            .attr("transform", "translate(" + (w/2) + "," + (h/2) + ")") //move the center of the pie chart from 0, 0 to radius, radius
 
     var arc = d3.svg.arc() //this will create <path> elements for us using arc data
         .outerRadius(r);
@@ -51,13 +55,3 @@ function bar_chart( data, html_id ){
   divs.transition().duration(transitionDurationMS).style("opacity",1).style("height", function(d){ return Math.ceil( d*Math.min(250,d)/max )+"px" }).text(function(d) { return d; });
 }
 
-/*
-function line_chart( data, html_id ){
-  var data = [3, 6, 2, 7, 5, 2, 1, 3, 8, 9, 2, 5, 7];
-  var w = 400;
-  var h = 200;
-  var margin = 20;
-  var y = d3.scale.linear().domain([0, d3.max(data)]).range([0 + margin, h - margin]);
-  var x = d3.scale.linear().domain([0, data.length]).range([0 + margin, w - margin]);
-}
-*/
