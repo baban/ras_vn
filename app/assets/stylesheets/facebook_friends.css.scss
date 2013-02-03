@@ -1,3 +1,7 @@
+#content_body {
+  background: #FFF;
+}
+
 p#facebook_friends_select_all_friends_area {
   &.disable {
     visibility:hidden;
@@ -6,6 +10,7 @@ p#facebook_friends_select_all_friends_area {
 
 #invite_area {
   height:40em;
+  background: #FFF;
   ul.friends {
     height:20em;
     overflow-y:scroll;
