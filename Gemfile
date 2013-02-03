@@ -37,7 +37,7 @@ gem "yard" # document generator like javadoc
 gem 'fb_graph', "2.5.8"
 
 # test utilities
-gem 'flextures', "2.0.9" # add rake command for dump and load fixtures
+gem 'flextures', "2.1.0" # add rake command for dump and load fixtures
 gem "kaminari", "0.14.1" # paginate view
 gem "whenever", '0.7.2', require:false # cron settiing automation 
 gem "acts_as_readonlyable", '0.0.9' # sharding slave databases
