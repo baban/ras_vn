@@ -1,9 +1,16 @@
+p#facebook_friends_select_all_friends_area {
+  &.disable {
+    visibility:hidden;
+  }
+}
+
 #invite_area {
   height:40em;
   ul.friends {
     height:20em;
     overflow-y:scroll;
-    border:inset 2px #aaa;
+    height: 422px;
+    border:inset 4px #AC9;
     li {
       display:block;
       min-width:150px;
@@ -13,6 +20,14 @@
       float:left;
       margin:2px;
       overflow:hidden;
+      border-right-width: 2px;
+      border-left-width: 2px;
+      margin-right: 1px;
+      height: 51px;
+      width: 180px;
+      margin-top: 2px;
+      border-top-width: 2px;
+      border-bottom-width: 2px;
     }
   }
 }
@@ -22,3 +37,8 @@
   font-size: 20px;
   color: orange;
 }
+
+.btn_comment { 
+  margin-top: 6px;
+}
+
