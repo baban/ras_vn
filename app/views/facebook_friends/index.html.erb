@@ -9,8 +9,9 @@
 			<p style="font-weight: bold;font-size: 20px;color: orange;">Mời thêm bạn cùng tham gia vào cộng đồng Cook24.</p>
 			<p class="cl txt12">Check vào danh sách bạn muốn mời rồi bấm nút [Gởi lời mời] phía dưới. Lời mời của bạn sẽ được gởi qua E-mail!</p>
 		<% end %>
-		<p id="facebook_friends_select_all_friends_area" class="disable"><%= check_box_tag :select_all_friends, true, false %> select all friends</p>
 		<br />
+		<p id="facebook_friends_select_all_friends_area" class="disable" style="font-size: 16px;color: orange;"><%= check_box_tag :select_all_friends, true, false %> Chọn tất cả</p>
+		
 		<%= form_for :friends, url:{ action:"invite" } do |f| %>
 			<ul class="friends">
 				<% @friends.each do |friend| %>
