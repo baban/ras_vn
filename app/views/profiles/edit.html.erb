@@ -34,23 +34,23 @@
 							<%= f.text_field :birthday, value: @profile.birthday %>
 						</div>
 						<div class="piv">
-							<label><%= visibility_radios( @visibility, :birthday ) %></label>
+							<%= visibility_radios( @visibility, :birthday ) %>
 						</div>
 					</div>
 					<div class="ltc cl clearfix">
 						<p><%= f.label :email %></p>
 						<%= f.text_field :email, value: @profile.email %>
 						<div class="piv">
-							<label><%= visibility_radios( @visibility, :email ) %></label>
+							<%= visibility_radios( @visibility, :email ) %>
 						</div>
 					</div>
 					<div class="sltc cl clearfix">
 						<p><%= f.label :sex %></p>
 						<div class="ibox">
-							<label><%= select_sex( f, @profile.sex ) %></label>
+							<%= select_sex( f, @profile.sex ) %>
 						</div>
 						<div class="piv">
-							<label><%= visibility_radios( @visibility, :sex ) %></label>
+							<%= visibility_radios( @visibility, :sex ) %>
 						</div>
 					</div>
 					<div class="ltc cl clearfix">
@@ -60,7 +60,7 @@
 							<p class="txt11">Chọn địa danh đang sinh sống</p>
 						</div>
 						<div class="piv">
-							<label><%= visibility_radios( @visibility, :distinct_id ) %></label>
+							<%= visibility_radios( @visibility, :distinct_id ) %>
 						</div>
 					</div>
 					<div class="ltc cl clearfix">
@@ -81,9 +81,8 @@
 						</div>
 					</div>
 					<div class="btn_comment">
-	                	<%= f.submit %>
-	            	</div>
-				
+						<%= f.submit %>
+					</div>
 				</section>
 			<% end %>
 		</article>
