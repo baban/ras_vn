@@ -181,6 +181,7 @@ vn:
         nickname: Nickname
         sex: Giới tính
         user: User  #g
+        mail_status: receive mail magazine
         user_profile_visibility: Hiển thị
         prefecture_id: Tỉnh, Thành phố
         distinct_id: Nơi sinh sống

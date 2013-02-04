@@ -5,6 +5,10 @@ module ProfileHelper
     f.select( :sex, { "----"=>nil, "Nam"=>1, "Nữ"=>2, "Other"=>0 }, {selected: 1}, options )
   end
 
+  def select_mail_status( f, value=nil, options={} )
+    f.select( :mail_status, {  "receive" => true, "not receive" => false }, { selected: 1 }, options )
+  end
+
   def translate_sex( sex )
     case sex
     when 1; "Nam"
@@ -15,8 +19,8 @@ module ProfileHelper
   end
 
   def visibility_radios( visibility, attr_name )
-    btn1 = radio_button( :user_profile_visibility, attr_name, 1, checked: (visibility.send(attr_name)   ? "checked" : nil) )
-    btn2 = radio_button( :user_profile_visibility, attr_name, 0, checked: (visibility.send(attr_name).! ? "checked" : nil) )
-    "#{t('status.public')}#{btn1}#{t('status.closed')}#{btn2}".html_safe
+    btn1 = radio_button( :user_profile_visibility, attr_name, 1, checked:  (visibility.send(attr_name) ? "checked" : nil) )
+    btn2 = radio_button( :user_profile_visibility, attr_name, 0, checked: !(visibility.send(attr_name) ? "checked" : nil) )
+    "Public#{btn1}Closed#{btn2}".html_safe
   end
 end

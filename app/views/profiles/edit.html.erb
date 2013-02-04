@@ -26,7 +26,7 @@
 					<div class="ltc cl clearfix">
 						<p><%= f.label :nickname %></p>
 						<%= f.text_field :nickname, value: @profile.nickname %>
-						<p class="ivie"><span class="ive txt11 radi10"><%= t( :public, scope:"status" ) %></span></p>
+						<p class="ivie"><span class="ive txt11 radi10">public</span></p>
 					</div>
 					<div class="ltc cl clearfix">
 						<p><%= f.label :birthday %></p>
@@ -61,6 +61,12 @@
 						</div>
 						<div class="piv">
 							<label><%= visibility_radios( @visibility, :distinct_id ) %></label>
+						</div>
+					</div>
+					<div class="ltc cl clearfix">
+						<p><%= f.label :mail_status %></p>
+						<div class="ibox">
+							<%= select_mail_status( f, selected: @profile.mail_status ) %>
 						</div>
 					</div>
 					<div class="ltc cl clearfix">
