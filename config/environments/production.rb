@@ -2,6 +2,7 @@
 
 require "typus_extention"
 require "ruby_extention"
+require "syslogger"
 
 RasVn::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
