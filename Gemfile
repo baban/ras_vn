@@ -41,6 +41,7 @@ gem 'flextures', "2.1.0" # add rake command for dump and load fixtures
 gem "kaminari", "0.14.1" # paginate view
 gem "whenever", '0.7.2', require:false # cron settiing automation 
 gem "acts_as_readonlyable", '0.0.9' # sharding slave databases
+gem 'syslogger', '1.3.0' # loggerを標準から変更
 
 # deploy settings
 gem "capistrano", "2.9.0"
