@@ -33,7 +33,8 @@ class FacebookFriendsController < ApplicationController
         logger.error e.inspect
       end
     end    
-    redirect_to action:"index", invited: "invited"
+    #redirect_to action:"index", invited: "invited"
+    redirect_to action:"invited"
   end
 
   def invited

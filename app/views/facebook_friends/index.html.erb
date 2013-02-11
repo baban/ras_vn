@@ -1,16 +1,12 @@
 <%= include_action_javascript %>
 
 <div id="content_body" class="section bace_bg">
-	<div class="contents_bg clearfix" id="invite_area">
-		<% if @invited %>
-			<p style="font-weight: bold;font-size: 20px;color: orange;">Lời mời đã được gởi qua E-mail.</p>
-			<p class="cl txt12">Check vào danh sách bạn muốn mời rồi bấm nút [Gởi lời mời] phía dưới. Lời mời của bạn sẽ được gởi qua E-mail!</p>
-		<% else %>
-			<p style="font-weight: bold;font-size: 20px;color: orange;">Mời thêm bạn cùng tham gia vào cộng đồng Cook24.</p>
-			<p class="cl txt12">Check vào danh sách bạn muốn mời rồi bấm nút [Gởi lời mời] phía dưới. Lời mời của bạn sẽ được gởi qua E-mail!</p>
-		<% end %>
+	<div class="contents_bg clearfix" id="invite_area" style="padding-bottom: 58px;">
+		<p style="font-weight: bold;font-size: 20px;color: orange;">Mời thêm bạn cùng tham gia vào cộng đồng Cook24 </p>
+		<p style="font-size: 16px;" class="cl txt12">Check vào danh sách bạn muốn mời rồi bấm nút [Gởi lời mời] phía dưới. Lời mời của bạn sẽ được gởi qua E-mail!</p>
+
 		<br />
-		<p id="facebook_friends_select_all_friends_area" class="disable" style="font-size: 16px;color: orange;"><%= check_box_tag :select_all_friends, true, false %> Chọn tất cả</p>
+		<p id="facebook_friends_select_all_friends_area" style="font-size: 16px;color: orange;"><%= check_box_tag :select_all_friends, true, false %> Chọn tất cả</p>
 		
 		<%= form_for :friends, url:{ action:"invite" } do |f| %>
 			<ul class="friends">
@@ -22,8 +18,8 @@
 					</li>
 				<% end %>
 			</ul>
-			<div class="btn_comment"><%=f.submit "Gởi lời mời" %></div>
+			<div class="btn_comment"><%=f.submit "GỞI LỜI MỜI" %></div>
 		<% end %>
+		<br />
 	</div>
 </div>
-

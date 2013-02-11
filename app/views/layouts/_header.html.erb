@@ -22,7 +22,7 @@
 						<%= image_tag (current_user.profile.image.url(:icon).presence || "user_icon.png"), alt:"", id:"profile_image_icon" %>
 						<%= link_to current_user.profile.nickname, controller:"mypage", action:"index" %>
 					</li>
-					<li><%= f.submit t(:sign_out, scope:"views.header"), id:"signout_button" %></li>
+					<li><%= f.submit t(:sign_out, scope:"views.header"), id:"signout_button", style:"font-size:12px;" %></li>
 				</ul>
 			<% end %>
 		<% end %>
