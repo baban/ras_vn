@@ -34,7 +34,7 @@
 			<div class="txtarea txt12">
 				<h1 class="txt14"><%= link_to recipe.title, recipe_path(recipe, recipe_food_id: recipe.recipe_food_id) %></h1>
 				<h2>
-					<%= truncate(recipe.description, length: 70) %>
+					<%= truncate(recipe.description, length: 70) %><br />
 					<%= t(:created_at, scope:"activerecord.attributes.recipe") %>：<span><%= recipe.created_at.strftime("%Y/%m/%d") %></span>
 					<p style="text-align: right;">by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %></p>
 				</h2>
