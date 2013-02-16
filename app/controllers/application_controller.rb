@@ -33,5 +33,7 @@ class ApplicationController < ActionController::Base
     @sidebar_advertisement = RecipeAdvertisement.choice
     @newsfeeds = Newsfeed.topics
     @streams = Stream.topics
+    @recipes = Recipe.list( params, @order_mode ).page( params[:page] || 1 ).per(5)
+    @food_genre = RecipeFoodGenre.choice(params)
   end
 end

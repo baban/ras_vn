@@ -1,0 +1,50 @@
+<% content_for :javascript_after do %>
+	<%= javascript_include_tag :streams %>
+<% end %>
+
+<div class="side_contents">
+	<aside>
+		<% if @sidebar_advertisement %>
+			<%=link_to image_tag(@sidebar_advertisement.image.url, width:"300", height:"250", alt: @sidebar_advertisement.alt.presence || @sidebar_advertisement.name), @sidebar_advertisement.url %>
+		<% end %>
+	</aside>
+
+	<% if @newsfeeds.size > 0%>
+	<article class="side_c01">
+		<h1 class="txt12">Topic&amp;News</h1>
+		<% @newsfeeds.each do |feed| %>
+		<section>
+			<%= image_tag feed.image.url(:thumb), width:"48", height:"48", alt:"" %>
+			<div class="txtarea txt12">
+				<h3><%= link_to feed.title, controller:"newsfeeds", action:"show", id: feed.id %></h3>
+				<% if feed.start_at %>
+					<p class="att txt11">Từ: <%= feed.start_at %> - <%= feed.end_at %></p>
+				<% end %>
+			</div>
+		</section>
+		<% end %>
+	</article>
+	<% end %>
+	
+	<article class="side_c01">
+		<h1 class="txt12"><%= @food_genre.name %></h1>
+		<% @recipes.each do |recipe| %>
+		<section>
+			<%= link_to(raw(image_tag(recipe.image.url(:thumb), width:"48", height:"48", alt:"")), recipe_path(recipe, recipe_food_id: recipe.recipe_food_id))%>
+			<div class="txtarea txt12">
+				<h1 class="txt16"><%= link_to recipe.title, recipe_path(recipe, recipe_food_id: recipe.recipe_food_id) %></h1>
+				<h2>
+					<%= truncate(recipe.description, length: 70) %>
+					<p style="text-align: right;">by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %></p>
+				</h2>
+			</div>
+		</section>
+		<% end %>
+	</article>
+	
+	<br />
+	<article class="side_c01" id="stream_area">
+		<h1 class="txt12">Cook24.vn</h1>
+		<div class="fb-like-box" data-href="http://www.facebook.com/cook24.vn" data-width="280" data-show-faces="true" data-stream="false" data-header="true"></div>
+	</article>
+</div>

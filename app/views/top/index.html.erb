@@ -1,4 +1,3 @@
-<% content_for :title do %><%=raw @recommend_recipe.title if @recommend_recipe %><% end %>
 
 <div class="bace_bg">
 <div class="contents_bg clearfix">
@@ -9,9 +8,9 @@
 		<h1 class="txt16"><%= t(:recomment_recipe_title, scope:"views.content_footer") %></h1>
 		<section>
 			<% if @recommend_recipe %>
-				<%= link_to(raw("#{image_tag(@recommend_recipe.image.url(:top_large_thumb) || 'no_image_cook.png', width:170, height:250, alt:"#{@recommend_recipe.title}")}"), recipe_url(@recommend_recipe))%>
+				<%= link_to(raw("#{image_tag(@recommend_recipe.image.url(:top_large_thumb) || 'no_image_cook.png', width:170, height:250, alt:"#{@recommend_recipe.title}")}"), recipe_url(@recommend_recipe,recipe_food_id: @recommend_recipe.recipe_food_id))%>
 				<div class="txt">
-					<h1 class="txt16"><%= link_to @recommend_recipe.title, recipe_url(@recommend_recipe) %></h1>
+					<h1 class="txt16"><%= link_to @recommend_recipe.title, recipe_url(@recommend_recipe,recipe_food_id: @recommend_recipe.recipe_food_id) %></h1>
 					<h2>
 						<%= truncate(@recommend_recipe.description, length: 170) %>
 						<p>by<%= link_to @recommend_recipe.chef.profile.nickname, kitchen_url(@recommend_recipe.chef) %></p>
@@ -28,12 +27,12 @@
 		<h1 class="txt16"><%= t(:pop_ranking_title, scope:"views.content_footer") %></h1>
 		<% @ranking.each do |recipe| %>
 			<section class="clearfix">
-				<%= link_to(raw("#{image_tag(recipe.image.url(:top_thumb), width:"75", height:"105", alt:"#{recipe.title}")}"), recipe_url(recipe))%>
+				<%= link_to(raw("#{image_tag(recipe.image.url(:top_thumb), width:"75", height:"105", alt:"#{recipe.title}")}"), recipe_url(recipe, recipe_food_id: recipe.recipe_food_id))%>
 				<div class="txt">
-					<h1 class="txt16"><%= link_to recipe.title, recipe_url(recipe) %></h1>
+					<h1 class="txt16"><%= link_to recipe.title, recipe_url(recipe, recipe_food_id: recipe.recipe_food_id) %></h1>
 					<p>by<%= link_to recipe.user.profile.nickname, kitchen_url(recipe.user) %></p>
 					<p class="arr txt11">
-						<%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_genre_id: recipe.id ) %>
+						<%= link_to t(:category_more, scope:"views.top.index"), recipe_foods_url( recipe_food_id: recipe.recipe_food_id ) %>
 					</p>
 				</div>
 			</section>
