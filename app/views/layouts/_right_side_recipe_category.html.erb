@@ -30,9 +30,9 @@
 		<h1 class="txt12"><%= @food_genre.name %></h1>
 		<% @recipes.each do |recipe| %>
 		<section>
-			<%= link_to(raw(image_tag(recipe.image.url(:thumb), width:"48", height:"48", alt:"")), recipe_path(recipe, recipe_food_id: recipe.recipe_food_id))%>
+			<%= link_to(raw(image_tag(recipe.image.url(:top_thumb), width:"75", height:"105", alt:"#{recipe.title}")), recipe_path(recipe, recipe_food_id: recipe.recipe_food_id))%>
 			<div class="txtarea txt12">
-				<h1 class="txt16"><%= link_to recipe.title, recipe_path(recipe, recipe_food_id: recipe.recipe_food_id) %></h1>
+				<h1 class="txt14"><%= link_to recipe.title, recipe_path(recipe, recipe_food_id: recipe.recipe_food_id) %></h1>
 				<h2>
 					<%= truncate(recipe.description, length: 70) %>
 					<p style="text-align: right;">by <%= link_to recipe.chef.profile.nickname, kitchen_url(recipe.chef) %></p>
