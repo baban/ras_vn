@@ -1,4 +1,4 @@
 # Use the README file as a reference to customize settings.
 
 admin:
-  Recipe: create, read, update, delete
+  Recipe: create, read, update
