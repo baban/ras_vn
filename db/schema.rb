@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20130201145345) do
     t.text     "content",                                        :null => false
     t.integer  "category_id", :default => 0,                     :null => false
     t.string   "image"
-    t.datetime "publiced_at", :default => '2012-12-09 00:00:00', :null => false
+    t.datetime "publiced_at", :default => '2013-05-27 00:00:00', :null => false
     t.datetime "deleted_at"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
@@ -154,10 +154,10 @@ ActiveRecord::Schema.define(:version => 20130201145345) do
   create_table "mail_buffers", :force => true do |t|
     t.integer  "user_id",                    :null => false
     t.string   "from",                       :null => false
-    t.string   "reply_to",                   :null => false
-    t.string   "bcc",                        :null => false
+    t.string   "to",                         :null => false
     t.string   "subject",    :default => "", :null => false
     t.text     "body",                       :null => false
+    t.datetime "deleted_at"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
   end
@@ -249,7 +249,7 @@ ActiveRecord::Schema.define(:version => 20130201145345) do
   create_table "recipe_food_genre_rankings", :force => true do |t|
     t.integer  "recipe_food_genre_id",                           :null => false
     t.integer  "point",                :default => 0,            :null => false
-    t.date     "ranked_at",            :default => '2012-12-09', :null => false
+    t.date     "ranked_at",            :default => '2013-05-27', :null => false
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
   end
@@ -313,7 +313,7 @@ ActiveRecord::Schema.define(:version => 20130201145345) do
     t.integer  "recipe_id",                            :null => false
     t.datetime "created_at",                           :null => false
     t.datetime "updated_at",                           :null => false
-    t.date     "day",        :default => '2013-02-11'
+    t.date     "day",        :default => '2013-05-27'
   end
 
   add_index "recipe_rankings", ["recipe_id"], :name => "index_recipe_rankings_on_recipe_id"
@@ -379,9 +379,7 @@ ActiveRecord::Schema.define(:version => 20130201145345) do
   end
 
   create_table "search_logs", :force => true do |t|
-    t.integer  "user_id",                    :null => false
     t.string   "words",      :default => "", :null => false
-    t.string   "location",   :default => "", :null => false
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
   end
@@ -411,15 +409,17 @@ ActiveRecord::Schema.define(:version => 20130201145345) do
   end
 
   create_table "tracker_logs", :force => true do |t|
-    t.string   "session_id",     :null => false
-    t.string   "tracker_code",   :null => false
-    t.datetime "completeted_at"
+    t.string   "session_id",   :null => false
+    t.string   "tracker_code", :null => false
+    t.datetime "limit_at"
+    t.datetime "completed_at"
     t.string   "user_id"
     t.integer  "carrier"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
+  add_index "tracker_logs", ["created_at"], :name => "index_tracker_logs_on_created_at"
   add_index "tracker_logs", ["session_id"], :name => "index_tracker_logs_on_session_id", :unique => true
   add_index "tracker_logs", ["user_id"], :name => "index_tracker_logs_on_user_id"
 

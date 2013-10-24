@@ -10,6 +10,13 @@ gem "bartt-ssl_requirement", "1.4.2", require: "ssl_requirement"
 gem "libv8", "3.3.10.4"
 gem "faraday"
 
+gem "mongoid", "3.0.6"
+gem "mongo_ext", "0.19.3"
+gem "mongo", "1.7.0"
+gem "moped", "1.2.1"
+gem "bson", "1.7.0"
+gem "bson_ext", "1.7.0"
+
 # view urilities
 gem "jquery-rails", "2.1.3"
 

@@ -11,10 +11,11 @@ window.onload = ->
       $("#bookmark_button").text(txt)
     )
 
-  $("#love_button")
+  $(".arigato a")
     .live( "ajax:success", (event, data, status, xhr) ->
       console.log "aaaaaa"
       $("#love_area").html("<span class='loved'>love("+data["count"]+")</span>")
     )
+
 
   $('#recipe_image_link').colorbox();
