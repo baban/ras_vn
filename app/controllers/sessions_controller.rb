@@ -20,9 +20,9 @@ class SessionsController < ApplicationController
            # user is login
            session[:user_id] = omniuser.id
            sign_in(:user, user)
-           redirect_to root_url, notice: "Đăng nhập"
+           redirect_to root_url, notice: "ログインしました。"
          else
-           redirect_to root_url, notice: "Hãy kiểm tra email."
+           redirect_to root_url, notice: "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントと接続しました。"
          end
        else
          logger.info :auth
@@ -56,13 +56,13 @@ class SessionsController < ApplicationController
       flash[:facebook] = true
       logger.info :omniuser
       logger.info flash.inspect
-      redirect_to new_user_registration_path, notice: "Tôi đã được kết nối với tài khoản #{auth["provider"]} của ông #{auth["info"]["name"]}. Xin vui lòng nhập địa chỉ email của bạn và mật khẩu cần thiết để đăng ký thành viên. "
+      redirect_to new_users_registration_path, notice: "Tôi đã được kết nối với tài khoản #{auth["provider"]} của ông #{auth["info"]["name"]}. Xin vui lòng nhập địa chỉ email của bạn và mật khẩu cần thiết để đăng ký thành viên. "
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: "Đã logout"
+    redirect_to root_url, notice: "ログアウトしました。"
   end
 end
 
